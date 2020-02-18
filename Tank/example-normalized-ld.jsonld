@@ -1,0 +1,44 @@
+{
+    "@context": [
+        "https://schema.lab.fiware.org/ld/context",
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:Tank:1863179e-3968-4493-9167-ee21f880cc02",
+    "type": "Tank",
+    "createdAt": "2020-02-18T15:42:00Z",
+    "modifiedAt": "2020-02-18T15:45:00Z",
+    "location": {
+        "type": "GeoProperty",
+        "value": {
+            "type": "Point",
+            "coordinates": [
+               24.30623,
+               60.07966
+            ]
+         }   
+    },
+    "elevation": {
+        "type": "Property",
+        "value": 112.9
+    },
+    "initLevel": {
+        "type": "Property",
+        "value": 3
+    },
+    "minLevel": {
+        "type": "Property",
+        "value": 0
+    },
+    "maxLevel": {
+        "type": "Property",
+        "value": 6.75
+    },
+    "minVolume": {
+        "type": "Property",
+        "value": 0
+    },
+    "diameter": {
+        "type": "Property",
+        "value": 13.73
+    }
+}
