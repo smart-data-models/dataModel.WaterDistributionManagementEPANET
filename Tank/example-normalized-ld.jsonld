@@ -1,7 +1,4 @@
 {
-    "@context": [
-        "https://schema.lab.fiware.org/ld/context"
-    ],
     "id": "urn:ngsi-ld:Tank:1863179e-3968-4493-9167-ee21f880cc02",
     "type": "Tank",
     "createdAt": "2020-02-18T15:42:00Z",
@@ -39,5 +36,8 @@
     "diameter": {
         "type": "Property",
         "value": 13.73
-    }
+    },
+    "@context": [
+        "https://schema.lab.fiware.org/ld/context"
+    ]
 }

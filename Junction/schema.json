@@ -1,0 +1,45 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "$id": "https://fiware.github.io/data-models/specs/WaterNetwork/Junction/schema.json",
+    "title": "FIWARE - Junction",
+    "description": "This entity contains a harmonised description of a generic junction made for the Water Network domain. This entity is primarily associated with the water management vertical and related IoT applications.",
+    "type": "object",
+    "allOf": [
+        {
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "Junction"
+                    ],
+                    "description": "NGSI-LD Entity Type"
+                },
+                "elevation": {
+                    "type": "number"
+                },
+                "demand": {
+                    "type": "number"
+                },
+                "tags": {
+                    "type": "array"
+                },
+                "refPattern": {
+                    "oneOf": [
+                        {
+                            "$ref": "https://fiware.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
+                        },
+                        {
+                            "type": "string",
+                            "format": "uri"
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "required": [
+        "id",
+        "type",
+        "location"
+    ]
+}

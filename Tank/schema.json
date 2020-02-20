@@ -1,37 +1,43 @@
 {
-    "$schema": "http://json-schema.org/schema#",
-    "$id": "https://fiware.github.io/data-models/specs/WaterNetwork/Tank/schema.json",
-    "title": "FIWARE - Tank",
-    "description": "This entity contains a harmonised description of a generic tank made for the Water Network domain. This entity is primarily associated with the water management vertical and related IoT applications.",
-    "type": "object",
-    "allOf": [
-      {
-        "properties": {
-          "type": {
-            "type": "string",
-            "enum": ["Tank"],
-            "description": "NGSI Entity Type"
-          },
-          "elevation": {
-            "type": "number"
-          },
-          "initLevel": {
-            "type": "number"
-          },
-          "minLevel": {
-            "type": "number"
-          },
-          "maxLevel": {
-            "type": "number"
-          },
-          "minVolume": {
-            "type": "number"
-          },
-          "diameter": {
-            "type": "number"
-          }
+  "$schema": "http://json-schema.org/schema#",
+  "$id": "https://fiware.github.io/data-models/specs/WaterNetwork/Tank/schema.json",
+  "title": "FIWARE - Tank",
+  "description": "This entity contains a harmonised description of a generic tank made for the Water Network domain. This entity is primarily associated with the water management vertical and related IoT applications.",
+  "type": "object",
+  "allOf": [
+    {
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "Tank"
+          ],
+          "description": "NGSI-LD Entity Type"
+        },
+        "elevation": {
+          "type": "number"
+        },
+        "initLevel": {
+          "type": "number"
+        },
+        "minLevel": {
+          "type": "number"
+        },
+        "maxLevel": {
+          "type": "number"
+        },
+        "minVolume": {
+          "type": "number"
+        },
+        "diameter": {
+          "type": "number"
         }
       }
-    ],
-    "required": ["id", "type"]
-  }
+    }
+  ],
+  "required": [
+    "id",
+    "type",
+    "location"
+  ]
+}

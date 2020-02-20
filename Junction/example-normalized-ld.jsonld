@@ -1,0 +1,35 @@
+{
+    "id": "urn:ngsi-ld:Junction:63fe7d79-0d4c-4da9-b7d0-3340efa0656a",
+    "type": "Junction",
+    "createdAt": "2020-02-20T15:42:00Z",
+    "modifiedAt": "2020-02-20T15:45:00Z",
+    "location": {
+        "type": "GeoProperty",
+        "value": {
+            "type": "Point",
+            "coordinates": [
+               24.30623,
+               60.07966
+            ]
+         }
+    },
+    "elevation": {
+        "type": "Property",
+        "value": 105.8
+    },
+    "demand": {
+        "type": "Property",
+        "value": 1.763868462
+    },
+    "tags": {
+        "type": "Property",
+        "value": ["DMA1", "DMA2"]
+    },
+    "refPattern": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
+    },
+    "@context": [
+        "https://schema.lab.fiware.org/ld/context"
+    ]
+}
