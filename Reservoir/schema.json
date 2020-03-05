@@ -61,7 +61,7 @@
             ]
           }
         },
-        "demadPattern": {
+        "demandPattern": {
           "oneOf": [
             {
               "$ref": "https://fiware.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"

@@ -53,7 +53,7 @@
         "type": "Relationship",
         "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
     },
-    "demadPattern": {
+    "demandPattern": {
         "type": "Relationship",
         "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
     },
