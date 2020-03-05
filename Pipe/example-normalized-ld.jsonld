@@ -1,0 +1,41 @@
+{
+    "id": "urn:ngsi-ld:Pipe:74azsty-70d4l-4da9-b7d0-3340ef655nnb",
+    "type": "Pipe",
+    "createdAt": "2020-02-20T15:42:00Z",
+    "modifiedAt": "2020-02-20T15:45:00Z",
+    "defaultStatus": {
+        "type": "Property",
+        "value": "open"
+    },
+    "status": {
+        "type": "Property",
+        "value": "open" 
+    },
+    "length": {
+        "type": "Property",
+        "value": 52.90
+    },
+    "diameter": {
+        "type": "Property",
+        "value": 203.00
+    },
+    "roughness": {
+        "type": "Property",
+        "value": 72.4549 
+    },
+    "minorLoss": {
+        "type": "Property",
+        "value": 72.4549 
+    },
+    "startsAt": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Junction:63fe7d79-0d4c-4da9-b7d0-3340efa0656a"
+    },
+    "endsAt": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Reservoir:1863179e-3768-4480-9167-ff21f870dd19"
+    },
+    "@context": [
+        "https://schema.lab.fiware.org/ld/context"
+    ]
+}

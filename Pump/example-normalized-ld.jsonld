@@ -1,0 +1,41 @@
+{
+    "id": "urn:ngsi-ld:Pump:85zhnf58-0d4c-h4g854g-b7d0-3310klm",
+    "type": "Pump",
+    "createdAt": "2020-03-02T15:42:00Z",
+    "modifiedAt": "2020-03-02T15:45:00Z",
+    "defaultStatus": {
+        "type": "Property",
+        "value": "open"
+    },
+    "status": {
+        "type": "Property",
+        "value": "open"
+    },
+    "head": {
+        "type": "Property",
+        "value": "curve1"
+    },
+    "power": {
+        "type": "Property",
+        "value": 100
+    },
+    "speed": {
+        "type": "Property",
+        "value": 1.2
+    },
+    "startsAt": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Junction:63fe7d79-0d4c-4da9-b7d0-3340efa0656a"
+    },
+    "endsAt": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Reservoir:1863179e-3768-4480-9167-ff21f870dd19"
+    },
+    "refPattern": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
+    },
+    "@context": [
+        "https://schema.lab.fiware.org/ld/context"
+    ]
+}

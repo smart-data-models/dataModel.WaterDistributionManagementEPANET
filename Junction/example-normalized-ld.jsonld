@@ -29,6 +29,38 @@
         "type": "Relationship",
         "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
     },
+    "description": {
+        "type": "Property",
+        "value": "This entity contains a harmonised description of a Junction"
+    },
+    "initialQuality": {
+        "type": "Property",
+        "value": "low"
+    },
+    "emitterCoefficient": {
+        "type": "Property",
+        "value": 0.526
+    },
+    "sourceType": {
+        "type": "Property",
+        "value": "MASS"
+    },
+    "sourceQuality": {
+        "type": "Property",
+        "value": 1.2
+    },
+    "sourcePattern": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
+    },
+    "demadPattern": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
+    },
+    "baseDemand": {
+        "type": "Property",
+        "value": 1.763868462
+    },
     "@context": [
         "https://schema.lab.fiware.org/ld/context"
     ]

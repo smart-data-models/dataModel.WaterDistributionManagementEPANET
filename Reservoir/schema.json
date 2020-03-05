@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$id": "https://fiware.github.io/data-models/specs/WaterNetwork/Tank/schema.json",
-  "title": "FIWARE - Tank",
-  "description": "This entity contains a harmonised description of a generic tank made for the Water Network domain. This entity is primarily associated with the water management vertical and related IoT applications.",
+  "$id": "https://fiware.github.io/data-models/specs/WaterNetwork/Reservoir/schema.json",
+  "title": "FIWARE - reservoir",
+  "description": "This entity contains a harmonised description of a generic Reservoir made for the Water Network domain. This entity is primarily associated with the water management vertical and related IoT applications.",
   "type": "object",
   "allOf": [
     {
@@ -10,51 +10,44 @@
         "type": {
           "type": "string",
           "enum": [
-            "Tank"
+            "Reservoir"
           ],
           "description": "NGSI-LD Entity Type"
         },
-        "elevation": {
+        "head": {
           "type": "number"
-        },
-        "initLevel": {
-          "type": "number"
-        },
-        "minLevel": {
-          "type": "number"
-        },
-        "maxLevel": {
-          "type": "number"
-        },
-        "minVolume": {
-          "type": "number"
-        },
-        "diameter": {
-          "type": "number"
-        },
-        "description": {
-          "type": "string"
         },
         "initialQuality": {
           "type": "string"
         },
-        "emitterCoefficient": {
+        "sourceQuality": {
           "type": "string"
         },
-        "mixingModel": {
-          "type": "string",
-          "items": {
-            "type": "string",
-            "enum": [
-              "MIXED",
-              "2COMP",
-              "FIFO ",
-              "LIFO"
-            ]
-          }
+        "description": {
+          "type": "string"
+        },
+        "emitterCoefficient": {
+          "type": "number"
+        },
+        "elevation": {
+          "type": "number"
         },
         "baseDemand": {
-          "type": "string"
+          "type": "number"
+        },
+        "demand": {
+          "type": "number"
+        },
+        "refPattern": {
+          "oneOf": [
+            {
+              "$ref": "https://fiware.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
+            },
+            {
+              "type": "string",
+              "format": "uri"
+            }
+          ]
         },
         "sourceType": {
           "type": "string",
@@ -67,20 +60,6 @@
               "SETPOINT"
             ]
           }
-        },
-        "sourceQuality": {
-          "type": "string"
-        },
-        "refPattern": {
-          "oneOf": [
-            {
-              "$ref": "https://fiware.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
-            },
-            {
-              "type": "string",
-              "format": "uri"
-            }
-          ]
         },
         "demadPattern": {
           "oneOf": [

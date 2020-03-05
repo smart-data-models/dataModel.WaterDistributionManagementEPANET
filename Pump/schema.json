@@ -1,0 +1,80 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "$id": "https://fiware.github.io/data-models/specs/WaterNetwork/Pump/schema.json",
+  "title": "FIWARE - Pump",
+  "description": "This entity contains a harmonised description of a generic pump made for the Water Network domain. This entity is primarily associated with the water management vertical and related IoT applications.",
+  "type": "object",
+  "allOf": [
+    {
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "Pump"
+          ],
+          "description": "NGSI-LD Entity Type"
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "open",
+            "close"
+          ]
+        },
+        "defaultStatus": {
+          "type": "string",
+          "enum": [
+            "open",
+            "close"
+          ]
+        },
+        "head": {
+          "type": "number"
+        },
+        "power": {
+          "type": "number"
+        },
+        "speed": {
+          "type": "number"
+        },
+        "refPattern": {
+          "oneOf": [
+            {
+              "$ref": "https://fiware.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
+            },
+            {
+              "type": "string",
+              "format": "uri"
+            }
+          ]
+        },
+        "startsAt": {
+          "oneOf": [
+            {
+              "$ref": "https://fiware.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
+            },
+            {
+              "type": "string",
+              "format": "uri"
+            }
+          ]
+        },
+        "endsAt": {
+          "oneOf": [
+            {
+              "$ref": "https://fiware.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
+            },
+            {
+              "type": "string",
+              "format": "uri"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "required": [
+    "id",
+    "type"
+  ]
+}

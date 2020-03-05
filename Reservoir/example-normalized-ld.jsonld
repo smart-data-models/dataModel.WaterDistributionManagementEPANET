@@ -1,6 +1,6 @@
 {
-    "id": "urn:ngsi-ld:Tank:1863179e-3968-4493-9167-ee21f880cc02",
-    "type": "Tank",
+    "id": "urn:ngsi-ld:Reservoir:1863179e-3768-4480-9167-ff21f870dd19",
+    "type": "Reservoir",
     "createdAt": "2020-03-02T15:42:00Z",
     "modifiedAt": "2020-03-02T15:45:00Z",
     "location": {
@@ -13,41 +13,33 @@
             ]
          }   
     },
+    "head": {
+        "type": "Property",
+        "value": 59.00
+    },
     "elevation": {
         "type": "Property",
-        "value": 112.9
+        "value": 105.8
     },
-    "initLevel": {
+    "demand": {
         "type": "Property",
-        "value": 3
+        "value": 1.763868462
     },
-    "minLevel": {
+    "baseDemand": {
         "type": "Property",
-        "value": 0
-    },
-    "maxLevel": {
-        "type": "Property",
-        "value": 6.75
-    },
-    "minVolume": {
-        "type": "Property",
-        "value": 0
-    },
-    "diameter": {
-        "type": "Property",
-        "value": 13.73
+        "value": 1.763868462
     },
     "description": {
         "type": "Property",
-        "value": "This entity contains a harmonised description of a Tank"
+        "value": "This entity contains a harmonised description of a Reservoir"
     },
     "initialQuality": {
         "type": "Property",
         "value": "low"
     },
-    "emitterCoefficient": {
-        "type": "Property",
-        "value": 0.526
+    "refPattern": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
     },
     "sourceType": {
         "type": "Property",
@@ -55,7 +47,7 @@
     },
     "sourceQuality": {
         "type": "Property",
-        "value": 1.2
+        "value": "low"
     },
     "sourcePattern": {
         "type": "Relationship",
@@ -64,18 +56,6 @@
     "demadPattern": {
         "type": "Relationship",
         "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
-    },
-    "baseDemand": {
-        "type": "Property",
-        "value": 1.763868462
-    },
-    "mixingModel": {
-        "type": "Property",
-        "value": "mixed"
-    },
-    "volCurve": {
-        "type": "Property",
-        "value": 200
     },
     "@context": [
         "https://schema.lab.fiware.org/ld/context"
