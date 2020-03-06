@@ -29,7 +29,7 @@
           ]
         },
         "head": {
-          "type": "number"
+          "type": "string"
         },
         "power": {
           "type": "number"

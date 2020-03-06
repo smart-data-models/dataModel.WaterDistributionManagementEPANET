@@ -13,7 +13,8 @@
     },
     "diameter": {
         "type": "Property",
-        "value": 203.20
+        "value": 203.20,
+        "unitCode":"MMT"
     },
     "valveType": {
         "type": "Property",
@@ -21,11 +22,13 @@
     },
     "setting": {
         "type": "Property",
-        "value": 40.00
+        "value": 40.00,
+        "unitCode":"C62"
     },
     "minorLoss": {
         "type": "Property",
-        "value": 0.00
+        "value": 0.00,
+        "unitCode": "C62"
     },
      "startsAt": {
         "type": "Relationship",

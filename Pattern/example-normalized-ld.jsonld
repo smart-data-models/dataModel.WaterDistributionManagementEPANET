@@ -5,7 +5,8 @@
     "modifiedAt": "2020-02-20T17:43:00Z",
     "multipliers": {
         "type": "Property",
-        "value": [0.5692, 0.4647, 0.4385, 0.3604, 0.3098, 0.3345]
+        "value": [0.5692, 0.4647, 0.4385, 0.3604, 0.3098, 0.3345],
+        "unitCode":"C62"
     },
     "@context": [
         "https://schema.lab.fiware.org/ld/context"

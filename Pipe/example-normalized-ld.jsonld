@@ -13,19 +13,23 @@
     },
     "length": {
         "type": "Property",
-        "value": 52.90
+        "value": 52.90,
+        "unitCode":"MTR"
     },
     "diameter": {
         "type": "Property",
-        "value": 203.00
+        "value": 203.00,
+        "unitCode":"MMT"
     },
     "roughness": {
         "type": "Property",
-        "value": 72.4549 
+        "value": 72.4549,
+        "unitCode": "C62"
     },
     "minorLoss": {
         "type": "Property",
-        "value": 72.4549 
+        "value": 72.4549,
+        "unitCode": "C62"
     },
     "startsAt": {
         "type": "Relationship",

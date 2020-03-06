@@ -15,11 +15,13 @@
     },
     "elevation": {
         "type": "Property",
-        "value": 105.8
+        "value": 105.8,
+        "unitCode": "MTR"
     },
     "demand": {
         "type": "Property",
-        "value": 1.763868462
+        "value": 1.763868462,
+        "unitCode": "MQS"
     },
     "tags": {
         "type": "Property",
@@ -39,7 +41,8 @@
     },
     "emitterCoefficient": {
         "type": "Property",
-        "value": 0.526
+        "value": 0.526,
+        "unitCode": "MQS"
     },
     "sourceType": {
         "type": "Property",
@@ -47,7 +50,8 @@
     },
     "sourceQuality": {
         "type": "Property",
-        "value": 1.2
+        "value": 1.2,
+        "unitCode": "F31"
     },
     "sourcePattern": {
         "type": "Relationship",
@@ -59,7 +63,8 @@
     },
     "baseDemand": {
         "type": "Property",
-        "value": 1.763868462
+        "value": 1.763868462,
+        "unitCode": "MQS"
     },
     "@context": [
         "https://schema.lab.fiware.org/ld/context"

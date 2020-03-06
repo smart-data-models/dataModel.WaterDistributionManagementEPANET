@@ -13,21 +13,25 @@
             ]
          }   
     },
-    "head": {
+    "reservoirHead": {
         "type": "Property",
-        "value": 59.00
+        "value": 59.00,
+        "unitCode":"MTR"
     },
     "elevation": {
         "type": "Property",
-        "value": 105.8
+        "value": 105.8,
+        "unitCode":"MTR"
     },
     "demand": {
         "type": "Property",
-        "value": 1.763868462
+        "value": 1.763868462,
+        "unitCode": "MQS"
     },
     "baseDemand": {
         "type": "Property",
-        "value": 1.763868462
+        "value": 1.763868462,
+        "unitCode": "MQS"
     },
     "description": {
         "type": "Property",

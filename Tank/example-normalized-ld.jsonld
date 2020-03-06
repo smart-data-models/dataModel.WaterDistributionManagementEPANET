@@ -15,27 +15,33 @@
     },
     "elevation": {
         "type": "Property",
-        "value": 112.9
+        "value": 112.9,
+        "unitCode": "MTR"
     },
     "initLevel": {
         "type": "Property",
-        "value": 3
+        "value": 3,
+        "unitCode": "MTR"
     },
     "minLevel": {
         "type": "Property",
-        "value": 0
+        "value": 0,
+        "unitCode": "MTR"
     },
     "maxLevel": {
         "type": "Property",
-        "value": 6.75
+        "value": 6.75,
+        "unitCode": "MTR"
     },
     "minVolume": {
         "type": "Property",
-        "value": 0
+        "value": 0,
+        "unitCode": "MTQ"
     },
-    "diameter": {
+    "nominalDiameter": {
         "type": "Property",
-        "value": 13.73
+        "value": 13.73,
+        "unitCode": "MTR"
     },
     "description": {
         "type": "Property",
@@ -47,7 +53,8 @@
     },
     "emitterCoefficient": {
         "type": "Property",
-        "value": 0.526
+        "value": 0.526,
+        "unitCode": "C62"
     },
     "sourceType": {
         "type": "Property",
@@ -55,7 +62,8 @@
     },
     "sourceQuality": {
         "type": "Property",
-        "value": 1.2
+        "value": 1.2,
+        "unitCode": "C62"
     },
     "sourcePattern": {
         "type": "Relationship",
@@ -67,7 +75,13 @@
     },
     "baseDemand": {
         "type": "Property",
-        "value": 1.763868462
+        "value": 1.763868462,
+        "unitCode": "MQS"
+    },
+    "demand": {
+        "type": "Property",
+        "value": 1.763868462,
+        "unitCode": "MQS"
     },
     "mixingModel": {
         "type": "Property",
@@ -75,7 +89,8 @@
     },
     "volCurve": {
         "type": "Property",
-        "value": 200
+        "value": 200,
+        "unitCode": "MTQ"
     },
     "@context": [
         "https://schema.lab.fiware.org/ld/context"

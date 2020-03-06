@@ -29,7 +29,7 @@
         "minVolume": {
           "type": "number"
         },
-        "diameter": {
+        "nominalDiameter": {
           "type": "number"
         },
         "description": {

@@ -17,11 +17,13 @@
     },
     "power": {
         "type": "Property",
-        "value": 100
+        "value": 100,
+        "unitCode":"KWT"
     },
     "speed": {
         "type": "Property",
-        "value": 1.2
+        "value": 1.2,
+        "unitCode":"MTS"
     },
     "startsAt": {
         "type": "Relationship",
