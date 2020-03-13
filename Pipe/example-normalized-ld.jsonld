@@ -9,17 +9,17 @@
     },
     "status": {
         "type": "Property",
-        "value": "open" 
+        "value": "open"
     },
     "length": {
         "type": "Property",
         "value": 52.90,
-        "unitCode":"MTR"
+        "unitCode": "MTR"
     },
     "diameter": {
         "type": "Property",
         "value": 203.00,
-        "unitCode":"MMT"
+        "unitCode": "MMT"
     },
     "roughness": {
         "type": "Property",

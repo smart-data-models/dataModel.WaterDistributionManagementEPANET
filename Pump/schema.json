@@ -1,80 +1,164 @@
 {
-  "$schema": "http://json-schema.org/schema#",
-  "$id": "https://fiware.github.io/data-models/specs/WaterNetwork/Pump/schema.json",
-  "title": "FIWARE - Pump",
-  "description": "This entity contains a harmonised description of a generic pump made for the Water Network domain. This entity is primarily associated with the water management vertical and related IoT applications.",
-  "type": "object",
-  "allOf": [
-    {
-      "properties": {
-        "type": {
-          "type": "string",
-          "enum": [
-            "Pump"
-          ],
-          "description": "NGSI-LD Entity Type"
+    "$schema": "http://json-schema.org/schema#",
+    "$id": "https://fiware.github.io/data-models/specs/WaterNetwork/Pump/schema.json",
+    "title": "FIWARE - Pump",
+    "description": "This entity contains a harmonised description of a generic pump made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.",
+    "type": "object",
+    "definitions": {
+        "ngsildProperty": {
+            "type": "object",
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "Property"
+                    ]
+                },
+                "value": {
+                    "type": [
+                        "number",
+                        "string",
+                        "array"
+                    ]
+                },
+                "unitCode": {
+                    "type": "string"
+                },
+                "createdAt": {
+                    "type": "string",
+                    "format": "full-date"
+                },
+                "observedAt": {
+                    "type": "string",
+                    "format": "full-date"
+                },
+                "modifiedAt": {
+                    "type": "string",
+                    "format": "full-date"
+                }
+            },
+            "required": [
+                "type",
+                "value"
+            ]
         },
         "status": {
-          "type": "string",
-          "enum": [
-            "open",
-            "close"
-          ]
-        },
-        "defaultStatus": {
-          "type": "string",
-          "enum": [
-            "open",
-            "close"
-          ]
-        },
-        "head": {
-          "type": "string"
-        },
-        "power": {
-          "type": "number"
-        },
-        "speed": {
-          "type": "number"
-        },
-        "refPattern": {
-          "oneOf": [
-            {
-              "$ref": "https://fiware.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
+            "type": "object",
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "Property"
+                    ]
+                },
+                "value": {
+                    "type": [
+                        "number",
+                        "string",
+                        "array"
+                    ],
+                    "enum": [
+                        "open",
+                        "close"
+                    ]
+                },
+                "unitCode": {
+                    "type": "string"
+                },
+                "createdAt": {
+                    "type": "string",
+                    "format": "full-date"
+                },
+                "observedAt": {
+                    "type": "string",
+                    "format": "full-date"
+                },
+                "modifiedAt": {
+                    "type": "string",
+                    "format": "full-date"
+                }
             },
-            {
-              "type": "string",
-              "format": "uri"
-            }
-          ]
+            "required": [
+                "type",
+                "value"
+            ]
         },
-        "startsAt": {
-          "oneOf": [
-            {
-              "$ref": "https://fiware.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
+        "ngsildRelationship": {
+            "type": "object",
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "Relationship"
+                    ]
+                },
+                "object": {
+                    "type": "string",
+                    "format": "uri"
+                },
+                "createdAt": {
+                    "type": "string",
+                    "format": "full-date"
+                },
+                "modifiedAt": {
+                    "type": "string",
+                    "format": "full-date"
+                }
             },
-            {
-              "type": "string",
-              "format": "uri"
-            }
-          ]
-        },
-        "endsAt": {
-          "oneOf": [
-            {
-              "$ref": "https://fiware.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
-            },
-            {
-              "type": "string",
-              "format": "uri"
-            }
-          ]
+            "required": [
+                "type",
+                "object"
+            ]
         }
-      }
-    }
-  ],
-  "required": [
-    "id",
-    "type"
-  ]
+    },
+    "allOf": [
+        {
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "Pump"
+                    ],
+                    "description": "NGSI-LD Entity Type"
+                },
+                "status": {
+                    "$ref": "#/definitions/status"
+                },
+                "defaultStatus": {
+                    "$ref": "#/definitions/status"
+                },
+                "head": {
+                    "$ref": "#/definitions/ngsildProperty"
+                },
+                "power": {
+                    "$ref": "#/definitions/ngsildProperty"
+                },
+                "speed": {
+                    "$ref": "#/definitions/ngsildProperty"
+                },
+                "startsAt": {
+                    "$ref": "#/definitions/ngsildRelationship"
+                },
+                "endsAt": {
+                    "$ref": "#/definitions/ngsildRelationship"
+                },
+                "createdAt": {
+                    "type": "string",
+                    "format": "full-date"
+                },
+                "observedAt": {
+                    "type": "string",
+                    "format": "full-date"
+                },
+                "modifiedAt": {
+                    "type": "string",
+                    "format": "full-date"
+                }
+            }
+        }
+    ],
+    "required": [
+        "id",
+        "type"
+    ]
 }

@@ -1,94 +1,381 @@
 {
-  "$schema": "http://json-schema.org/schema#",
-  "$id": "https://fiware.github.io/data-models/specs/WaterNetwork/Reservoir/schema.json",
-  "title": "FIWARE - reservoir",
-  "description": "This entity contains a harmonised description of a generic Reservoir made for the Water Network domain. This entity is primarily associated with the water management vertical and related IoT applications.",
-  "type": "object",
-  "allOf": [
-    {
-      "properties": {
-        "type": {
-          "type": "string",
-          "enum": [
-            "Reservoir"
-          ],
-          "description": "NGSI-LD Entity Type"
+    "$schema": "http://json-schema.org/schema#",
+    "$id": "https://fiware.github.io/data-models/specs/WaterNetwork/Reservoir/schema.json",
+    "title": "FIWARE - reservoir",
+    "description": "This entity contains a harmonised description of a generic Reservoir made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.",
+    "type": "object",
+    "definitions": {
+        "ngsildProperty": {
+            "type": "object",
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "Property"
+                    ]
+                },
+                "value": {
+                    "type": [
+                        "number",
+                        "string",
+                        "array"
+                    ]
+                },
+                "unitCode": {
+                    "type": "string"
+                },
+                "createdAt": {
+                    "type": "string",
+                    "format": "full-date"
+                },
+                "observedAt": {
+                    "type": "string",
+                    "format": "full-date"
+                },
+                "modifiedAt": {
+                    "type": "string",
+                    "format": "full-date"
+                }
+            },
+            "required": [
+                "type",
+                "value"
+            ]
         },
-        "head": {
-          "type": "number"
+        "source": {
+            "type": "object",
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "Property"
+                    ]
+                },
+                "value": {
+                    "type": [
+                        "number",
+                        "string"
+                    ]
+                },
+                "unitCode": {
+                    "type": "string"
+                },
+                "createdAt": {
+                    "type": "string",
+                    "format": "full-date"
+                },
+                "observedAt": {
+                    "type": "string",
+                    "format": "full-date"
+                },
+                "modifiedAt": {
+                    "type": "string",
+                    "format": "full-date"
+                },
+                "sourceType": {
+                    "type": "object",
+                    "properties": {
+                        "type": {
+                            "type": "string",
+                            "enum": [
+                                "Property"
+                            ]
+                        },
+                        "value": {
+                            "type": [
+                                "number",
+                                "string"
+                            ],
+                            "enum": [
+                                "CONCEN",
+                                "MASS",
+                                "FLOWPACED ",
+                                "SETPOINT"
+                            ]
+                        },
+                        "unitCode": {
+                            "type": "string"
+                        },
+                        "createdAt": {
+                            "type": "string",
+                            "format": "full-date"
+                        },
+                        "observedAt": {
+                            "type": "string",
+                            "format": "full-date"
+                        },
+                        "modifiedAt": {
+                            "type": "string",
+                            "format": "full-date"
+                        }
+                    },
+                    "required": [
+                        "type",
+                        "value"
+                    ]
+                },
+                "sourceQuality": {
+                    "type": "object",
+                    "properties": {
+                        "type": {
+                            "type": "string",
+                            "enum": [
+                                "Property"
+                            ]
+                        },
+                        "value": {
+                            "type": [
+                                "number",
+                                "string"
+                            ]
+                        },
+                        "unitCode": {
+                            "type": "string"
+                        },
+                        "createdAt": {
+                            "type": "string",
+                            "format": "full-date"
+                        },
+                        "observedAt": {
+                            "type": "string",
+                            "format": "full-date"
+                        },
+                        "modifiedAt": {
+                            "type": "string",
+                            "format": "full-date"
+                        }
+                    },
+                    "required": [
+                        "type",
+                        "value"
+                    ]
+                },
+                "sourcePattern": {
+                    "type": "object",
+                    "properties": {
+                        "type": {
+                            "type": "string",
+                            "enum": [
+                                "Relationship"
+                            ]
+                        },
+                        "object": {
+                            "type": [
+                                "string"
+                            ],
+                            "format": "uri"
+                        },
+                        "createdAt": {
+                            "type": "string",
+                            "format": "full-date"
+                        },
+                        "observedAt": {
+                            "type": "string",
+                            "format": "full-date"
+                        },
+                        "modifiedAt": {
+                            "type": "string",
+                            "format": "full-date"
+                        }
+                    },
+                    "required": [
+                        "type",
+                        "object"
+                    ]
+                }
+            },
+            "required": [
+                "type",
+                "value",
+                "sourceType",
+                "sourceQuality",
+                "sourcePattern"
+            ]
         },
-        "initialQuality": {
-          "type": "string"
-        },
-        "sourceQuality": {
-          "type": "string"
-        },
-        "description": {
-          "type": "string"
-        },
-        "emitterCoefficient": {
-          "type": "number"
-        },
-        "elevation": {
-          "type": "number"
-        },
-        "baseDemand": {
-          "type": "number"
+        "ngsildRelationship": {
+            "type": "object",
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "Relationship"
+                    ]
+                },
+                "object": {
+                    "type": [
+                        "string"
+                    ],
+                    "format": "uri"
+                },
+                "createdAt": {
+                    "type": "string",
+                    "format": "full-date"
+                },
+                "observedAt": {
+                    "type": "string",
+                    "format": "full-date"
+                },
+                "modifiedAt": {
+                    "type": "string",
+                    "format": "full-date"
+                }
+            },
+            "required": [
+                "type",
+                "object"
+            ]
         },
         "demand": {
-          "type": "number"
-        },
-        "refPattern": {
-          "oneOf": [
-            {
-              "$ref": "https://fiware.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
+            "type": "object",
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "Property"
+                    ]
+                },
+                "value": {
+                    "type": [
+                        "number",
+                        "string"
+                    ]
+                },
+                "unitCode": {
+                    "type": "string"
+                },
+                "createdAt": {
+                    "type": "string",
+                    "format": "full-date"
+                },
+                "observedAt": {
+                    "type": "string",
+                    "format": "full-date"
+                },
+                "modifiedAt": {
+                    "type": "string",
+                    "format": "full-date"
+                },
+                "baseDemand": {
+                    "type": "object",
+                    "properties": {
+                        "type": {
+                            "type": "string",
+                            "enum": [
+                                "Property"
+                            ]
+                        },
+                        "value": {
+                            "type": [
+                                "number",
+                                "string"
+                            ]
+                        },
+                        "unitCode": {
+                            "type": "string"
+                        },
+                        "createdAt": {
+                            "type": "string",
+                            "format": "full-date"
+                        },
+                        "observedAt": {
+                            "type": "string",
+                            "format": "full-date"
+                        },
+                        "modifiedAt": {
+                            "type": "string",
+                            "format": "full-date"
+                        }
+                    },
+                    "required": [
+                        "type",
+                        "value"
+                    ]
+                },
+                "demandPattern": {
+                    "type": "object",
+                    "properties": {
+                        "type": {
+                            "type": "string",
+                            "enum": [
+                                "Relationship"
+                            ]
+                        },
+                        "object": {
+                            "type": [
+                                "string"
+                            ],
+                            "format": "uri"
+                        },
+                        "createdAt": {
+                            "type": "string",
+                            "format": "full-date"
+                        },
+                        "observedAt": {
+                            "type": "string",
+                            "format": "full-date"
+                        },
+                        "modifiedAt": {
+                            "type": "string",
+                            "format": "full-date"
+                        }
+                    },
+                    "required": [
+                        "type",
+                        "object"
+                    ]
+                }
             },
-            {
-              "type": "string",
-              "format": "uri"
-            }
-          ]
-        },
-        "sourceType": {
-          "type": "string",
-          "items": {
-            "type": "string",
-            "enum": [
-              "CONCEN",
-              "MASS",
-              "FLOWPACED ",
-              "SETPOINT"
+            "required": [
+                "type",
+                "value",
+                "baseDemand",
+                "demandPattern"
             ]
-          }
-        },
-        "demandPattern": {
-          "oneOf": [
-            {
-              "$ref": "https://fiware.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
-            },
-            {
-              "type": "string",
-              "format": "uri"
-            }
-          ]
-        },
-        "sourcePattern": {
-          "oneOf": [
-            {
-              "$ref": "https://fiware.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
-            },
-            {
-              "type": "string",
-              "format": "uri"
-            }
-          ]
         }
-      }
-    }
-  ],
-  "required": [
-    "id",
-    "type",
-    "location"
-  ]
+    },
+    "allOf": [
+        {
+            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+        },
+        {
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "Reservoir"
+                    ],
+                    "description": "NGSI-LD Entity Type"
+                },
+                "reservoirHead": {
+                    "$ref": "#/definitions/ngsildProperty"
+                },
+                "initialQuality": {
+                    "$ref": "#/definitions/ngsildProperty"
+                },
+                "description": {
+                    "$ref": "#/definitions/ngsildProperty"
+                },
+                "emitterCoefficient": {
+                    "$ref": "#/definitions/ngsildProperty"
+                },
+                "elevation": {
+                    "$ref": "#/definitions/ngsildProperty"
+                },
+                "demandCategory": {
+                    "$ref": "#/definitions/demand"
+                },
+                "demand": {
+                    "$ref": "#/definitions/demand"
+                },
+                "sourceCategory": {
+                    "$ref": "#/definitions/source"
+                }
+            }
+        }
+    ],
+    "required": [
+        "id",
+        "type",
+        "location"
+    ]
 }

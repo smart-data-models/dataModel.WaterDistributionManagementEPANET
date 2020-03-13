@@ -18,12 +18,12 @@
     "power": {
         "type": "Property",
         "value": 100,
-        "unitCode":"KWT"
+        "unitCode": "KWT"
     },
     "speed": {
         "type": "Property",
         "value": 1.2,
-        "unitCode":"MTS"
+        "unitCode": "MTS"
     },
     "startsAt": {
         "type": "Relationship",
@@ -32,10 +32,6 @@
     "endsAt": {
         "type": "Relationship",
         "object": "urn:ngsi-ld:Reservoir:1863179e-3768-4480-9167-ff21f870dd19"
-    },
-    "refPattern": {
-        "type": "Relationship",
-        "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
     },
     "@context": [
         "https://schema.lab.fiware.org/ld/context"

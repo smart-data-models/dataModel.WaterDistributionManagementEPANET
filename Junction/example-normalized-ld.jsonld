@@ -8,28 +8,52 @@
         "value": {
             "type": "Point",
             "coordinates": [
-               24.30623,
-               60.07966
+                24.30623,
+                60.07966
             ]
-         }
+        }
     },
     "elevation": {
         "type": "Property",
         "value": 105.8,
         "unitCode": "MTR"
     },
-    "demand": {
+    "demandCategory": {
         "type": "Property",
-        "value": 1.763868462,
-        "unitCode": "MQS"
+        "value": "agriculture demand",
+        "baseDemand": {
+            "type": "Property",
+            "value": "1.763868462",
+            "unitCode": "MQS"
+        },
+        "demandPattern": {
+            "type": "Relationship",
+            "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533"
+        }
     },
-    "tags": {
+    "sourceCategory": {
         "type": "Property",
-        "value": ["DMA1", "DMA2"]
+        "value": "CategroyX",
+        "sourceType": {
+            "type": "Property",
+            "value": "MASS"
+        },
+        "sourceQuality": {
+            "type": "Property",
+            "value": 1.2,
+            "unitCode": "F31"
+        },
+        "sourcePattern": {
+            "type": "Relationship",
+            "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
+        }
     },
-    "refPattern": {
-        "type": "Relationship",
-        "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
+   "tags": {
+        "type": "Property",
+        "value": [
+            "DMA1",
+            "DMA2"
+        ]
     },
     "description": {
         "type": "Property",
@@ -42,28 +66,6 @@
     "emitterCoefficient": {
         "type": "Property",
         "value": 0.526,
-        "unitCode": "MQS"
-    },
-    "sourceType": {
-        "type": "Property",
-        "value": "MASS"
-    },
-    "sourceQuality": {
-        "type": "Property",
-        "value": 1.2,
-        "unitCode": "F31"
-    },
-    "sourcePattern": {
-        "type": "Relationship",
-        "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
-    },
-    "demandPattern": {
-        "type": "Relationship",
-        "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
-    },
-    "baseDemand": {
-        "type": "Property",
-        "value": 1.763868462,
         "unitCode": "MQS"
     },
     "@context": [

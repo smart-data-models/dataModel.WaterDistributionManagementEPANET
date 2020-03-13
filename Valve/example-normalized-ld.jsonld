@@ -14,7 +14,7 @@
     "diameter": {
         "type": "Property",
         "value": 203.20,
-        "unitCode":"MMT"
+        "unitCode": "MMT"
     },
     "valveType": {
         "type": "Property",
@@ -23,14 +23,14 @@
     "setting": {
         "type": "Property",
         "value": 40.00,
-        "unitCode":"C62"
+        "unitCode": "C62"
     },
     "minorLoss": {
         "type": "Property",
         "value": 0.00,
         "unitCode": "C62"
     },
-     "startsAt": {
+    "startsAt": {
         "type": "Relationship",
         "object": "urn:ngsi-ld:Junction:63fe7d79-0d4c-4da9-b7d0-3340efa0656a"
     },
