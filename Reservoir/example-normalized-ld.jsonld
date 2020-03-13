@@ -23,15 +23,18 @@
         "value": 105.8,
         "unitCode":"MTR"
     },
-    "demand": {
-        "type": "Property",
-        "value": 1.763868462,
-        "unitCode": "MQS"
-    },
-    "baseDemand": {
-        "type": "Property",
-        "value": 1.763868462,
-        "unitCode": "MQS"
+    "demandCategory":{
+        "type":"Property",
+        "value": "agriculture demand",
+        "baseDemand" : {
+	        "type":"Property",
+	        "value":"1.763868462",
+	        "unitCode": "MQS"
+        },
+        "demandPattern" : {
+	        "type":"Relationship",
+	        "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533"
+        }      
     },
     "description": {
         "type": "Property",
@@ -41,25 +44,22 @@
         "type": "Property",
         "value": "low"
     },
-    "refPattern": {
-        "type": "Relationship",
-        "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
-    },
-    "sourceType": {
+    "sourceCategory": {
         "type": "Property",
-        "value": "MASS"
-    },
-    "sourceQuality": {
-        "type": "Property",
-        "value": "low"
-    },
-    "sourcePattern": {
-        "type": "Relationship",
-        "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
-    },
-    "demandPattern": {
-        "type": "Relationship",
-        "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
+        "value": "CategroyX",
+        "sourceType":{
+            "type": "Property",
+            "value": "MASS"
+        },
+        "sourceQuality": {
+            "type": "Property",
+            "value": 1.2,
+            "unitCode": "F31"
+        },
+        "sourcePattern": {
+            "type": "Relationship",
+            "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
+        }
     },
     "@context": [
         "https://schema.lab.fiware.org/ld/context"
