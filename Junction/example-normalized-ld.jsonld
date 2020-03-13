@@ -1,378 +1,74 @@
 {
-    "$schema": "http://json-schema.org/schema#",
-    "$id": "https://fiware.github.io/data-models/specs/WaterNetwork/Junction/schema.json",
-    "title": "FIWARE - Junction",
-    "description": "This entity contains a harmonised description of a generic junction made for the Water Network Management domain. This entity is primarily associated with the water network management vertical and related IoT applications.",
-    "type": "object",
-    "definitions": {
-        "ngsildProperty": {
-            "type": "object",
-            "properties": {
-                "type": {
-                    "type": "string",
-                    "enum": [
-                        "Property"
-                    ]
-                },
-                "value": {
-                    "type": [
-                        "number",
-                        "string",
-                        "array"
-                    ]
-                },
-                "unitCode": {
-                    "type": "string"
-                },
-                "createdAt": {
-                    "type": "string",
-                    "format": "full-date"
-                },
-                "observedAt": {
-                    "type": "string",
-                    "format": "full-date"
-                },
-                "modifiedAt": {
-                    "type": "string",
-                    "format": "full-date"
-                }
-            },
-            "required": [
-                "type",
-                "value"
-            ]
-        },
-        "ngsildRelationship": {
-            "type": "object",
-            "properties": {
-                "type": {
-                    "type": "string",
-                    "enum": [
-                        "Relationship"
-                    ]
-                },
-                "object": {
-                    "type": [
-                        "string"
-                    ],
-                    "format": "uri"
-                },
-                "createdAt": {
-                    "type": "string",
-                    "format": "full-date"
-                },
-                "observedAt": {
-                    "type": "string",
-                    "format": "full-date"
-                },
-                "modifiedAt": {
-                    "type": "string",
-                    "format": "full-date"
-                }
-            },
-            "required": [
-                "type",
-                "value"
-            ]
-        },
-        "demand": {
-            "type": "object",
-            "properties": {
-                "type": {
-                    "type": "string",
-                    "enum": [
-                        "Property"
-                    ]
-                },
-                "value": {
-                    "type": [
-                        "number",
-                        "string"
-                    ]
-                },
-                "unitCode": {
-                    "type": "string"
-                },
-                "createdAt": {
-                    "type": "string",
-                    "format": "full-date"
-                },
-                "observedAt": {
-                    "type": "string",
-                    "format": "full-date"
-                },
-                "modifiedAt": {
-                    "type": "string",
-                    "format": "full-date"
-                },
-                "baseDemand": {
-                    "type": "object",
-                    "properties": {
-                        "type": {
-                            "type": "string",
-                            "enum": [
-                                "Property"
-                            ]
-                        },
-                        "value": {
-                            "type": [
-                                "number",
-                                "string"
-                            ]
-                        },
-                        "unitCode": {
-                            "type": "string"
-                        },
-                        "createdAt": {
-                            "type": "string",
-                            "format": "full-date"
-                        },
-                        "observedAt": {
-                            "type": "string",
-                            "format": "full-date"
-                        },
-                        "modifiedAt": {
-                            "type": "string",
-                            "format": "full-date"
-                        }
-                    },
-                    "required": [
-                        "type",
-                        "value"
-                    ]
-                },
-                "demandPattern": {
-                    "type": "object",
-                    "properties": {
-                        "type": {
-                            "type": "string",
-                            "enum": [
-                                "Relationship"
-                            ]
-                        },
-                        "object": {
-                            "type": [
-                                "string"
-                            ],
-                            "format": "uri"
-                        },
-                        "createdAt": {
-                            "type": "string",
-                            "format": "full-date"
-                        },
-                        "observedAt": {
-                            "type": "string",
-                            "format": "full-date"
-                        },
-                        "modifiedAt": {
-                            "type": "string",
-                            "format": "full-date"
-                        }
-                    },
-                    "required": [
-                        "type",
-                        "object"
-                    ]
-                }
-            },
-            "required": [
-                "type",
-                "value",
-                "baseDemand",
-                "demandPattern"
-            ]
-        },
-        "source": {
-            "type": "object",
-            "properties": {
-                "type": {
-                    "type": "string",
-                    "enum": [
-                        "Property"
-                    ]
-                },
-                "value": {
-                    "type": [
-                        "number",
-                        "string"
-                    ]
-                },
-                "unitCode": {
-                    "type": "string"
-                },
-                "createdAt": {
-                    "type": "string",
-                    "format": "full-date"
-                },
-                "observedAt": {
-                    "type": "string",
-                    "format": "full-date"
-                },
-                "modifiedAt": {
-                    "type": "string",
-                    "format": "full-date"
-                },
-                "sourceType": {
-                    "type": "object",
-                    "properties": {
-                        "type": {
-                            "type": "string",
-                            "enum": [
-                                "Property"
-                            ]
-                        },
-                        "value": {
-                            "type": [
-                                "number",
-                                "string"
-                            ],
-                            "enum": [
-                                "CONCEN",
-                                "MASS",
-                                "FLOWPACED ",
-                                "SETPOINT"
-                            ]
-                        },
-                        "unitCode": {
-                            "type": "string"
-                        },
-                        "createdAt": {
-                            "type": "string",
-                            "format": "full-date"
-                        },
-                        "observedAt": {
-                            "type": "string",
-                            "format": "full-date"
-                        },
-                        "modifiedAt": {
-                            "type": "string",
-                            "format": "full-date"
-                        }
-                    },
-                    "required": [
-                        "type",
-                        "value"
-                    ]
-                },
-                "sourceQuality": {
-                    "type": "object",
-                    "properties": {
-                        "type": {
-                            "type": "string",
-                            "enum": [
-                                "Property"
-                            ]
-                        },
-                        "value": {
-                            "type": [
-                                "number",
-                                "string"
-                            ]
-                        },
-                        "unitCode": {
-                            "type": "string"
-                        },
-                        "createdAt": {
-                            "type": "string",
-                            "format": "full-date"
-                        },
-                        "observedAt": {
-                            "type": "string",
-                            "format": "full-date"
-                        },
-                        "modifiedAt": {
-                            "type": "string",
-                            "format": "full-date"
-                        }
-                    },
-                    "required": [
-                        "type",
-                        "value"
-                    ]
-                },
-                "sourcePattern": {
-                    "type": "object",
-                    "properties": {
-                        "type": {
-                            "type": "string",
-                            "enum": [
-                                "Relationship"
-                            ]
-                        },
-                        "object": {
-                            "type": [
-                                "string"
-                            ],
-                            "format": "uri"
-                        },
-                        "createdAt": {
-                            "type": "string",
-                            "format": "full-date"
-                        },
-                        "observedAt": {
-                            "type": "string",
-                            "format": "full-date"
-                        },
-                        "modifiedAt": {
-                            "type": "string",
-                            "format": "full-date"
-                        }
-                    },
-                    "required": [
-                        "type",
-                        "object"
-                    ]
-                }
-            },
-            "required": [
-                "type",
-                "value",
-                "sourceType",
-                "sourceQuality",
-                "sourcePattern"
+    "id": "urn:ngsi-ld:Junction:63fe7d79-0d4c-4da9-b7d0-3340efa0656a",
+    "type": "Junction",
+    "createdAt": "2020-02-20T15:42:00Z",
+    "modifiedAt": "2020-02-20T15:45:00Z",
+    "location": {
+        "type": "GeoProperty",
+        "value": {
+            "type": "Point",
+            "coordinates": [
+                24.30623,
+                60.07966
             ]
         }
     },
-    "allOf": [
-        {
-            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+    "elevation": {
+        "type": "Property",
+        "value": 105.8,
+        "unitCode": "MTR"
+    },
+    "demandCategory": {
+        "type": "Property",
+        "value": "agriculture demand",
+        "baseDemand": {
+            "type": "Property",
+            "value": "1.763868462",
+            "unitCode": "MQS"
         },
-        {
-            "properties": {
-                "type": {
-                    "type": "string",
-                    "enum": [
-                        "Junction"
-                    ],
-                    "description": "NGSI-LD Entity Type"
-                },
-                "elevation": {
-                    "$ref": "#/definitions/ngsildProperty"
-                },
-                "demandeCategory": {
-                    "$ref": "#/definitions/demand"
-                },
-                "tags": {
-                    "$ref": "#/definitions/ngsildProperty"
-                },
-                "initialQuality": {
-                    "$ref": "#/definitions/ngsildProperty"
-                },
-                "description": {
-                    "$ref": "#/definitions/ngsildProperty"
-                },
-                "emitterCoefficient": {
-                    "$ref": "#/definitions/ngsildProperty"
-                },
-                "sourceCategory": {
-                    "$ref": "#/definitions/source"
-                }
-            }
+        "demandPattern": {
+            "type": "Relationship",
+            "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533"
         }
-    ],
-    "required": [
-        "id",
-        "type",
-        "location"
+    },
+    "sourceCategory": {
+        "type": "Property",
+        "value": "CategroyX",
+        "sourceType": {
+            "type": "Property",
+            "value": "MASS"
+        },
+        "sourceQuality": {
+            "type": "Property",
+            "value": 1.2,
+            "unitCode": "F31"
+        },
+        "sourcePattern": {
+            "type": "Relationship",
+            "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
+        }
+    },
+   "tags": {
+        "type": "Property",
+        "value": [
+            "DMA1",
+            "DMA2"
+        ]
+    },
+    "description": {
+        "type": "Property",
+        "value": "This entity contains a harmonised description of a Junction"
+    },
+    "initialQuality": {
+        "type": "Property",
+        "value": "low"
+    },
+    "emitterCoefficient": {
+        "type": "Property",
+        "value": 0.526,
+        "unitCode": "MQS"
+    },
+    "@context": [
+        "https://schema.lab.fiware.org/ld/context"
     ]
 }
