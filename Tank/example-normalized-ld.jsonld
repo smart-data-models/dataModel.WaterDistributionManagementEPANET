@@ -8,23 +8,23 @@
         "value": {
             "type": "Point",
             "coordinates": [
-               24.30623,
-               60.07966
+                24.30623,
+                60.07966
             ]
-         }   
+        }
     },
-    "demandCategory":{
+    "demandCategory": {
         "type": "Property",
         "value": "agriculture demand",
-        "baseDemand ":{
-	        "type": "Property",
-	        "value": "1.763868462",
-	        "unitCode": "MQS"
+        "baseDemand ": {
+            "type": "Property",
+            "value": "1.763868462",
+            "unitCode": "MQS"
         },
-        "demandPattern" : {
-	        "type":"Relationship",
-	        "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533"
-        }      	
+        "demandPattern": {
+            "type": "Relationship",
+            "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533"
+        }
     },
     "elevation": {
         "type": "Property",
@@ -69,7 +69,7 @@
         "value": 0.526,
         "unitCode": "C62"
     },
-    "sourceCategory":{
+    "sourceCategory": {
         "type": "Property",
         "value": "category1",
         "sourceType": {

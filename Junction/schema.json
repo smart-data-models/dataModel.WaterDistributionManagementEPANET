@@ -5,290 +5,374 @@
     "description": "This entity contains a harmonised description of a generic junction made for the Water Network Management domain. This entity is primarily associated with the water network management vertical and related IoT applications.",
     "type": "object",
     "definitions": {
-		"ngsildProperty": {
-			"type": "object",
-			"properties": {
-				"type":{
-                    "type":"string",
-                    "enum":["Property"]
-                    },
-					"value":{
-                    "type":["number","string","array"]
-                    },
-					"unitCode":{
-                    "type":"string"
-                    },
-					"createdAt":{
-                        "type":"string",
-                        "format":"full-date"
-                    },
-					"observedAt":{
-                        "type":"string",
-                        "format":"full-date"
-                    },
-					"modifiedAt":{
-                        "type":"string",
-                        "format":"full-date"
-                    } 
-			    },
-			"required":["type","value"]
+        "ngsildProperty": {
+            "type": "object",
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "Property"
+                    ]
+                },
+                "value": {
+                    "type": [
+                        "number",
+                        "string",
+                        "array"
+                    ]
+                },
+                "unitCode": {
+                    "type": "string"
+                },
+                "createdAt": {
+                    "type": "string",
+                    "format": "full-date"
+                },
+                "observedAt": {
+                    "type": "string",
+                    "format": "full-date"
+                },
+                "modifiedAt": {
+                    "type": "string",
+                    "format": "full-date"
+                }
+            },
+            "required": [
+                "type",
+                "value"
+            ]
         },
         "ngsildRelationship": {
             "type": "object",
             "properties": {
-                    "type":{
-                        "type":"string",
-                        "enum":["Relationship"]
-                    },
-                    "object":{
-                        "type":["string"],
-                        "format":"uri"
-                    },
-                    "createdAt":{
-                        "type":"string",
-                        "format":"full-date"
-                    },
-                    "observedAt":{
-                        "type":"string",
-                        "format":"full-date"
-                    },
-                    "modifiedAt":{
-                        "type":"string",
-                        "format":"full-date"
-                    } 
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "Relationship"
+                    ]
                 },
-            "required":["type","value"]
+                "object": {
+                    "type": [
+                        "string"
+                    ],
+                    "format": "uri"
+                },
+                "createdAt": {
+                    "type": "string",
+                    "format": "full-date"
+                },
+                "observedAt": {
+                    "type": "string",
+                    "format": "full-date"
+                },
+                "modifiedAt": {
+                    "type": "string",
+                    "format": "full-date"
+                }
+            },
+            "required": [
+                "type",
+                "value"
+            ]
         },
-		"demand": {
-					"type":"object",
-					"properties": {
-						"type":{
-                            "type":"string",
-                            "enum":["Property"]
+        "demand": {
+            "type": "object",
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "Property"
+                    ]
+                },
+                "value": {
+                    "type": [
+                        "number",
+                        "string"
+                    ]
+                },
+                "unitCode": {
+                    "type": "string"
+                },
+                "createdAt": {
+                    "type": "string",
+                    "format": "full-date"
+                },
+                "observedAt": {
+                    "type": "string",
+                    "format": "full-date"
+                },
+                "modifiedAt": {
+                    "type": "string",
+                    "format": "full-date"
+                },
+                "baseDemand": {
+                    "type": "object",
+                    "properties": {
+                        "type": {
+                            "type": "string",
+                            "enum": [
+                                "Property"
+                            ]
                         },
-						"value":{
-                            "type":["number","string"]
+                        "value": {
+                            "type": [
+                                "number",
+                                "string"
+                            ]
                         },
-						"unitCode":{
-                            "type":"string"
+                        "unitCode": {
+                            "type": "string"
                         },
-						"createdAt":{
-                            "type":"string",
-                            "format":"full-date"
+                        "createdAt": {
+                            "type": "string",
+                            "format": "full-date"
                         },
-						"observedAt":{
-                            "type":"string",
-                            "format":"full-date"
+                        "observedAt": {
+                            "type": "string",
+                            "format": "full-date"
                         },
-						"modifiedAt":{
-                            "type":"string",
-                            "format":"full-date"
+                        "modifiedAt": {
+                            "type": "string",
+                            "format": "full-date"
+                        }
+                    },
+                    "required": [
+                        "type",
+                        "value"
+                    ]
+                },
+                "demandPattern": {
+                    "type": "object",
+                    "properties": {
+                        "type": {
+                            "type": "string",
+                            "enum": [
+                                "Relationship"
+                            ]
                         },
-						"baseDemand":{
-                            "type":"object",									
-							"properties": {
-								"type":{
-                                    "type":"string",
-                                    "enum":["Property"]
-                                },
-								"value":{
-                                    "type":["number","string"]
-                                },
-								"unitCode":{
-                                    "type":"string"
-                                },
-								"createdAt":{
-                                    "type":"string",
-                                    "format":"full-date"
-                                },
-								"observedAt":{
-                                    "type":"string",
-                                    "format":"full-date"
-                                },
-								"modifiedAt":{
-                                    "type":"string",
-                                    "format":"full-date"
-                                }
-							},
-                            "required": ["type","value"]
-                        },	
-                        "demandPattern":{
-                            "type":"object",									
-                            "properties": {
-                                "type":{
-                                    "type":"string",
-                                    "enum":["Relationship"]
-                                },
-                                "object":{
-                                    "type":["string"],
-                                    "format": "uri"
-                                },
-                                "createdAt":{
-                                    "type":"string",
-                                    "format":"full-date"
-                                },
-                                "observedAt":{
-                                    "type":"string",
-                                    "format":"full-date"
-                                },
-                                "modifiedAt":{
-                                    "type":"string",
-                                    "format":"full-date"
-                                }
-                            },
-                            "required": ["type","object"]}	
+                        "object": {
+                            "type": [
+                                "string"
+                            ],
+                            "format": "uri"
                         },
-					"required": ["type","value","baseDemand","demandPattern"]
+                        "createdAt": {
+                            "type": "string",
+                            "format": "full-date"
+                        },
+                        "observedAt": {
+                            "type": "string",
+                            "format": "full-date"
+                        },
+                        "modifiedAt": {
+                            "type": "string",
+                            "format": "full-date"
+                        }
+                    },
+                    "required": [
+                        "type",
+                        "object"
+                    ]
+                }
             },
-            "source": {
-                "type":"object",
-                "properties": {
-                    "type":{
-                        "type":"string",
-                        "enum":["Property"]
-                    },
-                    "value":{
-                        "type":["number","string"]
-                    },
-                    "unitCode":{
-                        "type":"string"
-                    },
-                    "createdAt":{
-                        "type":"string",
-                        "format":"full-date"
-                    },
-                    "observedAt":{
-                        "type":"string",
-                        "format":"full-date"
-                    },
-                    "modifiedAt":{
-                        "type":"string",
-                        "format":"full-date"
-                    },
-                    "sourceType":{
-                        "type":"object",									
-                        "properties": {
-                            "type":{
-                                "type":"string",
-                                "enum":["Property"]
-                            },
-                            "value":{
-                                "type":["number","string"],
-                                "enum": [ "CONCEN", "MASS", "FLOWPACED ","SETPOINT"]
-                            },
-                            "unitCode":{
-                                "type":"string"
-                            },
-                            "createdAt":{
-                                "type":"string",
-                                "format":"full-date"
-                            },
-                            "observedAt":{
-                                "type":"string",
-                                "format":"full-date"
-                            },
-                            "modifiedAt":{
-                                "type":"string",
-                                "format":"full-date"
-                            }
+            "required": [
+                "type",
+                "value",
+                "baseDemand",
+                "demandPattern"
+            ]
+        },
+        "source": {
+            "type": "object",
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "Property"
+                    ]
+                },
+                "value": {
+                    "type": [
+                        "number",
+                        "string"
+                    ]
+                },
+                "unitCode": {
+                    "type": "string"
+                },
+                "createdAt": {
+                    "type": "string",
+                    "format": "full-date"
+                },
+                "observedAt": {
+                    "type": "string",
+                    "format": "full-date"
+                },
+                "modifiedAt": {
+                    "type": "string",
+                    "format": "full-date"
+                },
+                "sourceType": {
+                    "type": "object",
+                    "properties": {
+                        "type": {
+                            "type": "string",
+                            "enum": [
+                                "Property"
+                            ]
                         },
-                        "required": ["type","value"]
-                    },
-                    "sourceQuality":{
-                        "type":"object",									
-                        "properties": {
-                            "type":{
-                                "type":"string",
-                                "enum":["Property"]
-                            },
-                            "value":{
-                                "type":["number","string"]
-                            },
-                            "unitCode":{
-                                "type":"string"
-                            },
-                            "createdAt":{
-                                "type":"string",
-                                "format":"full-date"
-                            },
-                            "observedAt":{
-                                "type":"string",
-                                "format":"full-date"
-                            },
-                            "modifiedAt":{
-                                "type":"string",
-                                "format":"full-date"
-                            }
+                        "value": {
+                            "type": [
+                                "number",
+                                "string"
+                            ],
+                            "enum": [
+                                "CONCEN",
+                                "MASS",
+                                "FLOWPACED ",
+                                "SETPOINT"
+                            ]
                         },
-                        "required": ["type","value"]
-                    },	
-                    "sourcePattern":{
-                        "type":"object",									
-                        "properties": {
-                            "type":{
-                                "type":"string",
-                                "enum":["Relationship"]
-                            },
-                            "object":{
-                                "type":["string"],
-                                "format": "uri"
-                            },
-                            "createdAt":{
-                                "type":"string",
-                                "format":"full-date"
-                            },
-                            "observedAt":{
-                                "type":"string",
-                                "format":"full-date"
-                            },
-                            "modifiedAt":{
-                                "type":"string",
-                                "format":"full-date"
-                            }
+                        "unitCode": {
+                            "type": "string"
                         },
-                        "required": ["type","object"]}	
+                        "createdAt": {
+                            "type": "string",
+                            "format": "full-date"
+                        },
+                        "observedAt": {
+                            "type": "string",
+                            "format": "full-date"
+                        },
+                        "modifiedAt": {
+                            "type": "string",
+                            "format": "full-date"
+                        }
                     },
-                "required": ["type","value","sourceType","sourceQuality","sourcePattern"]
-        } 
-	},
+                    "required": [
+                        "type",
+                        "value"
+                    ]
+                },
+                "sourceQuality": {
+                    "type": "object",
+                    "properties": {
+                        "type": {
+                            "type": "string",
+                            "enum": [
+                                "Property"
+                            ]
+                        },
+                        "value": {
+                            "type": [
+                                "number",
+                                "string"
+                            ]
+                        },
+                        "unitCode": {
+                            "type": "string"
+                        },
+                        "createdAt": {
+                            "type": "string",
+                            "format": "full-date"
+                        },
+                        "observedAt": {
+                            "type": "string",
+                            "format": "full-date"
+                        },
+                        "modifiedAt": {
+                            "type": "string",
+                            "format": "full-date"
+                        }
+                    },
+                    "required": [
+                        "type",
+                        "value"
+                    ]
+                },
+                "sourcePattern": {
+                    "type": "object",
+                    "properties": {
+                        "type": {
+                            "type": "string",
+                            "enum": [
+                                "Relationship"
+                            ]
+                        },
+                        "object": {
+                            "type": [
+                                "string"
+                            ],
+                            "format": "uri"
+                        },
+                        "createdAt": {
+                            "type": "string",
+                            "format": "full-date"
+                        },
+                        "observedAt": {
+                            "type": "string",
+                            "format": "full-date"
+                        },
+                        "modifiedAt": {
+                            "type": "string",
+                            "format": "full-date"
+                        }
+                    },
+                    "required": [
+                        "type",
+                        "object"
+                    ]
+                }
+            },
+            "required": [
+                "type",
+                "value",
+                "sourceType",
+                "sourceQuality",
+                "sourcePattern"
+            ]
+        }
+    },
     "allOf": [
-		{
-		"$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
-		},
-		{
-        "properties": {
-            "type": {
-                "type": "string",
-                "enum": ["Junction"],
-                "description": "NGSI-LD Entity Type"
-            },
-            "elevation": {
-                "$ref": "#/definitions/ngsildProperty"
-            },
-            "demandeCategory": {
-                "$ref": "#/definitions/demand"
-            },
-            "tags": {
-                "$ref": "#/definitions/ngsildProperty"
-            },
-            "initialQuality": {
-                "$ref": "#/definitions/ngsildProperty"
-            },
-            "description": {
-                "$ref": "#/definitions/ngsildProperty"
-            },
-            "emitterCoefficient": {
-                "$ref": "#/definitions/ngsildProperty"
-            },
-            "sourceCategory": {
-                "$ref": "#/definitions/source"
+        {
+            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+        },
+        {
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "Junction"
+                    ],
+                    "description": "NGSI-LD Entity Type"
+                },
+                "elevation": {
+                    "$ref": "#/definitions/ngsildProperty"
+                },
+                "demandeCategory": {
+                    "$ref": "#/definitions/demand"
+                },
+                "tags": {
+                    "$ref": "#/definitions/ngsildProperty"
+                },
+                "initialQuality": {
+                    "$ref": "#/definitions/ngsildProperty"
+                },
+                "description": {
+                    "$ref": "#/definitions/ngsildProperty"
+                },
+                "emitterCoefficient": {
+                    "$ref": "#/definitions/ngsildProperty"
+                },
+                "sourceCategory": {
+                    "$ref": "#/definitions/source"
+                }
             }
         }
-    }
-	],
+    ],
     "required": [
-      "id",
-      "type",
-      "location"
+        "id",
+        "type",
+        "location"
     ]
-}		
+}

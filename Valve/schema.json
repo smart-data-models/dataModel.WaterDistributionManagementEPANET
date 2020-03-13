@@ -8,133 +8,163 @@
         "ngsildProperty": {
             "type": "object",
             "properties": {
-                "type":{
-                    "type":"string",
-                    "enum":["Property"]
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "Property"
+                    ]
                 },
-                "value":{
-                    "type":["number","string","array"]
+                "value": {
+                    "type": [
+                        "number",
+                        "string",
+                        "array"
+                    ]
                 },
-                "unitCode":{
-                    "type":"string"
+                "unitCode": {
+                    "type": "string"
                 },
-                "createdAt":{
-                    "type":"string",
-                    "format":"full-date"
+                "createdAt": {
+                    "type": "string",
+                    "format": "full-date"
                 },
-                "observedAt":{
-                    "type":"string",
-                    "format":"full-date"
+                "observedAt": {
+                    "type": "string",
+                    "format": "full-date"
                 },
-                "modifiedAt":{
-                    "type":"string",
-                    "format":"full-date"
-                } 
+                "modifiedAt": {
+                    "type": "string",
+                    "format": "full-date"
+                }
             },
-            "required":["type","value"]
+            "required": [
+                "type",
+                "value"
+            ]
         },
         "ngsildRelationship": {
             "type": "object",
             "properties": {
-                "type":{
-                    "type":"string",
-                    "enum":["Relationship"]
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "Relationship"
+                    ]
                 },
-                "object":{
-                    "type":["string"],
-                    "format":"uri"
+                "object": {
+                    "type": [
+                        "string"
+                    ],
+                    "format": "uri"
                 },
-                "createdAt":{
-                    "type":"string",
-                    "format":"full-date"
+                "createdAt": {
+                    "type": "string",
+                    "format": "full-date"
                 },
-                "observedAt":{
-                    "type":"string",
-                    "format":"full-date"
+                "observedAt": {
+                    "type": "string",
+                    "format": "full-date"
                 },
-                "modifiedAt":{
-                    "type":"string",
-                    "format":"full-date"
-                } 
+                "modifiedAt": {
+                    "type": "string",
+                    "format": "full-date"
+                }
             },
-            "required":["type","object"]
+            "required": [
+                "type",
+                "object"
+            ]
         },
         "status": {
             "type": "object",
             "properties": {
-                "type":{
-                    "type":"string",
-                    "enum":["Property"]
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "Property"
+                    ]
                 },
-                "value":{
-                    "type":["number","string","array"],
-                    "enum": ["open","close"]
+                "value": {
+                    "type": [
+                        "number",
+                        "string",
+                        "array"
+                    ],
+                    "enum": [
+                        "open",
+                        "close"
+                    ]
                 },
-                "unitCode":{
-                    "type":"string"
+                "unitCode": {
+                    "type": "string"
                 },
-                "createdAt":{
-                    "type":"string",
-                    "format":"full-date"
+                "createdAt": {
+                    "type": "string",
+                    "format": "full-date"
                 },
-                "observedAt":{
-                    "type":"string",
-                    "format":"full-date"
+                "observedAt": {
+                    "type": "string",
+                    "format": "full-date"
                 },
-                "modifiedAt":{
-                    "type":"string",
-                    "format":"full-date"
-                } 
+                "modifiedAt": {
+                    "type": "string",
+                    "format": "full-date"
+                }
             },
-            "required":["type","value"]
+            "required": [
+                "type",
+                "value"
+            ]
         }
     },
     "allOf": [
         {
-        "properties": {
-            "type": {
-                "type": "string",
-                "enum": ["Valve"],
-                "description": "NGSI-LD Entity Type"
-            },
-            "status": {
-                "$ref": "#/definitions/status"
-            },
-            "defaultStatus": {
-                "$ref": "#/definitions/status"
-            },
-            "diameter": {
-                "$ref": "#/definitions/ngsildProperty"
-            },
-            "valveType": {
-                "$ref": "#/definitions/ngsildProperty"
-            },
-            "setting": {
-                "$ref": "#/definitions/ngsildProperty"
-            },
-            "minorLoss": {
-                "$ref": "#/definitions/ngsildProperty"
-            },
-            "startsAt": {
-                "$ref": "#/definitions/ngsildRelationship"
-            },
-            "endsAt": {
-                "$ref": "#/definitions/ngsildRelationship"
-            },
-            "createdAt":{
-                "type":"string",
-                "format":"full-date"
-            },
-            "observedAt":{
-                "type":"string",
-                "format":"full-date"
-            },
-            "modifiedAt":{
-                "type":"string",
-                "format":"full-date"
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "Valve"
+                    ],
+                    "description": "NGSI-LD Entity Type"
+                },
+                "status": {
+                    "$ref": "#/definitions/status"
+                },
+                "defaultStatus": {
+                    "$ref": "#/definitions/status"
+                },
+                "diameter": {
+                    "$ref": "#/definitions/ngsildProperty"
+                },
+                "valveType": {
+                    "$ref": "#/definitions/ngsildProperty"
+                },
+                "setting": {
+                    "$ref": "#/definitions/ngsildProperty"
+                },
+                "minorLoss": {
+                    "$ref": "#/definitions/ngsildProperty"
+                },
+                "startsAt": {
+                    "$ref": "#/definitions/ngsildRelationship"
+                },
+                "endsAt": {
+                    "$ref": "#/definitions/ngsildRelationship"
+                },
+                "createdAt": {
+                    "type": "string",
+                    "format": "full-date"
+                },
+                "observedAt": {
+                    "type": "string",
+                    "format": "full-date"
+                },
+                "modifiedAt": {
+                    "type": "string",
+                    "format": "full-date"
+                }
             }
         }
-    }
     ],
     "required": [
         "id",

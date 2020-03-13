@@ -8,276 +8,352 @@
         "ngsildProperty": {
             "type": "object",
             "properties": {
-                "type":{
-                    "type":"string",
-                    "enum":["Property"]
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "Property"
+                    ]
                 },
-                "value":{
-                    "type":["number","string","array"]
+                "value": {
+                    "type": [
+                        "number",
+                        "string",
+                        "array"
+                    ]
                 },
-                "unitCode":{
-                    "type":"string"
+                "unitCode": {
+                    "type": "string"
                 },
-                "createdAt":{
-                    "type":"string",
-                    "format":"full-date"
+                "createdAt": {
+                    "type": "string",
+                    "format": "full-date"
                 },
-                "observedAt":{
-                    "type":"string",
-                    "format":"full-date"
+                "observedAt": {
+                    "type": "string",
+                    "format": "full-date"
                 },
-                "modifiedAt":{
-                    "type":"string",
-                    "format":"full-date"
-                } 
+                "modifiedAt": {
+                    "type": "string",
+                    "format": "full-date"
+                }
             },
-            "required":["type","value"]
+            "required": [
+                "type",
+                "value"
+            ]
         },
         "demand": {
-            "type":"object",
+            "type": "object",
             "properties": {
-                "type":{
-                    "type":"string",
-                    "enum":["Property"]
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "Property"
+                    ]
                 },
-                "value":{
-                    "type":["number","string"]
+                "value": {
+                    "type": [
+                        "number",
+                        "string"
+                    ]
                 },
-                "unitCode":{
-                    "type":"string"
+                "unitCode": {
+                    "type": "string"
                 },
-                "createdAt":{
-                    "type":"string",
-                    "format":"full-date"
+                "createdAt": {
+                    "type": "string",
+                    "format": "full-date"
                 },
-                "observedAt":{
-                    "type":"string",
-                    "format":"full-date"
+                "observedAt": {
+                    "type": "string",
+                    "format": "full-date"
                 },
-                "modifiedAt":{
-                    "type":"string",
-                    "format":"full-date"
+                "modifiedAt": {
+                    "type": "string",
+                    "format": "full-date"
                 },
-                "baseDemand":{
-                    "type":"object",									
+                "baseDemand": {
+                    "type": "object",
                     "properties": {
-                        "type":{
-                            "type":"string",
-                            "enum":["Property"]
+                        "type": {
+                            "type": "string",
+                            "enum": [
+                                "Property"
+                            ]
                         },
-                        "value":{
-                            "type":["number","string"]
+                        "value": {
+                            "type": [
+                                "number",
+                                "string"
+                            ]
                         },
-                        "unitCode":{
-                            "type":"string"
+                        "unitCode": {
+                            "type": "string"
                         },
-                        "createdAt":{
-                            "type":"string",
-                            "format":"full-date"
+                        "createdAt": {
+                            "type": "string",
+                            "format": "full-date"
                         },
-                        "observedAt":{
-                            "type":"string",
-                            "format":"full-date"
+                        "observedAt": {
+                            "type": "string",
+                            "format": "full-date"
                         },
-                        "modifiedAt":{
-                            "type":"string",
-                            "format":"full-date"
+                        "modifiedAt": {
+                            "type": "string",
+                            "format": "full-date"
                         }
                     },
-                    "required": ["type","value"]
-                },	
-                "demandPattern":{
-                    "type":"object",									
+                    "required": [
+                        "type",
+                        "value"
+                    ]
+                },
+                "demandPattern": {
+                    "type": "object",
                     "properties": {
-                        "type":{
-                            "type":"string",
-                            "enum":["Relationship"]
+                        "type": {
+                            "type": "string",
+                            "enum": [
+                                "Relationship"
+                            ]
                         },
-                        "object":{
-                            "type":["string"],
+                        "object": {
+                            "type": [
+                                "string"
+                            ],
                             "format": "uri"
                         },
-                        "createdAt":{
-                            "type":"string",
-                            "format":"full-date"
+                        "createdAt": {
+                            "type": "string",
+                            "format": "full-date"
                         },
-                        "observedAt":{
-                            "type":"string",
-                            "format":"full-date"
+                        "observedAt": {
+                            "type": "string",
+                            "format": "full-date"
                         },
-                        "modifiedAt":{
-                            "type":"string",
-                            "format":"full-date"
+                        "modifiedAt": {
+                            "type": "string",
+                            "format": "full-date"
                         }
                     },
-                    "required": ["type","object"]
-                }	
+                    "required": [
+                        "type",
+                        "object"
+                    ]
+                }
             },
-            "required": ["type","value","baseDemand","demandPattern"]
+            "required": [
+                "type",
+                "value",
+                "baseDemand",
+                "demandPattern"
+            ]
         },
         "source": {
-            "type":"object",
+            "type": "object",
             "properties": {
-                "type":{
-                    "type":"string",
-                    "enum":["Property"]
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "Property"
+                    ]
                 },
-                "value":{
-                    "type":["number","string"]
+                "value": {
+                    "type": [
+                        "number",
+                        "string"
+                    ]
                 },
-                "unitCode":{
-                    "type":"string"
+                "unitCode": {
+                    "type": "string"
                 },
-                "createdAt":{
-                    "type":"string",
-                    "format":"full-date"
+                "createdAt": {
+                    "type": "string",
+                    "format": "full-date"
                 },
-                "observedAt":{
-                    "type":"string",
-                    "format":"full-date"
+                "observedAt": {
+                    "type": "string",
+                    "format": "full-date"
                 },
-                "modifiedAt":{
-                    "type":"string",
-                    "format":"full-date"
+                "modifiedAt": {
+                    "type": "string",
+                    "format": "full-date"
                 },
-                "sourceType":{
-                    "type":"object",									
+                "sourceType": {
+                    "type": "object",
                     "properties": {
-                        "type":{
-                            "type":"string",
-                            "enum":["Property"]
+                        "type": {
+                            "type": "string",
+                            "enum": [
+                                "Property"
+                            ]
                         },
-                        "value":{
-                            "type":["number","string"],
-                            "enum": [ "CONCEN", "MASS", "FLOWPACED ", "SETPOINT"]
+                        "value": {
+                            "type": [
+                                "number",
+                                "string"
+                            ],
+                            "enum": [
+                                "CONCEN",
+                                "MASS",
+                                "FLOWPACED ",
+                                "SETPOINT"
+                            ]
                         },
-                        "unitCode":{
-                            "type":"string"
+                        "unitCode": {
+                            "type": "string"
                         },
-                        "createdAt":{
-                            "type":"string",
-                            "format":"full-date"
+                        "createdAt": {
+                            "type": "string",
+                            "format": "full-date"
                         },
-                        "observedAt":{
-                            "type":"string",
-                            "format":"full-date"
+                        "observedAt": {
+                            "type": "string",
+                            "format": "full-date"
                         },
-                        "modifiedAt":{
-                            "type":"string",
-                            "format":"full-date"
+                        "modifiedAt": {
+                            "type": "string",
+                            "format": "full-date"
                         }
                     },
-                    "required": ["type","value"]
+                    "required": [
+                        "type",
+                        "value"
+                    ]
                 },
-                "sourceQuality":{
-                    "type":"object",									
+                "sourceQuality": {
+                    "type": "object",
                     "properties": {
-                        "type":{
-                            "type":"string",
-                            "enum":["Property"]
+                        "type": {
+                            "type": "string",
+                            "enum": [
+                                "Property"
+                            ]
                         },
-                        "value":{
-                            "type":["number","string"]
+                        "value": {
+                            "type": [
+                                "number",
+                                "string"
+                            ]
                         },
-                        "unitCode":{
-                            "type":"string"
+                        "unitCode": {
+                            "type": "string"
                         },
-                        "createdAt":{
-                            "type":"string",
-                            "format":"full-date"
+                        "createdAt": {
+                            "type": "string",
+                            "format": "full-date"
                         },
-                        "observedAt":{
-                            "type":"string",
-                            "format":"full-date"
+                        "observedAt": {
+                            "type": "string",
+                            "format": "full-date"
                         },
-                        "modifiedAt":{
-                            "type":"string",
-                            "format":"full-date"
+                        "modifiedAt": {
+                            "type": "string",
+                            "format": "full-date"
                         }
                     },
-                    "required": ["type","value"]
-                },	
-                "sourcePattern":{
-                    "type":"object",									
+                    "required": [
+                        "type",
+                        "value"
+                    ]
+                },
+                "sourcePattern": {
+                    "type": "object",
                     "properties": {
-                        "type":{
-                            "type":"string",
-                            "enum":["Relationship"]
+                        "type": {
+                            "type": "string",
+                            "enum": [
+                                "Relationship"
+                            ]
                         },
-                        "object":{
-                            "type":["string"],
+                        "object": {
+                            "type": [
+                                "string"
+                            ],
                             "format": "uri"
                         },
-                        "createdAt":{
-                            "type":"string",
-                            "format":"full-date"
+                        "createdAt": {
+                            "type": "string",
+                            "format": "full-date"
                         },
-                        "observedAt":{
-                            "type":"string",
-                            "format":"full-date"
+                        "observedAt": {
+                            "type": "string",
+                            "format": "full-date"
                         },
-                        "modifiedAt":{
-                            "type":"string",
-                            "format":"full-date"
+                        "modifiedAt": {
+                            "type": "string",
+                            "format": "full-date"
                         }
                     },
-                    "required": ["type","object"]}	
-                },
-            "required": ["type","value","sourceType","sourceQuality","sourcePattern"]
-        } 
+                    "required": [
+                        "type",
+                        "object"
+                    ]
+                }
+            },
+            "required": [
+                "type",
+                "value",
+                "sourceType",
+                "sourceQuality",
+                "sourcePattern"
+            ]
+        }
     },
     "allOf": [
         {
             "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
         },
         {
-        "properties": {
-            "type": {
-                "type": "string",
-                "enum": ["Tank"],
-                "description": "NGSI-LD Entity Type"
-            },
-            "elevation": {
-                "$ref": "#/definitions/ngsildProperty"
-            },
-            "initLevel": {
-                "$ref": "#/definitions/ngsildProperty"
-            },
-            "minLevel": {
-                "$ref": "#/definitions/ngsildProperty"
-            },
-            "maxLevel": {
-                "$ref": "#/definitions/ngsildProperty"
-            },
-            "minVolume": {
-                "$ref": "#/definitions/ngsildProperty"
-            },
-            "nominalDiameter": {
-                "$ref": "#/definitions/ngsildProperty"
-            },
-            "description": {
-                "$ref": "#/definitions/ngsildProperty"
-            },
-            "initialQuality": {
-                "$ref": "#/definitions/ngsildProperty"
-            },
-            "emitterCoefficient": {
-                "$ref": "#/definitions/ngsildProperty"
-            },
-            "mixingModel": {
-                "$ref": "#/definitions/ngsildProperty"
-            },
-            "baseDemand": {
-                "$ref": "#/definitions/demand"
-            },
-            "demand": {
-                "$ref": "#/definitions/demand"
-            },
-            "sourceCategory": {
-                "$ref": "#/definitions/source"
-            }           
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "Tank"
+                    ],
+                    "description": "NGSI-LD Entity Type"
+                },
+                "elevation": {
+                    "$ref": "#/definitions/ngsildProperty"
+                },
+                "initLevel": {
+                    "$ref": "#/definitions/ngsildProperty"
+                },
+                "minLevel": {
+                    "$ref": "#/definitions/ngsildProperty"
+                },
+                "maxLevel": {
+                    "$ref": "#/definitions/ngsildProperty"
+                },
+                "minVolume": {
+                    "$ref": "#/definitions/ngsildProperty"
+                },
+                "nominalDiameter": {
+                    "$ref": "#/definitions/ngsildProperty"
+                },
+                "description": {
+                    "$ref": "#/definitions/ngsildProperty"
+                },
+                "initialQuality": {
+                    "$ref": "#/definitions/ngsildProperty"
+                },
+                "emitterCoefficient": {
+                    "$ref": "#/definitions/ngsildProperty"
+                },
+                "mixingModel": {
+                    "$ref": "#/definitions/ngsildProperty"
+                },
+                "baseDemand": {
+                    "$ref": "#/definitions/demand"
+                },
+                "demand": {
+                    "$ref": "#/definitions/demand"
+                },
+                "sourceCategory": {
+                    "$ref": "#/definitions/source"
+                }
+            }
         }
-    }
     ],
     "required": [
         "id",
