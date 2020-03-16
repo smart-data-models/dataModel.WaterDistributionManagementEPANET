@@ -59,7 +59,8 @@
                     ],
                     "enum": [
                         "open",
-                        "close"
+                        "close",
+                        "CV"
                     ]
                 },
                 "unitCode": {
@@ -141,6 +142,21 @@
                 },
                 "endsAt": {
                     "$ref": "#/definitions/ngsildRelationship"
+                },
+                "tag": {
+                    "$ref": "#/definitions/ngsildProperty"
+                },
+                "pumpCurve":{
+                    "$ref": "#/definitions/ngsildProperty"
+                },
+                "pumpPattern":{
+                    "$ref": "#/definitions/ngsildRelationship"
+                },
+                "efficCurve":{
+                    "$ref": "#/definitions/ngsildProperty"
+                },
+                "energyPrice":{
+                    "$ref": "#/definitions/ngsildProperty"
                 },
                 "createdAt": {
                     "type": "string",

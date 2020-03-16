@@ -18,6 +18,10 @@
         "value": 59.00,
         "unitCode": "MTR"
     },
+    "headPattern": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533"
+    },
     "elevation": {
         "type": "Property",
         "value": 105.8,
@@ -42,7 +46,8 @@
     },
     "initialQuality": {
         "type": "Property",
-        "value": "low"
+        "value": 0.5,
+        "unitCode":"M1"
     },
     "sourceCategory": {
         "type": "Property",
@@ -60,6 +65,10 @@
             "type": "Relationship",
             "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
         }
+    },
+    "tag": {
+        "type": "Property",
+        "value": "DMA1"
     },
     "@context": [
         "https://schema.lab.fiware.org/ld/context"
