@@ -5,11 +5,11 @@
     "modifiedAt": "2020-03-02T15:45:00Z",
     "defaultStatus": {
         "type": "Property",
-        "value": "open"
+        "value": "OPEN"
     },
     "status": {
         "type": "Property",
-        "value": "open"
+        "value": "OPEN"
     },
     "head": {
         "type": "Property",
@@ -32,6 +32,32 @@
     "endsAt": {
         "type": "Relationship",
         "object": "urn:ngsi-ld:Reservoir:1863179e-3768-4480-9167-ff21f870dd19"
+    },
+    "tag": {
+        "type": "Property",
+        "value": "DMA1"
+    },
+    "pumpCurve":{
+        "type": "Property",
+        "value": 100,
+        "unitCode": "C62"
+    },
+    "pumpPattern":{
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533-a2eb-34bc89262190",
+
+    },
+    "efficCurve":{
+        "type": "Property",
+        "value": 0.9,
+        "unitCode": "C62"
+
+    },
+    "energyPrice":{
+        "type": "Property",
+        "value": 0.8,
+        "unitCode": "C62"
+        
     },
     "@context": [
         "https://schema.lab.fiware.org/ld/context"

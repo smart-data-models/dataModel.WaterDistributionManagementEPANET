@@ -42,6 +42,49 @@
                 "value"
             ]
         },
+        "mixingModel": {
+            "type": "object",
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "Property"
+                    ]
+                },
+                "value": {
+                    "type": [
+                        "number",
+                        "string",
+                        "array"
+                    ],
+                    "enum": [
+                        "MIXED",
+                        "2COMP",
+                        "FIFO",
+                        "LIFO"
+                    ]
+                },
+                "unitCode": {
+                    "type": "string"
+                },
+                "createdAt": {
+                    "type": "string",
+                    "format": "full-date"
+                },
+                "observedAt": {
+                    "type": "string",
+                    "format": "full-date"
+                },
+                "modifiedAt": {
+                    "type": "string",
+                    "format": "full-date"
+                }
+            },
+            "required": [
+                "type",
+                "value"
+            ]
+        },
         "demand": {
             "type": "object",
             "properties": {
@@ -337,10 +380,10 @@
                 "initialQuality": {
                     "$ref": "#/definitions/ngsildProperty"
                 },
-                "emitterCoefficient": {
-                    "$ref": "#/definitions/ngsildProperty"
-                },
                 "mixingModel": {
+                    "$ref": "#/definitions/mixingModel"
+                },
+                "tag": {
                     "$ref": "#/definitions/ngsildProperty"
                 },
                 "baseDemand": {
@@ -351,6 +394,12 @@
                 },
                 "sourceCategory": {
                     "$ref": "#/definitions/source"
+                },
+                "volumCurve": {
+                    "$ref": "#/definitions/ngsildProperty"
+                },
+                "mixingFraction": {
+                    "$ref": "#/definitions/ngsildProperty"
                 }
             }
         }

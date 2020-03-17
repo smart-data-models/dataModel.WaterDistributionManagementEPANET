@@ -352,7 +352,7 @@
                 "demandeCategory": {
                     "$ref": "#/definitions/demand"
                 },
-                "tags": {
+                "tag": {
                     "$ref": "#/definitions/ngsildProperty"
                 },
                 "initialQuality": {

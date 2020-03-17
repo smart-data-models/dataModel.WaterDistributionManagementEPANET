@@ -361,6 +361,9 @@
                 "elevation": {
                     "$ref": "#/definitions/ngsildProperty"
                 },
+                "tag": {
+                    "$ref": "#/definitions/ngsildProperty"
+                },
                 "demandCategory": {
                     "$ref": "#/definitions/demand"
                 },
@@ -369,6 +372,9 @@
                 },
                 "sourceCategory": {
                     "$ref": "#/definitions/source"
+                },
+                "headPattern": {
+                    "$ref": "#/definitions/ngsildRelationship"
                 }
             }
         }

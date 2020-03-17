@@ -91,8 +91,9 @@
                         "array"
                     ],
                     "enum": [
-                        "open",
-                        "close"
+                        "OPEN",
+                        "CLOSED",
+                        "NONE"
                     ]
                 },
                 "unitCode": {
@@ -130,7 +131,7 @@
                 "status": {
                     "$ref": "#/definitions/status"
                 },
-                "defaultStatus": {
+                "initiaStatus": {
                     "$ref": "#/definitions/status"
                 },
                 "diameter": {
@@ -143,6 +144,9 @@
                     "$ref": "#/definitions/ngsildProperty"
                 },
                 "minorLoss": {
+                    "$ref": "#/definitions/ngsildProperty"
+                },
+                "tag": {
                     "$ref": "#/definitions/ngsildProperty"
                 },
                 "startsAt": {

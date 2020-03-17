@@ -3,13 +3,13 @@
     "type": "Valve",
     "createdAt": "2020-03-02T15:42:00Z",
     "modifiedAt": "2020-03-02T15:45:00Z",
-    "defaultStatus": {
+    "initiaStatus": {
         "type": "Property",
-        "value": "open"
+        "value": "OPEN"
     },
     "status": {
         "type": "Property",
-        "value": "open"
+        "value": "OPEN"
     },
     "diameter": {
         "type": "Property",
@@ -29,6 +29,10 @@
         "type": "Property",
         "value": 0.00,
         "unitCode": "C62"
+    },
+    "tag": {
+        "type": "Property",
+        "value": "DMA1"
     },
     "startsAt": {
         "type": "Relationship",

@@ -62,12 +62,8 @@
     },
     "initialQuality": {
         "type": "Property",
-        "value": "low"
-    },
-    "emitterCoefficient": {
-        "type": "Property",
-        "value": 0.526,
-        "unitCode": "C62"
+        "value": 0.5,
+        "unitCode":"M1"
     },
     "sourceCategory": {
         "type": "Property",
@@ -88,12 +84,25 @@
     },
     "mixingModel": {
         "type": "Property",
-        "value": "mixed"
+        "value": "MIXED"
     },
-    "volCurve": {
+    "volumCurve": {
         "type": "Property",
         "value": 200,
         "unitCode": "MTQ"
+    },
+    "mixingFraction": {
+        "type": "Property",
+        "value": 0.7,
+        "unitCode": "C62"
+    },
+    "reactionCoefficient": {
+        "type": "Property",
+        "value": 0.7
+    },
+    "tag": {
+        "type": "Property",
+        "value": "DMA1"
     },
     "@context": [
         "https://schema.lab.fiware.org/ld/context"

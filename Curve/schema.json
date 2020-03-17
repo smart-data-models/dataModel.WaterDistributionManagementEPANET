@@ -1,8 +1,8 @@
 {
     "$schema": "http://json-schema.org/schema#",
-    "$id": "https://fiware.github.io/data-models/specs/WaterNetwork/Pattern/schema.json",
-    "title": "FIWARE - Pattern",
-    "description": "This entity contains a harmonised description of a generic pattern made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.",
+    "$id": "https://fiware.github.io/data-models/specs/WaterNetwork/Curve/schema.json",
+    "title": "FIWARE - Curve",
+    "description": "This entity contains a harmonised description of a generic curve made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.",
     "type": "object",
     "definitions": {
         "ngsildProperty": {
@@ -49,25 +49,27 @@
                 "type": {
                     "type": "string",
                     "enum": [
-                        "Pattern"
+                        "Curve"
                     ],
                     "description": "NGSI-LD Entity Type"
                 },
-                "multipliers": {
+                "xData": {
+                    "$ref": "#/definitions/ngsildProperty"
+                },
+                "yData": {
+                    "$ref": "#/definitions/ngsildProperty"
+                },
+                "tag": {
                     "$ref": "#/definitions/ngsildProperty"
                 },
                 "description": {
                     "$ref": "#/definitions/ngsildProperty"
-                },
-                "tag": {
-                    "$ref": "#definitions/ngsildProperty"
                 }
             }
         }
     ],
     "required": [
         "id",
-        "type",
-        "multipliers"
+        "type"
     ]
 }

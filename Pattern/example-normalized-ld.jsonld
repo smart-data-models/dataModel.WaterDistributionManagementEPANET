@@ -8,6 +8,14 @@
         "value": [0.5692, 0.4647, 0.4385, 0.3604, 0.3098, 0.3345],
         "unitCode":"C62"
     },
+    "description": {
+        "type": "Property",
+        "value": "Open Text"
+    },
+    "tag": {
+        "type": "Property",
+        "value": "DMA1"
+    },
     "@context": [
         "https://schema.lab.fiware.org/ld/context"
     ]
