@@ -58,9 +58,9 @@
                         "array"
                     ],
                     "enum": [
-                        "open", 
+                        "open",
                         "CLOSED",
-						"CV"
+                        "CV"
                     ]
                 },
                 "unitCode": {
@@ -149,10 +149,10 @@
                 "tag": {
                     "$ref": "#/definitions/ngsildProperty"
                 },
-                "wallCoeff":{
+                "wallCoeff": {
                     "$ref": "#/definitions/ngsildProperty"
                 },
-                "bulkCoeff":{
+                "bulkCoeff": {
                     "$ref": "#/definitions/ngsildProperty"
                 },
                 "createdAt": {

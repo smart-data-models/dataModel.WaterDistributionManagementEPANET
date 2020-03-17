@@ -56,13 +56,13 @@
                 "xData": {
                     "$ref": "#/definitions/ngsildProperty"
                 },
-				"yData": {
+                "yData": {
                     "$ref": "#/definitions/ngsildProperty"
                 },
                 "tag": {
                     "$ref": "#/definitions/ngsildProperty"
                 },
-				"description": {
+                "description": {
                     "$ref": "#/definitions/ngsildProperty"
                 }
             }

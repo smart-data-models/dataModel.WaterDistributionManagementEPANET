@@ -393,13 +393,13 @@
                     "$ref": "#/definitions/demand"
                 },
                 "sourceCategory": {
-                    "$ref": "#/definitions/source" 
+                    "$ref": "#/definitions/source"
                 },
                 "volumCurve": {
-                    "$ref": "#/definitions/ngsildProperty" 
-                }, 
+                    "$ref": "#/definitions/ngsildProperty"
+                },
                 "mixingFraction": {
-                    "$ref": "#/definitions/ngsildProperty" 
+                    "$ref": "#/definitions/ngsildProperty"
                 }
             }
         }

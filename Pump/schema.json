@@ -146,16 +146,16 @@
                 "tag": {
                     "$ref": "#/definitions/ngsildProperty"
                 },
-                "pumpCurve":{
+                "pumpCurve": {
                     "$ref": "#/definitions/ngsildProperty"
                 },
-                "pumpPattern":{
+                "pumpPattern": {
                     "$ref": "#/definitions/ngsildRelationship"
                 },
-                "efficCurve":{
+                "efficCurve": {
                     "$ref": "#/definitions/ngsildProperty"
                 },
-                "energyPrice":{
+                "energyPrice": {
                     "$ref": "#/definitions/ngsildProperty"
                 },
                 "createdAt": {

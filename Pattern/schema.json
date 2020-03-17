@@ -56,10 +56,10 @@
                 "multipliers": {
                     "$ref": "#/definitions/ngsildProperty"
                 },
-				"description": {
+                "description": {
                     "$ref": "#/definitions/ngsildProperty"
                 },
-                "tag":{
+                "tag": {
                     "$ref": "#definitions/ngsildProperty"
                 }
             }

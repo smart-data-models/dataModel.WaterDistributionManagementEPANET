@@ -376,7 +376,6 @@
                 "headPattern": {
                     "$ref": "#/definitions/ngsildRelationship"
                 }
-                
             }
         }
     ],
