@@ -5,11 +5,11 @@
     "modifiedAt": "2020-02-20T15:45:00Z",
     "initialStatus": {
         "type": "Property",
-        "value": "open"
+        "value": "OPEN"
     },
     "status": {
         "type": "Property",
-        "value": "open"
+        "value": "OPEN"
     },
     "length": {
         "type": "Property",

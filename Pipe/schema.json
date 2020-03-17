@@ -58,7 +58,7 @@
                         "array"
                     ],
                     "enum": [
-                        "open",
+                        "OPEN",
                         "CLOSED",
                         "CV"
                     ]
