@@ -64,7 +64,7 @@
     "emitterCoefficient": {
         "type": "Property",
         "value": 0.526,
-        "unitCode": "MQS/MTR"
+        "unitCode": "S4"
     },
     "@context": [
         "https://schema.lab.fiware.org/ld/context"

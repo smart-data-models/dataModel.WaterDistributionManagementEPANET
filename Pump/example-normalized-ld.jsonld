@@ -38,26 +38,26 @@
         "value": "DMA1"
     },
     "pumpCurve":{
-        "type": "Property",
-        "value": 100,
-        "unitCode": "C62"
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Curve:fAM-8ca3-4533-a2eb-12015"
     },
     "pumpPattern":{
         "type": "Relationship",
-        "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533-a2eb-34bc89262190",
-
+        "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
     },
     "efficCurve":{
         "type": "Property",
         "value": 0.9,
         "unitCode": "C62"
-
     },
     "energyPrice":{
         "type": "Property",
         "value": 0.8,
         "unitCode": "C62"
-        
+    },
+    "energyPattern":{
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
     },
     "@context": [
         "https://schema.lab.fiware.org/ld/context"
