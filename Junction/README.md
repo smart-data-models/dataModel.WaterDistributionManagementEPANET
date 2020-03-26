@@ -1,0 +1,2 @@
+# Junction Entity
+This entity contains a harmonised description of a generic junction made for the Water Network Management domain. This entity is primarily associated with the water network management vertical and related IoT applications.

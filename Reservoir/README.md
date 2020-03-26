@@ -1,0 +1,2 @@
+#Reservoir
+This entity contains a harmonised description of a generic Reservoir made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.

@@ -5,76 +5,6 @@
     "description": "This entity contains a harmonised description of a generic Valve made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.",
     "type": "object",
     "definitions": {
-        "ngsildProperty": {
-            "type": "object",
-            "properties": {
-                "type": {
-                    "type": "string",
-                    "enum": [
-                        "Property"
-                    ]
-                },
-                "value": {
-                    "type": [
-                        "number",
-                        "string",
-                        "array"
-                    ]
-                },
-                "unitCode": {
-                    "type": "string"
-                },
-                "createdAt": {
-                    "type": "string",
-                    "format": "full-date"
-                },
-                "observedAt": {
-                    "type": "string",
-                    "format": "full-date"
-                },
-                "modifiedAt": {
-                    "type": "string",
-                    "format": "full-date"
-                }
-            },
-            "required": [
-                "type",
-                "value"
-            ]
-        },
-        "ngsildRelationship": {
-            "type": "object",
-            "properties": {
-                "type": {
-                    "type": "string",
-                    "enum": [
-                        "Relationship"
-                    ]
-                },
-                "object": {
-                    "type": [
-                        "string"
-                    ],
-                    "format": "uri"
-                },
-                "createdAt": {
-                    "type": "string",
-                    "format": "full-date"
-                },
-                "observedAt": {
-                    "type": "string",
-                    "format": "full-date"
-                },
-                "modifiedAt": {
-                    "type": "string",
-                    "format": "full-date"
-                }
-            },
-            "required": [
-                "type",
-                "object"
-            ]
-        },
         "status": {
             "type": "object",
             "properties": {
@@ -116,6 +46,51 @@
                 "type",
                 "value"
             ]
+        },
+        "valveType": {
+            "type": "object",
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "Property"
+                    ]
+                },
+                "value": {
+                    "type": [
+                        
+                        "string"
+                        
+                    ],
+                    "enum": [
+                        "PRV",
+                        "PSV",
+                        "PBV",
+                        "FCV",
+                        "TCV",
+                        "GPV"
+                    ]
+                },
+                "unitCode": {
+                    "type": "string"
+                },
+                "createdAt": {
+                    "type": "string",
+                    "format": "full-date"
+                },
+                "observedAt": {
+                    "type": "string",
+                    "format": "full-date"
+                },
+                "modifiedAt": {
+                    "type": "string",
+                    "format": "full-date"
+                }
+            },
+            "required": [
+                "type",
+                "value"
+            ]
         }
     },
     "allOf": [
@@ -135,25 +110,25 @@
                     "$ref": "#/definitions/status"
                 },
                 "diameter": {
-                    "$ref": "#/definitions/ngsildProperty"
+                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
                 },
                 "valveType": {
-                    "$ref": "#/definitions/ngsildProperty"
+                    "$ref": "#/definitions/valveType"
                 },
                 "setting": {
-                    "$ref": "#/definitions/ngsildProperty"
+                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
                 },
                 "minorLoss": {
-                    "$ref": "#/definitions/ngsildProperty"
+                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
                 },
                 "tag": {
-                    "$ref": "#/definitions/ngsildProperty"
+                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
                 },
                 "startsAt": {
-                    "$ref": "#/definitions/ngsildRelationship"
+                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildRelationship"
                 },
                 "endsAt": {
-                    "$ref": "#/definitions/ngsildRelationship"
+                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildRelationship"
                 },
                 "createdAt": {
                     "type": "string",

@@ -5,43 +5,6 @@
     "description": "This entity contains a harmonised description of a generic curve made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.",
     "type": "object",
     "definitions": {
-        "ngsildProperty": {
-            "type": "object",
-            "properties": {
-                "type": {
-                    "type": "string",
-                    "enum": [
-                        "Property"
-                    ]
-                },
-                "value": {
-                    "type": [
-                        "number",
-                        "string",
-                        "array"
-                    ]
-                },
-                "unitCode": {
-                    "type": "string"
-                },
-                "createdAt": {
-                    "type": "string",
-                    "format": "full-date"
-                },
-                "observedAt": {
-                    "type": "string",
-                    "format": "full-date"
-                },
-                "modifiedAt": {
-                    "type": "string",
-                    "format": "full-date"
-                }
-            },
-            "required": [
-                "type",
-                "value"
-            ]
-        },
         "curveType": {
             "type": "object",
             "properties": {
@@ -97,16 +60,16 @@
                     "description": "NGSI-LD Entity Type"
                 },
                 "xData": {
-                    "$ref": "#/definitions/ngsildProperty"
+                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
                 },
                 "yData": {
-                    "$ref": "#/definitions/ngsildProperty"
+                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
                 },
                 "tag": {
-                    "$ref": "#/definitions/ngsildProperty"
+                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
                 },
                 "description": {
-                    "$ref": "#/definitions/ngsildProperty"
+                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
                 }
             }
         }

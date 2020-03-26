@@ -1,0 +1,79 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "$id": "https://fiware.github.io/data-models/specs/WaterNetwork/WaterNetworkManagement-schema.json",
+    "title": "FIWARE - Water Network Management base schema",
+    "description": "Common NGSI-LD definitions for Water Network Management data models",
+    "type": "object",
+    "definitions": {
+        "ngsildProperty": {
+            "type": "object",
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "Property"
+                    ]
+                },
+                "value": {
+                    "type": [
+                        "number",
+                        "string",
+                        "array"
+                    ]
+                },
+                "unitCode": {
+                    "type": "string"
+                },
+                "createdAt": {
+                    "type": "string",
+                    "format": "full-date"
+                },
+                "observedAt": {
+                    "type": "string",
+                    "format": "full-date"
+                },
+                "modifiedAt": {
+                    "type": "string",
+                    "format": "full-date"
+                }
+            },
+            "required": [
+                "type",
+                "value"
+            ]
+        },
+        "ngsildRelationship": {
+            "type": "object",
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "Relationship"
+                    ]
+                },
+                "object": {
+                    "type": [
+                        "string"
+                    ],
+                    "format": "uri"
+                },
+                "createdAt": {
+                    "type": "string",
+                    "format": "full-date"
+                },
+                "observedAt": {
+                    "type": "string",
+                    "format": "full-date"
+                },
+                "modifiedAt": {
+                    "type": "string",
+                    "format": "full-date"
+                }
+            },
+            "required": [
+                "type",
+                "object"
+            ]
+        }
+    }
+}

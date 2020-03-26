@@ -5,76 +5,6 @@
     "description": "This entity contains a harmonised description of a generic junction made for the Water Network Management domain. This entity is primarily associated with the water network management vertical and related IoT applications.",
     "type": "object",
     "definitions": {
-        "ngsildProperty": {
-            "type": "object",
-            "properties": {
-                "type": {
-                    "type": "string",
-                    "enum": [
-                        "Property"
-                    ]
-                },
-                "value": {
-                    "type": [
-                        "number",
-                        "string",
-                        "array"
-                    ]
-                },
-                "unitCode": {
-                    "type": "string"
-                },
-                "createdAt": {
-                    "type": "string",
-                    "format": "full-date"
-                },
-                "observedAt": {
-                    "type": "string",
-                    "format": "full-date"
-                },
-                "modifiedAt": {
-                    "type": "string",
-                    "format": "full-date"
-                }
-            },
-            "required": [
-                "type",
-                "value"
-            ]
-        },
-        "ngsildRelationship": {
-            "type": "object",
-            "properties": {
-                "type": {
-                    "type": "string",
-                    "enum": [
-                        "Relationship"
-                    ]
-                },
-                "object": {
-                    "type": [
-                        "string"
-                    ],
-                    "format": "uri"
-                },
-                "createdAt": {
-                    "type": "string",
-                    "format": "full-date"
-                },
-                "observedAt": {
-                    "type": "string",
-                    "format": "full-date"
-                },
-                "modifiedAt": {
-                    "type": "string",
-                    "format": "full-date"
-                }
-            },
-            "required": [
-                "type",
-                "value"
-            ]
-        },
         "demand": {
             "type": "object",
             "properties": {
@@ -347,22 +277,22 @@
                     "description": "NGSI-LD Entity Type"
                 },
                 "elevation": {
-                    "$ref": "#/definitions/ngsildProperty"
+                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
                 },
                 "demandeCategory": {
                     "$ref": "#/definitions/demand"
                 },
                 "tag": {
-                    "$ref": "#/definitions/ngsildProperty"
+                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
                 },
                 "initialQuality": {
-                    "$ref": "#/definitions/ngsildProperty"
+                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
                 },
                 "description": {
-                    "$ref": "#/definitions/ngsildProperty"
+                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
                 },
                 "emitterCoefficient": {
-                    "$ref": "#/definitions/ngsildProperty"
+                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
                 },
                 "sourceCategory": {
                     "$ref": "#/definitions/source"

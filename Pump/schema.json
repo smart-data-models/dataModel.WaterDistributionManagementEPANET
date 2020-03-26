@@ -5,43 +5,6 @@
     "description": "This entity contains a harmonised description of a generic pump made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.",
     "type": "object",
     "definitions": {
-        "ngsildProperty": {
-            "type": "object",
-            "properties": {
-                "type": {
-                    "type": "string",
-                    "enum": [
-                        "Property"
-                    ]
-                },
-                "value": {
-                    "type": [
-                        "number",
-                        "string",
-                        "array"
-                    ]
-                },
-                "unitCode": {
-                    "type": "string"
-                },
-                "createdAt": {
-                    "type": "string",
-                    "format": "full-date"
-                },
-                "observedAt": {
-                    "type": "string",
-                    "format": "full-date"
-                },
-                "modifiedAt": {
-                    "type": "string",
-                    "format": "full-date"
-                }
-            },
-            "required": [
-                "type",
-                "value"
-            ]
-        },
         "status": {
             "type": "object",
             "properties": {
@@ -83,33 +46,6 @@
                 "type",
                 "value"
             ]
-        },
-        "ngsildRelationship": {
-            "type": "object",
-            "properties": {
-                "type": {
-                    "type": "string",
-                    "enum": [
-                        "Relationship"
-                    ]
-                },
-                "object": {
-                    "type": "string",
-                    "format": "uri"
-                },
-                "createdAt": {
-                    "type": "string",
-                    "format": "full-date"
-                },
-                "modifiedAt": {
-                    "type": "string",
-                    "format": "full-date"
-                }
-            },
-            "required": [
-                "type",
-                "object"
-            ]
         }
     },
     "allOf": [
@@ -129,37 +65,37 @@
                     "$ref": "#/definitions/status"
                 },
                 "head": {
-                    "$ref": "#/definitions/ngsildProperty"
+                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
                 },
                 "power": {
-                    "$ref": "#/definitions/ngsildProperty"
+                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
                 },
                 "speed": {
-                    "$ref": "#/definitions/ngsildProperty"
+                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
                 },
                 "startsAt": {
-                    "$ref": "#/definitions/ngsildRelationship"
+                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildRelationship"
                 },
                 "endsAt": {
-                    "$ref": "#/definitions/ngsildRelationship"
+                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildRelationship"
                 },
                 "tag": {
-                    "$ref": "#/definitions/ngsildProperty"
+                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
                 },
                 "pumpCurve": {
-                    "$ref": "#/definitions/ngsildRelationship"
+                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildRelationship"
                 },
                 "pumpPattern": {
-                    "$ref": "#/definitions/ngsildRelationship"
+                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildRelationship"
                 },
                 "efficCurve": {
-                    "$ref": "#/definitions/ngsildProperty"
+                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
                 },
                 "energyPrice": {
-                    "$ref": "#/definitions/ngsildProperty"
+                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
                 },
-                "energyPattern":{
-                    "$ref": "#/definitions/ngsildRelationship"
+                "energyPattern": {
+                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildRelationship"
                 },
                 "createdAt": {
                     "type": "string",
