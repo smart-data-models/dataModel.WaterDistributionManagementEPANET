@@ -380,6 +380,9 @@
                 "initialQuality": {
                     "$ref": "#/definitions/ngsildProperty"
                 },
+                "bulkReactionCoefficient": {
+                    "$ref": "#/definitions/ngsildProperty"
+                },
                 "mixingModel": {
                     "$ref": "#/definitions/mixingModel"
                 },
