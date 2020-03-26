@@ -3,6 +3,10 @@
     "type": "Curve",
     "createdAt": "2020-02-16T17:43:00Z",
     "modifiedAt": "2020-02-16T17:43:00Z",
+    "curveType":{
+        "type": "Property",
+        "value": "FLOW-HEAD"
+    },
     "xData": {
         "type": "Property",
         "value": [0.5692, 0.4647],

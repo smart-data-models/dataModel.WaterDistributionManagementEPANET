@@ -147,7 +147,7 @@
                     "$ref": "#/definitions/ngsildProperty"
                 },
                 "pumpCurve": {
-                    "$ref": "#/definitions/ngsildProperty"
+                    "$ref": "#/definitions/ngsildRelationship"
                 },
                 "pumpPattern": {
                     "$ref": "#/definitions/ngsildRelationship"
@@ -157,6 +157,9 @@
                 },
                 "energyPrice": {
                     "$ref": "#/definitions/ngsildProperty"
+                },
+                "energyPattern":{
+                    "$ref": "#/definitions/ngsildRelationship"
                 },
                 "createdAt": {
                     "type": "string",

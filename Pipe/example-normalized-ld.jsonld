@@ -46,12 +46,12 @@
     "bulkCoeff":{
         "type": "Property",
         "value": 72.4549,
-        "unitCode": "C62"
+        "unitCode": "MTS"
     },
     "wallCoeff":{
         "type": "Property",
         "value": 72.4549,
-        "unitCode": "C62"
+        "unitCode": "H56"
     },
     "@context": [
         "https://schema.lab.fiware.org/ld/context"
