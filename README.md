@@ -1,9 +1,15 @@
-# dataModel.WaterNetworkManagement
+# Water Network Management Harmonized Data Models
 
-WaternetworkManagement data models 
+## Description
+These data models describe entities useful for dealing with Water Network Management data. These entities are primarily derived from the EPANET platform. 
 
-This folder is intended to contain data models for Smart Water Network:
+The main entities identified are:
 
--   [Tank](https://github.com/easy-global-market/dataModel.WaterNetwork/blob/master/Tank/schema.json)
--   [Junction](https://github.com/easy-global-market/dataModel.WaterNetwork/blob/master/Junction/schema.json)
--   [Pattern](https://github.com/easy-global-market/dataModel.WaterNetwork/blob/master/Pattern/schema.json)
+-   [Curve](../Curve/doc/spec.md): It defines data curves and their X,Y points.
+-   [Junction](../Junction/doc/spec.md): It represents junction nodes contained in the network
+-   [Pattern](../Pattern/doc/spec.md): It represents time patterns.
+-   [Pipe](../Pipe/doc/spec.md): It represents all pipe links contained in the network.
+-   [Pump](../Pump/doc/spec.md): It represents all pump links contained in the network.
+-   [Reservoir](../Reservoir/doc/spec.md): It represents all reservoir nodes contained in the network.
+-   [Tank](../Tank/doc/spec.md): It represents all tank nodes contained in the network.
+-   [Valve](../Valve/doc/spec.md): It represents all control valve links contained in the network.

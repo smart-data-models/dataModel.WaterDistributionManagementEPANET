@@ -41,7 +41,7 @@
         "sourceQuality": {
             "type": "Property",
             "value": 1.2,
-            "unitCode": "F31"
+            "unitCode": "59"
         },
         "sourcePattern": {
             "type": "Relationship",

@@ -5,43 +5,6 @@
     "description": "This entity contains a harmonised description of a generic pipe made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.",
     "type": "object",
     "definitions": {
-        "ngsildProperty": {
-            "type": "object",
-            "properties": {
-                "type": {
-                    "type": "string",
-                    "enum": [
-                        "Property"
-                    ]
-                },
-                "value": {
-                    "type": [
-                        "number",
-                        "string",
-                        "array"
-                    ]
-                },
-                "unitCode": {
-                    "type": "string"
-                },
-                "createdAt": {
-                    "type": "string",
-                    "format": "full-date"
-                },
-                "observedAt": {
-                    "type": "string",
-                    "format": "full-date"
-                },
-                "modifiedAt": {
-                    "type": "string",
-                    "format": "full-date"
-                }
-            },
-            "required": [
-                "type",
-                "value"
-            ]
-        },
         "status": {
             "type": "object",
             "properties": {
@@ -83,33 +46,6 @@
                 "type",
                 "value"
             ]
-        },
-        "ngsildRelationship": {
-            "type": "object",
-            "properties": {
-                "type": {
-                    "type": "string",
-                    "enum": [
-                        "Relationship"
-                    ]
-                },
-                "object": {
-                    "type": "string",
-                    "format": "uri"
-                },
-                "createdAt": {
-                    "type": "string",
-                    "format": "full-date"
-                },
-                "modifiedAt": {
-                    "type": "string",
-                    "format": "full-date"
-                }
-            },
-            "required": [
-                "type",
-                "object"
-            ]
         }
     },
     "allOf": [
@@ -126,34 +62,34 @@
                     "$ref": "#/definitions/status"
                 },
                 "length": {
-                    "$ref": "#/definitions/ngsildProperty"
+                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
                 },
                 "diameter": {
-                    "$ref": "#/definitions/ngsildProperty"
+                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
                 },
                 "roughness": {
-                    "$ref": "#/definitions/ngsildProperty"
+                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
                 },
                 "minorLoss": {
-                    "$ref": "#/definitions/ngsildProperty"
+                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
                 },
                 "status": {
                     "$ref": "#/definitions/status"
                 },
                 "startsAt": {
-                    "$ref": "#/definitions/ngsildRelationship"
+                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildRelationship"
                 },
                 "endsAt": {
-                    "$ref": "#/definitions/ngsildRelationship"
+                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildRelationship"
                 },
                 "tag": {
-                    "$ref": "#/definitions/ngsildProperty"
+                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
                 },
                 "wallCoeff": {
-                    "$ref": "#/definitions/ngsildProperty"
+                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
                 },
                 "bulkCoeff": {
-                    "$ref": "#/definitions/ngsildProperty"
+                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
                 },
                 "createdAt": {
                     "type": "string",

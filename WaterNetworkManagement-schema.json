@@ -1,11 +1,11 @@
 {
     "$schema": "http://json-schema.org/schema#",
-    "$id": "https://fiware.github.io/data-models/specs/WaterNetwork/Curve/schema.json",
-    "title": "FIWARE - Curve",
-    "description": "This entity contains a harmonised description of a generic curve made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.",
+    "$id": "https://fiware.github.io/data-models/specs/WaterNetwork/WaterNetworkManagement-schema.json",
+    "title": "FIWARE - Water Network Management base schema",
+    "description": "Common NGSI-LD definitions for Water Network Management data models",
     "type": "object",
     "definitions": {
-        "curveType": {
+        "ngsildProperty": {
             "type": "object",
             "properties": {
                 "type": {
@@ -19,12 +19,6 @@
                         "number",
                         "string",
                         "array"
-                    ],
-                    "enum": [
-                        "FLOW-HEAD",
-                        "FLOW-EFFICIANCY",
-                        "FLOW-HEADLOSS",
-                        "FLOW-VOLUME"
                     ]
                 },
                 "unitCode": {
@@ -47,35 +41,39 @@
                 "type",
                 "value"
             ]
-        }
-    },
-    "allOf": [
-        {
+        },
+        "ngsildRelationship": {
+            "type": "object",
             "properties": {
                 "type": {
                     "type": "string",
                     "enum": [
-                        "Curve"
+                        "Relationship"
+                    ]
+                },
+                "object": {
+                    "type": [
+                        "string"
                     ],
-                    "description": "NGSI-LD Entity Type"
+                    "format": "uri"
                 },
-                "xData": {
-                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
+                "createdAt": {
+                    "type": "string",
+                    "format": "full-date"
                 },
-                "yData": {
-                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
+                "observedAt": {
+                    "type": "string",
+                    "format": "full-date"
                 },
-                "tag": {
-                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
-                },
-                "description": {
-                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
+                "modifiedAt": {
+                    "type": "string",
+                    "format": "full-date"
                 }
-            }
+            },
+            "required": [
+                "type",
+                "object"
+            ]
         }
-    ],
-    "required": [
-        "id",
-        "type"
-    ]
+    }
 }

@@ -63,7 +63,7 @@
     "initialQuality": {
         "type": "Property",
         "value": 0.5,
-        "unitCode":"M1"
+        "unitCode":"59"
     },
     "sourceCategory": {
         "type": "Property",
@@ -75,7 +75,7 @@
         "sourceQuality": {
             "type": "Property",
             "value": 1.2,
-            "unitCode": "C62"
+            "unitCode": "59"
         },
         "sourcePattern": {
             "type": "Relationship",
@@ -96,9 +96,10 @@
         "value": 0.7,
         "unitCode": "C62"
     },
-    "reactionCoefficient": {
+    "bulkReactionCoefficient": {
         "type": "Property",
-        "value": 0.7
+        "value": 0.7,
+        "unitCode": "E91"
     },
     "tag": {
         "type": "Property",
