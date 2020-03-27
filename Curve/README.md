@@ -5,6 +5,6 @@ This entity contains a harmonised description of a generic curve made for the Wa
 
 Main files in this directory are:
 
--   [Curve Entityschema](schema.json).
+-   [Curve Entity schema](schema.json).
 -   [Curve Entity Example](example-normalized-ld).
 -   [Curve Entity Spec](doc/spec.md).
