@@ -75,7 +75,7 @@
         "sourceQuality": {
             "type": "Property",
             "value": 1.2,
-            "unitCode": "59"
+            "unitCode": "M1"
         },
         "sourcePattern": {
             "type": "Relationship",
