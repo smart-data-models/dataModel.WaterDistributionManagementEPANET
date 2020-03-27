@@ -58,12 +58,12 @@
     },
     "description": {
         "type": "Property",
-        "value": "This entity contains a harmonised description of a Tank"
+        "value": "Free Text"
     },
     "initialQuality": {
         "type": "Property",
         "value": 0.5,
-        "unitCode":"59"
+        "unitCode":"M1"
     },
     "sourceCategory": {
         "type": "Property",

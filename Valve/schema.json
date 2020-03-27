@@ -58,9 +58,9 @@
                 },
                 "value": {
                     "type": [
-                        
+
                         "string"
-                        
+
                     ],
                     "enum": [
                         "PRV",

@@ -5,8 +5,9 @@ This entity contains a harmonised description of a generic curve made for the Wa
 
 ## Data Model
 
-A JSON Schema corresponding to this data model can be found at
-{{add link to JSON Schema}}
+A JSON Schema corresponding to this data model can be found [here](../schema.json).
+
+### NGSI-LD common Properties
 
 -   `id` : Unique identifier.
 
@@ -22,13 +23,14 @@ A JSON Schema corresponding to this data model can be found at
     -   Attribute type: Property. [DateTime](https://schema.org/DateTime)
     -   Read-Only. Automatically generated.
 
+### Curve Entity Properties
 -   `curveType` : Entity's curve type.
 
     -   Attribute type: `Property`.
     -   Accepted Values:`FLOW-HEAD`,
                         `FLOW-EFFICIANCY`,
                         `FLOW-HEADLOSS`,
-                        `FLOW-VOLUME`
+                        `LEVEL-VOLUME`
     -   Required
 
 -   `xData` : {{Description of the Attribute}}
@@ -47,10 +49,12 @@ A JSON Schema corresponding to this data model can be found at
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   {{Optional/Mandatory}}
 
+### Junction Entity Relationships
 
-### LD Example
+No Relationhips defined for this entity
+### NGSI-LD Example
 
-A full example is presented [here](../example-normalized-ld.jsonld)
+A full example is presented [here](../example-normalized-ld.jsonld).
 
 ## Use it with a real service
 

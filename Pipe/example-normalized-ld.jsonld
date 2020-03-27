@@ -35,6 +35,10 @@
         "type": "Property",
         "value": "DMA1"
     },
+     "description": {
+        "type": "Property",
+        "value": "Free Text"
+    },
     "startsAt": {
         "type": "Relationship",
         "object": "urn:ngsi-ld:Junction:63fe7d79-0d4c-4da9-b7d0-3340efa0656a"
@@ -51,7 +55,7 @@
     "wallCoeff":{
         "type": "Property",
         "value": 72.4549,
-        "unitCode": "E91"
+        "unitCode": "RRC"
     },
     "@context": [
         "https://schema.lab.fiware.org/ld/context"
