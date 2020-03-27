@@ -61,7 +61,7 @@
                         "FLOW-HEAD",
                         "FLOW-EFFICIANCY",
                         "FLOW-HEADLOSS",
-                        "FLOW-VOLUME"
+                        "LEVEL-VOLUME"
                     ]
                 },
                 "unitCode": {
