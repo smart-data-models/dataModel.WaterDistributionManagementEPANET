@@ -32,7 +32,7 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
 
 ## Reservoir Entity Properties
 
--   `elevation` : {{Description of the Attribute}}
+-   `elevation` : The elevation above some common reference of the reservoir
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
     -   Attribute unit: `Metre`
@@ -41,7 +41,7 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   Optional
 
--   `tag` : {{Description of the Attribute}}
+-   `tag` : An optional text string used to assign the reservoir to a category, such as a pressure zone
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
     -   Optional
@@ -49,7 +49,7 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
 -   `description` : A free text description
     -   Optional
 
--   `reservoirHead` : {{Description of the Attribute}}
+-   `reservoirHead` : The hydraulic head (elevation + pressure head) of water in the reservoir
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
     -   Attribute unit: `Metre`
@@ -57,7 +57,8 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
     -   Attribute metadata Properties:
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   Optional
--   `initialQuality` : {{Description of the Attribute}}
+
+-   `initialQuality` : Water quality level at the reservoir
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
     -   Attribute unit: `Mg/L`
@@ -65,21 +66,8 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
     -   Attribute metadata Properties:
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   Optional
--   `demandCategory` : {{Description of the Attribute}}
-    -   Normative References: {{Add a normative reference}}
-    -   Attribute type: `Property`.Text
-    -   `baseDemand`: A sub-property.
-    -   `demandPattern`: A sub-Relationship
-    -   Mondatory
 
--   `base demande` : {{A sub-property of the Property `demandCategory`}}
-    -   Normative References: {{Add a normative reference}}
-    -   Attribute type: `Property`.Text
-    Attribute unit: `cubic metre per second`
-    -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `MQS`
-    -   Mandatory
-
--   `sourceCategory` : {{Description of the Attribute}}
+-   `sourceCategory` : Description of the quality of source flow entering the network at a specific node
 
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
@@ -93,7 +81,7 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
     -  Values are Restricted to: "CONCEN", "MASS", "FLOWPACED" and "SETPOINT"
     -   Mandatory
 
--   `sourceQuality`: {{A sub-property of the Property `sourceCategory`}}
+-   `sourceQuality` : Baseline or average concentration (or mass flow rate) of source. A sub-property of the Property `sourceCategory`
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
     Attribute unit: `Mg/L`
@@ -103,20 +91,12 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
 ## Reservoir Entity Relationships
 -   `headPattern`: {{Description of the Attribute}}
 
-    -   Normative References: {{Add a normative reference}}
+    -   Normative References: The ID label of a time pattern used to model time variation in the reservoir's total head
     -   Attribute type: `Relationship`.
         {{Add here the description of the target relationship object}}
     -   Attribute metadata Properties:
         -   `{{metadata Property name}}`: {{Metadata Property Description}}
     -   {{Optional/Mandatory}}
-
--   `demandPattern`: A relationship to the pattern pf the `demandCategory` property
-    -   Normative References: {{Add a normative reference}}
-    -   Attribute type: `Relationship`.
-        {{Add here the description of the target relationship object}}
-    -   Attribute metadata Properties:
-        -   `{{metadata Property name}}` : {{Metadata Property Description}}
-    -   Mandatory
 
 -   `sourcePattern` : A relationship to the pattern pf the `sourceCategory` property
     -   Normative References: {{Add a normative reference}}
