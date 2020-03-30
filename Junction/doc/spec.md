@@ -31,7 +31,7 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
     -   Mandatory.
 
 ### Junction Entity Properties
--   `elevation` : {{Description of the Attribute}}
+-   `elevation` : The elevation above some common reference of the junction
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
     -   Attribute unit: `Metre`
@@ -40,15 +40,15 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   Optional
 
--   `tag` : {{Description of the Attribute}}
+-   `tag` : An optional text string used to assign the junction to a category, such as a pressure zone
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
     -   Optional
 
--   `description` : A free text description
+-   `description` : An optional text that describes other significant information about the junction
     -   Optional
 
--   `initialQuality` : {{Description of the Attribute}}
+-   `initialQuality` : Water quality level at the junction at the start of the simulation
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
     -   Attribute unit: `Mg/L`
@@ -57,7 +57,7 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   Optional
 
--   `emitterCoefficient` : {{Description of the Attribute}}
+-   `emitterCoefficient` : Discharge coefficient for emitter (sprinkler or nozzle) placed at junction
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
     -   Attribute unit: `square metre per second`
@@ -66,21 +66,21 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   Optional
 
--   `demandCategory` : {{Description of the Attribute}}
+-   `demandCategory` : Allows base demands and time patterns to be assigned to other categories of users at the junction
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
     -   `baseDemand`: A sub-property.
     -   `demandPattern`: A sub-Relationship
     -   Mondatory
 
--   `base demande` : {{A sub-property of the Property `demandCategory`}}
+-   `base demande` : Baseline or average demand for the category. A sub-property of the Property `demandCategory`
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
     Attribute unit: `cubic metre per second`
     -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `MQS`
     -   Mandatory
 
--   `sourceCategory` : {{Description of the Attribute}}
+-   `sourceCategory` : Description of the quality of source flow entering the network at a specific node
 
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
@@ -94,7 +94,7 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
     -  Values Restricted to : "CONCEN", "MASS", "FLOWPACED" and "SETPOINT"
     -   Mandatory
 
--   `sourceQuality` : {{A sub-property of the Property `sourceCategory`}}
+-   `sourceQuality` : Baseline or average concentration (or mass flow rate) of source. A sub-property of the Property `sourceCategory`
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
     Attribute unit: `Mg/L`
