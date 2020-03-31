@@ -32,22 +32,20 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
 
 ### Pump Entity Properties
 -   `tag` : An optional text string used to assign the pump to a category, perhaps based on age, size or location
-    -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
     -   Optional
 
 -   `description` : A free text description
+    -   Attribute type: `Property`.Text
     -   Optional
 
 -   `initialStatus` : State of the pump (open or closed) at the start of the simulation period
-    -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text.
     -   Attribute metadata Properties:
         -   Values are resrtricted to: "OPEN","CLOSED","CV"
     -   Mandatory
 
 -   `status` : Dynamic state of the pump
-    -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text.
     -   Attribute metadata Properties:
         -   Values are resrtricted to: "OPEN","CLOSED","CV"
@@ -55,43 +53,44 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
 
 -   `head` : Dynamic head gain by the pump
 
-    -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
     -   Attribute metadata Properties:
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   Mandatory if the `power` attribute does not exist
 
 -   `power` : The power supplied by the pump
-    -   Normative References: {{Add a normative reference}}
-    -   Attribute type: `Property`.Text
-    -   Attribute unit: `KiloWatt`
+
+    -   Attribute type: `Property`. Number
+    -   Attribute unit: All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code
+    -   Attribute unit Example: `KiloWatt`
     -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `KWT`
     -   Attribute metadata Properties:
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   Mandatory if the `head` attribute does not exist
 
 -   `speed` : The relative speed setting of the pump 
-    -   Normative References: {{Add a normative reference}}
-    -   Attribute type: `Property`.Text
-    -   Attribute unit: `No unit`
+
+    -   Attribute type: `Property`. Number
+    -   Attribute unit: All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code
+    -   Attribute unit Example: `Metre per Second`
     -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `MTS`
     -   Attribute metadata Properties:
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   Optional
 
 -   `efficCurve` : The ID label of the curve that represents the pump's wire-to-water efficiency as a function of flow rate
-    -   Normative References: {{Add a normative reference}}
-    -   Attribute type: `Property`.Text
-    -   Attribute unit: `No unit`
+    -   Attribute type: `Property`. Number
+    -   Attribute unit: All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code
+    -   Attribute unit Example: `No unit`
     -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `C62`
     -   Attribute metadata Properties:
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   Optional
 
 -   `energyPrice` : The average or nominal price of energy in monetary units per kw-hr
-    -   Normative References: {{Add a normative reference}}
-    -   Attribute type: `Property`.Text
-    -   Attribute unit: `No unit`
+    -   Attribute type: `Property`. Number
+    -   Attribute unit: All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code
+    -   Attribute unit Example: `No unit`
     -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `C62`
     -   Attribute metadata Properties:
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
@@ -101,54 +100,41 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
 
 -   `startsAt` : The ID of the node on the suction side of the pump
 
-    -   Normative References: {{Add a normative reference}}
-    -   Attribute type: `Relationship`.
-        {{Add here the description of the target relationship object}}
+    -   Attribute type: `Relationship`. Reference to an entity of type `Node (Reservoir, Junction, Tank)`
     -   Attribute metadata Properties:
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   Mandatory
 
 -   `endsAt` : The ID of the node on the discharge side of the pump
 
-    -   Normative References: {{Add a normative reference}}
-    -   Attribute type: `Relationship`.
-        {{Add here the description of the target relationship object}}
+    -   Attribute type: `Relationship`. Reference to an entity of type `Node (Reservoir, Junction, Tank)`
     -   Attribute metadata Properties:
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   Mandatory
 
 -   `pumpCurve` : The ID label of the pump curve used to describe the relationship between the head delivered by the pump and the flow through the pump
 
-    -   Normative References: {{Add a normative reference}}
-    -   Attribute type: `Relationship`.
-        {{Add here the description of the target relationship object}}
+    -   Attribute type: `Relationship`. Reference to an entity of type `Curve`
     -   Attribute metadata Properties:
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   Mandatory
 
 -   `pumpPattern` : The ID label of a time pattern used to control the pump's operation. The multipliers of the pattern are equivalent to speed settings. A multiplier of zero implies that the pump will be shut off during the corresponding time period
 
-    -   Normative References: {{Add a normative reference}}
-    -   Attribute type: `Relationship`.
-        {{Add here the description of the target relationship object}}
+    -   Attribute type: `Relationship`. Reference to an entity of type `Pattern`
     -   Attribute metadata Properties:
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   Mandatory
 
 -   `energyPattern` : The ID label of the time pattern used to describe the variation in energy price throughout the day
-
-    -   Normative References: {{Add a normative reference}}
-    -   Attribute type: `Relationship`.
-        {{Add here the description of the target relationship object}}
+    -   Attribute type: `Relationship`. Reference to an entity of type `Pattern`
     -   Attribute metadata Properties:
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   optional
 
-
 **Note**: JSON Schemas are intended to capture the data type and associated
 constraints of the different Attributes, regardless their final representation
 format in NGSI-LD.
-
 
 ### LD Example
 

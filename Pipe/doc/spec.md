@@ -35,76 +35,74 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
 ### Pipe Entity Properties
 
 -   `initialStatus` : Determines whether the pipe is initially open, closed, or contains a check valve
-    -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text.
     -   Attribute metadata Properties:
         -   Values are resrtricted to: "OPEN","CLOSED","CV"
     -   Mandatory
 
 -   `status` : Dynamic state of the pipe
-    -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text.
     -   Attribute metadata Properties:
-        -   Values are resrtricted to: "OPEN","CLOSED"
+        -   Values are resrtricted to: "OPEN","CLOSED","CV"
     -   Optional
 
 -   `length` : The actual length of the pipe
-    -   Normative References: {{Add a normative reference}}
-    -   Attribute type: `Property`.Text
-    -   Attribute unit: `Metre`
+    -   Attribute type: `Property`. Number
+    -   Attribute unit: All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code
+    -   Attribute unit Example: `Metre`
     -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `MTR`
     -   Attribute metadata Properties:
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   Mandatory
 
 -   `diameter` : The pipe diameter
-    -   Normative References: {{Add a normative reference}}
-    -   Attribute type: `Property`.Text
-    -   Attribute unit: `millimetre`
+    -   Attribute type: `Property`. Number
+    -   Attribute unit: All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code
+    -   Attribute unit Example: `millimetre`
     -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `MMT`
     -   Attribute metadata Properties:
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   Mandatory
 
 -   `roughness` : The roughness coefficient of the pipe. It is unitless for Hazen-Williams or Chezy-Manning roughness and has units of millifeet (mm) for Darcy-Weisbach roughness.
-    -   Normative References: {{Add a normative reference}}
-    -   Attribute type: `Property`.Text
-    -  Attribute unit: `No unit`
+    -   Attribute type: `Property`. Number
+    -   Attribute unit: All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code
+    -   Attribute unit Example: `No unit`
     -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `C62`
     -   Attribute metadata Properties:
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   Mandatory
 
 -   `minorLoss` : Unitless minor loss coefficient associated with bends, fittings, etc.
-    -   Normative References: {{Add a normative reference}}
-    -   Attribute type: `Property`.Text
-    -   Attribute unit: `No unit`
+    -   Attribute type: `Property`. Number
+    -   Attribute unit: All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code
+    -   Attribute unit Example: `No unit`
     -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `C62`
     -   Attribute metadata Properties:
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   Mandatory
 
 -   `tag` : An optional text string used to assign the pipe to a category, perhaps one based on age or material
-    -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
     -   Optional
 
 -   `description` : A free text description
+    -   Attribute type: `Property`.Text
     -   Optional
 
 -   `bulkCoeff` : The bulk reaction coefficient for the pipe. Use a positive value for growth and a negative value for decay
-    -   Normative References: {{Add a normative reference}}
-    -   Attribute type: `Property`.Text
-    -   Attribute unit: `reciprocal day`
+    -   Attribute type: `Property`. Number
+    -   Attribute unit: All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code
+    -   Attribute unit Example: `reciprocal day`
     -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `E91`
     -   Attribute metadata Properties:
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   Optional
 
 -   `wallCoeff` : The wall reaction coefficient for the pipe. Use a positive value for growth and a negative value for decay.
-    -   Normative References: {{Add a normative reference}}
-    -   Attribute type: `Property`.Text
-    -   Attribute unit: `mg/m²/day`
+    -   Attribute type: `Property`. Number
+    -   Attribute unit: All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code
+    -   Attribute unit Example: `mg/m²/day`
     -   Proposed unitCode: `RRC`
     -   Attribute metadata Properties:
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
@@ -115,9 +113,7 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
 
 -   `startsAt` : The ID of the node where the pipe begins
 
-    -   Normative References: {{Add a normative reference}}
-    -   Attribute type: `Relationship`.
-        {{Add here the description of the target relationship object}}
+    -   Attribute type: `Relationship`. Reference to an entity of type `Node (Reservoir, Junction, Tank)`
     -   Attribute metadata Properties:
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   Mandatory
@@ -125,8 +121,7 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
 -   `endsAt` : The ID of the node where the pipe ends
 
     -   Normative References: {{Add a normative reference}}
-    -   Attribute type: `Relationship`.
-        {{Add here the description of the target relationship object}}
+    -   Attribute type: `Relationship`. Reference to an entity of type `Node (Reservoir, Junction, Tank)`
     -   Attribute metadata Properties:
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   Mandatory

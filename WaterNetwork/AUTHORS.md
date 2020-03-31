@@ -8,6 +8,6 @@ This is a compilation list of all AUTHORS across different objects alphabeticall
 ___
 - Ahmed Abid [ahmed.abid@eglobalmark.com](mailto:ahmed.abid@eglobalmark.com) [Easy Global Market](http://www.eglobalmark.com)
 - Benoit Orihuela [benoit.orihuela@eglobalmark.com](mailto:benoit.orihuela@eglobalmark.com) [Easy Global Market](http://www.eglobalmark.com)
-- Franck Le Gall [franck.le-gall@eglobalmark.com](mailto:franck.le-gall@eglobalmark.com)  [Easy Global Market](http://www.eglobalmark.com)
 - Elad Salomons [selad@optiwater.com](mailto:selad@optiwater.com)  [Optiwater](www.optiwater.com)
+- Franck Le Gall [franck.le-gall@eglobalmark.com](mailto:franck.le-gall@eglobalmark.com)  [Easy Global Market](http://www.eglobalmark.com)
 ____

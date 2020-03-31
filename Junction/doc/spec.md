@@ -32,57 +32,55 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
 
 ### Junction Entity Properties
 -   `elevation` : The elevation above some common reference of the junction
-    -   Normative References: {{Add a normative reference}}
-    -   Attribute type: `Property`.Text
-    -   Attribute unit: `Metre`
+    -   Attribute type: `Property`. Number
+    -   Attribute unit: All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code
+    -   Attribute unit Example: `Metre`
     -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `MTR`
     -   Attribute metadata Properties:
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   Mondatory
 
 -   `tag` : An optional text string used to assign the junction to a category, such as a pressure zone
-    -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
     -   Optional
 
 -   `description` : An optional text that describes other significant information about the junction
+    -   Attribute type: `Property`.Text
     -   Optional
 
 -   `initialQuality` : Water quality level at the junction at the start of the simulation
-    -   Normative References: {{Add a normative reference}}
-    -   Attribute type: `Property`.Text
-    -   Attribute unit: `mg/L`
+    -   Attribute type: `Property`. Number
+    -   Attribute unit: All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code
+    -   Attribute unit Example: `mg/L`
     -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `M1`
     -   Attribute metadata Properties:
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   Optional
 
 -   `emitterCoefficient` : Discharge coefficient for emitter (sprinkler or nozzle) placed at junction
-    -   Normative References: {{Add a normative reference}}
-    -   Attribute type: `Property`.Text
-    -   Attribute unit: `square metre per second`
+    -   Attribute type: `Property`. Number
+    -   Attribute unit: All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code
+    -   Attribute unit Example: `square metre per second`
     -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `S4`
     -   Attribute metadata Properties:
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   Optional
 
 -   `demandCategory` : Allows base demands and time patterns to be assigned to other categories of users at the junction
-    -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
     -   `baseDemand`: A sub-property.
     -   `demandPattern`: A sub-Relationship
     -   Optional
 
 -   `base demande` : Baseline or average demand for the category. A sub-property of the Property `demandCategory`
-    -   Normative References: {{Add a normative reference}}
-    -   Attribute type: `Property`.Text
-    -   Attribute unit: `cubic metre per second`
+    -   Attribute type: `Property`. Number
+    -   Attribute unit: All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code
+    -   Attribute unit Example: `cubic metre per second`
     -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `MQS`
     -   Optional
 
 -   `sourceCategory` : Description of the quality of source flow entering the network at a specific node
 
-    -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
     -   `sourceType`: A sub-property.
     -   `sourceQuality`:A sub-property.
@@ -90,15 +88,14 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
     -   Optional
 
 -   `sourceType` : A sub-property of the Property `sourceCategory`
-    -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
     -  Values Restricted to : "CONCEN", "MASS", "FLOWPACED" and "SETPOINT"
     -   Optional
 
 -   `sourceQuality` : Baseline or average concentration (or mass flow rate) of source. A sub-property of the Property `sourceCategory`
-    -   Normative References: {{Add a normative reference}}
-    -   Attribute type: `Property`.Text
-    -   Attribute unit: `mg/L`
+    -   Attribute type: `Property`. Number
+    -   Attribute unit: All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code
+    -   Attribute unit Example: `mg/L`
     -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `M1`
     -   Optional
 
@@ -106,17 +103,13 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
 
 
 -   `demandPattern`: A relationship to the pattern pf the `demandCategory` property
-    -   Normative References: {{Add a normative reference}}
-    -   Attribute type: `Relationship`.
-        {{Add here the description of the target relationship object}}
+    -   Attribute type: `Relationship`. Reference to an entity of type `Pattern`
     -   Attribute metadata Properties:
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   Optional
 
 -   `sourcePattern` : A relationship to the pattern pf the `sourceCategory` property
-    -   Normative References: {{Add a normative reference}}
-    -   Attribute type: `Relationship`.
-        {{Add here the description of the target relationship object}}
+    -   Attribute type: `Relationship`. Reference to an entity of type `Pattern`
     -   Attribute metadata Properties:
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   Optional

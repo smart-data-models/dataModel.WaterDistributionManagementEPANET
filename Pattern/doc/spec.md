@@ -25,18 +25,17 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
     -   Read-Only. Automatically generated.
 
  ### Pattern Entity Properties
--   `tag` : {{Description of the Attribute}}
-    -   Normative References: {{Add a normative reference}}
+-   `tag` : An optional text string used to assign the junction to a category, such as a pressure zone
     -   Attribute type: `Property`.Text
     -   Optional
 
 -   `description` : A free text description
+    -   Attribute type: `Property`.Text
     -   Optional
 
 -   `multipliers` : Multipliers define how some base quantity (e.g., demand) is adjusted for each time period
 
-    -   Normative References: {{Add a normative reference}}
-    -   Attribute type: `Property`. {{Add here the attribute data type}}
+    -   Attribute type: `Property`. List of Number
     -   Attribute metadata Properties:
         -   `Enumeration` : {{Metadata Property Description}}
     -   Mandatory
