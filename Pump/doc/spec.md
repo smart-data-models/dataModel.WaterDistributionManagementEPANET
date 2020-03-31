@@ -51,7 +51,7 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
     -   Attribute type: `Property`.Text.
     -   Attribute metadata Properties:
         -   Values are resrtricted to: "OPEN","CLOSED","CV"
-    -   Mandatory
+    -   Optional
 
 -   `head` : Dynamic head gain by the pump
 
@@ -59,7 +59,7 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
     -   Attribute type: `Property`.Text
     -   Attribute metadata Properties:
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
-    -   {{Optional/Mandatory}}
+    -   Mandatory if the `power` attribute does not exist
 
 -   `power` : The power supplied by the pump
     -   Normative References: {{Add a normative reference}}
@@ -68,7 +68,7 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
     -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `KWT`
     -   Attribute metadata Properties:
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
-    -   Optional
+    -   Mandatory if the `head` attribute does not exist
 
 -   `speed` : The relative speed setting of the pump 
     -   Normative References: {{Add a normative reference}}
@@ -142,7 +142,7 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
         {{Add here the description of the target relationship object}}
     -   Attribute metadata Properties:
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
-    -   Mandatory
+    -   optional
 
 
 **Note**: JSON Schemas are intended to capture the data type and associated

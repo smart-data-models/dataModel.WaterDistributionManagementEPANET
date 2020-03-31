@@ -373,6 +373,11 @@
     "required": [
         "id",
         "type",
-        "location"
+        "location",
+        "elevation",
+        "initLevel",
+        "maxLevel",
+        "minVolume",
+        "nominalDiameter"
     ]
 }

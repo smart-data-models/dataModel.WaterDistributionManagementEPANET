@@ -3,7 +3,7 @@
     "type": "Pump",
     "createdAt": "2020-03-02T15:42:00Z",
     "modifiedAt": "2020-03-02T15:45:00Z",
-    "defaultStatus": {
+    "initialStatus": {
         "type": "Property",
         "value": "OPEN"
     },

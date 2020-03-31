@@ -52,7 +52,7 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
     -   Attribute type: `Property`.Text.
     -   Attribute metadata Properties:
         -   Values are resrtricted to: "OPEN","CLOSED","NONE"
-    -   Mandatory
+    -   Optional
 
 -   `diameter` : The valve diameter
     -   Normative References: {{Add a normative reference}}
@@ -61,7 +61,7 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
     -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `MMT`
     -   Attribute metadata Properties:
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
-    -   Optional
+    -   Mandatory
 
 -   `valveType` : The valve type
     -   Normative References: {{Add a normative reference}}
@@ -77,7 +77,7 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
     -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `C62`
     -   Attribute metadata Properties:
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
-    -   Optional
+    -   Mandatory
 
 -   `minorLoss` : Unitless minor loss coefficient that applies when the valve is completely opened
     -   Normative References: {{Add a normative reference}}
@@ -86,7 +86,7 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
     -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `C62`
     -   Attribute metadata Properties:
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
-    -   Optional
+    -   Mandatory
 ### Valve Entity Relationships
 
 

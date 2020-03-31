@@ -61,7 +61,7 @@
                 "status": {
                     "$ref": "#/definitions/status"
                 },
-                "defaultStatus": {
+                "initialStatus": {
                     "$ref": "#/definitions/status"
                 },
                 "head": {
@@ -114,6 +114,12 @@
     ],
     "required": [
         "id",
-        "type"
+        "type",
+        "initialStatus",
+        "head",
+        "startsAt",
+        "endsAt",
+        "pumpCurve",
+        "pumpPattern"
     ]
 }

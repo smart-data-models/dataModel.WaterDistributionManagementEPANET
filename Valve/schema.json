@@ -58,9 +58,7 @@
                 },
                 "value": {
                     "type": [
-
                         "string"
-
                     ],
                     "enum": [
                         "PRV",
@@ -147,6 +145,13 @@
     ],
     "required": [
         "id",
-        "type"
+        "type",
+        "initialStatus",
+        "diameter",
+        "valveType",
+        "setting",
+        "minorLoss",
+        "startsAt",
+        "endsAt"
     ]
 }
