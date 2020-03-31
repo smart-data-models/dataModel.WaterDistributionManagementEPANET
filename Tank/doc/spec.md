@@ -40,12 +40,7 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
 
 -   `description` : A free text description
     -   Optional
--   `demandCategory` : {{Description of the Attribute}}
-    -   Normative References: {{Add a normative reference}}
-    -   Attribute type: `Property`.Text
-    -   `baseDemand`: A sub-property.
-    -   `demandPattern`: A sub-Relationship
-    -   Optional
+
 
 -   `elevation` : The elevation above some common reference of the tank
     -   Normative References: {{Add a normative reference}}
@@ -148,14 +143,6 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
     -   Optional
 
 ### Tank Enity Relationships
-
--   `demandPattern`: A relationship to the pattern pf the `demandCategory` property
-    -   Normative References: {{Add a normative reference}}
-    -   Attribute type: `Relationship`.
-        {{Add here the description of the target relationship object}}
-    -   Attribute metadata Properties:
-        -   `{{metadata Property name}}` : {{Metadata Property Description}}
-    -   Optional
 
 -   `sourcePattern` : A relationship to the pattern pf the `sourceCategory` property
     -   Normative References: {{Add a normative reference}}

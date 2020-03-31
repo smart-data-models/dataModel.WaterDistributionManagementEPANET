@@ -27,19 +27,6 @@
         "value": 105.8,
         "unitCode": "MTR"
     },
-    "demandCategory": {
-        "type": "Property",
-        "value": "agriculture demand",
-        "baseDemand": {
-            "type": "Property",
-            "value": "1.763868462",
-            "unitCode": "MQS"
-        },
-        "demandPattern": {
-            "type": "Relationship",
-            "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533"
-        }
-    },
     "description": {
         "type": "Property",
         "value": "This entity contains a harmonised description of a Reservoir"
