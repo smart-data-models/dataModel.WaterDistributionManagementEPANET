@@ -1,7 +1,7 @@
 # Tank
 
 ## Description
-This entity contains a harmonised description of a generic Tank made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.
+This entity contains an harmonised description of a generic Tank made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.
 
 ## Data Model
 
@@ -73,7 +73,7 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
 -   `sourceQuality` : Baseline or average concentration (or mass flow rate) of source. A sub-property of the Property `sourceCategory`
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
-    Attribute unit: `Mg/L`
+    Attribute unit: `mg/L`
     -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `M1`
     -   Mandatory
 

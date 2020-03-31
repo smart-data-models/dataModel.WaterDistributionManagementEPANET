@@ -1,7 +1,7 @@
 {
     "$schema": "http://json-schema.org/schema#",
     "$id": "https://fiware.github.io/data-models/specs/WaterNetwork/Valve/schema.json",
-    "title": "FIWARE - Valve",
+    "title": "WaterNetwork - Valve",
     "description": "This entity contains a harmonised description of a generic Valve made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.",
     "type": "object",
     "definitions": {
@@ -31,15 +31,15 @@
                 },
                 "createdAt": {
                     "type": "string",
-                    "format": "full-date"
+                    "format": "date-time"
                 },
                 "observedAt": {
                     "type": "string",
-                    "format": "full-date"
+                    "format": "date-time"
                 },
                 "modifiedAt": {
                     "type": "string",
-                    "format": "full-date"
+                    "format": "date-time"
                 }
             },
             "required": [
@@ -76,15 +76,15 @@
                 },
                 "createdAt": {
                     "type": "string",
-                    "format": "full-date"
+                    "format": "date-time"
                 },
                 "observedAt": {
                     "type": "string",
-                    "format": "full-date"
+                    "format": "date-time"
                 },
                 "modifiedAt": {
                     "type": "string",
-                    "format": "full-date"
+                    "format": "date-time"
                 }
             },
             "required": [
@@ -132,15 +132,15 @@
                 },
                 "createdAt": {
                     "type": "string",
-                    "format": "full-date"
+                    "format": "date-time"
                 },
                 "observedAt": {
                     "type": "string",
-                    "format": "full-date"
+                    "format": "date-time"
                 },
                 "modifiedAt": {
                     "type": "string",
-                    "format": "full-date"
+                    "format": "date-time"
                 }
             }
         }

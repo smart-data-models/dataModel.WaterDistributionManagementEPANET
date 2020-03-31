@@ -1,7 +1,7 @@
 {
     "$schema": "http://json-schema.org/schema#",
     "$id": "https://fiware.github.io/data-models/specs/WaterNetwork/Curve/schema.json",
-    "title": "FIWARE - Curve",
+    "title": "WaterNetwork - Curve",
     "description": "This entity contains a harmonised description of a generic curve made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.",
     "type": "object",
     "definitions": {
@@ -22,7 +22,7 @@
                     ],
                     "enum": [
                         "FLOW-HEAD",
-                        "FLOW-EFFICIANCY",
+                        "FLOW-EFFICIENCY",
                         "FLOW-HEADLOSS",
                         "LEVEL-VOLUME"
                     ]
@@ -32,15 +32,15 @@
                 },
                 "createdAt": {
                     "type": "string",
-                    "format": "full-date"
+                    "format": "date-time"
                 },
                 "observedAt": {
                     "type": "string",
-                    "format": "full-date"
+                    "format": "date-time"
                 },
                 "modifiedAt": {
                     "type": "string",
-                    "format": "full-date"
+                    "format": "date-time"
                 }
             },
             "required": [

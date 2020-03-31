@@ -1,7 +1,7 @@
 {
     "$schema": "http://json-schema.org/schema#",
     "$id": "https://fiware.github.io/data-models/specs/WaterNetwork/Junction/schema.json",
-    "title": "FIWARE - Junction",
+    "title": "WaterNetwork - Junction",
     "description": "This entity contains a harmonised description of a generic junction made for the Water Network Management domain. This entity is primarily associated with the water network management vertical and related IoT applications.",
     "type": "object",
     "definitions": {
@@ -25,15 +25,15 @@
                 },
                 "createdAt": {
                     "type": "string",
-                    "format": "full-date"
+                    "format": "date-time"
                 },
                 "observedAt": {
                     "type": "string",
-                    "format": "full-date"
+                    "format": "date-time"
                 },
                 "modifiedAt": {
                     "type": "string",
-                    "format": "full-date"
+                    "format": "date-time"
                 },
                 "baseDemand": {
                     "type": "object",
@@ -55,15 +55,15 @@
                         },
                         "createdAt": {
                             "type": "string",
-                            "format": "full-date"
+                            "format": "date-time"
                         },
                         "observedAt": {
                             "type": "string",
-                            "format": "full-date"
+                            "format": "date-time"
                         },
                         "modifiedAt": {
                             "type": "string",
-                            "format": "full-date"
+                            "format": "date-time"
                         }
                     },
                     "required": [
@@ -88,15 +88,15 @@
                         },
                         "createdAt": {
                             "type": "string",
-                            "format": "full-date"
+                            "format": "date-time"
                         },
                         "observedAt": {
                             "type": "string",
-                            "format": "full-date"
+                            "format": "date-time"
                         },
                         "modifiedAt": {
                             "type": "string",
-                            "format": "full-date"
+                            "format": "date-time"
                         }
                     },
                     "required": [
@@ -132,15 +132,15 @@
                 },
                 "createdAt": {
                     "type": "string",
-                    "format": "full-date"
+                    "format": "date-time"
                 },
                 "observedAt": {
                     "type": "string",
-                    "format": "full-date"
+                    "format": "date-time"
                 },
                 "modifiedAt": {
                     "type": "string",
-                    "format": "full-date"
+                    "format": "date-time"
                 },
                 "sourceType": {
                     "type": "object",
@@ -168,15 +168,15 @@
                         },
                         "createdAt": {
                             "type": "string",
-                            "format": "full-date"
+                            "format": "date-time"
                         },
                         "observedAt": {
                             "type": "string",
-                            "format": "full-date"
+                            "format": "date-time"
                         },
                         "modifiedAt": {
                             "type": "string",
-                            "format": "full-date"
+                            "format": "date-time"
                         }
                     },
                     "required": [
@@ -204,15 +204,15 @@
                         },
                         "createdAt": {
                             "type": "string",
-                            "format": "full-date"
+                            "format": "date-time"
                         },
                         "observedAt": {
                             "type": "string",
-                            "format": "full-date"
+                            "format": "date-time"
                         },
                         "modifiedAt": {
                             "type": "string",
-                            "format": "full-date"
+                            "format": "date-time"
                         }
                     },
                     "required": [
@@ -237,15 +237,15 @@
                         },
                         "createdAt": {
                             "type": "string",
-                            "format": "full-date"
+                            "format": "date-time"
                         },
                         "observedAt": {
                             "type": "string",
-                            "format": "full-date"
+                            "format": "date-time"
                         },
                         "modifiedAt": {
                             "type": "string",
-                            "format": "full-date"
+                            "format": "date-time"
                         }
                     },
                     "required": [

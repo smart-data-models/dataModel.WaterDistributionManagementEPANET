@@ -33,7 +33,7 @@
     },
     "sourceCategory": {
         "type": "Property",
-        "value": "CategroyX",
+        "value": "CategoryX",
         "sourceType": {
             "type": "Property",
             "value": "MASS"

@@ -1,7 +1,7 @@
 # Pump
 
 ## Description
-This entity contains a harmonised description of a generic pump made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.
+This entity contains an harmonised description of a generic pump made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.
 
 ## Data Model
 
@@ -64,7 +64,7 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
 -   `power` : The power supplied by the pump
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
-    -   Attribute unit: `Kilowatt`
+    -   Attribute unit: `KiloWatt`
     -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `KWT`
     -   Attribute metadata Properties:
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
