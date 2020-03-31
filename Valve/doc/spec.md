@@ -32,7 +32,7 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
 
 ### Valve Entity Properties
 
--   `tag` : {{Description of the Attribute}}
+-   `tag` : An optional text string used to assign the valve to a category, perhaps based on type or location
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
     -   Optional
@@ -40,20 +40,21 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
 -   `description` : A free text description
     -   Optional
 
--   `initialStatus` : {{Description of the Attribute}}
+-   `initialStatus` : Valve status at the start of the simulation. If set to OPEN or CLOSED then the control setting of the valve is ignored and the valve behaves as an open or closed link, respectively. If set to NONE, then the valve will behave as intended
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text.
     -   Attribute metadata Properties:
         -   Values are resrtricted to: "OPEN","CLOSED","NONE"
     -   Mandatory
 
--   `status` : {{Description of the Attribute}}
+-   `status` : Dynamic state of the valve
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text.
     -   Attribute metadata Properties:
         -   Values are resrtricted to: "OPEN","CLOSED","NONE"
     -   Mandatory
--   `diameter` : {{Description of the Attribute}}
+
+-   `diameter` : The valve diameter
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
     -   Attribute unit: `millimetre`
@@ -62,14 +63,14 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   Optional
 
--   `valveType` : {{Description of the Attribute}}
+-   `valveType` : The valve type
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text.
     -   Attribute metadata Properties:
         -   Values are resrtricted to: "PRV", "PSV","PBV","FCV","TCV" and"GPV"
     -   Mandatory
 
--   `setting` : {{Description of the Attribute}}
+-   `setting` : A parameter that describes the valve's operational setting
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
     -   Attribute unit: `No unit`
@@ -78,7 +79,7 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   Optional
 
--   `minorLoss` : {{Description of the Attribute}}
+-   `minorLoss` : Unitless minor loss coefficient that applies when the valve is completely opened
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
     -   Attribute unit: `No unit`
@@ -89,7 +90,7 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
 ### Valve Entity Relationships
 
 
--   `startsAt` : {{Description of the Attribute}}
+-   `startsAt` : The ID of the node on the nominal upstream or inflow side of the valve
 
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Relationship`.
@@ -98,7 +99,7 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   Mandatory
 
--   `endsAt` : {{Description of the Attribute}}
+-   `endsAt` : The ID of the node on the nominal downstream or discharge side of the valve
 
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Relationship`.

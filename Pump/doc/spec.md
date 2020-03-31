@@ -31,7 +31,7 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
     -   Mandatory.
 
 ### Pump Entity Properties
--   `tag` : {{Description of the Attribute}}
+-   `tag` : An optional text string used to assign the pump to a category, perhaps based on age, size or location
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
     -   Optional
@@ -39,21 +39,21 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
 -   `description` : A free text description
     -   Optional
 
--   `initialStatus` : {{Description of the Attribute}}
+-   `initialStatus` : State of the pump (open or closed) at the start of the simulation period
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text.
     -   Attribute metadata Properties:
         -   Values are resrtricted to: "OPEN","CLOSED","CV"
     -   Mandatory
 
--   `status` : {{Description of the Attribute}}
+-   `status` : Dynamic state of the pump
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text.
     -   Attribute metadata Properties:
         -   Values are resrtricted to: "OPEN","CLOSED","CV"
     -   Mandatory
 
--   `head` : {{Description of the Attribute}}
+-   `head` : Dynamic head gain by the pump
 
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
@@ -61,7 +61,7 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   {{Optional/Mandatory}}
 
--   `power` : {{Description of the Attribute}}
+-   `power` : The power supplied by the pump
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
     -   Attribute unit: `Kilowatt`
@@ -70,16 +70,16 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   Optional
 
--   `speed` : {{Description of the Attribute}}
+-   `speed` : The relative speed setting of the pump 
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
-    -   Attribute unit: `metre per second`
+    -   Attribute unit: `No unit`
     -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `MTS`
     -   Attribute metadata Properties:
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   Optional
 
--   `efficCurve` : {{Description of the Attribute}}
+-   `efficCurve` : The ID label of the curve that represents the pump's wire-to-water efficiency as a function of flow rate
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
     -   Attribute unit: `No unit`
@@ -88,7 +88,7 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   Optional
 
--   `energyPrice` : {{Description of the Attribute}}
+-   `energyPrice` : The average or nominal price of energy in monetary units per kw-hr
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
     -   Attribute unit: `No unit`
@@ -99,7 +99,7 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
 
 ### Pump Entity Relationships
 
--   `startsAt` : {{Description of the Attribute}}
+-   `startsAt` : The ID of the node on the suction side of the pump
 
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Relationship`.
@@ -108,7 +108,7 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   Mandatory
 
--   `endsAt` : {{Description of the Attribute}}
+-   `endsAt` : The ID of the node on the discharge side of the pump
 
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Relationship`.
@@ -117,7 +117,7 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   Mandatory
 
--   `pumpCurve` : {{Description of the Attribute}}
+-   `pumpCurve` : The ID label of the pump curve used to describe the relationship between the head delivered by the pump and the flow through the pump
 
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Relationship`.
@@ -126,7 +126,7 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   Mandatory
 
--   `pumpPattern` : {{Description of the Attribute}}
+-   `pumpPattern` : The ID label of a time pattern used to control the pump's operation. The multipliers of the pattern are equivalent to speed settings. A multiplier of zero implies that the pump will be shut off during the corresponding time period
 
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Relationship`.
@@ -135,7 +135,7 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   Mandatory
 
--   `energyPattern` : {{Description of the Attribute}}
+-   `energyPattern` : The ID label of the time pattern used to describe the variation in energy price throughout the day
 
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Relationship`.

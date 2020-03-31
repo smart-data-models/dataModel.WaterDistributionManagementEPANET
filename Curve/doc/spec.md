@@ -33,7 +33,7 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
                         `LEVEL-VOLUME`
     -   Required
 
--   `xData` : {{Description of the Attribute}}
+-   `xData` : X data points for the curve
 
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`. {{Add here the attribute data type}}
@@ -41,7 +41,7 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   {{Optional/Mandatory}}
 
--   `yData` : {{Description of the Attribute}}
+-   `yData` : Y data points for the curve
 
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`. {{Add here the attribute data type}}

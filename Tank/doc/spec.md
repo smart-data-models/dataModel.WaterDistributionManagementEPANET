@@ -33,7 +33,7 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
 
 ### Tank Enity Properties
 
--   `tag` : {{Description of the Attribute}}
+-   `tag` : An optional text string used to assign the tank to a category, such as a pressure zone
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
     -   Optional
@@ -45,15 +45,9 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
     -   Attribute type: `Property`.Text
     -   `baseDemand`: A sub-property.
     -   `demandPattern`: A sub-Relationship
-    -   Mondatory
+    -   Optional
 
--   `base demande` : {{A sub-property of the Property `demandCategory`}}
-    -   Normative References: {{Add a normative reference}}
-    -   Attribute type: `Property`.Text
-    Attribute unit: `cubic metre per second`
-    -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `MQS`
-    -   Mandatory
--   `elevation` : {{Description of the Attribute}}
+-   `elevation` : The elevation above some common reference of the tank
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
     -   Attribute unit: `Metre`
@@ -61,7 +55,8 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
     -   Attribute metadata Properties:
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   Optional
--   `sourceCategory` : {{Description of the Attribute}}
+
+-   `sourceCategory` : Description of the quality of source flow entering the network at a specific node
 
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
@@ -75,14 +70,14 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
     -  Values Restricted to : "CONCEN", "MASS", "FLOWPACED" and "SETPOINT"
     -   Mandatory
 
--   `sourceQuality` : {{A sub-property of the Property `sourceCategory`}}
+-   `sourceQuality` : Baseline or average concentration (or mass flow rate) of source. A sub-property of the Property `sourceCategory`
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
     Attribute unit: `Mg/L`
     -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `M1`
     -   Mandatory
 
--   `initLevel` : {{Description of the Attribute}}
+-   `initLevel` : The height of the water surface above the bottom elevation of the tank at the start of the simulation
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
     -   Attribute unit: `Metre`
@@ -91,7 +86,7 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   Optional
 
--   `minLevel` : {{Description of the Attribute}}
+-   `minLevel` : The height of the water surface above the bottom elevation of the tank at the start of the simulation
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
     -   Attribute unit: `Metre`
@@ -100,7 +95,7 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   Optional
 
--   `maxLevel` : {{Description of the Attribute}}
+-   `maxLevel` : The height of the water surface above the bottom elevation of the tank at the start of the simulation
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
     -   Attribute unit: `Metre`
@@ -109,7 +104,7 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   Optional
 
--   `minVolume` : {{Description of the Attribute}}
+-   `minVolume` : The volume of water in the tank when it is at its minimum level
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
     -   Attribute unit: `cubic metre`
@@ -118,7 +113,7 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   Optional
 
--   `nominalDiameter` : {{Description of the Attribute}}
+-   `nominalDiameter` : The diameter of the tank
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
     -   Attribute unit: `Metre`
@@ -133,7 +128,7 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
     -  Values Restricted to :  "MIXED", "2COMP", "FIFO" and "LIFO"
     -   Mandatory
 
--   `volumCurve` : {{Description of the Attribute}}
+-   `volumCurve` : The ID label of a curve used to describe the relation between tank volume and water level
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
     -   Attribute unit: `cubic metre`
@@ -142,7 +137,7 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   Optional
 
--   `mixingFraction` : {{Description of the Attribute}}
+-   `mixingFraction` : The fraction of the tank's total volume that comprises the inlet-outlet compartment of the two-compartment (2COMP) mixing model
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
     -   Attribute unit: `No unit`
@@ -150,17 +145,6 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
     -   Attribute metadata Properties:
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   Optional
-
--   `mixingFraction` : {{Description of the Attribute}}
-    -   Normative References: {{Add a normative reference}}
-    -   Attribute type: `Property`.Text
-    -   Attribute unit: `reciprocal day`
-    -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `E92`
-    -   Attribute metadata Properties:
-        -   `{{metadata Property name}}` : {{Metadata Property Description}}
-    -   Optional
-
-
 
 ### Tank Enity Relationships
 

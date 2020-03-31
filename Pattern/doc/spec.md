@@ -33,7 +33,7 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
 -   `description` : A free text description
     -   Optional
 
--   `multipliers` : {{Description of the Attribute}}
+-   `multipliers` : Multipliers define how some base quantity (e.g., demand) is adjusted for each time period
 
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`. {{Add here the attribute data type}}

@@ -34,21 +34,21 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
 
 ### Pipe Entity Properties
 
--   `initialStatus` : {{Description of the Attribute}}
+-   `initialStatus` : Determines whether the pipe is initially open, closed, or contains a check valve
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text.
     -   Attribute metadata Properties:
         -   Values are resrtricted to: "OPEN","CLOSED","CV"
     -   Mandatory
 
--   `status` : {{Description of the Attribute}}
+-   `status` : Dynamic state of the pipe
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text.
     -   Attribute metadata Properties:
-        -   Values are resrtricted to: "OPEN","CLOSED","CV"
+        -   Values are resrtricted to: "OPEN","CLOSED"
     -   Mandatory
 
--   `length` : {{Description of the Attribute}}
+-   `length` : The actual length of the pipe
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
     -   Attribute unit: `Metre`
@@ -57,7 +57,7 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   Optional
 
--   `diameter` : {{Description of the Attribute}}
+-   `diameter` : The pipe diameter
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
     -   Attribute unit: `millimetre`
@@ -66,7 +66,7 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   Optional
 
--   `roughness` : {{Description of the Attribute}}
+-   `roughness` : The roughness coefficient of the pipe. It is unitless for Hazen-Williams or Chezy-Manning roughness and has units of millifeet (mm) for Darcy-Weisbach roughness.
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
     -  Attribute unit: `No unit`
@@ -75,7 +75,7 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   Optional
 
--   `minorLoss` : {{Description of the Attribute}}
+-   `minorLoss` : Unitless minor loss coefficient associated with bends, fittings, etc.
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
     -   Attribute unit: `No unit`
@@ -84,7 +84,7 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   Optional
 
--   `tag` : {{Description of the Attribute}}
+-   `tag` : An optional text string used to assign the pipe to a category, perhaps one based on age or material
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
     -   Optional
@@ -92,7 +92,7 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
 -   `description` : A free text description
     -   Optional
 
--   `bulkCoeff` : {{Description of the Attribute}}
+-   `bulkCoeff` : The bulk reaction coefficient for the pipe. Use a positive value for growth and a negative value for decay
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
     -   Attribute unit: `reciprocal day`
@@ -101,7 +101,7 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   Optional
 
--   `wallCoeff` : {{Description of the Attribute}}
+-   `wallCoeff` : The wall reaction coefficient for the pipe. Use a positive value for growth and a negative value for decay.
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
     -   Attribute unit: `mg/m²/day`
@@ -113,7 +113,7 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
 
 ### Pipe Entity Relationships
 
--   `startsAt` : {{Description of the Attribute}}
+-   `startsAt` : The ID of the node where the pipe begins
 
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Relationship`.
@@ -122,7 +122,7 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   Mandatory
 
--   `endsAt` : {{Description of the Attribute}}
+-   `endsAt` : The ID of the node where the pipe ends
 
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Relationship`.
