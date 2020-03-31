@@ -13,19 +13,6 @@
             ]
         }
     },
-    "demandCategory": {
-        "type": "Property",
-        "value": "agriculture demand",
-        "baseDemand ": {
-            "type": "Property",
-            "value": "1.763868462",
-            "unitCode": "MQS"
-        },
-        "demandPattern": {
-            "type": "Relationship",
-            "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533"
-        }
-    },
     "elevation": {
         "type": "Property",
         "value": 112.9,
