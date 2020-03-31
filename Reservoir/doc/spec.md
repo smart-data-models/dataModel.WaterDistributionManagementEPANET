@@ -33,25 +33,23 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
 ## Reservoir Entity Properties
 
 -   `elevation` : The elevation above some common reference of the reservoir
-    -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
     -   Attribute unit: `Metre`
     -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `MTR`
     -   Attribute metadata Properties:
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
-    -   Optional
+    -   Mandatory
 
 -   `tag` : An optional text string used to assign the reservoir to a category, such as a pressure zone
-    -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
     -   Optional
 
 -   `description` : A free text description
+    -   Attribute type: `Property`.Text
     -   Optional
 
 -   `reservoirHead` : The hydraulic head (elevation + pressure head) of water in the reservoir
-    -   Normative References: {{Add a normative reference}}
-    -   Attribute type: `Property`.Text
+    -   Attribute type: `Property`. Number
     -   Attribute unit: All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code
     -   Attribute unit Example: `Metre`
     -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `MTR`
@@ -60,8 +58,7 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
     -   Mandatory
 
 -   `initialQuality` : Water quality level at the reservoir
-    -   Normative References: {{Add a normative reference}}
-    -   Attribute type: `Property`.Text
+    -   Attribute type: `Property`. Number
     -   Attribute unit: All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code
     -   Attribute unit Example: `mg/L`
     -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `M1`
@@ -79,33 +76,27 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
     -   Optional
 
 -   `sourceType` : A sub-property of the Property `sourceCategory`
-    -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
     -   Values are Restricted to: "CONCEN", "MASS", "FLOWPACED" and "SETPOINT"
     -   Optional
 
 -   `sourceQuality` : Baseline or average concentration (or mass flow rate) of source. A sub-property of the Property `sourceCategory`
-    -   Normative References: {{Add a normative reference}}
-    -   Attribute type: `Property`.Text
+    -   Attribute type: `Property`. Number
     -   Attribute unit: All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code
     -   Attribute unit Example: `mg/L`
     -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `M1`
     -   Optional
 
 ## Reservoir Entity Relationships
--   `headPattern`: {{Description of the Attribute}}
+-   `headPattern`: The ID label of a time pattern used to model time variation in the reservoir's total head
 
-    -   Normative References: The ID label of a time pattern used to model time variation in the reservoir's total head
-    -   Attribute type: `Relationship`.
-        {{Add here the description of the target relationship object}}
+    -   Attribute type: `Relationship`. Reference to an entity of type `Pattern`
     -   Attribute metadata Properties:
         -   `{{metadata Property name}}`: {{Metadata Property Description}}
     -   Optional
 
 -   `sourcePattern` : A relationship to the pattern pf the `sourceCategory` property
-    -   Normative References: {{Add a normative reference}}
-    -   Attribute type: `Relationship`.
-        {{Add here the description of the target relationship object}}
+    -   Attribute type: `Relationship`. Reference to an entity of type `Pattern`
     -   Attribute metadata Properties:
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   Optional

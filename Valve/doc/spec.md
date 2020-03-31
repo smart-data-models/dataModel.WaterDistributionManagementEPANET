@@ -33,30 +33,28 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
 ### Valve Entity Properties
 
 -   `tag` : An optional text string used to assign the valve to a category, perhaps based on type or location
-    -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
     -   Optional
 
 -   `description` : A free text description
+    -   Attribute type: `Property`.Text
     -   Optional
 
 -   `initialStatus` : Valve status at the start of the simulation. If set to OPEN or CLOSED then the control setting of the valve is ignored and the valve behaves as an open or closed link, respectively. If set to NONE, then the valve will behave as intended
-    -   Normative References: {{Add a normative reference}}
-    -   Attribute type: `Property`.Text.
+    -   Attribute type: `Property`.Text
     -   Attribute metadata Properties:
         -   Values are resrtricted to: "OPEN","CLOSED","NONE"
     -   Mandatory
 
 -   `status` : Dynamic state of the valve
     -   Normative References: {{Add a normative reference}}
-    -   Attribute type: `Property`.Text.
+    -   Attribute type: `Property`.Text
     -   Attribute metadata Properties:
         -   Values are resrtricted to: "OPEN","CLOSED","NONE"
     -   Optional
 
 -   `diameter` : The valve diameter
-    -   Normative References: {{Add a normative reference}}
-    -   Attribute type: `Property`.Text
+    -   Attribute type: `Property`. Number
     -   Attribute unit: All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code
     -   Attribute unit Example: `millimetre`
     -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `MMT`
@@ -65,15 +63,13 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
     -   Mandatory
 
 -   `valveType` : The valve type
-    -   Normative References: {{Add a normative reference}}
-    -   Attribute type: `Property`.Text.
+    -   Attribute type: `Property`.Text
     -   Attribute metadata Properties:
         -   Values are resrtricted to: "PRV", "PSV","PBV","FCV","TCV" and"GPV"
     -   Mandatory
 
 -   `setting` : A parameter that describes the valve's operational setting
-    -   Normative References: {{Add a normative reference}}
-    -   Attribute type: `Property`.Text
+    -   Attribute type: `Property`. Number
     -   Attribute unit: All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code
     -   Attribute unit Example: `No unit`
     -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `C62`
@@ -82,8 +78,7 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
     -   Mandatory
 
 -   `minorLoss` : Unitless minor loss coefficient that applies when the valve is completely opened
-    -   Normative References: {{Add a normative reference}}
-    -   Attribute type: `Property`.Text
+    -   Attribute type: `Property`. Number
     -   Attribute unit: All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code,
     -   Attribute unit Example: `No unit`
     -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `C62`
@@ -94,17 +89,14 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
 
 -   `startsAt` : The ID of the node on the nominal upstream or inflow side of the valve
 
-    -   Normative References: {{Add a normative reference}}
-    -   Attribute type: `Relationship`.
-        {{Add here the description of the target relationship object}}
+    -   Attribute type: `Relationship`. Reference to an entity of type `Node (Reservoir, Junction, Tank)`
     -   Attribute metadata Properties:
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   Mandatory
 
 -   `endsAt` : The ID of the node on the nominal downstream or discharge side of the valve
 
-    -   Normative References: {{Add a normative reference}}
-    -   Attribute type: `Relationship`.
+    -   Attribute type: `Relationship`. Reference to an entity of type `Node (Reservoir, Junction, Tank)`
         {{Add here the description of the target relationship object}}
     -   Attribute metadata Properties:
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
