@@ -38,7 +38,7 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
     -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `MTR`
     -   Attribute metadata Properties:
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
-    -   Optional
+    -   Mondatory
 
 -   `tag` : An optional text string used to assign the junction to a category, such as a pressure zone
     -   Normative References: {{Add a normative reference}}
@@ -71,14 +71,14 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
     -   Attribute type: `Property`.Text
     -   `baseDemand`: A sub-property.
     -   `demandPattern`: A sub-Relationship
-    -   Mondatory
+    -   Optional
 
 -   `base demande` : Baseline or average demand for the category. A sub-property of the Property `demandCategory`
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
     -   Attribute unit: `cubic metre per second`
     -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `MQS`
-    -   Mandatory
+    -   Optional
 
 -   `sourceCategory` : Description of the quality of source flow entering the network at a specific node
 
@@ -87,19 +87,20 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
     -   `sourceType`: A sub-property.
     -   `sourceQuality`:A sub-property.
     -   `sourcePattern`: A sub-Relationship.
+    -   Optional
 
 -   `sourceType` : A sub-property of the Property `sourceCategory`
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
     -  Values Restricted to : "CONCEN", "MASS", "FLOWPACED" and "SETPOINT"
-    -   Mandatory
+    -   Optional
 
 -   `sourceQuality` : Baseline or average concentration (or mass flow rate) of source. A sub-property of the Property `sourceCategory`
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
     -   Attribute unit: `mg/L`
     -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `M1`
-    -   Mandatory
+    -   Optional
 
 ### Junction Entity Relationships
 
@@ -110,7 +111,7 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
         {{Add here the description of the target relationship object}}
     -   Attribute metadata Properties:
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
-    -   Mandatory
+    -   Optional
 
 -   `sourcePattern` : A relationship to the pattern pf the `sourceCategory` property
     -   Normative References: {{Add a normative reference}}
@@ -118,7 +119,7 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
         {{Add here the description of the target relationship object}}
     -   Attribute metadata Properties:
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
-    -   Mandatory
+    -   Optional
 
 **Note**: JSON Schemas are intended to capture the data type and associated
 constraints of the different Attributes, regardless their final representation

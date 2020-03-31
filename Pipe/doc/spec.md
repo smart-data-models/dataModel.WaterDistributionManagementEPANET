@@ -46,7 +46,7 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
     -   Attribute type: `Property`.Text.
     -   Attribute metadata Properties:
         -   Values are resrtricted to: "OPEN","CLOSED"
-    -   Mandatory
+    -   Optional
 
 -   `length` : The actual length of the pipe
     -   Normative References: {{Add a normative reference}}
@@ -55,7 +55,7 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
     -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `MTR`
     -   Attribute metadata Properties:
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
-    -   Optional
+    -   Mandatory
 
 -   `diameter` : The pipe diameter
     -   Normative References: {{Add a normative reference}}
@@ -64,7 +64,7 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
     -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `MMT`
     -   Attribute metadata Properties:
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
-    -   Optional
+    -   Mandatory
 
 -   `roughness` : The roughness coefficient of the pipe. It is unitless for Hazen-Williams or Chezy-Manning roughness and has units of millifeet (mm) for Darcy-Weisbach roughness.
     -   Normative References: {{Add a normative reference}}
@@ -73,7 +73,7 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
     -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `C62`
     -   Attribute metadata Properties:
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
-    -   Optional
+    -   Mandatory
 
 -   `minorLoss` : Unitless minor loss coefficient associated with bends, fittings, etc.
     -   Normative References: {{Add a normative reference}}
@@ -82,7 +82,7 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
     -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `C62`
     -   Attribute metadata Properties:
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
-    -   Optional
+    -   Mandatory
 
 -   `tag` : An optional text string used to assign the pipe to a category, perhaps one based on age or material
     -   Normative References: {{Add a normative reference}}

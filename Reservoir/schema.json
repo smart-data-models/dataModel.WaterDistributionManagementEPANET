@@ -312,6 +312,7 @@
     "required": [
         "id",
         "type",
-        "location"
+        "location",
+        "reservoirHead"
     ]
 }

@@ -59,6 +59,9 @@
                     ],
                     "description": "NGSI-LD Entity Type"
                 },
+                "curveType": {
+                    "$ref": "#/definitions/curveType"
+                },
                 "xData": {
                     "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
                 },
@@ -76,6 +79,9 @@
     ],
     "required": [
         "id",
-        "type"
+        "type",
+        "curveType",
+        "xData",
+        "yData"
     ]
 }
