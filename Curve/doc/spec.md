@@ -35,19 +35,13 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
 
 -   `xData` : X data points for the curve
 
-    -   Normative References: {{Add a normative reference}}
-    -   Attribute type: `Property`. {{Add here the attribute data type}}
-    -   Attribute metadata Properties:
-        -   `{{metadata Property name}}` : {{Metadata Property Description}}
-    -   {{Optional/Mandatory}}
+    -   Attribute type: `Property`. List of Number
+    -   Mandatory
 
 -   `yData` : Y data points for the curve
 
-    -   Normative References: {{Add a normative reference}}
-    -   Attribute type: `Property`. {{Add here the attribute data type}}
-    -   Attribute metadata Properties:
-        -   `{{metadata Property name}}` : {{Metadata Property Description}}
-    -   {{Optional/Mandatory}}
+    -   Attribute type: `Property`. `Property`. List of Number
+    -   Mandatory
 
 ### Junction Entity Relationships
 
