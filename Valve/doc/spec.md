@@ -33,79 +33,53 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
 ### Valve Entity Properties
 
 -   `tag` : An optional text string used to assign the valve to a category, perhaps based on type or location
-    -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
     -   Optional
 
 -   `description` : A free text description
+    -   Attribute type: `Property`.Text
     -   Optional
 
 -   `initialStatus` : Valve status at the start of the simulation. If set to OPEN or CLOSED then the control setting of the valve is ignored and the valve behaves as an open or closed link, respectively. If set to NONE, then the valve will behave as intended
-    -   Normative References: {{Add a normative reference}}
-    -   Attribute type: `Property`.Text.
-    -   Attribute metadata Properties:
-        -   Values are resrtricted to: "OPEN","CLOSED","NONE"
+    -   Attribute type: `Property`.Text
+    -   Accepted Values : "OPEN","CLOSED","NONE"
     -   Mandatory
 
 -   `status` : Dynamic state of the valve
-    -   Normative References: {{Add a normative reference}}
-    -   Attribute type: `Property`.Text.
-    -   Attribute metadata Properties:
-        -   Values are resrtricted to: "OPEN","CLOSED","NONE"
+    -   Attribute type: `Property`.Text
+    -   Accepted Values : "OPEN","CLOSED","NONE"
     -   Mandatory
 
 -   `diameter` : The valve diameter
-    -   Normative References: {{Add a normative reference}}
-    -   Attribute type: `Property`.Text
+    -   Attribute type: `Property`.Number
     -   Attribute unit: `millimetre`
     -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `MMT`
-    -   Attribute metadata Properties:
-        -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   Optional
 
 -   `valveType` : The valve type
-    -   Normative References: {{Add a normative reference}}
-    -   Attribute type: `Property`.Text.
-    -   Attribute metadata Properties:
-        -   Values are resrtricted to: "PRV", "PSV","PBV","FCV","TCV" and"GPV"
+    -   Attribute type: `Property`.Text
+    -   Accepted Values: "PRV", "PSV","PBV","FCV","TCV" and"GPV"
     -   Mandatory
 
 -   `setting` : A parameter that describes the valve's operational setting
-    -   Normative References: {{Add a normative reference}}
-    -   Attribute type: `Property`.Text
+    -   Attribute type: `Property`.Number
     -   Attribute unit: `No unit`
     -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `C62`
-    -   Attribute metadata Properties:
-        -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   Optional
 
 -   `minorLoss` : Unitless minor loss coefficient that applies when the valve is completely opened
-    -   Normative References: {{Add a normative reference}}
-    -   Attribute type: `Property`.Text
+    -   Attribute type: `Property`.Number
     -   Attribute unit: `No unit`
     -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `C62`
-    -   Attribute metadata Properties:
-        -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   Optional
 ### Valve Entity Relationships
 
-
 -   `startsAt` : The ID of the node on the nominal upstream or inflow side of the valve
-
-    -   Normative References: {{Add a normative reference}}
-    -   Attribute type: `Relationship`.
-        {{Add here the description of the target relationship object}}
-    -   Attribute metadata Properties:
-        -   `{{metadata Property name}}` : {{Metadata Property Description}}
+    -   Attribute type: `Relationship`. Reference to an entity of type `Node (Reservoir, Junction, Tank)`
     -   Mandatory
 
 -   `endsAt` : The ID of the node on the nominal downstream or discharge side of the valve
-
-    -   Normative References: {{Add a normative reference}}
-    -   Attribute type: `Relationship`.
-        {{Add here the description of the target relationship object}}
-    -   Attribute metadata Properties:
-        -   `{{metadata Property name}}` : {{Metadata Property Description}}
+    -   Attribute type: `Relationship`. Reference to an entity of type `Node (Reservoir, Junction, Tank)`
     -   Mandatory
 
 

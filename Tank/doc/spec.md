@@ -34,134 +34,96 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
 ### Tank Enity Properties
 
 -   `tag` : An optional text string used to assign the tank to a category, such as a pressure zone
-    -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
     -   Optional
 
 -   `description` : A free text description
+    -   Attribute type: `Property`.Text
     -   Optional
--   `demandCategory` : {{Description of the Attribute}}
-    -   Normative References: {{Add a normative reference}}
+-   `demandCategory` : Allows base demands and time patterns to be assigned to other categories of users at the junction
     -   Attribute type: `Property`.Text
     -   `baseDemand`: A sub-property.
     -   `demandPattern`: A sub-Relationship
     -   Optional
 
 -   `elevation` : The elevation above some common reference of the tank
-    -   Normative References: {{Add a normative reference}}
-    -   Attribute type: `Property`.Text
+    -   Attribute type: `Property`.Number
     -   Attribute unit: `Metre`
     -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `MTR`
-    -   Attribute metadata Properties:
-        -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   Optional
 
 -   `sourceCategory` : Description of the quality of source flow entering the network at a specific node
-
-    -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
     -   `sourceType`: A sub-property.
     -   `sourceQuality`:A sub-property.
     -   `sourcePattern`: A sub-Relationship.
 
 -   `sourceType` : A sub-property of the Property `sourceCategory`
-    -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
-    -  Values Restricted to : "CONCEN", "MASS", "FLOWPACED" and "SETPOINT"
+    -   Accepted Values : "CONCEN", "MASS", "FLOWPACED" and "SETPOINT"
     -   Mandatory
 
 -   `sourceQuality` : Baseline or average concentration (or mass flow rate) of source. A sub-property of the Property `sourceCategory`
-    -   Normative References: {{Add a normative reference}}
-    -   Attribute type: `Property`.Text
+    -   Attribute type: `Property`. Number
     Attribute unit: `Mg/L`
     -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `M1`
     -   Mandatory
 
 -   `initLevel` : The height of the water surface above the bottom elevation of the tank at the start of the simulation
-    -   Normative References: {{Add a normative reference}}
-    -   Attribute type: `Property`.Text
+    -   Attribute type: `Property`. Number
     -   Attribute unit: `Metre`
     -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `MTR`
-    -   Attribute metadata Properties:
-        -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   Optional
 
 -   `minLevel` : The height of the water surface above the bottom elevation of the tank at the start of the simulation
-    -   Normative References: {{Add a normative reference}}
-    -   Attribute type: `Property`.Text
+    -   Attribute type: `Property`. Number
     -   Attribute unit: `Metre`
     -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `MTR`
-    -   Attribute metadata Properties:
-        -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   Optional
 
 -   `maxLevel` : The height of the water surface above the bottom elevation of the tank at the start of the simulation
-    -   Normative References: {{Add a normative reference}}
-    -   Attribute type: `Property`.Text
+    -   Attribute type: `Property`. Number
     -   Attribute unit: `Metre`
     -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `MTR`
-    -   Attribute metadata Properties:
-        -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   Optional
 
 -   `minVolume` : The volume of water in the tank when it is at its minimum level
-    -   Normative References: {{Add a normative reference}}
-    -   Attribute type: `Property`.Text
+    -   Attribute type: `Property`. Number
     -   Attribute unit: `cubic metre`
     -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `MTQ`
-    -   Attribute metadata Properties:
-        -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   Optional
 
 -   `nominalDiameter` : The diameter of the tank
-    -   Normative References: {{Add a normative reference}}
-    -   Attribute type: `Property`.Text
+    -   Attribute type: `Property`. Number
     -   Attribute unit: `Metre`
     -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `MTR`
-    -   Attribute metadata Properties:
-        -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   Optional
 
 -   `mixingModel` : A sub-property of the Property `sourceCategory`
-    -   Normative References: {{Add a normative reference}}
-    -   Attribute type: `Property`.Text
-    -  Values Restricted to :  "MIXED", "2COMP", "FIFO" and "LIFO"
+    -   Attribute type: `Property`. Text
+    -   Accepted Values :  "MIXED", "2COMP", "FIFO" and "LIFO"
     -   Mandatory
 
 -   `volumCurve` : The ID label of a curve used to describe the relation between tank volume and water level
-    -   Normative References: {{Add a normative reference}}
-    -   Attribute type: `Property`.Text
+    -   Attribute type: `Property`. Number
     -   Attribute unit: `cubic metre`
     -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `MTQ`
-    -   Attribute metadata Properties:
-        -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   Optional
 
 -   `mixingFraction` : The fraction of the tank's total volume that comprises the inlet-outlet compartment of the two-compartment (2COMP) mixing model
-    -   Normative References: {{Add a normative reference}}
-    -   Attribute type: `Property`.Text
+    -   Attribute type: `Property`. Number
     -   Attribute unit: `No unit`
     -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `C62`
-    -   Attribute metadata Properties:
-        -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   Optional
 
 ### Tank Enity Relationships
 
--   `demandPattern`: A relationship to the pattern pf the `demandCategory` property
-    -   Normative References: {{Add a normative reference}}
-    -   Attribute type: `Relationship`.
-        {{Add here the description of the target relationship object}}
-    -   Attribute metadata Properties:
-        -   `{{metadata Property name}}` : {{Metadata Property Description}}
+-   `demandPattern`: A relationship to the pattern of the `demandCategory` property
+    -   Attribute type: `Relationship`. Reference to an entity of type `Pattern`
     -   Mandatory
 
--   `sourcePattern` : A relationship to the pattern pf the `sourceCategory` property
-    -   Normative References: {{Add a normative reference}}
-    -   Attribute type: `Relationship`.
-        {{Add here the description of the target relationship object}}
-    -   Attribute metadata Properties:
-        -   `{{metadata Property name}}` : {{Metadata Property Description}}
+-   `sourcePattern` : A relationship to the pattern of the `sourceCategory` property
+    -   Attribute type: `Relationship`. Reference to an entity of type `Pattern`
     -   Mandatory
 
 **Note**: JSON Schemas are intended to capture the data type and associated
