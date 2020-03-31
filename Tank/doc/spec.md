@@ -45,7 +45,8 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
 -   `elevation` : The elevation above some common reference of the tank
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
-    -   Attribute unit: `Metre`
+    -   Attribute unit: All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code
+    -   Attribute unit Example: `Metre`
     -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `MTR`
     -   Attribute metadata Properties:
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
@@ -68,7 +69,8 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
 
 -   `sourceQuality` : Baseline or average concentration (or mass flow rate) of source. A sub-property of the Property `sourceCategory`
     -   Normative References: {{Add a normative reference}}
-    -   Attribute type: `Property`.Text
+    -   Attribute unit: All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code
+    -   Attribute unit Example: `Property`.Text
     Attribute unit: `mg/L`
     -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `M1`
     -   Optional
@@ -76,7 +78,8 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
 -   `initLevel` : The height of the water surface above the bottom elevation of the tank at the start of the simulation
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
-    -   Attribute unit: `Metre`
+    -   Attribute unit: All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code
+    -   Attribute unit Example: `Metre`
     -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `MTR`
     -   Attribute metadata Properties:
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
@@ -85,7 +88,8 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
 -   `initLevel` : The height of the water surface above the bottom elevation of the tank at the start of the simulation
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
-    -   Attribute unit: `Metre`
+    -   Attribute unit: All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code
+    -   Attribute unit Example: `Metre`
     -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `MTR`
     -   Attribute metadata Properties:
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
@@ -94,7 +98,8 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
 -   `maxLevel` : The height of the water surface above the bottom elevation of the tank at the start of the simulation
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
-    -   Attribute unit: `Metre`
+    -   Attribute unit: All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code
+    -   Attribute unit Example: `Metre`
     -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `MTR`
     -   Attribute metadata Properties:
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
@@ -103,7 +108,8 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
 -   `minVolume` : The volume of water in the tank when it is at its minimum level
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
-    -   Attribute unit: `cubic metre`
+    -   Attribute unit: All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code
+    -   Attribute unit Example: `cubic metre`
     -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `MTQ`
     -   Attribute metadata Properties:
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
@@ -112,7 +118,8 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
 -   `nominalDiameter` : The diameter of the tank
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
-    -   Attribute unit: `Metre`
+    -   Attribute unit: All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code
+    -   Attribute unit Example: `Metre`
     -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `MTR`
     -   Attribute metadata Properties:
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
@@ -121,13 +128,14 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
 -   `mixingModel` : A sub-property of the Property `sourceCategory`
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
-    -  Values Restricted to :  "MIXED", "2COMP", "FIFO" and "LIFO"
+    -   Values Restricted to :  "MIXED", "2COMP", "FIFO" and "LIFO"
     -   Mandatory
 
 -   `volumCurve` : The ID label of a curve used to describe the relation between tank volume and water level
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
-    -   Attribute unit: `cubic metre`
+    -   Attribute unit: All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code
+    -   Attribute unit Example: `cubic metre`
     -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `MTQ`
     -   Attribute metadata Properties:
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
@@ -136,7 +144,8 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
 -   `mixingFraction` : The fraction of the tank's total volume that comprises the inlet-outlet compartment of the two-compartment (2COMP) mixing model
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
-    -   Attribute unit: `No unit`
+    -   Attribute unit: All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code
+    -   Attribute unit Example:: `No unit`
     -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `C62`
     -   Attribute metadata Properties:
         -   `{{metadata Property name}}` : {{Metadata Property Description}}

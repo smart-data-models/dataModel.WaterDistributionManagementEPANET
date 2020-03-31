@@ -64,7 +64,8 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
 -   `power` : The power supplied by the pump
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
-    -   Attribute unit: `KiloWatt`
+    -   Attribute unit: All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code
+    -   Attribute unit Example: `KiloWatt`
     -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `KWT`
     -   Attribute metadata Properties:
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
@@ -73,7 +74,8 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
 -   `speed` : The relative speed setting of the pump 
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
-    -   Attribute unit: `No unit`
+    -   Attribute unit: All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code
+    -   Attribute unit Example: `No unit`
     -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `MTS`
     -   Attribute metadata Properties:
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
@@ -82,7 +84,8 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
 -   `efficCurve` : The ID label of the curve that represents the pump's wire-to-water efficiency as a function of flow rate
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
-    -   Attribute unit: `No unit`
+    -   Attribute unit: All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code
+    -   Attribute unit Example: `No unit`
     -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `C62`
     -   Attribute metadata Properties:
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
@@ -91,7 +94,8 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
 -   `energyPrice` : The average or nominal price of energy in monetary units per kw-hr
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
-    -   Attribute unit: `No unit`
+    -   Attribute unit: All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code
+    -   Attribute unit Example: `No unit`
     -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `C62`
     -   Attribute metadata Properties:
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
@@ -136,7 +140,6 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
     -   Mandatory
 
 -   `energyPattern` : The ID label of the time pattern used to describe the variation in energy price throughout the day
-
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Relationship`.
         {{Add here the description of the target relationship object}}

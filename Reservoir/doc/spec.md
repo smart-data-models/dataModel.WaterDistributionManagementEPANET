@@ -52,7 +52,8 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
 -   `reservoirHead` : The hydraulic head (elevation + pressure head) of water in the reservoir
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
-    -   Attribute unit: `Metre`
+    -   Attribute unit: All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code
+    -   Attribute unit Example: `Metre`
     -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `MTR`
     -   Attribute metadata Properties:
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
@@ -61,7 +62,8 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
 -   `initialQuality` : Water quality level at the reservoir
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
-    -   Attribute unit: `mg/L`
+    -   Attribute unit: All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code
+    -   Attribute unit Example: `mg/L`
     -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `M1`
     -   Attribute metadata Properties:
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
@@ -79,13 +81,14 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
 -   `sourceType` : A sub-property of the Property `sourceCategory`
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
-    -  Values are Restricted to: "CONCEN", "MASS", "FLOWPACED" and "SETPOINT"
+    -   Values are Restricted to: "CONCEN", "MASS", "FLOWPACED" and "SETPOINT"
     -   Optional
 
 -   `sourceQuality` : Baseline or average concentration (or mass flow rate) of source. A sub-property of the Property `sourceCategory`
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
-    Attribute unit: `mg/L`
+    -   Attribute unit: All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code
+    -   Attribute unit Example: `mg/L`
     -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `M1`
     -   Optional
 

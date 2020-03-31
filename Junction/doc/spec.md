@@ -34,7 +34,8 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
 -   `elevation` : The elevation above some common reference of the junction
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
-    -   Attribute unit: `Metre`
+    -   Attribute unit: All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code
+    -   Attribute unit Example: `Metre`
     -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `MTR`
     -   Attribute metadata Properties:
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
@@ -51,7 +52,8 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
 -   `initialQuality` : Water quality level at the junction at the start of the simulation
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
-    -   Attribute unit: `mg/L`
+    -   Attribute unit: All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code
+    -   Attribute unit Example: `mg/L`
     -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `M1`
     -   Attribute metadata Properties:
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
@@ -60,7 +62,8 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
 -   `emitterCoefficient` : Discharge coefficient for emitter (sprinkler or nozzle) placed at junction
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
-    -   Attribute unit: `square metre per second`
+    -   Attribute unit: All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code
+    -   Attribute unit Example: `square metre per second`
     -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `S4`
     -   Attribute metadata Properties:
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
@@ -76,7 +79,8 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
 -   `base demande` : Baseline or average demand for the category. A sub-property of the Property `demandCategory`
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
-    -   Attribute unit: `cubic metre per second`
+    -   Attribute unit: All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code
+    -   Attribute unit Example: `cubic metre per second`
     -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `MQS`
     -   Optional
 
@@ -98,7 +102,8 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
 -   `sourceQuality` : Baseline or average concentration (or mass flow rate) of source. A sub-property of the Property `sourceCategory`
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
-    -   Attribute unit: `mg/L`
+    -   Attribute unit: All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code
+    -   Attribute unit Example: `mg/L`
     -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `M1`
     -   Optional
 

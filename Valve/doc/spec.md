@@ -57,7 +57,8 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
 -   `diameter` : The valve diameter
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
-    -   Attribute unit: `millimetre`
+    -   Attribute unit: All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code
+    -   Attribute unit Example: `millimetre`
     -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `MMT`
     -   Attribute metadata Properties:
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
@@ -73,7 +74,8 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
 -   `setting` : A parameter that describes the valve's operational setting
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
-    -   Attribute unit: `No unit`
+    -   Attribute unit: All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code
+    -   Attribute unit Example: `No unit`
     -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `C62`
     -   Attribute metadata Properties:
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
@@ -82,13 +84,13 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
 -   `minorLoss` : Unitless minor loss coefficient that applies when the valve is completely opened
     -   Normative References: {{Add a normative reference}}
     -   Attribute type: `Property`.Text
-    -   Attribute unit: `No unit`
+    -   Attribute unit: All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code,
+    -   Attribute unit Example: `No unit`
     -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `C62`
     -   Attribute metadata Properties:
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   Mandatory
 ### Valve Entity Relationships
-
 
 -   `startsAt` : The ID of the node on the nominal upstream or inflow side of the valve
 
