@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "$schemaVersion": "0.0",
   "$id": "https://fiware.github.io/data-models/specs/AgriFood/AgriApp/schema.json",
   "title": " [FIWARE - domain]",
   "description": "[This entity describes an object of the domain ]",
