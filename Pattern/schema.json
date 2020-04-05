@@ -1,0 +1,35 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "$id": "https://fiware.github.io/data-models/specs/WaterNetwork/Pattern/schema.json",
+    "title": "WaterNetwork - Pattern",
+    "description": "This entity contains a harmonised description of a generic pattern made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.",
+    "type": "object",
+    "definitions": {},
+    "allOf": [
+        {
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "Pattern"
+                    ],
+                    "description": "NGSI-LD Entity Type"
+                },
+                "multipliers": {
+                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
+                },
+                "description": {
+                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
+                },
+                "tag": {
+                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
+                }
+            }
+        }
+    ],
+    "required": [
+        "id",
+        "type",
+        "multipliers"
+    ]
+}

@@ -2,11 +2,12 @@
 Every object has its AUTHORS.md file where these authors are credited
 This is a compilation list of all AUTHORS across different objects alphabetically ordered
 
-## [domain] data model [Object] 
+## Water Network Management Data Model
 
 ## List of authors
 ___
-- surname1; name1; mail@example.com; organization1
-- surname2; name2; mail@example.com; organization2
-- surnameN; nameN; mail@example.com; organizationN
+- Ahmed Abid [ahmed.abid@eglobalmark.com](mailto:ahmed.abid@eglobalmark.com) [Easy Global Market](http://www.eglobalmark.com)
+- Benoit Orihuela [benoit.orihuela@eglobalmark.com](mailto:benoit.orihuela@eglobalmark.com) [Easy Global Market](http://www.eglobalmark.com)
+- Elad Salomons [selad@optiwater.com](mailto:selad@optiwater.com)  [Optiwater](www.optiwater.com)
+- Franck Le Gall [franck.le-gall@eglobalmark.com](mailto:franck.le-gall@eglobalmark.com)  [Easy Global Market](http://www.eglobalmark.com)
 ____

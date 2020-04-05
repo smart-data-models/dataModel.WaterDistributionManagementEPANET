@@ -1,0 +1,157 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "$id": "https://fiware.github.io/data-models/specs/WaterNetwork/Valve/schema.json",
+    "title": "WaterNetwork - Valve",
+    "description": "This entity contains a harmonised description of a generic Valve made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.",
+    "type": "object",
+    "definitions": {
+        "status": {
+            "type": "object",
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "Property"
+                    ]
+                },
+                "value": {
+                    "type": [
+                        "number",
+                        "string",
+                        "array"
+                    ],
+                    "enum": [
+                        "OPEN",
+                        "CLOSED",
+                        "NONE"
+                    ]
+                },
+                "unitCode": {
+                    "type": "string"
+                },
+                "createdAt": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "observedAt": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "modifiedAt": {
+                    "type": "string",
+                    "format": "date-time"
+                }
+            },
+            "required": [
+                "type",
+                "value"
+            ]
+        },
+        "valveType": {
+            "type": "object",
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "Property"
+                    ]
+                },
+                "value": {
+                    "type": [
+                        "string"
+                    ],
+                    "enum": [
+                        "PRV",
+                        "PSV",
+                        "PBV",
+                        "FCV",
+                        "TCV",
+                        "GPV"
+                    ]
+                },
+                "unitCode": {
+                    "type": "string"
+                },
+                "createdAt": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "observedAt": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "modifiedAt": {
+                    "type": "string",
+                    "format": "date-time"
+                }
+            },
+            "required": [
+                "type",
+                "value"
+            ]
+        }
+    },
+    "allOf": [
+        {
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "Valve"
+                    ],
+                    "description": "NGSI-LD Entity Type"
+                },
+                "status": {
+                    "$ref": "#/definitions/status"
+                },
+                "initiaStatus": {
+                    "$ref": "#/definitions/status"
+                },
+                "diameter": {
+                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
+                },
+                "valveType": {
+                    "$ref": "#/definitions/valveType"
+                },
+                "setting": {
+                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
+                },
+                "minorLoss": {
+                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
+                },
+                "tag": {
+                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
+                },
+                "startsAt": {
+                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildRelationship"
+                },
+                "endsAt": {
+                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildRelationship"
+                },
+                "createdAt": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "observedAt": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "modifiedAt": {
+                    "type": "string",
+                    "format": "date-time"
+                }
+            }
+        }
+    ],
+    "required": [
+        "id",
+        "type",
+        "initialStatus",
+        "diameter",
+        "valveType",
+        "setting",
+        "minorLoss",
+        "startsAt",
+        "endsAt"
+    ]
+}
