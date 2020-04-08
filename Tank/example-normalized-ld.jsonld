@@ -73,10 +73,9 @@
         "type": "Property",
         "value": "MIXED"
     },
-    "volumCurve": {
-        "type": "Property",
-        "value": 200,
-        "unitCode": "MTQ"
+    "volumeCurve": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Curve:fAM-8ca3-4533-a2eb-12015"
     },
     "mixingFraction": {
         "type": "Property",
