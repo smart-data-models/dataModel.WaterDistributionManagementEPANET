@@ -251,8 +251,8 @@
                 "sourceCategory": {
                     "$ref": "#/definitions/source"
                 },
-                "volumCurve": {
-                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
+                "volumeCurve": {
+                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildRelationship"
                 },
                 "mixingFraction": {
                     "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
