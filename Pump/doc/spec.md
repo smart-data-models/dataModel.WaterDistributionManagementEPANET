@@ -51,13 +51,6 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
         -   Values are resrtricted to: "OPEN","CLOSED","CV"
     -   Optional
 
--   `head` : Dynamic head gain by the pump
-
-    -   Attribute type: `Property`.Text
-    -   Attribute metadata Properties:
-        -   `{{metadata Property name}}` : {{Metadata Property Description}}
-    -   Mandatory if the `power` attribute does not exist
-
 -   `power` : The power supplied by the pump
 
     -   Attribute type: `Property`. Number
@@ -66,7 +59,7 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
     -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `KWT`
     -   Attribute metadata Properties:
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
-    -   Mandatory if the `head` attribute does not exist
+    -   Mandatory if the `headCurve` attribute does not exist
 
 -   `speed` : The relative speed setting of the pump 
 
@@ -112,12 +105,12 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   Mandatory
 
--   `pumpCurve` : The ID label of the pump curve used to describe the relationship between the head delivered by the pump and the flow through the pump
+-   `headCurve` : The ID label of the pump curve used to describe the relationship between the head delivered by the pump and the flow through the pump
 
     -   Attribute type: `Relationship`. Reference to an entity of type `Curve`
     -   Attribute metadata Properties:
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
-    -   Mandatory
+    -   Mandatory if the `power` attribute does not exist
 
 -   `pumpPattern` : The ID label of a time pattern used to control the pump's operation. The multipliers of the pattern are equivalent to speed settings. A multiplier of zero implies that the pump will be shut off during the corresponding time period
 

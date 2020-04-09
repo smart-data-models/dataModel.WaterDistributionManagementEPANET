@@ -64,9 +64,6 @@
                 "initialStatus": {
                     "$ref": "#/definitions/status"
                 },
-                "head": {
-                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
-                },
                 "power": {
                     "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
                 },
@@ -82,7 +79,7 @@
                 "tag": {
                     "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
                 },
-                "pumpCurve": {
+                "headCurve": {
                     "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildRelationship"
                 },
                 "pumpPattern": {
@@ -116,10 +113,7 @@
         "id",
         "type",
         "initialStatus",
-        "head",
         "startsAt",
-        "endsAt",
-        "pumpCurve",
-        "pumpPattern"
+        "endsAt"
     ]
 }
