@@ -1,6 +1,6 @@
 # CONTRIBUTORS
 
-## Smart Water data models
+## Water Network Management data models
 
 ## List of contributors
 ___
