@@ -102,6 +102,12 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   Mandatory
 
+-   `valveCurve`: A relationship to the curve of the `valveType` property. Only required when `valveType` is `GPV`
+    -   Attribute type: `Relationship`. Reference to an entity of type `Curve`
+    -   Attribute metadata Properties:
+        -   `{{metadata Property name}}` : {{Metadata Property Description}}
+    -   Optional
+
 
 **Note**: JSON Schemas are intended to capture the data type and associated
 constraints of the different Attributes, regardless their final representation
