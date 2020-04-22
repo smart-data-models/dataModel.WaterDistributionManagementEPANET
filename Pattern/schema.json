@@ -18,6 +18,9 @@
                 "multipliers": {
                     "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
                 },
+                "timeStep": {
+                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
+                },
                 "description": {
                     "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
                 },
@@ -30,6 +33,7 @@
     "required": [
         "id",
         "type",
-        "multipliers"
+        "multipliers",
+        "timeStep"
     ]
 }
