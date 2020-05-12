@@ -8,6 +8,11 @@
         "value": [0.5692, 0.4647, 0.4385, 0.3604, 0.3098, 0.3345],
         "unitCode":"C62"
     },
+    "timeStep": {
+        "type": "Property",
+        "value": 3600,
+        "unitCode": "SEC"
+    },
     "description": {
         "type": "Property",
         "value": "Open Text"

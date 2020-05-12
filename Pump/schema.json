@@ -86,7 +86,7 @@
                     "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildRelationship"
                 },
                 "efficCurve": {
-                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
+                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildRelationship"
                 },
                 "energyPrice": {
                     "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildProperty"

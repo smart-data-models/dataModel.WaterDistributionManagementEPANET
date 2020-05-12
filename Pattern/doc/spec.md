@@ -40,6 +40,15 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
         -   `Enumeration` : {{Metadata Property Description}}
     -   Mandatory
 
+-   `timeStep` : The time step used for the multipliers
+    -   Attribute type: `Property`. Number
+    -   Attribute unit: All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code
+    -   Attribute unit Example: `Second`
+    -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `SEC`
+    -   Attribute metadata Properties:
+        -   `{{metadata Property name}}` : {{Metadata Property Description}}
+    -   Mandatory
+
 ### Pattern Entity Relationships
 No defined Relationships for this Entity.
 
