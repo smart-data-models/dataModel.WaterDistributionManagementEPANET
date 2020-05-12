@@ -103,11 +103,13 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   Mandatory if the `power` attribute does not exist
 
+
 -   `efficCurve` : The ID label of the curve that represents the pump's wire-to-water efficiency as a function of flow rate
     -   Attribute type: `Relationship`. Reference to an entity of type `Curve`
     -   Attribute metadata Properties:
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   Optional
+
 
 -   `pumpPattern` : The ID label of a time pattern used to control the pump's operation. The multipliers of the pattern are equivalent to speed settings. A multiplier of zero implies that the pump will be shut off during the corresponding time period
 
