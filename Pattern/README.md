@@ -5,5 +5,5 @@ This entity contains an harmonised description of a generic pattern made for the
 Main files in this directory are:
 
 -   [Pattern Entityschema](schema.json).
--   [Pattern Entity Example](example-normalized-ld).
+-   [Pattern Entity Example](example-normalized-ld.jsonld).
 -   [Pattern Entity Spec](doc/spec.md).
