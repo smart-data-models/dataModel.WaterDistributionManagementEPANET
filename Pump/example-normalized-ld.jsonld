@@ -11,10 +11,6 @@
         "type": "Property",
         "value": "OPEN"
     },
-    "head": {
-        "type": "Property",
-        "value": "curve1"
-    },
     "power": {
         "type": "Property",
         "value": 100,
@@ -37,18 +33,13 @@
         "type": "Property",
         "value": "DMA1"
     },
-    "pumpCurve":{
-        "type": "Relationship",
-        "object": "urn:ngsi-ld:Curve:fAM-8ca3-4533-a2eb-12015"
-    },
     "pumpPattern":{
         "type": "Relationship",
         "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
     },
     "efficCurve":{
-        "type": "Property",
-        "value": 0.9,
-        "unitCode": "C62"
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Curve:fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
     },
     "energyPrice":{
         "type": "Property",

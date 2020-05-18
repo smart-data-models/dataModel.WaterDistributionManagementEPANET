@@ -6,5 +6,5 @@ This entity contains a harmonised description of a generic pump made for the Wat
 Main files in this directory are:
 
 -   [Pump Entity schema](schema.json).
--   [Pump Entity Example](example-normalized-ld).
+-   [Pump Entity Example](example-normalized-ld.jsonld).
 -   [Pump Entity Spec](doc/spec.md).

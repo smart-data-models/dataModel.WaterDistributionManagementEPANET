@@ -120,11 +120,9 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
     -   Values Restricted to :  "MIXED", "2COMP", "FIFO" and "LIFO"
     -   Mandatory
 
--   `volumCurve` : The ID label of a curve used to describe the relation between tank volume and water level
-    -   Attribute type: `Property`. Number
+-   `volumeCurve` : The ID label of a curve used to describe the relation between tank volume and water level
+    -   Attribute type: `Relationship`. Reference to an entity of type `Curve`
     -   Attribute unit: All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code
-    -   Attribute unit Example: `cubic metre`
-    -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `MTQ`
     -   Attribute metadata Properties:
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   Optional

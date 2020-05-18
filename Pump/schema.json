@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/schema#",
-    "$id": "https://fiware.github.io/data-models/specs/WaterNetwork/Pump/schema.json",
+    "$id": "https://smart-data-models.github.io/data-models/specs/WaterNetwork/Pump/schema.json",
     "title": "WaterNetwork - Pump",
     "description": "This entity contains a harmonised description of a generic pump made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.",
     "type": "object",
@@ -64,9 +64,6 @@
                 "initialStatus": {
                     "$ref": "#/definitions/status"
                 },
-                "head": {
-                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
-                },
                 "power": {
                     "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
                 },
@@ -82,14 +79,14 @@
                 "tag": {
                     "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
                 },
-                "pumpCurve": {
+                "headCurve": {
                     "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildRelationship"
                 },
                 "pumpPattern": {
                     "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildRelationship"
                 },
                 "efficCurve": {
-                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
+                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildRelationship"
                 },
                 "energyPrice": {
                     "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
@@ -116,10 +113,7 @@
         "id",
         "type",
         "initialStatus",
-        "head",
         "startsAt",
-        "endsAt",
-        "pumpCurve",
-        "pumpPattern"
+        "endsAt"
     ]
 }

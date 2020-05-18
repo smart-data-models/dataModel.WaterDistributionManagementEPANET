@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/schema#",
-    "$id": "https://fiware.github.io/data-models/specs/WaterNetwork/Valve/schema.json",
+    "$id": "https://smart-data-models.github.io/data-models/specs/WaterNetwork/Valve/schema.json",
     "title": "WaterNetwork - Valve",
     "description": "This entity contains a harmonised description of a generic Valve made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.",
     "type": "object",
@@ -83,6 +83,35 @@
                 "modifiedAt": {
                     "type": "string",
                     "format": "date-time"
+                },
+                "valveCurve": {
+                    "type": "object",
+                    "properties": {
+                        "type": {
+                            "type": "string",
+                            "enum": [
+                                "Relationship"
+                            ]
+                        },
+                        "object": {
+                            "type": [
+                                "string"
+                            ],
+                            "format": "uri"
+                        },
+                        "createdAt": {
+                            "type": "string",
+                            "format": "date-time"
+                        },
+                        "observedAt": {
+                            "type": "string",
+                            "format": "date-time"
+                        },
+                        "modifiedAt": {
+                            "type": "string",
+                            "format": "date-time"
+                        }
+                    }
                 }
             },
             "required": [

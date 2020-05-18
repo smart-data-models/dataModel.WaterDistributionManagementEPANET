@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/schema#",
-    "$id": "https://fiware.github.io/data-models/specs/WaterNetwork/Reservoir/schema.json",
+    "$id": "https://smart-data-models.github.io/data-models/specs/WaterNetwork/Reservoir/schema.json",
     "title": "WaterNetwork - reservoir",
     "description": "This entity contains a harmonised description of a generic Reservoir made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.",
     "type": "object",

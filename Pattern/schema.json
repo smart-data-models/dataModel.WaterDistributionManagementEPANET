@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/schema#",
-    "$id": "https://fiware.github.io/data-models/specs/WaterNetwork/Pattern/schema.json",
+    "$id": "https://smart-data-models.github.io/data-models/specs/WaterNetwork/Pattern/schema.json",
     "title": "WaterNetwork - Pattern",
     "description": "This entity contains a harmonised description of a generic pattern made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.",
     "type": "object",
@@ -18,6 +18,9 @@
                 "multipliers": {
                     "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
                 },
+                "timeStep": {
+                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
+                },
                 "description": {
                     "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
                 },
@@ -30,6 +33,7 @@
     "required": [
         "id",
         "type",
-        "multipliers"
+        "multipliers",
+        "timeStep"
     ]
 }
