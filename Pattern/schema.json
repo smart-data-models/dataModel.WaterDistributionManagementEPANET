@@ -21,6 +21,9 @@
                 "timeStep": {
                     "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
                 },
+                "startTime": {
+                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
+                },
                 "description": {
                     "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
                 },
@@ -34,6 +37,7 @@
         "id",
         "type",
         "multipliers",
-        "timeStep"
+        "timeStep",
+        "startTime"
     ]
 }

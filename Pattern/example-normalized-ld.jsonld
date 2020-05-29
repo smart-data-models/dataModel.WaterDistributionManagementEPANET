@@ -17,6 +17,10 @@
         "type": "Property",
         "value": "Open Text"
     },
+    "startTime": {
+        "type": "Property",
+        "value": "00:00"
+    },
     "tag": {
         "type": "Property",
         "value": "DMA1"
