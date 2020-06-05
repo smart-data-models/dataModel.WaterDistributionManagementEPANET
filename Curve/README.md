@@ -6,5 +6,6 @@ This entity contains an harmonised description of a generic curve made for the W
 Main files in this directory are:
 
 -   [Curve Entity schema](schema.json).
--   [Curve Entity Example](example-normalized-ld.jsonld).
+-   [Curve Entity NGSI V2 Example](example-normalized.json).
+-   [Curve Entity NGSI-LD Example](example-normalized-ld.jsonld).
 -   [Curve Entity Spec](doc/spec.md).
