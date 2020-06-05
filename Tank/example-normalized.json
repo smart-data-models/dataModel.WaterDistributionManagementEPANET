@@ -1,0 +1,71 @@
+{
+    "id": "1863179e-3968-4493-9167-ee21f880cc02",
+    "type": "Tank",
+    "dateCreated": "2020-03-13T15:42:00Z",
+    "dateModified": "2020-03-13T15:45:00Z",
+    "location": {
+        "type": "geo:json",
+        "value": {
+            "type": "Point",
+            "coordinates": [
+                24.30623,
+                60.07966
+            ]
+        }
+    },
+    "elevation": {
+        "value": 112.9
+    },
+    "initLevel": {
+        "value": 3
+    },
+    "minLevel": {
+        "value": 0
+    },
+    "maxLevel": {
+        "value": 6.75
+    },
+    "minVolume": {
+        "value": 0
+    },
+    "nominalDiameter": {
+        "value": 13.73
+    },
+    "description": {
+        "value": "Free Text"
+    },
+    "initialQuality": {
+        "value": 0.5
+    },
+    "sourceCategory": {
+        "value": {
+            "value": "category1",
+            "sourceType": {
+                "value": "MASS"
+            },
+            "sourceQuality": {
+                "value": 1.2
+            },
+            "sourcePattern": {
+                "type": "Relationship",
+                "value": "fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
+            }
+        }
+    },
+    "mixingModel": {
+        "value": "MIXED"
+    },
+    "volumeCurve": {
+        "type": "Relationship",
+        "value": "fAM-8ca3-4533-a2eb-12015"
+    },
+    "mixingFraction": {
+        "value": 0.7
+    },
+    "bulkReactionCoefficient": {
+        "value": 0.7
+    },
+    "tag": {
+        "value": "DMA1"
+    }
+}

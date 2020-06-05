@@ -1,0 +1,25 @@
+{
+    "id": "fbcb5fc8-8ca3-4533-a2eb-34bc89262190",
+    "type": "Pattern",
+    "dateCreated": "2020-02-20T17:43:00Z",
+    "dateModified": "2020-02-20T17:43:00Z",
+    "multipliers": {
+        "value": [
+            0.5692,
+            0.4647,
+            0.4385,
+            0.3604,
+            0.3098,
+            0.3345
+        ]
+    },
+    "timeStep": {
+        "value": 3600
+    },
+    "description": {
+        "value": "Open Text"
+    },
+    "tag": {
+        "value": "DMA1"
+    }
+}

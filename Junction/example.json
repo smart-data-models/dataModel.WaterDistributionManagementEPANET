@@ -1,0 +1,29 @@
+{
+    "id": "63fe7d79-0d4c-4da9-b7d0-3340efa0656a",
+    "type": "Junction",
+    "dateCreated": "2020-02-20T15:42:00Z",
+    "dateModified": "2020-02-20T15:45:00Z",
+    "location": {
+        "type": "Point",
+        "coordinates": [
+            24.30623,
+            60.07966
+        ]
+    },
+    "elevation": 105.8,
+    "demandCategory": {
+        "value": "agriculture demand",
+        "baseDemand": "1.763868462",
+        "demandPattern": "fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
+    },
+    "sourceCategory": {
+        "value": "CategoryX",
+        "sourceType": "MASS",
+        "sourceQuality": 1.2,
+        "sourcePattern": "fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
+    },
+    "tag": "DMA1",
+    "description": "This entity contains a harmonised description of a Junction",
+    "initialQuality": 0.5,
+    "emitterCoefficient": 0.526
+}

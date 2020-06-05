@@ -1,0 +1,58 @@
+{
+    "id": "63fe7d79-0d4c-4da9-b7d0-3340efa0656a",
+    "type": "Junction",
+    "dateCreated": "2020-02-20T15:42:00Z",
+    "dateModified": "2020-02-20T15:45:00Z",
+    "location": {
+        "type": "geo:json",
+        "value": {
+            "type": "Point",
+            "coordinates": [
+                24.30623,
+                60.07966
+            ]
+        }
+    },
+    "elevation": {
+        "value": 105.8
+    },
+    "demandCategory": {
+        "value": {
+            "value": "agriculture demand",
+            "baseDemand": {
+                "value": "1.763868462"
+            },
+            "demandPattern": {
+                "type": "Relationship",
+                "value": "fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
+            }
+        }
+    },
+    "sourceCategory": {
+        "value": {
+            "value": "CategoryX",
+            "sourceType": {
+                "value": "MASS"
+            },
+            "sourceQuality": {
+                "value": 1.2
+            },
+            "sourcePattern": {
+                "type": "Relationship",
+                "value": "fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
+            }
+        }
+    },
+    "tag": {
+        "value": "DMA1"
+    },
+    "description": {
+        "value": "This entity contains a harmonised description of a Junction"
+    },
+    "initialQuality": {
+        "value": 0.5
+    },
+    "emitterCoefficient": {
+        "value": 0.526
+    }
+}
