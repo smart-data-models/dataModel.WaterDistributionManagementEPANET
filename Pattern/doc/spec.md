@@ -49,6 +49,10 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   Mandatory
 
+-   `startTime` : The time at which the pattern starts
+    -   Attribute type: `Property`. [Time](https://schema.org/Time)
+    -   Mandatory
+
 ### Pattern Entity Relationships
 No defined Relationships for this Entity.
 
