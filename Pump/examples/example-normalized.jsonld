@@ -29,6 +29,16 @@
         "type": "Relationship",
         "object": "urn:ngsi-ld:Reservoir:1863179e-3768-4480-9167-ff21f870dd19"
     },
+    "vertices": {
+        "type": "GeoProperty",
+        "value": {
+            "type": "LineString",
+            "coordinates": [
+                [24.40623, 60.17966],
+                [24.50623, 60.27966]
+            ]
+        }
+    },
     "tag": {
         "type": "Property",
         "value": "DMA1"

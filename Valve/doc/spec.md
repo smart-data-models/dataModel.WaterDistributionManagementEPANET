@@ -85,6 +85,13 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
     -   Attribute metadata Properties:
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   Mandatory
+
+-   `vertices` : Coordinates of all vertices in the valve, ordered from the `startsAt` node to the `endsAt` node and encoded as a GeoJSON `LineString`.
+    -   Attribute type: `GeoProperty`
+    -   Normative References:
+        [https://tools.ietf.org/html/rfc7946](https://tools.ietf.org/html/rfc7946)
+    -   Optional
+
 ### Valve Entity Relationships
 
 -   `startsAt` : The ID of the node on the nominal upstream or inflow side of the valve
