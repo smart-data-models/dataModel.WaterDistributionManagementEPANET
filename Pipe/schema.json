@@ -49,7 +49,14 @@
           "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
         },
         "vertices": {
-          "$ref": "http://geojson.org/schema/Geometry.json#LineString"
+          "oneOf": [
+              {
+                  "$ref": "http://geojson.org/schema/Geometry.json#LineString"
+              },
+              {
+                  "$ref": "http://geojson.org/schema/Geometry.json#Point"
+              }
+          ]                    
         }
       }
     }

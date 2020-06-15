@@ -108,7 +108,7 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   Optional
 
--   `vertices` : Coordinates of all vertices in the pipe, ordered from the `startsAt` node to the `endsAt` node and encoded as a GeoJSON `LineString`.
+-   `vertices` : Coordinates of all vertices in the pipe, ordered from the `startsAt` node to the `endsAt` node and encoded as a GeoJSON `LineString` or `Point`.
     -   Attribute type: `GeoProperty`
     -   Normative References:
         [https://tools.ietf.org/html/rfc7946](https://tools.ietf.org/html/rfc7946)
