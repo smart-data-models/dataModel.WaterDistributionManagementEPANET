@@ -1,0 +1,52 @@
+--- 
+components: 
+  schemas: 
+    Junction: 
+      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/Junction/schema.yaml#/Junction"
+info: 
+  description: |
+    This entity contains an harmonised description of a generic junction made for the Water Network Management domain.
+    This entity is primarily associated with the water network management vertical and related IoT applications.
+
+    Main files in this directory are:
+
+    Junction Entity schema.
+    Junction Entity Example.
+    Junction Entity Spec.
+  title: Junction
+  version: "1.0.0"
+openapi: "3.0.0"
+
+# These paths are merely representative.
+paths: 
+  /ngsi-ld/v1/entities: 
+    get: 
+      description: "Retrieve a set of entities which matches a specific query from an NGSI-LD system"
+      parameters: 
+        - 
+          in: query
+          name: type
+          required: true
+          schema: 
+            enum: 
+              - Junction
+            type: string
+      responses: 
+        ? "200"
+        : 
+          content: 
+            application/ld+json: 
+              examples: 
+                
+                normalized: 
+                  summary: "Normalized NGSI-LD"
+                  value: 
+                    - 
+                      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/Junction/example-normalized-ld.jsonld"
+          description: OK
+      tags: 
+        - ngsi-ld
+tags: 
+  - 
+    description: "NGSI-LD Linked-data Format"
+    name: ngsi-ld
