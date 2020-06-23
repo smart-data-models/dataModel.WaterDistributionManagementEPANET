@@ -32,11 +32,6 @@ paths:
           content: 
             application/ld+json: 
               examples: 
-                keyvalues: 
-                  summary: "Key-Values Pairs"
-                  value: 
-                    - 
-                      $ref: "https://raw.githubusercontent.com/MohamedSadiq102/dataModel.WaterNetworkManagement/master/Curve/example-normalized-ld.jsonld"
                 normalized: 
                   summary: "Normalized NGSI-LD"
                   value: 
