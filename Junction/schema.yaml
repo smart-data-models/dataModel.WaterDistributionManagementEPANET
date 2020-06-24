@@ -1,0 +1,60 @@
+Junction:
+  required:
+    - id
+    - type
+    - location
+    - elevation
+  allOf:
+    - $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/Common
+  type: object
+  description: >-
+    This entity contains a harmonised description of a generic junction made for
+    the Water Network Management domain. This entity is primarily associated
+    with the water network management vertical and related IoT applications.
+  properties:
+    address:
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/address
+    areaServed:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    demandeCategory:
+      x-ngsi:
+        type: Property
+      type: object
+      description: ''
+    description:
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/description
+    elevation:
+      x-ngsi:
+        type: Property
+      type: object
+      description: ''
+    emitterCoefficient:
+      x-ngsi:
+        type: Property
+      type: object
+      description: ''
+    initialQuality:
+      x-ngsi:
+        type: Property
+      type: object
+      description: ''
+    location:
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/location
+    sourceCategory:
+      x-ngsi:
+        type: Property
+      type: object
+      description: ''
+    tag:
+      x-ngsi:
+        type: Property
+      type: object
+      description: ''

@@ -1,0 +1,39 @@
+Pattern:
+  required:
+    - id
+    - type
+    - multipliers
+    - timeStep
+    - startTime
+  allOf:
+    - $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/Common
+  type: object
+  description: >-
+    This entity contains a harmonised description of a generic pattern made for
+    the Water Network Management domain. This entity is primarily associated
+    with the water management vertical and related IoT applications.
+  properties:
+    description:
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/description
+    multipliers:
+      x-ngsi:
+        type: Property
+      type: object
+      description: ''
+    startTime:
+      x-ngsi:
+        type: Property
+      type: object
+      description: ''
+    tag:
+      x-ngsi:
+        type: Property
+      type: object
+      description: ''
+    timeStep:
+      x-ngsi:
+        type: Property
+      type: object
+      description: ''
