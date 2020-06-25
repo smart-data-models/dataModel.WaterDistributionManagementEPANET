@@ -1,15 +1,86 @@
 Valve:
   required:
     - id
+    - type
+    - initialStatus
+    - diameter
+    - valveType
+    - setting
+    - minorLoss
+    - startsAt
+    - endsAt
   allOf:
     - $ref: >-
         https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/Common
   type: object
-  description: |
-    This entity contains an harmonised description of a generic pattern made for the Water Network Management domain.
-    This entity is primarily associated with the water management vertical and related IoT applications.
-    Main files in this directory are:
-    
-    Valve Entity schema.
-    Valve Entity Example.
-    Valve Entity Spec.
+  description: >-
+    This entity contains a harmonised description of a generic Valve made for
+    the Water Network Management domain. This entity is primarily associated
+    with the water management vertical and related IoT applications.
+  properties:
+    createdAt:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/DateTime'
+      type: string
+      description: ''
+      format: date-time
+    diameter:
+      x-ngsi:
+        type: Property
+      type: object
+      description: ''
+    endsAt:
+      x-ngsi:
+        type: Property
+      type: object
+      description: ''
+    initiaStatus:
+      x-ngsi:
+        type: Property
+      type: object
+      description: ''
+    minorLoss:
+      x-ngsi:
+        type: Property
+      type: object
+      description: ''
+    modifiedAt:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/DateTime'
+      type: string
+      description: ''
+      format: date-time
+    observedAt:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/DateTime'
+      type: string
+      description: ''
+      format: date-time
+    setting:
+      x-ngsi:
+        type: Property
+      type: object
+      description: ''
+    startsAt:
+      x-ngsi:
+        type: Property
+      type: object
+      description: ''
+    status:
+      x-ngsi:
+        type: Property
+      type: object
+      description: ''
+    tag:
+      x-ngsi:
+        type: Property
+      type: object
+      description: ''
+    valveType:
+      x-ngsi:
+        type: Property
+      type: object
+      description: ''
