@@ -1,0 +1,46 @@
+--- 
+components: 
+  schemas: 
+    Pipe: 
+      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/Pipe/schema.yaml#/Pipe"
+info: 
+  description: ""
+  title: Pipe
+  version: "1.0.0"
+openapi: "3.0.0"
+
+# These paths are merely representative.
+paths: 
+  /ngsi-ld/v1/entities: 
+    get: 
+      description: >-
+         An entity of type ServiceRequest is an acceptable Open 311 service request.
+         Such entity encompasses all the properties defined by Open 311 at POST
+         Service Request and GET Service Request.
+      parameters: 
+        - 
+          in: query
+          name: type
+          required: true
+          schema: 
+            enum: 
+              - Pipe
+            type: string
+      responses: 
+        ? "200"
+        : 
+          content: 
+            application/ld+json: 
+              examples:
+                normalized: 
+                  summary: "Normalized NGSI-LD"
+                  value: 
+                    - 
+                      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/Pipe/example-normalized-ld.jsonld"
+          description: OK
+      tags: 
+        - ngsi-ld
+tags: 
+  - 
+    description: "NGSI-LD Linked-data Format"
+    name: ngsi-ld
