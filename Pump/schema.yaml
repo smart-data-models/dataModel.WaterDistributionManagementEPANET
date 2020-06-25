@@ -1,15 +1,97 @@
 Pump:
   required:
     - id
+    - type
+    - initialStatus
+    - startsAt
+    - endsAt
   allOf:
     - $ref: >-
         https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/Common
   type: object
-  description: |
-    This entity contains a harmonised description of a generic pump made for the Water Network Management domain.
-    This entity is primarily associated with the water management vertical and related IoT applications.
-
-    Main files in this directory are:
-    Pump Entity schema.
-    Pump Entity Example.
-    Pump Entity Spec.
+  description: >-
+    This entity contains a harmonised description of a generic pump made for the
+    Water Network Management domain. This entity is primarily associated with
+    the water management vertical and related IoT applications.
+  properties:
+    createdAt:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/DateTime'
+      type: string
+      description: ''
+      format: date-time
+    efficCurve:
+      x-ngsi:
+        type: Property
+      type: object
+      description: ''
+    endsAt:
+      x-ngsi:
+        type: Property
+      type: object
+      description: ''
+    energyPattern:
+      x-ngsi:
+        type: Property
+      type: object
+      description: ''
+    energyPrice:
+      x-ngsi:
+        type: Property
+      type: object
+      description: ''
+    headCurve:
+      x-ngsi:
+        type: Property
+      type: object
+      description: ''
+    initialStatus:
+      x-ngsi:
+        type: Property
+      type: object
+      description: ''
+    modifiedAt:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/DateTime'
+      type: string
+      description: ''
+      format: date-time
+    observedAt:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/DateTime'
+      type: string
+      description: ''
+      format: date-time
+    power:
+      x-ngsi:
+        type: Property
+      type: object
+      description: ''
+    pumpPattern:
+      x-ngsi:
+        type: Property
+      type: object
+      description: ''
+    speed:
+      x-ngsi:
+        type: Property
+      type: object
+      description: ''
+    startsAt:
+      x-ngsi:
+        type: Property
+      type: object
+      description: ''
+    status:
+      x-ngsi:
+        type: Property
+      type: object
+      description: ''
+    tag:
+      x-ngsi:
+        type: Property
+      type: object
+      description: ''
