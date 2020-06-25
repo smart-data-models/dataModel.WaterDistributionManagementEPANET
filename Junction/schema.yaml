@@ -17,11 +17,8 @@ Junction:
       $ref: >-
         https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/address
     areaServed:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/Text'
-      type: string
-      description: ''
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/areaServed
     demandeCategory:
       x-ngsi:
         type: Property
