@@ -11,7 +11,7 @@ Pipe:
     - endsAt
   allOf:
     - $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/Common
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/Common
   type: object
   description: >-
     This entity contains a harmonised description of a generic pipe made for the

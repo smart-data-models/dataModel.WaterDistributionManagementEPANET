@@ -2,7 +2,7 @@
 components: 
   schemas: 
     Curve: 
-      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/Curve/schema.yaml#/Curve"
+      $ref: "https://smart-data-models.github.io/dataModel.WaterNetworkManagement/Curve/model.yaml#/Curve"
 info: 
   description: |
     This entity contains an harmonised description of a generic curve made for the Water Network 
@@ -36,7 +36,7 @@ paths:
                   summary: "Normalized NGSI-LD"
                   value: 
                     - 
-                      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/Curve/example-normalized-ld.jsonld"
+                      $ref: "https://smart-data-models.github.io/dataModel.WaterNetworkManagement/Curve/example-normalized-ld.jsonld"
           description: OK
       tags: 
         - ngsi-ld

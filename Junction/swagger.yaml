@@ -2,7 +2,7 @@
 components: 
   schemas: 
     Junction: 
-      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/Junction/schema.yaml#/Junction"
+      $ref: "https://smart-data-models.github.io/dataModel.WaterNetworkManagement/Junction/model.yaml#/Junction"
 info: 
   description: |
     This entity contains an harmonised description of a generic junction made for the Water Network Management domain.
@@ -42,7 +42,7 @@ paths:
                   summary: "Normalized NGSI-LD"
                   value: 
                     - 
-                      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/Junction/example-normalized-ld.jsonld"
+                      $ref: "https://smart-data-models.github.io/dataModel.WaterNetworkManagement/Junction/example-normalized-ld.jsonld"
           description: OK
       tags: 
         - ngsi-ld

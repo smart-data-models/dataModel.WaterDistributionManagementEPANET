@@ -2,7 +2,7 @@
 components: 
   schemas: 
     Pipe: 
-      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/Pipe/schema.yaml#/Pipe"
+      $ref: "https://smart-data-models.github.io/dataModel.WaterNetworkManagement/Pipe/model.yaml#/Pipe"
 info: 
   description: ""
   title: Pipe
@@ -36,7 +36,7 @@ paths:
                   summary: "Normalized NGSI-LD"
                   value: 
                     - 
-                      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/Pipe/example-normalized-ld.jsonld"
+                      $ref: "https://smart-data-models.github.io/dataModel.WaterNetworkManagement/Pipe/example-normalized-ld.jsonld"
           description: OK
       tags: 
         - ngsi-ld

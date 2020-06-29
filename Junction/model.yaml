@@ -6,7 +6,7 @@ Junction:
     - elevation
   allOf:
     - $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/Common
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/Common
   type: object
   description: >-
     This entity contains a harmonised description of a generic junction made for
@@ -15,10 +15,10 @@ Junction:
   properties:
     address:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/address
+        https://smart-data-models.github.io/data-models/schema.org.yaml#/address
     areaServed:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/areaServed
+        https://smart-data-models.github.io/data-models/schema.org.yaml#/areaServed
     demandeCategory:
       x-ngsi:
         type: Property
@@ -26,7 +26,7 @@ Junction:
       description: ''
     description:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/description
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/description
     elevation:
       x-ngsi:
         type: Property
@@ -44,7 +44,7 @@ Junction:
       description: ''
     location:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/location
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/location
     sourceCategory:
       x-ngsi:
         type: Property

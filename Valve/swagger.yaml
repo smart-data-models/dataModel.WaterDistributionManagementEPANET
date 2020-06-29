@@ -2,7 +2,7 @@
 components: 
   schemas: 
     Valve: 
-      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/Valve/schema.yaml#/Valve"
+      $ref: "https://smart-data-models.github.io/dataModel.WaterNetworkManagement/Valve/model.yaml#/Valve"
 info: 
   description: |
     This entity contains an harmonised description of a generic pattern made for the Water Network Management domain.
@@ -41,7 +41,7 @@ paths:
                   summary: "Normalized NGSI-LD"
                   value: 
                     - 
-                      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/Valve/example-normalized-ld.jsonld"
+                      $ref: "https://smart-data-models.github.io/dataModel.WaterNetworkManagement/Valve/example-normalized-ld.jsonld"
           description: OK
       tags: 
         - ngsi-ld

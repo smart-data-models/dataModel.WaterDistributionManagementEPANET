@@ -2,7 +2,7 @@
 components: 
   schemas: 
     Tank: 
-      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/Tank/schema.yaml#/Tank"
+      $ref: "https://smart-data-models.github.io/dataModel.WaterNetworkManagement/Tank/model.yaml#/Tank"
 info: 
   description: |
     This entity contains an harmonised description of a generic pattern made for the Water Network Management domain.
@@ -41,7 +41,7 @@ paths:
                   summary: "Normalized NGSI-LD"
                   value: 
                     - 
-                      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/Tank/example-normalized-ld.jsonld"
+                      $ref: "https://smart-data-models.github.io/dataModel.WaterNetworkManagement/Tank/example-normalized-ld.jsonld"
           description: OK
       tags: 
         - ngsi-ld

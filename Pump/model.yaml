@@ -1,22 +1,18 @@
-Valve:
+Pump:
   required:
     - id
     - type
     - initialStatus
-    - diameter
-    - valveType
-    - setting
-    - minorLoss
     - startsAt
     - endsAt
   allOf:
     - $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/Common
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/Common
   type: object
   description: >-
-    This entity contains a harmonised description of a generic Valve made for
-    the Water Network Management domain. This entity is primarily associated
-    with the water management vertical and related IoT applications.
+    This entity contains a harmonised description of a generic pump made for the
+    Water Network Management domain. This entity is primarily associated with
+    the water management vertical and related IoT applications.
   properties:
     createdAt:
       x-ngsi:
@@ -25,7 +21,7 @@ Valve:
       type: string
       description: ''
       format: date-time
-    diameter:
+    efficCurve:
       x-ngsi:
         type: Property
       type: object
@@ -35,12 +31,22 @@ Valve:
         type: Property
       type: object
       description: ''
-    initiaStatus:
+    energyPattern:
       x-ngsi:
         type: Property
       type: object
       description: ''
-    minorLoss:
+    energyPrice:
+      x-ngsi:
+        type: Property
+      type: object
+      description: ''
+    headCurve:
+      x-ngsi:
+        type: Property
+      type: object
+      description: ''
+    initialStatus:
       x-ngsi:
         type: Property
       type: object
@@ -59,7 +65,17 @@ Valve:
       type: string
       description: ''
       format: date-time
-    setting:
+    power:
+      x-ngsi:
+        type: Property
+      type: object
+      description: ''
+    pumpPattern:
+      x-ngsi:
+        type: Property
+      type: object
+      description: ''
+    speed:
       x-ngsi:
         type: Property
       type: object
@@ -75,11 +91,6 @@ Valve:
       type: object
       description: ''
     tag:
-      x-ngsi:
-        type: Property
-      type: object
-      description: ''
-    valveType:
       x-ngsi:
         type: Property
       type: object
