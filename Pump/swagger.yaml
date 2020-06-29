@@ -42,7 +42,7 @@ paths:
                   summary: "Normalized NGSI-LD"
                   value: 
                     - 
-                      $ref: "https://smart-data-models.github.io/dataModel.WaterNetworkManagement/Pump/example-normalized-ld.jsonld"
+                      $ref: "https://smart-data-models.github.io/dataModel.WaterNetworkManagement/Pump/examples/example-normalized-ld.jsonld"
           description: OK
       tags: 
         - ngsi-ld
