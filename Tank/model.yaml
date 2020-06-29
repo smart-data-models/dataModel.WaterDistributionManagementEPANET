@@ -1,9 +1,14 @@
+---
+# Copyright (c) 2020 Contributors to Smart-Data-Models
+# see https://github.com/smart-data-models/dataModel.WaterNetworkManagement
+
 Tank:
   required:
     - id
   allOf:
     - $ref: >-
-        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/Common
+        https://sma
+        rt-data-models.github.io/data-models/ngsi-ld.yaml#/Common
   type: object
   description: |
     This entity contains an harmonised description of a generic pattern made for the Water Network Management domain.
