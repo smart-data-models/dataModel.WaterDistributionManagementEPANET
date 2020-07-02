@@ -7,8 +7,7 @@ Tank:
     - id
   allOf:
     - $ref: >-
-        https://sma
-        rt-data-models.github.io/data-models/ngsi-ld.yaml#/Common
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/Common
   type: object
   description: |
     This entity contains an harmonised description of a generic pattern made for the Water Network Management domain.
