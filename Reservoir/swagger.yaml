@@ -6,7 +6,7 @@
 components: 
   schemas: 
     Reservoir: 
-      $ref: "https://raw.githubusercontent.com/MohamedSadiq102/dataModel.WaterNetworkManagement/Reservoir/model.yaml#/Reservoir"
+      $ref: "https://smart-data-models.github.io/dataModel.WaterNetworkManagement/Reservoir/model.yaml#/Reservoir"
 info: 
   description: |
     This entity contains an harmonised description of a generic pattern made for the Water Network Management domain.
