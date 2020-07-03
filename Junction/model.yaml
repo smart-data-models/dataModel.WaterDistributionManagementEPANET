@@ -12,7 +12,7 @@ Junction:
     - $ref: >-
         https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/Common
   type: object
-  description: >-
+  description: |
     This entity contains a harmonised description of a generic junction made for
     the Water Network Management domain. This entity is primarily associated
     with the water network management vertical and related IoT applications.
