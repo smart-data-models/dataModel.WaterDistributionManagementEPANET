@@ -26,39 +26,48 @@ Pipe:
       x-ngsi:
         type: Property
       type: object
-      description: ''
+      description: |
+        The bulk reaction coefficient for the pipe. Use a positive value for growth and a negative value for decay
     createdAt:
       x-ngsi:
         type: Property
         model: 'https://schema.org/DateTime'
       type: string
-      description: ''
+      description: |
+        Entity's creation timestamp.
       format: date-time
     diameter:
       x-ngsi:
         type: Property
       type: object
-      description: ''
+      description: |
+        The pipe diameter
     endsAt:
       x-ngsi:
-        type: Property
+        type: Relationship
       type: object
-      description: ''
+      description: |
+        The ID of the node where the pipe ends.
+        Reference to an entity of type `Node (Reservoir, Junction, Tank)`
     initialStatus:
       x-ngsi:
         type: Property
       type: object
-      description: ''
+      description: |
+        Determines whether the pipe is initially open, closed, or contains a check valve.
+        Values are restricted to: "OPEN","CLOSED","CV"
     length:
       x-ngsi:
         type: Property
       type: object
-      description: ''
+      description: |
+        The actual length of the pipe
     minorLoss:
       x-ngsi:
         type: Property
       type: object
-      description: ''
+      description: |
+        Unitless minor loss coefficient associated with bends, fittings, etc.
     modifiedAt:
       x-ngsi:
         type: Property
@@ -77,24 +86,33 @@ Pipe:
       x-ngsi:
         type: Property
       type: object
-      description: ''
+      description: |
+        he roughness coefficient of the pipe. It is unitless for Hazen-Williams or Chezy-Manning roughness and has 
+        units of millifeet (mm) for Darcy-Weisbach roughness.
+        All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code
     startsAt:
       x-ngsi:
-        type: Property
+        type: Relationship
       type: object
-      description: ''
+      description: |
+        The ID of the node where the pipe begins.
+        Reference to an entity of type `Node (Reservoir, Junction, Tank)`
     status:
       x-ngsi:
         type: Property
       type: object
-      description: ''
+      description: |
+        Dynamic state of the pipe.
+        Values are restricted to: "OPEN","CLOSED","CV"
     tag:
       x-ngsi:
         type: Property
       type: object
-      description: ''
+      description: |
+        An optional text string used to assign the pipe to a category, perhaps one based on age or material
     wallCoeff:
       x-ngsi:
         type: Property
       type: object
-      description: ''
+      description: |
+        The wall reaction coefficient for the pipe. Use a positive value for growth and a negative value for decay.

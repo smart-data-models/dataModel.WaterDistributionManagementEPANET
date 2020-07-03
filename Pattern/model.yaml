@@ -25,19 +25,23 @@ Pattern:
       x-ngsi:
         type: Property
       type: object
-      description: ''
+      description: |
+        Multipliers define how some base quantity (e.g., demand) is adjusted for each time period
     startTime:
       x-ngsi:
         type: Property
       type: object
-      description: ''
+      description: |
+        The time at which the pattern starts
     tag:
       x-ngsi:
         type: Property
       type: object
-      description: ''
+      description: |
+        An optional text string used to assign the junction to a category, such as a pressure zone
     timeStep:
       x-ngsi:
         type: Property
       type: object
-      description: ''
+      description: |
+        The time step used for the multipliers.

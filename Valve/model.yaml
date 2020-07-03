@@ -27,28 +27,37 @@ Valve:
         type: Property
         model: 'https://schema.org/DateTime'
       type: string
-      description: ''
+      description: Entity's creation timestamp
       format: date-time
     diameter:
       x-ngsi:
         type: Property
       type: object
-      description: ''
+      description: |
+        The valve diameter. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code
     endsAt:
       x-ngsi:
-        type: Property
+        type: Relationship
       type: object
-      description: ''
-    initiaStatus:
+      description: |
+        The ID of the node on the nominal downstream or discharge side of the valve.
+        Reference to an entity of type `Node (Reservoir, Junction, Tank)`
+    initialStatus:
       x-ngsi:
         type: Property
       type: object
-      description: ''
+      description: |
+        Valve status at the start of the simulation. If set to OPEN or CLOSED then the control setting of the valve is ignored and the valve behaves as an open or closed link, respectively. 
+        If set to NONE, then the valve will behave as intended.
+        Values are resrtricted to: "OPEN","CLOSED","NONE".
+
     minorLoss:
       x-ngsi:
         type: Property
       type: object
-      description: ''
+      description: |
+        Unitless minor loss coefficient that applies when the valve is completely opened.
+         All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.
     modifiedAt:
       x-ngsi:
         type: Property
@@ -67,24 +76,32 @@ Valve:
       x-ngsi:
         type: Property
       type: object
-      description: ''
+      description: |
+        A parameter that describes the valve's operational setting.
+        All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code
     startsAt:
       x-ngsi:
-        type: Property
+        type: Relationship
       type: object
-      description: ''
+      description: |
+        The ID of the node on the nominal upstream or inflow side of the valve.
+        Reference to an entity of type `Node (Reservoir, Junction, Tank)`
     status:
       x-ngsi:
         type: Property
       type: object
-      description: ''
+      description: |
+         Dynamic state of the valve.
+         Values are resrtricted to: "OPEN","CLOSED","NONE"
     tag:
       x-ngsi:
         type: Property
       type: object
-      description: ''
+      description: |
+         An optional text string used to assign the valve to a category, perhaps based on type or location.
     valveType:
       x-ngsi:
         type: Property
       type: object
-      description: ''
+      description: |
+        The valve type. Values are resrtricted to: "PRV", "PSV","PBV","FCV","TCV" and"GPV"

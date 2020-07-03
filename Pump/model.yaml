@@ -23,38 +23,49 @@ Pump:
         type: Property
         model: 'https://schema.org/DateTime'
       type: string
-      description: ''
+      description: |
+        Entity's creation timestamp.
       format: date-time
     efficCurve:
       x-ngsi:
-        type: Property
+        type: Relationship
       type: object
-      description: ''
+      description: |
+        The ID label of the curve that represents the pump's wire-to-water efficiency as a function of flow rate
     endsAt:
       x-ngsi:
-        type: Property
+        type: Relationship
       type: object
-      description: ''
+      description: |
+        The ID of the node on the discharge side of the pump
+        Reference to an entity of type `Node (Reservoir, Junction, Tank)`
     energyPattern:
       x-ngsi:
-        type: Property
+        type: Relationship
       type: object
-      description: ''
+      description: |
+        The ID label of the time pattern used to describe the variation in energy price throughout the day
     energyPrice:
       x-ngsi:
         type: Property
       type: object
-      description: ''
+      description: |
+        The average or nominal price of energy in monetary units per kw-hr.
+        All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code
     headCurve:
       x-ngsi:
-        type: Property
+        type: Relationship
       type: object
-      description: ''
+      description: |
+        The ID label of the pump curve used to describe the relationship between the head delivered by 
+        the pump and the flow through the pump
     initialStatus:
       x-ngsi:
         type: Property
       type: object
-      description: ''
+      description: |
+         State of the pump (open or closed) at the start of the simulation period.
+         Values are restricted to: "OPEN","CLOSED","CV"
     modifiedAt:
       x-ngsi:
         type: Property
@@ -73,29 +84,39 @@ Pump:
       x-ngsi:
         type: Property
       type: object
-      description: ''
+      description: |
+        The power supplied by the pump.
+        All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code
     pumpPattern:
       x-ngsi:
-        type: Property
+        type: Relationship
       type: object
-      description: ''
+      description: |
+        The ID label of a time pattern used to control the pump's operation. The multipliers of the pattern are equivalent to speed settings. A multiplier of zero implies that the pump will be 
+        shut off during the corresponding time period
     speed:
       x-ngsi:
         type: Property
       type: object
-      description: ''
+      description: |
+        The relative speed setting of the pump.
     startsAt:
       x-ngsi:
-        type: Property
+        type: Relationship
       type: object
-      description: ''
+      description: |
+        The ID of the node on the suction side of the pump.
+         Reference to an entity of type `Node (Reservoir, Junction, Tank)`
     status:
       x-ngsi:
         type: Property
       type: object
-      description: ''
+      description: |
+        Dynamic state of the pump. 
+        Values are restricted to: "OPEN","CLOSED","CV" 
     tag:
       x-ngsi:
         type: Property
       type: object
-      description: ''
+      description: |
+        An optional text string used to assign the pump to a category, perhaps based on age, size or location
