@@ -79,15 +79,6 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   Mandatory
 
--   `initLevel` : The height of the water surface above the bottom elevation of the tank at the start of the simulation
-    -   Attribute type: `Property`. Number
-    -   Attribute unit: All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code
-    -   Attribute unit Example: `Metre`
-    -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `MTR`
-    -   Attribute metadata Properties:
-        -   `{{metadata Property name}}` : {{Metadata Property Description}}
-    -   Mandatory
-
 -   `maxLevel` : The height of the water surface above the bottom elevation of the tank at the start of the simulation
     -   Attribute type: `Property`. Number
     -   Attribute unit: All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code
@@ -140,6 +131,16 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
 
 -   `sourcePattern` : A relationship to the pattern of the `sourceCategory` property
     -   Attribute type: `Relationship`. Reference to an entity of type `Pattern`
+    -   Attribute metadata Properties:
+        -   `{{metadata Property name}}` : {{Metadata Property Description}}
+    -   Optional
+-   `hasInlet` :  A relationship indicating the water inlet points of the `Tank`. This relationhip is neither the inverse or the equivalent of `startsAt` or `endsAt` relationships of the `ARC(Pipe,Pump,Valve)` models. It depends on the water flow direction in the Water Network.
+    -   Attribute type: `Relationship`. Reference to an entity of type `Pipe` or `Valve`
+    -   Attribute metadata Properties:
+        -   `{{metadata Property name}}` : {{Metadata Property Description}}
+    -   Optional
+-   `hasOutlet` :  A relationship indicating the water outlet points of the `Tank`. This relationhip is neither the inverse or the equivalent of `startsAt` or `endsAt` relationships of the `ARC(Pipe,Pump,Valve)` models. It depends on the water flow direction in the Water Network.
+    -   Attribute type: `Relationship`. Reference to an entity of type `Pipe` or `Valve`
     -   Attribute metadata Properties:
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   Optional

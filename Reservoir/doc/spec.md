@@ -100,6 +100,16 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
     -   Attribute metadata Properties:
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   Optional
+-   `hasInlet` :  A relationship indicating the water inlet points of the `Reservoir`. This relationhip is neither the inverse or the equivalent of `startsAt` or `endsAt` relationships of the `ARC(Pipe,Pump,Valve)` models. It depends on the water flow direction in the Water Network.
+    -   Attribute type: `Relationship`. Reference to an entity of type `Pipe` or `Valve`
+    -   Attribute metadata Properties:
+        -   `{{metadata Property name}}` : {{Metadata Property Description}}
+    -   Optional
+-   `hasOutlet` :  A relationship indicating the water outlet points of the `Reservoir`. This relationhip is neither the inverse or the equivalent of `startsAt` or `endsAt` relationships of the `ARC(Pipe,Pump,Valve)` models. It depends on the water flow direction in the Water Network.
+    -   Attribute type: `Relationship`. Reference to an entity of type `Pipe` or `Valve`
+    -   Attribute metadata Properties:
+        -   `{{metadata Property name}}` : {{Metadata Property Description}}
+    -   Optional
 **Note**: JSON Schemas are intended to capture the data type and associated
 constraints of the different Attributes, regardless their final representation
 format in NGSI(v2, LD).
