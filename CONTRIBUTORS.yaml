@@ -1,37 +1,37 @@
 description: This is a compilation list of all CONTRIBUTORS across different objects (data models) alphabetically ordered. All fields are non mandatory
 contributors:
 -
- name: -
- surname:  Abid
- mail:  Ahmed
- organization:  [ahmed.abid@eglobalmark.com](ahmed.abid@eglobalmark.com)
- project:  [Easy Global Market](http://www.eglobalmark.com) for the [FIWARE4water](https://www.fiware4water.eu/) project
+ name: Ahmed
+ surname: Abid
+ mail: ahmed.abid@eglobalmark.com
+ organization: Easy Global Market. http://www.eglobalmark.com
+ project: FIWARE4water. https://www.fiware4water.eu/
  comments: 
 -
- name: - Le
- surname:  Gall
- mail:  Franck
- organization:   [franck.le-gall@eglobalmark.com](mailto:franck.le-gall@eglobalmark.com)
- project:   [Easy Global Market](http://www.eglobalmark.com) for the [FIWARE4water](https://www.fiware4water.eu/) project
+ name: Franck
+ surname: Le Gall
+ mail: franck.le-gall@eglobalmark.com
+ organization: Easy Global Market. http://www.eglobalmark.com
+ project: FIWARE4water. https://www.fiware4water.eu
  comments: 
 -
- name: -
- surname:  Orihuela
- mail:  Benoit
- organization:  [benoit.orihuela@eglobalmark.com](benoit.orihuela@eglobalmark.com)
- project:  [Easy Global Market](http://www.eglobalmark.com)  for the [FIWARE4water](https://www.fiware4water.eu/) project
+ name: Benoit
+ surname: Orihuela
+ mail: benoit.orihuela@eglobalmark.com
+ organization: Easy Global Market. http://www.eglobalmark.com
+ project: FIWARE4water. https://www.fiware4water.eu
  comments: 
 -
- name: -
- surname:  Salomons
- mail:  Elad
- organization:   [selad@optiwater.com](mailto:selad@optiwater.com)
- project:   [Optiwater](http://www.optiwater.com/) for the [FIWARE4water](https://www.fiware4water.eu/) project
+ name: Elad
+ surname: Salomons
+ mail: selad@optiwater.com
+ organization:  Optiwater. http://www.optiwater.com/
+ project: FIWARE4water. https://www.fiware4water.eu
  comments: 
 -
- name: -
- surname:  Sweetapple
- mail:  Chris
- organization:  [C.Sweetapple@exeter.ac.uk](mailto:C.Sweetapple@exeter.ac.uk)
- project:  [University of Exeter](https://www.exeter.ac.uk/) for the [FIWARE4water](https://www.fiware4water.eu/) project
+ name: Chris
+ surname: Sweetapple
+ mail: C.Sweetapple@exeter.ac.uk
+ organization:  [University of Exeter](https://www.exeter.ac.uk/)
+ project:  FIWARE4water. https://www.fiware4water.eu
  comments: 
