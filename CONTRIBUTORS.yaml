@@ -1,0 +1,37 @@
+description: This is a compilation list of all CONTRIBUTORS across different objects (data models) alphabetically ordered. All fields are non mandatory
+contributors:
+-
+ name: -
+ surname:  Abid
+ mail:  Ahmed
+ organization:  [ahmed.abid@eglobalmark.com](ahmed.abid@eglobalmark.com)
+ project:  [Easy Global Market](http://www.eglobalmark.com) for the [FIWARE4water](https://www.fiware4water.eu/) project
+ comments: 
+-
+ name: - Le
+ surname:  Gall
+ mail:  Franck
+ organization:   [franck.le-gall@eglobalmark.com](mailto:franck.le-gall@eglobalmark.com)
+ project:   [Easy Global Market](http://www.eglobalmark.com) for the [FIWARE4water](https://www.fiware4water.eu/) project
+ comments: 
+-
+ name: -
+ surname:  Orihuela
+ mail:  Benoit
+ organization:  [benoit.orihuela@eglobalmark.com](benoit.orihuela@eglobalmark.com)
+ project:  [Easy Global Market](http://www.eglobalmark.com)  for the [FIWARE4water](https://www.fiware4water.eu/) project
+ comments: 
+-
+ name: -
+ surname:  Salomons
+ mail:  Elad
+ organization:   [selad@optiwater.com](mailto:selad@optiwater.com)
+ project:   [Optiwater](http://www.optiwater.com/) for the [FIWARE4water](https://www.fiware4water.eu/) project
+ comments: 
+-
+ name: -
+ surname:  Sweetapple
+ mail:  Chris
+ organization:  [C.Sweetapple@exeter.ac.uk](mailto:C.Sweetapple@exeter.ac.uk)
+ project:  [University of Exeter](https://www.exeter.ac.uk/) for the [FIWARE4water](https://www.fiware4water.eu/) project
+ comments: 
