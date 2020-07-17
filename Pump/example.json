@@ -1,8 +1,6 @@
 {
     "id": "85zhnf58-0d4c-h4g854g-b7d0-3310klm",
     "type": "Pump",
-    "dateCreated": "2020-03-02T15:42:00Z",
-    "dateModified": "2020-03-02T15:45:00Z",
     "initialStatus": "OPEN",
     "status": "OPEN",
     "power": 100,
