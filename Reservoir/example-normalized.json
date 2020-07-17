@@ -1,8 +1,6 @@
 {
     "id": "1863179e-3768-4480-9167-ff21f870dd19",
     "type": "Reservoir",
-    "dateCreated": "2020-03-02T15:42:00Z",
-    "dateModified": "2020-03-02T15:45:00Z",
     "location": {
         "type": "geo:json",
         "value": {
