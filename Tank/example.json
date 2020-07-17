@@ -1,8 +1,6 @@
 {
     "id": "1863179e-3968-4493-9167-ee21f880cc02",
     "type": "Tank",
-    "dateCreated": "2020-03-13T15:42:00Z",
-    "dateModified": "2020-03-13T15:45:00Z",
     "location": {
         "type": "Point",
         "coordinates": [
