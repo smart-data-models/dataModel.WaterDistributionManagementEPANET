@@ -1,8 +1,6 @@
 {
     "id": "87fe7d79-0d4c-4da9-b7d0-3340efa0656awytsd",
     "type": "Valve",
-    "dateCreated": "2020-03-02T15:42:00Z",
-    "dateModified": "2020-03-02T15:45:00Z",
     "initiaStatus": "OPEN",
     "status": "OPEN",
     "diameter": 203.20,
