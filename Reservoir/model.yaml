@@ -10,9 +10,66 @@ Reservoir:
         https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/Common
   type: object
   description: |
-    This entity contains an harmonised description of a generic pattern made for the Water Network Management domain.
+    This entity contains an harmonised description of a Reservoir made for the Water Network Management domain.
     This entity is primarily associated with the water management vertical and related IoT applications.
     Main files in this directory are:
     Reservoir Entity schema.
     Reservoir Entity Example.
     Reservoir Entity Spec.
+ properties:
+    address:
+      "$ref": https://smart-data-models.github.io/data-models/schema.org.yaml#/address
+    demandCategory:
+      description: ''
+      x-ngsi:
+        type: Property
+        model:
+      type: number,string, array
+    description:
+      description: ''
+      x-ngsi:
+        type: Property
+        model:
+      type: number,string, array
+    elevation:
+      description: ''
+      x-ngsi:
+        type: Property
+        model:
+      type: number,string, array
+    emitterCoefficient:
+      description: ''
+      x-ngsi:
+        type: Property
+        model:
+      type: number,string, array
+    headPattern:
+      description: ''
+      x-ngsi:
+        type: Property
+        model:
+      type: number,string, array
+    initialQuality:
+      description: ''
+      x-ngsi:
+        type: Property
+        model:
+      type: number,string, array
+    reservoirHead:
+      description: ''
+      x-ngsi:
+        type: Property
+        model:
+      type: number,string, array
+    sourceCategory:
+      description: ''
+      x-ngsi:
+        type: Property
+        model:
+      type: number,string, array
+    tag:
+      description: ''
+      x-ngsi:
+        type: Property
+        model:
+      type: number,string, array
