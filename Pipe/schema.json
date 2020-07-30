@@ -51,7 +51,7 @@
         "vertices": {
           "oneOf": [
               {
-                  "$ref": "http://geojson.org/schema/Geometry.json#LineString"
+                  "$ref": "http://geojson.org/schema/Geometry.json#MultiPoint"
               },
               {
                   "$ref": "http://geojson.org/schema/Geometry.json#Point"

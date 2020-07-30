@@ -50,7 +50,7 @@
     "vertices": {
         "type": "GeoProperty",
         "value": {
-            "type": "LineString",
+            "type": "MultiPoint",
             "coordinates": [
                 [24.40623, 60.17966],
                 [24.50623, 60.27966]
