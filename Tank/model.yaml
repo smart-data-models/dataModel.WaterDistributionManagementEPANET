@@ -148,3 +148,15 @@ Tank:
       type: number, string, array
       description: ''
     volumeCurve:
+      description: ''
+      x-ngsi:
+        type: Relationship
+      type: object
+      properties:
+        type:
+          type: string
+        object:
+          type: string
+          format: uri
+
+
