@@ -18,6 +18,7 @@ Tank:
     Tank Entity Spec.
   properties:
     address:
+      "$ref": 'https://smart-data-models.github.io/data-models/schema.org.yaml#/address'
     baseDemand:
       x-ngsi:
         type: Property
