@@ -16,3 +16,134 @@ Tank:
     Tank Entity schema.
     Tank Entity Example.
     Tank Entity Spec.
+  properties:
+    address:
+    baseDemand:
+      x-ngsi:
+        type: Property
+      type: object
+      description: ''
+      properties:
+        type:
+          type: string
+        value:
+          type: number, string
+        unitCode:
+          type: string
+          baseDemand:
+            type: object
+            properties:
+              type:
+                type: string
+              object:
+                type:
+                  type: string
+                  format: uri
+    bulkReactionCoefficient:
+      x-ngsi:
+        type: Property
+      type: number, string, array
+      description: ''
+    description:
+      x-ngsi:
+        type: Property
+      type: number, string, array
+      description: ''
+    elevation:
+      x-ngsi:
+        type: Property
+      type: number, string, array
+      description: ''
+    initLevel:
+      x-ngsi:
+        type: Property
+      type: number, string, array
+      description: ''
+    initialQuality:
+      x-ngsi:
+        type: Property
+      type: number, string, array
+      description: ''
+    maxLevel:
+      x-ngsi:
+        type: Property
+      type: number, string, array
+      description: ''
+    minLevel:
+      x-ngsi:
+        type: Property
+      type: number, string, array
+      description: ''
+    minVolume:
+      x-ngsi:
+        type: Property
+      type: number, string, array
+      description: ''
+    mixingFraction:
+      x-ngsi:
+        type: Property
+      type: number, string, array
+      description: ''
+    mixingModel:
+      description: ''
+      x-ngsi:
+        type: Property
+      type: object
+      properties:
+        type:
+          type: string
+        value:
+          type: number, string, array
+          enum:
+            - MIXED
+            - 2COMP
+            - FIFO
+            - LIFO
+        unitCode:
+          type: string
+    nominalDiameter:
+      x-ngsi:
+        type: Property
+      type: number, string, array
+      description: ''
+    sourceCategory:
+      description: ''
+      x-ngsi:
+        type: Property
+      type: object
+      properties:
+        type:
+          type: string
+        value:
+          type: number, string
+        unitCode:
+          type: string
+        sourceType:
+          type: object
+          properties:
+            type:
+              type: string
+            value:
+              type: number, string
+              enum:
+                - CONCEN
+                - MASS
+                - FLOWPACED
+                - SETPOINT
+            unitCode:
+              type: string
+        sourceQuality:
+          type: object
+          properties:
+            type:
+              type: string
+            value:
+              type: number, string
+            unitCode:
+              type: string
+    tag:
+      x-ngsi:
+        type: Property
+      type: number, string, array
+      description: ''
+    volumeCurve:
