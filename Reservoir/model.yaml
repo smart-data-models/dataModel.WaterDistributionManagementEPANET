@@ -25,34 +25,34 @@ Reservoir:
         type: Property
         model:
       type: object
-        properties:
-          type:
-            type: string
-          value:
-            type: number, string
-          unitCode:
-            type: string
-          baseDemand:
-            type: object
-              properties:
-                type:
-                  type: string
-                value:
-                  type: number, string
-                unitCode:
-                  type: string
-          demandPattern:
-            description: ''
-              x-ngsi:
-                type: Relationship
-                model:
-              type: object
-                properties:
-                  type:
-                    type: string
-                  object:
-                    type: string
-                    format: uri
+      properties:
+        type:
+          type: string
+        value:
+          type: number, string
+        unitCode:
+          type: string
+        baseDemand:
+          type: object
+          properties:
+            type:
+              type: string
+            value:
+              type: number, string
+            unitCode:
+              type: string
+        demandPattern:
+          description: ''
+          x-ngsi:
+            type: Relationship
+            model:
+          type: object
+          properties:
+            type:
+              type: string
+            object:
+              type: string
+              format: uri
     description:
       description: ''
       x-ngsi:
