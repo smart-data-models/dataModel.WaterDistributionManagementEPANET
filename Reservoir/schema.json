@@ -195,6 +195,12 @@
                 },
                 "headPattern": {
                     "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildRelationship"
+                },
+                "hasInlet": {
+                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildRelationship"
+                },
+                "hasOutlet": {
+                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildRelationship"
                 }
             }
         }

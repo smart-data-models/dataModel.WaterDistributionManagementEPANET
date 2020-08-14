@@ -256,6 +256,12 @@
                 },
                 "mixingFraction": {
                     "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
+                },
+                "hasInlet": {
+                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildRelationship"
+                },
+                "hasOutlet": {
+                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildRelationship"
                 }
             }
         }
