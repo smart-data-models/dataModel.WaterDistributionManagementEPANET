@@ -22,13 +22,6 @@ Valve:
     the Water Network Management domain. This entity is primarily associated
     with the water management vertical and related IoT applications.
   properties:
-    createdAt:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/DateTime'
-      type: string
-      description: Entity's creation timestamp
-      format: date-time
     diameter:
       x-ngsi:
         type: Property
@@ -50,7 +43,6 @@ Valve:
         Valve status at the start of the simulation. If set to OPEN or CLOSED then the control setting of the valve is ignored and the valve behaves as an open or closed link, respectively. 
         If set to NONE, then the valve will behave as intended.
         Values are resrtricted to: "OPEN","CLOSED","NONE".
-
     minorLoss:
       x-ngsi:
         type: Property
@@ -58,20 +50,6 @@ Valve:
       description: |
         Unitless minor loss coefficient that applies when the valve is completely opened.
          All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.
-    modifiedAt:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/DateTime'
-      type: string
-      description: ''
-      format: date-time
-    observedAt:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/DateTime'
-      type: string
-      description: ''
-      format: date-time
     setting:
       x-ngsi:
         type: Property

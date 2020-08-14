@@ -1,0 +1,48 @@
+{
+    "id": "1863179e-3768-4480-9167-ff21f870dd19",
+    "type": "Reservoir",
+    "location": {
+        "type": "geo:json",
+        "value": {
+            "type": "Point",
+            "coordinates": [
+                24.30623,
+                60.07966
+            ]
+        }
+    },
+    "reservoirHead": {
+        "value": 59.00
+    },
+    "headPattern": {
+        "type": "Relationship",
+        "value": "fbcb5fc8-8ca3-4533"
+    },
+    "elevation": {
+        "value": 105.8
+    },
+    "description": {
+        "value": "This entity contains a harmonised description of a Reservoir"
+    },
+    "initialQuality": {
+        "value": 0.5
+    },
+    "sourceCategory": {
+        "value": {
+            "value": "CategroyX",
+            "sourceType": {
+                "value": "MASS"
+            },
+            "sourceQuality": {
+                "value": 1.2
+            },
+            "sourcePattern": {
+                "type": "Relationship",
+                "value": "fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
+            }
+        }
+    },
+    "tag": {
+        "value": "DMA1"
+    }
+}

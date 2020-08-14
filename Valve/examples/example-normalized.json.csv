@@ -1,0 +1,2 @@
+"id_", "type_", "initiaStatus__value_", "status__value_", "diameter__value_", "valveType__value_", "setting__value_", "minorLoss__value_", "tag__value_", "startsAt__type_", "startsAt__value_", "endsAt__type_", "endsAt__value_"
+"87fe7d79-0d4c-4da9-b7d0-3340efa0656awytsd", "Valve", "OPEN", "OPEN", "203.2", "PRV", "40.0", "0.0", "DMA1", "Relationship", "63fe7d79-0d4c-4da9-b7d0-3340efa0656a", "Relationship", "1863179e-3768-4480-9167-ff21f870dd19"

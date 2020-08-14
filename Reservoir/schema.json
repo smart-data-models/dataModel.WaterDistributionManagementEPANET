@@ -4,158 +4,6 @@
     "title": "WaterNetwork - reservoir",
     "description": "This entity contains a harmonised description of a generic Reservoir made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.",
     "type": "object",
-    "definitions": {
-        "source": {
-            "type": "object",
-            "properties": {
-                "type": {
-                    "type": "string",
-                    "enum": [
-                        "Property"
-                    ]
-                },
-                "value": {
-                    "type": [
-                        "number",
-                        "string"
-                    ]
-                },
-                "unitCode": {
-                    "type": "string"
-                },
-                "createdAt": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "observedAt": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "modifiedAt": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "sourceType": {
-                    "type": "object",
-                    "properties": {
-                        "type": {
-                            "type": "string",
-                            "enum": [
-                                "Property"
-                            ]
-                        },
-                        "value": {
-                            "type": [
-                                "number",
-                                "string"
-                            ],
-                            "enum": [
-                                "CONCEN",
-                                "MASS",
-                                "FLOWPACED",
-                                "SETPOINT"
-                            ]
-                        },
-                        "unitCode": {
-                            "type": "string"
-                        },
-                        "createdAt": {
-                            "type": "string",
-                            "format": "date-time"
-                        },
-                        "observedAt": {
-                            "type": "string",
-                            "format": "date-time"
-                        },
-                        "modifiedAt": {
-                            "type": "string",
-                            "format": "date-time"
-                        }
-                    },
-                    "required": [
-                        "type",
-                        "value"
-                    ]
-                },
-                "sourceQuality": {
-                    "type": "object",
-                    "properties": {
-                        "type": {
-                            "type": "string",
-                            "enum": [
-                                "Property"
-                            ]
-                        },
-                        "value": {
-                            "type": [
-                                "number",
-                                "string"
-                            ]
-                        },
-                        "unitCode": {
-                            "type": "string"
-                        },
-                        "createdAt": {
-                            "type": "string",
-                            "format": "date-time"
-                        },
-                        "observedAt": {
-                            "type": "string",
-                            "format": "date-time"
-                        },
-                        "modifiedAt": {
-                            "type": "string",
-                            "format": "date-time"
-                        }
-                    },
-                    "required": [
-                        "type",
-                        "value"
-                    ]
-                },
-                "sourcePattern": {
-                    "type": "object",
-                    "properties": {
-                        "type": {
-                            "type": "string",
-                            "enum": [
-                                "Relationship"
-                            ]
-                        },
-                        "object": {
-                            "type": [
-                                "string"
-                            ],
-                            "format": "uri"
-                        },
-                        "createdAt": {
-                            "type": "string",
-                            "format": "date-time"
-                        },
-                        "observedAt": {
-                            "type": "string",
-                            "format": "date-time"
-                        },
-                        "modifiedAt": {
-                            "type": "string",
-                            "format": "date-time"
-                        }
-                    },
-                    "required": [
-                        "type",
-                        "object"
-                    ]
-                }
-            },
-            "required": [
-                "type",
-                "value",
-                "sourceType",
-                "sourceQuality",
-                "sourcePattern"
-            ]
-        }
-    },
     "allOf": [
         {
             "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
@@ -170,37 +18,37 @@
                     "description": "NGSI-LD Entity Type"
                 },
                 "reservoirHead": {
-                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
+                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
                 },
                 "initialQuality": {
-                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
+                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
                 },
                 "description": {
-                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
+                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
                 },
                 "emitterCoefficient": {
-                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
+                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
                 },
                 "elevation": {
-                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
+                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
                 },
                 "tag": {
-                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
+                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
                 },
                 "demandCategory": {
-                    "$ref": "#/definitions/demand"
+                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/demand"
                 },
                 "sourceCategory": {
-                    "$ref": "#/definitions/source"
+                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/source"
                 },
                 "headPattern": {
-                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildRelationship"
+                     "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/ngsildRelationship"
                 },
                 "hasInlet": {
-                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildRelationship"
+                     "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/ngsildRelationship"
                 },
                 "hasOutlet": {
-                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildRelationship"
+                     "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/ngsildRelationship"
                 }
             }
         }

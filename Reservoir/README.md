@@ -6,5 +6,6 @@ This entity contains an harmonised description of a generic Reservoir made for t
 Main files in this directory are:
 
 -   [Reservoir Entity schema](schema.json).
--   [Reservoir Entity Example](example-normalized-ld.jsonld).
+-   [Reservoir Entity NGSI V2 Example](example-normalized.json).
+-   [Reservoir Entity NGSI-LD Example](example-normalized-ld.jsonld).
 -   [Reservoir Entity Spec](doc/spec.md).

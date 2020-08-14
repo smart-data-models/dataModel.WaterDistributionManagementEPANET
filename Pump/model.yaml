@@ -18,14 +18,6 @@ Pump:
     Water Network Management domain. This entity is primarily associated with
     the water management vertical and related IoT applications.
   properties:
-    createdAt:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/DateTime'
-      type: string
-      description: |
-        Entity's creation timestamp.
-      format: date-time
     efficCurve:
       x-ngsi:
         type: Relationship
@@ -66,20 +58,6 @@ Pump:
       description: |
          State of the pump (open or closed) at the start of the simulation period.
          Values are restricted to: "OPEN","CLOSED","CV"
-    modifiedAt:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/DateTime'
-      type: string
-      description: ''
-      format: date-time
-    observedAt:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/DateTime'
-      type: string
-      description: ''
-      format: date-time
     power:
       x-ngsi:
         type: Property

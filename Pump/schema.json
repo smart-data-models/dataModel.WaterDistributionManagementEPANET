@@ -4,50 +4,6 @@
     "title": "WaterNetwork - Pump",
     "description": "This entity contains a harmonised description of a generic pump made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.",
     "type": "object",
-    "definitions": {
-        "status": {
-            "type": "object",
-            "properties": {
-                "type": {
-                    "type": "string",
-                    "enum": [
-                        "Property"
-                    ]
-                },
-                "value": {
-                    "type": [
-                        "number",
-                        "string",
-                        "array"
-                    ],
-                    "enum": [
-                        "OPEN",
-                        "CLOSED",
-                        "CV"
-                    ]
-                },
-                "unitCode": {
-                    "type": "string"
-                },
-                "createdAt": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "observedAt": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "modifiedAt": {
-                    "type": "string",
-                    "format": "date-time"
-                }
-            },
-            "required": [
-                "type",
-                "value"
-            ]
-        }
-    },
     "allOf": [
         {
             "properties": {
@@ -59,52 +15,40 @@
                     "description": "NGSI-LD Entity Type"
                 },
                 "status": {
-                    "$ref": "#/definitions/status"
+                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/status"
                 },
                 "initialStatus": {
-                    "$ref": "#/definitions/status"
+                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/status"
                 },
                 "power": {
-                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
+                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
                 },
                 "speed": {
-                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
+                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
                 },
                 "startsAt": {
-                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildRelationship"
+                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/ngsildRelationship"
                 },
                 "endsAt": {
-                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildRelationship"
+                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/ngsildRelationship"
                 },
                 "tag": {
-                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
+                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
                 },
                 "headCurve": {
-                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildRelationship"
+                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/ngsildRelationship"
                 },
                 "pumpPattern": {
-                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildRelationship"
+                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/ngsildRelationship"
                 },
                 "efficCurve": {
-                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildRelationship"
+                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/ngsildRelationship"
                 },
                 "energyPrice": {
-                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
+                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
                 },
                 "energyPattern": {
-                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildRelationship"
-                },
-                "createdAt": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "observedAt": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "modifiedAt": {
-                    "type": "string",
-                    "format": "date-time"
+                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/ngsildRelationship"
                 }
             }
         }

@@ -6,5 +6,6 @@ This entity contains an harmonised description of a generic tank made for the Wa
 Main files in this directory are:
 
 -   [Tank Entity schema](schema.json).
--   [Tank Entity Example](example-normalized-ld.jsonld).
+-   [Tank Entity NGSI V2Example](example-normalized.json).
+-   [Tank Entity NGSI-LD Example](example-normalized-ld.jsonld).
 -   [Tank Entity Spec](doc/spec.md).

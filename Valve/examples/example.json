@@ -1,0 +1,13 @@
+{
+    "id": "87fe7d79-0d4c-4da9-b7d0-3340efa0656awytsd",
+    "type": "Valve",
+    "initiaStatus": "OPEN",
+    "status": "OPEN",
+    "diameter": 203.20,
+    "valveType": "PRV",
+    "setting": 40.00,
+    "minorLoss": 0.00,
+    "tag": "DMA1",
+    "startsAt": "63fe7d79-0d4c-4da9-b7d0-3340efa0656a",
+    "endsAt": "1863179e-3768-4480-9167-ff21f870dd19"
+}
