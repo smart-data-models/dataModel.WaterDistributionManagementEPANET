@@ -118,7 +118,7 @@
                 "value"
             ]
         },
-        "demand": {
+        "demandCategory": {
             "type": "object",
             "properties": {
                 "type": {
@@ -225,7 +225,7 @@
                 "demandPattern"
             ]
         },
-        "source": {
+        "sourceCategory": {
             "type": "object",
             "properties": {
                 "type": {
