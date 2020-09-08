@@ -1,6 +1,8 @@
 # dataModel.WaterNetworkManagement
 These data models describe entities useful for dealing with Water Network Management data. These entities are primarily derived from the EPANET platform.
 
+### List of data models
+
 The following entity types are available:
 - [Curve](https://github.com/smart-data-models/dataModel.WaterNetworkManagement/blob/master/Curve/README.md). This entity contains a harmonised description of a generic curve made for
 the Water Network Management domain. This entity is primarily associated
@@ -49,16 +51,22 @@ with the water management vertical and related IoT applications.
 
 
 
+
+### Incubated data models
 The list of incubated (on development) data models are:
 
-[Network_incubated](https://github.com/smart-data-models/dataModel.WaterNetworkManagement/tree/master/Network_incubated)
+  - [Network_incubated](https://github.com/smart-data-models/dataModel.WaterNetworkManagement/tree/master/Network_incubated)
 
-[Node_incubated](https://github.com/smart-data-models/dataModel.WaterNetworkManagement/tree/master/Node_incubated)
+  - [Node_incubated](https://github.com/smart-data-models/dataModel.WaterNetworkManagement/tree/master/Node_incubated)
 
-[Simulation_incubated](https://github.com/smart-data-models/dataModel.WaterNetworkManagement/tree/master/Simulation_incubated)
+  - [Simulation_incubated](https://github.com/smart-data-models/dataModel.WaterNetworkManagement/tree/master/Simulation_incubated)
 
+
+### Contributors
 [Link](https://github.com/smart-data-models/dataModel.WaterNetworkManagement/blob/master/CONTRIBUTORS.yaml) to the 5 current contributors of the data models of this Subject.
 
+
+### Contribution
 You can raise an [issue](https://github.com/smart-data-models/dataModel.WaterNetworkManagement/issues) or submit your [PR](https://github.com/smart-data-models/dataModel.WaterNetworkManagement/pulls) on existing data models
 
 
