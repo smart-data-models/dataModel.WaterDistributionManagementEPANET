@@ -57,7 +57,7 @@ The list of incubated (on development) data models are:
 
 [Simulation_incubated](https://github.com/smart-data-models/dataModel.WaterNetworkManagement/tree/master/Simulation_incubated)
 
-No public contributors currently.
+[Link](https://github.com/smart-data-models/dataModel.WaterNetworkManagement/blob/master/CONTRIBUTORS.yaml) to the 5 current contributors of the data models of this Subject.
 
 You can raise an [issue](https://github.com/smart-data-models/dataModel.WaterNetworkManagement/issues) or submit your [PR](https://github.com/smart-data-models/dataModel.WaterNetworkManagement/pulls) on existing data models
 
