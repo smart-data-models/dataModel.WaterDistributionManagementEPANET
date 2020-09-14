@@ -1,2 +1,0 @@
-"id", "type", "createdAt", "modifiedAt", "multipliers__value", "multipliers__unitCode", "timeStep__value", "timeStep__unitCode", "description__value", "startTime__value", "tag__value", "@context"
-"urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533-a2eb-34bc89262190", "Pattern", "2020-02-20T17:43:00Z", "2020-02-20T17:43:00Z", "[0.5692, 0.4647, 0.4385, 0.3604, 0.3098, 0.3345]", "C62", "3600", "SEC", "Open Text", "00:00", "DMA1", "['https://schema.lab.fiware.org/ld/context']"
