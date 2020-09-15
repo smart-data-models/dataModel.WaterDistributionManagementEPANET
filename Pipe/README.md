@@ -10,7 +10,7 @@ the water management vertical and related IoT applications.
 
 Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.WaterNetworkManagement/Pipe/swagger.yaml)
 
-Link to the [specification](https://smart-data-models.github.io/dataModel.WaterNetworkManagement/Pipe/doc/spec.md)
+Link to the [specification](https://github.com/smart-data-models/dataModel.WaterNetworkManagement/blob/master/Pipe/doc/spec.md)
 ### Examples
 
 Link to the [example](https://smart-data-models.github.io/dataModel.WaterNetworkManagement/Pipe/examples/example.json) (keyvalues) for NGSI v2
