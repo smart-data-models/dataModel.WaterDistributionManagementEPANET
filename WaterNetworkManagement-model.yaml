@@ -1,0 +1,347 @@
+  ----
+# Copyright (c) 2020 Contributors to Smart-Data-Models
+# see https://github.com/smart-data-models/dataModel.Alert
+    
+    WaterNetworkManagementCommons:
+      type: object
+      required:
+          - type
+          - value
+      properties:
+        ngsildProperty:
+          type: object
+          properties:
+            type:
+              type: string
+              enum:
+              - Property
+            value:
+              type: number
+            unitCode:
+              type: string
+            createdAt:
+              type: string
+              format: date-time
+            observedAt:
+              type: string
+              format: date-time
+            modifiedAt:
+              type: string
+              format: date-time
+          required:
+          - type
+          - value
+        ngsildRelationship:
+          type: object
+          properties:
+            type:
+              type: string
+              enum:
+              - Relationship
+            object:
+              type: string
+              format: uri
+            createdAt:
+              type: string
+              format: date-time
+            observedAt:
+              type: string
+              format: date-time
+            modifiedAt:
+              type: string
+              format: date-time
+          required:
+          - type
+          - object
+        curveType:
+          type: object
+          properties:
+            type:
+              type: string
+              enum:
+              - Property
+            value:
+              type: string
+              enum:
+              - FLOW-HEAD
+              - FLOW-EFFICIENCY
+              - FLOW-HEADLOSS
+              - LEVEL-VOLUME
+            unitCode:
+              type: string
+            createdAt:
+              type: string
+              format: date-time
+            observedAt:
+              type: string
+              format: date-time
+            modifiedAt:
+              type: string
+              format: date-time
+          required:
+          - type
+          - value
+        demand:
+          type: object
+          properties:
+            type:
+              type: string
+              enum:
+              - Property
+            value:
+              type: string
+            unitCode:
+              type: string
+            createdAt:
+              type: string
+              format: date-time
+            observedAt:
+              type: string
+              format: date-time
+            modifiedAt:
+              type: string
+              format: date-time
+            baseDemand:
+              type: object
+              properties:
+                type:
+                  type: string
+                  enum:
+                  - Property
+                value:
+                  type: string
+                unitCode:
+                  type: string
+                createdAt:
+                  type: string
+                  format: date-time
+                observedAt:
+                  type: string
+                  format: date-time
+                modifiedAt:
+                  type: string
+                  format: date-time
+              required:
+              - type
+              - value
+            demandPattern:
+              type: object
+              properties:
+                type:
+                  type: string
+                  enum:
+                  - Relationship
+                object:
+                  type: string
+                  format: uri
+                createdAt:
+                  type: string
+                  format: date-time
+                observedAt:
+                  type: string
+                  format: date-time
+                modifiedAt:
+                  type: string
+                  format: date-time
+              required:
+              - type
+              - object
+          required:
+          - type
+          - value
+          - baseDemand
+          - demandPattern
+        source:
+          type: object
+          properties:
+            type:
+              type: string
+              enum:
+              - Property
+            value:
+              type: string
+            unitCode:
+              type: string
+            createdAt:
+              type: string
+              format: date-time
+            observedAt:
+              type: string
+              format: date-time
+            modifiedAt:
+              type: string
+              format: date-time
+            sourceType:
+              type: object
+              properties:
+                type:
+                  type: string
+                  enum:
+                  - Property
+                value:
+                  type: string
+                  enum:
+                  - CONCEN
+                  - MASS
+                  - FLOWPACED
+                  - SETPOINT
+                unitCode:
+                  type: string
+                createdAt:
+                  type: string
+                  format: date-time
+                observedAt:
+                  type: string
+                  format: date-time
+                modifiedAt:
+                  type: string
+                  format: date-time
+              required:
+              - type
+              - value
+            sourceQuality:
+              type: object
+              properties:
+                type:
+                  type: string
+                  enum:
+                  - Property
+                value:
+                  type: string
+                unitCode:
+                  type: string
+                createdAt:
+                  type: string
+                  format: date-time
+                observedAt:
+                  type: string
+                  format: date-time
+                modifiedAt:
+                  type: string
+                  format: date-time
+              required:
+              - type
+              - value
+            sourcePattern:
+              type: object
+              properties:
+                type:
+                  type: string
+                  enum:
+                  - Relationship
+                object:
+                  type: string
+                  format: uri
+                createdAt:
+                  type: string
+                  format: date-time
+                observedAt:
+                  type: string
+                  format: date-time
+                modifiedAt:
+                  type: string
+                  format: date-time
+              required:
+              - type
+              - object
+          required:
+          - type
+          - value
+          - sourceType
+          - sourceQuality
+          - sourcePattern
+        status:
+          type: object
+          properties:
+            type:
+              type: string
+              enum:
+              - Property
+            value:
+              type: string
+              enum:
+              - OPEN
+              - CLOSED
+              - CV
+            unitCode:
+              type: string
+            observedAt:
+              type: string
+              format: date-time
+          required:
+          - type
+          - value
+        mixingModel:
+          type: object
+          properties:
+            type:
+              type: string
+              enum:
+              - Property
+            value:
+              type: string
+              enum:
+              - MIXED
+              - 2COMP
+              - FIFO
+              - LIFO
+            unitCode:
+              type: string
+            createdAt:
+              type: string
+              format: date-time
+            observedAt:
+              type: string
+              format: date-time
+            modifiedAt:
+              type: string
+              format: date-time
+          required:
+          - type
+          - value
+        valveType:
+          type: object
+          properties:
+            type:
+              type: string
+              enum:
+              - Property
+            value:
+              type: string
+              enum:
+              - PRV
+              - PSV
+              - PBV
+              - FCV
+              - TCV
+              - GPV
+            unitCode:
+              type: string
+            createdAt:
+              type: string
+              format: date-time
+            observedAt:
+              type: string
+              format: date-time
+            modifiedAt:
+              type: string
+              format: date-time
+            valveCurve:
+              type: object
+              properties:
+                type:
+                  type: string
+                  enum:
+                  - Relationship
+                object:
+                  type: string
+                  format: uri
+                createdAt:
+                  type: string
+                  format: date-time
+                observedAt:
+                  type: string
+                  format: date-time
+                modifiedAt:
+                  type: string
+                  format: date-time
