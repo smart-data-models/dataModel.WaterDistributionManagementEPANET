@@ -52,5 +52,55 @@
     },
     "emitterCoefficient": {
         "value": 0.526
+    },
+    "observedPressure": {
+        "value": {
+            "value": 20,
+            "unitCode": "MTR",
+            "observedBy": {
+                "type": "Relationship",
+                "value": "device-9845A"
+            }
+        }
+    },
+    "observedDemand": {
+        "value": {
+            "value": 150,
+            "unitCode": "LTR",
+            "observedBy": {
+                "type": "Relationship",
+                "value": "device-9845A"
+            }
+        }
+    },
+    "observedHead": {
+        "value": {
+            "value": 20,
+            "unitCode": "MTR",
+            "observedBy": {
+                "type": "Relationship",
+                "value": "device-9845A"
+            }
+        }
+    },
+    "observedQuality": {
+        "value": {
+            "value": 0.5,
+            "unitCode": "M1",
+            "observedBy": {
+                "type": "Relationship",
+                "value": "device-9845A"
+            }
+        }
+    },
+    "observedSourceMassInflow": {
+        "value": {
+            "value": 100,
+            "unitCode": "F27",
+            "observedBy": {
+                "type": "Relationship",
+                "value": "device-9845A"
+            }
+        }
     }
 }
