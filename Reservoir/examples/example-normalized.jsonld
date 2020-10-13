@@ -57,6 +57,51 @@
         "type": "Property",
         "value": "DMA1"
     },
+    "observedPressure": {
+        "type": "Property",
+        "value": 20,
+        "unitCode": "MTR",
+        "observedBy": {
+            "type": "Relationship",
+            "object": "urn:ngsi-ld:Device:device-9845A"
+        }
+    },
+    "observedDemand": {
+        "type": "Property",
+        "value": 150,
+        "unitCode": "LTR",
+        "observedBy": {
+            "type": "Relationship",
+            "object": "urn:ngsi-ld:Device:device-9845A"
+        }
+    },
+    "observedHead": {
+        "type": "Property",
+        "value": 20,
+        "unitCode": "MTR",
+        "observedBy": {
+            "type": "Relationship",
+            "object": "urn:ngsi-ld:Device:device-9845A"
+        }
+    },
+    "observedQuality": {
+        "type": "Property",
+        "value": 0.5,
+        "unitCode": "M1",
+        "observedBy": {
+            "type": "Relationship",
+            "object": "urn:ngsi-ld:Device:device-9845A"
+        }
+    },
+    "observedSourceMassInflow": {
+        "type": "Property",
+        "value": 100,
+        "unitCode": "F27",
+        "observedBy": {
+            "type": "Relationship",
+            "object": "urn:ngsi-ld:Device:device-9845A"
+        }
+    },
     "@context": [
         "https://schema.lab.fiware.org/ld/context"
     ]

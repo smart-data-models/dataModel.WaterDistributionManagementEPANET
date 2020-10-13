@@ -1,16 +1,42 @@
 Entity: Reservoir  
-=================  
-[Open License](https://github.com/smart-data-models//dataModel.WaterNetworkManagement/blob/master/Reservoir/LICENSE.md)  
-Global description: **This entity contains a harmonised description of a generic Reservoir made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.**  
+=================
+  
 
-## List of properties  
+[Open License](https://github.com/smart-data-models//dataModel.WaterNetworkManagement/blob/master/Reservoir/LICENSE.md)  
 
-- `address`: The mailing address.  - `areaServed`: The geographic area where a service or offered item is provided  - `description`: An optional text that describes other significant information about the junction  - `elevation`: The elevation above some common reference of the Reservoir. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.  - `hasInlet`: A relationship indicating the water inlet points of the Reservoir  - `hasOutlet`: A relationship indicating the water outlet points of the Reservoir  - `headPattern`: The ID label of a time pattern used to model time variation in the reservoir's total head  - `initialQuality`: Water quality level at the Reservoir. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.  - `location`:   - `reservoirHead`: The hydraulic head (elevation + pressure head) of water in the Reservoir. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.  - `sourceCategory`: Description of the quality of source flow entering the network at a specific node.  - `tag`: An optional text string used to assign the pipe to a category, perhaps one based on age or material  - `type`: NGSI-LD Entity Type. It must be equal to Reservoir.    
-Required properties  
-- `id`  - `location`  - `reservoirHead`  - `type`  ## Data Model description of properties  
-Sorted alphabetically (click for details)  
+Global description: **This entity contains a harmonised description of a generic Reservoir made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.**  
+
+
+## List of properties  
+
+
+- `address`: The mailing address.  
+- `areaServed`: The geographic area where a service or offered item is provided  
+- `description`: An optional text that describes other significant information about the junction  
+- `elevation`: The elevation above some common reference of the Reservoir. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.  
+- `hasInlet`: A relationship indicating the water inlet points of the Reservoir  
+- `hasOutlet`: A relationship indicating the water outlet points of the Reservoir  
+- `headPattern`: The ID label of a time pattern used to model time variation in the reservoir's total head  
+- `initialQuality`: Water quality level at the Reservoir. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.  
+- `location`:   
+- `reservoirHead`: The hydraulic head (elevation + pressure head) of water in the Reservoir. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.  
+- `sourceCategory`: Description of the quality of source flow entering the network at a specific node.  
+- `tag`: An optional text string used to assign the pipe to a category, perhaps one based on age or material  
+- `type`: NGSI-LD Entity Type. It must be equal to Reservoir.  
+  
+
+Required properties  
+- `id`  
+- `location`  
+- `reservoirHead`  
+- `type`  
+
+## Data Model description of properties  
+
+Sorted alphabetically (click for details)  
 <details><summary><strong>full yaml details</strong></summary>    
-```yaml  
+
+```yaml  
 Reservoir:    
   description: 'This entity contains a harmonised description of a generic Reservoir made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.'    
   properties:    
@@ -271,11 +297,16 @@ Reservoir:
   type: object    
 ```  
 </details>    
-## Example payloads    
-#### Reservoir NGSI V2 key-values Example    
-Here is an example of a Reservoir in JSON format as key-values. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
-```json  
-{  
+
+## Example payloads    
+
+#### Reservoir NGSI V2 key-values Example    
+
+Here is an example of a Reservoir in JSON format as key-values. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
+
+```json  
+
+{  
     "id": "1863179e-3768-4480-9167-ff21f870dd19",  
     "type": "Reservoir",  
     "location": {  
@@ -299,10 +330,14 @@ Reservoir:
     "tag": "DMA1"  
 }  
 ```  
-#### Reservoir NGSI V2 normalized Example    
-Here is an example of a Reservoir in JSON format as normalized. This is compatible with NGSI V2 when not using options and returns the context data of an individual entity.  
-```json  
-{  
+
+#### Reservoir NGSI V2 normalized Example    
+
+Here is an example of a Reservoir in JSON format as normalized. This is compatible with NGSI V2 when not using options and returns the context data of an individual entity.  
+
+```json  
+
+{  
     "id": "1863179e-3768-4480-9167-ff21f870dd19",  
     "type": "Reservoir",  
     "location": {  
@@ -351,10 +386,14 @@ Reservoir:
     }  
 }  
 ```  
-#### Reservoir NGSI-LD key-values Example    
-Here is an example of a Reservoir in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
-```json  
-{"@context": ["https://schema.lab.fiware.org/ld/context"],  
+
+#### Reservoir NGSI-LD key-values Example    
+
+Here is an example of a Reservoir in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
+
+```json  
+
+{"@context": ["https://schema.lab.fiware.org/ld/context"],  
  "createdAt": "2020-03-02T15:42:00Z",  
  "description": "This entity contains a harmonised description of a Reservoir",  
  "elevation": 105.8,  
@@ -368,10 +407,14 @@ Reservoir:
  "tag": "DMA1",  
  "type": "Reservoir"}  
 ```  
-#### Reservoir NGSI-LD normalized Example    
-Here is an example of a Reservoir in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
-```json  
-{  
+
+#### Reservoir NGSI-LD normalized Example    
+
+Here is an example of a Reservoir in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
+
+```json  
+
+{  
     "id": "urn:ngsi-ld:Reservoir:1863179e-3768-4480-9167-ff21f870dd19",  
     "type": "Reservoir",  
     "createdAt": "2020-03-02T15:42:00Z",  
