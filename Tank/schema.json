@@ -87,6 +87,24 @@
                     "type": "string",
                     "format": "uri",
                     "description": "Relationship. A relationship indicating the water outlet points of the Reservoir"
+                },
+                "observedLevel": {
+                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/observedProperty"
+                },
+                "observedPressure": {
+                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/observedProperty"
+                },
+                "observedDemand": {
+                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/observedProperty"
+                },
+                "observedHead": {
+                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/observedProperty"
+                },
+                "observedQuality": {
+                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/observedProperty"
+                },
+                "observedSourceMassInflow": {
+                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/observedProperty"
                 }
             }
         }
