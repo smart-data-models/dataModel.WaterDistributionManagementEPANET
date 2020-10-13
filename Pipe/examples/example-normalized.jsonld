@@ -67,6 +67,33 @@
         "value": 72.4549,
         "unitCode": "RRC"
     },
+    "observedFlow": {
+        "type": "Property",
+        "value": 20,
+        "unitCode": "G51",
+        "observedBy": {
+            "type": "Relationship",
+            "object": "urn:ngsi-ld:Device:device-9845A"
+        }
+    },
+    "observedVelocity": {
+        "type": "Property",
+        "value": 2,
+        "unitCode": "MTS",
+        "observedBy": {
+            "type": "Relationship",
+            "object": "urn:ngsi-ld:Device:device-9845A"
+        }
+    },
+    "observedQuality": {
+        "type": "Property",
+        "value": 0.5,
+        "unitCode": "F27",
+        "observedBy": {
+            "type": "Relationship",
+            "object": "urn:ngsi-ld:Device:device-9845A"
+        }
+    },
     "@context": [
         "https://schema.lab.fiware.org/ld/context"
     ]

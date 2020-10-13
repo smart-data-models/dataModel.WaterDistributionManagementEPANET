@@ -71,6 +71,15 @@
               "$ref": "https://geojson.org/schema/Point.json"
             }
           ]
+        },                    
+        "observedFlow": {
+            "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/observedProperty"
+        },
+        "observedVelocity": {
+            "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/observedProperty"
+        },
+        "observedQuality": {
+            "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/observedProperty"
         }
       }
     }

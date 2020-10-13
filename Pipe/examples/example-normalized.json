@@ -38,5 +38,35 @@
     },
     "wallCoeff": {
         "value": 72.4549
+    },
+    "observedFlow": {
+        "value": {
+            "value": 20,
+            "unitCode": "G51",
+            "observedBy": {
+                "type": "Relationship",
+                "value": "device-9845A"
+            }
+        }
+    },
+    "observedVelocity": {
+        "value": {
+            "value": 2,
+            "unitCode": "MTS",
+            "observedBy": {
+                "type": "Relationship",
+                "value": "device-9845A"
+            }
+        }
+    },
+    "observedQuality": {
+        "value": {
+            "value": 0.5,
+            "unitCode": "F27",
+            "observedBy": {
+                "type": "Relationship",
+                "value": "device-9845A"
+            }
+        }
     }
 }
