@@ -79,6 +79,18 @@
                     "type": "string",
                     "format": "uri",
                     "description": "Relationship. The ID label of the time pattern used to describe the variation in energy price throughout the day."
+                },
+                "observedFlow": {
+                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/observedProperty"
+                },
+                "observedVelocity": {
+                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/observedProperty"
+                },
+                "observedQuality": {
+                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/observedProperty"
+                },
+                "observedEnergyUse": {
+                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/observedProperty"
                 }
             }
         }
