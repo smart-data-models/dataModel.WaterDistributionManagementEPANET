@@ -57,7 +57,7 @@
                 "observedPressure": {
                     "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/observedProperty"
                 },
-                "observedDemand": {
+                "observedSupply": {
                     "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/observedProperty"
                 },
                 "observedHead": {

@@ -55,7 +55,7 @@
             }
         }
     },
-    "observedDemand": {
+    "observedSupply": {
         "value": {
             "value": 150,
             "unitCode": "LTR",

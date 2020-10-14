@@ -109,7 +109,7 @@
             "object": "urn:ngsi-ld:Device:device-9845A"
         }
     },
-    "observedDemand": {
+    "observedSupply": {
         "type": "Property",
         "value": 150,
         "unitCode": "LTR",
