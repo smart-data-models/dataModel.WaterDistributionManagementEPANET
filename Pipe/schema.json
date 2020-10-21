@@ -47,6 +47,16 @@
         },
         "bulkCoeff": {
           "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
+        },
+        "vertices": {
+          "oneOf": [
+              {
+                  "$ref": "http://geojson.org/schema/Geometry.json#MultiPoint"
+              },
+              {
+                  "$ref": "http://geojson.org/schema/Geometry.json#Point"
+              }
+          ]                    
         }
       }
     }
