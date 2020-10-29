@@ -55,7 +55,7 @@ Pipe:
       type: object
       description: |
         Determines whether the pipe is initially open, closed, or contains a check valve.
-        Values are restricted to: "OPEN","CLOSED","CV"
+        Values are restricted to: OPEN,CLOSED,CV
     length:
       x-ngsi:
         type: Property
