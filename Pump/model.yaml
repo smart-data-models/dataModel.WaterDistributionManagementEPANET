@@ -57,7 +57,7 @@ Pump:
       type: object
       description: |
          State of the pump (open or closed) at the start of the simulation period.
-         Values are restricted to: "OPEN","CLOSED","CV"
+         Values are restricted to: OPEN, CLOSED,CV
     power:
       x-ngsi:
         type: Property
