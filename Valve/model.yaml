@@ -70,7 +70,7 @@ Valve:
       type: object
       description: |
          Dynamic state of the valve.
-         Values are resrtricted to: "OPEN","CLOSED","NONE"
+         Values are resrtricted to: OPEN,CLOSED,NONE
     tag:
       x-ngsi:
         type: Property
