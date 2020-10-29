@@ -103,7 +103,7 @@ Pipe:
       type: object
       description: |
         Dynamic state of the pipe.
-        Values are restricted to: "OPEN","CLOSED","CV"
+        Values are restricted to: OPEN,CLOSED,CV
     tag:
       x-ngsi:
         type: Property
