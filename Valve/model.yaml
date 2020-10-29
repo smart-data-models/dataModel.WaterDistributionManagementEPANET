@@ -82,4 +82,4 @@ Valve:
         type: Property
       type: object
       description: |
-        The valve type. Values are resrtricted to: "PRV", "PSV","PBV","FCV","TCV" and"GPV"
+        The valve type. Values are resrtricted to: PRV, PSV, PBV, FCV, TCV and GPV
