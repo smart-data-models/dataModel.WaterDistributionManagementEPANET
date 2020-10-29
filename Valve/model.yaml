@@ -5,7 +5,6 @@
 Valve:
   required:
     - id
-    - type
     - initialStatus
     - diameter
     - valveType
@@ -42,7 +41,7 @@ Valve:
       description: |
         Valve status at the start of the simulation. If set to OPEN or CLOSED then the control setting of the valve is ignored and the valve behaves as an open or closed link, respectively. 
         If set to NONE, then the valve will behave as intended.
-        Values are resrtricted to: "OPEN","CLOSED","NONE".
+        Values are resrtricted to: OPEN, CLOSED, NONE.
     minorLoss:
       x-ngsi:
         type: Property
