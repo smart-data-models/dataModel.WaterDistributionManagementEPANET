@@ -10,7 +10,7 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
 ### NGSI-LD common Properties
 -   `id`: Unique identifier.
 
--   `type`: Entity type. It must be equal to `Junction`.
+-   `type`: Entity type. It must be equal to `Tank`.
 
 -   `modifiedAt`: Last update timestamp of this
     entity.
@@ -23,7 +23,7 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
     -   Attribute type: Property. [DateTime](https://schema.org/DateTime)
     -   Read-Only. Automatically generated.
 
--   `location` : Location of Junction represented by a GeoJSON geometry.
+-   `location` : Location of Tank represented by a GeoJSON geometry.
 
     -   Attribute type: `GeoProperty`
     -   Normative References:
@@ -88,6 +88,15 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   Mandatory
 
+-   `minLevel` : The minimum level that water in the tank can drop to
+    -   Attribute type: `Property`. Number
+    -   Attribute unit: All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code
+    -   Attribute unit Example: `metre`
+    -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `MTR`
+    -   Attribute metadata Properties:
+        -   `{{metadata Property name}}` : {{Metadata Property Description}}
+    -   Mandatory
+
 -   `minVolume` : The volume of water in the tank when it is at its minimum level
     -   Attribute type: `Property`. Number
     -   Attribute unit: All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code
@@ -123,6 +132,24 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
     -   Attribute unit: All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code
     -   Attribute unit Example:: `No unit`
     -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `C62`
+    -   Attribute metadata Properties:
+        -   `{{metadata Property name}}` : {{Metadata Property Description}}
+    -   Optional
+
+-   `bulkReactionCoefficient` : The bulk reaction coefficient used for modelling reactions in the tank.
+    -   Attribute type: `Property`. Number
+    -   Attribute unit: All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code
+    -   Attribute unit Example: `1/day`
+    -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `E91`
+    -   Attribute metadata Properties:
+        -   `{{metadata Property name}}` : {{Metadata Property Description}}
+    -   Mandatory
+
+-   `initialQuality` : Water quality level int the tank at the start of the simulation
+    -   Attribute type: `Property`. Number
+    -   Attribute unit: All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code
+    -   Attribute unit Example: `mg/L`
+    -   [CEFACT](https://www.unece.org/cefact.html) unitCode: `M1`
     -   Attribute metadata Properties:
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   Optional

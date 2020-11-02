@@ -47,6 +47,10 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   Mandatory
 
+-   `tag` : An optional text string used to assign the curve to a category.
+    -   Attribute type: `Property`.Text
+    -   Optional
+
 ### Junction Entity Relationships
 
 No Relationhips defined for this entity

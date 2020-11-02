@@ -11,7 +11,7 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
 
 -   `id`: Unique identifier.
 
--   `type`: Entity type. It must be equal to `Junction`.
+-   `type`: Entity type. It must be equal to `Pattern`.
 
 -   `modifiedAt`: Last update timestamp of this
     entity.
@@ -25,7 +25,7 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
     -   Read-Only. Automatically generated.
 
  ### Pattern Entity Properties
--   `tag` : An optional text string used to assign the junction to a category, such as a pressure zone
+-   `tag` : An optional text string used to assign the pattern to a category, such as a pressure zone
     -   Attribute type: `Property`.Text
     -   Optional
 
