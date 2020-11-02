@@ -145,7 +145,7 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
         -   `{{metadata Property name}}` : {{Metadata Property Description}}
     -   Mandatory
 
--   `initialQuality` : Water quality level int the tank at the start of the simulation
+-   `initialQuality` : Water quality level in the tank at the start of the simulation
     -   Attribute type: `Property`. Number
     -   Attribute unit: All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code
     -   Attribute unit Example: `mg/L`
