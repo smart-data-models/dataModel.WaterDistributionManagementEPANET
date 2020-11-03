@@ -10,7 +10,7 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
 ### NGSI-LD common Properties
 -   `id`: Unique identifier.
 
--   `type`: Entity type. It must be equal to `Junction`.
+-   `type`: Entity type. It must be equal to `Pump`.
 
 -   `modifiedAt`: Last update timestamp of this
     entity.
@@ -23,7 +23,7 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
     -   Attribute type: Property. [DateTime](https://schema.org/DateTime)
     -   Read-Only. Automatically generated.
 
--   `location` : Location of Junction represented by a GeoJSON geometry.
+-   `location` : Location of Pump represented by a GeoJSON geometry.
 
     -   Attribute type: `GeoProperty`
     -   Normative References:
