@@ -60,7 +60,7 @@
         "type": "Relationship",
         "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
     },
-    "observedFlow": {
+    "flow": {
         "type": "Property",
         "value": 20,
         "unitCode": "G51",
@@ -69,7 +69,7 @@
             "object": "urn:ngsi-ld:Device:device-9845A"
         }
     },
-    "observedVelocity": {
+    "velocity": {
         "type": "Property",
         "value": 2,
         "unitCode": "MTS",
@@ -78,7 +78,7 @@
             "object": "urn:ngsi-ld:Device:device-9845A"
         }
     },
-    "observedQuality": {
+    "quality": {
         "type": "Property",
         "value": 0.5,
         "unitCode": "F27",

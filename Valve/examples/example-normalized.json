@@ -30,7 +30,7 @@
         "type": "Relationship",
         "value": "1863179e-3768-4480-9167-ff21f870dd19"
     },
-    "observedFlow": {
+    "flow": {
         "value": {
             "value": 20,
             "unitCode": "G51",
@@ -40,7 +40,7 @@
             }
         }
     },
-    "observedVelocity": {
+    "velocity": {
         "value": {
             "value": 2,
             "unitCode": "MTS",
@@ -50,7 +50,7 @@
             }
         }
     },
-    "observedQuality": {
+    "quality": {
         "value": {
             "value": 0.5,
             "unitCode": "F27",

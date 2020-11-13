@@ -39,7 +39,7 @@
     "wallCoeff": {
         "value": 72.4549
     },
-    "observedFlow": {
+    "flow": {
         "value": {
             "value": 20,
             "unitCode": "G51",
@@ -49,7 +49,7 @@
             }
         }
     },
-    "observedVelocity": {
+    "velocity": {
         "value": {
             "value": 2,
             "unitCode": "MTS",
@@ -59,7 +59,7 @@
             }
         }
     },
-    "observedQuality": {
+    "quality": {
         "value": {
             "value": 0.5,
             "unitCode": "F27",

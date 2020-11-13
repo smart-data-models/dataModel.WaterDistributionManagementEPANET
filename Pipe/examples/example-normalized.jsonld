@@ -67,7 +67,7 @@
         "value": 72.4549,
         "unitCode": "RRC"
     },
-    "observedFlow": {
+    "flow": {
         "type": "Property",
         "value": 20,
         "unitCode": "G51",
@@ -76,7 +76,7 @@
             "object": "urn:ngsi-ld:Device:device-9845A"
         }
     },
-    "observedVelocity": {
+    "velocity": {
         "type": "Property",
         "value": 2,
         "unitCode": "MTS",
@@ -85,7 +85,7 @@
             "object": "urn:ngsi-ld:Device:device-9845A"
         }
     },
-    "observedQuality": {
+    "quality": {
         "type": "Property",
         "value": 0.5,
         "unitCode": "F27",

@@ -45,7 +45,7 @@
     "tag": {
         "value": "DMA1"
     },
-    "observedPressure": {
+    "pressure": {
         "value": {
             "value": 20,
             "unitCode": "MTR",
@@ -55,7 +55,7 @@
             }
         }
     },
-    "observedSupply": {
+    "supply": {
         "value": {
             "value": 150,
             "unitCode": "LTR",
@@ -65,7 +65,7 @@
             }
         }
     },
-    "observedHead": {
+    "head": {
         "value": {
             "value": 20,
             "unitCode": "MTR",
@@ -75,7 +75,7 @@
             }
         }
     },
-    "observedQuality": {
+    "quality": {
         "value": {
             "value": 0.5,
             "unitCode": "M1",
@@ -85,7 +85,7 @@
             }
         }
     },
-    "observedSourceMassInflow": {
+    "sourceMassInflow": {
         "value": {
             "value": 100,
             "unitCode": "F27",

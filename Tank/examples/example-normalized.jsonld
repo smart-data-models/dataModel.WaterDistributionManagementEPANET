@@ -91,7 +91,7 @@
         "type": "Property",
         "value": "DMA1"
     },
-    "observedLevel": {
+    "level": {
         "type": "Property",
         "value": 20,
         "unitCode": "MTR",
@@ -100,7 +100,7 @@
             "object": "urn:ngsi-ld:Device:device-9845A"
         }
     },
-    "observedPressure": {
+    "pressure": {
         "type": "Property",
         "value": 20,
         "unitCode": "MTR",
@@ -109,7 +109,7 @@
             "object": "urn:ngsi-ld:Device:device-9845A"
         }
     },
-    "observedSupply": {
+    "supply": {
         "type": "Property",
         "value": 150,
         "unitCode": "LTR",
@@ -118,7 +118,7 @@
             "object": "urn:ngsi-ld:Device:device-9845A"
         }
     },
-    "observedHead": {
+    "head": {
         "type": "Property",
         "value": 20,
         "unitCode": "MTR",
@@ -127,7 +127,7 @@
             "object": "urn:ngsi-ld:Device:device-9845A"
         }
     },
-    "observedQuality": {
+    "quality": {
         "type": "Property",
         "value": 0.5,
         "unitCode": "M1",
@@ -136,7 +136,7 @@
             "object": "urn:ngsi-ld:Device:device-9845A"
         }
     },
-    "observedSourceMassInflow": {
+    "sourceMassInflow": {
         "type": "Property",
         "value": 100,
         "unitCode": "F27",
