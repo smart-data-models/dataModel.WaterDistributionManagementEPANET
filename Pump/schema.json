@@ -36,10 +36,10 @@
                 "vertices": {
                     "oneOf": [
                         {
-                            "$ref": "http://geojson.org/schema/Geometry.json#/MultiPoint"
+                            "$ref": "https://geojson.org/schema/MultiPoint.json"
                         },
                         {
-                            "$ref": "http://geojson.org/schema/Geometry.json#/Point"
+                            "$ref": "https://geojson.org/schema/Point.json"
                         }
                     ]                    
                 },
