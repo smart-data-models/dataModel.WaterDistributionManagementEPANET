@@ -72,7 +72,7 @@ A JSON Schema corresponding to this data model can be found [here](../schema.jso
     -   `demandPattern`: A sub-Relationship
     -   Optional
 
--   `base demande` : Baseline or average demand for the category. A sub-property of the Property `demandCategory`
+-   `baseDemand` : Baseline or average demand for the category. A sub-property of the Property `demandCategory`
     -   Attribute type: `Property`. Number
     -   Attribute unit: All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code
     -   Attribute unit Example: `cubic metre per second`
