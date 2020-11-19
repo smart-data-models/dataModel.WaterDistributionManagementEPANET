@@ -1,0 +1,8 @@
+notesHeader:
+  Text to be included between overall title and description.
+
+notesMiddle:
+  Text to be included after list of properties
+  
+notesFooter:
+  Text after  all
