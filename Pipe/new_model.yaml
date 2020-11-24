@@ -1,0 +1,172 @@
+Pipe:
+  description: 'This entity contains a harmonised description of a generic pipe made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.'
+  properties:
+    bulkCoeff:
+      properties: &pipe_-_properties_-_diameter_-_properties
+        createdAt:
+          format: date-time
+          type: string
+        modifiedAt:
+          format: date-time
+          type: string
+        observedAt:
+          format: date-time
+          type: string
+        type:
+          enum:
+            - Property
+          type: string
+        unitCode:
+          type: string
+        value:
+          type:
+            - number
+            - string
+            - array
+      required: &pipe_-_properties_-_diameter_-_required
+        - type
+        - value
+      type: object
+    diameter:
+      properties: *pipe_-_properties_-_diameter_-_properties
+      required: *pipe_-_properties_-_diameter_-_required
+      type: object
+    endsAt:
+      properties: &pipe_-_properties_-_startsat_-_properties
+        createdAt:
+          format: date-time
+          type: string
+        modifiedAt:
+          format: date-time
+          type: string
+        object:
+          format: uri
+          type:
+            - string
+        observedAt:
+          format: date-time
+          type: string
+        type:
+          enum:
+            - Relationship
+          type: string
+      required: &pipe_-_properties_-_startsat_-_required
+        - type
+        - object
+      type: object
+    initialStatus:
+      properties: &pipe_-_properties_-_status_-_properties
+        observedAt:
+          format: date-time
+          type: string
+        type:
+          enum:
+            - Property
+          type: string
+        unitCode:
+          type: string
+        value:
+          enum:
+            - OPEN
+            - CLOSED
+            - CV
+          type:
+            - number
+            - string
+            - array
+      required: &pipe_-_properties_-_status_-_required
+        - type
+        - value
+      type: object
+    length:
+      properties: *pipe_-_properties_-_diameter_-_properties
+      required: *pipe_-_properties_-_diameter_-_required
+      type: object
+    minorLoss:
+      properties: *pipe_-_properties_-_diameter_-_properties
+      required: *pipe_-_properties_-_diameter_-_required
+      type: object
+    roughness:
+      properties: *pipe_-_properties_-_diameter_-_properties
+      required: *pipe_-_properties_-_diameter_-_required
+      type: object
+    startsAt:
+      properties: *pipe_-_properties_-_startsat_-_properties
+      required: *pipe_-_properties_-_startsat_-_required
+      type: object
+    status:
+      properties: *pipe_-_properties_-_status_-_properties
+      required: *pipe_-_properties_-_status_-_required
+      type: object
+    tag:
+      properties: *pipe_-_properties_-_diameter_-_properties
+      required: *pipe_-_properties_-_diameter_-_required
+      type: object
+    type:
+      description: 'NGSI-LD Entity Type'
+      enum:
+        - Pipe
+      type: string
+    vertices:
+      oneOf:
+        - $id: https://geojson.org/schema/MultiPoint.json
+          $schema: "http://json-schema.org/draft-07/schema#"
+          properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                items:
+                  type: number
+                minItems: 2
+                type: array
+              type: array
+            type:
+              enum:
+                - MultiPoint
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON MultiPoint'
+          type: object
+        - $id: https://geojson.org/schema/Point.json
+          $schema: "http://json-schema.org/draft-07/schema#"
+          properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                type: number
+              minItems: 2
+              type: array
+            type:
+              enum:
+                - Point
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON Point'
+          type: object
+    wallCoeff:
+      properties: *pipe_-_properties_-_diameter_-_properties
+      required: *pipe_-_properties_-_diameter_-_required
+      type: object
+  required:
+    - id
+    - type
+    - initialStatus
+    - length
+    - diameter
+    - roughness
+    - minorLoss
+    - startsAt
+    - endsAt
+  type: object
