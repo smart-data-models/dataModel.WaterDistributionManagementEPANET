@@ -1,0 +1,57 @@
+Pattern:
+  description: 'This entity contains a harmonised description of a generic pattern made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.'
+  properties:
+    description:
+      properties: &pattern_-_properties_-_multipliers_-_properties
+        createdAt:
+          format: date-time
+          type: string
+        modifiedAt:
+          format: date-time
+          type: string
+        observedAt:
+          format: date-time
+          type: string
+        type:
+          enum:
+            - Property
+          type: string
+        unitCode:
+          type: string
+        value:
+          type:
+            - number
+            - string
+            - array
+      required: &pattern_-_properties_-_multipliers_-_required
+        - type
+        - value
+      type: object
+    multipliers:
+      properties: *pattern_-_properties_-_multipliers_-_properties
+      required: *pattern_-_properties_-_multipliers_-_required
+      type: object
+    startTime:
+      properties: *pattern_-_properties_-_multipliers_-_properties
+      required: *pattern_-_properties_-_multipliers_-_required
+      type: object
+    tag:
+      properties: *pattern_-_properties_-_multipliers_-_properties
+      required: *pattern_-_properties_-_multipliers_-_required
+      type: object
+    timeStep:
+      properties: *pattern_-_properties_-_multipliers_-_properties
+      required: *pattern_-_properties_-_multipliers_-_required
+      type: object
+    type:
+      description: 'NGSI-LD Entity Type'
+      enum:
+        - Pattern
+      type: string
+  required:
+    - id
+    - type
+    - multipliers
+    - timeStep
+    - startTime
+  type: object
