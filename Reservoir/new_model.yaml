@@ -1,0 +1,361 @@
+Reservoir:
+  description: 'This entity contains a harmonised description of a generic Reservoir made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.'
+  properties:
+    address:
+      description: 'The mailing address.'
+      properties:
+        addressCountry:
+          type: string
+        addressLocality:
+          type: string
+        addressRegion:
+          type: string
+        areaServed:
+          type: string
+        postOfficeBoxNumber:
+          type: string
+        postalCode:
+          type: string
+        streetAddress:
+          type: string
+      type: Property
+    areaServed:
+      description: 'The geographic area where a service or offered item is provided.'
+      type: Property
+    description:
+      properties: &reservoir_-_properties_-_elevation_-_properties
+        createdAt:
+          format: date-time
+          type: string
+        modifiedAt:
+          format: date-time
+          type: string
+        observedAt:
+          format: date-time
+          type: string
+        type:
+          enum:
+            - Property
+          type: string
+        unitCode:
+          type: string
+        value:
+          type:
+            - number
+            - string
+            - array
+      required: &reservoir_-_properties_-_elevation_-_required
+        - type
+        - value
+      type: object
+    elevation:
+      properties: *reservoir_-_properties_-_elevation_-_properties
+      required: *reservoir_-_properties_-_elevation_-_required
+      type: object
+    hasInlet:
+      properties: &reservoir_-_properties_-_hasoutlet_-_properties
+        createdAt:
+          format: date-time
+          type: string
+        modifiedAt:
+          format: date-time
+          type: string
+        object:
+          format: uri
+          type:
+            - string
+        observedAt:
+          format: date-time
+          type: string
+        type:
+          enum:
+            - Relationship
+          type: string
+      required: &reservoir_-_properties_-_hasoutlet_-_required
+        - type
+        - object
+      type: object
+    hasOutlet:
+      properties: *reservoir_-_properties_-_hasoutlet_-_properties
+      required: *reservoir_-_properties_-_hasoutlet_-_required
+      type: object
+    headPattern:
+      properties: *reservoir_-_properties_-_hasoutlet_-_properties
+      required: *reservoir_-_properties_-_hasoutlet_-_required
+      type: object
+    initialQuality:
+      properties: *reservoir_-_properties_-_elevation_-_properties
+      required: *reservoir_-_properties_-_elevation_-_required
+      type: object
+    location:
+      $id: https://geojson.org/schema/Geometry.json
+      $schema: "http://json-schema.org/draft-07/schema#"
+      oneOf:
+        - properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                type: number
+              minItems: 2
+              type: array
+            type:
+              enum:
+                - Point
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON Point'
+          type: object
+        - properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                items:
+                  type: number
+                minItems: 2
+                type: array
+              minItems: 2
+              type: array
+            type:
+              enum:
+                - LineString
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON LineString'
+          type: object
+        - properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                items:
+                  items:
+                    type: number
+                  minItems: 2
+                  type: array
+                minItems: 4
+                type: array
+              type: array
+            type:
+              enum:
+                - Polygon
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON Polygon'
+          type: object
+        - properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                items:
+                  type: number
+                minItems: 2
+                type: array
+              type: array
+            type:
+              enum:
+                - MultiPoint
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON MultiPoint'
+          type: object
+        - properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                items:
+                  items:
+                    type: number
+                  minItems: 2
+                  type: array
+                minItems: 2
+                type: array
+              type: array
+            type:
+              enum:
+                - MultiLineString
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON MultiLineString'
+          type: object
+        - properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                items:
+                  items:
+                    items:
+                      type: number
+                    minItems: 2
+                    type: array
+                  minItems: 4
+                  type: array
+                type: array
+              type: array
+            type:
+              enum:
+                - MultiPolygon
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON MultiPolygon'
+          type: object
+      title: 'GeoJSON Geometry'
+    reservoirHead:
+      properties: *reservoir_-_properties_-_elevation_-_properties
+      required: *reservoir_-_properties_-_elevation_-_required
+      type: object
+    sourceCategory:
+      properties:
+        createdAt:
+          format: date-time
+          type: string
+        modifiedAt:
+          format: date-time
+          type: string
+        observedAt:
+          format: date-time
+          type: string
+        sourcePattern:
+          properties:
+            createdAt:
+              format: date-time
+              type: string
+            modifiedAt:
+              format: date-time
+              type: string
+            object:
+              format: uri
+              type:
+                - string
+            observedAt:
+              format: date-time
+              type: string
+            type:
+              enum:
+                - Relationship
+              type: string
+          required:
+            - type
+            - object
+          type: object
+        sourceQuality:
+          properties:
+            createdAt:
+              format: date-time
+              type: string
+            modifiedAt:
+              format: date-time
+              type: string
+            observedAt:
+              format: date-time
+              type: string
+            type:
+              enum:
+                - Property
+              type: string
+            unitCode:
+              type: string
+            value:
+              type:
+                - number
+                - string
+          required:
+            - type
+            - value
+          type: object
+        sourceType:
+          properties:
+            createdAt:
+              format: date-time
+              type: string
+            modifiedAt:
+              format: date-time
+              type: string
+            observedAt:
+              format: date-time
+              type: string
+            type:
+              enum:
+                - Property
+              type: string
+            unitCode:
+              type: string
+            value:
+              enum:
+                - CONCEN
+                - MASS
+                - FLOWPACED
+                - SETPOINT
+              type:
+                - number
+                - string
+          required:
+            - type
+            - value
+          type: object
+        type:
+          enum:
+            - Property
+          type: string
+        unitCode:
+          type: string
+        value:
+          type:
+            - number
+            - string
+      required:
+        - type
+        - value
+        - sourceType
+        - sourceQuality
+        - sourcePattern
+      type: object
+    tag:
+      properties: *reservoir_-_properties_-_elevation_-_properties
+      required: *reservoir_-_properties_-_elevation_-_required
+      type: object
+    type:
+      description: 'NGSI-LD Entity Type'
+      enum:
+        - Reservoir
+      type: string
+  required:
+    - id
+    - type
+    - location
+    - reservoirHead
+  type: object
