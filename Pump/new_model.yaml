@@ -1,0 +1,172 @@
+Pump:
+  description: 'This entity contains a harmonised description of a generic pump made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.'
+  properties:
+    efficCurve:
+      properties: &pump_-_properties_-_endsat_-_properties
+        createdAt:
+          format: date-time
+          type: string
+        modifiedAt:
+          format: date-time
+          type: string
+        object:
+          format: uri
+          type:
+            - string
+        observedAt:
+          format: date-time
+          type: string
+        type:
+          enum:
+            - Relationship
+          type: string
+      required: &pump_-_properties_-_endsat_-_required
+        - type
+        - object
+      type: object
+    endsAt:
+      properties: *pump_-_properties_-_endsat_-_properties
+      required: *pump_-_properties_-_endsat_-_required
+      type: object
+    energyPattern:
+      properties: *pump_-_properties_-_endsat_-_properties
+      required: *pump_-_properties_-_endsat_-_required
+      type: object
+    energyPrice:
+      properties: &pump_-_properties_-_power_-_properties
+        createdAt:
+          format: date-time
+          type: string
+        modifiedAt:
+          format: date-time
+          type: string
+        observedAt:
+          format: date-time
+          type: string
+        type:
+          enum:
+            - Property
+          type: string
+        unitCode:
+          type: string
+        value:
+          type:
+            - number
+            - string
+            - array
+      required: &pump_-_properties_-_power_-_required
+        - type
+        - value
+      type: object
+    headCurve:
+      properties: *pump_-_properties_-_endsat_-_properties
+      required: *pump_-_properties_-_endsat_-_required
+      type: object
+    initialStatus:
+      properties: &pump_-_properties_-_status_-_properties
+        observedAt:
+          format: date-time
+          type: string
+        type:
+          enum:
+            - Property
+          type: string
+        unitCode:
+          type: string
+        value:
+          enum:
+            - OPEN
+            - CLOSED
+            - CV
+          type:
+            - number
+            - string
+            - array
+      required: &pump_-_properties_-_status_-_required
+        - type
+        - value
+      type: object
+    power:
+      properties: *pump_-_properties_-_power_-_properties
+      required: *pump_-_properties_-_power_-_required
+      type: object
+    pumpPattern:
+      properties: *pump_-_properties_-_endsat_-_properties
+      required: *pump_-_properties_-_endsat_-_required
+      type: object
+    speed:
+      properties: *pump_-_properties_-_power_-_properties
+      required: *pump_-_properties_-_power_-_required
+      type: object
+    startsAt:
+      properties: *pump_-_properties_-_endsat_-_properties
+      required: *pump_-_properties_-_endsat_-_required
+      type: object
+    status:
+      properties: *pump_-_properties_-_status_-_properties
+      required: *pump_-_properties_-_status_-_required
+      type: object
+    tag:
+      properties: *pump_-_properties_-_power_-_properties
+      required: *pump_-_properties_-_power_-_required
+      type: object
+    type:
+      description: 'NGSI-LD Entity Type'
+      enum:
+        - Pump
+      type: string
+    vertices:
+      oneOf:
+        - $id: https://geojson.org/schema/MultiPoint.json
+          $schema: "http://json-schema.org/draft-07/schema#"
+          properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                items:
+                  type: number
+                minItems: 2
+                type: array
+              type: array
+            type:
+              enum:
+                - MultiPoint
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON MultiPoint'
+          type: object
+        - $id: https://geojson.org/schema/Point.json
+          $schema: "http://json-schema.org/draft-07/schema#"
+          properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                type: number
+              minItems: 2
+              type: array
+            type:
+              enum:
+                - Point
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON Point'
+          type: object
+  required:
+    - id
+    - type
+    - initialStatus
+    - startsAt
+    - endsAt
+  type: object
