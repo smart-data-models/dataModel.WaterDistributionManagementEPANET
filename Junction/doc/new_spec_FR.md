@@ -5,9 +5,10 @@ Entité : Jonction
 
 ## Liste des biens  
 
-`address`: L'adresse postale.  `areaServed`: La zone géographique où un service ou un article offert est fourni.  `demandCategory`:   `description`:   `elevation`:   `emitterCoefficient`:   `initialQuality`:   `location`:   `sourceCategory`:   `tag`:   `type`: Type d'entité NGSI-LD  ## Modèle de données description des biens  
-Classement par ordre alphabétique  
-```yaml  
+- `address`: L'adresse postale.  - `areaServed`: La zone géographique où un service ou un article offert est fourni.  - `demandCategory`:   - `description`:   - `elevation`:   - `emitterCoefficient`:   - `initialQuality`:   - `location`:   - `sourceCategory`:   - `tag`:   - `type`: Type d'entité NGSI-LD  ## Modèle de données description des biens  
+Classement par ordre alphabétique (cliquez pour plus de détails)  
+<details><summary><strong>full yaml details</strong></summary>    
+```yaml  
 Junction:    
   description: 'This entity contains a harmonised description of a generic junction made for the Water Network Management domain. This entity is primarily associated with the water network management vertical and related IoT applications.'    
   properties:    
@@ -414,6 +415,9 @@ Junction:
     - elevation    
   type: object    
 ```  
+</details>    
+## Exemples de charges utiles  
+#### Jonction NGSI V2 valeurs clés Exemple  
 Voici un exemple d'une jonction au format JSON comme valeurs clés. Il est compatible avec NGSI V2 lorsque l'on utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
@@ -444,6 +448,7 @@ Junction:
     "emitterCoefficient": 0.526  
 }  
 ```  
+#### Jonction NGSI V2 normalisée Exemple  
 Voici un exemple de jonction au format JSON normalisé. Il est compatible avec NGSI V2 lorsqu'il utilise "options=valeurs clés" et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
@@ -503,6 +508,7 @@ Junction:
     }  
 }  
 ```  
+#### Jonction NGSI-LD valeurs clés Exemple  
 Voici un exemple d'une jonction au format JSON-LD comme valeurs clés. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {"@context": ["https://schema.lab.fiware.org/ld/context"],  
@@ -519,6 +525,7 @@ Junction:
  "tag": "DMA1",  
  "type": "Junction"}  
 ```  
+#### Jonction NGSI-LD normalisée Exemple  
 Voici un exemple d'une jonction au format JSON-LD telle que normalisée. Ce format est compatible avec le format NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
