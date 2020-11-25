@@ -5,7 +5,7 @@ Entity: Pump
 
 ## List of properties  
 
-`efficCurve`:   `endsAt`:   `energyPattern`:   `energyPrice`:   `headCurve`:   `initialStatus`:   `power`:   `pumpPattern`:   `speed`:   `startsAt`:   `status`:   `tag`:   `type`: NGSI-LD Entity Type  `vertices`:   ## Data Model description of properties  
+- `efficCurve`:   - `endsAt`:   - `energyPattern`:   - `energyPrice`:   - `headCurve`:   - `initialStatus`:   - `power`:   - `pumpPattern`:   - `speed`:   - `startsAt`:   - `status`:   - `tag`:   - `type`: NGSI-LD Entity Type  - `vertices`:   ## Data Model description of properties  
 Sorted alphabetically  
 ```yaml  
 Pump:    
@@ -181,6 +181,7 @@ Pump:
     - endsAt    
   type: object    
 ```  
+#### Pump NGSI V2 key-values Example    
 Here is an example of a Pump in JSON format as key-values. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {  
@@ -199,6 +200,7 @@ Pump:
     "energyPattern": "fbcb5fc8-8ca3-4533-a2eb-34bc89262190"  
 }  
 ```  
+#### Pump NGSI V2 normalized Example    
 Here is an example of a Pump in JSON format as normalized. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {  
@@ -244,6 +246,7 @@ Pump:
     }  
 }  
 ```  
+#### Pump NGSI-LD key-values Example    
 Here is an example of a Pump in JSON-LD format as key-values. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
 ```json  
 {  
@@ -267,6 +270,7 @@ Pump:
   ]  
 }  
 ```  
+#### Pump NGSI-LD normalized Example    
 Here is an example of a Pump in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
 ```json  
 {  
