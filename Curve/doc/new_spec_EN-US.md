@@ -9,7 +9,8 @@ Entity: Curve
 Text to be included between overall title and description.  
 ## Data Model description of properties  
 Sorted alphabetically  
-```yaml  
+<details><summary><strong>full yaml details</strong></summary>    
+```yaml  
 Curve:    
   description: 'This entity contains a harmonised description of a generic curve made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.'    
   properties:    
@@ -95,6 +96,7 @@ Curve:
     - yData    
   type: object    
 ```  
+</details>    
 Text to be included after list of properties  
 #### Curve NGSI V2 key-values Example    
 Here is an example of a Curve in JSON format as key-values. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
