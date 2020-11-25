@@ -5,10 +5,10 @@ Entity: Curve
 
 ## List of properties  
 
-- `curveType`:   - `description`:   - `tag`:   - `type`: NGSI-LD Entity Type. It must be equal to Curve.  - `xData`:   - `yData`:     
+- `curveType`:   - `description`: A description of this item  - `tag`: An optional text string used to assign the curve to a category.  - `type`: NGSI-LD Entity Type. It must be equal to Curve.  - `xData`: X data points for the curve  - `yData`: Y data points for the curve    
 Text to be included between overall title and description.  
 ## Data Model description of properties  
-Sorted alphabetically  
+Sorted alphabetically (click for details)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 Curve:    
@@ -98,6 +98,7 @@ Curve:
 ```  
 </details>    
 Text to be included after list of properties  
+## Example payloads    
 #### Curve NGSI V2 key-values Example    
 Here is an example of a Curve in JSON format as key-values. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
