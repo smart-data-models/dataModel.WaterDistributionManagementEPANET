@@ -5,7 +5,7 @@ Entity: Valve
 
 ## List of properties  
 
-`diameter`:   `endsAt`:   `initialStatus`:   `minorLoss`:   `setting`:   `startsAt`:   `status`:   `tag`:   `type`: NGSI-LD Entity Type  `valveType`:   `vertices`:   ## Data Model description of properties  
+- `diameter`:   - `endsAt`:   - `initialStatus`:   - `minorLoss`:   - `setting`:   - `startsAt`:   - `status`:   - `tag`:   - `type`: NGSI-LD Entity Type  - `valveType`:   - `vertices`:   ## Data Model description of properties  
 Sorted alphabetically  
 ```yaml  
 Valve:    
@@ -220,6 +220,7 @@ Valve:
     - endsAt    
   type: object    
 ```  
+#### Valve NGSI V2 key-values Example    
 Here is an example of a Valve in JSON format as key-values. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {  
@@ -236,6 +237,7 @@ Valve:
     "endsAt": "1863179e-3768-4480-9167-ff21f870dd19"  
 }  
 ```  
+#### Valve NGSI V2 normalized Example    
 Here is an example of a Valve in JSON format as normalized. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {  
@@ -272,6 +274,7 @@ Valve:
     }  
 }  
 ```  
+#### Valve NGSI-LD key-values Example    
 Here is an example of a Valve in JSON-LD format as key-values. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
 ```json  
 {"@context": ["https://schema.lab.fiware.org/ld/context"],  
@@ -289,6 +292,7 @@ Valve:
  "type": "Valve",  
  "valveType": "PRV"}  
 ```  
+#### Valve NGSI-LD normalized Example    
 Here is an example of a Valve in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
 ```json  
 {  
