@@ -7,7 +7,8 @@ Entity: Pipe
 
 - `bulkCoeff`:   - `diameter`:   - `endsAt`:   - `initialStatus`:   - `length`:   - `minorLoss`:   - `roughness`:   - `startsAt`:   - `status`:   - `tag`:   - `type`: NGSI-LD Entity Type  - `vertices`:   - `wallCoeff`:   ## Data Model description of properties  
 Sorted alphabetically  
-```yaml  
+<details><summary><strong>full yaml details</strong></summary>    
+```yaml  
 Pipe:    
   description: 'This entity contains a harmonised description of a generic pipe made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.'    
   properties:    
@@ -181,6 +182,7 @@ Pipe:
     - endsAt    
   type: object    
 ```  
+</details>    
 #### Pipe NGSI V2 key-values Example    
 Here is an example of a Pipe in JSON format as key-values. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
