@@ -77,6 +77,7 @@
         },
         "curveType": {
             "type": "object",
+            "description": "Property. Allowed values FLOW-HEAD,FLOW-EFFICIENCY, FLOW-HEADLOSS,LEVEL-VOLUME",
             "properties": {
                 "type": {
                     "type": "string",
@@ -84,7 +85,6 @@
                         "Property"
                     ]
                 },
-                "description": "Property. Allowed values FLOW-HEAD,FLOW-EFFICIENCY, FLOW-HEADLOSS,LEVEL-VOLUME",
                 "value": {
                     "type": "string",
                     "enum": [
