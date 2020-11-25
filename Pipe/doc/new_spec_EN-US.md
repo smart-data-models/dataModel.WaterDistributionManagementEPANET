@@ -5,7 +5,7 @@ Entity: Pipe
 
 ## List of properties  
 
-`bulkCoeff`:   `diameter`:   `endsAt`:   `initialStatus`:   `length`:   `minorLoss`:   `roughness`:   `startsAt`:   `status`:   `tag`:   `type`: NGSI-LD Entity Type  `vertices`:   `wallCoeff`:   ## Data Model description of properties  
+- `bulkCoeff`:   - `diameter`:   - `endsAt`:   - `initialStatus`:   - `length`:   - `minorLoss`:   - `roughness`:   - `startsAt`:   - `status`:   - `tag`:   - `type`: NGSI-LD Entity Type  - `vertices`:   - `wallCoeff`:   ## Data Model description of properties  
 Sorted alphabetically  
 ```yaml  
 Pipe:    
@@ -181,6 +181,7 @@ Pipe:
     - endsAt    
   type: object    
 ```  
+#### Pipe NGSI V2 key-values Example    
 Here is an example of a Pipe in JSON format as key-values. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {  
@@ -200,6 +201,7 @@ Pipe:
     "wallCoeff": 72.4549  
 }  
 ```  
+#### Pipe NGSI V2 normalized Example    
 Here is an example of a Pipe in JSON format as normalized. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {  
@@ -245,6 +247,7 @@ Pipe:
     }  
 }  
 ```  
+#### Pipe NGSI-LD key-values Example    
 Here is an example of a Pipe in JSON-LD format as key-values. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
 ```json  
 {"@context": ["https://schema.lab.fiware.org/ld/context"],  
@@ -265,6 +268,7 @@ Pipe:
  "type": "Pipe",  
  "wallCoeff": 72.4549}  
 ```  
+#### Pipe NGSI-LD normalized Example    
 Here is an example of a Pipe in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
 ```json  
 {  
