@@ -5,9 +5,10 @@ Entité : Citerne
 
 ## Liste des biens  
 
-`address`: L'adresse postale.  `areaServed`: La zone géographique où un service ou un article offert est fourni.  `bulkReactionCoefficient`:   `description`:   `elevation`:   `hasInlet`:   `hasOutlet`:   `initLevel`:   `initialQuality`:   `location`:   `maxLevel`:   `minLevel`:   `minVolume`:   `mixingFraction`:   `mixingModel`:   `nominalDiameter`:   `sourceCategory`:   `tag`:   `type`: Type d'entité NGSI-LD  `volumeCurve`:   ## Modèle de données description des biens  
-Classement par ordre alphabétique  
-```yaml  
+- `address`: L'adresse postale.  - `areaServed`: La zone géographique où un service ou un article offert est fourni.  - `bulkReactionCoefficient`:   - `description`:   - `elevation`:   - `hasInlet`:   - `hasOutlet`:   - `initLevel`:   - `initialQuality`:   - `location`:   - `maxLevel`:   - `minLevel`:   - `minVolume`:   - `mixingFraction`:   - `mixingModel`:   - `nominalDiameter`:   - `sourceCategory`:   - `tag`:   - `type`: Type d'entité NGSI-LD  - `volumeCurve`:   ## Modèle de données description des biens  
+Classement par ordre alphabétique (cliquez pour plus de détails)  
+<details><summary><strong>full yaml details</strong></summary>    
+```yaml  
 Tank:    
   description: 'This entity contains a harmonised description of a generic tank made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.'    
   properties:    
@@ -429,6 +430,9 @@ Tank:
     - nominalDiameter    
   type: object    
 ```  
+</details>    
+## Exemples de charges utiles  
+#### Tank NGSI V2 key-values Exemple  
 Voici un exemple de réservoir au format JSON comme valeurs clés. Il est compatible avec NGSI V2 lorsqu'il utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
@@ -462,6 +466,7 @@ Tank:
     "tag": "DMA1"  
 }  
 ```  
+#### Réservoir NGSI V2 normalisé Exemple  
 Voici un exemple de réservoir au format JSON normalisé. Il est compatible avec NGSI V2 lorsqu'il utilise "options=valeurs clés" et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
@@ -534,6 +539,7 @@ Tank:
     }  
 }  
 ```  
+#### Citerne NGSI-LD valeurs clés Exemple  
 Voici un exemple de réservoir au format JSON-LD comme valeurs clés. Ce format est compatible avec le format JSON-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {"@context": ["https://schema.lab.fiware.org/ld/context"],  
@@ -557,6 +563,7 @@ Tank:
  "type": "Tank",  
  "volumeCurve": "urn:ngsi-ld:Curve:fAM-8ca3-4533-a2eb-12015"}  
 ```  
+#### Citerne NGSI-LD normalisée Exemple  
 Voici un exemple de réservoir au format JSON-LD tel que normalisé. Il est compatible avec le format JSON-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
