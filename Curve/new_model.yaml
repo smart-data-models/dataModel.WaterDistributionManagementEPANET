@@ -2,11 +2,11 @@ Curve:
   description: 'This entity contains a harmonised description of a generic curve made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.'
   properties:
     curveType:
+      description: 'Allowed values FLOW-HEAD,FLOW-EFFICIENCY, FLOW-HEADLOSS,LEVEL-VOLUME'
       properties:
         createdAt:
           format: date-time
           type: string
-        description: 'Property. Allowed values FLOW-HEAD,FLOW-EFFICIENCY, FLOW-HEADLOSS,LEVEL-VOLUME'
         modifiedAt:
           format: date-time
           type: string
@@ -29,7 +29,7 @@ Curve:
       required:
         - type
         - value
-      type: object
+      type: Property
     description:
       description: 'A description of this item'
       type: Property
