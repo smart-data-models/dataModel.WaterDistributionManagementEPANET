@@ -5,9 +5,10 @@ Entité : Pipe
 
 ## Liste des biens  
 
-`bulkCoeff`:   `diameter`:   `endsAt`:   `initialStatus`:   `length`:   `minorLoss`:   `roughness`:   `startsAt`:   `status`:   `tag`:   `type`: Type d'entité NGSI-LD  `vertices`:   `wallCoeff`:   ## Modèle de données description des biens  
-Classement par ordre alphabétique  
-```yaml  
+- `bulkCoeff`:   - `diameter`:   - `endsAt`:   - `initialStatus`:   - `length`:   - `minorLoss`:   - `roughness`:   - `startsAt`:   - `status`:   - `tag`:   - `type`: Type d'entité NGSI-LD  - `vertices`:   - `wallCoeff`:   ## Modèle de données description des biens  
+Classement par ordre alphabétique (cliquez pour plus de détails)  
+<details><summary><strong>full yaml details</strong></summary>    
+```yaml  
 Pipe:    
   description: 'This entity contains a harmonised description of a generic pipe made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.'    
   properties:    
@@ -181,6 +182,9 @@ Pipe:
     - endsAt    
   type: object    
 ```  
+</details>    
+## Exemples de charges utiles  
+#### Pipe NGSI V2 key-values Exemple  
 Voici un exemple de Pipe en format JSON comme valeurs clés. Il est compatible avec NGSI V2 lorsqu'il utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
@@ -200,6 +204,7 @@ Pipe:
     "wallCoeff": 72.4549  
 }  
 ```  
+#### Tuyau NGSI V2 normalisé Exemple  
 Voici un exemple de tuyau au format JSON tel que normalisé. Il est compatible avec NGSI V2 lorsqu'il utilise "options=valeurs clés" et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
@@ -245,6 +250,7 @@ Pipe:
     }  
 }  
 ```  
+#### Tuyau Valeurs clés NGSI-LD Exemple  
 Voici un exemple de Pipe en format JSON-LD comme valeurs clés. Il est compatible avec le format JSON-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {"@context": ["https://schema.lab.fiware.org/ld/context"],  
@@ -265,6 +271,7 @@ Pipe:
  "type": "Pipe",  
  "wallCoeff": 72.4549}  
 ```  
+#### Tuyau NGSI-LD normalisé Exemple  
 Voici un exemple de tuyau au format JSON-LD tel que normalisé. Il est compatible avec le format JSON-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
