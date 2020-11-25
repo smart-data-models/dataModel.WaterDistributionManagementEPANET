@@ -5,7 +5,7 @@ Entité : Courbe
 
 ## Liste des biens  
 
-- `curveType`:   - `description`:   - `tag`:   - `type`: Type d'entité NGSI-LD. Il doit être égal à Curve.  - `xData`:   - `yData`:     
+- `curveType`:   - `description`: Une description de cet article  - `tag`: Une chaîne de texte optionnelle utilisée pour assigner la courbe à une catégorie.  - `type`: Type d'entité NGSI-LD. Il doit être égal à Curve.  - `xData`: X points de données pour la courbe  - `yData`: Points de données Y pour la courbe    
 Texte à inclure entre le titre général et la description.  
 ## Modèle de données description des biens  
 Classement par ordre alphabétique (cliquez pour plus de détails)  
