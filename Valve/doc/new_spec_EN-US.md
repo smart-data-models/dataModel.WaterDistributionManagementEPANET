@@ -7,7 +7,8 @@ Entity: Valve
 
 - `diameter`:   - `endsAt`:   - `initialStatus`:   - `minorLoss`:   - `setting`:   - `startsAt`:   - `status`:   - `tag`:   - `type`: NGSI-LD Entity Type  - `valveType`:   - `vertices`:   ## Data Model description of properties  
 Sorted alphabetically  
-```yaml  
+<details><summary><strong>full yaml details</strong></summary>    
+```yaml  
 Valve:    
   description: 'This entity contains a harmonised description of a generic Valve made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.'    
   properties:    
@@ -220,6 +221,7 @@ Valve:
     - endsAt    
   type: object    
 ```  
+</details>    
 #### Valve NGSI V2 key-values Example    
 Here is an example of a Valve in JSON format as key-values. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
