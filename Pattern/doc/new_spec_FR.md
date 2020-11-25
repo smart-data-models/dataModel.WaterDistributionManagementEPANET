@@ -5,9 +5,10 @@ Entité : Modèle
 
 ## Liste des biens  
 
-`description`:   `multipliers`:   `startTime`:   `tag`:   `timeStep`:   `type`: Type d'entité NGSI-LD  ## Modèle de données description des biens  
-Classement par ordre alphabétique  
-```yaml  
+- `description`:   - `multipliers`:   - `startTime`:   - `tag`:   - `timeStep`:   - `type`: Type d'entité NGSI-LD  ## Modèle de données description des biens  
+Classement par ordre alphabétique (cliquez pour plus de détails)  
+<details><summary><strong>full yaml details</strong></summary>    
+```yaml  
 Pattern:    
   description: 'This entity contains a harmonised description of a generic pattern made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.'    
   properties:    
@@ -66,6 +67,9 @@ Pattern:
     - startTime    
   type: object    
 ```  
+</details>    
+## Exemples de charges utiles  
+#### Modèle des valeurs clés de l'INSG V2 Exemple  
 Voici un exemple de modèle au format JSON comme valeurs clés. Il est compatible avec NGSI V2 lorsqu'il utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
@@ -84,6 +88,7 @@ Pattern:
     "tag": "DMA1"  
 }  
 ```  
+#### Modèle NGSI V2 normalisé Exemple  
 Voici un exemple d'un modèle au format JSON tel que normalisé. Il est compatible avec NGSI V2 lorsqu'il utilise "options=valeurs clés" et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
@@ -110,6 +115,7 @@ Pattern:
     }  
 }  
 ```  
+#### Modèle des valeurs clés de l'INSG-LD Exemple  
 Voici un exemple de modèle au format JSON-LD comme valeurs clés. Ce modèle est compatible avec le format JSON-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {"@context": ["https://schema.lab.fiware.org/ld/context"],  
@@ -123,6 +129,7 @@ Pattern:
  "timeStep": 3600,  
  "type": "Pattern"}  
 ```  
+#### Modèle NGSI-LD normalisé Exemple  
 Voici un exemple de modèle au format JSON-LD tel que normalisé. Il est compatible avec le format NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
