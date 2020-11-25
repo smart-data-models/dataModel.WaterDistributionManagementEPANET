@@ -5,7 +5,7 @@ Entity: Curve
 
 ## List of properties  
 
-`curveType`:   `description`:   `tag`:   `type`: NGSI-LD Entity Type. It must be equal to Curve.  `xData`:   `yData`:     
+- `curveType`:   - `description`:   - `tag`:   - `type`: NGSI-LD Entity Type. It must be equal to Curve.  - `xData`:   - `yData`:     
 Text to be included between overall title and description.  
 ## Data Model description of properties  
 Sorted alphabetically  
@@ -96,6 +96,7 @@ Curve:
   type: object    
 ```  
 Text to be included after list of properties  
+#### Curve NGSI V2 key-values Example    
 Here is an example of a Curve in JSON format as key-values. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {  
@@ -129,6 +130,7 @@ Curve:
   }  
 }  
 ```  
+#### Curve NGSI V2 normalized Example    
 Here is an example of a Curve in JSON format as normalized. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {  
@@ -165,6 +167,7 @@ Curve:
     }  
 }  
 ```  
+#### Curve NGSI-LD key-values Example    
 Here is an example of a Curve in JSON-LD format as key-values. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
 ```json  
 {  
@@ -201,6 +204,7 @@ Curve:
   }  
 }  
 ```  
+#### Curve NGSI-LD normalized Example    
 Here is an example of a Curve in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
 ```json  
 {  
