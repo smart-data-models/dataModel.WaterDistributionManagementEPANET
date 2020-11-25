@@ -5,7 +5,7 @@ Entity: Reservoir
 
 ## List of properties  
 
-`address`: The mailing address.  `areaServed`: The geographic area where a service or offered item is provided.  `description`:   `elevation`:   `hasInlet`:   `hasOutlet`:   `headPattern`:   `initialQuality`:   `location`:   `reservoirHead`:   `sourceCategory`:   `tag`:   `type`: NGSI-LD Entity Type  ## Data Model description of properties  
+- `address`: The mailing address.  - `areaServed`: The geographic area where a service or offered item is provided.  - `description`:   - `elevation`:   - `hasInlet`:   - `hasOutlet`:   - `headPattern`:   - `initialQuality`:   - `location`:   - `reservoirHead`:   - `sourceCategory`:   - `tag`:   - `type`: NGSI-LD Entity Type  ## Data Model description of properties  
 Sorted alphabetically  
 ```yaml  
 Reservoir:    
@@ -370,6 +370,7 @@ Reservoir:
     - reservoirHead    
   type: object    
 ```  
+#### Reservoir NGSI V2 key-values Example    
 Here is an example of a Reservoir in JSON format as key-values. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {  
@@ -396,6 +397,7 @@ Reservoir:
     "tag": "DMA1"  
 }  
 ```  
+#### Reservoir NGSI V2 normalized Example    
 Here is an example of a Reservoir in JSON format as normalized. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {  
@@ -447,6 +449,7 @@ Reservoir:
     }  
 }  
 ```  
+#### Reservoir NGSI-LD key-values Example    
 Here is an example of a Reservoir in JSON-LD format as key-values. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
 ```json  
 {"@context": ["https://schema.lab.fiware.org/ld/context"],  
@@ -463,6 +466,7 @@ Reservoir:
  "tag": "DMA1",  
  "type": "Reservoir"}  
 ```  
+#### Reservoir NGSI-LD normalized Example    
 Here is an example of a Reservoir in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
 ```json  
 {  
