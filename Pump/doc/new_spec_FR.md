@@ -5,9 +5,10 @@ Entité : Pompe
 
 ## Liste des biens  
 
-`efficCurve`:   `endsAt`:   `energyPattern`:   `energyPrice`:   `headCurve`:   `initialStatus`:   `power`:   `pumpPattern`:   `speed`:   `startsAt`:   `status`:   `tag`:   `type`: Type d'entité NGSI-LD  `vertices`:   ## Modèle de données description des biens  
-Classement par ordre alphabétique  
-```yaml  
+- `efficCurve`:   - `endsAt`:   - `energyPattern`:   - `energyPrice`:   - `headCurve`:   - `initialStatus`:   - `power`:   - `pumpPattern`:   - `speed`:   - `startsAt`:   - `status`:   - `tag`:   - `type`: Type d'entité NGSI-LD  - `vertices`:   ## Modèle de données description des biens  
+Classement par ordre alphabétique (cliquez pour plus de détails)  
+<details><summary><strong>full yaml details</strong></summary>    
+```yaml  
 Pump:    
   description: 'This entity contains a harmonised description of a generic pump made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.'    
   properties:    
@@ -181,6 +182,9 @@ Pump:
     - endsAt    
   type: object    
 ```  
+</details>    
+## Exemples de charges utiles  
+#### Pompe NGSI V2 valeurs clés Exemple  
 Voici un exemple d'une pompe au format JSON comme valeurs clés. Il est compatible avec NGSI V2 lorsqu'il utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
@@ -199,6 +203,7 @@ Pump:
     "energyPattern": "fbcb5fc8-8ca3-4533-a2eb-34bc89262190"  
 }  
 ```  
+#### Pompe NGSI V2 normalisée Exemple  
 Voici un exemple de pompe au format JSON normalisé. Il est compatible avec NGSI V2 lorsqu'il utilise `options=keyValues` et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
@@ -244,6 +249,7 @@ Pump:
     }  
 }  
 ```  
+#### Pompe NGSI-LD valeurs clés Exemple  
 Voici un exemple d'une pompe au format JSON-LD comme valeurs clés. Ce format est compatible avec le format NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
@@ -267,7 +273,8 @@ Pump:
   ]  
 }  
 ```  
-Voici un exemple d'une pompe au format JSON-LD telle que normalisée. Il est compatible avec le format NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
+#### Pompe NGSI-LD normalisée Exemple  
+Voici un exemple de pompe au format JSON-LD normalisé. Il est compatible avec le format NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
     "id": "urn:ngsi-ld:Pump:85zhnf58-0d4c-h4g854g-b7d0-3310klm",  
