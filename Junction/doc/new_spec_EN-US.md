@@ -7,7 +7,8 @@ Entity: Junction
 
 - `address`: The mailing address.  - `areaServed`: The geographic area where a service or offered item is provided.  - `demandCategory`:   - `description`:   - `elevation`:   - `emitterCoefficient`:   - `initialQuality`:   - `location`:   - `sourceCategory`:   - `tag`:   - `type`: NGSI-LD Entity Type  ## Data Model description of properties  
 Sorted alphabetically  
-```yaml  
+<details><summary><strong>full yaml details</strong></summary>    
+```yaml  
 Junction:    
   description: 'This entity contains a harmonised description of a generic junction made for the Water Network Management domain. This entity is primarily associated with the water network management vertical and related IoT applications.'    
   properties:    
@@ -414,6 +415,7 @@ Junction:
     - elevation    
   type: object    
 ```  
+</details>    
 #### Junction NGSI V2 key-values Example    
 Here is an example of a Junction in JSON format as key-values. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
