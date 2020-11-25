@@ -5,11 +5,12 @@ Entité : Courbe
 
 ## Liste des biens  
 
-`curveType`:   `description`:   `tag`:   `type`: Type d'entité NGSI-LD. Il doit être égal à Curve.  `xData`:   `yData`:     
+- `curveType`:   - `description`:   - `tag`:   - `type`: Type d'entité NGSI-LD. Il doit être égal à Curve.  - `xData`:   - `yData`:     
 Texte à inclure entre le titre général et la description.  
 ## Modèle de données description des biens  
-Classement par ordre alphabétique  
-```yaml  
+Classement par ordre alphabétique (cliquez pour plus de détails)  
+<details><summary><strong>full yaml details</strong></summary>    
+```yaml  
 Curve:    
   description: 'This entity contains a harmonised description of a generic curve made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.'    
   properties:    
@@ -95,7 +96,10 @@ Curve:
     - yData    
   type: object    
 ```  
+</details>    
 Texte à inclure après la liste des biens  
+## Exemples de charges utiles  
+#### Courbe NGSI V2 valeurs clés Exemple  
 Voici un exemple de courbe au format JSON comme valeurs clés. Elle est compatible avec NGSI V2 lorsque l'on utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
@@ -129,6 +133,7 @@ Curve:
   }  
 }  
 ```  
+#### Courbe NGSI V2 normalisée Exemple  
 Voici un exemple de courbe au format JSON normalisé. Elle est compatible avec NGSI V2 lorsque l'on utilise "options=valeurs clés" et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
@@ -165,6 +170,7 @@ Curve:
     }  
 }  
 ```  
+#### Courbe NGSI-LD valeurs clés Exemple  
 Voici un exemple de courbe au format JSON-LD comme valeurs clés. Cette courbe est compatible avec le format JSON-LD lorsqu'elle n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
@@ -201,6 +207,7 @@ Curve:
   }  
 }  
 ```  
+#### Courbe NGSI-LD normalisée Exemple  
 Voici un exemple d'une courbe au format JSON-LD telle que normalisée. Cette courbe est compatible avec le format JSON-LD lorsqu'elle n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
