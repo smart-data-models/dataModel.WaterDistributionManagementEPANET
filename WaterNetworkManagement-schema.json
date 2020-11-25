@@ -84,12 +84,9 @@
                         "Property"
                     ]
                 },
+                "description": "Property. Allowed values FLOW-HEAD,FLOW-EFFICIENCY, FLOW-HEADLOSS,LEVEL-VOLUME",
                 "value": {
-                    "type": [
-                        "number",
-                        "string",
-                        "array"
-                    ],
+                    "type": "string",
                     "enum": [
                         "FLOW-HEAD",
                         "FLOW-EFFICIENCY",
