@@ -7,7 +7,8 @@ Entity: Tank
 
 - `address`: The mailing address.  - `areaServed`: The geographic area where a service or offered item is provided.  - `bulkReactionCoefficient`:   - `description`:   - `elevation`:   - `hasInlet`:   - `hasOutlet`:   - `initLevel`:   - `initialQuality`:   - `location`:   - `maxLevel`:   - `minLevel`:   - `minVolume`:   - `mixingFraction`:   - `mixingModel`:   - `nominalDiameter`:   - `sourceCategory`:   - `tag`:   - `type`: NGSI-LD Entity Type  - `volumeCurve`:   ## Data Model description of properties  
 Sorted alphabetically  
-```yaml  
+<details><summary><strong>full yaml details</strong></summary>    
+```yaml  
 Tank:    
   description: 'This entity contains a harmonised description of a generic tank made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.'    
   properties:    
@@ -429,6 +430,7 @@ Tank:
     - nominalDiameter    
   type: object    
 ```  
+</details>    
 #### Tank NGSI V2 key-values Example    
 Here is an example of a Tank in JSON format as key-values. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
