@@ -5,9 +5,10 @@ Entité : Réservoir
 
 ## Liste des biens  
 
-`address`: L'adresse postale.  `areaServed`: La zone géographique où un service ou un article offert est fourni.  `description`:   `elevation`:   `hasInlet`:   `hasOutlet`:   `headPattern`:   `initialQuality`:   `location`:   `reservoirHead`:   `sourceCategory`:   `tag`:   `type`: Type d'entité NGSI-LD  ## Modèle de données description des biens  
-Classement par ordre alphabétique  
-```yaml  
+- `address`: L'adresse postale.  - `areaServed`: La zone géographique où un service ou un article offert est fourni.  - `description`:   - `elevation`:   - `hasInlet`:   - `hasOutlet`:   - `headPattern`:   - `initialQuality`:   - `location`:   - `reservoirHead`:   - `sourceCategory`:   - `tag`:   - `type`: Type d'entité NGSI-LD  ## Modèle de données description des biens  
+Classement par ordre alphabétique (cliquez pour plus de détails)  
+<details><summary><strong>full yaml details</strong></summary>    
+```yaml  
 Reservoir:    
   description: 'This entity contains a harmonised description of a generic Reservoir made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.'    
   properties:    
@@ -370,6 +371,9 @@ Reservoir:
     - reservoirHead    
   type: object    
 ```  
+</details>    
+## Exemples de charges utiles  
+#### Réservoir NGSI V2 valeurs clés Exemple  
 Voici un exemple de réservoir au format JSON en tant que valeurs clés. Il est compatible avec NGSI V2 lorsqu'il utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
@@ -396,6 +400,7 @@ Reservoir:
     "tag": "DMA1"  
 }  
 ```  
+#### Réservoir NGSI V2 normalisé Exemple  
 Voici un exemple de réservoir au format JSON tel que normalisé. Il est compatible avec NGSI V2 lorsqu'il utilise "options=valeurs clés" et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
@@ -447,6 +452,7 @@ Reservoir:
     }  
 }  
 ```  
+#### Réservoir NGSI-LD valeurs clés Exemple  
 Voici un exemple de réservoir au format JSON-LD comme valeurs clés. Ce format est compatible avec le format JSON-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {"@context": ["https://schema.lab.fiware.org/ld/context"],  
@@ -463,6 +469,7 @@ Reservoir:
  "tag": "DMA1",  
  "type": "Reservoir"}  
 ```  
+#### Réservoir NGSI-LD normalisé Exemple  
 Voici un exemple de réservoir au format JSON-LD tel que normalisé. Ce format est compatible avec JSON-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
