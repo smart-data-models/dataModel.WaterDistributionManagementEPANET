@@ -5,7 +5,7 @@ Entity: Junction
 
 ## List of properties  
 
-`address`: The mailing address.  `areaServed`: The geographic area where a service or offered item is provided.  `demandCategory`:   `description`:   `elevation`:   `emitterCoefficient`:   `initialQuality`:   `location`:   `sourceCategory`:   `tag`:   `type`: NGSI-LD Entity Type  ## Data Model description of properties  
+- `address`: The mailing address.  - `areaServed`: The geographic area where a service or offered item is provided.  - `demandCategory`:   - `description`:   - `elevation`:   - `emitterCoefficient`:   - `initialQuality`:   - `location`:   - `sourceCategory`:   - `tag`:   - `type`: NGSI-LD Entity Type  ## Data Model description of properties  
 Sorted alphabetically  
 ```yaml  
 Junction:    
@@ -414,6 +414,7 @@ Junction:
     - elevation    
   type: object    
 ```  
+#### Junction NGSI V2 key-values Example    
 Here is an example of a Junction in JSON format as key-values. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {  
@@ -444,6 +445,7 @@ Junction:
     "emitterCoefficient": 0.526  
 }  
 ```  
+#### Junction NGSI V2 normalized Example    
 Here is an example of a Junction in JSON format as normalized. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {  
@@ -503,6 +505,7 @@ Junction:
     }  
 }  
 ```  
+#### Junction NGSI-LD key-values Example    
 Here is an example of a Junction in JSON-LD format as key-values. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
 ```json  
 {"@context": ["https://schema.lab.fiware.org/ld/context"],  
@@ -519,6 +522,7 @@ Junction:
  "tag": "DMA1",  
  "type": "Junction"}  
 ```  
+#### Junction NGSI-LD normalized Example    
 Here is an example of a Junction in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
 ```json  
 {  
