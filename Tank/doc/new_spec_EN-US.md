@@ -5,7 +5,7 @@ Entity: Tank
 
 ## List of properties  
 
-`address`: The mailing address.  `areaServed`: The geographic area where a service or offered item is provided.  `bulkReactionCoefficient`:   `description`:   `elevation`:   `hasInlet`:   `hasOutlet`:   `initLevel`:   `initialQuality`:   `location`:   `maxLevel`:   `minLevel`:   `minVolume`:   `mixingFraction`:   `mixingModel`:   `nominalDiameter`:   `sourceCategory`:   `tag`:   `type`: NGSI-LD Entity Type  `volumeCurve`:   ## Data Model description of properties  
+- `address`: The mailing address.  - `areaServed`: The geographic area where a service or offered item is provided.  - `bulkReactionCoefficient`:   - `description`:   - `elevation`:   - `hasInlet`:   - `hasOutlet`:   - `initLevel`:   - `initialQuality`:   - `location`:   - `maxLevel`:   - `minLevel`:   - `minVolume`:   - `mixingFraction`:   - `mixingModel`:   - `nominalDiameter`:   - `sourceCategory`:   - `tag`:   - `type`: NGSI-LD Entity Type  - `volumeCurve`:   ## Data Model description of properties  
 Sorted alphabetically  
 ```yaml  
 Tank:    
@@ -429,6 +429,7 @@ Tank:
     - nominalDiameter    
   type: object    
 ```  
+#### Tank NGSI V2 key-values Example    
 Here is an example of a Tank in JSON format as key-values. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {  
@@ -462,6 +463,7 @@ Tank:
     "tag": "DMA1"  
 }  
 ```  
+#### Tank NGSI V2 normalized Example    
 Here is an example of a Tank in JSON format as normalized. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {  
@@ -534,6 +536,7 @@ Tank:
     }  
 }  
 ```  
+#### Tank NGSI-LD key-values Example    
 Here is an example of a Tank in JSON-LD format as key-values. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
 ```json  
 {"@context": ["https://schema.lab.fiware.org/ld/context"],  
@@ -557,6 +560,7 @@ Tank:
  "type": "Tank",  
  "volumeCurve": "urn:ngsi-ld:Curve:fAM-8ca3-4533-a2eb-12015"}  
 ```  
+#### Tank NGSI-LD normalized Example    
 Here is an example of a Tank in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
 ```json  
 {  
