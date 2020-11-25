@@ -5,7 +5,7 @@ Entity: Curve
 
 ## List of properties  
 
-- `curveType`:   - `description`: A description of this item  - `tag`: An optional text string used to assign the curve to a category.  - `type`: NGSI-LD Entity Type. It must be equal to Curve.  - `xData`: X data points for the curve  - `yData`: Y data points for the curve    
+- `curveType`: Allowed values FLOW-HEAD,FLOW-EFFICIENCY, FLOW-HEADLOSS,LEVEL-VOLUME  - `description`: A description of this item  - `tag`: An optional text string used to assign the curve to a category.  - `type`: NGSI-LD Entity Type. It must be equal to Curve.  - `xData`: X data points for the curve  - `yData`: Y data points for the curve    
 Text to be included between overall title and description.  
 ## Data Model description of properties  
 Sorted alphabetically (click for details)  
@@ -15,11 +15,11 @@ Curve:
   description: 'This entity contains a harmonised description of a generic curve made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.'    
   properties:    
     curveType:    
+      description: 'Allowed values FLOW-HEAD,FLOW-EFFICIENCY, FLOW-HEADLOSS,LEVEL-VOLUME'    
       properties:    
         createdAt:    
           format: date-time    
           type: string    
-        description: 'Property. Allowed values FLOW-HEAD,FLOW-EFFICIENCY, FLOW-HEADLOSS,LEVEL-VOLUME'    
         modifiedAt:    
           format: date-time    
           type: string    
@@ -42,7 +42,7 @@ Curve:
       required:    
         - type    
         - value    
-      type: object    
+      type: Property    
     description:    
       description: 'A description of this item'    
       type: Property    
