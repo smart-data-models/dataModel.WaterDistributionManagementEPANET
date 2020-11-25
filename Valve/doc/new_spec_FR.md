@@ -5,9 +5,10 @@ Entité : Valve
 
 ## Liste des biens  
 
-`diameter`:   `endsAt`:   `initialStatus`:   `minorLoss`:   `setting`:   `startsAt`:   `status`:   `tag`:   `type`: Type d'entité NGSI-LD  `valveType`:   `vertices`:   ## Modèle de données description des biens  
-Classement par ordre alphabétique  
-```yaml  
+- `diameter`:   - `endsAt`:   - `initialStatus`:   - `minorLoss`:   - `setting`:   - `startsAt`:   - `status`:   - `tag`:   - `type`: Type d'entité NGSI-LD  - `valveType`:   - `vertices`:   ## Modèle de données description des biens  
+Classement par ordre alphabétique (cliquez pour plus de détails)  
+<details><summary><strong>full yaml details</strong></summary>    
+```yaml  
 Valve:    
   description: 'This entity contains a harmonised description of a generic Valve made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.'    
   properties:    
@@ -220,6 +221,9 @@ Valve:
     - endsAt    
   type: object    
 ```  
+</details>    
+## Exemples de charges utiles  
+#### Valve NGSI V2 valeurs clés Exemple  
 Voici un exemple d'une vanne au format JSON comme valeurs clés. Il est compatible avec NGSI V2 lorsqu'il utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
@@ -236,6 +240,7 @@ Valve:
     "endsAt": "1863179e-3768-4480-9167-ff21f870dd19"  
 }  
 ```  
+#### Valve NGSI V2 normalisée Exemple  
 Voici un exemple de vanne au format JSON normalisé. Il est compatible avec NGSI V2 lorsqu'il utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
@@ -272,6 +277,7 @@ Valve:
     }  
 }  
 ```  
+#### Valve NGSI-LD key-values Exemple  
 Voici un exemple d'une vanne au format JSON-LD comme valeurs clés. Ce format est compatible avec le format NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {"@context": ["https://schema.lab.fiware.org/ld/context"],  
@@ -289,6 +295,7 @@ Valve:
  "type": "Valve",  
  "valveType": "PRV"}  
 ```  
+#### Valve NGSI-LD normalisée Exemple  
 Voici un exemple de vanne au format JSON-LD normalisé. Il est compatible avec le format NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
