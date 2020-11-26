@@ -5,8 +5,10 @@ Entity: Reservoir
 
 ## List of properties  
 
-- `address`: The mailing address.  - `areaServed`: The geographic area where a service or offered item is provided.  - `description`:   - `elevation`:   - `hasInlet`:   - `hasOutlet`:   - `headPattern`:   - `initialQuality`:   - `location`:   - `reservoirHead`:   - `sourceCategory`:   - `tag`:   - `type`: NGSI-LD Entity Type  ## Data Model description of properties  
-Sorted alphabetically  
+- `address`: The mailing address.  - `areaServed`: The geographic area where a service or offered item is provided.  - `description`:   - `elevation`:   - `hasInlet`:   - `hasOutlet`:   - `headPattern`:   - `initialQuality`:   - `location`:   - `reservoirHead`:   - `sourceCategory`:   - `tag`:   - `type`: NGSI-LD Entity Type    
+Required properties  
+- `id`  - `location`  - `reservoirHead`  - `type`  ## Data Model description of properties  
+Sorted alphabetically (click for details)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 Reservoir:    
@@ -372,6 +374,7 @@ Reservoir:
   type: object    
 ```  
 </details>    
+## Example payloads    
 #### Reservoir NGSI V2 key-values Example    
 Here is an example of a Reservoir in JSON format as key-values. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
@@ -400,7 +403,7 @@ Reservoir:
 }  
 ```  
 #### Reservoir NGSI V2 normalized Example    
-Here is an example of a Reservoir in JSON format as normalized. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
+Here is an example of a Reservoir in JSON format as normalized. This is compatible with NGSI V2 when not using options and returns the context data of an individual entity.  
 ```json  
 {  
     "id": "1863179e-3768-4480-9167-ff21f870dd19",  
@@ -452,7 +455,7 @@ Reservoir:
 }  
 ```  
 #### Reservoir NGSI-LD key-values Example    
-Here is an example of a Reservoir in JSON-LD format as key-values. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
+Here is an example of a Reservoir in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {"@context": ["https://schema.lab.fiware.org/ld/context"],  
  "createdAt": "2020-03-02T15:42:00Z",  
