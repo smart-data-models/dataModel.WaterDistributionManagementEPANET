@@ -6,6 +6,12 @@ Entity: Curve
 ## List of properties  
 
 - `curveType`: Allowed values FLOW-HEAD,FLOW-EFFICIENCY, FLOW-HEADLOSS,LEVEL-VOLUME  - `description`: A description of this item  - `tag`: An optional text string used to assign the curve to a category.  - `type`: NGSI-LD Entity Type. It must be equal to Curve.  - `xData`: X data points for the curve  - `yData`: Y data points for the curve    
+Required properties  
+- `id`    
+- `type`    
+- `curveType`    
+- `xData`    
+- `yData`    
 Text to be included between overall title and description.  
 ## Data Model description of properties  
 Sorted alphabetically (click for details)  
@@ -112,7 +118,7 @@ Curve:
 }  
 ```  
 #### Curve NGSI V2 normalized Example    
-Here is an example of a Curve in JSON format as normalized. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
+Here is an example of a Curve in JSON format as normalized. This is compatible with NGSI V2 when not using options and returns the context data of an individual entity.  
 ```json  
 {  
     "id": "fAM-8ca3-4533-a2eb-12015",  
@@ -149,7 +155,7 @@ Curve:
 }  
 ```  
 #### Curve NGSI-LD key-values Example    
-Here is an example of a Curve in JSON-LD format as key-values. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
+Here is an example of a Curve in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {  
   "@context": [  
