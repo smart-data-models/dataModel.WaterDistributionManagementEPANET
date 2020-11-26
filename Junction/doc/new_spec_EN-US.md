@@ -5,8 +5,10 @@ Entity: Junction
 
 ## List of properties  
 
-- `address`: The mailing address.  - `areaServed`: The geographic area where a service or offered item is provided.  - `demandCategory`:   - `description`:   - `elevation`:   - `emitterCoefficient`:   - `initialQuality`:   - `location`:   - `sourceCategory`:   - `tag`:   - `type`: NGSI-LD Entity Type  ## Data Model description of properties  
-Sorted alphabetically  
+- `address`: The mailing address.  - `areaServed`: The geographic area where a service or offered item is provided.  - `demandCategory`:   - `description`:   - `elevation`:   - `emitterCoefficient`:   - `initialQuality`:   - `location`:   - `sourceCategory`:   - `tag`:   - `type`: NGSI-LD Entity Type    
+Required properties  
+- `elevation`  - `id`  - `location`  - `type`  ## Data Model description of properties  
+Sorted alphabetically (click for details)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 Junction:    
@@ -416,6 +418,7 @@ Junction:
   type: object    
 ```  
 </details>    
+## Example payloads    
 #### Junction NGSI V2 key-values Example    
 Here is an example of a Junction in JSON format as key-values. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
@@ -448,7 +451,7 @@ Junction:
 }  
 ```  
 #### Junction NGSI V2 normalized Example    
-Here is an example of a Junction in JSON format as normalized. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
+Here is an example of a Junction in JSON format as normalized. This is compatible with NGSI V2 when not using options and returns the context data of an individual entity.  
 ```json  
 {  
     "id": "63fe7d79-0d4c-4da9-b7d0-3340efa0656a",  
@@ -508,7 +511,7 @@ Junction:
 }  
 ```  
 #### Junction NGSI-LD key-values Example    
-Here is an example of a Junction in JSON-LD format as key-values. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
+Here is an example of a Junction in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {"@context": ["https://schema.lab.fiware.org/ld/context"],  
  "createdAt": "2020-02-20T15:42:00Z",  
