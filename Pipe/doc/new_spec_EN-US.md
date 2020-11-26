@@ -5,8 +5,10 @@ Entity: Pipe
 
 ## List of properties  
 
-- `bulkCoeff`:   - `diameter`:   - `endsAt`:   - `initialStatus`:   - `length`:   - `minorLoss`:   - `roughness`:   - `startsAt`:   - `status`:   - `tag`:   - `type`: NGSI-LD Entity Type  - `vertices`:   - `wallCoeff`:   ## Data Model description of properties  
-Sorted alphabetically  
+- `bulkCoeff`:   - `diameter`:   - `endsAt`:   - `initialStatus`:   - `length`:   - `minorLoss`:   - `roughness`:   - `startsAt`:   - `status`:   - `tag`:   - `type`: NGSI-LD Entity Type  - `vertices`:   - `wallCoeff`:     
+Required properties  
+- `diameter`  - `endsAt`  - `id`  - `initialStatus`  - `length`  - `minorLoss`  - `roughness`  - `startsAt`  - `type`  ## Data Model description of properties  
+Sorted alphabetically (click for details)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 Pipe:    
@@ -183,6 +185,7 @@ Pipe:
   type: object    
 ```  
 </details>    
+## Example payloads    
 #### Pipe NGSI V2 key-values Example    
 Here is an example of a Pipe in JSON format as key-values. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
@@ -204,7 +207,7 @@ Pipe:
 }  
 ```  
 #### Pipe NGSI V2 normalized Example    
-Here is an example of a Pipe in JSON format as normalized. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
+Here is an example of a Pipe in JSON format as normalized. This is compatible with NGSI V2 when not using options and returns the context data of an individual entity.  
 ```json  
 {  
     "id": "74azsty-70d4l-4da9-b7d0-3340ef655nnb",  
@@ -250,7 +253,7 @@ Pipe:
 }  
 ```  
 #### Pipe NGSI-LD key-values Example    
-Here is an example of a Pipe in JSON-LD format as key-values. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
+Here is an example of a Pipe in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {"@context": ["https://schema.lab.fiware.org/ld/context"],  
  "bulkCoeff": 72.4549,  
