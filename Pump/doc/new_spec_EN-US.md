@@ -5,8 +5,10 @@ Entity: Pump
 
 ## List of properties  
 
-- `efficCurve`:   - `endsAt`:   - `energyPattern`:   - `energyPrice`:   - `headCurve`:   - `initialStatus`:   - `power`:   - `pumpPattern`:   - `speed`:   - `startsAt`:   - `status`:   - `tag`:   - `type`: NGSI-LD Entity Type  - `vertices`:   ## Data Model description of properties  
-Sorted alphabetically  
+- `efficCurve`:   - `endsAt`:   - `energyPattern`:   - `energyPrice`:   - `headCurve`:   - `initialStatus`:   - `power`:   - `pumpPattern`:   - `speed`:   - `startsAt`:   - `status`:   - `tag`:   - `type`: NGSI-LD Entity Type  - `vertices`:     
+Required properties  
+- `endsAt`  - `id`  - `initialStatus`  - `startsAt`  - `type`  ## Data Model description of properties  
+Sorted alphabetically (click for details)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 Pump:    
@@ -183,6 +185,7 @@ Pump:
   type: object    
 ```  
 </details>    
+## Example payloads    
 #### Pump NGSI V2 key-values Example    
 Here is an example of a Pump in JSON format as key-values. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
@@ -203,7 +206,7 @@ Pump:
 }  
 ```  
 #### Pump NGSI V2 normalized Example    
-Here is an example of a Pump in JSON format as normalized. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
+Here is an example of a Pump in JSON format as normalized. This is compatible with NGSI V2 when not using options and returns the context data of an individual entity.  
 ```json  
 {  
     "id": "85zhnf58-0d4c-h4g854g-b7d0-3310klm",  
@@ -249,7 +252,7 @@ Pump:
 }  
 ```  
 #### Pump NGSI-LD key-values Example    
-Here is an example of a Pump in JSON-LD format as key-values. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
+Here is an example of a Pump in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {  
   "id": "urn:ngsi-ld:Pump:85zhnf58-0d4c-h4g854g-b7d0-3310klm",  
