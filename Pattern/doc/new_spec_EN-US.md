@@ -5,8 +5,10 @@ Entity: Pattern
 
 ## List of properties  
 
-- `description`:   - `multipliers`:   - `startTime`:   - `tag`:   - `timeStep`:   - `type`: NGSI-LD Entity Type  ## Data Model description of properties  
-Sorted alphabetically  
+- `description`:   - `multipliers`:   - `startTime`:   - `tag`:   - `timeStep`:   - `type`: NGSI-LD Entity Type    
+Required properties  
+- `id`  - `multipliers`  - `startTime`  - `timeStep`  - `type`  ## Data Model description of properties  
+Sorted alphabetically (click for details)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 Pattern:    
@@ -68,6 +70,7 @@ Pattern:
   type: object    
 ```  
 </details>    
+## Example payloads    
 #### Pattern NGSI V2 key-values Example    
 Here is an example of a Pattern in JSON format as key-values. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
@@ -88,7 +91,7 @@ Pattern:
 }  
 ```  
 #### Pattern NGSI V2 normalized Example    
-Here is an example of a Pattern in JSON format as normalized. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
+Here is an example of a Pattern in JSON format as normalized. This is compatible with NGSI V2 when not using options and returns the context data of an individual entity.  
 ```json  
 {  
     "id": "fbcb5fc8-8ca3-4533-a2eb-34bc89262190",  
@@ -115,7 +118,7 @@ Pattern:
 }  
 ```  
 #### Pattern NGSI-LD key-values Example    
-Here is an example of a Pattern in JSON-LD format as key-values. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
+Here is an example of a Pattern in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {"@context": ["https://schema.lab.fiware.org/ld/context"],  
  "createdAt": "2020-02-20T17:43:00Z",  
