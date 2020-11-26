@@ -7,7 +7,7 @@ Entity: Curve
 
 - `curveType`: Allowed values FLOW-HEAD,FLOW-EFFICIENCY, FLOW-HEADLOSS,LEVEL-VOLUME  - `description`: A description of this item  - `tag`: An optional text string used to assign the curve to a category.  - `type`: NGSI-LD Entity Type. It must be equal to Curve.  - `xData`: X data points for the curve  - `yData`: Y data points for the curve    
 Required properties  
-- `id`  - `type`  - `curveType`  - `xData`  - `yData`    
+- `curveType`  - `id`  - `type`  - `xData`  - `yData`    
 Text to be included between overall title and description.  
 ## Data Model description of properties  
 Sorted alphabetically (click for details)  
