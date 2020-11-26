@@ -5,8 +5,10 @@ Entity: Valve
 
 ## List of properties  
 
-- `diameter`:   - `endsAt`:   - `initialStatus`:   - `minorLoss`:   - `setting`:   - `startsAt`:   - `status`:   - `tag`:   - `type`: NGSI-LD Entity Type  - `valveType`:   - `vertices`:   ## Data Model description of properties  
-Sorted alphabetically  
+- `diameter`:   - `endsAt`:   - `initialStatus`:   - `minorLoss`:   - `setting`:   - `startsAt`:   - `status`:   - `tag`:   - `type`: NGSI-LD Entity Type  - `valveType`:   - `vertices`:     
+Required properties  
+- `diameter`  - `endsAt`  - `id`  - `initialStatus`  - `minorLoss`  - `setting`  - `startsAt`  - `type`  - `valveType`  ## Data Model description of properties  
+Sorted alphabetically (click for details)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 Valve:    
@@ -222,6 +224,7 @@ Valve:
   type: object    
 ```  
 </details>    
+## Example payloads    
 #### Valve NGSI V2 key-values Example    
 Here is an example of a Valve in JSON format as key-values. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
@@ -240,7 +243,7 @@ Valve:
 }  
 ```  
 #### Valve NGSI V2 normalized Example    
-Here is an example of a Valve in JSON format as normalized. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
+Here is an example of a Valve in JSON format as normalized. This is compatible with NGSI V2 when not using options and returns the context data of an individual entity.  
 ```json  
 {  
     "id": "87fe7d79-0d4c-4da9-b7d0-3340efa0656awytsd",  
@@ -277,7 +280,7 @@ Valve:
 }  
 ```  
 #### Valve NGSI-LD key-values Example    
-Here is an example of a Valve in JSON-LD format as key-values. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
+Here is an example of a Valve in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {"@context": ["https://schema.lab.fiware.org/ld/context"],  
  "createdAt": "2020-03-02T15:42:00Z",  
