@@ -16,7 +16,7 @@
                     "enum": [
                         "Junction"
                     ],
-                    "description": "NGSI-LD Entity Type"
+                    "description": "Property. NGSI-LD Entity Type. It has to be Junction"
                 },
                 "elevation": {
                     "type": "number",
