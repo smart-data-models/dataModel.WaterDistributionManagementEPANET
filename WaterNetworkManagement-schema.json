@@ -117,6 +117,7 @@
         },
         "demandCategory": {
             "type": "object",
+            "description": "Property. Allows base demands and time patterns to be assigned to other categories of users at the junction",
             "properties": {
                 "type": {
                     "type": "string",
@@ -224,6 +225,7 @@
         },
         "sourceCategory": {
             "type": "object",
+            "description": "Property. Description of the quality of source flow entering the network at a specific node",
             "properties": {
                 "type": {
                     "type": "string",

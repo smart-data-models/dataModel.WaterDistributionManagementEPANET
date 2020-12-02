@@ -19,22 +19,27 @@
                     "description": "NGSI-LD Entity Type"
                 },
                 "elevation": {
-                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
+                    "type": "number",
+                    "description": "Property. Model:'http://schema.org/Number'. Units:'Metre'. The elevation above some common reference of the junction. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code"
                 },
                 "demandCategory": {
                     "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/demandCategory"
                 },
                 "tag": {
-                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
+                    "type": "string",
+                    "description": "Property. An optional text string used to assign the junction to a category, such as a pressure zone"
                 },
                 "initialQuality": {
-                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
+                    "type": "number",
+                    "description": "Property. Model:'http://schema.org/Number'. Units:'mg/L'. Water quality level at the junction at the start of the simulation. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code"
                 },
                 "description": {
-                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
+                    "type": "string",
+                    "description": "Property. An optional text that describes other significant information about the junction"
                 },
                 "emitterCoefficient": {
-                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
+                    "type": "number",
+                    "description": "Property. Model:'http://schema.org/Number'. Units:'square metre per second'. Discharge coefficient for emitter (sprinkler or nozzle) placed at junction. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code"
                 },
                 "sourceCategory": {
                     "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/sourceCategory"
