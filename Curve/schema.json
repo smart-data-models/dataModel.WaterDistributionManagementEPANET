@@ -8,10 +8,11 @@
   "properties": {
     "type": {
       "type": "string",
+      "description": "Property. NGSI-LD Entity Type. It must be equal to Curve.",
       "enum": [
         "Curve"
-      ],
-      "description": "Property. NGSI-LD Entity Type. It must be equal to Curve."
+      ]
+
     },
     "curveType": {
       "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/curveType"
