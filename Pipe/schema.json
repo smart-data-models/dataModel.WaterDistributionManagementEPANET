@@ -13,7 +13,7 @@
           "enum": [
             "Pipe"
           ],
-          "description": "NGSI-LD Entity Type"
+          "description": "Property. NGSI-LD Entity Type. It must be Pipe"
         },
         "initialStatus": {
           "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/status"

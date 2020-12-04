@@ -21,14 +21,14 @@
       "type": "array",
       "description": "Property. X data points for the curve",
       "items": {
-        "type": "Number"
+        "type": "number"
       }
     },
     "yData": {
       "type": "array",
       "description": "Property. Y data points for the curve",
       "items": {
-        "type": "Number"
+        "type": "number"
       }
     },
     "tag": {
