@@ -1,75 +1,89 @@
 {
-  "$schema": "http://json-schema.org/schema#",
+    "$schema": "http://json-schema.org/schema#",
     "schemaVersion": "0.0",
-  "$id": "https://smart-data-models.github.io/data-models/specs/WaterNetwork/Pipe/schema.json",
-  "title": "WaterNetwork - Pipe",
-  "description": "This entity contains a harmonised description of a generic pipe made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.",
-  "type": "object",
-  "allOf": [
-    {
-      "properties": {
-        "type": {
-          "type": "string",
-          "enum": [
-            "Pipe"
-          ],
-          "description": "NGSI-LD Entity Type"
-        },
-        "initialStatus": {
-          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/status"
-        },
-        "length": {
-          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
-        },
-        "diameter": {
-          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
-        },
-        "roughness": {
-          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
-        },
-        "minorLoss": {
-          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
-        },
-        "status": {
-          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/status"
-        },
-        "startsAt": {
-          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/ngsildRelationship"
-        },
-        "endsAt": {
-          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/ngsildRelationship"
-        },
-        "tag": {
-          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
-        },
-        "wallCoeff": {
-          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
-        },
-        "bulkCoeff": {
-          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
-        },
-        "vertices": {
-          "oneOf": [
-              {
-                  "$ref": "https://geojson.org/schema/MultiPoint.json"
-              },
-              {
-                  "$ref": "https://geojson.org/schema/Point.json"
-              }
-          ]                    
+    "$id": "https://smart-data-models.github.io/data-models/specs/WaterNetwork/Pipe/schema.json",
+    "title": "WaterNetwork - Pipe",
+    "description": "This entity contains a harmonised description of a generic pipe made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.",
+    "type": "object",
+    "allOf": [
+        {
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "Pipe"
+                    ],
+                    "description": "NGSI-LD Entity Type"
+                },
+                "tag": {
+                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/tag"
+                },
+                "description": {
+                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/description"
+                },
+                "initialStatus": {
+                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/initialStatus"
+                },
+                "length": {
+                    "type": "number",
+                    "description": "The actual length of the pipe"
+                },
+                "diameter": {
+                    "type": "number",
+                    "description": "The pipe diameter"
+                },
+                "roughness": {
+                    "type": "number",
+                    "description": "The roughness coefficient of the pipe. It is unitless for Hazen-Williams or Chezy-Manning roughness and has units of millifeet (mm) for Darcy-Weisbach roughness"
+                },
+                "minorLoss": {
+                    "type": "number",
+                    "description": "Unitless minor loss coefficient associated with bends, fittings, etc"
+                },
+                "status": {
+                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/status"
+                },
+                "startsAt": {
+                    "type": "object",
+                    "format": "uri",
+                    "description": "The ID of the node where the pipe begins"
+                },
+                "endsAt": {
+                    "type": "object",
+                    "format": "uri",
+                    "description": "The ID of the node where the pipe ends"
+                },
+                "wallCoeff": {
+                    "type": "number",
+                    "description": "The wall reaction coefficient for the pipe. Use a positive value for growth and a negative value for decay."
+                },
+                "bulkCoeff": {
+                    "type": "number",
+                    "description": "The bulk reaction coefficient for the pipe. Use a positive value for growth and a negative value for decay"
+                },
+                "vertices": {
+                    "description": "Coordinates of all vertices in the pipe, ordered from the startsAt node to the endsAt node and encoded as a GeoJSON ",
+                    "oneOf": [
+                        {
+                            "$ref": "https://geojson.org/schema/MultiPoint.json"
+                        },
+                        {
+                            "$ref": "https://geojson.org/schema/Point.json"
+                        }
+                    ]
+                }
+            }
         }
-      }
-    }
-  ],
-  "required": [
-    "id",
-    "type",
-    "initialStatus",
-    "length",
-    "diameter",
-    "roughness",
-    "minorLoss",
-    "startsAt",
-    "endsAt"
-  ]
+    ],
+    "required": [
+        "id",
+        "type",
+        "initialStatus",
+        "length",
+        "diameter",
+        "roughness",
+        "minorLoss",
+        "startsAt",
+        "endsAt"
+    ]
 }

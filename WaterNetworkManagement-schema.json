@@ -2,526 +2,102 @@
     "$schema": "http://json-schema.org/schema#",
     "$id": "https://smart-data-models.github.io/dataModel.WaterNetworkManagement/WaterNetworkManagement-schema.json",
     "title": "FIWARE - Water Network Management base schema",
-    "description": "Common NGSI-LD definitions for Water Network Management data models",
+    "description": "Common NGSI-LD definitions for Water Network Management data models",
     "type": "object",
     "definitions": {
-        "ngsildProperty": {
-            "type": "object",
-            "properties": {
-                "type": {
-                    "type": "string",
-                    "enum": [
-                        "Property"
-                    ]
-                },
-                "value": {
-                    "type": [
-                        "number",
-                        "string",
-                        "array"
-                    ]
-                },
-                "unitCode": {
-                    "type": "string"
-                },
-                "createdAt": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "observedAt": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "modifiedAt": {
-                    "type": "string",
-                    "format": "date-time"
-                }
-            },
-            "required": [
-                "type",
-                "value"
-            ]
-        },
-        "ngsildRelationship": {
-            "type": "object",
-            "properties": {
-                "type": {
-                    "type": "string",
-                    "enum": [
-                        "Relationship"
-                    ]
-                },
-                "object": {
-                    "type": [
-                        "string"
-                    ],
-                    "format": "uri"
-                },
-                "createdAt": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "observedAt": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "modifiedAt": {
-                    "type": "string",
-                    "format": "date-time"
-                }
-            },
-            "required": [
-                "type",
-                "object"
-            ]
-        },
-        "curveType": {
-            "type": "object",
-            "description": "Property. Allowed values FLOW-HEAD,FLOW-EFFICIENCY, FLOW-HEADLOSS,LEVEL-VOLUME",
-            "properties": {
-                "type": {
-                    "type": "string",
-                    "enum": [
-                        "Property"
-                    ]
-                },
-                "value": {
-                    "type": "string",
-                    "enum": [
-                        "FLOW-HEAD",
-                        "FLOW-EFFICIENCY",
-                        "FLOW-HEADLOSS",
-                        "LEVEL-VOLUME"
-                    ]
-                },
-                "unitCode": {
-                    "type": "string"
-                },
-                "createdAt": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "observedAt": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "modifiedAt": {
-                    "type": "string",
-                    "format": "date-time"
-                }
-            },
-            "required": [
-                "type",
-                "value"
-            ]
-        },
         "demandCategory": {
-            "type": "object",
-            "description": "Property. Allows base demands and time patterns to be assigned to other categories of users at the junction",
-            "properties": {
-                "type": {
-                    "type": "string",
-                    "enum": [
-                        "Property"
-                    ]
+            "allOf": [
+                {
+                    "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/Entity.json#/definitions/Property"
                 },
-                "value": {
-                    "type": [
-                        "number",
-                        "string"
-                    ]
-                },
-                "unitCode": {
-                    "type": "string"
-                },
-                "createdAt": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "observedAt": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "modifiedAt": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "baseDemand": {
-                    "type": "object",
+                {
                     "properties": {
-                        "type": {
-                            "type": "string",
-                            "enum": [
-                                "Property"
-                            ]
+                        "baseDemand": {
+                            "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/Entity.json#/definitions/Property"
                         },
-                        "value": {
-                            "type": [
-                                "number",
-                                "string"
-                            ]
-                        },
-                        "unitCode": {
-                            "type": "string"
-                        },
-                        "createdAt": {
-                            "type": "string",
-                            "format": "date-time"
-                        },
-                        "observedAt": {
-                            "type": "string",
-                            "format": "date-time"
-                        },
-                        "modifiedAt": {
-                            "type": "string",
-                            "format": "date-time"
+                        "demandPattern": {
+                            "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/Entity.json#/definitions/Relationship"
                         }
                     },
                     "required": [
                         "type",
-                        "value"
-                    ]
-                },
-                "demandPattern": {
-                    "type": "object",
-                    "properties": {
-                        "type": {
-                            "type": "string",
-                            "enum": [
-                                "Relationship"
-                            ]
-                        },
-                        "object": {
-                            "type": [
-                                "string"
-                            ],
-                            "format": "uri"
-                        },
-                        "createdAt": {
-                            "type": "string",
-                            "format": "date-time"
-                        },
-                        "observedAt": {
-                            "type": "string",
-                            "format": "date-time"
-                        },
-                        "modifiedAt": {
-                            "type": "string",
-                            "format": "date-time"
-                        }
-                    },
-                    "required": [
-                        "type",
-                        "object"
+                        "value",
+                        "baseDemand",
+                        "demandPattern"
                     ]
                 }
-            },
-            "required": [
-                "type",
-                "value",
-                "baseDemand",
-                "demandPattern"
             ]
         },
         "sourceCategory": {
-            "type": "object",
-            "description": "Property. Description of the quality of source flow entering the network at a specific node",
-            "properties": {
-                "type": {
-                    "type": "string",
-                    "enum": [
-                        "Property"
-                    ]
+            "allOf": [
+                {
+                    "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/Entity.json#/definitions/Property"
                 },
-                "value": {
-                    "type": [
-                        "number",
-                        "string"
-                    ]
-                },
-                "unitCode": {
-                    "type": "string"
-                },
-                "createdAt": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "observedAt": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "modifiedAt": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "sourceType": {
-                    "type": "object",
+                {
                     "properties": {
-                        "type": {
-                            "type": "string",
-                            "enum": [
-                                "Property"
+                        "sourceType": {
+                            "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/Entity.json#/definitions/Property"
+                        },
+                        "sourceQuality": {
+                            "allOf": [
+                                {
+                                    "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/Entity.json#/definitions/Property"
+                                },
+                                {
+                                    "properties": {
+                                        "value": {
+                                            "type": [
+                                                "number",
+                                                "string"
+                                            ],
+                                            "enum": [
+                                                "CONCEN",
+                                                "MASS",
+                                                "FLOWPACED",
+                                                "SETPOINT"
+                                            ]
+                                        }
+                                    }
+                                }
                             ]
                         },
-                        "value": {
-                            "type": [
-                                "number",
-                                "string"
-                            ],
-                            "enum": [
-                                "CONCEN",
-                                "MASS",
-                                "FLOWPACED",
-                                "SETPOINT"
-                            ]
-                        },
-                        "unitCode": {
-                            "type": "string"
-                        },
-                        "createdAt": {
-                            "type": "string",
-                            "format": "date-time"
-                        },
-                        "observedAt": {
-                            "type": "string",
-                            "format": "date-time"
-                        },
-                        "modifiedAt": {
-                            "type": "string",
-                            "format": "date-time"
+                        "sourcePattern": {
+                            "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/Entity.json#/definitions/Relationship"
                         }
                     },
                     "required": [
                         "type",
-                        "value"
-                    ]
-                },
-                "sourceQuality": {
-                    "type": "object",
-                    "properties": {
-                        "type": {
-                            "type": "string",
-                            "enum": [
-                                "Property"
-                            ]
-                        },
-                        "value": {
-                            "type": [
-                                "number",
-                                "string"
-                            ]
-                        },
-                        "unitCode": {
-                            "type": "string"
-                        },
-                        "createdAt": {
-                            "type": "string",
-                            "format": "date-time"
-                        },
-                        "observedAt": {
-                            "type": "string",
-                            "format": "date-time"
-                        },
-                        "modifiedAt": {
-                            "type": "string",
-                            "format": "date-time"
-                        }
-                    },
-                    "required": [
-                        "type",
-                        "value"
-                    ]
-                },
-                "sourcePattern": {
-                    "type": "object",
-                    "properties": {
-                        "type": {
-                            "type": "string",
-                            "enum": [
-                                "Relationship"
-                            ]
-                        },
-                        "object": {
-                            "type": [
-                                "string"
-                            ],
-                            "format": "uri"
-                        },
-                        "createdAt": {
-                            "type": "string",
-                            "format": "date-time"
-                        },
-                        "observedAt": {
-                            "type": "string",
-                            "format": "date-time"
-                        },
-                        "modifiedAt": {
-                            "type": "string",
-                            "format": "date-time"
-                        }
-                    },
-                    "required": [
-                        "type",
-                        "object"
+                        "value",
+                        "sourceType",
+                        "sourceQuality",
+                        "sourcePattern"
                     ]
                 }
-            },
-            "required": [
-                "type",
-                "value",
-                "sourceType",
-                "sourceQuality",
-                "sourcePattern"
             ]
+        },
+        "tag": {
+            "type": "string",
+            "description": "An optional text string used to assign the pipe to a category, perhaps one based on age or material"
+        },
+        "description": {
+            "type": "string",
+            "description": "Property. An optional text that describes other significant information about the junction"
         },
         "status": {
-      "type": "object",
-      "properties": {
-        "type": {
-          "type": "string",
-          "enum": [
-            "Property"
-          ]
-        },
-        "value": {
-          "type": [
-            "number",
-            "string",
-            "array"
-          ],
-          "enum": [
-            "OPEN",
-            "CLOSED",
-            "CV"
-          ]
-        },
-        "unitCode": {
-          "type": "string"
-        },
-        "observedAt": {
-          "type": "string",
-          "format": "date-time"
-        }
-      },
-      "required": [
-        "type",
-        "value"
-      ]
-    },
-        "mixingModel": {
-            "type": "object",
-            "properties": {
-                "type": {
-                    "type": "string",
-                    "enum": [
-                        "Property"
-                    ]
-                },
-                "value": {
-                    "type": [
-                        "number",
-                        "string",
-                        "array"
-                    ],
-                    "enum": [
-                        "MIXED",
-                        "2COMP",
-                        "FIFO",
-                        "LIFO"
-                    ]
-                },
-                "unitCode": {
-                    "type": "string"
-                },
-                "createdAt": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "observedAt": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "modifiedAt": {
-                    "type": "string",
-                    "format": "date-time"
-                }
-            },
-            "required": [
-                "type",
-                "value"
+            "type": "string",
+            "enum": [
+                "OPEN",
+                "CLOSED",
+                "CV"
             ]
         },
-        "valveType": {
-            "type": "object",
-            "properties": {
-                "type": {
-                    "type": "string",
-                    "enum": [
-                        "Property"
-                    ]
-                },
-                "value": {
-                    "type": [
-                        "string"
-                    ],
-                    "enum": [
-                        "PRV",
-                        "PSV",
-                        "PBV",
-                        "FCV",
-                        "TCV",
-                        "GPV"
-                    ]
-                },
-                "unitCode": {
-                    "type": "string"
-                },
-                "createdAt": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "observedAt": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "modifiedAt": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "valveCurve": {
-                    "type": "object",
-                    "properties": {
-                        "type": {
-                            "type": "string",
-                            "enum": [
-                                "Relationship"
-                            ]
-                        },
-                        "object": {
-                            "type": [
-                                "string"
-                            ],
-                            "format": "uri"
-                        },
-                        "createdAt": {
-                            "type": "string",
-                            "format": "date-time"
-                        },
-                        "observedAt": {
-                            "type": "string",
-                            "format": "date-time"
-                        },
-                        "modifiedAt": {
-                            "type": "string",
-                            "format": "date-time"
-                        }
-                    }
-                }
-            },
-            "required": [
-                "type",
-                "value"
+        "initialStatus": {
+            "type": "string",
+            "enum": [
+                "OPEN",
+                "CLOSED",
+                "CV"
             ]
         }
-  }
+    }
 }

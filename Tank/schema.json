@@ -18,53 +18,75 @@
                     ],
                     "description": "NGSI-LD Entity Type"
                 },
-                "elevation": {
-                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
-                },
-                "initLevel": {
-                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
-                },
-                "minLevel": {
-                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
-                },
-                "maxLevel": {
-                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
-                },
-                "minVolume": {
-                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
-                },
-                "nominalDiameter": {
-                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
+                "tag": {
+                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/tag"
                 },
                 "description": {
-                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
+                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/description"
+                },
+                "elevation": {
+                    "type": "number",
+                    "description": "The elevation above some common reference of the tank"
+                },
+                "initLevel": {
+                    "type": "number",
+                    "description": "The height of the water surface above the bottom elevation of the tank at the start of the simulation"
+                },
+                "minLevel": {
+                    "type": "number",
+                    "description": "The minimum level that water in the tank can drop to"
+                },
+                "maxLevel": {
+                    "type": "number",
+                    "description": "The height of the water surface above the bottom elevation of the tank at the start of the simulation"
+                },
+                "minVolume": {
+                    "type": "number",
+                    "description": "The volume of water in the tank when it is at its minimum level"
+                },
+                "nominalDiameter": {
+                    "type": "number",
+                    "description": "The diameter of the tank"
                 },
                 "initialQuality": {
-                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
+                    "type": "number",
+                    "description": "Water quality level in the tank at the start of the simulation"
                 },
                 "bulkReactionCoefficient": {
-                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
+                    "type": "number",
+                    "description": "The bulk reaction coefficient used for modelling reactions in the tank."
                 },
                 "mixingModel": {
-                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/mixingModel"
-                },
-                "tag": {
-                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
+                    "type": "string",
+                    "enum": [
+                        "MIXED",
+                        "2COMP",
+                        "FIFO",
+                        "LIFO"
+                    ],
+                    "description": "A sub-property of the Property sourceCategory"
                 },
                 "sourceCategory": {
                     "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/sourceCategory"
                 },
                 "volumeCurve": {
-                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/ngsildRelationship"
+                    "type": "object",
+                    "format": "uri",
+                    "description": "The ID label of a curve used to describe the relation between tank volume and water level"
                 },
                 "mixingFraction": {
-                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
+                    "type": "number",
+                    "description": "NGSI-LD Entity Type"
                 },
                 "hasInlet": {
-                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/ngsildRelationship"
+                    "type": "object",
+                    "format": "uri",
+                    "description": " A relationship indicating the water inlet points of the Reservoir"
                 },
                 "hasOutlet": {
-                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/ngsildRelationship"
+                    "type": "object",
+                    "format": "uri",
+                    "description": " A relationship indicating the water outlet points of the Reservoir"
                 }
             }
         }

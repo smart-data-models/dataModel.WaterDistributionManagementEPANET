@@ -18,6 +18,12 @@
                     ],
                     "description": "Property. NGSI-LD Entity Type. It has to be Junction"
                 },
+                "tag": {
+                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/tag"
+                },
+                "description": {
+                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/description"
+                },
                 "elevation": {
                     "type": "number",
                     "description": "Property. Model:'http://schema.org/Number'. Units:'Metre'. The elevation above some common reference of the junction. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code"
@@ -25,17 +31,9 @@
                 "demandCategory": {
                     "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/demandCategory"
                 },
-                "tag": {
-                    "type": "string",
-                    "description": "Property. An optional text string used to assign the junction to a category, such as a pressure zone"
-                },
                 "initialQuality": {
                     "type": "number",
                     "description": "Property. Model:'http://schema.org/Number'. Units:'mg/L'. Water quality level at the junction at the start of the simulation. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code"
-                },
-                "description": {
-                    "type": "string",
-                    "description": "Property. An optional text that describes other significant information about the junction"
                 },
                 "emitterCoefficient": {
                     "type": "number",
