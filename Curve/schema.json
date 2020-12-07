@@ -27,7 +27,7 @@
                 "FLOW-HEADLOSS",
                 "LEVEL-VOLUME"
             ],
-            "description": "Entity's curve type."
+            "description": "Property. Entity's curve type."
         },
         "xData": {
             "type": "array",

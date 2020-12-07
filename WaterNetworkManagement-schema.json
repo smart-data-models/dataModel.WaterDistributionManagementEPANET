@@ -77,11 +77,11 @@
         },
         "tag": {
             "type": "string",
-            "description": "An optional text string used to assign the pipe to a category, perhaps one based on age or material"
+            "description": "Property. Model:'https://schema.org/Text'. An optional text string used to assign the pipe to a category, perhaps one based on age or material"
         },
         "description": {
             "type": "string",
-            "description": "Property. An optional text that describes other significant information about the junction"
+            "description": "Property. Model:'https://schema.org/Text' An optional text that describes other significant information about the junction"
         },
         "status": {
             "type": "string",
@@ -89,7 +89,8 @@
                 "OPEN",
                 "CLOSED",
                 "CV"
-            ]
+            ],
+            "description": "Property. Model:'https://schema.org/Text'. The dynamic state of the node"
         },
         "initialStatus": {
             "type": "string",
@@ -97,7 +98,8 @@
                 "OPEN",
                 "CLOSED",
                 "CV"
-            ]
+            ],
+            "description": "Property. Model:'https://schema.org/Text'. The node status at the start of the simulation."
         }
     }
 }

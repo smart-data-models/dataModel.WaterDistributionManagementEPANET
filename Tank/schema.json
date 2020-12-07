@@ -26,35 +26,35 @@
                 },
                 "elevation": {
                     "type": "number",
-                    "description": "The elevation above some common reference of the tank"
+                    "description": "Property. Model:'https://schema.org/Number'. Units:'metre'. The elevation above some common reference of the Tank. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code."
                 },
                 "initLevel": {
                     "type": "number",
-                    "description": "The height of the water surface above the bottom elevation of the tank at the start of the simulation"
+                    "description": "Property. Model:'https://schema.org/Number'. Units:'metre'. The height of the water surface above the bottom elevation of the tank at the start of the simulation. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code."
                 },
                 "minLevel": {
                     "type": "number",
-                    "description": "The minimum level that water in the tank can drop to"
+                    "description": "Property. Model:'https://schema.org/Number'. Units:'metre'. The minimum level that water in the tank can drop to. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code."
                 },
                 "maxLevel": {
                     "type": "number",
-                    "description": "The height of the water surface above the bottom elevation of the tank at the start of the simulation"
+                    "description": "Property. Model:'https://schema.org/Number'. Units:'metre'. The height of the water surface above the bottom elevation of the tank at the start of the simulation. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code."
                 },
                 "minVolume": {
                     "type": "number",
-                    "description": "The volume of water in the tank when it is at its minimum level"
+                    "description": "Property. Model:'https://schema.org/Number'. Units:'cubic metre'. The volume of water in the tank when it is at its minimum level. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code."
                 },
                 "nominalDiameter": {
                     "type": "number",
-                    "description": "The diameter of the tank"
+                    "description": "Property. Model:'https://schema.org/Number'. Units:'Metre'. The diameter of the tank. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code."
                 },
                 "initialQuality": {
                     "type": "number",
-                    "description": "Water quality level in the tank at the start of the simulation"
+                    "description": "Property. Model:'https://schema.org/Number'. Units:'mg/L'. Water quality level in the tank at the start of the simulation. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code."
                 },
                 "bulkReactionCoefficient": {
                     "type": "number",
-                    "description": "The bulk reaction coefficient used for modelling reactions in the tank."
+                    "description": "Property. Model:'https://schema.org/Number'. Units:'1/day'. The bulk reaction coefficient used for modelling reactions in the tank. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code."
                 },
                 "mixingModel": {
                     "type": "string",
@@ -64,7 +64,7 @@
                         "FIFO",
                         "LIFO"
                     ],
-                    "description": "A sub-property of the Property sourceCategory"
+                    "description": "Property. Model:'https://schema.org/Text'. A sub-property of the Property sourceCategory"
                 },
                 "sourceCategory": {
                     "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/sourceCategory"
@@ -72,21 +72,21 @@
                 "volumeCurve": {
                     "type": "object",
                     "format": "uri",
-                    "description": "The ID label of a curve used to describe the relation between tank volume and water level"
+                    "description": "Relationship. The ID label of a curve used to describe the relation between tank volume and water level"
                 },
                 "mixingFraction": {
                     "type": "number",
-                    "description": "NGSI-LD Entity Type"
+                    "description": "Property. Model:'https://schema.org/Number'. Units:'No unit'. The fraction of the tank's total volume that comprises the inlet-outlet compartment of the two-compartment (2COMP) mixing model. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code."
                 },
                 "hasInlet": {
                     "type": "object",
                     "format": "uri",
-                    "description": " A relationship indicating the water inlet points of the Reservoir"
+                    "description": "Relationship. A relationship indicating the water inlet points of the Reservoir"
                 },
                 "hasOutlet": {
                     "type": "object",
                     "format": "uri",
-                    "description": " A relationship indicating the water outlet points of the Reservoir"
+                    "description": "Relationship. A relationship indicating the water outlet points of the Reservoir"
                 }
             }
         }

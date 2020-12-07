@@ -26,19 +26,19 @@
                 },
                 "length": {
                     "type": "number",
-                    "description": "The actual length of the pipe"
+                    "description": "Property. Model:'https://schema.org/Number'. Units:'Metre'. The actual length of the pipe. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code."
                 },
                 "diameter": {
                     "type": "number",
-                    "description": "The pipe diameter"
+                    "description": "Property. Model:'https://schema.org/Number'. Units:'Millimetre'. The pipe diameter"
                 },
                 "roughness": {
                     "type": "number",
-                    "description": "The roughness coefficient of the pipe. It is unitless for Hazen-Williams or Chezy-Manning roughness and has units of millifeet (mm) for Darcy-Weisbach roughness"
+                    "description": "Property. Model:'https://schema.org/Number'. Units:'No unit'. The roughness coefficient of the Pipe."
                 },
                 "minorLoss": {
                     "type": "number",
-                    "description": "Unitless minor loss coefficient associated with bends, fittings, etc"
+                    "description": "Property. Model:'https://schema.org/Number'. Units:'No unit'. Unitless minor loss coefficient associated with bends, fittings, etc"
                 },
                 "status": {
                     "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/status"
@@ -46,23 +46,23 @@
                 "startsAt": {
                     "type": "object",
                     "format": "uri",
-                    "description": "The ID of the node where the pipe begins"
+                    "description": "Relationship. The ID of the node where the pipe begins"
                 },
                 "endsAt": {
                     "type": "object",
                     "format": "uri",
-                    "description": "The ID of the node where the pipe ends"
+                    "description": "Relationship. The ID of the node where the pipe ends"
                 },
                 "wallCoeff": {
                     "type": "number",
-                    "description": "The wall reaction coefficient for the pipe. Use a positive value for growth and a negative value for decay."
+                    "description": "Property. Model:'https://schema.org/Number'. Units:'mg/m²/day'. The wall reaction coefficient for the pipe. Use a positive value for growth and a negative value for decay. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code."
                 },
                 "bulkCoeff": {
                     "type": "number",
-                    "description": "The bulk reaction coefficient for the pipe. Use a positive value for growth and a negative value for decay"
+                    "description": "Property. Model:'https://schema.org/Number'. Units:'reciprocal day' The bulk reaction coefficient for the pipe. Use a positive value for growth and a negative value for decay. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code."
                 },
                 "vertices": {
-                    "description": "Coordinates of all vertices in the pipe, ordered from the startsAt node to the endsAt node and encoded as a GeoJSON ",
+                    "description": "GeoProperty. Coordinates of all vertices in the pipe, ordered from the startsAt node to the endsAt node and encoded as a GeoJSON ",
                     "oneOf": [
                         {
                             "$ref": "https://geojson.org/schema/MultiPoint.json"

@@ -16,7 +16,7 @@
                     "enum": [
                         "Reservoir"
                     ],
-                    "description": "NGSI-LD Entity Type"
+                    "description": "Property. NGSI-LD Entity Type. It must be equal to Reservoir."
                 },
                 "tag": {
                     "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/tag"
@@ -26,15 +26,15 @@
                 },
                 "reservoirHead": {
                     "type": "number",
-                    "description": "The hydraulic head (elevation + pressure head) of water in the reservoir"
+                    "description": "Property. Model:'https://schema.org/Number'. Units:'Metre'. The hydraulic head (elevation + pressure head) of water in the Reservoir. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code."
                 },
                 "initialQuality": {
                     "type": "number",
-                    "description": "Water quality level at the reservoir"
+                    "description": "Property. Model:'https://schema.org/Number'. Units:'mg/L'. Water quality level at the Reservoir. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code."
                 },
                 "elevation": {
                     "type": "number",
-                    "description": "The elevation above some common reference of the reservoir"
+                    "description": "Property. Model:'https://schema.org/Number'. Units:'Metre'. The elevation above some common reference of the Reservoir. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code."
                 },
                 "sourceCategory": {
                     "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/sourceCategory"
@@ -42,17 +42,17 @@
                 "headPattern": {
                     "type": "object",
                     "format": "uri",
-                    "description": " The ID label of a time pattern used to model time variation in the reservoir's total head"
+                    "description": "Relationship. The ID label of a time pattern used to model time variation in the reservoir's total head"
                 },
                 "hasInlet": {
                     "type": "object",
                     "format": "uri",
-                    "description": " A relationship indicating the water inlet points of the Reservoir"
+                    "description": "Relationship. A relationship indicating the water inlet points of the Reservoir"
                 },
                 "hasOutlet": {
                     "type": "object",
                     "format": "uri",
-                    "description": "A relationship indicating the water outlet points of the Reservoir"
+                    "description": "Relationship. A relationship indicating the water outlet points of the Reservoir"
                 }
             }
         }

@@ -13,7 +13,7 @@
                     "enum": [
                         "Pump"
                     ],
-                    "description": "NGSI-LD Entity Type"
+                    "description": "Property. NGSI-LD Entity Type. It must be equal to Pump."
                 },
                 "tag": {
                     "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/tag"
@@ -29,24 +29,24 @@
                 },
                 "power": {
                     "type": "number",
-                    "description": "NGSI-LD Entity Type"
+                    "description": "Property. Model:'https://schema.org/Number'. Units:'KiloWatt'. The power supplied by the pump. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code."
                 },
                 "speed": {
                     "type": "number",
-                    "description": "NGSI-LD Entity Type"
+                    "description": "Property. Model:'https://schema.org/Number'. Units:'Metre per Second'. The relative speed setting of the Pump. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code."
                 },
                 "startsAt": {
                     "type": "object",
                     "format": "uri",
-                    "description": "NGSI-LD Entity Type"
+                    "description": "Relationship. The ID of the node on the suction side of the pump"
                 },
                 "endsAt": {
                     "type": "object",
                     "format": "uri",
-                    "description": "NGSI-LD Entity Type"
+                    "description": "Relationship. The ID of the node on the discharge side of the pump"
                 },
                 "vertices": {
-                    "description": "Coordinates of all vertices in the pump, ordered from the startsAt node to the endsAt node and encoded as a GeoJSON ",
+                    "description": "GeoProperty. Coordinates of all vertices in the pump, ordered from the startsAt node to the endsAt node and encoded as a GeoJSON ",
                     "oneOf": [
                         {
                             "$ref": "https://geojson.org/schema/MultiPoint.json"
@@ -59,26 +59,26 @@
                 "headCurve": {
                     "type": "object",
                     "format": "uri",
-                    "description": "The ID label of the pump curve used to describe the relationship between the head delivered by the pump and the flow through the pump"
+                    "description": "Relationship. The ID label of the pump curve used to describe the relationship between the head delivered by the pump and the flow through the Pump."
                 },
                 "pumpPattern": {
                     "type": "object",
                     "format": "uri",
-                    "description": "The ID label of a time pattern used to control the pump's operation. The multipliers of the pattern are equivalent to speed settings. A multiplier of zero implies that the pump will be shut off during the corresponding time period"
+                    "description": "Relationship. The ID label of a time pattern used to control the pump's operation. The multipliers of the pattern are equivalent to speed settings. A multiplier of zero implies that the pump will be shut off during the corresponding time period"
                 },
                 "efficCurve": {
                     "type": "object",
                     "format": "uri",
-                    "description": "The ID label of the curve that represents the pump's wire-to-water efficiency as a function of flow rate"
+                    "description": "Relationship. The ID label of the curve that represents the pump's wire-to-water efficiency as a function of flow rate."
                 },
                 "energyPrice": {
                     "type": "number",
-                    "description": " The average or nominal price of energy in monetary units per kw-hr"
+                    "description": "Property. Units:'No unit'. The average or nominal price of energy in monetary units. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code."
                 },
                 "energyPattern": {
                     "type": "object",
                     "format": "uri",
-                    "description": "The ID label of the time pattern used to describe the variation in energy price throughout the day"
+                    "description": "Relationship. The ID label of the time pattern used to describe the variation in energy price throughout the day."
                 }
             }
         }
