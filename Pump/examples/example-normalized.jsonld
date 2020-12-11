@@ -87,7 +87,7 @@
             "object": "urn:ngsi-ld:Device:device-9845A"
         }
     },
-    "observedEnergyUse": {
+    "energyUse": {
         "type": "Property",
         "value": 50,
         "unitCode": "KWT",

@@ -69,7 +69,7 @@
             }
         }
     },
-    "observedEnergyUse": {
+    "energyUse": {
         "value": {
             "value": 50,
             "unitCode": "KWT",

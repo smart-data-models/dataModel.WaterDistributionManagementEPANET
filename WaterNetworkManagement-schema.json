@@ -148,8 +148,9 @@
                 "value"
             ]
         },
-        "observedProperty": {
+        "flow": {
             "type": "object",
+            "description": "Rate of flow from `startsAt` node to `endsAt` node, measured by a device at the link (pipe, valve or pump)",
             "properties": {
                 "type": {
                     "type": "string",
@@ -168,6 +169,399 @@
                 },
                 "observedBy": {
                     "type": "object",
+                    "description": "Relationship to the entity providing the flow rate value",
+                    "properties": {
+                        "type": {
+                            "type": "string",
+                            "enum": [
+                                "Relationship"
+                            ]
+                        },
+                        "object": {
+                            "type": [
+                                "string"
+                            ],
+                            "format": "uri"
+                        }
+                    }
+                },
+                "observedAt": {
+                    "type": "string",
+                    "format": "date-time"
+                }
+            },
+            "required": [
+                "type",
+                "value",
+                "observedBy",
+                "observedAt"
+            ]
+        },
+        "velocity": {
+            "type": "object",
+            "description": "Observed velocity in the link (pipe, valve or pump)",
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "Property"
+                    ]
+                },
+                "value": {
+                    "type": [
+                        "number",
+                        "string"
+                    ]
+                },
+                "unitCode": {
+                    "type": "string"
+                },
+                "observedBy": {
+                    "type": "object",
+                    "description": "Relationship to the entity providing the velocity value",
+                    "properties": {
+                        "type": {
+                            "type": "string",
+                            "enum": [
+                                "Relationship"
+                            ]
+                        },
+                        "object": {
+                            "type": [
+                                "string"
+                            ],
+                            "format": "uri"
+                        }
+                    }
+                },
+                "observedAt": {
+                    "type": "string",
+                    "format": "date-time"
+                }
+            },
+            "required": [
+                "type",
+                "value",
+                "observedBy",
+                "observedAt"
+            ]
+        },
+        "quality": {
+            "type": "object",
+            "description": "Observed quality in the network component",
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "Property"
+                    ]
+                },
+                "value": {
+                    "type": [
+                        "number",
+                        "string"
+                    ]
+                },
+                "unitCode": {
+                    "type": "string"
+                },
+                "observedBy": {
+                    "type": "object",
+                    "description": "Relationship to the entity providing the quality value",
+                    "properties": {
+                        "type": {
+                            "type": "string",
+                            "enum": [
+                                "Relationship"
+                            ]
+                        },
+                        "object": {
+                            "type": [
+                                "string"
+                            ],
+                            "format": "uri"
+                        }
+                    }
+                },
+                "observedAt": {
+                    "type": "string",
+                    "format": "date-time"
+                }
+            },
+            "required": [
+                "type",
+                "value",
+                "observedBy",
+                "observedAt"
+            ]
+        },
+        "energyUse": {
+            "type": "object",
+            "description": "Observed energy use by the pump",
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "Property"
+                    ]
+                },
+                "value": {
+                    "type": [
+                        "number",
+                        "string"
+                    ]
+                },
+                "unitCode": {
+                    "type": "string"
+                },
+                "observedBy": {
+                    "type": "object",
+                    "description": "Relationship to the entity providing the energy use value",
+                    "properties": {
+                        "type": {
+                            "type": "string",
+                            "enum": [
+                                "Relationship"
+                            ]
+                        },
+                        "object": {
+                            "type": [
+                                "string"
+                            ],
+                            "format": "uri"
+                        }
+                    }
+                },
+                "observedAt": {
+                    "type": "string",
+                    "format": "date-time"
+                }
+            },
+            "required": [
+                "type",
+                "value",
+                "observedBy",
+                "observedAt"
+            ]
+        },
+        "pressure": {
+            "type": "object",
+            "description": "Observed pressure at the node (junction, tank or reservoir)",
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "Property"
+                    ]
+                },
+                "value": {
+                    "type": [
+                        "number",
+                        "string"
+                    ]
+                },
+                "unitCode": {
+                    "type": "string"
+                },
+                "observedBy": {
+                    "type": "object",
+                    "description": "Relationship to the entity providing the pressure value",
+                    "properties": {
+                        "type": {
+                            "type": "string",
+                            "enum": [
+                                "Relationship"
+                            ]
+                        },
+                        "object": {
+                            "type": [
+                                "string"
+                            ],
+                            "format": "uri"
+                        }
+                    }
+                },
+                "observedAt": {
+                    "type": "string",
+                    "format": "date-time"
+                }
+            },
+            "required": [
+                "type",
+                "value",
+                "observedBy",
+                "observedAt"
+            ]
+        },
+        "supply": {
+            "type": "object",
+            "description": "Observed supply at the node (junction, tank or reservoir)",
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "Property"
+                    ]
+                },
+                "value": {
+                    "type": [
+                        "number",
+                        "string"
+                    ]
+                },
+                "unitCode": {
+                    "type": "string"
+                },
+                "observedBy": {
+                    "type": "object",
+                    "description": "Relationship to the entity providing the supply value",
+                    "properties": {
+                        "type": {
+                            "type": "string",
+                            "enum": [
+                                "Relationship"
+                            ]
+                        },
+                        "object": {
+                            "type": [
+                                "string"
+                            ],
+                            "format": "uri"
+                        }
+                    }
+                },
+                "observedAt": {
+                    "type": "string",
+                    "format": "date-time"
+                }
+            },
+            "required": [
+                "type",
+                "value",
+                "observedBy",
+                "observedAt"
+            ]
+        },
+        "head": {
+            "type": "object",
+            "description": "Observed head at the node (junction, tank or reservoir)",
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "Property"
+                    ]
+                },
+                "value": {
+                    "type": [
+                        "number",
+                        "string"
+                    ]
+                },
+                "unitCode": {
+                    "type": "string"
+                },
+                "observedBy": {
+                    "type": "object",
+                    "description": "Relationship to the entity providing the head value",
+                    "properties": {
+                        "type": {
+                            "type": "string",
+                            "enum": [
+                                "Relationship"
+                            ]
+                        },
+                        "object": {
+                            "type": [
+                                "string"
+                            ],
+                            "format": "uri"
+                        }
+                    }
+                },
+                "observedAt": {
+                    "type": "string",
+                    "format": "date-time"
+                }
+            },
+            "required": [
+                "type",
+                "value",
+                "observedBy",
+                "observedAt"
+            ]
+        },
+        "sourceMassInflow": {
+            "type": "object",
+            "description": "Observed source mass inflow at the node (junction, tank or reservoir)",
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "Property"
+                    ]
+                },
+                "value": {
+                    "type": [
+                        "number",
+                        "string"
+                    ]
+                },
+                "unitCode": {
+                    "type": "string"
+                },
+                "observedBy": {
+                    "type": "object",
+                    "description": "Relationship to the entity providing the source mass inflow value",
+                    "properties": {
+                        "type": {
+                            "type": "string",
+                            "enum": [
+                                "Relationship"
+                            ]
+                        },
+                        "object": {
+                            "type": [
+                                "string"
+                            ],
+                            "format": "uri"
+                        }
+                    }
+                },
+                "observedAt": {
+                    "type": "string",
+                    "format": "date-time"
+                }
+            },
+            "required": [
+                "type",
+                "value",
+                "observedBy",
+                "observedAt"
+            ]
+        },
+        "level": {
+            "type": "object",
+            "description": "Observed level in the tank",
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "Property"
+                    ]
+                },
+                "value": {
+                    "type": [
+                        "number",
+                        "string"
+                    ]
+                },
+                "unitCode": {
+                    "type": "string"
+                },
+                "observedBy": {
+                    "type": "object",
+                    "description": "Relationship to the entity providing the level value",
                     "properties": {
                         "type": {
                             "type": "string",
