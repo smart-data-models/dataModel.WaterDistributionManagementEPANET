@@ -42,31 +42,6 @@
       "items": {
         "type": "number"
       }
-    },
-    "curveType": {
-      "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/curveType"
-    },
-    "xData": {
-      "type": "array",
-      "description": "Property. X data points for the curve",
-      "items": {
-        "type": "number"
-      }
-    },
-    "yData": {
-      "type": "array",
-      "description": "Property. Y data points for the curve",
-      "items": {
-        "type": "number"
-      }
-    },
-    "tag": {
-      "type": "string",
-      "description": "Property. Model:'https://schema.org/Text'. An optional text string used to assign the curve to a category."
-    },
-    "description": {
-      "type": "string",
-      "description": "Property. A description of this item"
     }
   },
   "required": [
