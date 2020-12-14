@@ -18,13 +18,7 @@
                     "format": "uri",
                     "description": "Relationship. A relationship to the pattern pf the 'demandCategory' property."
                 }
-            },
-            "required": [
-                "type",
-                "value",
-                "baseDemand",
-                "demandPattern"
-            ]
+            }
         },
         "sourceCategory": {
             "type": "string",
