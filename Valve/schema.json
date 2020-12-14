@@ -41,7 +41,7 @@
                         "TCV",
                         "GPV"
                     ],
-                    "description": "Property. Model:'https://schema.org/Text'.The valve type"
+                    "description": "Property. Model:'https://schema.org/Text'. The valve type of the element"
                 },
                 "setting": {
                     "type": "number",
@@ -75,7 +75,7 @@
                             "$ref": "http://geojson.org/schema/Point.json"
                         }
                     ],
-                    "description": "GeoProperty. Coordinates of all vertices in the valve, ordered from the startsAt node to the endsAt node and encoded as a GeoJSON "
+                    "description": "Geoproperty. Coordinates of all vertices in the valve, ordered from the startsAt node to the endsAt node and encoded as a GeoJSON "
                 }
             }
         }
