@@ -46,7 +46,7 @@
                     "description": "Relationship. The ID of the node on the discharge side of the pump"
                 },
                 "vertices": {
-                    "description": "GeoProperty. Coordinates of all vertices in the pump, ordered from the startsAt node to the endsAt node and encoded as a GeoJSON ",
+                    "description": "Geoproperty. Coordinates of all vertices in the pump, ordered from the startsAt node to the endsAt node and encoded as a GeoJSON ",
                     "oneOf": [
                         {
                             "$ref": "https://geojson.org/schema/MultiPoint.json"
