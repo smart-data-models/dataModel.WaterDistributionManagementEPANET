@@ -13,34 +13,58 @@
                     "enum": [
                         "Valve"
                     ],
-                    "description": "NGSI-LD Entity Type"
+                    "description": "Property. NGSI-LD Entity Type. It must be equal to Valve."
+                },
+                "tag": {
+                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/tag"
+                },
+                "description": {
+                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/description"
                 },
                 "status": {
                     "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/status"
                 },
                 "initialStatus": {
-                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/status"
+                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/initialStatus"
                 },
                 "diameter": {
-                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
+                    "type": "number",
+                    "description": "Property.  Model:'https://schema.org/Number'. Units:'millimetre'. The valve diameter. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code."
                 },
                 "valveType": {
-                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/valveType"
+                    "type": "string",
+                    "enum": [
+                        "PRV",
+                        "PSV",
+                        "PBV",
+                        "FCV",
+                        "TCV",
+                        "GPV"
+                    ],
+                    "description": "Property. Model:'https://schema.org/Text'.The valve type"
                 },
                 "setting": {
-                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
+                    "type": "number",
+                    "description": "Property. Model:'https://schema.org/Number'. Units:'No unit'. A parameter that describes the valve's operational setting. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code."
                 },
                 "minorLoss": {
-                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
-                },
-                "tag": {
-                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
+                    "type": "number",
+                    "description": "Property. Model:'https://schema.org/Number'. Units:'No unit'. Unitless minor loss coefficient that applies when the valve is completely opened. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code."
                 },
                 "startsAt": {
-                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/ngsildRelationship"
+                    "type": "object",
+                    "format": "uri",
+                    "description": "Relationship. The ID of the node on the nominal upstream or inflow side of the valve"
                 },
                 "endsAt": {
-                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/ngsildRelationship"
+                    "type": "object",
+                    "format": "uri",
+                    "description": "Relationship. The ID of the node on the nominal downstream or discharge side of the valve"
+                },
+                "valveCurve": {
+                    "type": "object",
+                    "format": "uri",
+                    "description": "Relationship. A relationship to the curve of the setting property. Only required when valveType is GPV"
                 },
                 "vertices": {
                     "oneOf": [
@@ -50,7 +74,8 @@
                         {
                             "$ref": "http://geojson.org/schema/Point.json"
                         }
-                    ]                    
+                    ],
+                    "description": "GeoProperty. Coordinates of all vertices in the valve, ordered from the startsAt node to the endsAt node and encoded as a GeoJSON "
                 }
             }
         }

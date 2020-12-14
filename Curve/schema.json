@@ -12,7 +12,36 @@
       "enum": [
         "Curve"
       ]
-
+    },
+    "tag": {
+      "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/tag"
+    },
+    "description": {
+      "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/description"
+    },
+    "curveType": {
+      "type": "string",
+      "enum": [
+        "FLOW-HEAD",
+        "FLOW-EFFICIENCY",
+        "FLOW-HEADLOSS",
+        "LEVEL-VOLUME"
+      ],
+      "description": "Property. Entity's curve type."
+    },
+    "xData": {
+      "type": "array",
+      "description": "Property. X data points for the curve",
+      "items": {
+        "type": "number"
+      }
+    },
+    "yData": {
+      "type": "array",
+      "description": "Property. Y data points for the curve",
+      "items": {
+        "type": "number"
+      }
     },
     "curveType": {
       "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/curveType"

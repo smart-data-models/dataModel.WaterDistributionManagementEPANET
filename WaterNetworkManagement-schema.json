@@ -2,218 +2,21 @@
     "$schema": "http://json-schema.org/schema#",
     "$id": "https://smart-data-models.github.io/dataModel.WaterNetworkManagement/WaterNetworkManagement-schema.json",
     "title": "FIWARE - Water Network Management base schema",
-    "description": "Common NGSI-LD definitions for Water Network Management data models",
+    "description": "Common NGSI-LD definitions for Water Network Management data models",
     "type": "object",
     "definitions": {
-        "ngsildProperty": {
-            "type": "object",
-            "properties": {
-                "type": {
-                    "type": "string",
-                    "enum": [
-                        "Property"
-                    ]
-                },
-                "value": {
-                    "type": [
-                        "number",
-                        "string",
-                        "array"
-                    ]
-                },
-                "unitCode": {
-                    "type": "string"
-                },
-                "createdAt": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "observedAt": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "modifiedAt": {
-                    "type": "string",
-                    "format": "date-time"
-                }
-            },
-            "required": [
-                "type",
-                "value"
-            ]
-        },
-        "ngsildRelationship": {
-            "type": "object",
-            "properties": {
-                "type": {
-                    "type": "string",
-                    "enum": [
-                        "Relationship"
-                    ]
-                },
-                "object": {
-                    "type": [
-                        "string"
-                    ],
-                    "format": "uri"
-                },
-                "createdAt": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "observedAt": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "modifiedAt": {
-                    "type": "string",
-                    "format": "date-time"
-                }
-            },
-            "required": [
-                "type",
-                "object"
-            ]
-        },
-        "curveType": {
-            "type": "object",
-            "description": "Property. Allowed values FLOW-HEAD,FLOW-EFFICIENCY, FLOW-HEADLOSS,LEVEL-VOLUME",
-            "properties": {
-                "type": {
-                    "type": "string",
-                    "enum": [
-                        "Property"
-                    ]
-                },
-                "value": {
-                    "type": "string",
-                    "enum": [
-                        "FLOW-HEAD",
-                        "FLOW-EFFICIENCY",
-                        "FLOW-HEADLOSS",
-                        "LEVEL-VOLUME"
-                    ]
-                },
-                "unitCode": {
-                    "type": "string"
-                },
-                "createdAt": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "observedAt": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "modifiedAt": {
-                    "type": "string",
-                    "format": "date-time"
-                }
-            },
-            "required": [
-                "type",
-                "value"
-            ]
-        },
         "demandCategory": {
-            "type": "object",
-            "description": "Property. Allows base demands and time patterns to be assigned to other categories of users at the junction",
+            "type": "string",
+            "description": "Property. Model:'https://schema.org/Text'. Allows base demands and time patterns to be assigned to other categories of users.",
             "properties": {
-                "type": {
-                    "type": "string",
-                    "enum": [
-                        "Property"
-                    ]
-                },
-                "value": {
-                    "type": [
-                        "number",
-                        "string"
-                    ]
-                },
-                "unitCode": {
-                    "type": "string"
-                },
-                "createdAt": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "observedAt": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "modifiedAt": {
-                    "type": "string",
-                    "format": "date-time"
-                },
                 "baseDemand": {
-                    "type": "object",
-                    "properties": {
-                        "type": {
-                            "type": "string",
-                            "enum": [
-                                "Property"
-                            ]
-                        },
-                        "value": {
-                            "type": [
-                                "number",
-                                "string"
-                            ]
-                        },
-                        "unitCode": {
-                            "type": "string"
-                        },
-                        "createdAt": {
-                            "type": "string",
-                            "format": "date-time"
-                        },
-                        "observedAt": {
-                            "type": "string",
-                            "format": "date-time"
-                        },
-                        "modifiedAt": {
-                            "type": "string",
-                            "format": "date-time"
-                        }
-                    },
-                    "required": [
-                        "type",
-                        "value"
-                    ]
+                    "type": "string",
+                    "description": "Property. Model:'https://schema.org/Text. Baseline or average demand for the category. A sub-property of the Property 'demandCategory'."
                 },
                 "demandPattern": {
                     "type": "object",
-                    "properties": {
-                        "type": {
-                            "type": "string",
-                            "enum": [
-                                "Relationship"
-                            ]
-                        },
-                        "object": {
-                            "type": [
-                                "string"
-                            ],
-                            "format": "uri"
-                        },
-                        "createdAt": {
-                            "type": "string",
-                            "format": "date-time"
-                        },
-                        "observedAt": {
-                            "type": "string",
-                            "format": "date-time"
-                        },
-                        "modifiedAt": {
-                            "type": "string",
-                            "format": "date-time"
-                        }
-                    },
-                    "required": [
-                        "type",
-                        "object"
-                    ]
+                    "format": "uri",
+                    "description": "Relationship. A relationship to the pattern pf the 'demandCategory' property."
                 }
             },
             "required": [
@@ -224,146 +27,27 @@
             ]
         },
         "sourceCategory": {
-            "type": "object",
-            "description": "Property. Description of the quality of source flow entering the network at a specific node",
+            "type": "string",
+            "description": "Property. Model:'https://schema.org/Text'. Description of the quality of source flow entering the network at a specific node.",
             "properties": {
-                "type": {
-                    "type": "string",
-                    "enum": [
-                        "Property"
-                    ]
-                },
-                "value": {
-                    "type": [
-                        "number",
-                        "string"
-                    ]
-                },
-                "unitCode": {
-                    "type": "string"
-                },
-                "createdAt": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "observedAt": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "modifiedAt": {
-                    "type": "string",
-                    "format": "date-time"
-                },
                 "sourceType": {
-                    "type": "object",
-                    "properties": {
-                        "type": {
-                            "type": "string",
-                            "enum": [
-                                "Property"
-                            ]
-                        },
-                        "value": {
-                            "type": [
-                                "number",
-                                "string"
-                            ],
-                            "enum": [
-                                "CONCEN",
-                                "MASS",
-                                "FLOWPACED",
-                                "SETPOINT"
-                            ]
-                        },
-                        "unitCode": {
-                            "type": "string"
-                        },
-                        "createdAt": {
-                            "type": "string",
-                            "format": "date-time"
-                        },
-                        "observedAt": {
-                            "type": "string",
-                            "format": "date-time"
-                        },
-                        "modifiedAt": {
-                            "type": "string",
-                            "format": "date-time"
-                        }
-                    },
-                    "required": [
-                        "type",
-                        "value"
+                    "type": "string",
+                    "description": "Property. Model:'https://schema.org/Text'. A sub-property of the Property 'sourceCategory'",
+                    "enum": [
+                        "CONCEN",
+                        "MASS",
+                        "FLOWPACED",
+                        "SETPOINT"
                     ]
                 },
                 "sourceQuality": {
-                    "type": "object",
-                    "properties": {
-                        "type": {
-                            "type": "string",
-                            "enum": [
-                                "Property"
-                            ]
-                        },
-                        "value": {
-                            "type": [
-                                "number",
-                                "string"
-                            ]
-                        },
-                        "unitCode": {
-                            "type": "string"
-                        },
-                        "createdAt": {
-                            "type": "string",
-                            "format": "date-time"
-                        },
-                        "observedAt": {
-                            "type": "string",
-                            "format": "date-time"
-                        },
-                        "modifiedAt": {
-                            "type": "string",
-                            "format": "date-time"
-                        }
-                    },
-                    "required": [
-                        "type",
-                        "value"
-                    ]
+                    "type": "number",
+                    "description": "Property. Model:'https://schema.org/Number'. Units: 'mg/L'. Baseline or average concentration (or mass flow rate) of source. A sub-property of the Property 'sourceCategory'. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code."
                 },
                 "sourcePattern": {
-                    "type": "object",
-                    "properties": {
-                        "type": {
-                            "type": "string",
-                            "enum": [
-                                "Relationship"
-                            ]
-                        },
-                        "object": {
-                            "type": [
-                                "string"
-                            ],
-                            "format": "uri"
-                        },
-                        "createdAt": {
-                            "type": "string",
-                            "format": "date-time"
-                        },
-                        "observedAt": {
-                            "type": "string",
-                            "format": "date-time"
-                        },
-                        "modifiedAt": {
-                            "type": "string",
-                            "format": "date-time"
-                        }
-                    },
-                    "required": [
-                        "type",
-                        "object"
-                    ]
+                    "type": "string",
+                    "format": "uri",
+                    "description": "Relationship. A relationship to the pattern pf the sourceCategory property"
                 }
             },
             "required": [
@@ -374,154 +58,31 @@
                 "sourcePattern"
             ]
         },
+        "tag": {
+            "type": "string",
+            "description": "Property. Model:'https://schema.org/Text'. An optional text string used to assign the pipe to a category, perhaps one based on age or material"
+        },
+        "description": {
+            "type": "string",
+            "description": "Property. Model:'https://schema.org/Text' An optional text that describes other significant information about the junction"
+        },
         "status": {
-      "type": "object",
-      "properties": {
-        "type": {
-          "type": "string",
-          "enum": [
-            "Property"
-          ]
+            "type": "string",
+            "enum": [
+                "OPEN",
+                "CLOSED",
+                "CV"
+            ],
+            "description": "Property. Model:'https://schema.org/Text'. The dynamic state of the node"
         },
-        "value": {
-          "type": [
-            "number",
-            "string",
-            "array"
-          ],
-          "enum": [
-            "OPEN",
-            "CLOSED",
-            "CV"
-          ]
-        },
-        "unitCode": {
-          "type": "string"
-        },
-        "observedAt": {
-          "type": "string",
-          "format": "date-time"
+        "initialStatus": {
+            "type": "string",
+            "enum": [
+                "OPEN",
+                "CLOSED",
+                "CV"
+            ],
+            "description": "Property. Model:'https://schema.org/Text'. The node status at the start of the simulation."
         }
-      },
-      "required": [
-        "type",
-        "value"
-      ]
-    },
-        "mixingModel": {
-            "type": "object",
-            "properties": {
-                "type": {
-                    "type": "string",
-                    "enum": [
-                        "Property"
-                    ]
-                },
-                "value": {
-                    "type": [
-                        "number",
-                        "string",
-                        "array"
-                    ],
-                    "enum": [
-                        "MIXED",
-                        "2COMP",
-                        "FIFO",
-                        "LIFO"
-                    ]
-                },
-                "unitCode": {
-                    "type": "string"
-                },
-                "createdAt": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "observedAt": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "modifiedAt": {
-                    "type": "string",
-                    "format": "date-time"
-                }
-            },
-            "required": [
-                "type",
-                "value"
-            ]
-        },
-        "valveType": {
-            "type": "object",
-            "properties": {
-                "type": {
-                    "type": "string",
-                    "enum": [
-                        "Property"
-                    ]
-                },
-                "value": {
-                    "type": [
-                        "string"
-                    ],
-                    "enum": [
-                        "PRV",
-                        "PSV",
-                        "PBV",
-                        "FCV",
-                        "TCV",
-                        "GPV"
-                    ]
-                },
-                "unitCode": {
-                    "type": "string"
-                },
-                "createdAt": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "observedAt": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "modifiedAt": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "valveCurve": {
-                    "type": "object",
-                    "properties": {
-                        "type": {
-                            "type": "string",
-                            "enum": [
-                                "Relationship"
-                            ]
-                        },
-                        "object": {
-                            "type": [
-                                "string"
-                            ],
-                            "format": "uri"
-                        },
-                        "createdAt": {
-                            "type": "string",
-                            "format": "date-time"
-                        },
-                        "observedAt": {
-                            "type": "string",
-                            "format": "date-time"
-                        },
-                        "modifiedAt": {
-                            "type": "string",
-                            "format": "date-time"
-                        }
-                    }
-                }
-            },
-            "required": [
-                "type",
-                "value"
-            ]
-        }
-  }
+    }
 }
