@@ -2,112 +2,78 @@ Pipe:
   description: 'This entity contains a harmonised description of a generic pipe made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.'
   properties:
     bulkCoeff:
-      properties: &pipe_-_properties_-_diameter_-_properties
-        createdAt:
-          format: date-time
-          type: string
-        modifiedAt:
-          format: date-time
-          type: string
-        observedAt:
-          format: date-time
-          type: string
-        type:
-          enum:
-            - Property
-          type: string
-        unitCode:
-          type: string
-        value:
-          type:
-            - number
-            - string
-            - array
-      required: &pipe_-_properties_-_diameter_-_required
-        - type
-        - value
-      type: object
+      description: 'Use a positive value for growth and a negative value for decay. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'
+      type: Property
+      x-ngsi:
+        model: https://schema.org/Number
+        units: 'reciprocal day The bulk reaction coefficient for the pipe'
+    description:
+      description: 'An optional text that describes other significant information about the junction'
+      type: Property
+      x-ngsi:
+        model: https://schema.org/Text
     diameter:
-      properties: *pipe_-_properties_-_diameter_-_properties
-      required: *pipe_-_properties_-_diameter_-_required
-      type: object
+      description: 'The pipe diameter'
+      type: Property
+      x-ngsi:
+        model: https://schema.org/Number
+        units: Millimetre
     endsAt:
-      properties: &pipe_-_properties_-_startsat_-_properties
-        createdAt:
-          format: date-time
-          type: string
-        modifiedAt:
-          format: date-time
-          type: string
-        object:
-          format: uri
-          type:
-            - string
-        observedAt:
-          format: date-time
-          type: string
-        type:
-          enum:
-            - Relationship
-          type: string
-      required: &pipe_-_properties_-_startsat_-_required
-        - type
-        - object
-      type: object
+      description: 'The ID of the node where the pipe ends'
+      format: uri
+      type: Relationship
     initialStatus:
-      properties: &pipe_-_properties_-_status_-_properties
-        observedAt:
-          format: date-time
-          type: string
-        type:
-          enum:
-            - Property
-          type: string
-        unitCode:
-          type: string
-        value:
-          enum:
-            - OPEN
-            - CLOSED
-            - CV
-          type:
-            - number
-            - string
-            - array
-      required: &pipe_-_properties_-_status_-_required
-        - type
-        - value
-      type: object
+      description: 'The node status at the start of the simulation.'
+      enum:
+        - OPEN
+        - CLOSED
+        - CV
+      type: Property
+      x-ngsi:
+        model: https://schema.org/Text
     length:
-      properties: *pipe_-_properties_-_diameter_-_properties
-      required: *pipe_-_properties_-_diameter_-_required
-      type: object
+      description: 'The actual length of the pipe. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'
+      type: Property
+      x-ngsi:
+        model: https://schema.org/Number
+        units: Metre
     minorLoss:
-      properties: *pipe_-_properties_-_diameter_-_properties
-      required: *pipe_-_properties_-_diameter_-_required
-      type: object
+      description: 'Unitless minor loss coefficient associated with bends, fittings, etc'
+      type: Property
+      x-ngsi:
+        model: https://schema.org/Number
+        units: 'No unit'
     roughness:
-      properties: *pipe_-_properties_-_diameter_-_properties
-      required: *pipe_-_properties_-_diameter_-_required
-      type: object
+      description: 'The roughness coefficient of the Pipe.'
+      type: Property
+      x-ngsi:
+        model: https://schema.org/Number
+        units: 'No unit'
     startsAt:
-      properties: *pipe_-_properties_-_startsat_-_properties
-      required: *pipe_-_properties_-_startsat_-_required
-      type: object
+      description: 'The ID of the node where the pipe begins'
+      format: uri
+      type: Relationship
     status:
-      properties: *pipe_-_properties_-_status_-_properties
-      required: *pipe_-_properties_-_status_-_required
-      type: object
+      description: 'The dynamic state of the node'
+      enum:
+        - OPEN
+        - CLOSED
+        - CV
+      type: Property
+      x-ngsi:
+        model: https://schema.org/Text
     tag:
-      properties: *pipe_-_properties_-_diameter_-_properties
-      required: *pipe_-_properties_-_diameter_-_required
-      type: object
+      description: 'An optional text string used to assign the pipe to a category, perhaps one based on age or material'
+      type: Property
+      x-ngsi:
+        model: https://schema.org/Text
     type:
-      description: 'NGSI-LD Entity Type'
+      description: 'NGSI-LD Entity Type. It has to be Pipe'
       enum:
         - Pipe
-      type: string
+      type: Property
     vertices:
+      description: 'Coordinates of all vertices in the pipe, ordered from the startsAt node to the endsAt node and encoded as a GeoJSON '
       oneOf:
         - $id: https://geojson.org/schema/MultiPoint.json
           $schema: "http://json-schema.org/draft-07/schema#"
@@ -155,10 +121,13 @@ Pipe:
             - coordinates
           title: 'GeoJSON Point'
           type: object
+      type: Geoproperty
     wallCoeff:
-      properties: *pipe_-_properties_-_diameter_-_properties
-      required: *pipe_-_properties_-_diameter_-_required
-      type: object
+      description: 'The wall reaction coefficient for the pipe. Use a positive value for growth and a negative value for decay. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'
+      type: Property
+      x-ngsi:
+        model: https://schema.org/Number
+        units: mg/m²/day
   required:
     - id
     - type

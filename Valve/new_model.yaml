@@ -1,156 +1,83 @@
 Valve:
   description: 'This entity contains a harmonised description of a generic Valve made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.'
   properties:
+    description:
+      description: 'An optional text that describes other significant information about the junction'
+      type: Property
+      x-ngsi:
+        model: https://schema.org/Text
     diameter:
-      properties: &valve_-_properties_-_minorloss_-_properties
-        createdAt:
-          format: date-time
-          type: string
-        modifiedAt:
-          format: date-time
-          type: string
-        observedAt:
-          format: date-time
-          type: string
-        type:
-          enum:
-            - Property
-          type: string
-        unitCode:
-          type: string
-        value:
-          type:
-            - number
-            - string
-            - array
-      required: &valve_-_properties_-_minorloss_-_required
-        - type
-        - value
-      type: object
+      description: 'The valve diameter. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'
+      type: Property
+      x-ngsi:
+        model: ' https://schema.org/Number'
+        units: millimetre
     endsAt:
-      properties: &valve_-_properties_-_startsat_-_properties
-        createdAt:
-          format: date-time
-          type: string
-        modifiedAt:
-          format: date-time
-          type: string
-        object:
-          format: uri
-          type:
-            - string
-        observedAt:
-          format: date-time
-          type: string
-        type:
-          enum:
-            - Relationship
-          type: string
-      required: &valve_-_properties_-_startsat_-_required
-        - type
-        - object
-      type: object
+      description: 'The ID of the node on the nominal downstream or discharge side of the valve'
+      format: uri
+      type: Relationship
     initialStatus:
-      properties: &valve_-_properties_-_status_-_properties
-        observedAt:
-          format: date-time
-          type: string
-        type:
-          enum:
-            - Property
-          type: string
-        unitCode:
-          type: string
-        value:
-          enum:
-            - OPEN
-            - CLOSED
-            - CV
-          type:
-            - number
-            - string
-            - array
-      required: &valve_-_properties_-_status_-_required
-        - type
-        - value
-      type: object
+      description: 'The node status at the start of the simulation.'
+      enum:
+        - OPEN
+        - CLOSED
+        - CV
+      type: Property
+      x-ngsi:
+        model: https://schema.org/Text
     minorLoss:
-      properties: *valve_-_properties_-_minorloss_-_properties
-      required: *valve_-_properties_-_minorloss_-_required
-      type: object
+      description: 'Unitless minor loss coefficient that applies when the valve is completely opened. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'
+      type: Property
+      x-ngsi:
+        model: https://schema.org/Number
+        units: 'No unit'
     setting:
-      properties: *valve_-_properties_-_minorloss_-_properties
-      required: *valve_-_properties_-_minorloss_-_required
-      type: object
+      description: 'A parameter that describes the valve''s operational setting. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'
+      type: Property
+      x-ngsi:
+        model: https://schema.org/Number
+        units: 'No unit'
     startsAt:
-      properties: *valve_-_properties_-_startsat_-_properties
-      required: *valve_-_properties_-_startsat_-_required
-      type: object
+      description: 'The ID of the node on the nominal upstream or inflow side of the valve'
+      format: uri
+      type: Relationship
     status:
-      properties: *valve_-_properties_-_status_-_properties
-      required: *valve_-_properties_-_status_-_required
-      type: object
+      description: 'The dynamic state of the node'
+      enum:
+        - OPEN
+        - CLOSED
+        - CV
+      type: Property
+      x-ngsi:
+        model: https://schema.org/Text
     tag:
-      properties: *valve_-_properties_-_minorloss_-_properties
-      required: *valve_-_properties_-_minorloss_-_required
-      type: object
+      description: 'An optional text string used to assign the pipe to a category, perhaps one based on age or material'
+      type: Property
+      x-ngsi:
+        model: https://schema.org/Text
     type:
-      description: 'NGSI-LD Entity Type'
+      description: 'NGSI-LD Entity Type. It must be equal to Valve.'
       enum:
         - Valve
-      type: string
+      type: Property
+    valveCurve:
+      description: 'A relationship to the curve of the setting property. Only required when valveType is GPV'
+      format: uri
+      type: Relationship
     valveType:
-      properties:
-        createdAt:
-          format: date-time
-          type: string
-        modifiedAt:
-          format: date-time
-          type: string
-        observedAt:
-          format: date-time
-          type: string
-        type:
-          enum:
-            - Property
-          type: string
-        unitCode:
-          type: string
-        value:
-          enum:
-            - PRV
-            - PSV
-            - PBV
-            - FCV
-            - TCV
-            - GPV
-          type:
-            - string
-        valveCurve:
-          properties:
-            createdAt:
-              format: date-time
-              type: string
-            modifiedAt:
-              format: date-time
-              type: string
-            object:
-              format: uri
-              type:
-                - string
-            observedAt:
-              format: date-time
-              type: string
-            type:
-              enum:
-                - Relationship
-              type: string
-          type: object
-      required:
-        - type
-        - value
-      type: object
+      description: 'The valve type of the element'
+      enum:
+        - PRV
+        - PSV
+        - PBV
+        - FCV
+        - TCV
+        - GPV
+      type: Property
+      x-ngsi:
+        model: https://schema.org/Text
     vertices:
+      description: 'Coordinates of all vertices in the valve, ordered from the startsAt node to the endsAt node and encoded as a GeoJSON '
       oneOf:
         - $id: https://geojson.org/schema/MultiPoint.json
           $schema: "http://json-schema.org/draft-07/schema#"
@@ -198,6 +125,7 @@ Valve:
             - coordinates
           title: 'GeoJSON Point'
           type: object
+      type: Geoproperty
   required:
     - id
     - type
