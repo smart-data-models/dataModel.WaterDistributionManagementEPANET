@@ -1,92 +1,54 @@
 Entidad: Curva  
 ==============  
-Esta especificación es una **versión temporal**. Se genera automáticamente a partir de las propiedades documentadas descritas en el schema.json condensadas en el archivo `model.yaml`. Se ha creado un archivo temporal `nuevo_modelo.yaml` en cada modelo de datos para evitar el impacto en los scripts existentes. Por lo tanto, la especificación estará incompleta mientras el schema.json no se actualice al nuevo formato (documentando las propiedades). Una vez actualizado el `modelo.yaml` (`nuevo_modelo.yaml`) necesita ser actualizado también (automáticamente) . Más información en este [link](https://github.com/smart-data-models/data-models/blob/master/specs/warning_message_new_spec.md). Mientras sea un formato provisional cualquier [feedback es bienvenido en este formulario](https://smartdatamodels.org/index.php/submit-an-issue-2/) eligiendo la opción `Feedback on the new specification`.  
+[Licencia abierta](https://github.com/smart-data-models//dataModel.WaterNetworkManagement/blob/master/Curve/LICENSE.md)  
 Descripción global: **Esta entidad contiene una descripción armonizada de una curva genérica hecha para el dominio de la gestión de la red de agua. Esta entidad está principalmente asociada con la gestión vertical del agua y las aplicaciones relacionadas con la IO**.  
 
 ## Lista de propiedades  
 
-`curveType`:   `description`:   `tag`:   `type`: Tipo de entidad NGSI-LD. Debe ser igual a Curva.  `xData`:   `yData`:     
+- `curveType`: El tipo de curva de la entidad.  - `description`: Un texto opcional que describe otra información significativa sobre la unión  - `tag`: Una cadena de texto opcional utilizada para asignar la pipa a una categoría, tal vez una basada en la edad o el material  - `type`: Tipo de entidad NGSI-LD. Debe ser igual a Curva.  - `xData`: X puntos de datos para la curva  - `yData`: Los puntos de datos Y de la curva    
+Propiedades requeridas  
+- `curveType`  - `id`  - `type`  - `xData`  - `yData`    
 El texto se incluirá entre el título general y la descripción.  
 ## Modelo de datos Descripción de las propiedades  
-Ordenados alfabéticamente  
-```yaml  
+Ordenados alfabéticamente (haga clic para ver los detalles)  
+<details><summary><strong>full yaml details</strong></summary>    
+```yaml  
 Curve:    
   description: 'This entity contains a harmonised description of a generic curve made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.'    
   properties:    
     curveType:    
-      properties:    
-        createdAt:    
-          format: date-time    
-          type: string    
-        modifiedAt:    
-          format: date-time    
-          type: string    
-        observedAt:    
-          format: date-time    
-          type: string    
-        type:    
-          enum:    
-            - Property    
-          type: string    
-        unitCode:    
-          type: string    
-        value:    
-          enum:    
-            - FLOW-HEAD    
-            - FLOW-EFFICIENCY    
-            - FLOW-HEADLOSS    
-            - LEVEL-VOLUME    
-          type:    
-            - number    
-            - string    
-            - array    
-      required:    
-        - type    
-        - value    
-      type: object    
+      description: 'Entity''s curve type.'    
+      enum:    
+        - FLOW-HEAD    
+        - FLOW-EFFICIENCY    
+        - FLOW-HEADLOSS    
+        - LEVEL-VOLUME    
+      type: Property    
     description:    
-      properties: &curve_-_properties_-_tag_-_properties    
-        createdAt:    
-          format: date-time    
-          type: string    
-        modifiedAt:    
-          format: date-time    
-          type: string    
-        observedAt:    
-          format: date-time    
-          type: string    
-        type:    
-          enum:    
-            - Property    
-          type: string    
-        unitCode:    
-          type: string    
-        value:    
-          type:    
-            - number    
-            - string    
-            - array    
-      required: &curve_-_properties_-_tag_-_required    
-        - type    
-        - value    
-      type: object    
+      description: 'An optional text that describes other significant information about the junction'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
     tag:    
-      properties: *curve_-_properties_-_tag_-_properties    
-      required: *curve_-_properties_-_tag_-_required    
-      type: object    
+      description: 'An optional text string used to assign the pipe to a category, perhaps one based on age or material'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
     type:    
       description: 'NGSI-LD Entity Type. It must be equal to Curve.'    
       enum:    
         - Curve    
       type: Property    
     xData:    
-      properties: *curve_-_properties_-_tag_-_properties    
-      required: *curve_-_properties_-_tag_-_required    
-      type: object    
+      description: 'X data points for the curve'    
+      items:    
+        type: number    
+      type: Property    
     yData:    
-      properties: *curve_-_properties_-_tag_-_properties    
-      required: *curve_-_properties_-_tag_-_required    
-      type: object    
+      description: 'Y data points for the curve'    
+      items:    
+        type: number    
+      type: Property    
   required:    
     - id    
     - type    
@@ -95,7 +57,10 @@ Curve:
     - yData    
   type: object    
 ```  
+</details>    
 El texto se incluirá después de la lista de propiedades  
+## Ejemplo de cargas útiles  
+#### Ejemplo de valores clave de la curva NGSI V2  
 Aquí hay un ejemplo de una curva en formato JSON como valores clave. Es compatible con NGSI V2 cuando se utiliza "opciones=valores-clave" y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
@@ -129,7 +94,8 @@ Curve:
   }  
 }  
 ```  
-Aquí hay un ejemplo de una curva en formato JSON como normalizada. Es compatible con NGSI V2 cuando se utiliza "opciones=valores clave" y devuelve los datos de contexto de una entidad individual.  
+#### Curva NGSI V2 normalizada Ejemplo  
+Aquí hay un ejemplo de una curva en formato JSON como normalizada. Es compatible con NGSI V2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
     "id": "fAM-8ca3-4533-a2eb-12015",  
@@ -165,7 +131,8 @@ Curve:
     }  
 }  
 ```  
-Aquí hay un ejemplo de una curva en formato JSON-LD como valores clave. Es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+#### Curva NGSI-LD clave-valores Ejemplo  
+Aquí hay un ejemplo de una curva en formato JSON-LD como valores clave. Es compatible con NGSI-LD cuando se utiliza "opciones=valores-clave" y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
   "@context": [  
@@ -201,6 +168,7 @@ Curve:
   }  
 }  
 ```  
+#### Curva NGSI-LD normalizada Ejemplo  
 Aquí hay un ejemplo de una curva en formato JSON-LD normalizada. Es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
