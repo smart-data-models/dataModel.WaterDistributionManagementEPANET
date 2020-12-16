@@ -1,132 +1,95 @@
 Entité : Pompe  
 ==============  
-Cette spécification est une **version temporelle**. Elle est générée automatiquement à partir des propriétés documentées décrites dans le schema.json condensé dans le fichier `model.yaml`. Un fichier temporaire `nouveau_modèle.yaml` a été créé dans chaque modèle de données pour éviter d'avoir un impact sur les scripts existants. Ainsi, la spécification sera incomplète tant que le fichier schema.json n'est pas mis à jour au nouveau format (documentation des propriétés). Une fois mis à jour, le fichier `model.yaml` (`nouveau_model.yaml`) doit être mis à jour également (automatiquement) . Plus d'informations dans ce [lien](https://github.com/smart-data-models/data-models/blob/master/specs/warning_message_new_spec.md). Tant qu'il s'agit d'un format provisoire, tout [feedback est le bienvenu dans ce formulaire](https://smartdatamodels.org/index.php/submit-an-issue-2/) en choisissant l'option "Feedback sur la nouvelle spécification".  
+[Licence ouverte](https://github.com/smart-data-models//dataModel.WaterNetworkManagement/blob/master/Pump/LICENSE.md)  
 Description globale : **Cette entité contient une description harmonisée d'une pompe générique faite pour le domaine de la gestion des réseaux d'eau. Cette entité est principalement associée aux applications verticales de gestion de l'eau et aux applications IdO connexes.**  
 
 ## Liste des biens  
 
-- `efficCurve`:   - `endsAt`:   - `energyPattern`:   - `energyPrice`:   - `headCurve`:   - `initialStatus`:   - `power`:   - `pumpPattern`:   - `speed`:   - `startsAt`:   - `status`:   - `tag`:   - `type`: Type d'entité NGSI-LD  - `vertices`:   ## Modèle de données description des biens  
+- `description`: Un texte optionnel qui décrit d'autres informations importantes sur la jonction  - `efficCurve`: L'étiquette d'identification de la courbe qui représente l'efficacité filaire de la pompe en fonction du débit.  - `endsAt`: L'ID du nœud du côté du refoulement de la pompe  - `energyPattern`: L'étiquette d'identification du schéma temporel utilisé pour décrire la variation du prix de l'énergie tout au long de la journée.  - `energyPrice`: Le prix moyen ou nominal de l'énergie en unités monétaires. Toutes les unités sont acceptées en code [CEFACT](https://www.unece.org/cefact.html).  - `headCurve`: L'étiquette d'identification de la courbe de la pompe utilisée pour décrire la relation entre la hauteur de charge délivrée par la pompe et le débit à travers la pompe.  - `initialStatus`: L'état du nœud au début de la simulation.  - `power`: L'énergie fournie par la pompe. Toutes les unités sont acceptées en code [CEFACT](https://www.unece.org/cefact.html).  - `pumpPattern`: L'étiquette d'identification d'un schéma temporel utilisé pour contrôler le fonctionnement de la pompe. Les multiplicateurs du modèle sont équivalents aux réglages de vitesse. Un multiplicateur de zéro implique que la pompe sera arrêtée pendant la période de temps correspondante  - `speed`: Le réglage de la vitesse relative de la pompe. Toutes les unités sont acceptées en code [CEFACT](https://www.unece.org/cefact.html).  - `startsAt`: L'ID du nœud du côté aspiration de la pompe  - `status`: L'état dynamique du nœud  - `tag`: Une chaîne de texte facultative utilisée pour classer la pipe dans une catégorie, peut-être en fonction de l'âge ou du matériau  - `type`: Type d'entité NGSI-LD. Il doit être égal à Pump.  - `vertices`: Coordonnées de tous les sommets de la pompe, ordonnées du nœud startsAt au nœud endsAt et encodées sous forme de GeoJSON    
+Propriétés requises  
+- `endsAt`  - `id`  - `initialStatus`  - `startsAt`  - `type`  ## Modèle de données description des biens  
 Classement par ordre alphabétique (cliquez pour plus de détails)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 Pump:    
   description: 'This entity contains a harmonised description of a generic pump made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.'    
   properties:    
+    description:    
+      description: 'An optional text that describes other significant information about the junction'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
     efficCurve:    
-      properties: &pump_-_properties_-_endsat_-_properties    
-        createdAt:    
-          format: date-time    
-          type: string    
-        modifiedAt:    
-          format: date-time    
-          type: string    
-        object:    
-          format: uri    
-          type:    
-            - string    
-        observedAt:    
-          format: date-time    
-          type: string    
-        type:    
-          enum:    
-            - Relationship    
-          type: string    
-      required: &pump_-_properties_-_endsat_-_required    
-        - type    
-        - object    
-      type: object    
+      description: 'The ID label of the curve that represents the pump''s wire-to-water efficiency as a function of flow rate.'    
+      format: uri    
+      type: Relationship    
     endsAt:    
-      properties: *pump_-_properties_-_endsat_-_properties    
-      required: *pump_-_properties_-_endsat_-_required    
-      type: object    
+      description: 'The ID of the node on the discharge side of the pump'    
+      format: uri    
+      type: Relationship    
     energyPattern:    
-      properties: *pump_-_properties_-_endsat_-_properties    
-      required: *pump_-_properties_-_endsat_-_required    
-      type: object    
+      description: 'The ID label of the time pattern used to describe the variation in energy price throughout the day.'    
+      format: uri    
+      type: Relationship    
     energyPrice:    
-      properties: &pump_-_properties_-_power_-_properties    
-        createdAt:    
-          format: date-time    
-          type: string    
-        modifiedAt:    
-          format: date-time    
-          type: string    
-        observedAt:    
-          format: date-time    
-          type: string    
-        type:    
-          enum:    
-            - Property    
-          type: string    
-        unitCode:    
-          type: string    
-        value:    
-          type:    
-            - number    
-            - string    
-            - array    
-      required: &pump_-_properties_-_power_-_required    
-        - type    
-        - value    
-      type: object    
+      description: 'The average or nominal price of energy in monetary units. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'    
+      type: Property    
+      x-ngsi:    
+        units: 'No unit'    
     headCurve:    
-      properties: *pump_-_properties_-_endsat_-_properties    
-      required: *pump_-_properties_-_endsat_-_required    
-      type: object    
+      description: 'The ID label of the pump curve used to describe the relationship between the head delivered by the pump and the flow through the Pump.'    
+      format: uri    
+      type: Relationship    
     initialStatus:    
-      properties: &pump_-_properties_-_status_-_properties    
-        observedAt:    
-          format: date-time    
-          type: string    
-        type:    
-          enum:    
-            - Property    
-          type: string    
-        unitCode:    
-          type: string    
-        value:    
-          enum:    
-            - OPEN    
-            - CLOSED    
-            - CV    
-          type:    
-            - number    
-            - string    
-            - array    
-      required: &pump_-_properties_-_status_-_required    
-        - type    
-        - value    
-      type: object    
+      description: 'The node status at the start of the simulation.'    
+      enum:    
+        - OPEN    
+        - CLOSED    
+        - CV    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
     power:    
-      properties: *pump_-_properties_-_power_-_properties    
-      required: *pump_-_properties_-_power_-_required    
-      type: object    
+      description: 'The power supplied by the pump. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        units: KiloWatt    
     pumpPattern:    
-      properties: *pump_-_properties_-_endsat_-_properties    
-      required: *pump_-_properties_-_endsat_-_required    
-      type: object    
+      description: 'The ID label of a time pattern used to control the pump''s operation. The multipliers of the pattern are equivalent to speed settings. A multiplier of zero implies that the pump will be shut off during the corresponding time period'    
+      format: uri    
+      type: Relationship    
     speed:    
-      properties: *pump_-_properties_-_power_-_properties    
-      required: *pump_-_properties_-_power_-_required    
-      type: object    
+      description: 'The relative speed setting of the Pump. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        units: 'Metre per Second'    
     startsAt:    
-      properties: *pump_-_properties_-_endsat_-_properties    
-      required: *pump_-_properties_-_endsat_-_required    
-      type: object    
+      description: 'The ID of the node on the suction side of the pump'    
+      format: uri    
+      type: Relationship    
     status:    
-      properties: *pump_-_properties_-_status_-_properties    
-      required: *pump_-_properties_-_status_-_required    
-      type: object    
+      description: 'The dynamic state of the node'    
+      enum:    
+        - OPEN    
+        - CLOSED    
+        - CV    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
     tag:    
-      properties: *pump_-_properties_-_power_-_properties    
-      required: *pump_-_properties_-_power_-_required    
-      type: object    
+      description: 'An optional text string used to assign the pipe to a category, perhaps one based on age or material'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
     type:    
-      description: 'NGSI-LD Entity Type'    
+      description: 'NGSI-LD Entity Type. It must be equal to Pump.'    
       enum:    
         - Pump    
-      type: string    
+      type: Property    
     vertices:    
+      description: 'Coordinates of all vertices in the pump, ordered from the startsAt node to the endsAt node and encoded as a GeoJSON '    
       oneOf:    
         - $id: https://geojson.org/schema/MultiPoint.json    
           $schema: "http://json-schema.org/draft-07/schema#"    
@@ -174,6 +137,7 @@ Pump:
             - coordinates    
           title: 'GeoJSON Point'    
           type: object    
+      type: Geoproperty    
   required:    
     - id    
     - type    
@@ -204,7 +168,7 @@ Pump:
 }  
 ```  
 #### Pompe NGSI V2 normalisée Exemple  
-Voici un exemple de pompe au format JSON normalisé. Il est compatible avec NGSI V2 lorsqu'il utilise `options=keyValues` et renvoie les données de contexte d'une entité individuelle.  
+Voici un exemple de pompe au format JSON normalisé. Il est compatible avec NGSI V2 lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
     "id": "85zhnf58-0d4c-h4g854g-b7d0-3310klm",  
@@ -250,7 +214,7 @@ Pump:
 }  
 ```  
 #### Pompe NGSI-LD valeurs clés Exemple  
-Voici un exemple d'une pompe au format JSON-LD comme valeurs clés. Ce format est compatible avec le format NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
+Voici un exemple d'une pompe au format JSON-LD comme valeurs clés. Il est compatible avec le format NGSI-LD lorsqu'il utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
   "id": "urn:ngsi-ld:Pump:85zhnf58-0d4c-h4g854g-b7d0-3310klm",  
@@ -274,7 +238,7 @@ Pump:
 }  
 ```  
 #### Pompe NGSI-LD normalisée Exemple  
-Voici un exemple de pompe au format JSON-LD normalisé. Il est compatible avec le format NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
+Voici un exemple d'une pompe au format JSON-LD telle que normalisée. Il est compatible avec le format NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
     "id": "urn:ngsi-ld:Pump:85zhnf58-0d4c-h4g854g-b7d0-3310klm",  
