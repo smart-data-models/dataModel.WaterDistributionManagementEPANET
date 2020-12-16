@@ -5,7 +5,7 @@ Entity: Pattern
 
 ## List of properties  
 
-- `description`:   - `multipliers`:   - `startTime`:   - `tag`:   - `timeStep`:   - `type`: NGSI-LD Entity Type    
+- `description`: An optional text that describes other significant information about the junction  - `multipliers`: Multipliers define how some base quantity (e.g., demand) is adjusted for each time period  - `startTime`: The time at which the pattern starts  - `tag`: An optional text string used to assign the pipe to a category, perhaps one based on age or material  - `timeStep`: The time step used for the multipliers. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.  - `type`: NGSI-LD Entity Type. It has to be Pattern    
 Required properties  
 - `id`  - `multipliers`  - `startTime`  - `timeStep`  - `type`  ## Data Model description of properties  
 Sorted alphabetically (click for details)  
@@ -15,52 +15,37 @@ Pattern:
   description: 'This entity contains a harmonised description of a generic pattern made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.'    
   properties:    
     description:    
-      properties: &pattern_-_properties_-_multipliers_-_properties    
-        createdAt:    
-          format: date-time    
-          type: string    
-        modifiedAt:    
-          format: date-time    
-          type: string    
-        observedAt:    
-          format: date-time    
-          type: string    
-        type:    
-          enum:    
-            - Property    
-          type: string    
-        unitCode:    
-          type: string    
-        value:    
-          type:    
-            - number    
-            - string    
-            - array    
-      required: &pattern_-_properties_-_multipliers_-_required    
-        - type    
-        - value    
-      type: object    
+      description: 'An optional text that describes other significant information about the junction'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
     multipliers:    
-      properties: *pattern_-_properties_-_multipliers_-_properties    
-      required: *pattern_-_properties_-_multipliers_-_required    
-      type: object    
+      description: 'Multipliers define how some base quantity (e.g., demand) is adjusted for each time period'    
+      items:    
+        type: number    
+      type: Property    
     startTime:    
-      properties: *pattern_-_properties_-_multipliers_-_properties    
-      required: *pattern_-_properties_-_multipliers_-_required    
-      type: object    
+      description: 'The time at which the pattern starts'    
+      format: date-time    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Time    
     tag:    
-      properties: *pattern_-_properties_-_multipliers_-_properties    
-      required: *pattern_-_properties_-_multipliers_-_required    
-      type: object    
+      description: 'An optional text string used to assign the pipe to a category, perhaps one based on age or material'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
     timeStep:    
-      properties: *pattern_-_properties_-_multipliers_-_properties    
-      required: *pattern_-_properties_-_multipliers_-_required    
-      type: object    
+      description: 'The time step used for the multipliers. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'    
+      format: date-time    
+      type: Property    
+      x-ngsi:    
+        units: Second    
     type:    
-      description: 'NGSI-LD Entity Type'    
+      description: 'NGSI-LD Entity Type. It has to be Pattern'    
       enum:    
         - Pattern    
-      type: string    
+      type: Property    
   required:    
     - id    
     - type    
