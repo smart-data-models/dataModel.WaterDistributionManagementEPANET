@@ -5,7 +5,7 @@ Entity: Reservoir
 
 ## List of properties  
 
-- `address`: The mailing address.  - `areaServed`: The geographic area where a service or offered item is provided.  - `description`:   - `elevation`:   - `hasInlet`:   - `hasOutlet`:   - `headPattern`:   - `initialQuality`:   - `location`:   - `reservoirHead`:   - `sourceCategory`:   - `tag`:   - `type`: NGSI-LD Entity Type    
+- `address`: The mailing address.  - `areaServed`: The geographic area where a service or offered item is provided  - `description`: An optional text that describes other significant information about the junction  - `elevation`: The elevation above some common reference of the Reservoir. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.  - `hasInlet`: A relationship indicating the water inlet points of the Reservoir  - `hasOutlet`: A relationship indicating the water outlet points of the Reservoir  - `headPattern`: The ID label of a time pattern used to model time variation in the reservoir's total head  - `initialQuality`: Water quality level at the Reservoir. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.  - `location`:   - `reservoirHead`: The hydraulic head (elevation + pressure head) of water in the Reservoir. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.  - `sourceCategory`: Description of the quality of source flow entering the network at a specific node.  - `tag`: An optional text string used to assign the pipe to a category, perhaps one based on age or material  - `type`: NGSI-LD Entity Type. It must be equal to Reservoir.    
 Required properties  
 - `id`  - `location`  - `reservoirHead`  - `type`  ## Data Model description of properties  
 Sorted alphabetically (click for details)  
@@ -18,88 +18,61 @@ Reservoir:
       description: 'The mailing address.'    
       properties:    
         addressCountry:    
+          description: 'Property. The country. For example, Spain. Model:''https://schema.org/Text'''    
           type: string    
         addressLocality:    
+          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/Text'''    
           type: string    
         addressRegion:    
+          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/Text'''    
           type: string    
         areaServed:    
+          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/Text'''    
           type: string    
         postOfficeBoxNumber:    
+          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/Text'''    
           type: string    
         postalCode:    
+          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/Text'''    
           type: string    
         streetAddress:    
+          description: 'Property. The street address. Model:''https://schema.org/Text'''    
           type: string    
       type: Property    
     areaServed:    
-      description: 'The geographic area where a service or offered item is provided.'    
+      description: 'The geographic area where a service or offered item is provided'    
       type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
     description:    
-      properties: &reservoir_-_properties_-_elevation_-_properties    
-        createdAt:    
-          format: date-time    
-          type: string    
-        modifiedAt:    
-          format: date-time    
-          type: string    
-        observedAt:    
-          format: date-time    
-          type: string    
-        type:    
-          enum:    
-            - Property    
-          type: string    
-        unitCode:    
-          type: string    
-        value:    
-          type:    
-            - number    
-            - string    
-            - array    
-      required: &reservoir_-_properties_-_elevation_-_required    
-        - type    
-        - value    
-      type: object    
+      description: 'An optional text that describes other significant information about the junction'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
     elevation:    
-      properties: *reservoir_-_properties_-_elevation_-_properties    
-      required: *reservoir_-_properties_-_elevation_-_required    
-      type: object    
+      description: 'The elevation above some common reference of the Reservoir. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        units: Metre    
     hasInlet:    
-      properties: &reservoir_-_properties_-_hasoutlet_-_properties    
-        createdAt:    
-          format: date-time    
-          type: string    
-        modifiedAt:    
-          format: date-time    
-          type: string    
-        object:    
-          format: uri    
-          type:    
-            - string    
-        observedAt:    
-          format: date-time    
-          type: string    
-        type:    
-          enum:    
-            - Relationship    
-          type: string    
-      required: &reservoir_-_properties_-_hasoutlet_-_required    
-        - type    
-        - object    
-      type: object    
+      description: 'A relationship indicating the water inlet points of the Reservoir'    
+      format: uri    
+      type: Relationship    
     hasOutlet:    
-      properties: *reservoir_-_properties_-_hasoutlet_-_properties    
-      required: *reservoir_-_properties_-_hasoutlet_-_required    
-      type: object    
+      description: 'A relationship indicating the water outlet points of the Reservoir'    
+      format: uri    
+      type: Relationship    
     headPattern:    
-      properties: *reservoir_-_properties_-_hasoutlet_-_properties    
-      required: *reservoir_-_properties_-_hasoutlet_-_required    
-      type: object    
+      description: 'The ID label of a time pattern used to model time variation in the reservoir''s total head'    
+      format: uri    
+      type: Relationship    
     initialQuality:    
-      properties: *reservoir_-_properties_-_elevation_-_properties    
-      required: *reservoir_-_properties_-_elevation_-_required    
-      type: object    
+      description: 'Water quality level at the Reservoir. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        units: mg/L    
     location:    
       $id: https://geojson.org/schema/Geometry.json    
       $schema: "http://json-schema.org/draft-07/schema#"    
@@ -248,124 +221,48 @@ Reservoir:
           type: object    
       title: 'GeoJSON Geometry'    
     reservoirHead:    
-      properties: *reservoir_-_properties_-_elevation_-_properties    
-      required: *reservoir_-_properties_-_elevation_-_required    
-      type: object    
+      description: 'The hydraulic head (elevation + pressure head) of water in the Reservoir. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        units: Metre    
     sourceCategory:    
+      description: 'Description of the quality of source flow entering the network at a specific node.'    
       properties:    
-        createdAt:    
-          format: date-time    
-          type: string    
-        modifiedAt:    
-          format: date-time    
-          type: string    
-        observedAt:    
-          format: date-time    
-          type: string    
         sourcePattern:    
-          properties:    
-            createdAt:    
-              format: date-time    
-              type: string    
-            modifiedAt:    
-              format: date-time    
-              type: string    
-            object:    
-              format: uri    
-              type:    
-                - string    
-            observedAt:    
-              format: date-time    
-              type: string    
-            type:    
-              enum:    
-                - Relationship    
-              type: string    
-          required:    
-            - type    
-            - object    
-          type: object    
+          description: 'Relationship. A relationship to the pattern pf the sourceCategory property'    
+          format: uri    
+          type: string    
         sourceQuality:    
-          properties:    
-            createdAt:    
-              format: date-time    
-              type: string    
-            modifiedAt:    
-              format: date-time    
-              type: string    
-            observedAt:    
-              format: date-time    
-              type: string    
-            type:    
-              enum:    
-                - Property    
-              type: string    
-            unitCode:    
-              type: string    
-            value:    
-              type:    
-                - number    
-                - string    
-          required:    
-            - type    
-            - value    
-          type: object    
+          description: 'Property. Model:''https://schema.org/Number''. Units: ''mg/L''. Baseline or average concentration (or mass flow rate) of source. A sub-property of the Property ''sourceCategory''. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'    
+          type: number    
         sourceType:    
-          properties:    
-            createdAt:    
-              format: date-time    
-              type: string    
-            modifiedAt:    
-              format: date-time    
-              type: string    
-            observedAt:    
-              format: date-time    
-              type: string    
-            type:    
-              enum:    
-                - Property    
-              type: string    
-            unitCode:    
-              type: string    
-            value:    
-              enum:    
-                - CONCEN    
-                - MASS    
-                - FLOWPACED    
-                - SETPOINT    
-              type:    
-                - number    
-                - string    
-          required:    
-            - type    
-            - value    
-          type: object    
-        type:    
+          description: 'Property. Model:''https://schema.org/Text''. A sub-property of the Property ''sourceCategory'''    
           enum:    
-            - Property    
+            - CONCEN    
+            - MASS    
+            - FLOWPACED    
+            - SETPOINT    
           type: string    
-        unitCode:    
-          type: string    
-        value:    
-          type:    
-            - number    
-            - string    
       required:    
         - type    
         - value    
         - sourceType    
         - sourceQuality    
         - sourcePattern    
-      type: object    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
     tag:    
-      properties: *reservoir_-_properties_-_elevation_-_properties    
-      required: *reservoir_-_properties_-_elevation_-_required    
-      type: object    
+      description: 'An optional text string used to assign the pipe to a category, perhaps one based on age or material'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
     type:    
-      description: 'NGSI-LD Entity Type'    
+      description: 'NGSI-LD Entity Type. It must be equal to Reservoir.'    
       enum:    
         - Reservoir    
-      type: string    
+      type: Property    
   required:    
     - id    
     - type    
