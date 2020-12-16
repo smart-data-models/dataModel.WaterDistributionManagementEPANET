@@ -5,7 +5,7 @@ Entity: Curve
 
 ## List of properties  
 
-- `curveType`: Allowed values FLOW-HEAD,FLOW-EFFICIENCY, FLOW-HEADLOSS,LEVEL-VOLUME  - `description`: A description of this item  - `tag`: An optional text string used to assign the curve to a category.  - `type`: NGSI-LD Entity Type. It must be equal to Curve.  - `xData`: X data points for the curve  - `yData`: Y data points for the curve    
+- `curveType`: Entity's curve type.  - `description`: An optional text that describes other significant information about the junction  - `tag`: An optional text string used to assign the pipe to a category, perhaps one based on age or material  - `type`: NGSI-LD Entity Type. It must be equal to Curve.  - `xData`: X data points for the curve  - `yData`: Y data points for the curve    
 Required properties  
 - `curveType`  - `id`  - `type`  - `xData`  - `yData`    
 Text to be included between overall title and description.  
@@ -17,39 +17,20 @@ Curve:
   description: 'This entity contains a harmonised description of a generic curve made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.'    
   properties:    
     curveType:    
-      description: 'Allowed values FLOW-HEAD,FLOW-EFFICIENCY, FLOW-HEADLOSS,LEVEL-VOLUME'    
-      properties:    
-        createdAt:    
-          format: date-time    
-          type: string    
-        modifiedAt:    
-          format: date-time    
-          type: string    
-        observedAt:    
-          format: date-time    
-          type: string    
-        type:    
-          enum:    
-            - Property    
-          type: string    
-        unitCode:    
-          type: string    
-        value:    
-          enum:    
-            - FLOW-HEAD    
-            - FLOW-EFFICIENCY    
-            - FLOW-HEADLOSS    
-            - LEVEL-VOLUME    
-          type: string    
-      required:    
-        - type    
-        - value    
+      description: 'Entity''s curve type.'    
+      enum:    
+        - FLOW-HEAD    
+        - FLOW-EFFICIENCY    
+        - FLOW-HEADLOSS    
+        - LEVEL-VOLUME    
       type: Property    
     description:    
-      description: 'A description of this item'    
+      description: 'An optional text that describes other significant information about the junction'    
       type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
     tag:    
-      description: 'An optional text string used to assign the curve to a category.'    
+      description: 'An optional text string used to assign the pipe to a category, perhaps one based on age or material'    
       type: Property    
       x-ngsi:    
         model: https://schema.org/Text    
@@ -61,12 +42,12 @@ Curve:
     xData:    
       description: 'X data points for the curve'    
       items:    
-        type: Number    
+        type: number    
       type: Property    
     yData:    
       description: 'Y data points for the curve'    
       items:    
-        type: Number    
+        type: number    
       type: Property    
   required:    
     - id    
