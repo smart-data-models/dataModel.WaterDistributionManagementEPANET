@@ -5,23 +5,32 @@ Junction:
       description: 'The mailing address.'
       properties:
         addressCountry:
+          description: 'Property. The country. For example, Spain. Model:''https://schema.org/Text'''
           type: string
         addressLocality:
+          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/Text'''
           type: string
         addressRegion:
+          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/Text'''
           type: string
         areaServed:
+          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/Text'''
           type: string
         postOfficeBoxNumber:
+          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/Text'''
           type: string
         postalCode:
+          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/Text'''
           type: string
         streetAddress:
+          description: 'Property. The street address. Model:''https://schema.org/Text'''
           type: string
       type: Property
     areaServed:
-      description: 'The geographic area where a service or offered item is provided.'
+      description: 'The geographic area where a service or offered item is provided'
       type: Property
+      x-ngsi:
+        model: https://schema.org/Text
     demandCategory:
       description: 'Allows base demands and time patterns to be assigned to other categories of users.'
       properties:
@@ -32,11 +41,6 @@ Junction:
           description: 'Relationship. A relationship to the pattern pf the ''demandCategory'' property.'
           format: uri
           type: object
-      required:
-        - type
-        - value
-        - baseDemand
-        - demandPattern
       type: Property
       x-ngsi:
         model: https://schema.org/Text
