@@ -1,13 +1,16 @@
 Entidad: Tanque  
 ===============  
-Esta especificación es una **versión temporal**. Se genera automáticamente a partir de las propiedades documentadas descritas en el schema.json condensadas en el archivo `model.yaml`. Se ha creado un archivo temporal `nuevo_modelo.yaml` en cada modelo de datos para evitar el impacto en los scripts existentes. Por lo tanto, la especificación estará incompleta mientras el schema.json no se actualice al nuevo formato (documentando las propiedades). Una vez actualizado el `modelo.yaml` (`nuevo_modelo.yaml`) necesita ser actualizado también (automáticamente) . Más información en este [link](https://github.com/smart-data-models/data-models/blob/master/specs/warning_message_new_spec.md). Mientras sea un formato provisional cualquier [feedback es bienvenido en este formulario](https://smartdatamodels.org/index.php/submit-an-issue-2/) eligiendo la opción `Feedback on the new specification`.  
+[Licencia abierta](https://github.com/smart-data-models//dataModel.WaterNetworkManagement/blob/master/Tank/LICENSE.md)  
 Descripción global: **Esta entidad contiene una descripción armonizada de un tanque genérico hecho para el dominio de la gestión de la red de agua. Esta entidad está principalmente asociada con la gestión vertical del agua y las aplicaciones de IO relacionadas**.  
 
 ## Lista de propiedades  
 
-`address`: La dirección postal.  `areaServed`: La zona geográfica donde se presta un servicio o se ofrece un artículo.  `bulkReactionCoefficient`:   `description`:   `elevation`:   `hasInlet`:   `hasOutlet`:   `initLevel`:   `initialQuality`:   `location`:   `maxLevel`:   `minLevel`:   `minVolume`:   `mixingFraction`:   `mixingModel`:   `nominalDiameter`:   `sourceCategory`:   `tag`:   `type`: Tipo de entidad NGSI-LD  `volumeCurve`:   ## Modelo de datos Descripción de las propiedades  
-Ordenados alfabéticamente  
-```yaml  
+- `address`: La dirección postal.  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `bulkReactionCoefficient`: El coeficiente de reacción en masa utilizado para modelar las reacciones en el tanque. Todas las unidades son aceptadas en el código [CEFACT](https://www.unece.org/cefact.html).  - `description`: Un texto opcional que describe otra información significativa sobre la unión  - `elevation`: La elevación sobre alguna referencia común del Tanque. Todas las unidades son aceptadas en el código [CEFACT](https://www.unece.org/cefact.html).  - `hasInlet`: Una relación que indica los puntos de entrada de agua del embalse  - `hasOutlet`: Una relación que indica los puntos de salida de agua del embalse  - `initLevel`: La altura de la superficie del agua sobre la elevación inferior del tanque al comienzo de la simulación. Todas las unidades son aceptadas en el código [CEFACT](https://www.unece.org/cefact.html).  - `initialQuality`: Nivel de calidad del agua en el tanque al comienzo de la simulación. Todas las unidades son aceptadas en el código [CEFACT](https://www.unece.org/cefact.html).  - `location`:   - `maxLevel`: La altura de la superficie del agua sobre la elevación inferior del tanque al comienzo de la simulación. Todas las unidades son aceptadas en el código [CEFACT](https://www.unece.org/cefact.html).  - `minLevel`: El nivel mínimo al que puede bajar el agua del tanque. Todas las unidades son aceptadas en el código [CEFACT](https://www.unece.org/cefact.html).  - `minVolume`: El volumen de agua en el tanque cuando está en su nivel mínimo. Todas las unidades son aceptadas en el código [CEFACT](https://www.unece.org/cefact.html).  - `mixingFraction`: La fracción del volumen total del tanque que comprende el compartimiento de entrada y salida del modelo de mezcla de dos compartimentos (2COMP). Todas las unidades son aceptadas en el código [CEFACT](https://www.unece.org/cefact.html).  - `mixingModel`: Una sub-propiedad de la fuente de la propiedadCategoría  - `nominalDiameter`: El diámetro del tanque. Todas las unidades son aceptadas en el código [CEFACT](https://www.unece.org/cefact.html).  - `sourceCategory`: Descripción de la calidad del flujo de la fuente que entra en la red en un nodo específico.  - `tag`: Una cadena de texto opcional utilizada para asignar la pipa a una categoría, tal vez una basada en la edad o el material  - `type`: Tipo de entidad NGSI-LD. Tiene que ser Tanque  - `volumeCurve`: La etiqueta de identificación de una curva utilizada para describir la relación entre el volumen del tanque y el nivel del agua    
+Propiedades requeridas  
+- `elevation`  - `id`  - `initLevel`  - `location`  - `maxLevel`  - `minVolume`  - `nominalDiameter`  - `type`  ## Modelo de datos Descripción de las propiedades  
+Ordenados alfabéticamente (haga clic para ver los detalles)  
+<details><summary><strong>full yaml details</strong></summary>    
+```yaml  
 Tank:    
   description: 'This entity contains a harmonised description of a generic tank made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.'    
   properties:    
@@ -15,92 +18,69 @@ Tank:
       description: 'The mailing address.'    
       properties:    
         addressCountry:    
+          description: 'Property. The country. For example, Spain. Model:''https://schema.org/Text'''    
           type: string    
         addressLocality:    
+          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/Text'''    
           type: string    
         addressRegion:    
+          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/Text'''    
           type: string    
         areaServed:    
+          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/Text'''    
           type: string    
         postOfficeBoxNumber:    
+          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/Text'''    
           type: string    
         postalCode:    
+          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/Text'''    
           type: string    
         streetAddress:    
+          description: 'Property. The street address. Model:''https://schema.org/Text'''    
           type: string    
       type: Property    
     areaServed:    
-      description: 'The geographic area where a service or offered item is provided.'    
+      description: 'The geographic area where a service or offered item is provided'    
       type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
     bulkReactionCoefficient:    
-      properties: &tank_-_properties_-_description_-_properties    
-        createdAt:    
-          format: date-time    
-          type: string    
-        modifiedAt:    
-          format: date-time    
-          type: string    
-        observedAt:    
-          format: date-time    
-          type: string    
-        type:    
-          enum:    
-            - Property    
-          type: string    
-        unitCode:    
-          type: string    
-        value:    
-          type:    
-            - number    
-            - string    
-            - array    
-      required: &tank_-_properties_-_description_-_required    
-        - type    
-        - value    
-      type: object    
+      description: 'The bulk reaction coefficient used for modelling reactions in the tank. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        units: 1/day    
     description:    
-      properties: *tank_-_properties_-_description_-_properties    
-      required: *tank_-_properties_-_description_-_required    
-      type: object    
+      description: 'An optional text that describes other significant information about the junction'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
     elevation:    
-      properties: *tank_-_properties_-_description_-_properties    
-      required: *tank_-_properties_-_description_-_required    
-      type: object    
+      description: 'The elevation above some common reference of the Tank. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        units: metre    
     hasInlet:    
-      properties: &tank_-_properties_-_hasoutlet_-_properties    
-        createdAt:    
-          format: date-time    
-          type: string    
-        modifiedAt:    
-          format: date-time    
-          type: string    
-        object:    
-          format: uri    
-          type:    
-            - string    
-        observedAt:    
-          format: date-time    
-          type: string    
-        type:    
-          enum:    
-            - Relationship    
-          type: string    
-      required: &tank_-_properties_-_hasoutlet_-_required    
-        - type    
-        - object    
-      type: object    
+      description: 'A relationship indicating the water inlet points of the Reservoir'    
+      format: uri    
+      type: Relationship    
     hasOutlet:    
-      properties: *tank_-_properties_-_hasoutlet_-_properties    
-      required: *tank_-_properties_-_hasoutlet_-_required    
-      type: object    
+      description: 'A relationship indicating the water outlet points of the Reservoir'    
+      format: uri    
+      type: Relationship    
     initLevel:    
-      properties: *tank_-_properties_-_description_-_properties    
-      required: *tank_-_properties_-_description_-_required    
-      type: object    
+      description: 'The height of the water surface above the bottom elevation of the tank at the start of the simulation. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        units: metre    
     initialQuality:    
-      properties: *tank_-_properties_-_description_-_properties    
-      required: *tank_-_properties_-_description_-_required    
-      type: object    
+      description: 'Water quality level in the tank at the start of the simulation. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        units: mg/L    
     location:    
       $id: https://geojson.org/schema/Geometry.json    
       $schema: "http://json-schema.org/draft-07/schema#"    
@@ -249,175 +229,86 @@ Tank:
           type: object    
       title: 'GeoJSON Geometry'    
     maxLevel:    
-      properties: *tank_-_properties_-_description_-_properties    
-      required: *tank_-_properties_-_description_-_required    
-      type: object    
+      description: 'The height of the water surface above the bottom elevation of the tank at the start of the simulation. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        units: metre    
     minLevel:    
-      properties: *tank_-_properties_-_description_-_properties    
-      required: *tank_-_properties_-_description_-_required    
-      type: object    
+      description: 'The minimum level that water in the tank can drop to. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        units: metre    
     minVolume:    
-      properties: *tank_-_properties_-_description_-_properties    
-      required: *tank_-_properties_-_description_-_required    
-      type: object    
+      description: 'The volume of water in the tank when it is at its minimum level. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        units: 'cubic metre'    
     mixingFraction:    
-      properties: *tank_-_properties_-_description_-_properties    
-      required: *tank_-_properties_-_description_-_required    
-      type: object    
+      description: 'The fraction of the tank''s total volume that comprises the inlet-outlet compartment of the two-compartment (2COMP) mixing model. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        units: 'No unit'    
     mixingModel:    
-      properties:    
-        createdAt:    
-          format: date-time    
-          type: string    
-        modifiedAt:    
-          format: date-time    
-          type: string    
-        observedAt:    
-          format: date-time    
-          type: string    
-        type:    
-          enum:    
-            - Property    
-          type: string    
-        unitCode:    
-          type: string    
-        value:    
-          enum:    
-            - MIXED    
-            - 2COMP    
-            - FIFO    
-            - LIFO    
-          type:    
-            - number    
-            - string    
-            - array    
-      required:    
-        - type    
-        - value    
-      type: object    
+      description: 'A sub-property of the Property sourceCategory'    
+      enum:    
+        - MIXED    
+        - 2COMP    
+        - FIFO    
+        - LIFO    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
     nominalDiameter:    
-      properties: *tank_-_properties_-_description_-_properties    
-      required: *tank_-_properties_-_description_-_required    
-      type: object    
+      description: 'The diameter of the tank. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        units: Metre    
     sourceCategory:    
+      description: 'Description of the quality of source flow entering the network at a specific node.'    
       properties:    
-        createdAt:    
-          format: date-time    
-          type: string    
-        modifiedAt:    
-          format: date-time    
-          type: string    
-        observedAt:    
-          format: date-time    
-          type: string    
         sourcePattern:    
-          properties:    
-            createdAt:    
-              format: date-time    
-              type: string    
-            modifiedAt:    
-              format: date-time    
-              type: string    
-            object:    
-              format: uri    
-              type:    
-                - string    
-            observedAt:    
-              format: date-time    
-              type: string    
-            type:    
-              enum:    
-                - Relationship    
-              type: string    
-          required:    
-            - type    
-            - object    
-          type: object    
+          description: 'Relationship. A relationship to the pattern pf the sourceCategory property'    
+          format: uri    
+          type: string    
         sourceQuality:    
-          properties:    
-            createdAt:    
-              format: date-time    
-              type: string    
-            modifiedAt:    
-              format: date-time    
-              type: string    
-            observedAt:    
-              format: date-time    
-              type: string    
-            type:    
-              enum:    
-                - Property    
-              type: string    
-            unitCode:    
-              type: string    
-            value:    
-              type:    
-                - number    
-                - string    
-          required:    
-            - type    
-            - value    
-          type: object    
+          description: 'Property. Model:''https://schema.org/Number''. Units: ''mg/L''. Baseline or average concentration (or mass flow rate) of source. A sub-property of the Property ''sourceCategory''. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'    
+          type: number    
         sourceType:    
-          properties:    
-            createdAt:    
-              format: date-time    
-              type: string    
-            modifiedAt:    
-              format: date-time    
-              type: string    
-            observedAt:    
-              format: date-time    
-              type: string    
-            type:    
-              enum:    
-                - Property    
-              type: string    
-            unitCode:    
-              type: string    
-            value:    
-              enum:    
-                - CONCEN    
-                - MASS    
-                - FLOWPACED    
-                - SETPOINT    
-              type:    
-                - number    
-                - string    
-          required:    
-            - type    
-            - value    
-          type: object    
-        type:    
+          description: 'Property. Model:''https://schema.org/Text''. A sub-property of the Property ''sourceCategory'''    
           enum:    
-            - Property    
+            - CONCEN    
+            - MASS    
+            - FLOWPACED    
+            - SETPOINT    
           type: string    
-        unitCode:    
-          type: string    
-        value:    
-          type:    
-            - number    
-            - string    
       required:    
         - type    
         - value    
         - sourceType    
         - sourceQuality    
         - sourcePattern    
-      type: object    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
     tag:    
-      properties: *tank_-_properties_-_description_-_properties    
-      required: *tank_-_properties_-_description_-_required    
-      type: object    
+      description: 'An optional text string used to assign the pipe to a category, perhaps one based on age or material'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
     type:    
-      description: 'NGSI-LD Entity Type'    
+      description: 'NGSI-LD Entity Type. It has to be Tank'    
       enum:    
         - Tank    
-      type: string    
+      type: Property    
     volumeCurve:    
-      properties: *tank_-_properties_-_hasoutlet_-_properties    
-      required: *tank_-_properties_-_hasoutlet_-_required    
-      type: object    
+      description: 'The ID label of a curve used to describe the relation between tank volume and water level'    
+      format: uri    
+      type: Relationship    
   required:    
     - id    
     - type    
@@ -429,6 +320,9 @@ Tank:
     - nominalDiameter    
   type: object    
 ```  
+</details>    
+## Ejemplo de cargas útiles  
+#### Ejemplo de valores clave del tanque NGSI V2  
 Aquí hay un ejemplo de un tanque en formato JSON como valores clave. Esto es compatible con NGSI V2 cuando se utiliza "opciones=valores-clave" y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
@@ -462,7 +356,8 @@ Tank:
     "tag": "DMA1"  
 }  
 ```  
-Aquí hay un ejemplo de un tanque en formato JSON como normalizado. Es compatible con NGSI V2 cuando se utiliza `opciones=valores clave` y devuelve los datos de contexto de una entidad individual.  
+#### Tanque NGSI V2 normalizado Ejemplo  
+Aquí hay un ejemplo de un tanque en formato JSON como normalizado. Es compatible con NGSI V2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
     "id": "1863179e-3968-4493-9167-ee21f880cc02",  
@@ -534,7 +429,8 @@ Tank:
     }  
 }  
 ```  
-Aquí hay un ejemplo de un tanque en formato JSON-LD como valores clave. Esto es compatible con NGSI-LD cuando no se usan opciones y devuelve los datos de contexto de una entidad individual.  
+#### Ejemplo de valores clave del tanque NGSI-LD  
+Aquí hay un ejemplo de un tanque en formato JSON-LD como valores clave. Esto es compatible con NGSI-LD cuando se utiliza "opciones=valores-clave" y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {"@context": ["https://schema.lab.fiware.org/ld/context"],  
  "bulkReactionCoefficient": 0.7,  
@@ -557,6 +453,7 @@ Tank:
  "type": "Tank",  
  "volumeCurve": "urn:ngsi-ld:Curve:fAM-8ca3-4533-a2eb-12015"}  
 ```  
+#### Tanque NGSI-LD normalizado Ejemplo  
 Aquí hay un ejemplo de un tanque en formato JSON-LD como normalizado. Este es compatible con NGSI-LD cuando no se usan opciones y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
