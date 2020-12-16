@@ -1,123 +1,92 @@
 Entidad: Pipa  
 =============  
-Esta especificación es una **versión temporal**. Se genera automáticamente a partir de las propiedades documentadas descritas en el schema.json condensadas en el archivo `model.yaml`. Se ha creado un archivo temporal `nuevo_modelo.yaml` en cada modelo de datos para evitar el impacto en los scripts existentes. Por lo tanto, la especificación estará incompleta mientras el schema.json no se actualice al nuevo formato (documentando las propiedades). Una vez actualizado el `modelo.yaml` (`nuevo_modelo.yaml`) necesita ser actualizado también (automáticamente) . Más información en este [link](https://github.com/smart-data-models/data-models/blob/master/specs/warning_message_new_spec.md). Mientras sea un formato provisional cualquier [feedback es bienvenido en este formulario](https://smartdatamodels.org/index.php/submit-an-issue-2/) eligiendo la opción `Feedback on the new specification`.  
+[Licencia abierta](https://github.com/smart-data-models//dataModel.WaterNetworkManagement/blob/master/Pipe/LICENSE.md)  
 Descripción global: **Esta entidad contiene una descripción armonizada de una tubería genérica hecha para el dominio de la gestión de la red de agua. Esta entidad está principalmente asociada con la gestión vertical del agua y las aplicaciones relacionadas con la IO**.  
 
 ## Lista de propiedades  
 
-`bulkCoeff`:   `diameter`:   `endsAt`:   `initialStatus`:   `length`:   `minorLoss`:   `roughness`:   `startsAt`:   `status`:   `tag`:   `type`: Tipo de entidad NGSI-LD  `vertices`:   `wallCoeff`:   ## Modelo de datos Descripción de las propiedades  
-Ordenados alfabéticamente  
-```yaml  
+- `bulkCoeff`: Use un valor positivo para el crecimiento y un valor negativo para la decadencia. Todas las unidades son aceptadas en el código [CEFACT](https://www.unece.org/cefact.html).  - `description`: Un texto opcional que describe otra información significativa sobre la unión  - `diameter`: El diámetro del tubo  - `endsAt`: La identificación del nodo donde termina el tubo  - `initialStatus`: El estado del nodo al comienzo de la simulación.  - `length`: La longitud real del tubo. Todas las unidades son aceptadas en el código [CEFACT](https://www.unece.org/cefact.html).  - `minorLoss`: Coeficiente de pérdida menor unitario asociado a las curvas, accesorios, etc.  - `roughness`: El coeficiente de rugosidad de la tubería.  - `startsAt`: El ID del nodo donde comienza la tubería  - `status`: El estado dinámico del nodo  - `tag`: Una cadena de texto opcional utilizada para asignar la pipa a una categoría, tal vez una basada en la edad o el material  - `type`: Tipo de entidad NGSI-LD. Tiene que ser Tubo  - `vertices`: Las coordenadas de todos los vértices de la tubería, ordenadas desde el nodo de inicio hasta el nodo de fin y codificadas como un GeoJSON  - `wallCoeff`: El coeficiente de reacción de la pared del tubo. Use un valor positivo para el crecimiento y un valor negativo para la descomposición. Todas las unidades son aceptadas en el código [CEFACT](https://www.unece.org/cefact.html).    
+Propiedades requeridas  
+- `diameter`  - `endsAt`  - `id`  - `initialStatus`  - `length`  - `minorLoss`  - `roughness`  - `startsAt`  - `type`  ## Modelo de datos Descripción de las propiedades  
+Ordenados alfabéticamente (haga clic para ver los detalles)  
+<details><summary><strong>full yaml details</strong></summary>    
+```yaml  
 Pipe:    
   description: 'This entity contains a harmonised description of a generic pipe made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.'    
   properties:    
     bulkCoeff:    
-      properties: &pipe_-_properties_-_diameter_-_properties    
-        createdAt:    
-          format: date-time    
-          type: string    
-        modifiedAt:    
-          format: date-time    
-          type: string    
-        observedAt:    
-          format: date-time    
-          type: string    
-        type:    
-          enum:    
-            - Property    
-          type: string    
-        unitCode:    
-          type: string    
-        value:    
-          type:    
-            - number    
-            - string    
-            - array    
-      required: &pipe_-_properties_-_diameter_-_required    
-        - type    
-        - value    
-      type: object    
+      description: 'Use a positive value for growth and a negative value for decay. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        units: 'reciprocal day The bulk reaction coefficient for the pipe'    
+    description:    
+      description: 'An optional text that describes other significant information about the junction'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
     diameter:    
-      properties: *pipe_-_properties_-_diameter_-_properties    
-      required: *pipe_-_properties_-_diameter_-_required    
-      type: object    
+      description: 'The pipe diameter'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        units: Millimetre    
     endsAt:    
-      properties: &pipe_-_properties_-_startsat_-_properties    
-        createdAt:    
-          format: date-time    
-          type: string    
-        modifiedAt:    
-          format: date-time    
-          type: string    
-        object:    
-          format: uri    
-          type:    
-            - string    
-        observedAt:    
-          format: date-time    
-          type: string    
-        type:    
-          enum:    
-            - Relationship    
-          type: string    
-      required: &pipe_-_properties_-_startsat_-_required    
-        - type    
-        - object    
-      type: object    
+      description: 'The ID of the node where the pipe ends'    
+      format: uri    
+      type: Relationship    
     initialStatus:    
-      properties: &pipe_-_properties_-_status_-_properties    
-        observedAt:    
-          format: date-time    
-          type: string    
-        type:    
-          enum:    
-            - Property    
-          type: string    
-        unitCode:    
-          type: string    
-        value:    
-          enum:    
-            - OPEN    
-            - CLOSED    
-            - CV    
-          type:    
-            - number    
-            - string    
-            - array    
-      required: &pipe_-_properties_-_status_-_required    
-        - type    
-        - value    
-      type: object    
+      description: 'The node status at the start of the simulation.'    
+      enum:    
+        - OPEN    
+        - CLOSED    
+        - CV    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
     length:    
-      properties: *pipe_-_properties_-_diameter_-_properties    
-      required: *pipe_-_properties_-_diameter_-_required    
-      type: object    
+      description: 'The actual length of the pipe. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        units: Metre    
     minorLoss:    
-      properties: *pipe_-_properties_-_diameter_-_properties    
-      required: *pipe_-_properties_-_diameter_-_required    
-      type: object    
+      description: 'Unitless minor loss coefficient associated with bends, fittings, etc'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        units: 'No unit'    
     roughness:    
-      properties: *pipe_-_properties_-_diameter_-_properties    
-      required: *pipe_-_properties_-_diameter_-_required    
-      type: object    
+      description: 'The roughness coefficient of the Pipe.'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        units: 'No unit'    
     startsAt:    
-      properties: *pipe_-_properties_-_startsat_-_properties    
-      required: *pipe_-_properties_-_startsat_-_required    
-      type: object    
+      description: 'The ID of the node where the pipe begins'    
+      format: uri    
+      type: Relationship    
     status:    
-      properties: *pipe_-_properties_-_status_-_properties    
-      required: *pipe_-_properties_-_status_-_required    
-      type: object    
+      description: 'The dynamic state of the node'    
+      enum:    
+        - OPEN    
+        - CLOSED    
+        - CV    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
     tag:    
-      properties: *pipe_-_properties_-_diameter_-_properties    
-      required: *pipe_-_properties_-_diameter_-_required    
-      type: object    
+      description: 'An optional text string used to assign the pipe to a category, perhaps one based on age or material'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
     type:    
-      description: 'NGSI-LD Entity Type'    
+      description: 'NGSI-LD Entity Type. It has to be Pipe'    
       enum:    
         - Pipe    
-      type: string    
+      type: Property    
     vertices:    
+      description: 'Coordinates of all vertices in the pipe, ordered from the startsAt node to the endsAt node and encoded as a GeoJSON '    
       oneOf:    
         - $id: https://geojson.org/schema/MultiPoint.json    
           $schema: "http://json-schema.org/draft-07/schema#"    
@@ -165,10 +134,13 @@ Pipe:
             - coordinates    
           title: 'GeoJSON Point'    
           type: object    
+      type: Geoproperty    
     wallCoeff:    
-      properties: *pipe_-_properties_-_diameter_-_properties    
-      required: *pipe_-_properties_-_diameter_-_required    
-      type: object    
+      description: 'The wall reaction coefficient for the pipe. Use a positive value for growth and a negative value for decay. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        units: mg/m²/day    
   required:    
     - id    
     - type    
@@ -181,6 +153,9 @@ Pipe:
     - endsAt    
   type: object    
 ```  
+</details>    
+## Ejemplo de cargas útiles  
+#### Tubo NGSI V2 Ejemplo de valores clave  
 Aquí hay un ejemplo de una tubería en formato JSON como valores clave. Es compatible con NGSI V2 cuando se utiliza "opciones=valores-clave" y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
@@ -200,7 +175,8 @@ Pipe:
     "wallCoeff": 72.4549  
 }  
 ```  
-Aquí hay un ejemplo de un tubo en formato JSON como normalizado. Es compatible con NGSI V2 cuando se utiliza `opciones=valores clave` y devuelve los datos de contexto de una entidad individual.  
+#### Tubo NGSI V2 normalizado Ejemplo  
+Aquí hay un ejemplo de un tubo en formato JSON como normalizado. Es compatible con NGSI V2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
     "id": "74azsty-70d4l-4da9-b7d0-3340ef655nnb",  
@@ -245,7 +221,8 @@ Pipe:
     }  
 }  
 ```  
-Aquí hay un ejemplo de un tubo en formato JSON-LD como valores clave. Esto es compatible con NGSI-LD cuando no se usan opciones y devuelve los datos de contexto de una entidad individual.  
+#### Tubo NGSI-LD llave-valores Ejemplo  
+Aquí hay un ejemplo de un tubo en formato JSON-LD como valores clave. Esto es compatible con NGSI-LD cuando se utiliza "opciones=valores-clave" y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {"@context": ["https://schema.lab.fiware.org/ld/context"],  
  "bulkCoeff": 72.4549,  
@@ -265,6 +242,7 @@ Pipe:
  "type": "Pipe",  
  "wallCoeff": 72.4549}  
 ```  
+#### Tubo NGSI-LD normalizado Ejemplo  
 Aquí hay un ejemplo de un tubo en formato JSON-LD como normalizado. Esto es compatible con NGSI-LD cuando no se usan opciones y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
