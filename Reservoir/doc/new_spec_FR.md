@@ -1,11 +1,13 @@
 Entité : Réservoir  
 ==================  
-Cette spécification est une **version temporelle**. Elle est générée automatiquement à partir des propriétés documentées décrites dans le schema.json condensé dans le fichier `model.yaml`. Un fichier temporaire `nouveau_modèle.yaml` a été créé dans chaque modèle de données pour éviter d'avoir un impact sur les scripts existants. Ainsi, la spécification sera incomplète tant que le fichier schema.json n'est pas mis à jour au nouveau format (documentation des propriétés). Une fois mis à jour, le fichier `model.yaml` (`nouveau_model.yaml`) doit être mis à jour également (automatiquement) . Plus d'informations dans ce [lien](https://github.com/smart-data-models/data-models/blob/master/specs/warning_message_new_spec.md). Tant qu'il s'agit d'un format provisoire, tout [feedback est le bienvenu dans ce formulaire](https://smartdatamodels.org/index.php/submit-an-issue-2/) en choisissant l'option "Feedback sur la nouvelle spécification".  
+[Licence ouverte](https://github.com/smart-data-models//dataModel.WaterNetworkManagement/blob/master/Reservoir/LICENSE.md)  
 Description globale : **Cette entité contient une description harmonisée d'un réservoir générique fait pour le domaine de la gestion des réseaux d'eau. Cette entité est principalement associée aux applications verticales de gestion de l'eau et aux applications IdO connexes.**  
 
 ## Liste des biens  
 
-- `address`: L'adresse postale.  - `areaServed`: La zone géographique où un service ou un article offert est fourni.  - `description`:   - `elevation`:   - `hasInlet`:   - `hasOutlet`:   - `headPattern`:   - `initialQuality`:   - `location`:   - `reservoirHead`:   - `sourceCategory`:   - `tag`:   - `type`: Type d'entité NGSI-LD  ## Modèle de données description des biens  
+- `address`: L'adresse postale.  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `description`: Un texte optionnel qui décrit d'autres informations importantes sur la jonction  - `elevation`: L'élévation au-dessus d'une référence commune du réservoir. Toutes les unités sont acceptées en code [CEFACT](https://www.unece.org/cefact.html).  - `hasInlet`: Une relation indiquant les points d'entrée d'eau du réservoir  - `hasOutlet`: Une relation indiquant les points de sortie d'eau du réservoir  - `headPattern`: L'étiquette d'identification d'un modèle temporel utilisé pour modéliser la variation temporelle de la hauteur de chute totale du réservoir  - `initialQuality`: Niveau de qualité de l'eau au réservoir. Toutes les unités sont acceptées en code [CEFACT](https://www.unece.org/cefact.html).  - `location`:   - `reservoirHead`: La hauteur hydraulique (élévation + hauteur de pression) de l'eau dans le réservoir. Toutes les unités sont acceptées en code [CEFACT](https://www.unece.org/cefact.html).  - `sourceCategory`: Description de la qualité du flux de sources entrant dans le réseau à un nœud spécifique.  - `tag`: Une chaîne de texte facultative utilisée pour classer la pipe dans une catégorie, peut-être en fonction de l'âge ou du matériau  - `type`: Type d'entité NGSI-LD. Il doit être égal à Réservoir.    
+Propriétés requises  
+- `id`  - `location`  - `reservoirHead`  - `type`  ## Modèle de données description des biens  
 Classement par ordre alphabétique (cliquez pour plus de détails)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
@@ -16,88 +18,61 @@ Reservoir:
       description: 'The mailing address.'    
       properties:    
         addressCountry:    
+          description: 'Property. The country. For example, Spain. Model:''https://schema.org/Text'''    
           type: string    
         addressLocality:    
+          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/Text'''    
           type: string    
         addressRegion:    
+          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/Text'''    
           type: string    
         areaServed:    
+          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/Text'''    
           type: string    
         postOfficeBoxNumber:    
+          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/Text'''    
           type: string    
         postalCode:    
+          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/Text'''    
           type: string    
         streetAddress:    
+          description: 'Property. The street address. Model:''https://schema.org/Text'''    
           type: string    
       type: Property    
     areaServed:    
-      description: 'The geographic area where a service or offered item is provided.'    
+      description: 'The geographic area where a service or offered item is provided'    
       type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
     description:    
-      properties: &reservoir_-_properties_-_elevation_-_properties    
-        createdAt:    
-          format: date-time    
-          type: string    
-        modifiedAt:    
-          format: date-time    
-          type: string    
-        observedAt:    
-          format: date-time    
-          type: string    
-        type:    
-          enum:    
-            - Property    
-          type: string    
-        unitCode:    
-          type: string    
-        value:    
-          type:    
-            - number    
-            - string    
-            - array    
-      required: &reservoir_-_properties_-_elevation_-_required    
-        - type    
-        - value    
-      type: object    
+      description: 'An optional text that describes other significant information about the junction'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
     elevation:    
-      properties: *reservoir_-_properties_-_elevation_-_properties    
-      required: *reservoir_-_properties_-_elevation_-_required    
-      type: object    
+      description: 'The elevation above some common reference of the Reservoir. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        units: Metre    
     hasInlet:    
-      properties: &reservoir_-_properties_-_hasoutlet_-_properties    
-        createdAt:    
-          format: date-time    
-          type: string    
-        modifiedAt:    
-          format: date-time    
-          type: string    
-        object:    
-          format: uri    
-          type:    
-            - string    
-        observedAt:    
-          format: date-time    
-          type: string    
-        type:    
-          enum:    
-            - Relationship    
-          type: string    
-      required: &reservoir_-_properties_-_hasoutlet_-_required    
-        - type    
-        - object    
-      type: object    
+      description: 'A relationship indicating the water inlet points of the Reservoir'    
+      format: uri    
+      type: Relationship    
     hasOutlet:    
-      properties: *reservoir_-_properties_-_hasoutlet_-_properties    
-      required: *reservoir_-_properties_-_hasoutlet_-_required    
-      type: object    
+      description: 'A relationship indicating the water outlet points of the Reservoir'    
+      format: uri    
+      type: Relationship    
     headPattern:    
-      properties: *reservoir_-_properties_-_hasoutlet_-_properties    
-      required: *reservoir_-_properties_-_hasoutlet_-_required    
-      type: object    
+      description: 'The ID label of a time pattern used to model time variation in the reservoir''s total head'    
+      format: uri    
+      type: Relationship    
     initialQuality:    
-      properties: *reservoir_-_properties_-_elevation_-_properties    
-      required: *reservoir_-_properties_-_elevation_-_required    
-      type: object    
+      description: 'Water quality level at the Reservoir. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        units: mg/L    
     location:    
       $id: https://geojson.org/schema/Geometry.json    
       $schema: "http://json-schema.org/draft-07/schema#"    
@@ -246,124 +221,48 @@ Reservoir:
           type: object    
       title: 'GeoJSON Geometry'    
     reservoirHead:    
-      properties: *reservoir_-_properties_-_elevation_-_properties    
-      required: *reservoir_-_properties_-_elevation_-_required    
-      type: object    
+      description: 'The hydraulic head (elevation + pressure head) of water in the Reservoir. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        units: Metre    
     sourceCategory:    
+      description: 'Description of the quality of source flow entering the network at a specific node.'    
       properties:    
-        createdAt:    
-          format: date-time    
-          type: string    
-        modifiedAt:    
-          format: date-time    
-          type: string    
-        observedAt:    
-          format: date-time    
-          type: string    
         sourcePattern:    
-          properties:    
-            createdAt:    
-              format: date-time    
-              type: string    
-            modifiedAt:    
-              format: date-time    
-              type: string    
-            object:    
-              format: uri    
-              type:    
-                - string    
-            observedAt:    
-              format: date-time    
-              type: string    
-            type:    
-              enum:    
-                - Relationship    
-              type: string    
-          required:    
-            - type    
-            - object    
-          type: object    
+          description: 'Relationship. A relationship to the pattern pf the sourceCategory property'    
+          format: uri    
+          type: string    
         sourceQuality:    
-          properties:    
-            createdAt:    
-              format: date-time    
-              type: string    
-            modifiedAt:    
-              format: date-time    
-              type: string    
-            observedAt:    
-              format: date-time    
-              type: string    
-            type:    
-              enum:    
-                - Property    
-              type: string    
-            unitCode:    
-              type: string    
-            value:    
-              type:    
-                - number    
-                - string    
-          required:    
-            - type    
-            - value    
-          type: object    
+          description: 'Property. Model:''https://schema.org/Number''. Units: ''mg/L''. Baseline or average concentration (or mass flow rate) of source. A sub-property of the Property ''sourceCategory''. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'    
+          type: number    
         sourceType:    
-          properties:    
-            createdAt:    
-              format: date-time    
-              type: string    
-            modifiedAt:    
-              format: date-time    
-              type: string    
-            observedAt:    
-              format: date-time    
-              type: string    
-            type:    
-              enum:    
-                - Property    
-              type: string    
-            unitCode:    
-              type: string    
-            value:    
-              enum:    
-                - CONCEN    
-                - MASS    
-                - FLOWPACED    
-                - SETPOINT    
-              type:    
-                - number    
-                - string    
-          required:    
-            - type    
-            - value    
-          type: object    
-        type:    
+          description: 'Property. Model:''https://schema.org/Text''. A sub-property of the Property ''sourceCategory'''    
           enum:    
-            - Property    
+            - CONCEN    
+            - MASS    
+            - FLOWPACED    
+            - SETPOINT    
           type: string    
-        unitCode:    
-          type: string    
-        value:    
-          type:    
-            - number    
-            - string    
       required:    
         - type    
         - value    
         - sourceType    
         - sourceQuality    
         - sourcePattern    
-      type: object    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
     tag:    
-      properties: *reservoir_-_properties_-_elevation_-_properties    
-      required: *reservoir_-_properties_-_elevation_-_required    
-      type: object    
+      description: 'An optional text string used to assign the pipe to a category, perhaps one based on age or material'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
     type:    
-      description: 'NGSI-LD Entity Type'    
+      description: 'NGSI-LD Entity Type. It must be equal to Reservoir.'    
       enum:    
         - Reservoir    
-      type: string    
+      type: Property    
   required:    
     - id    
     - type    
@@ -401,7 +300,7 @@ Reservoir:
 }  
 ```  
 #### Réservoir NGSI V2 normalisé Exemple  
-Voici un exemple de réservoir au format JSON tel que normalisé. Il est compatible avec NGSI V2 lorsqu'il utilise "options=valeurs clés" et renvoie les données de contexte d'une entité individuelle.  
+Voici un exemple de réservoir au format JSON tel que normalisé. Ce format est compatible avec NGSI V2 lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
     "id": "1863179e-3768-4480-9167-ff21f870dd19",  
@@ -453,7 +352,7 @@ Reservoir:
 }  
 ```  
 #### Réservoir NGSI-LD valeurs clés Exemple  
-Voici un exemple de réservoir au format JSON-LD comme valeurs clés. Ce format est compatible avec le format JSON-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
+Voici un exemple de réservoir au format JSON-LD comme valeurs clés. Il est compatible avec le format NGSI-LD lorsqu'il utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {"@context": ["https://schema.lab.fiware.org/ld/context"],  
  "createdAt": "2020-03-02T15:42:00Z",  
