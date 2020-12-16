@@ -1,11 +1,13 @@
 Entité : Courbe  
 ===============  
-Cette spécification est une **version temporelle**. Elle est générée automatiquement à partir des propriétés documentées décrites dans le schema.json condensé dans le fichier `model.yaml`. Un fichier temporaire `nouveau_modèle.yaml` a été créé dans chaque modèle de données pour éviter d'avoir un impact sur les scripts existants. Ainsi, la spécification sera incomplète tant que le fichier schema.json n'est pas mis à jour au nouveau format (documentation des propriétés). Une fois mis à jour, le fichier `model.yaml` (`nouveau_model.yaml`) doit être mis à jour également (automatiquement) . Plus d'informations dans ce [lien](https://github.com/smart-data-models/data-models/blob/master/specs/warning_message_new_spec.md). Tant qu'il s'agit d'un format provisoire, tout [feedback est le bienvenu dans ce formulaire](https://smartdatamodels.org/index.php/submit-an-issue-2/) en choisissant l'option "Feedback sur la nouvelle spécification".  
+[Licence ouverte](https://github.com/smart-data-models//dataModel.WaterNetworkManagement/blob/master/Curve/LICENSE.md)  
 Description globale : **Cette entité contient une description harmonisée d'une courbe générique réalisée pour le domaine de la gestion des réseaux d'eau. Cette entité est principalement associée à la gestion verticale de l'eau et aux applications IdO connexes.  
 
 ## Liste des biens  
 
-- `curveType`:   - `description`: Une description de cet article  - `tag`: Une chaîne de texte optionnelle utilisée pour assigner la courbe à une catégorie.  - `type`: Type d'entité NGSI-LD. Il doit être égal à Curve.  - `xData`: X points de données pour la courbe  - `yData`: Points de données Y pour la courbe    
+- `curveType`: Type de courbe de l'entité.  - `description`: Un texte optionnel qui décrit d'autres informations importantes sur la jonction  - `tag`: Une chaîne de texte facultative utilisée pour classer la pipe dans une catégorie, peut-être en fonction de l'âge ou du matériau  - `type`: Type d'entité NGSI-LD. Il doit être égal à Curve.  - `xData`: X points de données pour la courbe  - `yData`: Points de données Y pour la courbe    
+Propriétés requises  
+- `curveType`  - `id`  - `type`  - `xData`  - `yData`    
 Texte à inclure entre le titre général et la description.  
 ## Modèle de données description des biens  
 Classement par ordre alphabétique (cliquez pour plus de détails)  
@@ -15,79 +17,38 @@ Curve:
   description: 'This entity contains a harmonised description of a generic curve made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.'    
   properties:    
     curveType:    
-      properties:    
-        createdAt:    
-          format: date-time    
-          type: string    
-        modifiedAt:    
-          format: date-time    
-          type: string    
-        observedAt:    
-          format: date-time    
-          type: string    
-        type:    
-          enum:    
-            - Property    
-          type: string    
-        unitCode:    
-          type: string    
-        value:    
-          enum:    
-            - FLOW-HEAD    
-            - FLOW-EFFICIENCY    
-            - FLOW-HEADLOSS    
-            - LEVEL-VOLUME    
-          type:    
-            - number    
-            - string    
-            - array    
-      required:    
-        - type    
-        - value    
-      type: object    
+      description: 'Entity''s curve type.'    
+      enum:    
+        - FLOW-HEAD    
+        - FLOW-EFFICIENCY    
+        - FLOW-HEADLOSS    
+        - LEVEL-VOLUME    
+      type: Property    
     description:    
-      properties: &curve_-_properties_-_tag_-_properties    
-        createdAt:    
-          format: date-time    
-          type: string    
-        modifiedAt:    
-          format: date-time    
-          type: string    
-        observedAt:    
-          format: date-time    
-          type: string    
-        type:    
-          enum:    
-            - Property    
-          type: string    
-        unitCode:    
-          type: string    
-        value:    
-          type:    
-            - number    
-            - string    
-            - array    
-      required: &curve_-_properties_-_tag_-_required    
-        - type    
-        - value    
-      type: object    
+      description: 'An optional text that describes other significant information about the junction'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
     tag:    
-      properties: *curve_-_properties_-_tag_-_properties    
-      required: *curve_-_properties_-_tag_-_required    
-      type: object    
+      description: 'An optional text string used to assign the pipe to a category, perhaps one based on age or material'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
     type:    
       description: 'NGSI-LD Entity Type. It must be equal to Curve.'    
       enum:    
         - Curve    
       type: Property    
     xData:    
-      properties: *curve_-_properties_-_tag_-_properties    
-      required: *curve_-_properties_-_tag_-_required    
-      type: object    
+      description: 'X data points for the curve'    
+      items:    
+        type: number    
+      type: Property    
     yData:    
-      properties: *curve_-_properties_-_tag_-_properties    
-      required: *curve_-_properties_-_tag_-_required    
-      type: object    
+      description: 'Y data points for the curve'    
+      items:    
+        type: number    
+      type: Property    
   required:    
     - id    
     - type    
@@ -134,7 +95,7 @@ Curve:
 }  
 ```  
 #### Courbe NGSI V2 normalisée Exemple  
-Voici un exemple de courbe au format JSON normalisé. Elle est compatible avec NGSI V2 lorsque l'on utilise "options=valeurs clés" et renvoie les données de contexte d'une entité individuelle.  
+Voici un exemple de courbe au format JSON normalisé. Elle est compatible avec la version 2 du NGSI lorsqu'elle n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
     "id": "fAM-8ca3-4533-a2eb-12015",  
@@ -171,7 +132,7 @@ Curve:
 }  
 ```  
 #### Courbe NGSI-LD valeurs clés Exemple  
-Voici un exemple de courbe au format JSON-LD comme valeurs clés. Cette courbe est compatible avec le format JSON-LD lorsqu'elle n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
+Voici un exemple de courbe au format JSON-LD comme valeurs clés. Elle est compatible avec le format NGSI-LD lorsqu'on utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
   "@context": [  
