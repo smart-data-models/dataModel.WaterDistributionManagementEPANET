@@ -1,63 +1,51 @@
 Entidad: Patrón  
 ===============  
-Esta especificación es una **versión temporal**. Se genera automáticamente a partir de las propiedades documentadas descritas en el schema.json condensadas en el archivo `model.yaml`. Se ha creado un archivo temporal `nuevo_modelo.yaml` en cada modelo de datos para evitar el impacto en los scripts existentes. Por lo tanto, la especificación estará incompleta mientras el schema.json no se actualice al nuevo formato (documentando las propiedades). Una vez actualizado el `modelo.yaml` (`nuevo_modelo.yaml`) necesita ser actualizado también (automáticamente) . Más información en este [link](https://github.com/smart-data-models/data-models/blob/master/specs/warning_message_new_spec.md). Mientras sea un formato provisional cualquier [feedback es bienvenido en este formulario](https://smartdatamodels.org/index.php/submit-an-issue-2/) eligiendo la opción `Feedback on the new specification`.  
+[Licencia abierta](https://github.com/smart-data-models//dataModel.WaterNetworkManagement/blob/master/Pattern/LICENSE.md)  
 Descripción global: **Esta entidad contiene una descripción armonizada de un patrón genérico hecho para el dominio de la gestión de la red de agua. Esta entidad está principalmente asociada con la gestión vertical del agua y las aplicaciones de IO conexas**.  
 
 ## Lista de propiedades  
 
-`description`:   `multipliers`:   `startTime`:   `tag`:   `timeStep`:   `type`: Tipo de entidad NGSI-LD  ## Modelo de datos Descripción de las propiedades  
-Ordenados alfabéticamente  
-```yaml  
+- `description`: Un texto opcional que describe otra información significativa sobre la unión  - `multipliers`: Los multiplicadores definen cómo se ajusta alguna cantidad base (por ejemplo, la demanda) para cada período de tiempo  - `startTime`: El momento en que el patrón comienza  - `tag`: Una cadena de texto opcional utilizada para asignar la pipa a una categoría, tal vez una basada en la edad o el material  - `timeStep`: El paso de tiempo usado para los multiplicadores. Todas las unidades son aceptadas en el código [CEFACT](https://www.unece.org/cefact.html).  - `type`: Tipo de entidad NGSI-LD. Tiene que ser el patrón    
+Propiedades requeridas  
+- `id`  - `multipliers`  - `startTime`  - `timeStep`  - `type`  ## Modelo de datos Descripción de las propiedades  
+Ordenados alfabéticamente (haga clic para ver los detalles)  
+<details><summary><strong>full yaml details</strong></summary>    
+```yaml  
 Pattern:    
   description: 'This entity contains a harmonised description of a generic pattern made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.'    
   properties:    
     description:    
-      properties: &pattern_-_properties_-_multipliers_-_properties    
-        createdAt:    
-          format: date-time    
-          type: string    
-        modifiedAt:    
-          format: date-time    
-          type: string    
-        observedAt:    
-          format: date-time    
-          type: string    
-        type:    
-          enum:    
-            - Property    
-          type: string    
-        unitCode:    
-          type: string    
-        value:    
-          type:    
-            - number    
-            - string    
-            - array    
-      required: &pattern_-_properties_-_multipliers_-_required    
-        - type    
-        - value    
-      type: object    
+      description: 'An optional text that describes other significant information about the junction'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
     multipliers:    
-      properties: *pattern_-_properties_-_multipliers_-_properties    
-      required: *pattern_-_properties_-_multipliers_-_required    
-      type: object    
+      description: 'Multipliers define how some base quantity (e.g., demand) is adjusted for each time period'    
+      items:    
+        type: number    
+      type: Property    
     startTime:    
-      properties: *pattern_-_properties_-_multipliers_-_properties    
-      required: *pattern_-_properties_-_multipliers_-_required    
-      type: object    
+      description: 'The time at which the pattern starts'    
+      format: date-time    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Time    
     tag:    
-      properties: *pattern_-_properties_-_multipliers_-_properties    
-      required: *pattern_-_properties_-_multipliers_-_required    
-      type: object    
+      description: 'An optional text string used to assign the pipe to a category, perhaps one based on age or material'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
     timeStep:    
-      properties: *pattern_-_properties_-_multipliers_-_properties    
-      required: *pattern_-_properties_-_multipliers_-_required    
-      type: object    
+      description: 'The time step used for the multipliers. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'    
+      format: date-time    
+      type: Property    
+      x-ngsi:    
+        units: Second    
     type:    
-      description: 'NGSI-LD Entity Type'    
+      description: 'NGSI-LD Entity Type. It has to be Pattern'    
       enum:    
         - Pattern    
-      type: string    
+      type: Property    
   required:    
     - id    
     - type    
@@ -66,6 +54,9 @@ Pattern:
     - startTime    
   type: object    
 ```  
+</details>    
+## Ejemplo de cargas útiles  
+#### Patrón NGSI V2 valores clave Ejemplo  
 Aquí hay un ejemplo de un patrón en formato JSON como valores clave. Es compatible con NGSI V2 cuando se utiliza "opciones=valores-clave" y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
@@ -84,7 +75,8 @@ Pattern:
     "tag": "DMA1"  
 }  
 ```  
-Aquí hay un ejemplo de un patrón en formato JSON como normalizado. Es compatible con NGSI V2 cuando se utiliza "opciones=valores clave" y devuelve los datos de contexto de una entidad individual.  
+#### Patrón NGSI V2 normalizado Ejemplo  
+Aquí hay un ejemplo de un patrón en formato JSON como normalizado. Es compatible con NGSI V2 cuando no se usan opciones y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
     "id": "fbcb5fc8-8ca3-4533-a2eb-34bc89262190",  
@@ -110,7 +102,8 @@ Pattern:
     }  
 }  
 ```  
-Aquí hay un ejemplo de un patrón en formato JSON-LD como valores clave. Es compatible con NGSI-LD cuando no se usan opciones y devuelve los datos de contexto de una entidad individual.  
+#### Patrón NGSI-LD valores clave Ejemplo  
+Aquí hay un ejemplo de un patrón en formato JSON-LD como valores clave. Es compatible con NGSI-LD cuando se utiliza "opciones=valores-clave" y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {"@context": ["https://schema.lab.fiware.org/ld/context"],  
  "createdAt": "2020-02-20T17:43:00Z",  
@@ -123,6 +116,7 @@ Pattern:
  "timeStep": 3600,  
  "type": "Pattern"}  
 ```  
+#### Patrón NGSI-LD normalizado Ejemplo  
 Aquí hay un ejemplo de un patrón en formato JSON-LD normalizado. Este es compatible con NGSI-LD cuando no se usan opciones y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
