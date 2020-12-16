@@ -1,167 +1,96 @@
 Entité : Valve  
 ==============  
-Cette spécification est une **version temporelle**. Elle est générée automatiquement à partir des propriétés documentées décrites dans le schema.json condensé dans le fichier `model.yaml`. Un fichier temporaire `nouveau_modèle.yaml` a été créé dans chaque modèle de données pour éviter d'avoir un impact sur les scripts existants. Ainsi, la spécification sera incomplète tant que le fichier schema.json n'est pas mis à jour au nouveau format (documentation des propriétés). Une fois mis à jour, le fichier `model.yaml` (`nouveau_model.yaml`) doit être mis à jour également (automatiquement) . Plus d'informations dans ce [lien](https://github.com/smart-data-models/data-models/blob/master/specs/warning_message_new_spec.md). Tant qu'il s'agit d'un format provisoire, tout [feedback est le bienvenu dans ce formulaire](https://smartdatamodels.org/index.php/submit-an-issue-2/) en choisissant l'option "Feedback sur la nouvelle spécification".  
+[Licence ouverte](https://github.com/smart-data-models//dataModel.WaterNetworkManagement/blob/master/Valve/LICENSE.md)  
 Description globale : **Cette entité contient une description harmonisée d'une vanne générique faite pour le domaine de la gestion des réseaux d'eau. Cette entité est principalement associée aux applications verticales de gestion de l'eau et aux applications IdO connexes.**  
 
 ## Liste des biens  
 
-- `diameter`:   - `endsAt`:   - `initialStatus`:   - `minorLoss`:   - `setting`:   - `startsAt`:   - `status`:   - `tag`:   - `type`: Type d'entité NGSI-LD  - `valveType`:   - `vertices`:   ## Modèle de données description des biens  
+- `description`: Un texte optionnel qui décrit d'autres informations importantes sur la jonction  - `diameter`: Le diamètre de la valve. Toutes les unités sont acceptées en code [CEFACT](https://www.unece.org/cefact.html).  - `endsAt`: L'ID du nœud du côté nominal en aval ou en aval de la vanne  - `initialStatus`: L'état du nœud au début de la simulation.  - `minorLoss`: Coefficient de perte mineure sans unité qui s'applique lorsque la vanne est complètement ouverte. Toutes les unités sont acceptées en code [CEFACT](https://www.unece.org/cefact.html).  - `setting`: Un paramètre qui décrit le réglage opérationnel de la vanne. Toutes les unités sont acceptées en code [CEFACT](https://www.unece.org/cefact.html).  - `startsAt`: L'ID du nœud en amont ou en aval nominal de la vanne  - `status`: L'état dynamique du nœud  - `tag`: Une chaîne de texte facultative utilisée pour classer la pipe dans une catégorie, peut-être en fonction de l'âge ou du matériau  - `type`: Type d'entité NGSI-LD. Il doit être égal à Valve.  - `valveCurve`: Une relation à la courbe de la propriété de réglage. Nécessaire uniquement lorsque valveType est GPV  - `valveType`: Le type de soupape de l'élément  - `vertices`: Coordonnées de tous les sommets de la valve, ordonnées du nœud startsAt au nœud endsAt et codées en tant que GeoJSON    
+Propriétés requises  
+- `diameter`  - `endsAt`  - `id`  - `initialStatus`  - `minorLoss`  - `setting`  - `startsAt`  - `type`  - `valveType`  ## Modèle de données description des biens  
 Classement par ordre alphabétique (cliquez pour plus de détails)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 Valve:    
   description: 'This entity contains a harmonised description of a generic Valve made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.'    
   properties:    
+    description:    
+      description: 'An optional text that describes other significant information about the junction'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
     diameter:    
-      properties: &valve_-_properties_-_minorloss_-_properties    
-        createdAt:    
-          format: date-time    
-          type: string    
-        modifiedAt:    
-          format: date-time    
-          type: string    
-        observedAt:    
-          format: date-time    
-          type: string    
-        type:    
-          enum:    
-            - Property    
-          type: string    
-        unitCode:    
-          type: string    
-        value:    
-          type:    
-            - number    
-            - string    
-            - array    
-      required: &valve_-_properties_-_minorloss_-_required    
-        - type    
-        - value    
-      type: object    
+      description: 'The valve diameter. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'    
+      type: Property    
+      x-ngsi:    
+        model: ' https://schema.org/Number'    
+        units: millimetre    
     endsAt:    
-      properties: &valve_-_properties_-_startsat_-_properties    
-        createdAt:    
-          format: date-time    
-          type: string    
-        modifiedAt:    
-          format: date-time    
-          type: string    
-        object:    
-          format: uri    
-          type:    
-            - string    
-        observedAt:    
-          format: date-time    
-          type: string    
-        type:    
-          enum:    
-            - Relationship    
-          type: string    
-      required: &valve_-_properties_-_startsat_-_required    
-        - type    
-        - object    
-      type: object    
+      description: 'The ID of the node on the nominal downstream or discharge side of the valve'    
+      format: uri    
+      type: Relationship    
     initialStatus:    
-      properties: &valve_-_properties_-_status_-_properties    
-        observedAt:    
-          format: date-time    
-          type: string    
-        type:    
-          enum:    
-            - Property    
-          type: string    
-        unitCode:    
-          type: string    
-        value:    
-          enum:    
-            - OPEN    
-            - CLOSED    
-            - CV    
-          type:    
-            - number    
-            - string    
-            - array    
-      required: &valve_-_properties_-_status_-_required    
-        - type    
-        - value    
-      type: object    
+      description: 'The node status at the start of the simulation.'    
+      enum:    
+        - OPEN    
+        - CLOSED    
+        - CV    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
     minorLoss:    
-      properties: *valve_-_properties_-_minorloss_-_properties    
-      required: *valve_-_properties_-_minorloss_-_required    
-      type: object    
+      description: 'Unitless minor loss coefficient that applies when the valve is completely opened. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        units: 'No unit'    
     setting:    
-      properties: *valve_-_properties_-_minorloss_-_properties    
-      required: *valve_-_properties_-_minorloss_-_required    
-      type: object    
+      description: 'A parameter that describes the valve''s operational setting. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        units: 'No unit'    
     startsAt:    
-      properties: *valve_-_properties_-_startsat_-_properties    
-      required: *valve_-_properties_-_startsat_-_required    
-      type: object    
+      description: 'The ID of the node on the nominal upstream or inflow side of the valve'    
+      format: uri    
+      type: Relationship    
     status:    
-      properties: *valve_-_properties_-_status_-_properties    
-      required: *valve_-_properties_-_status_-_required    
-      type: object    
+      description: 'The dynamic state of the node'    
+      enum:    
+        - OPEN    
+        - CLOSED    
+        - CV    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
     tag:    
-      properties: *valve_-_properties_-_minorloss_-_properties    
-      required: *valve_-_properties_-_minorloss_-_required    
-      type: object    
+      description: 'An optional text string used to assign the pipe to a category, perhaps one based on age or material'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
     type:    
-      description: 'NGSI-LD Entity Type'    
+      description: 'NGSI-LD Entity Type. It must be equal to Valve.'    
       enum:    
         - Valve    
-      type: string    
+      type: Property    
+    valveCurve:    
+      description: 'A relationship to the curve of the setting property. Only required when valveType is GPV'    
+      format: uri    
+      type: Relationship    
     valveType:    
-      properties:    
-        createdAt:    
-          format: date-time    
-          type: string    
-        modifiedAt:    
-          format: date-time    
-          type: string    
-        observedAt:    
-          format: date-time    
-          type: string    
-        type:    
-          enum:    
-            - Property    
-          type: string    
-        unitCode:    
-          type: string    
-        value:    
-          enum:    
-            - PRV    
-            - PSV    
-            - PBV    
-            - FCV    
-            - TCV    
-            - GPV    
-          type:    
-            - string    
-        valveCurve:    
-          properties:    
-            createdAt:    
-              format: date-time    
-              type: string    
-            modifiedAt:    
-              format: date-time    
-              type: string    
-            object:    
-              format: uri    
-              type:    
-                - string    
-            observedAt:    
-              format: date-time    
-              type: string    
-            type:    
-              enum:    
-                - Relationship    
-              type: string    
-          type: object    
-      required:    
-        - type    
-        - value    
-      type: object    
+      description: 'The valve type of the element'    
+      enum:    
+        - PRV    
+        - PSV    
+        - PBV    
+        - FCV    
+        - TCV    
+        - GPV    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
     vertices:    
+      description: 'Coordinates of all vertices in the valve, ordered from the startsAt node to the endsAt node and encoded as a GeoJSON '    
       oneOf:    
         - $id: https://geojson.org/schema/MultiPoint.json    
           $schema: "http://json-schema.org/draft-07/schema#"    
@@ -209,6 +138,7 @@ Valve:
             - coordinates    
           title: 'GeoJSON Point'    
           type: object    
+      type: Geoproperty    
   required:    
     - id    
     - type    
@@ -241,7 +171,7 @@ Valve:
 }  
 ```  
 #### Valve NGSI V2 normalisée Exemple  
-Voici un exemple de vanne au format JSON normalisé. Il est compatible avec NGSI V2 lorsqu'il utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
+Voici un exemple de vanne au format JSON normalisé. Ce format est compatible avec la version 2 du NGSI lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
     "id": "87fe7d79-0d4c-4da9-b7d0-3340efa0656awytsd",  
@@ -278,7 +208,7 @@ Valve:
 }  
 ```  
 #### Valve NGSI-LD key-values Exemple  
-Voici un exemple d'une vanne au format JSON-LD comme valeurs clés. Ce format est compatible avec le format NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
+Voici un exemple d'une vanne au format JSON-LD comme valeurs clés. Il est compatible avec le format NGSI-LD lorsqu'il utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {"@context": ["https://schema.lab.fiware.org/ld/context"],  
  "createdAt": "2020-03-02T15:42:00Z",  
