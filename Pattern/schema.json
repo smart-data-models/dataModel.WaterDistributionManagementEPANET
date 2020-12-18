@@ -29,8 +29,7 @@
                     }
                 },
                 "timeStep": {
-                    "type": "string",
-                    "format": "date-time",
+                    "type": "Number",
                     "description": "Property. The time step used for the multipliers. Units:'Second'. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code."
                 },
                 "startTime": {

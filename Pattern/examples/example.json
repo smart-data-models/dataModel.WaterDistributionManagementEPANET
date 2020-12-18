@@ -11,5 +11,6 @@
     ],
     "timeStep": 3600,
     "description": "Open Text",
-    "tag": "DMA1"
+    "tag": "DMA1",
+    "startTime": "2020-02-20T17:43:00Z"
 }
