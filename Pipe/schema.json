@@ -44,12 +44,12 @@
           "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/status"
         },
         "startsAt": {
-          "type": "object",
+          "type": "string",
           "format": "uri",
           "description": "Relationship. The ID of the node where the pipe begins"
         },
         "endsAt": {
-          "type": "object",
+          "type": "string",
           "format": "uri",
           "description": "Relationship. The ID of the node where the pipe ends"
         },
