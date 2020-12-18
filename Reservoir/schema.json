@@ -40,17 +40,17 @@
                     "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/sourceCategory"
                 },
                 "headPattern": {
-                    "type": "object",
+                    "type": "string",
                     "format": "uri",
                     "description": "Relationship. The ID label of a time pattern used to model time variation in the reservoir's total head"
                 },
                 "hasInlet": {
-                    "type": "object",
+                    "type": "string",
                     "format": "uri",
                     "description": "Relationship. A relationship indicating the water inlet points of the Reservoir"
                 },
                 "hasOutlet": {
-                    "type": "object",
+                    "type": "string",
                     "format": "uri",
                     "description": "Relationship. A relationship indicating the water outlet points of the Reservoir"
                 }
