@@ -238,7 +238,7 @@ Pump:
 }  
 ```  
 #### Pompe NGSI-LD normalisée Exemple  
-Voici un exemple d'une pompe au format JSON-LD telle que normalisée. Il est compatible avec le format NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
+Voici un exemple de pompe au format JSON-LD normalisé. Il est compatible avec le format NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
     "id": "urn:ngsi-ld:Pump:85zhnf58-0d4c-h4g854g-b7d0-3310klm",  
