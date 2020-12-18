@@ -7,9 +7,7 @@ Entité : Courbe
 
 - `curveType`: Type de courbe de l'entité.  - `description`: Un texte optionnel qui décrit d'autres informations importantes sur la jonction  - `tag`: Une chaîne de texte facultative utilisée pour classer la pipe dans une catégorie, peut-être en fonction de l'âge ou du matériau  - `type`: Type d'entité NGSI-LD. Il doit être égal à Curve.  - `xData`: X points de données pour la courbe  - `yData`: Points de données Y pour la courbe    
 Propriétés requises  
-- `curveType`  - `id`  - `type`  - `xData`  - `yData`    
-Texte à inclure entre le titre général et la description.  
-## Modèle de données description des biens  
+- `curveType`  - `id`  - `type`  - `xData`  - `yData`  ## Modèle de données description des biens  
 Classement par ordre alphabétique (cliquez pour plus de détails)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
@@ -58,7 +56,6 @@ Curve:
   type: object    
 ```  
 </details>    
-Texte à inclure après la liste des biens  
 ## Exemples de charges utiles  
 #### Courbe NGSI V2 valeurs clés Exemple  
 Voici un exemple de courbe au format JSON comme valeurs clés. Elle est compatible avec NGSI V2 lorsque l'on utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
@@ -203,4 +200,3 @@ Curve:
     ]  
 }  
 ```  
-Le texte après tout  
