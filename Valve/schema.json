@@ -52,17 +52,17 @@
                     "description": "Property. Model:'https://schema.org/Number'. Units:'No unit'. Unitless minor loss coefficient that applies when the valve is completely opened. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code."
                 },
                 "startsAt": {
-                    "type": "object",
+                    "type": "string",
                     "format": "uri",
                     "description": "Relationship. The ID of the node on the nominal upstream or inflow side of the valve"
                 },
                 "endsAt": {
-                    "type": "object",
+                    "type": "string",
                     "format": "uri",
                     "description": "Relationship. The ID of the node on the nominal downstream or discharge side of the valve"
                 },
                 "valveCurve": {
-                    "type": "object",
+                    "type": "string",
                     "format": "uri",
                     "description": "Relationship. A relationship to the curve of the setting property. Only required when valveType is GPV"
                 },
