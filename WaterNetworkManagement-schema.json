@@ -16,7 +16,7 @@
                 "demandPattern": {
                     "type": "string",
                     "format": "uri",
-                    "description": "Relationship. A relationship to the pattern pf the 'demandCategory' property."
+                    "description": "Relationship. A relationship to the pattern of the 'demandCategory' property."
                 }
             }
         },
@@ -45,8 +45,6 @@
                 }
             },
             "required": [
-                "type",
-                "value",
                 "sourceType",
                 "sourceQuality",
                 "sourcePattern"
