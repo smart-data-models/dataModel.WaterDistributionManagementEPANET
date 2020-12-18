@@ -36,12 +36,12 @@
                     "description": "Property. Model:'https://schema.org/Number'. Units:'Metre per Second'. The relative speed setting of the Pump. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code."
                 },
                 "startsAt": {
-                    "type": "object",
+                    "type": "string",
                     "format": "uri",
                     "description": "Relationship. The ID of the node on the suction side of the pump"
                 },
                 "endsAt": {
-                    "type": "object",
+                    "type": "string",
                     "format": "uri",
                     "description": "Relationship. The ID of the node on the discharge side of the pump"
                 },
@@ -57,17 +57,17 @@
                     ]
                 },
                 "headCurve": {
-                    "type": "object",
+                    "type": "string",
                     "format": "uri",
                     "description": "Relationship. The ID label of the pump curve used to describe the relationship between the head delivered by the pump and the flow through the Pump."
                 },
                 "pumpPattern": {
-                    "type": "object",
+                    "type": "string",
                     "format": "uri",
                     "description": "Relationship. The ID label of a time pattern used to control the pump's operation. The multipliers of the pattern are equivalent to speed settings. A multiplier of zero implies that the pump will be shut off during the corresponding time period"
                 },
                 "efficCurve": {
-                    "type": "object",
+                    "type": "string",
                     "format": "uri",
                     "description": "Relationship. The ID label of the curve that represents the pump's wire-to-water efficiency as a function of flow rate."
                 },
@@ -76,7 +76,7 @@
                     "description": "Property. Units:'No unit'. The average or nominal price of energy in monetary units. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code."
                 },
                 "energyPattern": {
-                    "type": "object",
+                    "type": "string",
                     "format": "uri",
                     "description": "Relationship. The ID label of the time pattern used to describe the variation in energy price throughout the day."
                 }
