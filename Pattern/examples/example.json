@@ -1,16 +1,16 @@
 {
-    "id": "fbcb5fc8-8ca3-4533-a2eb-34bc89262190",
-    "type": "Pattern",
-    "multipliers": [
-        0.5692,
-        0.4647,
-        0.4385,
-        0.3604,
-        0.3098,
-        0.3345
-    ],
-    "timeStep": 3600,
-    "description": "Open Text",
-    "tag": "DMA1",
-    "startTime": "2020-02-20T17:43:00Z"
+  "id": "fbcb5fc8-8ca3-4533-a2eb-34bc89262190",
+  "type": "Pattern",
+  "multipliers": [
+    0.5692,
+    0.4647,
+    0.4385,
+    0.3604,
+    0.3098,
+    0.3345
+  ],
+  "timeStep": 3600,
+  "description": "Open Text",
+  "tag": "DMA1",
+  "startTime": "2020-02-20T17:43:00Z"
 }
