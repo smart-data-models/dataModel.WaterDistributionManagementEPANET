@@ -11,6 +11,10 @@ with the water network management vertical and related IoT applications.
 Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.WaterNetworkManagement/Junction/swagger.yaml)
 
 Link to the [specification](https://github.com/smart-data-models/dataModel.WaterNetworkManagement/blob/master/Junction/doc/spec.md)
+
+Link to the [specification in Spanish](https://github.com/smart-data-models/dataModel.WaterNetworkManagement/blob/master/Junction/doc/spec_ES.md)
+
+Link to the [specification in French](https://github.com/smart-data-models/dataModel.WaterNetworkManagement/blob/master/Junction/doc/spec_FR.md)
 ### Examples
 
 Link to the [example](https://smart-data-models.github.io/dataModel.WaterNetworkManagement/Junction/examples/example.json) (keyvalues) for NGSI v2
