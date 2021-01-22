@@ -2,10 +2,7 @@
 
 ## Description 
 
-This entity contains a harmonised description of a generic Valve made for
-the Water Network Management domain. This entity is primarily associated
-with the water management vertical and related IoT applications.
-
+This entity contains a harmonised description of a generic Valve made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.
 ### Specification
 
 Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.WaterNetworkManagement/Valve/swagger.yaml)
