@@ -1,162 +1,306 @@
----
-# Copyright (c) 2020 Contributors to Smart-Data-Models
-# see https://github.com/smart-data-models/dataModel.WaterNetworkManagement
-
 Tank:
-  required:
-    - id
-  allOf:
-    - $ref: >-
-        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/Common
-  type: object
-  description: |
-    This entity contains an harmonised description of a generic pattern made for the Water Network Management domain.
-    This entity is primarily associated with the water management vertical and related IoT applications.
-    Main files in this directory are:
-    Tank Entity schema.
-    Tank Entity Example.
-    Tank Entity Spec.
+  description: 'This entity contains a harmonised description of a generic tank made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.'
   properties:
     address:
-      "$ref": 'https://smart-data-models.github.io/data-models/schema.org.yaml#/address'
-    baseDemand:
-      x-ngsi:
-        type: Property
-      type: object
-      description: ''
+      description: 'The mailing address.'
       properties:
-        type:
+        addressCountry:
+          description: 'Property. The country. For example, Spain. Model:''https://schema.org/Text'''
           type: string
-        value:
-          type: number, string
-        unitCode:
+        addressLocality:
+          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/Text'''
           type: string
-          baseDemand:
-            type: object
-            properties:
-              type:
-                type: string
-              object:
-                type:
-                  type: string
-                  format: uri
+        addressRegion:
+          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/Text'''
+          type: string
+        areaServed:
+          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/Text'''
+          type: string
+        postOfficeBoxNumber:
+          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/Text'''
+          type: string
+        postalCode:
+          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/Text'''
+          type: string
+        streetAddress:
+          description: 'Property. The street address. Model:''https://schema.org/Text'''
+          type: string
+      type: Property
+    areaServed:
+      description: 'The geographic area where a service or offered item is provided'
+      type: Property
+      x-ngsi:
+        model: https://schema.org/Text
     bulkReactionCoefficient:
+      description: 'The bulk reaction coefficient used for modelling reactions in the tank. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'
+      type: Property
       x-ngsi:
-        type: Property
-      type: number, string, array
-      description: ''
+        model: https://schema.org/Number
+        units: 1/day
     description:
+      description: 'An optional text that describes other significant information about the junction'
+      type: Property
       x-ngsi:
-        type: Property
-      type: number, string, array
-      description: ''
+        model: https://schema.org/Text
     elevation:
+      description: 'The elevation above some common reference of the Tank. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'
+      type: Property
       x-ngsi:
-        type: Property
-      type: number, string, array
-      description: ''
+        model: https://schema.org/Number
+        units: metre
+    hasInlet:
+      description: 'A relationship indicating the water inlet points of the Reservoir'
+      format: uri
+      type: Relationship
+    hasOutlet:
+      description: 'A relationship indicating the water outlet points of the Reservoir'
+      format: uri
+      type: Relationship
     initLevel:
+      description: 'The height of the water surface above the bottom elevation of the tank at the start of the simulation. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'
+      type: Property
       x-ngsi:
-        type: Property
-      type: number, string, array
-      description: ''
+        model: https://schema.org/Number
+        units: metre
     initialQuality:
+      description: 'Water quality level in the tank at the start of the simulation. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'
+      type: Property
       x-ngsi:
-        type: Property
-      type: number, string, array
-      description: ''
-    maxLevel:
-      x-ngsi:
-        type: Property
-      type: number, string, array
-      description: ''
-    minLevel:
-      x-ngsi:
-        type: Property
-      type: number, string, array
-      description: ''
-    minVolume:
-      x-ngsi:
-        type: Property
-      type: number, string, array
-      description: ''
-    mixingFraction:
-      x-ngsi:
-        type: Property
-      type: number, string, array
-      description: ''
-    mixingModel:
-      description: ''
-      x-ngsi:
-        type: Property
-      type: object
-      properties:
-        type:
-          type: string
-        value:
-          type: number, string, array
-          enum:
-            - MIXED
-            - 2COMP
-            - FIFO
-            - LIFO
-        unitCode:
-          type: string
-    nominalDiameter:
-      x-ngsi:
-        type: Property
-      type: number, string, array
-      description: ''
-    sourceCategory:
-      description: ''
-      x-ngsi:
-        type: Property
-      type: object
-      properties:
-        type:
-          type: string
-        value:
-          type: number, string
-        unitCode:
-          type: string
-        sourceType:
-          type: object
-          properties:
+        model: https://schema.org/Number
+        units: mg/L
+    location:
+      $id: https://geojson.org/schema/Geometry.json
+      $schema: "http://json-schema.org/draft-07/schema#"
+      oneOf:
+        - properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                type: number
+              minItems: 2
+              type: array
             type:
-              type: string
-            value:
-              type: number, string
               enum:
-                - CONCEN
-                - MASS
-                - FLOWPACED
-                - SETPOINT
-            unitCode:
+                - Point
               type: string
-        sourceQuality:
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON Point'
           type: object
-          properties:
+        - properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                items:
+                  type: number
+                minItems: 2
+                type: array
+              minItems: 2
+              type: array
             type:
+              enum:
+                - LineString
               type: string
-            value:
-              type: number, string
-            unitCode:
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON LineString'
+          type: object
+        - properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                items:
+                  items:
+                    type: number
+                  minItems: 2
+                  type: array
+                minItems: 4
+                type: array
+              type: array
+            type:
+              enum:
+                - Polygon
               type: string
-    tag:
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON Polygon'
+          type: object
+        - properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                items:
+                  type: number
+                minItems: 2
+                type: array
+              type: array
+            type:
+              enum:
+                - MultiPoint
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON MultiPoint'
+          type: object
+        - properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                items:
+                  items:
+                    type: number
+                  minItems: 2
+                  type: array
+                minItems: 2
+                type: array
+              type: array
+            type:
+              enum:
+                - MultiLineString
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON MultiLineString'
+          type: object
+        - properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                items:
+                  items:
+                    items:
+                      type: number
+                    minItems: 2
+                    type: array
+                  minItems: 4
+                  type: array
+                type: array
+              type: array
+            type:
+              enum:
+                - MultiPolygon
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON MultiPolygon'
+          type: object
+      title: 'GeoJSON Geometry'
+    maxLevel:
+      description: 'The height of the water surface above the bottom elevation of the tank at the start of the simulation. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'
+      type: Property
       x-ngsi:
-        type: Property
-      type: number, string, array
-      description: ''
-    volumeCurve:
-      description: ''
+        model: https://schema.org/Number
+        units: metre
+    minLevel:
+      description: 'The minimum level that water in the tank can drop to. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'
+      type: Property
       x-ngsi:
-        type: Relationship
-      type: object
+        model: https://schema.org/Number
+        units: metre
+    minVolume:
+      description: 'The volume of water in the tank when it is at its minimum level. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'
+      type: Property
+      x-ngsi:
+        model: https://schema.org/Number
+        units: 'cubic metre'
+    mixingFraction:
+      description: 'The fraction of the tank''s total volume that comprises the inlet-outlet compartment of the two-compartment (2COMP) mixing model. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'
+      type: Property
+      x-ngsi:
+        model: https://schema.org/Number
+        units: 'No unit'
+    mixingModel:
+      description: 'A sub-property of the Property sourceCategory'
+      enum:
+        - MIXED
+        - 2COMP
+        - FIFO
+        - LIFO
+      type: Property
+      x-ngsi:
+        model: https://schema.org/Text
+    nominalDiameter:
+      description: 'The diameter of the tank. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'
+      type: Property
+      x-ngsi:
+        model: https://schema.org/Number
+        units: Metre
+    sourceCategory:
+      description: 'Description of the quality of source flow entering the network at a specific node.'
       properties:
-        type:
-          type: string
-        object:
-          type: string
+        sourcePattern:
+          description: 'Relationship. A relationship to the pattern pf the sourceCategory property'
           format: uri
-
-
+          type: string
+        sourceQuality:
+          description: 'Property. Model:''https://schema.org/Number''. Units: ''mg/L''. Baseline or average concentration (or mass flow rate) of source. A sub-property of the Property ''sourceCategory''. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'
+          type: number
+        sourceType:
+          description: 'Property. Model:''https://schema.org/Text''. A sub-property of the Property ''sourceCategory'''
+          enum:
+            - CONCEN
+            - MASS
+            - FLOWPACED
+            - SETPOINT
+          type: string
+      required:
+        - sourceType
+        - sourceQuality
+        - sourcePattern
+      type: Property
+      x-ngsi:
+        model: https://schema.org/Text
+    tag:
+      description: 'An optional text string used to assign the pipe to a category, perhaps one based on age or material'
+      type: Property
+      x-ngsi:
+        model: https://schema.org/Text
+    type:
+      description: 'NGSI-LD Entity Type. It has to be Tank'
+      enum:
+        - Tank
+      type: Property
+    volumeCurve:
+      description: 'The ID label of a curve used to describe the relation between tank volume and water level'
+      format: uri
+      type: Relationship
+  required:
+    - id
+    - type
+    - location
+    - elevation
+    - initLevel
+    - maxLevel
+    - minVolume
+    - nominalDiameter
+  type: object
