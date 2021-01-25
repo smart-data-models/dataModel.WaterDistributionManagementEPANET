@@ -41,7 +41,7 @@
             "TCV",
             "GPV"
           ],
-          "description": "Property. Model:'https://schema.org/Text'. The valve type of the element"
+          "description": "Property. Model:'https://schema.org/Text'. The valve type of the element. Enum:'PRV, PSV, PBV, FCV, TCV, GPV'"
         },
         "setting": {
           "type": "number",
