@@ -1,2 +1,2 @@
-"id_", "type_", "initiaStatus_", "status_", "diameter_", "valveType_", "setting_", "minorLoss_", "tag_", "startsAt_", "endsAt_"
-"87fe7d79-0d4c-4da9-b7d0-3340efa0656awytsd", "Valve", "OPEN", "OPEN", "203.2", "PRV", "40.0", "0.0", "DMA1", "63fe7d79-0d4c-4da9-b7d0-3340efa0656a", "1863179e-3768-4480-9167-ff21f870dd19"
+"id_", "type_", "initiaStatus_", "status_", "diameter_", "valveType_", "setting_", "minorLoss_", "tag_", "startsAt_", "endsAt_", "initialStatus_"
+"87fe7d79-0d4c-4da9-b7d0-3340efa0656awytsd", "Valve", "OPEN", "OPEN", "203.2", "PRV", "40.0", "0.0", "DMA1", "uri:63fe7d79.0d4c-4da9-b7d0-3340efa0656a", "uri:1863179e-3768-4480-9167-ff21f870dd19", "OPEN"
