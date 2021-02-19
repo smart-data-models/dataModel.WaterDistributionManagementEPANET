@@ -1,2 +1,2 @@
 "id_", "type_", "initialStatus_", "status_", "length_", "diameter_", "roughness_", "minorLoss_", "tag_", "description_", "startsAt_", "endsAt_", "bulkCoeff_", "wallCoeff_"
-"74azsty-70d4l-4da9-b7d0-3340ef655nnb", "Pipe", "OPEN", "OPEN", "52.9", "203.0", "72.4549", "72.4549", "DMA1", "Free Text", "63fe7d79-0d4c-4da9-b7d0-3340efa0656a", "1863179e-3768-4480-9167-ff21f870dd19", "72.4549", "72.4549"
+"74azsty-70d4l-4da9-b7d0-3340ef655nnb", "Pipe", "OPEN", "OPEN", "52.9", "203.0", "72.4549", "72.4549", "DMA1", "Free Text", "ngsi:63fe7d79-0d4c-4da9-b7d0-3340efa0656a", "ngsi:1863179e-3768-4480-9167-ff21f870dd19", "72.4549", "72.4549"
