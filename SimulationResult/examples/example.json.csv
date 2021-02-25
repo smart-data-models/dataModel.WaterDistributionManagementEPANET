@@ -1,0 +1,2 @@
+"id_", "type_", "description_", "hasInputNetwork_", "refSimulationScenario_", "outputParameters__0__parameter_", "outputParameters__0__value_", "outputParameters__0__targetURI_", "outputParameters__1__parameter_", "outputParameters__1__value_", "outputParameters__1__targetURI_"
+"urn:ngsi-ld:SimulationResult:01", "SimulationResult", "Free Text", "urn:ngsi-ld:WaterNetwork:01", "urn:ngsi-ld:Simulation:01", "waterLevel", "50", "urn:ngsi-ld:Valve:V1", "initialQuality", "2", "urn:ngsi-ld:Tank:T1"
