@@ -1,0 +1,387 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "$id": "https://smart-data-models.github.io/data-models/specs/WaterNetwork/Simulation/schema.json",
+  "title": "WaterNetwork - SimulationScenario",
+  "description": "This entity contains a harmonised description of a generic simulation scenario made for the Water Network Management domain. This entity is primarily associated with the water network management vertical and related IoT applications.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+    },
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+    },
+    {
+      "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json"
+    },
+    {
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "SimulationScenario"
+          ],
+          "description": "Property. NGSI-LD Entity Type. It has to be SimulationScenario"
+        },
+        "createdBy": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256,
+              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]'|~^@!,:\\\\]+$"
+            },
+            {
+              "type": "string",
+              "format": "uri"
+            }
+          ],
+          "description": "Relationship. The ID of who created/triggered the simulation. Reference to an entity of type 'User'. Model:'https://schema.org/URL'"
+        },
+        "hasInputNetwork": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256,
+              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]'|~^@!,:\\\\]+$"
+            },
+            {
+              "type": "string",
+              "format": "uri"
+            }
+          ],
+          "description": "Relationship. The ID of the network used in the simulation. Model:'https://schema.org/URL'"
+        },
+        "hasSimulationResult": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256,
+              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]'|~^@!,:\\\\]+$"
+            },
+            {
+              "type": "string",
+              "format": "uri"
+            }
+          ],
+          "description": "Relationship. The ID of the related simulation result. Reference to an entity of type 'SimulationResult'. Model:'https://schema.org/URL'"
+        },
+        "qualityTimeStep": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. The timestep used to track changes in water quality in the network. Given in seconds. Units:'seconds'"
+        },
+        "duration": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Duration of the simulation, given in seconds. Units:'seconds'"
+        },
+        "hydraulicTimeStep": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Determines how often the hydraulic state of the network is calculated. Given in seconds. Units:'seconds'"
+        },
+        "patternStep": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Pattern step of the simulation."
+        },
+        "patternStart": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Property. Model:'https://schema.org/DateTime'. Start time of the  the simulation."
+        },
+        "reportStep": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Interval at which output results are reported. given in seconds. Units:'seconds'"
+        },
+        "reportStart": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Simulation time at which results start to be reported. Given in seconds from start of simulation. Units:'seconds'"
+        },
+        "ruleTimeStep": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Time step used to check for changes in system status due to rule-based controls. Given in seconds. Units:'seconds'"
+        },
+        "startClockTime": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Time of day at which the simulation begins. Given as seconds from start of day. Units:'seconds'"
+        },
+        "statistic": {
+          "type": "string",
+          "enum": [
+            "averaged",
+            "maximum",
+            "minimum",
+            "none",
+            "range"
+          ],
+          "description": "Property. Model:'https://schema.org/string'. The type of statistical post-processing that is done on the time series of simulation results generated. Options are AVERAGED (report time-averaged results), MINIMUM (report only minimum values), MAXIMUM (report only maximum values), RANGE (report difference between minimum and maximum values) and NONE (report full time series). Enum:'averaged, minimum, maximum, range, none'"
+        },
+        "trials": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. The maximum number of trials used to solve network hydraulics at each hydraulic time step of a simulation"
+        },
+        "accuracy": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Total normalized flow change convergence criterion for determining when a hydraulic solution has been reached."
+        },
+        "tolerance": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Water quality tolerance"
+        },
+        "emitterExponent": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Power to which pressure at a junction is raised when computing from an emitter."
+        },
+        "headError": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Maximum headloss convergence criterion for determining when a hydraulic solution has been reached."
+        },
+        "flowChange": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Maximum flow change convergence criterion for determining when a hydraulic solution has been reached."
+        },
+        "demandCharge": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Energy charge per maximum kW usage."
+        },
+        "specificGravity": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. The ratio of the density of the fluid being modeled to that of water at 4 deg. C"
+        },
+        "requiredPressure": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Pressure required to supply a node's full demand under a pressure driven analysis. Only used if demandModel is 'PDA'"
+        },
+        "pressureExponent": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Power to which pressure is raised when calculating the demand delivered under a pressure driven analysis. Only used if demandModel is 'PDA'"
+        },
+        "viscosity": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. The kinematic viscosity of the fluid being modeled relative to that of water at 20 deg. C"
+        },
+        "unbalanced": {
+          "type": "string",
+          "enum": [
+            "stop",
+            "continue",
+            "continue_N"
+          ],
+          "description": "Property. Model:'https://schema.org/Text'. Determines what happens if a hydraulic solution cannot be reached within the allowed number of trials. Allowable options are STOP (halt analysis), CONTINUE (continue analysis but with a warning message) and CONTINUE_N (continue for another N trials, where the value of N is given by 'unbalancedN'). Enum:'stop, continue, continue_N'"
+        },
+        "unbalancedN": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Number of additional trials allowed if 'unbalanced' is set to continue_N. Mandatory if 'unbalanced' is set to continue_N, else not required."
+        },
+        "checkFrequency": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Frequency of hydraulic status checks"
+        },
+        "maxCheck": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Number of trials after which status checks are discontinued"
+        },
+        "dampLimit": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Accuracy value at which solution damping and status checks begin for PRVs and PSVs."
+        },
+        "diffusivity": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Molecular diffusivity of the chemical analysed in a quality analysis, relative to diffusivity of chlorine in water."
+        },
+        "bulkOrder": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Bulk water reaction order for pipes"
+        },
+        "wallOrder": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Wall reaction order for pipes"
+        },
+        "tankOrder": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Bulk water reaction order for tanks"
+        },
+        "concentrationLimit": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Limiting concentration for growth reactions"
+        },
+        "qualityType": {
+          "type": "string",
+          "enum": [
+            "age",
+            "chem",
+            "none",
+            "trace"
+          ],
+          "description": "Property. Model:'https://schema.org/Text'. Type of water quality analysis. Enum:'chem, age, trace, none'"
+        },
+        "chemicalName": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Name of the chemical modelled. Only used if 'qualityType' is CHEM"
+        },
+        "chemicalUnits": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. Units of the chemical modelled. Only used if 'qualityType' is CHEM"
+        },
+        "traceNodeID": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256,
+              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]'|~^@!,:\\\\]+$"
+            },
+            {
+              "type": "string",
+              "format": "uri"
+            }
+          ],
+          "description": "Relationship. URI of node being traced in the quality analysis. Mandatory if 'qualityType' is TRACE, otherwise not required. Model:'https://schema.org/URL'"
+        },
+        "flowUnits": {
+          "type": "string",
+          "enum": [
+            "AFD",
+            "CFS",
+            "CMD",
+            "CMH",
+            "GPM",
+            "IMGD",
+            "LPS",
+            "LPM",
+            "MLD",
+            "MGD"
+          ],
+          "description": "Property. Model:'https://schema.org/Text'. Units in which flow rates are expressed in the simulation. Allowable options are CFS (cubic feet per second), GPM (gallons per minute), MGD (million gallons per day), IMGD (imperial MGD), AFD (acre-feet per day), LPS (litres pre second), LPM (litres per minute), MLD (million litres per day), CMH (cubic metres per hour) and CMD (cubic metres per day). Enum:'AFD, CFS, CMD, CMH, GPM, IMGD, LPS, LPM, MLD, MGD'"
+        },
+        "headlossFormula": {
+          "type": "string",
+          "enum": [
+            "H-W",
+            "D-W",
+            "C-M"
+          ],
+          "description": "Property. Model:'https://schema.org/Text'. Formula used for computing head loss for flow through a pipe. The choices are the Hazen-Williams (H-W), Darcy-Weisbach (D-W) or Chezy-Manning (C-M) formulas. Allowable options are 'H-W', 'D-W', 'C-M'. Enum:'C-M, D-W, H-W'"
+        },
+        "demandModel": {
+          "type": "string",
+          "enum": [
+            "DDA",
+            "PDA"
+          ],
+          "description": "Property. Model:'https://schema.org/Text'. Specifies whether the analysis is pressure driven (PDA) or demand driven (DDA). Enum:'DDA, PDA'"
+        },
+        "minimumPressure": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Pressure below which no demand can be delivered under a pressure dirven analysis. Only used if demandModel is 'PDA'"
+        },
+        "operationalControl": {
+          "type": "array",
+          "description": "Property. The operational control of de item",
+          "items": {
+            "type": "object",
+            "properties": {
+              "type": {
+                "type": "string",
+                "description": "Property. Model:'https://schema.org/Text'. Description of a control applied to the network for the simulation. Enum:'controlledLink, controlType, monitoredNode, setting, triggerLevel'"
+              },
+              "triggerLevel": {
+                "type": "number",
+                "description": "Property. Model:'https://schema.org/Number'. Level at which control is activated. A sub-property of the Property 'control'"
+              },
+              "setting": {
+                "type": "number",
+                "description": "Property. Model:'https://schema.org/Number'. Setting applied in the to the controlled link when trigger level is reached. A sub-property of the Property 'control'"
+              },
+              "controlType": {
+                "type": "string",
+                "enum": [
+                  "HILEVEL",
+                  "LOWLEVEL",
+                  "TIMEOFDAY",
+                  "TIMER"
+                ],
+                "description": "Property. Model:'https://schema.org/Text'. Type of trigger for the control. A sub-property of the Property 'control'. Enum:'HILEVEL, LOWLEVEL, TIMEOFDAY, TIMER'"
+              },
+              "controlledLink": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 256,
+                    "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]'|~^@!,:\\\\]+$"
+                  },
+                  {
+                    "type": "string",
+                    "format": "uri"
+                  }
+                ],
+                "description": "Relationship. Model:'https://schema.org/URL'. Link controlled. A sub-relationship of the Property 'control'. Reference to an entity of type 'Pipe', 'Pump' or 'Valve'"
+              },
+              "monitoredNode": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 256,
+                    "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]'|~^@!,:\\\\]+$"
+                  },
+                  {
+                    "type": "string",
+                    "format": "uri"
+                  }
+                ],
+                "description": "Relationship. Model:'https://schema.org/URL'. Node which is monitored for control trigger level. A sub-relationship of the Property 'control'.  Reference to an entity of type 'Junction', 'Tank' or 'Reservoir'"
+              }
+            }
+          }
+        },
+        "inputParameter": {
+          "type": "array",
+          "description": "Property. Model:'https://Text'. Description of the set of modifications to be applied to the network for the simulation",
+          "items": {
+            "type": "object",
+            "properties": {
+              "parameterName": {
+                "type": "string"
+              },
+              "value": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "type": "boolean"
+                  }
+                ]
+              },
+              "targetURI": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 256,
+                    "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]'|~^@!,:\\\\]+$"
+                  },
+                  {
+                    "type": "string",
+                    "format": "uri"
+                  }
+                ],
+                "description": "Relationship. Model:'https://schema.org/URL'. URI of network component with property modified in simulation. A sub-relationship of the Property water attribute."
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "required": [
+    "id",
+    "type",
+    "hasInputNetwork"
+  ]
+}

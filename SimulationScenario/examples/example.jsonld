@@ -1,0 +1,96 @@
+{
+  "id": "urn:ngsi-ld:SimulationScenario:01",
+  "type": "SimulationScenario",
+  "description": "Free Text",
+  "createdBy": "urn:ngsi-ld:User:u1",
+  "hasInputNetwork": "urn:ngsi-ld:WaterNetwork:01",
+  "hasSimulationResult": "urn:ngsi-ld:SimulationResult:01",
+  "duration": 86400,
+  "hydraulicTimeStep": 3600,
+  "flowUnits": "LPS",
+  "headlossFormula": "H-W",
+  "startClockTime": 0,
+  "reportStep": 3600,
+  "reportStart": 0,
+  "ruleTimeStep": 900,
+  "statistic": "none",
+  "trials": 40,
+  "accuracy": 0.001,
+  "tolerance": 0.01,
+  "emitterExponent": 0.5,
+  "headError": 0,
+  "flowChange": 0.01,
+  "demandCharge": 2,
+  "demandModel": "PDA",
+  "minimumPressure": 0,
+  "requiredPressure": 20,
+  "pressureExponent": 0.5,
+  "viscosity": 1,
+  "unbalanced": "continue_N",
+  "unbalancedN": 20,
+  "checkFrequency": 2,
+  "maxCheck": 10,
+  "dampLimit": 0,
+  "diffusivity": 1,
+  "bulkOrder": 1,
+  "wallOrder": 1,
+  "tankOrder": 1,
+  "concentrationLimit": 0,
+  "qualityType": "chem",
+  "chemicalName": "Chlorine",
+  "chemicalUnits": "mg/l",
+  "specificGravity": 1,
+  "qualityTimeStep": 60,
+  "operationalControl": [
+    {
+      "type": "Operational Control 1",
+      "setting": 0,
+      "triggerLevel": 30,
+      "controlType": "HILEVEL",
+      "controlledLink": "urn:ngsi-ld:Tank:T1",
+      "monitoredNode": "urn:ngsi-ld:Pump:P1"
+    },
+    {
+      "type": "Operational Control 2",
+      "triggerLevel": 10,
+      "setting": 1,
+      "controlType": "LOWLEVEL",
+      "monitoredNode": "urn:ngsi-ld:Tank:T1",
+      "controlledLink": "urn:ngsi-ld:Pump:P1"
+    }
+  ],
+  "inputParameters": [
+    {
+      "type": "Property 1",
+      "setting": 50,
+      "targetURI": "urn:ngsi-ld:Valve:V1"
+    },
+    {
+      "type": "Property 2",
+      "initialQuality": 2,
+      "targetURI": "urn:ngsi-ld:Tank:T1"
+    },
+    {
+      "type": "Property 1",
+      "efficCurve": "urn:ngsi-ld:Curve:C1",
+      "targetURI": "urn:ngsi-ld:Pump:P1"
+    },
+    {
+      "type": "demand Category 1",
+      "demandCategory": "agriculture demand",
+      "baseDemand": 1.1,
+      "demandPattern": "urn:ngsi-ld:Pattern:Agriculture",
+      "targetURI": "urn:ngsi-ld:Junction:J1"
+    },
+    {
+      "type": "demand Category 2",
+      "demandCategory": "residential demand",
+      "baseDemand": 1.7,
+      "demandPattern": "urn:ngsi-ld:Pattern:Residential",
+      "targetURI": "urn:ngsi-ld:Junction:J1"
+    }
+  ],
+  "@context": [
+    "https://schema.lab.fiware.org/ld/context"
+  ]
+}
