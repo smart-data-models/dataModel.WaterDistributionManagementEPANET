@@ -8,6 +8,8 @@ The following entity types are available:
 
 - [Junction](https://github.com/smart-data-models/dataModel.WaterNetworkManagement/blob/master/Junction/README.md). This entity contains a harmonised description of a generic junction made for the Water Network Management domain. This entity is primarily associated with the water network management vertical and related IoT applications.
 
+- [Network](https://github.com/smart-data-models/dataModel.WaterNetworkManagement/blob/master/Network/README.md). This entity contains a harmonised description of a generic network made for the Water Network Management domain. This entity is primarily associated with the water network management vertical and related IoT applications.
+
 - [Pattern](https://github.com/smart-data-models/dataModel.WaterNetworkManagement/blob/master/Pattern/README.md). This entity contains a harmonised description of a generic pattern made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.
 
 - [Pipe](https://github.com/smart-data-models/dataModel.WaterNetworkManagement/blob/master/Pipe/README.md). This entity contains a harmonised description of a generic pipe made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.
@@ -15,6 +17,10 @@ The following entity types are available:
 - [Pump](https://github.com/smart-data-models/dataModel.WaterNetworkManagement/blob/master/Pump/README.md). This entity contains a harmonised description of a generic pump made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.
 
 - [Reservoir](https://github.com/smart-data-models/dataModel.WaterNetworkManagement/blob/master/Reservoir/README.md). This entity contains a harmonised description of a generic Reservoir made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.
+
+- [SimulationResult](https://github.com/smart-data-models/dataModel.WaterNetworkManagement/blob/master/SimulationResult/README.md). This entity contains a harmonised description of a generic simulation result made for the Water Network Management domain. This entity is primarily associated with the water network management vertical and related IoT applications.
+
+- [SimulationScenario](https://github.com/smart-data-models/dataModel.WaterNetworkManagement/blob/master/SimulationScenario/README.md). This entity contains a harmonised description of a generic simulation scenario made for the Water Network Management domain. This entity is primarily associated with the water network management vertical and related IoT applications.
 
 - [Tank](https://github.com/smart-data-models/dataModel.WaterNetworkManagement/blob/master/Tank/README.md). This entity contains a harmonised description of a generic tank made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.
 
