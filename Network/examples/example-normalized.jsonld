@@ -1,0 +1,40 @@
+{
+    "id": "urn:ngsi-ld:WaterNetwork:01",
+    "type": "WaterNetwork",
+    "description": {
+        "type": "Property",
+        "value": "Free Text"
+    },
+    "isComposedOf": [
+        {
+            "type": "Relationship",
+            "object": "urn:ngsi-ld:Tank:T1",
+            "datasetId": "urn:ngsi-ld:Dataset:TankT1"
+        },
+        {
+            "type": "Relationship",
+            "object": "urn:ngsi-ld:Pipe:P1",
+            "datasetId": "urn:ngsi-ld:Dataset:PipeP1"
+        },
+        {
+            "type": "Relationship",
+            "object": "urn:ngsi-ld:Junction:J1",
+            "datasetId": "urn:ngsi-ld:Dataset:JunctionJ1"
+        }
+    ],
+    "hasSubNetwork": [
+        {
+            "type": "Relationship",
+            "object": "urn:ngsi-ld:Network:12-70d4l-4da9",
+            "datasetId": "urn:ngsi-ld:Dataset:NetworkN1"
+        },
+        {
+            "type": "Relationship",
+            "object": "urn:ngsi-ld:Network:A14-14d4B-4vvc",
+            "datasetId": "urn:ngsi-ld:Dataset:NetworkN2"
+        }
+    ],
+    "@context": [
+        "https://schema.lab.fiware.org/ld/context"
+    ]
+}

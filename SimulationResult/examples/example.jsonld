@@ -1,0 +1,22 @@
+{
+  "id": "urn:ngsi-ld:SimulationResult:01",
+  "type": "SimulationResult",
+  "description": "Free Text",
+  "hasInputNetwork": "urn:ngsi-ld:WaterNetwork:01",
+  "refSimulationScenario": "urn:ngsi-ld:Simulation:01",
+  "outputParameters": [
+    {
+      "parameter": "waterLevel",
+      "value": 50,
+      "targetURI": "urn:ngsi-ld:Valve:V1"
+    },
+    {
+      "parameter": "initialQuality",
+      "value": 2,
+      "targetURI": "urn:ngsi-ld:Tank:T1"
+    }
+  ],
+  "@context": [
+    "https://schema.lab.fiware.org/ld/context"
+  ]
+}
