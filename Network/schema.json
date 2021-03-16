@@ -61,7 +61,6 @@
   ],
   "required": [
     "id",
-    "type",
-    "hasSubNetwork"
+    "type"
   ]
 }
