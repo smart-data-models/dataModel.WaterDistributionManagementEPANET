@@ -1,30 +1,97 @@
 {
+  "id": "urn:ngsi-ld:Tank:1863179e-3968-4493-9167-ee21f880cc02",
+  "type": "Tank",
+  "createdAt": "2020-03-13T15:42:00Z",
+  "modifiedAt": "2020-03-13T15:45:00Z",
+  "location": {
+    "type": "GeoProperty",
+    "value": {
+      "type": "Point",
+      "coordinates": [
+        24.30623,
+        60.07966
+      ]
+    }
+  },
+  "elevation": {
+    "type": "Property",
+    "value": 112.9,
+    "unitCode": "MTR"
+  },
+  "initLevel": {
+    "type": "Property",
+    "value": 3,
+    "unitCode": "MTR"
+  },
+  "minLevel": {
+    "type": "Property",
+    "value": 0,
+    "unitCode": "MTR"
+  },
+  "maxLevel": {
+    "type": "Property",
+    "value": 6.75,
+    "unitCode": "MTR"
+  },
+  "minVolume": {
+    "type": "Property",
+    "value": 0,
+    "unitCode": "MTQ"
+  },
+  "nominalDiameter": {
+    "type": "Property",
+    "value": 13.73,
+    "unitCode": "MTR"
+  },
+  "description": {
+    "type": "Property",
+    "value": "Free Text"
+  },
+  "initialQuality": {
+    "type": "Property",
+    "value": 0.5,
+    "unitCode": "M1"
+  },
+  "sourceCategory": {
+    "type": "Property",
+    "value": "category1",
+    "sourceType": {
+      "type": "Property",
+      "value": "MASS"
+    },
+    "sourceQuality": {
+      "type": "Property",
+      "value": 1.2,
+      "unitCode": "M1"
+    },
+    "sourcePattern": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
+    }
+  },
+  "mixingModel": {
+    "type": "Property",
+    "value": "MIXED"
+  },
+  "volumeCurve": {
+    "type": "Relationship",
+    "object": "urn:ngsi-ld:Curve:fAM-8ca3-4533-a2eb-12015"
+  },
+  "mixingFraction": {
+    "type": "Property",
+    "value": 0.7,
+    "unitCode": "C62"
+  },
+  "bulkReactionCoefficient": {
+    "type": "Property",
+    "value": 0.7,
+    "unitCode": "E91"
+  },
+  "tag": {
+    "type": "Property",
+    "value": "DMA1"
+  },
   "@context": [
     "https://smartdatamodels.org/context.jsonld"
-  ],
-  "bulkReactionCoefficient": 0.7,
-  "createdAt": "2020-03-13T15:42:00Z",
-  "description": "Free Text",
-  "elevation": 112.9,
-  "id": "urn:ngsi-ld:Tank:1863179e-3968-4493-9167-ee21f880cc02",
-  "initLevel": 3,
-  "initialQuality": 0.5,
-  "location": {
-    "coordinates": [
-      24.30623,
-      60.07966
-    ],
-    "type": "Point"
-  },
-  "maxLevel": 6.75,
-  "minLevel": 0,
-  "minVolume": 0,
-  "mixingFraction": 0.7,
-  "mixingModel": "MIXED",
-  "modifiedAt": "2020-03-13T15:45:00Z",
-  "nominalDiameter": 13.73,
-  "sourceCategory": "category1",
-  "tag": "DMA1",
-  "type": "Tank",
-  "volumeCurve": "urn:ngsi-ld:Curve:fAM-8ca3-4533-a2eb-12015"
+  ]
 }
