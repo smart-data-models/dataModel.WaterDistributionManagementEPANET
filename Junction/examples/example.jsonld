@@ -1,13 +1,72 @@
-{"@context": ["https://schema.lab.fiware.org/ld/context"],
- "createdAt": "2020-02-20T15:42:00Z",
- "demandCategory": "agriculture demand",
- "description": "This entity contains a harmonised description of a Junction",
- "elevation": 105.8,
- "emitterCoefficient": 0.526,
- "id": "urn:ngsi-ld:Junction:63fe7d79-0d4c-4da9-b7d0-3340efa0656a",
- "initialQuality": 0.5,
- "location": {"coordinates": [24.30623, 60.07966], "type": "Point"},
- "modifiedAt": "2020-02-20T15:45:00Z",
- "sourceCategory": "CategoryX",
- "tag": "DMA1",
- "type": "Junction"}
+{
+  "id": "urn:ngsi-ld:Junction:63fe7d79-0d4c-4da9-b7d0-3340efa0656a",
+  "type": "Junction",
+  "createdAt": "2020-02-20T15:42:00Z",
+  "modifiedAt": "2020-02-20T15:45:00Z",
+  "location": {
+    "type": "GeoProperty",
+    "value": {
+      "type": "Point",
+      "coordinates": [
+        24.30623,
+        60.07966
+      ]
+    }
+  },
+  "elevation": {
+    "type": "Property",
+    "value": 105.8,
+    "unitCode": "MTR"
+  },
+  "demandCategory": {
+    "type": "Property",
+    "value": "agriculture demand",
+    "baseDemand": {
+      "type": "Property",
+      "value": "1.763868462",
+      "unitCode": "MQS"
+    },
+    "demandPattern": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533"
+    }
+  },
+  "sourceCategory": {
+    "type": "Property",
+    "value": "CategoryX",
+    "sourceType": {
+      "type": "Property",
+      "value": "MASS"
+    },
+    "sourceQuality": {
+      "type": "Property",
+      "value": 1.2,
+      "unitCode": "M1"
+    },
+    "sourcePattern": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
+    }
+  },
+  "tag": {
+    "type": "Property",
+    "value": "DMA1"
+  },
+  "description": {
+    "type": "Property",
+    "value": "This entity contains a harmonised description of a Junction"
+  },
+  "initialQuality": {
+    "type": "Property",
+    "value": 0.5,
+    "unitCode": "M1"
+  },
+  "emitterCoefficient": {
+    "type": "Property",
+    "value": 0.526,
+    "unitCode": "S4"
+  },
+  "@context": [
+    "https://smartdatamodels.org/context.jsonld"
+  ]
+}
