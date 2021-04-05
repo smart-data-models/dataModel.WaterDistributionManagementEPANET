@@ -1,151 +1,170 @@
 {
-    "id": "urn:ngsi-ld:Tank:1863179e-3968-4493-9167-ee21f880cc02",
-    "type": "Tank",
-    "createdAt": "2020-03-13T15:42:00Z",
-    "modifiedAt": "2020-03-13T15:45:00Z",
-    "location": {
-        "type": "GeoProperty",
-        "value": {
-            "type": "Point",
-            "coordinates": [
-                24.30623,
-                60.07966
-            ]
-        }
+  "id": "urn:ngsi-ld:Tank:1863179e-3968-4493-9167-ee21f880cc02",
+  "type": "Tank",
+  "location": {
+    "type": "GeoProperty",
+    "value": {
+      "type": "Point",
+      "coordinates": [
+        24.30623,
+        60.07966
+      ]
+    }
+  },
+  "elevation": {
+    "type": "Property",
+    "value": 112.9,
+    "unitCode": "MTR"
+  },
+  "initLevel": {
+    "type": "Property",
+    "value": 3,
+    "unitCode": "MTR"
+  },
+  "minLevel": {
+    "type": "Property",
+    "value": 0,
+    "unitCode": "MTR"
+  },
+  "maxLevel": {
+    "type": "Property",
+    "value": 6.75,
+    "unitCode": "MTR"
+  },
+  "minVolume": {
+    "type": "Property",
+    "value": 0,
+    "unitCode": "MTQ"
+  },
+  "nominalDiameter": {
+    "type": "Property",
+    "value": 13.73,
+    "unitCode": "MTR"
+  },
+  "description": {
+    "type": "Property",
+    "value": "Free Text"
+  },
+  "initialQuality": {
+    "type": "Property",
+    "value": 0.5,
+    "unitCode": "M1"
+  },
+  "sourceCategory": {
+    "type": "Property",
+    "value": {
+      "type": "Property",
+      "value": "category1"
     },
-    "elevation": {
-        "type": "Property",
-        "value": 112.9,
-        "unitCode": "MTR"
+    "sourceType": {
+      "type": "Property",
+      "value": "MASS"
     },
-    "initLevel": {
-        "type": "Property",
-        "value": 3,
-        "unitCode": "MTR"
+    "sourceQuality": {
+      "type": "Property",
+      "value": 1.2,
+      "unitCode": "M1"
     },
-    "minLevel": {
-        "type": "Property",
-        "value": 0,
-        "unitCode": "MTR"
+    "sourcePattern": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
+    }
+  },
+  "mixingModel": {
+    "type": "Property",
+    "value": "MIXED"
+  },
+  "volumeCurve": {
+    "type": "Relationship",
+    "object": "urn:ngsi-ld:Curve:fAM-8ca3-4533-a2eb-12015"
+  },
+  "mixingFraction": {
+    "type": "Property",
+    "value": 0.7,
+    "unitCode": "C62"
+  },
+  "bulkReactionCoefficient": {
+    "type": "Property",
+    "value": 0.7,
+    "unitCode": "E91"
+  },
+  "tag": {
+    "type": "Property",
+    "value": "DMA1"
+  },
+  "level": {
+    "type": "Property",
+    "value": {
+      "type": "Property",
+      "value": 20,
+      "unitCode": "MTR"
     },
-    "maxLevel": {
-        "type": "Property",
-        "value": 6.75,
-        "unitCode": "MTR"
+    "observedBy": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Device:device-9845A"
+    }
+  },
+  "pressure": {
+    "type": "Property",
+    "value": {
+      "type": "Property",
+      "value": 20,
+      "unitCode": "MTR"
     },
-    "minVolume": {
-        "type": "Property",
-        "value": 0,
-        "unitCode": "MTQ"
+    "observedBy": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Device:device-9845A"
+    }
+  },
+  "supply": {
+    "type": "Property",
+    "value": {
+      "type": "Property",
+      "value": 150,
+      "unitCode": "LTR"
     },
-    "nominalDiameter": {
-        "type": "Property",
-        "value": 13.73,
-        "unitCode": "MTR"
+    "observedBy": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Device:device-9845A"
+    }
+  },
+  "head": {
+    "type": "Property",
+    "value": {
+      "type": "Property",
+      "value": 20,
+      "unitCode": "MTR"
     },
-    "description": {
-        "type": "Property",
-        "value": "Free Text"
+    "observedBy": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Device:device-9845A"
+    }
+  },
+  "quality": {
+    "type": "Property",
+    "value": {
+      "type": "Property",
+      "value": 0.5,
+      "unitCode": "M1"
     },
-    "initialQuality": {
-        "type": "Property",
-        "value": 0.5,
-        "unitCode":"M1"
+    "observedBy": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Device:device-9845A"
+    }
+  },
+  "sourceMassInflow": {
+    "type": "Property",
+    "value": {
+      "type": "Property",
+      "value": 100,
+      "unitCode": "F27"
     },
-    "sourceCategory": {
-        "type": "Property",
-        "value": "category1",
-        "sourceType": {
-            "type": "Property",
-            "value": "MASS"
-        },
-        "sourceQuality": {
-            "type": "Property",
-            "value": 1.2,
-            "unitCode": "M1"
-        },
-        "sourcePattern": {
-            "type": "Relationship",
-            "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
-        }
-    },
-    "mixingModel": {
-        "type": "Property",
-        "value": "MIXED"
-    },
-    "volumeCurve": {
-        "type": "Relationship",
-        "object": "urn:ngsi-ld:Curve:fAM-8ca3-4533-a2eb-12015"
-    },
-    "mixingFraction": {
-        "type": "Property",
-        "value": 0.7,
-        "unitCode": "C62"
-    },
-    "bulkReactionCoefficient": {
-        "type": "Property",
-        "value": 0.7,
-        "unitCode": "E91"
-    },
-    "tag": {
-        "type": "Property",
-        "value": "DMA1"
-    },
-    "level": {
-        "type": "Property",
-        "value": 20,
-        "unitCode": "MTR",
-        "observedBy": {
-            "type": "Relationship",
-            "object": "urn:ngsi-ld:Device:device-9845A"
-        }
-    },
-    "pressure": {
-        "type": "Property",
-        "value": 20,
-        "unitCode": "MTR",
-        "observedBy": {
-            "type": "Relationship",
-            "object": "urn:ngsi-ld:Device:device-9845A"
-        }
-    },
-    "supply": {
-        "type": "Property",
-        "value": 150,
-        "unitCode": "LTR",
-        "observedBy": {
-            "type": "Relationship",
-            "object": "urn:ngsi-ld:Device:device-9845A"
-        }
-    },
-    "head": {
-        "type": "Property",
-        "value": 20,
-        "unitCode": "MTR",
-        "observedBy": {
-            "type": "Relationship",
-            "object": "urn:ngsi-ld:Device:device-9845A"
-        }
-    },
-    "quality": {
-        "type": "Property",
-        "value": 0.5,
-        "unitCode": "M1",
-        "observedBy": {
-            "type": "Relationship",
-            "object": "urn:ngsi-ld:Device:device-9845A"
-        }
-    },
-    "sourceMassInflow": {
-        "type": "Property",
-        "value": 100,
-        "unitCode": "F27",
-        "observedBy": {
-            "type": "Relationship",
-            "object": "urn:ngsi-ld:Device:device-9845A"
-        }
-    },
-    "@context": [
-        "https://schema.lab.fiware.org/ld/context"
-    ]
+    "observedBy": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Device:device-9845A"
+    }
+  },
+  "@context": [
+    "https://smartdatamodels.org/context.jsonld"
+  ]
 }
