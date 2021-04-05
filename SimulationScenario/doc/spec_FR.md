@@ -1,14 +1,14 @@
-Entité : Scénario de simulation  
-===============================  
-[Licence ouverte](https://github.com/smart-data-models//dataModel.WaterNetworkManagement/blob/master/SimulationScenario/LICENSE.md)  
-Description globale : **Cette entité contient une description harmonisée d'un scénario de simulation générique réalisé pour le domaine de la gestion des réseaux d'eau. Cette entité est principalement associée à la gestion verticale des réseaux d'eau et aux applications IdO connexes.**  
+Entité : SimulationScenario  
+===========================  
+[Licence ouverte] (https://github.com/smart-data-models//dataModel.WaterDistributionManagementEPANET/blob/master/SimulationScenario/LICENSE.md)  
+Description globale : **Cette entité contient une description harmonisée d'un scénario de simulation générique réalisé pour le domaine de la gestion des réseaux d'eau. Cette entité est principalement associée à la gestion verticale des réseaux d'eau et aux applications IoT connexes**.  
 
-## Liste des biens  
+## Liste des propriétés  
 
-- `accuracy`: Critère de convergence de la variation du débit total normalisé pour déterminer quand une solution hydraulique a été atteinte.  - `address`: L'adresse postale  - `alternateName`: Un autre nom pour cet article  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `bulkOrder`: Ordre de réaction de l'eau en vrac pour les tuyaux  - `checkFrequency`: Fréquence des contrôles de l'état hydraulique  - `chemicalName`: Nom du produit chimique modélisé. Utilisé uniquement si "qualityType" est CHEM  - `chemicalUnits`: Modélisation des unités de la substance chimique. Utilisé uniquement si le "qualityType" est CHEM  - `concentrationLimit`: Limitation de la concentration pour les réactions de croissance  - `createdBy`: L'identifiant de la personne qui a créé/déclenché la simulation. La référence à une entité de type "utilisateur".  - `dampLimit`: Valeur de précision à laquelle l'amortissement de la solution et les contrôles d'état commencent pour les PRV et les PSV.  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `demandCharge`: Charge d'énergie par utilisation maximale de kW.  - `demandModel`: Précise si l'analyse est axée sur la pression (PDA) ou sur la demande (DDA). Enum : "DDA, PDA".  - `description`: Une description de cet article  - `diffusivity`: Diffusion moléculaire du produit chimique analysé dans une analyse de qualité, par rapport à la diffusivité du chlore dans l'eau.  - `duration`: Durée de la simulation, exprimée en secondes  - `emitterExponent`: Puissance à laquelle la pression à une jonction est augmentée lors du calcul à partir d'un émetteur.  - `flowChange`: Critère de convergence de la variation maximale du débit pour déterminer quand une solution hydraulique a été atteinte.  - `flowUnits`: Unités dans lesquelles les débits sont exprimés dans la simulation. Les options autorisées sont CFS (pieds cubes par seconde), GPM (gallons par minute), MGD (million de gallons par jour), IMGD (MGD impérial), AFD (acre-pieds par jour), LPS (litres avant seconde), LPM (litres par minute), MLD (million de litres par jour), CMH (mètres cubes par heure) et CMD (mètres cubes par jour). Enum : "AFD, CFS, CMD, CMH, GPM, IMGD, LPS, LPM, MLD, MGD".  - `hasInputNetwork`: L'identifiant du réseau utilisé dans la simulation  - `hasSimulationResult`: L'ID du résultat de la simulation correspondante. Référence à une entité de type "SimulationResult".  - `headError`: Critère de convergence de la perte de charge maximale pour déterminer quand une solution hydraulique a été atteinte.  - `headlossFormula`: Formule utilisée pour calculer la perte de charge pour un écoulement dans un tuyau. Les choix sont les formules de Hazen-Williams (H-W), Darcy-Weisbach (D-W) ou Chezy-Manning (C-M). Les options autorisées sont "H-W", "D-W", "C-M". Enumération : "C-M, D-W, H-W".  - `hydraulicTimeStep`: Détermine la fréquence à laquelle l'état hydraulique du réseau est calculé. Donné en secondes  - `id`: Identifiant unique de l'entité  - `inputParameter`: Description de l'ensemble des modifications à appliquer au réseau pour la simulation  - `location`:   - `maxCheck`: Nombre d'essais après lesquels les contrôles de statut sont interrompus  - `minimumPressure`: Pression en dessous de laquelle aucune demande ne peut être satisfaite selon une analyse de la pression. Utilisé uniquement si le modèle de demande est un "PDA".  - `name`: Le nom de cet article.  - `operationalControl`: Le contrôle opérationnel de l'article  - `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  - `patternStart`: Heure de début de la simulation.  - `patternStep`: Pas de modèle de la simulation.  - `pressureExponent`: Puissance à laquelle la pression est augmentée lors du calcul de la demande fournie dans le cadre d'une analyse axée sur la pression. Utilisé uniquement si le modèle de demande est un "PDA".  - `qualityTimeStep`: Le pas de temps utilisé pour suivre l'évolution de la qualité de l'eau dans le réseau. Donné en secondes  - `qualityType`: Type d'analyse de la qualité de l'eau. Enum : "chimie, âge, trace, aucune".  - `reportStart`: Moment de la simulation où les résultats commencent à être communiqués. Donné en secondes à partir du début de la simulation  - `reportStep`: Intervalle auquel les résultats de la production sont communiqués. donné en secondes  - `requiredPressure`: Pression requise pour satisfaire la demande totale d'un nœud dans le cadre d'une analyse axée sur la pression. Utilisé uniquement si le modèle de demande est un "PDA".  - `ruleTimeStep`: Pas de temps utilisé pour vérifier les changements de statut du système dus aux contrôles basés sur des règles. Donné en secondes  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur le sujet  - `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  - `specificGravity`: Le rapport entre la densité du fluide modélisé et celle de l'eau à 4 degrés. C  - `startClockTime`: Heure à laquelle la simulation commence. Indiquée en secondes à partir du début de la journée  - `statistic`: Le type de post-traitement statistique qui est effectué sur les séries chronologiques des résultats de simulation générés. Les options sont les suivantes : MOYENNE (déclarer les résultats moyens sur une période donnée), MINIMALE (déclarer uniquement les valeurs minimales), MAXIMALE (déclarer uniquement les valeurs maximales), GAMME (déclarer la différence entre les valeurs minimales et maximales) et AUCUNE (déclarer les séries chronologiques complètes). Enum : "moyenné, minimum, maximum, plage, aucun".  - `tankOrder`: Ordre de réaction à l'eau en vrac pour les réservoirs  - `tolerance`: Tolérance de la qualité de l'eau  - `traceNodeID`: URI du nœud en cours de traçage dans l'analyse de la qualité. Obligatoire si "qualityType" est TRACE, sinon pas nécessaire  - `trials`: Le nombre maximum d'essais utilisés pour résoudre l'hydraulique de réseau à chaque pas de temps hydraulique d'une simulation  - `type`: Type d'entité NGSI-LD. Il doit s'agir de SimulationScenario  - `unbalanced`: Détermine ce qui se passe si une solution hydraulique ne peut être obtenue dans le cadre du nombre d'essais autorisés. Les options autorisées sont STOP (arrêter l'analyse), CONTINUE (continuer l'analyse mais avec un message d'avertissement) et CONTINUE_N (continuer pour un autre essai N, où la valeur de N est donnée par "unbalancedN"). Enumération : "stop, continue, continue_N  - `unbalancedN`: Nombre d'essais supplémentaires autorisés si "déséquilibré" est défini comme suit : continue_N. Obligatoire si "unbalanced" est défini sur continue_N, sinon pas nécessaire.  - `viscosity`: La viscosité cinématique du fluide modélisé par rapport à celle de l'eau à 20 degrés. C  - `wallOrder`: Ordre de réaction des murs pour les tuyaux    
+- `accuracy`: Critère de convergence de la variation du débit total normalisé pour déterminer quand une solution hydraulique a été atteinte.  - `address`: L'adresse postale  - `alternateName`: Un nom alternatif pour cet élément  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `bulkOrder`: Ordre de réaction de l'eau en vrac pour les tuyaux  - `checkFrequency`: Fréquence des contrôles de l'état hydraulique  - `chemicalName`: Nom du produit chimique modélisé. Utilisé uniquement si 'qualityType' est CHEM.  - `chemicalUnits`: Unités de la substance chimique modélisée. Utilisé uniquement si 'qualityType' est CHEM.  - `concentrationLimit`: Concentration limite pour les réactions de croissance  - `createdBy`: L'ID de la personne qui a créé/déclenché la simulation. Référence à une entité de type 'User'.  - `dampLimit`: Valeur de précision à laquelle l'amortissement de la solution et les contrôles d'état commencent pour les PRV et PSV.  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `demandCharge`: Frais d'énergie par utilisation maximale de kW.  - `demandModel`: Spécifie si l'analyse est basée sur la pression (PDA) ou sur la demande (DDA). Enum : "DDA, PDA  - `description`: Une description de cet article  - `diffusivity`: Diffusivité moléculaire du produit chimique analysé dans une analyse de qualité, par rapport à la diffusivité du chlore dans l'eau.  - `duration`: Durée de la simulation, donnée en secondes  - `emitterExponent`: Puissance à laquelle la pression à une jonction est augmentée lors du calcul à partir d'un émetteur.  - `flowChange`: Critère de convergence de la variation maximale du débit pour déterminer quand une solution hydraulique a été atteinte.  - `flowUnits`: Unités dans lesquelles les débits sont exprimés dans la simulation. Les options autorisées sont CFS (pieds cubes par seconde), GPM (gallons par minute), MGD (millions de gallons par jour), IMGD (MGD impérial), AFD (acre-feet par jour), LPS (litres par seconde), LPM (litres par minute), MLD (millions de litres par jour), CMH (mètres cubes par heure) et CMD (mètres cubes par jour). Enum : 'AFD, CFS, CMD, CMH, GPM, IMGD, LPS, LPM, MLD, MGD'.  - `hasInputNetwork`: L'ID du réseau utilisé dans la simulation  - `hasSimulationResult`: L'ID du résultat de simulation associé. Référence à une entité de type "SimulationResult".  - `headError`: Critère de convergence de la perte de charge maximale pour déterminer quand une solution hydraulique a été atteinte.  - `headlossFormula`: Formule utilisée pour calculer la perte de charge pour un écoulement dans un tuyau. Les choix sont les formules Hazen-Williams (H-W), Darcy-Weisbach (D-W) ou Chezy-Manning (C-M). Les options autorisées sont 'H-W', 'D-W', 'C-M'. Enum : "C-M, D-W, H-W".  - `hydraulicTimeStep`: Détermine la fréquence à laquelle l'état hydraulique du réseau est calculé. Donnée en secondes  - `id`: Identifiant unique de l'entité  - `inputParameter`: Description de l'ensemble des modifications à appliquer au réseau pour la simulation  - `location`:   - `maxCheck`: Nombre d'essais après lesquels les contrôles d'état sont interrompus.  - `minimumPressure`: Pression en dessous de laquelle aucune demande ne peut être délivrée dans le cadre d'une analyse de la pression. Utilisé uniquement si demandModel est 'PDA'.  - `name`: Le nom de cet élément.  - `operationalControl`: Le contrôle opérationnel de l'article  - `owner`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `patternStart`: Heure de début de la simulation.  - `patternStep`: Étape du modèle de la simulation.  - `pressureExponent`: Puissance à laquelle la pression est augmentée lors du calcul de la demande fournie dans le cadre d'une analyse basée sur la pression. Utilisé uniquement si demandModel est 'PDA'.  - `qualityTimeStep`: Le pas de temps utilisé pour suivre les changements de la qualité de l'eau dans le réseau. Exprimé en secondes  - `qualityType`: Type d'analyse de la qualité de l'eau. Enum : "chem, age, trace, none" (en anglais)  - `reportStart`: Heure de la simulation à laquelle les résultats commencent à être rapportés. Indiqué en secondes à partir du début de la simulation  - `reportStep`: Intervalle auquel les résultats de sortie sont rapportés. donné en secondes  - `requiredPressure`: Pression requise pour fournir la demande totale d'un nœud dans le cadre d'une analyse axée sur la pression. Utilisé uniquement si demandModel est 'PDA'.  - `ruleTimeStep`: Pas de temps utilisé pour vérifier les changements d'état du système dus aux contrôles basés sur des règles. Exprimé en secondes  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'élément  - `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `specificGravity`: Le rapport entre la densité du fluide modélisé et celle de l'eau à 4 deg. C  - `startClockTime`: Heure de la journée à laquelle la simulation commence. Indiquée en secondes à partir du début de la journée  - `statistic`: Le type de post-traitement statistique effectué sur la série chronologique des résultats de simulation générés. Les options sont les suivantes : AVERAGED (rapporte les résultats moyennés dans le temps), MINIMUM (rapporte uniquement les valeurs minimales), MAXIMUM (rapporte uniquement les valeurs maximales), RANGE (rapporte la différence entre les valeurs minimales et maximales) et NONE (rapporte la série chronologique complète). Enum : 'averaged, minimum, maximum, range, none' (moyenne, minimum, maximum, plage, aucun)  - `tankOrder`: Ordre de réaction de l'eau en vrac pour les réservoirs  - `tolerance`: Tolérance à la qualité de l'eau  - `traceNodeID`: URI du nœud faisant l'objet d'un suivi dans l'analyse de la qualité. Obligatoire si 'qualityType' est TRACE, sinon non requis.  - `trials`: Le nombre maximum d'essais utilisés pour résoudre l'hydraulique du réseau à chaque pas de temps hydraulique d'une simulation.  - `type`: Type d'entité NGSI-LD. Il doit s'agir de SimulationScenario.  - `unbalanced`: Détermine ce qui se passe si une solution hydraulique ne peut être atteinte dans le nombre d'essais autorisé. Les options autorisées sont STOP (arrêt de l'analyse), CONTINUE (poursuite de l'analyse mais avec un message d'avertissement) et CONTINUE_N (poursuite de l'analyse pour un autre N essais, où la valeur de N est donnée par 'unbalancedN'). Enum : 'stop, continue, continue_N' (arrêter, continuer, continuer_N)  - `unbalancedN`: Nombre d'essais supplémentaires autorisés si 'unbalanced' a pour valeur continue_N. Obligatoire si 'déséquilibré' a pour valeur continue_N, sinon non requis.  - `viscosity`: La viscosité cinématique du fluide modélisé par rapport à celle de l'eau à 20 deg. C  - `wallOrder`: Ordre de réaction de la paroi pour les tuyaux    
 Propriétés requises  
-- `hasInputNetwork`  - `id`  - `type`  ## Modèle de données description des biens  
-Classement par ordre alphabétique (cliquez pour plus de détails)  
+- `hasInputNetwork`  - `id`  - `type`  ## Description des propriétés du modèle de données  
+Classés par ordre alphabétique (cliquez pour plus de détails)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 SimulationScenario:    
@@ -45,7 +45,7 @@ SimulationScenario:
           type: string    
       type: Property    
       x-ngsi:    
-        model: https://schema.org/adddress    
+        model: https://schema.org/address    
     alternateName:    
       description: 'An alternative name for this item'    
       type: Property    
@@ -602,8 +602,8 @@ SimulationScenario:
 ```  
 </details>    
 ## Exemples de charges utiles  
-#### Scénario de simulation NGSI V2 - Exemple de valeurs clés  
-Voici un exemple de scénario de simulation en format JSON comme valeurs clés. Il est compatible avec NGSI V2 lorsqu'il utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
+#### Scénario de simulation Valeurs-clés NGSI-v2 Exemple  
+Voici un exemple de SimulationScenario au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-v2 quand on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
   "id": "urn:ngsi-ld:SimulationScenario:01",  
@@ -699,8 +699,8 @@ SimulationScenario:
   ]  
 }  
 ```  
-#### Scénario de simulation NGSI V2 normalisé Exemple  
-Voici un exemple de scénario de simulation au format JSON tel que normalisé. Il est compatible avec NGSI V2 lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
+#### Scénario de simulation NGSI-v2 normalisé Exemple  
+Voici un exemple de SimulationScenario au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-v2 lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
   "id": "urn:ngsi-ld:SimulationScenario:01",  
@@ -996,8 +996,8 @@ SimulationScenario:
   ]  
 }  
 ```  
-#### Scénario de simulation Valeurs clés de l'INSG-LD Exemple  
-Voici un exemple de scénario de simulation en format JSON-LD comme valeurs clés. Il est compatible avec le format NGSI-LD lorsqu'il utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
+#### Scénario de simulation Valeurs-clés NGSI-LD Exemple  
+Voici un exemple de SimulationScenario au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-LD lorsque l'on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
   "id": "urn:ngsi-ld:SimulationScenario:01",  
@@ -1092,342 +1092,342 @@ SimulationScenario:
     }  
   ],  
   "@context": [  
-    "https://schema.lab.fiware.org/ld/context"  
+    "https://smartdatamodels.org/context.jsonld"  
   ]  
 }  
 ```  
 #### Scénario de simulation NGSI-LD normalisé Exemple  
-Voici un exemple de scénario de simulation au format JSON-LD tel que normalisé. Il est compatible avec le format JSON-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
+Voici un exemple de SimulationScenario au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
-    "id": "urn:ngsi-ld:SimulationScenario:01",  
-    "type": "SimulationScenario",  
-    "description": {  
+  "id": "urn:ngsi-ld:SimulationScenario:01",  
+  "type": "SimulationScenario",  
+  "description": {  
+    "type": "Property",  
+    "value": "Free Text"  
+  },  
+  "createdBy": {  
+    "type": "Relationship",  
+    "object": "urn:ngsi-ld:User:u1"  
+  },  
+  "hasInputNetwork": {  
+    "type": "Relationship",  
+    "object": "urn:ngsi-ld:WaterNetwork:01"  
+  },  
+  "hasSimulationResult": {  
+    "type": "Relationship",  
+    "object": "urn:ngsi-ld:SimulationResult:01"  
+  },  
+  "duration": {  
+    "type": "Property",  
+    "value": 86400,  
+    "unitCode": "SEC"  
+  },  
+  "hydraulicTimeStep": {  
+    "type": "Property",  
+    "value": 3600,  
+    "unitCode": "SEC"  
+  },  
+  "flowUnits": {  
+    "type": "Property",  
+    "value": "LPS"  
+  },  
+  "headlossFormula": {  
+    "type": "Property",  
+    "value": "H-W"  
+  },  
+  "startClockTime": {  
+    "type": "Property",  
+    "value": 0,  
+    "unitCode": "SEC"  
+  },  
+  "reportStep": {  
+    "type": "Property",  
+    "value": 3600,  
+    "unitCode": "SEC"  
+  },  
+  "reportStart": {  
+    "type": "Property",  
+    "value": 0,  
+    "unitCode": "SEC"  
+  },  
+  "ruleTimeStep": {  
+    "type": "Property",  
+    "value": 900,  
+    "unitCode": "SEC"  
+  },  
+  "statistic": {  
+    "type": "Property",  
+    "value": "NONE"  
+  },  
+  "trials": {  
+    "type": "Property",  
+    "value": 40,  
+    "unitCode": "C62"  
+  },  
+  "accuracy": {  
+    "type": "Property",  
+    "value": 0.001,  
+    "unitCode": "C62"  
+  },  
+  "tolerance": {  
+    "type": "Property",  
+    "value": 0.01,  
+    "unitCode": "C62"  
+  },  
+  "emitterExponent": {  
+    "type": "Property",  
+    "value": 0.5,  
+    "unitCode": "C62"  
+  },  
+  "headError": {  
+    "type": "Property",  
+    "value": 0,  
+    "unitCode": "MTR"  
+  },  
+  "flowChange": {  
+    "type": "Property",  
+    "value": 0.01,  
+    "unitCode": "MQS"  
+  },  
+  "demandCharge": {  
+    "type": "Property",  
+    "value": 2  
+  },  
+  "demandModel": {  
+    "type": "Property",  
+    "value": "PDA"  
+  },  
+  "minimumPressure": {  
+    "type": "Property",  
+    "value": 0,  
+    "unitCode": "MTR"  
+  },  
+  "requiredPressure": {  
+    "type": "Property",  
+    "value": 20,  
+    "unitCode": "MTR"  
+  },  
+  "pressureExponent": {  
+    "type": "Property",  
+    "value": 0.5,  
+    "unitCode": "C62"  
+  },  
+  "viscosity": {  
+    "type": "Property",  
+    "value": 1,  
+    "unitCode": "C62"  
+  },  
+  "unbalanced": {  
+    "type": "Property",  
+    "value": "CONTINUE_N"  
+  },  
+  "unbalancedN": {  
+    "type": "Property",  
+    "value": 20,  
+    "unitCode": "C62"  
+  },  
+  "checkFrequency": {  
+    "type": "Property",  
+    "value": 2,  
+    "unitCode": "C62"  
+  },  
+  "maxCheck": {  
+    "type": "Property",  
+    "value": 10,  
+    "unitCode": "C62"  
+  },  
+  "dampLimit": {  
+    "type": "Property",  
+    "value": 0,  
+    "unitCode": "C62"  
+  },  
+  "diffusivity": {  
+    "type": "Property",  
+    "value": 1,  
+    "unitCode": "C62"  
+  },  
+  "bulkOrder": {  
+    "type": "Property",  
+    "value": 1,  
+    "unitCode": "C62"  
+  },  
+  "wallOrder": {  
+    "type": "Property",  
+    "value": 1,  
+    "unitCode": "C62"  
+  },  
+  "tankOrder": {  
+    "type": "Property",  
+    "value": 1,  
+    "unitCode": "C62"  
+  },  
+  "concentrationLimit": {  
+    "type": "Property",  
+    "value": 0,  
+    "unitCode": "C62"  
+  },  
+  "qualityType": {  
+    "type": "Property",  
+    "value": "CHEM"  
+  },  
+  "chemicalName": {  
+    "type": "Property",  
+    "value": "Chlorine"  
+  },  
+  "chemicalUnits": {  
+    "type": "Property",  
+    "value": "mg/l"  
+  },  
+  "specificGravity": {  
+    "type": "Property",  
+    "value": 1,  
+    "unitCode": "C62"  
+  },  
+  "qualityTimeStep": {  
+    "type": "Property",  
+    "value": 60,  
+    "unitCode": "SEC"  
+  },  
+  "operationalControl": [  
+    {  
+      "type": "Property",  
+      "value": "Operational Control 1",  
+      "setting": {  
         "type": "Property",  
-        "value": "Free Text"  
-    },  
-    "createdBy": {  
+        "value": 0  
+      },  
+      "triggerLevel": {  
+        "type": "Property",  
+        "value": 30  
+      },  
+      "controlType": {  
+        "type": "Property",  
+        "value": "HILEVEL"  
+      },  
+      "controlledLink": {  
         "type": "Relationship",  
-        "object": "urn:ngsi-ld:User:u1"  
-    },  
-    "hasInputNetwork": {  
+        "object": "urn:ngsi-ld:Tank:T1",  
+        "datasetId": "urn:ngsi-ld:Dataset:Control01:Node01"  
+      },  
+      "monitoredNode": {  
         "type": "Relationship",  
-        "object": "urn:ngsi-ld:WaterNetwork:01"  
+        "object": "urn:ngsi-ld:Pump:P1",  
+        "datasetId": "urn:ngsi-ld:Dataset:Control01:Link01"  
+      },  
+      "datasetId": "urn:ngsi-ld:Dataset:HiLevel"  
     },  
-    "hasSimulationResult": {  
+    {  
+      "type": "Property",  
+      "value": "Operational Control 2",  
+      "triggerLevel": {  
+        "type": "Property",  
+        "value": 10  
+      },  
+      "setting": {  
+        "type": "Property",  
+        "value": 1  
+      },  
+      "controlType": {  
+        "type": "Property",  
+        "value": "LOWLEVEL"  
+      },  
+      "monitoredNode": {  
         "type": "Relationship",  
-        "object": "urn:ngsi-ld:SimulationResult:01"  
-    },  
-    "duration": {  
+        "object": "urn:ngsi-ld:Tank:T1"  
+      },  
+      "controlledLink": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:Pump:P1"  
+      },  
+      "datasetId": "urn:ngsi-ld:Dataset:LowLevel"  
+    }  
+  ],  
+  "inputParameters": [  
+    {  
+      "type": "Property",  
+      "value": "Property 1",  
+      "setting": {  
         "type": "Property",  
-        "value": 86400,  
-        "unitCode": "SEC"  
+        "value": 50,  
+        "targetURI": {  
+          "type": "Property",  
+          "value": "urn:ngsi-ld:Valve:V1"  
+        }  
+      },  
+      "datasetId": "urn:ngsi-ld:Dataset:ValveSetting"  
     },  
-    "hydraulicTimeStep": {  
-        "type": "Property",  
-        "value": 3600,  
-        "unitCode": "SEC"  
-    },  
-    "flowUnits": {  
-        "type": "Property",  
-        "value": "LPS"  
-    },  
-    "headlossFormula": {  
-        "type": "Property",  
-        "value": "H-W"  
-    },  
-    "startClockTime": {  
-        "type": "Property",  
-        "value": 0,  
-        "unitCode": "SEC"  
-    },  
-    "reportStep": {  
-        "type": "Property",  
-        "value": 3600,  
-        "unitCode": "SEC"  
-    },  
-    "reportStart": {  
-        "type": "Property",  
-        "value": 0,  
-        "unitCode": "SEC"  
-    },  
-    "ruleTimeStep": {  
-        "type": "Property",  
-        "value": 900,  
-        "unitCode": "SEC"  
-    },  
-    "statistic": {  
-        "type": "Property",  
-        "value": "NONE"  
-    },  
-    "trials": {  
-        "type": "Property",  
-        "value": 40,  
-        "unitCode": "C62"  
-    },  
-    "accuracy": {  
-        "type": "Property",  
-        "value": 0.001,  
-        "unitCode": "C62"  
-    },  
-    "tolerance": {  
-        "type": "Property",  
-        "value": 0.01,  
-        "unitCode": "C62"  
-    },  
-    "emitterExponent": {  
-        "type": "Property",  
-        "value": 0.5,  
-        "unitCode": "C62"  
-    },  
-    "headError": {  
-        "type": "Property",  
-        "value": 0,  
-        "unitCode": "MTR"  
-    },  
-    "flowChange": {  
-        "type": "Property",  
-        "value": 0.01,  
-        "unitCode": "MQS"  
-    },  
-    "demandCharge": {  
-        "type": "Property",  
-        "value": 2  
-    },  
-    "demandModel": {  
-        "type": "Property",  
-        "value": "PDA"  
-    },  
-   "minimumPressure": {  
-        "type": "Property",  
-        "value": 0,  
-        "unitCode": "MTR"  
-    },  
-    "requiredPressure": {  
-        "type": "Property",  
-        "value": 20,  
-        "unitCode": "MTR"  
-    },  
-    "pressureExponent": {  
-        "type": "Property",  
-        "value": 0.5,  
-        "unitCode": "C62"  
-    },  
-    "viscosity": {  
-        "type": "Property",  
-        "value": 1,  
-        "unitCode": "C62"  
-    },  
-    "unbalanced": {  
-        "type": "Property",  
-        "value": "CONTINUE_N"  
-    },  
-    "unbalancedN": {  
-        "type": "Property",  
-        "value": 20,  
-        "unitCode": "C62"  
-    },  
-    "checkFrequency": {  
+    {  
+      "type": "Property",  
+      "value": "Property 2",  
+      "initialQuality": {  
         "type": "Property",  
         "value": 2,  
-        "unitCode": "C62"  
-    },  
-    "maxCheck": {  
-        "type": "Property",  
-        "value": 10,  
-        "unitCode": "C62"  
-    },  
-    "dampLimit": {  
-        "type": "Property",  
-        "value": 0,  
-        "unitCode": "C62"  
-    },  
-    "diffusivity": {  
-        "type": "Property",  
-        "value": 1,  
-        "unitCode": "C62"  
-    },  
-    "bulkOrder": {  
-        "type": "Property",  
-        "value": 1,  
-        "unitCode": "C62"  
-    },  
-    "wallOrder": {  
-        "type": "Property",  
-        "value": 1,  
-        "unitCode": "C62"  
-    },  
-    "tankOrder": {  
-        "type": "Property",  
-        "value": 1,  
-        "unitCode": "C62"  
-    },  
-    "concentrationLimit": {  
-        "type": "Property",  
-        "value": 0,  
-        "unitCode": "C62"  
-    },  
-    "qualityType": {  
-        "type": "Property",  
-        "value": "CHEM"  
-    },  
-    "chemicalName": {  
-        "type": "Property",  
-        "value": "Chlorine"  
-    },  
-    "chemicalUnits": {  
-        "type": "Property",  
-        "value": "mg/l"  
-    },  
-    "specificGravity": {  
-        "type": "Property",  
-        "value": 1,  
-        "unitCode": "C62"  
-    },  
-    "qualityTimeStep": {  
-        "type": "Property",  
-        "value": 60,  
-        "unitCode": "SEC"  
-    },  
-    "operationalControl": [  
-        {  
-            "type": "Property",  
-            "value": "Operational Control 1",  
-            "setting": {  
-                "type": "Property",  
-                "value": 0  
-            },  
-            "triggerLevel": {  
-                "type": "Property",  
-                "value": 30  
-            },  
-            "controlType": {  
-                "type": "Property",  
-                "value": "HILEVEL"  
-            },  
-            "controlledLink": {  
-                "type": "Relationship",  
-                "object": "urn:ngsi-ld:Tank:T1",  
-                "datasetId": "urn:ngsi-ld:Dataset:Control01:Node01"  
-            },  
-            "monitoredNode": {  
-                "type": "Relationship",  
-                "object": "urn:ngsi-ld:Pump:P1",  
-                "datasetId": "urn:ngsi-ld:Dataset:Control01:Link01"  
-            },  
-            "datasetId": "urn:ngsi-ld:Dataset:HiLevel"  
-        },  
-        {  
-            "type": "Property",  
-            "value": "Operational Control 2",  
-            "triggerLevel": {  
-                "type": "Property",  
-                "value": 10  
-            },  
-            "setting": {  
-                "type": "Property",  
-                "value": 1  
-            },  
-            "controlType": {  
-                "type": "Property",  
-                "value": "LOWLEVEL"  
-            },  
-            "monitoredNode": {  
-                "type": "Relationship",  
-                "object": "urn:ngsi-ld:Tank:T1"  
-            },  
-            "controlledLink": {  
-                "type": "Relationship",  
-                "object": "urn:ngsi-ld:Pump:P1"  
-            },  
-            "datasetId": "urn:ngsi-ld:Dataset:LowLevel"  
+        "targetURI": {  
+          "type": "Relationship",  
+          "value": "urn:ngsi-ld:Tank:T1"  
         }  
-    ],  
-    "inputParameters": [  
-        {  
-            "type": "Property",  
-            "value": "Property 1",  
-            "setting": {  
-                "type": "Property",  
-                "value": 50,  
-                "targetURI": {  
-                    "type": "Property",  
-                    "value": "urn:ngsi-ld:Valve:V1"  
-                }  
-            },  
-            "datasetId": "urn:ngsi-ld:Dataset:ValveSetting"  
-        },  
-        {  
-            "type": "Property",  
-            "value": "Property 2",  
-            "initialQuality": {  
-                "type": "Property",  
-                "value": 2,  
-                "targetURI": {  
-                    "type": "Relationship",  
-                    "value": "urn:ngsi-ld:Tank:T1"  
-                }  
-            },  
-            "datasetId": "urn:ngsi-ld:Dataset:TankInitialQuality"  
-        },  
-        {  
-            "type": "Property",  
-            "value": "Property 1",  
-            "efficCurve": {  
-                "type": "Relationship",  
-                "object": "urn:ngsi-ld:Curve:C1",  
-                "targetURI": {  
-                    "type": "Relationship",  
-                    "object": "urn:ngsi-ld:Pump:P1"  
-                }  
-            },  
-            "datasetId": "urn:ngsi-ld:Dataset:PumpCurve"  
-        },  
-        {  
-            "type": "Property",  
-            "value": "demand Category 1",  
-            "demandCategory": {  
-                "type": "Property",  
-                "value": "agriculture demand",  
-                "baseDemand": {  
-                    "type": "Property",  
-                    "value": 1.1  
-                },  
-                "demandPattern": {  
-                    "type": "Relationship",  
-                    "value": "urn:ngsi-ld:Pattern:Agriculture"  
-                },  
-                "targetURI": {  
-                    "type": "Relationship",  
-                    "object": "urn:ngsi-ld:Junction:J1"  
-                }  
-            },  
-            "datasetId": "urn:ngsi-ld:Dataset:Demand1"  
-        },  
-        {  
-            "type": "Property",  
-            "value": "demand Category 2",  
-            "demandCategory": {  
-                "type": "Property",  
-                "value": "residential demand",  
-                "baseDemand": {  
-                    "type": "Property",  
-                    "value": 1.7  
-                },  
-                "demandPattern": {  
-                    "type": "Relationship",  
-                    "value": "urn:ngsi-ld:Pattern:Residential"  
-                },  
-                "targetURI": {  
-                    "type": "Relationship",  
-                    "object": "urn:ngsi-ld:Junction:J1"  
-                }  
-            },  
-            "datasetId": "urn:ngsi-ld:Dataset:Demand2"  
+      },  
+      "datasetId": "urn:ngsi-ld:Dataset:TankInitialQuality"  
+    },  
+    {  
+      "type": "Property",  
+      "value": "Property 1",  
+      "efficCurve": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:Curve:C1",  
+        "targetURI": {  
+          "type": "Relationship",  
+          "object": "urn:ngsi-ld:Pump:P1"  
         }  
-    ],  
-    "@context": [  
-        "https://schema.lab.fiware.org/ld/context"  
-    ]  
+      },  
+      "datasetId": "urn:ngsi-ld:Dataset:PumpCurve"  
+    },  
+    {  
+      "type": "Property",  
+      "value": "demand Category 1",  
+      "demandCategory": {  
+        "type": "Property",  
+        "value": "agriculture demand",  
+        "baseDemand": {  
+          "type": "Property",  
+          "value": 1.1  
+        },  
+        "demandPattern": {  
+          "type": "Relationship",  
+          "value": "urn:ngsi-ld:Pattern:Agriculture"  
+        },  
+        "targetURI": {  
+          "type": "Relationship",  
+          "object": "urn:ngsi-ld:Junction:J1"  
+        }  
+      },  
+      "datasetId": "urn:ngsi-ld:Dataset:Demand1"  
+    },  
+    {  
+      "type": "Property",  
+      "value": "demand Category 2",  
+      "demandCategory": {  
+        "type": "Property",  
+        "value": "residential demand",  
+        "baseDemand": {  
+          "type": "Property",  
+          "value": 1.7  
+        },  
+        "demandPattern": {  
+          "type": "Relationship",  
+          "value": "urn:ngsi-ld:Pattern:Residential"  
+        },  
+        "targetURI": {  
+          "type": "Relationship",  
+          "object": "urn:ngsi-ld:Junction:J1"  
+        }  
+      },  
+      "datasetId": "urn:ngsi-ld:Dataset:Demand2"  
+    }  
+  ],  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld"  
+  ]  
 }  
 ```  
