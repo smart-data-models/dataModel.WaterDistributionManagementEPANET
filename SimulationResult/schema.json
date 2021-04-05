@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$id": "https://smart-data-models.github.io/dataModel.WaterNetworkManagementEPANET/Result/schema.json",
+  "$id": "https://smart-data-models.github.io/dataModel.WaterDistributionManagementEPANET/Result/schema.json",
   "title": "WaterNetwork - SimulationResult",
   "description": "This entity contains a harmonised description of a generic simulation result made for the Water Network Management domain. This entity is primarily associated with the water network management vertical and related IoT applications.",
   "type": "object",
@@ -12,7 +12,7 @@
       "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
     },
     {
-      "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagementEPANET/master/WaterNetworkManagement-schema.json"
+      "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/WaterNetworkManagement-schema.json"
     },
     {
       "properties": {

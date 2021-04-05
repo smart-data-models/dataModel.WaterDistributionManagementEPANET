@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/schema#",
   "schemaVersion": "0.0",
-  "$id": "https://smart-data-models.github.io/dataModel.WaterNetworkManagementEPANET/Pipe/schema.json",
+  "$id": "https://smart-data-models.github.io/dataModel.WaterDistributionManagementEPANET/Pipe/schema.json",
   "title": "Smart Data Models. WaterNetworkManagementEPANET - Pipe",
   "description": "This entity contains a harmonised description of a generic pipe made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.",
   "type": "object",
@@ -22,10 +22,10 @@
           "description": "Property. NGSI-LD Entity Type. It has to be Pipe"
         },
         "tag": {
-          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/tag"
+          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/tag"
         },
         "initialStatus": {
-          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/initialStatus"
+          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/initialStatus"
         },
         "length": {
           "type": "number",
@@ -44,7 +44,7 @@
           "description": "Property. Model:'https://schema.org/Number'. Units:'No unit'. Unitless minor loss coefficient associated with bends, fittings, etc"
         },
         "status": {
-          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/status"
+          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/status"
         },
         "startsAt": {
           "type": "string",
@@ -76,13 +76,13 @@
           "description": "Geoproperty. Coordinates of all vertices in the pipe, ordered from the startsAt node to the endsAt node and encoded as a GeoJSON "
         },
         "flow": {
-          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/flow"
+          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/flow"
         },
         "velocity": {
-          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/velocity"
+          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/velocity"
         },
         "quality": {
-          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/quality"
+          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/quality"
         }
       }
     }

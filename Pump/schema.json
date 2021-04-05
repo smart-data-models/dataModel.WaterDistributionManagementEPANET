@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/schema#",
   "schemaVersion": "0.0",
-  "$id": "https://smart-data-models.github.io/dataModel.WaterNetworkManagementEPANET/Pump/schema.json",
+  "$id": "https://smart-data-models.github.io/dataModel.WaterDistributionManagementEPANET/Pump/schema.json",
   "title": "Smart Data Models. WaterNetworkManagementEPANET - Pump",
   "description": "This entity contains a harmonised description of a generic pump made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.",
   "type": "object",
@@ -22,13 +22,13 @@
           "description": "Property. NGSI-LD Entity Type. It must be equal to Pump."
         },
         "tag": {
-          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/tag"
+          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/tag"
         },
         "status": {
-          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/status"
+          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/status"
         },
         "initialStatus": {
-          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/initialStatus"
+          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/initialStatus"
         },
         "power": {
           "type": "number",
@@ -84,16 +84,16 @@
           "description": "Relationship. The ID label of the time pattern used to describe the variation in energy price throughout the day."
         },
         "flow": {
-          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/flow"
+          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/flow"
         },
         "velocity": {
-          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/velocity"
+          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/velocity"
         },
         "quality": {
-          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/quality"
+          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/quality"
         },
         "energyUse": {
-          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/energyUse"
+          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/energyUse"
         }
       }
     }

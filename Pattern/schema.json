@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/schema#",
   "schemaVersion": "0.0",
-  "$id": "https://smart-data-models.github.io/dataModel.WaterNetworkMaqnagementEPANET/Pattern/schema.json",
+  "$id": "https://smart-data-models.github.io/dataModel.WaterDistributionManagementEPANET/Pattern/schema.json",
   "title": "WaterNetwork - Pattern",
   "description": "This entity contains a harmonised description of a generic pattern made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.",
   "type": "object",
@@ -19,7 +19,7 @@
           "description": "Property. NGSI-LD Entity Type. It has to be Pattern"
         },
         "tag": {
-          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/tag"
+          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/tag"
         },
         "multipliers": {
           "type": "array",
