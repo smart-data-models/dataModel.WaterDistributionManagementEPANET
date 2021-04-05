@@ -1,106 +1,86 @@
 {
-    "id": "63fe7d79-0d4c-4da9-b7d0-3340efa0656a",
-    "type": "Junction",
-    "location": {
-        "type": "geo:json",
-        "value": {
-            "type": "Point",
-            "coordinates": [
-                24.30623,
-                60.07966
-            ]
-        }
-    },
-    "elevation": {
-        "value": 105.8
-    },
-    "demandCategory": {
-        "value": {
-            "value": "agriculture demand",
-            "baseDemand": {
-                "value": "1.763868462"
-            },
-            "demandPattern": {
-                "type": "Relationship",
-                "value": "fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
-            }
-        }
-    },
-    "sourceCategory": {
-        "value": {
-            "value": "CategoryX",
-            "sourceType": {
-                "value": "MASS"
-            },
-            "sourceQuality": {
-                "value": 1.2
-            },
-            "sourcePattern": {
-                "type": "Relationship",
-                "value": "fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
-            }
-        }
-    },
-    "tag": {
-        "value": "DMA1"
-    },
-    "description": {
-        "value": "This entity contains a harmonised description of a Junction"
-    },
-    "initialQuality": {
-        "value": 0.5
-    },
-    "emitterCoefficient": {
-        "value": 0.526
-    },
-    "pressure": {
-        "value": {
-            "value": 20,
-            "unitCode": "MTR",
-            "observedBy": {
-                "type": "Relationship",
-                "value": "device-9845A"
-            }
-        }
-    },
-    "supply": {
-        "value": {
-            "value": 150,
-            "unitCode": "LTR",
-            "observedBy": {
-                "type": "Relationship",
-                "value": "device-9845A"
-            }
-        }
-    },
-    "head": {
-        "value": {
-            "value": 20,
-            "unitCode": "MTR",
-            "observedBy": {
-                "type": "Relationship",
-                "value": "device-9845A"
-            }
-        }
-    },
-    "quality": {
-        "value": {
-            "value": 0.5,
-            "unitCode": "M1",
-            "observedBy": {
-                "type": "Relationship",
-                "value": "device-9845A"
-            }
-        }
-    },
-    "sourceMassInflow": {
-        "value": {
-            "value": 100,
-            "unitCode": "F27",
-            "observedBy": {
-                "type": "Relationship",
-                "value": "device-9845A"
-            }
-        }
+  "id": "63fe7d79-0d4c-4da9-b7d0-3340efa0656a",
+  "type": "Junction",
+  "location": {
+    "type": "geo:json",
+    "value": {
+      "type": "Point",
+      "coordinates": [
+        24.30623,
+        60.07966
+      ]
     }
+  },
+  "elevation": {
+    "type": "number",
+    "value": 105.8
+  },
+  "demandCategory": {
+    "type": "object",
+    "value": {
+      "baseDemand": "agriculture demand",
+      "value": "1.763868462",
+      "demandPattern": "fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
+    }
+  },
+  "sourceCategory": {
+    "type": "object",
+    "value": {
+      "value": "CategoryX",
+      "sourceType": "MASS",
+      "sourceQuality": 1.2,
+      "sourcePattern": "fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
+    }
+  },
+  "tag": {
+    "type": "text",
+    "value": "DMA1"
+  },
+  "description": {
+    "type": "text",
+    "value": "This entity contains a harmonised description of a Junction"
+  },
+  "initialQuality": {
+    "type": "number",
+    "value": 0.5
+  },
+  "emitterCoefficient": {
+    "type": "number",
+    "value": 0.526
+  },
+  "pressure": {
+    "type": "object",
+    "value": {
+      "value": 20,
+      "observedBy": "device-9845A"
+    }
+  },
+  "supply": {
+    "type": "object",
+    "value": {
+      "value": 150,
+      "observedBy": "device-9845A"
+    }
+  },
+  "head": {
+    "type": "object",
+    "value": {
+      "value": 20,
+      "observedBy": "device-9845A"
+    }
+  },
+  "quality": {
+    "type": "object",
+    "value": {
+      "value": 0.5,
+      "observedBy": "device-9845A"
+    }
+  },
+  "sourceMassInflow": {
+    "type": "object",
+    "value": {
+      "value": 100,
+      "observedBy": "device-9845A"
+    }
+  }
 }
