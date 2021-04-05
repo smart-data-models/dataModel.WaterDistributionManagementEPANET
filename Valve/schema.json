@@ -1,103 +1,101 @@
 {
-    "$schema": "http://json-schema.org/schema#",
-    "schemaVersion": "0.0",
-    "$id": "https://smart-data-models.github.io/data-models/specs/WaterNetwork/Valve/schema.json",
-    "title": "WaterNetwork - Valve",
-    "description": "This entity contains a harmonised description of a generic Valve made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.",
-    "type": "object",
-    "allOf": [
-        {
-            "properties": {
-                "type": {
-                    "type": "string",
-                    "enum": [
-                        "Valve"
-                    ],
-                    "description": "Property. NGSI-LD Entity Type. It must be equal to Valve."
-                },
-                "tag": {
-                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/tag"
-                },
-                "description": {
-                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/description"
-                },
-                "status": {
-                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/status"
-                },
-                "initialStatus": {
-                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/initialStatus"
-                },
-                "diameter": {
-                    "type": "number",
-                    "description": "Property.  Model:'https://schema.org/Number'. Units:'millimetre'. The valve diameter. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code."
-                },
-                "valveType": {
-                    "type": "string",
-                    "enum": [
-                        "PRV",
-                        "PSV",
-                        "PBV",
-                        "FCV",
-                        "TCV",
-                        "GPV"
-                    ],
-                    "description": "Property. Model:'https://schema.org/Text'. The valve type of the element"
-                },
-                "setting": {
-                    "type": "number",
-                    "description": "Property. Model:'https://schema.org/Number'. Units:'No unit'. A parameter that describes the valve's operational setting. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code."
-                },
-                "minorLoss": {
-                    "type": "number",
-                    "description": "Property. Model:'https://schema.org/Number'. Units:'No unit'. Unitless minor loss coefficient that applies when the valve is completely opened. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code."
-                },
-                "startsAt": {
-                    "type": "string",
-                    "format": "uri",
-                    "description": "Relationship. The ID of the node on the nominal upstream or inflow side of the valve"
-                },
-                "endsAt": {
-                    "type": "string",
-                    "format": "uri",
-                    "description": "Relationship. The ID of the node on the nominal downstream or discharge side of the valve"
-                },
-                "valveCurve": {
-                    "type": "string",
-                    "format": "uri",
-                    "description": "Relationship. A relationship to the curve of the setting property. Only required when valveType is GPV"
-                },
-                "vertices": {
-                    "oneOf": [
-                        {
-                            "$ref": "http://geojson.org/schema/MultiPoint.json"
-                        },
-                        {
-                            "$ref": "http://geojson.org/schema/Point.json"
-                        }
-                    ],
-                    "description": "Geoproperty. Coordinates of all vertices in the valve, ordered from the startsAt node to the endsAt node and encoded as a GeoJSON "
-                },                  
-                "flow": {
-                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/flow"
-                },
-                "velocity": {
-                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/velocity"
-                },
-                "quality": {
-                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/quality"
-                }
+  "$schema": "http://json-schema.org/schema#",
+  "schemaVersion": "0.0",
+  "$id": "https://smart-data-models.github.io/data-models/specs/WaterNetwork/Valve/schema.json",
+  "title": "Smart Data Models WaterNetworkManagementEPANET - Valve",
+  "description": "This entity contains a harmonised description of a generic Valve made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+    },
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+    },
+    {
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "Valve"
+          ],
+          "description": "Property. NGSI-LD Entity Type. It must be equal to Valve."
+        },
+        "tag": {
+          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/tag"
+        },
+        "status": {
+          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/status"
+        },
+        "initialStatus": {
+          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/initialStatus"
+        },
+        "diameter": {
+          "type": "number",
+          "description": "Property.  Model:'https://schema.org/Number'. Units:'millimetre'. The valve diameter. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code."
+        },
+        "valveType": {
+          "type": "string",
+          "enum": [
+            "FCV",
+            "GPV",
+            "PBV",
+            "PRV",
+            "PSV",
+            "TCV"
+          ],
+          "description": "Property. Model:'https://schema.org/Text'. The valve type of the element. enum:'FCV, GPV, PBV, PRV, PSV, TCV'"
+        },
+        "setting": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Units:'No unit'. A parameter that describes the valve's operational setting. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code."
+        },
+        "minorLoss": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Units:'No unit'. Unitless minor loss coefficient that applies when the valve is completely opened. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code."
+        },
+        "startsAt": {
+          "type": "string",
+          "format": "uri",
+          "description": "Relationship. The ID of the node on the nominal upstream or inflow side of the valve"
+        },
+        "endsAt": {
+          "type": "string",
+          "format": "uri",
+          "description": "Relationship. The ID of the node on the nominal downstream or discharge side of the valve"
+        },
+        "valveCurve": {
+          "type": "string",
+          "format": "uri",
+          "description": "Relationship. A relationship to the curve of the setting property. Only required when valveType is GPV"
+        },
+        "vertices": {
+          "oneOf": [
+            {
+              "$ref": "http://geojson.org/schema/MultiPoint.json"
+            },
+            {
+              "$ref": "http://geojson.org/schema/Point.json"
             }
+          ],
+          "description": "Geoproperty. Coordinates of all vertices in the valve, ordered from the startsAt node to the endsAt node and encoded as a GeoJSON "
+        },
+        "flow": {
+          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/flow"
+        },
+        "velocity": {
+          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/velocity"
+        },
+        "quality": {
+          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/quality"
         }
-    ],
-    "required": [
-        "id",
-        "type",
-        "initialStatus",
-        "diameter",
-        "valveType",
-        "setting",
-        "minorLoss",
-        "startsAt",
-        "endsAt"
-    ]
+      }
+    }
+  ],
+  "required": [
+    "id",
+    "type",
+    "startsAt",
+    "endsAt"
+  ]
 }
