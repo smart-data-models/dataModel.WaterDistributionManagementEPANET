@@ -1,14 +1,14 @@
 Entité : SimulationResult  
 =========================  
-[Licence ouverte](https://github.com/smart-data-models//dataModel.WaterNetworkManagement/blob/master/SimulationResult/LICENSE.md)  
-Description globale : **Cette entité contient une description harmonisée d'un résultat de simulation générique réalisé pour le domaine de la gestion des réseaux d'eau. Cette entité est principalement associée à la gestion verticale des réseaux d'eau et aux applications IdO connexes.**  
+[Licence ouverte] (https://github.com/smart-data-models//dataModel.WaterDistributionManagementEPANET/blob/master/SimulationResult/LICENSE.md)  
+Description globale : **Cette entité contient une description harmonisée d'un résultat de simulation générique réalisée pour le domaine de la gestion des réseaux d'eau. Cette entité est principalement associée à la gestion verticale des réseaux d'eau et aux applications IoT connexes**.  
 
-## Liste des biens  
+## Liste des propriétés  
 
-- `address`: L'adresse postale  - `alternateName`: Un autre nom pour cet article  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `description`: Une description de cet article  - `hasInputNetwork`: L'identifiant du réseau utilisé dans la simulation  - `id`: Identifiant unique de l'entité  - `location`:   - `name`: Le nom de cet article.  - `outputParameters`: Description de l'ensemble des résultats de la simulation appliquée au réseau.  - `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  - `refSimulationScenario`: L'ID du scénario de simulation  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur le sujet  - `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  - `type`: Type d'entité NGSI-LD. Il doit s'agir de SimulationResult    
+- `address`: L'adresse postale  - `alternateName`: Un nom alternatif pour cet élément  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `description`: Une description de cet article  - `hasInputNetwork`: L'ID du réseau utilisé dans la simulation  - `id`: Identifiant unique de l'entité  - `location`:   - `name`: Le nom de cet élément.  - `outputParameters`: Description de l'ensemble des résultats de la simulation appliquée au réseau.  - `owner`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `refSimulationScenario`: L'ID du scénario de simulation  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'élément  - `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `type`: Type d'entité NGSI-LD. Il doit être SimulationResult    
 Propriétés requises  
-- `id`  - `refSimulationScenario`  - `type`  ## Modèle de données description des biens  
-Classement par ordre alphabétique (cliquez pour plus de détails)  
+- `id`  - `refSimulationScenario`  - `type`  ## Description des propriétés du modèle de données  
+Classés par ordre alphabétique (cliquez pour plus de détails)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 SimulationResult:    
@@ -40,7 +40,7 @@ SimulationResult:
           type: string    
       type: Property    
       x-ngsi:    
-        model: https://schema.org/adddress    
+        model: https://schema.org/address    
     alternateName:    
       description: 'An alternative name for this item'    
       type: Property    
@@ -316,8 +316,8 @@ SimulationResult:
 ```  
 </details>    
 ## Exemples de charges utiles  
-#### SimulationResult NGSI V2 key-values Exemple  
-Voici un exemple de résultat de simulation au format JSON comme valeurs clés. Il est compatible avec NGSI V2 lorsque l'on utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
+#### SimulationResultat Valeurs-clés NGSI-v2 Exemple  
+Voici un exemple de SimulationResult au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-v2 quand on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
   "id": "urn:ngsi-ld:SimulationResult:01",  
@@ -339,8 +339,8 @@ SimulationResult:
   ]  
 }  
 ```  
-#### SimulationResult NGSI V2 normalisé Exemple  
-Voici un exemple de résultat de simulation au format JSON tel que normalisé. Ce format est compatible avec la version 2 du NGSI lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
+#### Résultat de la simulation NGSI-v2 normalisé Exemple  
+Voici un exemple de SimulationResult au format JSON-LD tel que normalisé. Ce format est compatible avec la NGSI-v2 lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
   "id": "urn:ngsi-ld:SimulationResult:01",  
@@ -385,8 +385,8 @@ SimulationResult:
   ]  
 }  
 ```  
-#### SimulationResult NGSI-LD key-values Exemple  
-Voici un exemple de résultat de simulation au format JSON-LD en tant que valeurs clés. Il est compatible avec le format NGSI-LD lorsqu'il utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
+#### SimulationResultat Valeurs-clés NGSI-LD Exemple  
+Voici un exemple de SimulationResult au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-LD quand on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
   "id": "urn:ngsi-ld:SimulationResult:01",  
@@ -407,58 +407,58 @@ SimulationResult:
     }  
   ],  
   "@context": [  
-    "https://schema.lab.fiware.org/ld/context"  
+    "https://smartdatamodels.org/context.jsonld"  
   ]  
 }  
 ```  
-#### SimulationResult NGSI-LD normalisé Exemple  
-Voici un exemple de résultat de simulation au format JSON-LD tel que normalisé. Il est compatible avec le format NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
+#### Résultat de la simulation NGSI-LD normalisé Exemple  
+Voici un exemple de SimulationResult au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
-    "id": "urn:ngsi-ld:SimulationResult:01",  
-    "type": "SimulationResult",  
-    "description": {  
+  "id": "urn:ngsi-ld:SimulationResult:01",  
+  "type": "SimulationResult",  
+  "description": {  
+    "type": "Property",  
+    "value": "Free Text"  
+  },  
+  "hasInputNetwork": {  
+    "type": "Relationship",  
+    "object": "urn:ngsi-ld:WaterNetwork:01"  
+  },  
+  "refSimulationScenario": {  
+    "type": "Relationship",  
+    "object": "urn:ngsi-ld:Simulation:01"  
+  },  
+  "outputParameters": [  
+    {  
+      "type": "Property",  
+      "value": "output parameter 1",  
+      "waterLevel": {  
         "type": "Property",  
-        "value": "Free Text"  
-    },  
-    "hasInputNetwork": {  
-        "type": "Relationship",  
-        "object": "urn:ngsi-ld:WaterNetwork:01"  
-    },  
-    "refSimulationScenario": {  
-        "type": "Relationship",  
-        "object": "urn:ngsi-ld:Simulation:01"  
-    },  
-    "outputParameters": [  
-        {  
-            "type": "Property",  
-            "value": "output parameter 1",  
-            "waterLevel": {  
-                "type": "Property",  
-                "value": 50,  
-                "targetURI": {  
-                    "type": "Property",  
-                    "value": "urn:ngsi-ld:Valve:V1"  
-                }  
-            },  
-            "datasetId": "urn:ngsi-ld:Dataset:ValveSetting"  
-        },  
-        {  
-            "type": "Property",  
-            "value": "output parameter 2",  
-            "initialQuality": {  
-                "type": "Property",  
-                "value": 2,  
-                "targetURI": {  
-                    "type": "Relationship",  
-                    "value": "urn:ngsi-ld:Tank:T1"  
-                }  
-            },  
-            "datasetId": "urn:ngsi-ld:Dataset:TankInitialQuality"  
+        "value": 50,  
+        "targetURI": {  
+          "type": "Property",  
+          "value": "urn:ngsi-ld:Valve:V1"  
         }  
-    ],  
-    "@context": [  
-        "https://schema.lab.fiware.org/ld/context"  
-    ]  
+      },  
+      "datasetId": "urn:ngsi-ld:Dataset:ValveSetting"  
+    },  
+    {  
+      "type": "Property",  
+      "value": "output parameter 2",  
+      "initialQuality": {  
+        "type": "Property",  
+        "value": 2,  
+        "targetURI": {  
+          "type": "Relationship",  
+          "value": "urn:ngsi-ld:Tank:T1"  
+        }  
+      },  
+      "datasetId": "urn:ngsi-ld:Dataset:TankInitialQuality"  
+    }  
+  ],  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld"  
+  ]  
 }  
 ```  
