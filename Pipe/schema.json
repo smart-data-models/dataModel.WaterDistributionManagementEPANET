@@ -2,10 +2,16 @@
   "$schema": "http://json-schema.org/schema#",
   "schemaVersion": "0.0",
   "$id": "https://smart-data-models.github.io/data-models/specs/WaterNetwork/Pipe/schema.json",
-  "title": "WaterNetwork - Pipe",
+  "title": "Smart Data Models. WaterNetworkManagementEPANET - Pipe",
   "description": "This entity contains a harmonised description of a generic pipe made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.",
   "type": "object",
   "allOf": [
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+    },
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+    },
     {
       "properties": {
         "type": {
@@ -17,9 +23,6 @@
         },
         "tag": {
           "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/tag"
-        },
-        "description": {
-          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/description"
         },
         "initialStatus": {
           "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/initialStatus"
@@ -62,7 +65,6 @@
           "description": "Property. Model:'https://schema.org/Number'. Units:'reciprocal day' The bulk reaction coefficient for the pipe. Use a positive value for growth and a negative value for decay. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code."
         },
         "vertices": {
-          "description": "Geoproperty. Coordinates of all vertices in the pipe, ordered from the startsAt node to the endsAt node and encoded as a GeoJSON ",
           "oneOf": [
             {
               "$ref": "https://geojson.org/schema/MultiPoint.json"
@@ -70,29 +72,23 @@
             {
               "$ref": "https://geojson.org/schema/Point.json"
             }
-          ]
+          ],
+          "description": "Geoproperty. Coordinates of all vertices in the pipe, ordered from the startsAt node to the endsAt node and encoded as a GeoJSON "
         },
         "flow": {
-            "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/flow"
+          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/flow"
         },
         "velocity": {
-            "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/velocity"
+          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/velocity"
         },
         "quality": {
-            "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/quality"
+          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/quality"
         }
       }
     }
   ],
   "required": [
     "id",
-    "type",
-    "initialStatus",
-    "length",
-    "diameter",
-    "roughness",
-    "minorLoss",
-    "startsAt",
-    "endsAt"
+    "type"
   ]
 }
