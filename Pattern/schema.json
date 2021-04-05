@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/schema#",
   "schemaVersion": "0.0",
-  "$id": "https://smart-data-models.github.io/data-models/specs/WaterNetwork/Pattern/schema.json",
+  "$id": "https://smart-data-models.github.io/dataModel.WaterNetworkMaqnagementEPANET/Pattern/schema.json",
   "title": "WaterNetwork - Pattern",
   "description": "This entity contains a harmonised description of a generic pattern made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.",
   "type": "object",

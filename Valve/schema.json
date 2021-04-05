@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/schema#",
   "schemaVersion": "0.0",
-  "$id": "https://smart-data-models.github.io/data-models/specs/WaterNetwork/Valve/schema.json",
+  "$id": "https://smart-data-models.github.io/dataModels/WaterNetworkManagementEPANET/Valve/schema.json",
   "title": "Smart Data Models WaterNetworkManagementEPANET - Valve",
   "description": "This entity contains a harmonised description of a generic Valve made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.",
   "type": "object",
