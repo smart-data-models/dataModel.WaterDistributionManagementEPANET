@@ -1,13 +1,13 @@
 Entity: Network  
 ===============  
-[Open License](https://github.com/smart-data-models//dataModel.WaterNetworkManagement/blob/master/Network/LICENSE.md)  
+[Open License](https://github.com/smart-data-models//dataModel.WaterDistributionManagementEPANET/blob/master/Network/LICENSE.md)  
 Global description: **This entity contains a harmonised description of a generic network made for the Water Network Management domain. This entity is primarily associated with the water network management vertical and related IoT applications.**  
 
 ## List of properties  
 
 - `address`: The mailing address  - `alternateName`: An alternative name for this item  - `areaServed`: The geographic area where a service or offered item is provided  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `hasSubNetwork`: Reference to an entity of type `Network`  - `id`: Unique identifier of the entity  - `isComposedOf`: Reference to the water component entities of the network, of type `Node (Reservoir, Junction, Tank)` or `Link (Pipe, Valve, Pump)`  - `location`:   - `name`: The name of this item.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `seeAlso`: list of uri pointing to additional resources about the item  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `type`: NGSI-LD Entity Type. It has to be WaterNetwork    
 Required properties  
-- `hasSubNetwork`  - `id`  - `type`  ## Data Model description of properties  
+- `id`  - `type`  ## Data Model description of properties  
 Sorted alphabetically (click for details)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
@@ -40,7 +40,7 @@ Network:
           type: string    
       type: Property    
       x-ngsi:    
-        model: https://schema.org/adddress    
+        model: https://schema.org/address    
     alternateName:    
       description: 'An alternative name for this item'    
       type: Property    
@@ -277,13 +277,12 @@ Network:
   required:    
     - id    
     - type    
-    - hasSubNetwork    
   type: object    
 ```  
 </details>    
 ## Example payloads    
-#### Network NGSI V2 key-values Example    
-Here is an example of a Network in JSON format as key-values. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
+#### Network NGSI-v2 key-values Example    
+Here is an example of a Network in JSON-LD format as key-values. This is compatible with NGSI-v2 when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {  
   "id": "urn:ngsi-ld:WaterNetwork:01",  
@@ -300,8 +299,8 @@ Network:
   ]  
 }  
 ```  
-#### Network NGSI V2 normalized Example    
-Here is an example of a Network in JSON format as normalized. This is compatible with NGSI V2 when not using options and returns the context data of an individual entity.  
+#### Network NGSI-v2 normalized Example    
+Here is an example of a Network in JSON-LD format as normalized. This is compatible with NGSI-v2 when not using options and returns the context data of an individual entity.  
 ```json  
 {  
   "id": "urn:ngsi-ld:WaterNetwork:01",  
@@ -361,43 +360,43 @@ Network:
 Here is an example of a Network in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
 ```json  
 {  
-    "id": "urn:ngsi-ld:WaterNetwork:01",  
-    "type": "WaterNetwork",  
-    "description": {  
-        "type": "Property",  
-        "value": "Free Text"  
+  "id": "urn:ngsi-ld:WaterNetwork:01",  
+  "type": "WaterNetwork",  
+  "description": {  
+    "type": "Property",  
+    "value": "Free Text"  
+  },  
+  "isComposedOf": [  
+    {  
+      "type": "Relationship",  
+      "object": "urn:ngsi-ld:Tank:T1",  
+      "datasetId": "urn:ngsi-ld:Dataset:TankT1"  
     },  
-    "isComposedOf": [  
-        {  
-            "type": "Relationship",  
-            "object": "urn:ngsi-ld:Tank:T1",  
-            "datasetId": "urn:ngsi-ld:Dataset:TankT1"  
-        },  
-        {  
-            "type": "Relationship",  
-            "object": "urn:ngsi-ld:Pipe:P1",  
-            "datasetId": "urn:ngsi-ld:Dataset:PipeP1"  
-        },  
-        {  
-            "type": "Relationship",  
-            "object": "urn:ngsi-ld:Junction:J1",  
-            "datasetId": "urn:ngsi-ld:Dataset:JunctionJ1"  
-        }  
-    ],  
-    "hasSubNetwork": [  
-        {  
-            "type": "Relationship",  
-            "object": "urn:ngsi-ld:Network:12-70d4l-4da9",  
-            "datasetId": "urn:ngsi-ld:Dataset:NetworkN1"  
-        },  
-        {  
-            "type": "Relationship",  
-            "object": "urn:ngsi-ld:Network:A14-14d4B-4vvc",  
-            "datasetId": "urn:ngsi-ld:Dataset:NetworkN2"  
-        }  
-    ],  
-    "@context": [  
-        "https://schema.lab.fiware.org/ld/context"  
-    ]  
+    {  
+      "type": "Relationship",  
+      "object": "urn:ngsi-ld:Pipe:P1",  
+      "datasetId": "urn:ngsi-ld:Dataset:PipeP1"  
+    },  
+    {  
+      "type": "Relationship",  
+      "object": "urn:ngsi-ld:Junction:J1",  
+      "datasetId": "urn:ngsi-ld:Dataset:JunctionJ1"  
+    }  
+  ],  
+  "hasSubNetwork": [  
+    {  
+      "type": "Relationship",  
+      "object": "urn:ngsi-ld:Network:12-70d4l-4da9",  
+      "datasetId": "urn:ngsi-ld:Dataset:NetworkN1"  
+    },  
+    {  
+      "type": "Relationship",  
+      "object": "urn:ngsi-ld:Network:A14-14d4B-4vvc",  
+      "datasetId": "urn:ngsi-ld:Dataset:NetworkN2"  
+    }  
+  ],  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld"  
+  ]  
 }  
 ```  
