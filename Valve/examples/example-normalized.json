@@ -1,64 +1,61 @@
 {
     "id": "87fe7d79-0d4c-4da9-b7d0-3340efa0656awytsd",
     "type": "Valve",
-    "initiaStatus": {
-        "type": "Property",
+    "initialStatus": {
+        "type": "Text",
         "value": "OPEN"
     },
     "status": {
-        "type": "Property",
+        "type": "Text",
         "value": "OPEN"
     },
     "diameter": {
-        "type": "Property",
+        "type": "Number",
         "value": 203.20
     },
     "valveType": {
-        "type": "Property",
+        "type": "Text",
         "value": "PRV"
     },
     "setting": {
-        "type": "Property",
+        "type": "Number",
         "value": 40.00
     },
     "minorLoss": {
-        "type": "Property",
+        "type": "Number",
         "value": 0.00
     },
     "tag": {
-        "type": "Property",
+        "type": "Text",
         "value": "DMA1"
     },
     "startsAt": {
         "type": "Relationship",
-        "object": "63fe7d79-0d4c-4da9-b7d0-3340efa0656a"
+        "value": "63fe7d79-0d4c-4da9-b7d0-3340efa0656a"
     },
     "endsAt": {
         "type": "Relationship",
-        "object": "1863179e-3768-4480-9167-ff21f870dd19"
+        "value": "1863179e-3768-4480-9167-ff21f870dd19"
     },
     "flow": {
-        "type": "Property",
+        "type": "object",
         "value": {
             "value": 20,
             "observedBy": "device-9845A"
-            
         }
     },
     "velocity": {
-        "type": "Property",
+        "type": "object",
         "value": {
             "value": 2,
             "observedBy": "device-9845A"
-            
         }
     },
     "quality": {
-        "type": "Property",
+        "type": "object",
         "value": {
             "value": 0.5,
             "observedBy": "device-9845A"
-            
         }
     }
 }
