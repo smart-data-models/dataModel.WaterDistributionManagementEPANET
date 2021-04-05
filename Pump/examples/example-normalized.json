@@ -1,82 +1,76 @@
 {
-    "id": "85zhnf58-0d4c-h4g854g-b7d0-3310klm",
-    "type": "Pump",
-    "initialStatus": {
-        "value": "OPEN"
-    },
-    "status": {
-        "value": "OPEN"
-    },
-    "power": {
-        "value": 100
-    },
-    "speed": {
-        "value": 1.2
-    },
-    "startsAt": {
-        "type": "Relationship",
-        "value": "63fe7d79-0d4c-4da9-b7d0-3340efa0656a"
-    },
-    "endsAt": {
-        "type": "Relationship",
-        "value": "1863179e-3768-4480-9167-ff21f870dd19"
-    },
-    "tag": {
-        "value": "DMA1"
-    },
-    "pumpPattern": {
-        "type": "Relationship",
-        "value": "fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
-    },
-    "efficCurve": {
-        "type": "Relationship",
-        "value": "fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
-    },
-    "energyPrice": {
-        "value": 0.8
-    },
-    "energyPattern": {
-        "type": "Relationship",
-        "value": "fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
-    },
-    "flow": {
-        "value": {
-            "value": 20,
-            "unitCode": "G51",
-            "observedBy": {
-                "type": "Relationship",
-                "value": "device-9845A"
-            }
-        }
-    },
-    "velocity": {
-        "value": {
-            "value": 2,
-            "unitCode": "MTS",
-            "observedBy": {
-                "type": "Relationship",
-                "value": "device-9845A"
-            }
-        }
-    },
-    "quality": {
-        "value": {
-            "value": 0.5,
-            "unitCode": "F27",
-            "observedBy": {
-                "type": "Relationship",
-                "value": "device-9845A"
-            }
-        }
-    },
-    "energyUse": {
-        "value": {
-            "value": 50,
-            "unitCode": "KWT",
-            "observedBy": {
-                "type": "Relationship",
-                "value": "device-9845A"
-            }
-        }
+  "id": "85zhnf58-0d4c-h4g854g-b7d0-3310klm",
+  "type": "Pump",
+  "initialStatus": {
+    "type": "text",
+    "value": "OPEN"
+  },
+  "status": {
+    "type": "text",
+    "value": "OPEN"
+  },
+  "power": {
+    "type": "number",
+    "value": 100
+  },
+  "speed": {
+    "type": "number",
+    "value": 1.2
+  },
+  "startsAt": {
+    "type": "object",
+    "value": "63fe7d79-0d4c-4da9-b7d0-3340efa0656a"
+  },
+  "endsAt": {
+    "type": "object",
+    "value": "1863179e-3768-4480-9167-ff21f870dd19"
+  },
+  "tag": {
+    "type": "text",
+    "value": "DMA1"
+  },
+  "pumpPattern": {
+    "type": "Relationship",
+    "object": "fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
+  },
+  "efficCurve": {
+    "type": "Relationship",
+    "object": "fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
+  },
+  "energyPrice": {
+    "type": "number",
+    "value": 0.8
+  },
+  "energyPattern": {
+    "type": "Relationship",
+    "object": "fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
+  },
+  "flow": {
+    "type": "object",
+    "value": {
+      "value": 20,
+      "observedBy": "device-9845A"
     }
+  },
+  "velocity": {
+    "type": "object",
+    "value": {
+      "value": 2,
+      "observedBy": "device-9845A"
+    }
+  },
+  "quality": {
+    "type": "object",
+    "value": {
+      "value": 0.5,
+      "observedBy": "device-9845A"
+    }
+  },
+  "energyUse": {
+    "type": "object",
+    "value": {
+      "value": 50,
+      "observedBy": "device-9845A"
+    }
+  }
 }
