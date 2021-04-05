@@ -1,108 +1,124 @@
 {
-    "id": "urn:ngsi-ld:Reservoir:1863179e-3768-4480-9167-ff21f870dd19",
-    "type": "Reservoir",
-    "createdAt": "2020-03-02T15:42:00Z",
-    "modifiedAt": "2020-03-02T15:45:00Z",
-    "location": {
-        "type": "GeoProperty",
-        "value": {
-            "type": "Point",
-            "coordinates": [
-                24.30623,
-                60.07966
-            ]
-        }
+  "id": "urn:ngsi-ld:Reservoir:1863179e-3768-4480-9167-ff21f870dd19",
+  "type": "Reservoir",
+  "location": {
+    "type": "GeoProperty",
+    "value": {
+      "type": "Point",
+      "coordinates": [
+        24.30623,
+        60.07966
+      ]
+    }
+  },
+  "reservoirHead": {
+    "type": "Property",
+    "value": 59.00,
+    "unitCode": "MTR"
+  },
+  "headPattern": {
+    "type": "Relationship",
+    "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533"
+  },
+  "elevation": {
+    "type": "Property",
+    "value": 105.8,
+    "unitCode": "MTR"
+  },
+  "description": {
+    "type": "Property",
+    "value": "This entity contains a harmonised description of a Reservoir"
+  },
+  "initialQuality": {
+    "type": "Property",
+    "value": 0.5,
+    "unitCode": "M1"
+  },
+  "sourceCategory": {
+    "type": "Property",
+    "value": {
+      "type": "Property",
+      "value": "CategoryX"
     },
-    "reservoirHead": {
-        "type": "Property",
-        "value": 59.00,
-        "unitCode": "MTR"
+    "sourceType": {
+      "type": "Property",
+      "value": "MASS"
     },
-    "headPattern": {
-        "type": "Relationship",
-        "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533"
+    "sourceQuality": {
+      "type": "Property",
+      "value": 1.2,
+      "unitCode": "M1"
     },
-    "elevation": {
-        "type": "Property",
-        "value": 105.8,
-        "unitCode": "MTR"
+    "sourcePattern": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
+    }
+  },
+  "tag": {
+    "type": "Property",
+    "value": "DMA1"
+  },
+  "pressure": {
+    "type": "Property",
+    "value": {
+      "type": "Property",
+      "value": 20,
+      "unitCode": "MTR"
     },
-    "description": {
-        "type": "Property",
-        "value": "This entity contains a harmonised description of a Reservoir"
+    "observedBy": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Device:device-9845A"
+    }
+  },
+  "supply": {
+    "type": "Property",
+    "value": {
+      "type": "Property",
+      "value": 150,
+      "unitCode": "LTR"
     },
-    "initialQuality": {
-        "type": "Property",
-        "value": 0.5,
-        "unitCode":"M1"
+    "observedBy": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Device:device-9845A"
+    }
+  },
+  "head": {
+    "type": "Property",
+    "value": {
+      "type": "Property",
+      "value": 20,
+      "unitCode": "MTR"
     },
-    "sourceCategory": {
-        "type": "Property",
-        "value": "CategroyX",
-        "sourceType": {
-            "type": "Property",
-            "value": "MASS"
-        },
-        "sourceQuality": {
-            "type": "Property",
-            "value": 1.2,
-            "unitCode": "M1"
-        },
-        "sourcePattern": {
-            "type": "Relationship",
-            "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
-        }
+    "observedBy": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Device:device-9845A"
+    }
+  },
+  "quality": {
+    "type": "Property",
+    "value": {
+      "type": "Property",
+      "value": 0.5,
+      "unitCode": "M1"
     },
-    "tag": {
-        "type": "Property",
-        "value": "DMA1"
+    "observedBy": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Device:device-9845A"
+    }
+  },
+  "sourceMassInflow": {
+    "type": "Property",
+    "value": {
+      "type": "Property",
+      "value": 100,
+      "unitCode": "F27"
     },
-    "pressure": {
-        "type": "Property",
-        "value": 20,
-        "unitCode": "MTR",
-        "observedBy": {
-            "type": "Relationship",
-            "object": "urn:ngsi-ld:Device:device-9845A"
-        }
-    },
-    "supply": {
-        "type": "Property",
-        "value": 150,
-        "unitCode": "LTR",
-        "observedBy": {
-            "type": "Relationship",
-            "object": "urn:ngsi-ld:Device:device-9845A"
-        }
-    },
-    "head": {
-        "type": "Property",
-        "value": 20,
-        "unitCode": "MTR",
-        "observedBy": {
-            "type": "Relationship",
-            "object": "urn:ngsi-ld:Device:device-9845A"
-        }
-    },
-    "quality": {
-        "type": "Property",
-        "value": 0.5,
-        "unitCode": "M1",
-        "observedBy": {
-            "type": "Relationship",
-            "object": "urn:ngsi-ld:Device:device-9845A"
-        }
-    },
-    "sourceMassInflow": {
-        "type": "Property",
-        "value": 100,
-        "unitCode": "F27",
-        "observedBy": {
-            "type": "Relationship",
-            "object": "urn:ngsi-ld:Device:device-9845A"
-        }
-    },
-    "@context": [
-        "https://schema.lab.fiware.org/ld/context"
-    ]
+    "observedBy": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Device:device-9845A"
+    }
+  },
+  "@context": [
+    "https://smartdatamodels.org/context.jsonld"
+  ]
 }
