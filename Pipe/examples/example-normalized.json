@@ -1,72 +1,73 @@
 {
-    "id": "74azsty-70d4l-4da9-b7d0-3340ef655nnb",
-    "type": "Pipe",
-    "initialStatus": {
-        "value": "OPEN"
-    },
-    "status": {
-        "value": "OPEN"
-    },
-    "length": {
-        "value": 52.90
-    },
-    "diameter": {
-        "value": 203.00
-    },
-    "roughness": {
-        "value": 72.4549
-    },
-    "minorLoss": {
-        "value": 72.4549
-    },
-    "tag": {
-        "value": "DMA1"
-    },
-    "description": {
-        "value": "Free Text"
-    },
-    "startsAt": {
-        "type": "Relationship",
-        "value": "63fe7d79-0d4c-4da9-b7d0-3340efa0656a"
-    },
-    "endsAt": {
-        "type": "Relationship",
-        "value": "1863179e-3768-4480-9167-ff21f870dd19"
-    },
-    "bulkCoeff": {
-        "value": 72.4549
-    },
-    "wallCoeff": {
-        "value": 72.4549
-    },
-    "flow": {
-        "value": {
-            "value": 20,
-            "unitCode": "G51",
-            "observedBy": {
-                "type": "Relationship",
-                "value": "device-9845A"
-            }
-        }
-    },
-    "velocity": {
-        "value": {
-            "value": 2,
-            "unitCode": "MTS",
-            "observedBy": {
-                "type": "Relationship",
-                "value": "device-9845A"
-            }
-        }
-    },
-    "quality": {
-        "value": {
-            "value": 0.5,
-            "unitCode": "F27",
-            "observedBy": {
-                "type": "Relationship",
-                "value": "device-9845A"
-            }
-        }
+  "id": "74azsty-70d4l-4da9-b7d0-3340ef655nnb",
+  "type": "Pipe",
+  "initialStatus": {
+    "type": "text",
+    "value": "OPEN"
+  },
+  "status": {
+    "type": "text",
+    "value": "OPEN"
+  },
+  "length": {
+    "type": "number",
+    "value": 52.90
+  },
+  "diameter": {
+    "type": "number",
+    "value": 203.00
+  },
+  "roughness": {
+    "type": "number",
+    "value": 72.4549
+  },
+  "minorLoss": {
+    "type": "number",
+    "value": 72.4549
+  },
+  "tag": {
+    "type": "text",
+    "value": "DMA1"
+  },
+  "description": {
+    "type": "text",
+    "value": "Free Text"
+  },
+  "startsAt": {
+    "type": "object",
+    "value": "63fe7d79-0d4c-4da9-b7d0-3340efa0656a"
+  },
+  "endsAt": {
+    "type": "object",
+    "value": "1863179e-3768-4480-9167-ff21f870dd19"
+  },
+  "bulkCoeff": {
+    "type": "number",
+    "value": 72.4549
+  },
+  "wallCoeff": {
+    "type": "number",
+    "value": 72.4549
+  },
+  "flow": {
+    "type": "structuredValue",
+    "value": {
+      "value": 20,
+      "observedBy": "device-9845A"
     }
+  },
+  "velocity": {
+    "type": "structuredValue",
+    "value": {
+      "value": 2,
+      "observedBy": "device-9845A"
+    }
+  },
+  "quality": {
+    "type": "structuredValue",
+    "value": {
+      "value": 0.5,
+      "observedBy": "device-9845A"
+    }
+  }
 }
