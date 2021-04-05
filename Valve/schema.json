@@ -2,12 +2,15 @@
   "$schema": "http://json-schema.org/schema#",
   "schemaVersion": "0.0",
   "$id": "https://smart-data-models.github.io/data-models/specs/WaterNetwork/Valve/schema.json",
-  "title": "WaterNetwork - Valve",
+  "title": "Smart Data Models WaterNetworkManagementEPANET - Valve",
   "description": "This entity contains a harmonised description of a generic Valve made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.",
   "type": "object",
   "allOf": [
     {
       "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+    },
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
     },
     {
       "properties": {
@@ -19,13 +22,13 @@
           "description": "Property. NGSI-LD Entity Type. It must be equal to Valve."
         },
         "tag": {
-          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/tag"
+          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/tag"
         },
         "status": {
-          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/status"
+          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/status"
         },
         "initialStatus": {
-          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/initialStatus"
+          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/initialStatus"
         },
         "diameter": {
           "type": "number",
@@ -34,14 +37,14 @@
         "valveType": {
           "type": "string",
           "enum": [
+            "FCV",
+            "GPV",
+            "PBV",
             "PRV",
             "PSV",
-            "PBV",
-            "FCV",
-            "TCV",
-            "GPV"
+            "TCV"
           ],
-          "description": "Property. Model:'https://schema.org/Text'. The valve type of the element. Enum:'PRV, PSV, PBV, FCV, TCV, GPV'"
+          "description": "Property. Model:'https://schema.org/Text'. The valve type of the element. enum:'FCV, GPV, PBV, PRV, PSV, TCV'"
         },
         "setting": {
           "type": "number",
@@ -76,6 +79,15 @@
             }
           ],
           "description": "Geoproperty. Coordinates of all vertices in the valve, ordered from the startsAt node to the endsAt node and encoded as a GeoJSON "
+        },
+        "flow": {
+          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/flow"
+        },
+        "velocity": {
+          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/velocity"
+        },
+        "quality": {
+          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/quality"
         }
       }
     }
@@ -83,11 +95,6 @@
   "required": [
     "id",
     "type",
-    "initialStatus",
-    "diameter",
-    "valveType",
-    "setting",
-    "minorLoss",
     "startsAt",
     "endsAt"
   ]

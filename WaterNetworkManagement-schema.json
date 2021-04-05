@@ -1,80 +1,220 @@
 {
-    "$schema": "http://json-schema.org/schema#",
-    "$id": "https://smart-data-models.github.io/dataModel.WaterNetworkManagement/WaterNetworkManagement-schema.json",
-    "title": "FIWARE - Water Network Management base schema",
-    "description": "Common NGSI-LD definitions for Water Network Management data models",
-    "type": "object",
-    "definitions": {
-        "demandCategory": {
-            "type": "object",
-            "description": "Property. Model:'https://schema.org/Text'. Allows base demands and time patterns to be assigned to other categories of users.",
-            "properties": {
-                "baseDemand": {
-                    "type": "string",
-                    "description": "Property. Model:'https://schema.org/Text. Baseline or average demand for the category. A sub-property of the Property 'demandCategory'."
-                },
-                "demandPattern": {
-                    "type": "string",
-                    "format": "uri",
-                    "description": "Relationship. A relationship to the pattern of the 'demandCategory' property."
-                }
-            }
+  "$schema": "http://json-schema.org/schema#",
+  "$id": "https://smart-data-models.github.io/dataModel.WaterNetworkManagementEPANET/WaterNetworkManagement-schema.json",
+  "title": "Smart Data Models - Water Network Management base schema",
+  "description": "Common NGSI-LD definitions for Water Network Management data models",
+  "type": "object",
+  "definitions": {
+    "demandCategory": {
+      "type": "object",
+      "description": "Property. Model:'https://schema.org/Text'. Allows base demands and time patterns to be assigned to other categories of users.",
+      "properties": {
+        "value": {
+          "type": "number"
         },
-        "sourceCategory": {
-            "type": "object",
-            "description": "Property. Model:'https://schema.org/Text'. Description of the quality of source flow entering the network at a specific node.",
-            "properties": {
-                "sourceType": {
-                    "type": "string",
-                    "description": "Property. Model:'https://schema.org/Text'. A sub-property of the Property 'sourceCategory'",
-                    "enum": [
-                        "CONCEN",
-                        "MASS",
-                        "FLOWPACED",
-                        "SETPOINT"
-                    ]
-                },
-                "sourceQuality": {
-                    "type": "number",
-                    "description": "Property. Model:'https://schema.org/Number'. Units: 'mg/L'. Baseline or average concentration (or mass flow rate) of source. A sub-property of the Property 'sourceCategory'. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code."
-                },
-                "sourcePattern": {
-                    "type": "string",
-                    "format": "uri",
-                    "description": "Relationship. A relationship to the pattern pf the sourceCategory property"
-                }
-            },
-            "required": [
-                "sourceType",
-                "sourceQuality",
-                "sourcePattern"
-            ]
+        "baseDemand": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text. Baseline or average demand for the category. A sub-property of the Property 'demandCategory'."
         },
-        "tag": {
-            "type": "string",
-            "description": "Property. Model:'https://schema.org/Text'. An optional text string used to assign the pipe to a category, perhaps one based on age or material"
-        },
-        "description": {
-            "type": "string",
-            "description": "Property. Model:'https://schema.org/Text'. An optional text that describes other significant information about the junction"
-        },
-        "status": {
-            "type": "string",
-            "enum": [
-                "OPEN",
-                "CLOSED",
-                "CV"
-            ],
-            "description": "Property. Model:'https://schema.org/Text'. The dynamic state of the node"
-        },
-        "initialStatus": {
-            "type": "string",
-            "enum": [
-                "OPEN",
-                "CLOSED",
-                "CV"
-            ],
-            "description": "Property. Model:'https://schema.org/Text'. The node status at the start of the simulation."
+        "demandPattern": {
+          "type": "string",
+          "format": "uri",
+          "description": "Relationship. A relationship to the pattern of the 'demandCategory' property."
         }
+      }
+    },
+    "sourceCategory": {
+      "type": "object",
+      "description": "Property. Model:'https://schema.org/Text'. Description of the quality of source flow entering the network at a specific node.",
+      "properties": {
+        "sourceType": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. A sub-property of the Property 'sourceCategory'",
+          "enum": [
+            "CONCEN",
+            "MASS",
+            "FLOWPACED",
+            "SETPOINT"
+          ]
+        },
+        "sourceQuality": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Units: 'mg/L'. Baseline or average concentration (or mass flow rate) of source. A sub-property of the Property 'sourceCategory'. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code."
+        },
+        "sourcePattern": {
+          "type": "string",
+          "format": "uri",
+          "description": "Relationship. A relationship to the pattern pf the sourceCategory property"
+        }
+      }
+    },
+    "tag": {
+      "type": "string",
+      "description": "Property. Model:'https://schema.org/Text'. An optional text string used to assign the pipe to a category, perhaps one based on age or material"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "OPEN",
+        "CLOSED",
+        "CV"
+      ],
+      "description": "Property. Model:'https://schema.org/Text'. The dynamic state of the node. Enum:'OPEN, CLOSED, CV'"
+    },
+    "initialStatus": {
+      "type": "string",
+      "enum": [
+        "OPEN",
+        "CLOSED",
+        "CV"
+      ],
+      "description": "Property. Model:'https://schema.org/Text'. The link status at the start of the simulation. Enum:'OPEN, CLOSED, CV'"
+    },
+    "valveType": {
+      "type": "string",
+      "description": "Property. Type of valve according to valve categories. Enum:'FCV, GPV, PBV, PRV, PSV, TCV'",
+      "enum": [
+        "FCV",
+        "GPV",
+        "PBV",
+        "PRV",
+        "PSV",
+        "TCV"
+      ]
+    },
+    "valveCurve": {
+      "anyOf": [
+        {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256,
+          "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+          "description": "Property. Identifier format of any NGSI entity"
+        },
+        {
+          "type": "string",
+          "format": "uri",
+          "description": "Property. Identifier format of any NGSI entity"
+        }
+      ],
+      "description": "Relationship. Reference to the Curve where the valve is located."
+    },
+    "flow": {
+      "type": "object",
+      "description": "Property. Rate of flow from `startsAt` node to `endsAt` node, measured by a device at the link (pipe, valve or pump)",
+      "properties": {
+        "value": {
+          "type": "number"
+        },
+        "observedBy": {
+          "type": "string",
+          "format": "uri"
+        }
+      }
+    },
+    "velocity": {
+      "type": "object",
+      "description": "Property. Observed velocity in the link (pipe, valve or pump)",
+      "properties": {
+        "value": {
+          "type": "number"
+        },
+        "observedBy": {
+          "type": "string",
+          "format": "uri"
+        }
+      }
+    },
+    "quality": {
+      "type": "object",
+      "description": "Property. Observed quality in the network component",
+      "properties": {
+        "value": {
+          "type": "number"
+        },
+        "observedBy": {
+          "type": "string",
+          "format": "uri"
+        }
+      }
+    },
+    "energyUse": {
+      "type": "object",
+      "description": "Property. Observed energy use by the element of the network",
+      "properties": {
+        "value": {
+          "type": "number"
+        },
+        "observedBy": {
+          "type": "string",
+          "format": "uri"
+        }
+      }
+    },
+    "pressure": {
+      "type": "object",
+      "description": "Property. Observed pressure at the node (junction, tank or reservoir)",
+      "properties": {
+        "value": {
+          "type": "number"
+        },
+        "observedBy": {
+          "type": "string",
+          "format": "uri"
+        }
+      }
+    },
+    "supply": {
+      "type": "object",
+      "description": "Property. Observed supply at the node (junction, tank or reservoir)",
+      "properties": {
+        "value": {
+          "type": "number"
+        },
+        "observedBy": {
+          "type": "string",
+          "format": "uri"
+        }
+      }
+    },
+    "head": {
+      "type": "object",
+      "description": "Property. Observed head at the node (junction, tank or reservoir)",
+      "properties": {
+        "value": {
+          "type": "number"
+        },
+        "observedBy": {
+          "type": "string",
+          "format": "uri"
+        }
+      }
+    },
+    "sourceMassInflow": {
+      "type": "object",
+      "description": "Property.. Observed source mass inflow at the node (junction, tank or reservoir)",
+      "properties": {
+        "value": {
+          "type": "number"
+        },
+        "observedBy": {
+          "type": "string",
+          "format": "uri"
+        }
+      }
+    },
+    "level": {
+      "type": "object",
+      "description": "Property. Observed level in the element of the network",
+      "properties": {
+        "value": {
+          "type": "number"
+        },
+        "observedBy": {
+          "type": "string",
+          "format": "uri"
+        }
+      }
     }
+  }
 }

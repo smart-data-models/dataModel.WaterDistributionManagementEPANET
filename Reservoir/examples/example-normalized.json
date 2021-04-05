@@ -1,48 +1,82 @@
 {
-    "id": "1863179e-3768-4480-9167-ff21f870dd19",
-    "type": "Reservoir",
-    "location": {
-        "type": "geo:json",
-        "value": {
-            "type": "Point",
-            "coordinates": [
-                24.30623,
-                60.07966
-            ]
-        }
-    },
-    "reservoirHead": {
-        "value": 59.00
-    },
-    "headPattern": {
-        "type": "Relationship",
-        "value": "fbcb5fc8-8ca3-4533"
-    },
-    "elevation": {
-        "value": 105.8
-    },
-    "description": {
-        "value": "This entity contains a harmonised description of a Reservoir"
-    },
-    "initialQuality": {
-        "value": 0.5
-    },
-    "sourceCategory": {
-        "value": {
-            "value": "CategroyX",
-            "sourceType": {
-                "value": "MASS"
-            },
-            "sourceQuality": {
-                "value": 1.2
-            },
-            "sourcePattern": {
-                "type": "Relationship",
-                "value": "fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
-            }
-        }
-    },
-    "tag": {
-        "value": "DMA1"
+  "id": "1863179e-3768-4480-9167-ff21f870dd19",
+  "type": "Reservoir",
+  "location": {
+    "type": "geo:json",
+    "value": {
+      "type": "Point",
+      "coordinates": [
+        24.30623,
+        60.07966
+      ]
     }
+  },
+  "reservoirHead": {
+    "type": "Number",
+    "value": 59.00
+  },
+  "headPattern": {
+    "type": "Relationship",
+    "object": "fbcb5fc8-8ca3-4533"
+  },
+  "elevation": {
+    "type": "Number",
+    "value": 105.8
+  },
+  "description": {
+    "type": "Text",
+    "value": "This entity contains a harmonised description of a Reservoir"
+  },
+  "initialQuality": {
+    "type": "Number",
+    "value": 0.5
+  },
+  "sourceCategory": {
+    "type": "object",
+    "value": {
+      "value": "CategoryX",
+      "sourceType": "MASS",
+      "sourceQuality": 1.2,
+      "sourcePattern": "fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
+    }
+  },
+  "tag": {
+    "type": "Text",
+    "value": "DMA1"
+  },
+  "pressure": {
+    "type": "object",
+    "value": {
+      "value": 20,
+      "observedBy": "device-9845A"
+    }
+  },
+  "supply": {
+    "type": "object",
+    "value": {
+      "value": 150,
+      "observedBy": "device-9845A"
+    }
+  },
+  "head": {
+    "type": "object",
+    "value": {
+      "value": 20,
+      "observedBy": "device-9845A"
+    }
+  },
+  "quality": {
+    "type": "object",
+    "value": {
+      "value": 0.5,
+      "observedBy": "device-9845A"
+    }
+  },
+  "sourceMassInflow": {
+    "type": "object",
+    "value": {
+      "value": 100,
+      "observedBy": "device-9845A"
+    }
+  }
 }

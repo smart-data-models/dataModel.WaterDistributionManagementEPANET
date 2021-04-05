@@ -1,8 +1,6 @@
 {
   "id": "urn:ngsi-ld:Reservoir:1863179e-3768-4480-9167-ff21f870dd19",
   "type": "Reservoir",
-  "createdAt": "2020-03-02T15:42:00Z",
-  "modifiedAt": "2020-03-02T15:45:00Z",
   "location": {
     "type": "GeoProperty",
     "value": {
@@ -38,7 +36,10 @@
   },
   "sourceCategory": {
     "type": "Property",
-    "value": "CategroyX",
+    "value": {
+      "type": "Property",
+      "value": "CategoryX"
+    },
     "sourceType": {
       "type": "Property",
       "value": "MASS"
@@ -56,6 +57,66 @@
   "tag": {
     "type": "Property",
     "value": "DMA1"
+  },
+  "pressure": {
+    "type": "Property",
+    "value": {
+      "type": "Property",
+      "value": 20,
+      "unitCode": "MTR"
+    },
+    "observedBy": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Device:device-9845A"
+    }
+  },
+  "supply": {
+    "type": "Property",
+    "value": {
+      "type": "Property",
+      "value": 150,
+      "unitCode": "LTR"
+    },
+    "observedBy": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Device:device-9845A"
+    }
+  },
+  "head": {
+    "type": "Property",
+    "value": {
+      "type": "Property",
+      "value": 20,
+      "unitCode": "MTR"
+    },
+    "observedBy": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Device:device-9845A"
+    }
+  },
+  "quality": {
+    "type": "Property",
+    "value": {
+      "type": "Property",
+      "value": 0.5,
+      "unitCode": "M1"
+    },
+    "observedBy": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Device:device-9845A"
+    }
+  },
+  "sourceMassInflow": {
+    "type": "Property",
+    "value": {
+      "type": "Property",
+      "value": 100,
+      "unitCode": "F27"
+    },
+    "observedBy": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Device:device-9845A"
+    }
   },
   "@context": [
     "https://smartdatamodels.org/context.jsonld"

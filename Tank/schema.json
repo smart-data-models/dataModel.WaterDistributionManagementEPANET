@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/schema#",
   "schemaVersion": "0.0",
-  "$id": "https://smart-data-models.github.io/data-models/specs/WaterNetwork/Tank/schema.json",
-  "title": "WaterNetwork - Tank",
+  "$id": "https://smart-data-models.github.io/data-models/specs/WaterNetworkManagementEPANET/Tank/schema.json",
+  "title": "Smart Data Models WaterNetworkManagementEPANET - Tank",
   "description": "This entity contains a harmonised description of a generic tank made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.",
   "type": "object",
   "allOf": [
@@ -22,7 +22,7 @@
           "description": "Property. NGSI-LD Entity Type. It has to be Tank"
         },
         "tag": {
-          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/tag"
+          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/tag"
         },
         "elevation": {
           "type": "number",
@@ -59,15 +59,15 @@
         "mixingModel": {
           "type": "string",
           "enum": [
-            "MIXED",
             "2COMP",
             "FIFO",
-            "LIFO"
+            "LIFO",
+            "MIXED"
           ],
-          "description": "Property. Model:'https://schema.org/Text'. A sub-property of the Property sourceCategory"
+          "description": "Property. Model:'https://schema.org/Text'. A sub-property of the Property sourceCategory. Enum:'2COMP, FIFO, LIFO, MIXED'"
         },
         "sourceCategory": {
-          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/sourceCategory"
+          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/sourceCategory"
         },
         "volumeCurve": {
           "type": "string",
@@ -87,6 +87,24 @@
           "type": "string",
           "format": "uri",
           "description": "Relationship. A relationship indicating the water outlet points of the Reservoir"
+        },
+        "level": {
+          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/level"
+        },
+        "pressure": {
+          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/pressure"
+        },
+        "supply": {
+          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/supply"
+        },
+        "head": {
+          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/head"
+        },
+        "quality": {
+          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/quality"
+        },
+        "sourceMassInflow": {
+          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/sourceMassInflow"
         }
       }
     }
@@ -94,11 +112,6 @@
   "required": [
     "id",
     "type",
-    "location",
-    "elevation",
-    "initLevel",
-    "maxLevel",
-    "minVolume",
-    "nominalDiameter"
+    "location"
   ]
 }

@@ -1,8 +1,6 @@
 {
   "id": "urn:ngsi-ld:Tank:1863179e-3968-4493-9167-ee21f880cc02",
   "type": "Tank",
-  "createdAt": "2020-03-13T15:42:00Z",
-  "modifiedAt": "2020-03-13T15:45:00Z",
   "location": {
     "type": "GeoProperty",
     "value": {
@@ -54,7 +52,10 @@
   },
   "sourceCategory": {
     "type": "Property",
-    "value": "category1",
+    "value": {
+      "type": "Property",
+      "value": "category1"
+    },
     "sourceType": {
       "type": "Property",
       "value": "MASS"
@@ -90,6 +91,78 @@
   "tag": {
     "type": "Property",
     "value": "DMA1"
+  },
+  "level": {
+    "type": "Property",
+    "value": {
+      "type": "Property",
+      "value": 20,
+      "unitCode": "MTR"
+    },
+    "observedBy": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Device:device-9845A"
+    }
+  },
+  "pressure": {
+    "type": "Property",
+    "value": {
+      "type": "Property",
+      "value": 20,
+      "unitCode": "MTR"
+    },
+    "observedBy": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Device:device-9845A"
+    }
+  },
+  "supply": {
+    "type": "Property",
+    "value": {
+      "type": "Property",
+      "value": 150,
+      "unitCode": "LTR"
+    },
+    "observedBy": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Device:device-9845A"
+    }
+  },
+  "head": {
+    "type": "Property",
+    "value": {
+      "type": "Property",
+      "value": 20,
+      "unitCode": "MTR"
+    },
+    "observedBy": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Device:device-9845A"
+    }
+  },
+  "quality": {
+    "type": "Property",
+    "value": {
+      "type": "Property",
+      "value": 0.5,
+      "unitCode": "M1"
+    },
+    "observedBy": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Device:device-9845A"
+    }
+  },
+  "sourceMassInflow": {
+    "type": "Property",
+    "value": {
+      "type": "Property",
+      "value": 100,
+      "unitCode": "F27"
+    },
+    "observedBy": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Device:device-9845A"
+    }
   },
   "@context": [
     "https://smartdatamodels.org/context.jsonld"

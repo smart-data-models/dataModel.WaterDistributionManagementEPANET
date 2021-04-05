@@ -1,8 +1,7 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "schemaVersion": "0.0",
-  "$id": "https://smart-data-models.github.io/data-models/specs/WaterNetwork/Junction/schema.json",
-  "title": "WaterNetwork - Junction",
+  "$id": "https://smart-data-models.github.io/data-models/specs/WaterNetworkManagementEPANET/Junction/schema.json",
+  "title": "Smart Data Models WaterNetworkManagementEPANET - Junction",
   "description": "This entity contains a harmonised description of a generic junction made for the Water Network Management domain. This entity is primarily associated with the water network management vertical and related IoT applications.",
   "type": "object",
   "allOf": [
@@ -32,8 +31,7 @@
           "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/demandCategory"
         },
         "initialQuality": {
-          "type": "number",
-          "description": "Property. Model:'http://schema.org/Number'. Units:'mg/L'. Water quality level at the junction at the start of the simulation. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code"
+          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/initialQuality"
         },
         "emitterCoefficient": {
           "type": "number",
@@ -41,6 +39,21 @@
         },
         "sourceCategory": {
           "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/sourceCategory"
+        },
+        "pressure": {
+          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/pressure"
+        },
+        "supply": {
+          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/supply"
+        },
+        "head": {
+          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/head"
+        },
+        "quality": {
+          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/quality"
+        },
+        "sourceMassInflow": {
+          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/sourceMassInflow"
         }
       }
     }
@@ -48,7 +61,6 @@
   "required": [
     "id",
     "type",
-    "location",
-    "elevation"
+    "location"
   ]
 }

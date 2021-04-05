@@ -1,8 +1,6 @@
 {
   "id": "urn:ngsi-ld:Pipe:74azsty-70d4l-4da9-b7d0-3340ef655nnb",
   "type": "Pipe",
-  "createdAt": "2020-02-20T15:42:00Z",
-  "modifiedAt": "2020-02-20T15:45:00Z",
   "initialStatus": {
     "type": "Property",
     "value": "OPEN"
@@ -13,7 +11,7 @@
   },
   "length": {
     "type": "Property",
-    "value": 52.9,
+    "value": 52.90,
     "unitCode": "MTR"
   },
   "diameter": {
@@ -72,6 +70,42 @@
     "type": "Property",
     "value": 72.4549,
     "unitCode": "RRC"
+  },
+  "flow": {
+    "type": "Property",
+    "value": {
+      "type": "Property",
+      "value": 20,
+      "unitCode": "G51"
+    },
+    "observedBy": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Device:device-9845A"
+    }
+  },
+  "velocity": {
+    "type": "Property",
+    "value": {
+      "type": "Property",
+      "value": 2,
+      "unitCode": "MTS"
+    },
+    "observedBy": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Device:device-9845A"
+    }
+  },
+  "quality": {
+    "type": "Property",
+    "value": {
+      "type": "Property",
+      "value": 0.5,
+      "unitCode": "F27"
+    },
+    "observedBy": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Device:device-9845A"
+    }
   },
   "@context": [
     "https://smartdatamodels.org/context.jsonld"

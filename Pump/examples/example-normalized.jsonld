@@ -1,8 +1,6 @@
 {
   "id": "urn:ngsi-ld:Pump:85zhnf58-0d4c-h4g854g-b7d0-3310klm",
   "type": "Pump",
-  "createdAt": "2020-03-02T15:42:00Z",
-  "modifiedAt": "2020-03-02T15:45:00Z",
   "initialStatus": {
     "type": "Property",
     "value": "OPEN"
@@ -65,6 +63,53 @@
   "energyPattern": {
     "type": "Relationship",
     "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
+  },
+  "flow": {
+    "type": "Property",
+    "value": {
+      "value": 20,
+      "unitCode": "G51"
+    },
+    "observedBy": {
+      "value": "urn:ngsi-ld:Device:device-9845A",
+      "type": "Relationship"
+    }
+  },
+  "velocity": {
+    "type": "Property",
+    "value": {
+      "type": "Property",
+      "value": 2,
+      "unitCode": "MTS"
+    },
+    "observedBy": {
+      "type": "Relationship",
+      "value": "urn:ngsi-ld:Device:device-9845A"
+    }
+  },
+  "quality": {
+    "type": "Property",
+    "value": {
+      "type": "Property",
+      "value": 0.5,
+      "unitCode": "F27"
+    },
+    "observedBy": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Device:device-9845A"
+    }
+  },
+  "energyUse": {
+    "type": "Property",
+    "value": {
+      "type": "Property",
+      "value": 50,
+      "unitCode": "KWT"
+    },
+    "observedBy": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Device:device-9845A"
+    }
   },
   "@context": [
     "https://smartdatamodels.org/context.jsonld"
