@@ -60,7 +60,6 @@
   ],
   "required": [
     "id",
-    "type",
-    "location"
+    "type"
   ]
 }

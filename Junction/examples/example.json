@@ -1,27 +1,29 @@
 {
-    "id": "63fe7d79-0d4c-4da9-b7d0-3340efa0656a",
-    "type": "Junction",
-    "location": {
-        "type": "Point",
-        "coordinates": [
-            24.30623,
-            60.07966
-        ]
-    },
-    "elevation": 105.8,
-    "demandCategory": {
-        "value": 1.763868462,
-        "baseDemand": "agriculture demand",
-        "demandPattern": "fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
-    },
-    "sourceCategory": {
-        "value": "CategoryX",
-        "sourceType": "MASS",
-        "sourceQuality": 1.2,
-        "sourcePattern": "fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
-    },
-    "tag": "DMA1",
-    "description": "This entity contains a harmonised description of a Junction",
-    "initialQuality": 0.5,
-    "emitterCoefficient": 0.526
+  "id": "63fe7d79-0d4c-4da9-b7d0-3340efa0656a",
+  "type": "Junction",
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      24.30623,
+      60.07966
+    ]
+  },
+  "elevation": 105.8,
+  "demandCategory": {
+    "value": 1.763868462,
+    "baseDemand": "agriculture demand",
+    "demandPattern": "fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
+  },
+  "sourceCategory": {
+    "value": "CategoryX",
+    "sourceType": "MASS",
+    "sourceQuality": 1.2,
+    "sourcePattern": "fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
+  },
+  "tag": "DMA1",
+  "description": "This entity contains a harmonised description of a Junction",
+  "initialQuality": {
+    "value": 0.5
+  },
+  "emitterCoefficient": 0.526
 }
