@@ -27,7 +27,7 @@ Network:
           type: string
       type: Property
       x-ngsi:
-        model: https://schema.org/adddress
+        model: https://schema.org/address
     alternateName:
       description: 'An alternative name for this item'
       type: Property
@@ -264,5 +264,4 @@ Network:
   required:
     - id
     - type
-    - hasSubNetwork
   type: object
