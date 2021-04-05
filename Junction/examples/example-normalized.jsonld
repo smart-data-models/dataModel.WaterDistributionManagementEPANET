@@ -1,117 +1,134 @@
 {
-    "id": "urn:ngsi-ld:Junction:63fe7d79-0d4c-4da9-b7d0-3340efa0656a",
-    "type": "Junction",
-    "createdAt": "2020-02-20T15:42:00Z",
-    "modifiedAt": "2020-02-20T15:45:00Z",
-    "location": {
-        "type": "GeoProperty",
-        "value": {
-            "type": "Point",
-            "coordinates": [
-                24.30623,
-                60.07966
-            ]
-        }
+  "id": "urn:ngsi-ld:Junction:63fe7d79-0d4c-4da9-b7d0-3340efa0656a",
+  "type": "Junction",
+  "location": {
+    "type": "GeoProperty",
+    "value": {
+      "type": "Point",
+      "coordinates": [
+        24.30623,
+        60.07966
+      ]
+    }
+  },
+  "elevation": {
+    "type": "Property",
+    "value": 105.8,
+    "unitCode": "MTR"
+  },
+  "demandCategory": {
+    "type": "Property",
+    "value": {
+      "type": "Property",
+      "value": "agriculture demand"
     },
-    "elevation": {
-        "type": "Property",
-        "value": 105.8,
-        "unitCode": "MTR"
+    "baseDemand": {
+      "type": "Property",
+      "value": "1.763868462",
+      "unitCode": "MQS"
     },
-    "demandCategory": {
-        "type": "Property",
-        "value": "agriculture demand",
-        "baseDemand": {
-            "type": "Property",
-            "value": "1.763868462",
-            "unitCode": "MQS"
-        },
-        "demandPattern": {
-            "type": "Relationship",
-            "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533"
-        }
+    "demandPattern": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533"
+    }
+  },
+  "sourceCategory": {
+    "type": "Property",
+    "value": {
+      "type": "Property",
+      "value": "CategoryX"
     },
-    "sourceCategory": {
-        "type": "Property",
-        "value": "CategoryX",
-        "sourceType": {
-            "type": "Property",
-            "value": "MASS"
-        },
-        "sourceQuality": {
-            "type": "Property",
-            "value": 1.2,
-            "unitCode": "M1"
-        },
-        "sourcePattern": {
-            "type": "Relationship",
-            "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
-        }
+    "sourceType": {
+      "type": "Property",
+      "value": "MASS"
     },
-   "tag": {
-        "type": "Property",
-        "value": "DMA1"
+    "sourceQuality": {
+      "type": "Property",
+      "value": 1.2,
+      "unitCode": "M1"
     },
-    "description": {
-        "type": "Property",
-        "value": "This entity contains a harmonised description of a Junction"
+    "sourcePattern": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
+    }
+  },
+  "tag": {
+    "type": "Property",
+    "value": "DMA1"
+  },
+  "description": {
+    "type": "Property",
+    "value": "This entity contains a harmonised description of a Junction"
+  },
+  "initialQuality": {
+    "type": "Property",
+    "value": 0.5,
+    "unitCode": "M1"
+  },
+  "emitterCoefficient": {
+    "type": "Property",
+    "value": 0.526,
+    "unitCode": "S4"
+  },
+  "pressure": {
+    "type": "Property",
+    "value": {
+      "type": "Property",
+      "value": 20,
+      "unitCode": "MTR"
     },
-    "initialQuality": {
-        "type": "Property",
-        "value": 0.5,
-        "unitCode":"M1"
+    "observedBy": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Device:device-9845A"
+    }
+  },
+  "supply": {
+    "type": "Property",
+    "value": {
+      "type": "Property",
+      "value": 150,
+      "unitCode": "LTR"
     },
-    "emitterCoefficient": {
-        "type": "Property",
-        "value": 0.526,
-        "unitCode": "S4"
+    "observedBy": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Device:device-9845A"
+    }
+  },
+  "head": {
+    "type": "Property",
+    "value": {
+      "type": "Property",
+      "value": 20,
+      "unitCode": "MTR"
     },
-    "pressure": {
-        "type": "Property",
-        "value": 20,
-        "unitCode": "MTR",
-        "observedBy": {
-            "type": "Relationship",
-            "object": "urn:ngsi-ld:Device:device-9845A"
-        }
+    "observedBy": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Device:device-9845A"
+    }
+  },
+  "quality": {
+    "type": "Property",
+    "value": {
+      "value": 0.5,
+      "unitCode": "M1"
     },
-    "supply": {
-        "type": "Property",
-        "value": 150,
-        "unitCode": "LTR",
-        "observedBy": {
-            "type": "Relationship",
-            "object": "urn:ngsi-ld:Device:device-9845A"
-        }
+    "observedBy": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Device:device-9845A"
+    }
+  },
+  "sourceMassInflow": {
+    "type": "Property",
+    "value": {
+      "value": 100,
+      "unitCode": "F27"
     },
-    "head": {
-        "type": "Property",
-        "value": 20,
-        "unitCode": "MTR",
-        "observedBy": {
-            "type": "Relationship",
-            "object": "urn:ngsi-ld:Device:device-9845A"
-        }
-    },
-    "quality": {
-        "type": "Property",
-        "value": 0.5,
-        "unitCode": "M1",
-        "observedBy": {
-            "type": "Relationship",
-            "object": "urn:ngsi-ld:Device:device-9845A"
-        }
-    },
-    "sourceMassInflow": {
-        "type": "Property",
-        "value": 100,
-        "unitCode": "F27",
-        "observedBy": {
-            "type": "Relationship",
-            "object": "urn:ngsi-ld:Device:device-9845A"
-        }
-    },
-    "@context": [
-        "https://schema.lab.fiware.org/ld/context"
-    ]
+    "observedBy": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Device:device-9845A"
+    }
+  },
+  "@context": [
+    "https://smartdatamodels.org/context.jsonld"
+  ]
 }
