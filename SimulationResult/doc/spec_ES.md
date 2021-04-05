@@ -1,11 +1,11 @@
 Entidad: SimulationResult  
 =========================  
-[Licencia abierta](https://github.com/smart-data-models//dataModel.WaterNetworkManagement/blob/master/SimulationResult/LICENSE.md)  
-Descripción global: **Esta entidad contiene una descripción armonizada de un resultado de simulación genérico realizado para el dominio de la gestión de redes de agua. Esta entidad está asociada principalmente a la vertical de gestión de redes de agua y a las aplicaciones IoT relacionadas.**.  
+[Licencia abierta](https://github.com/smart-data-models//dataModel.WaterDistributionManagementEPANET/blob/master/SimulationResult/LICENSE.md)  
+Descripción global: **Esta entidad contiene una descripción armonizada de un resultado de simulación genérico realizado para el dominio de la gestión de redes de agua. Esta entidad está asociada principalmente a la vertical de gestión de la red de agua y a las aplicaciones IoT relacionadas.**.  
 
 ## Lista de propiedades  
 
-- `address`: La dirección postal  - `alternateName`: Un nombre alternativo para este artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description`: Una descripción de este artículo  - `hasInputNetwork`: El ID de la red utilizada en la simulación  - `id`: Identificador único de la entidad  - `location`:   - `name`: El nombre de este artículo.  - `outputParameters`: Descripción del conjunto de resultados de la simulación aplicada a la red.  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `refSimulationScenario`: El ID del escenario de simulación  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `type`: Tipo de entidad NGSI-LD. Tiene que ser SimulationResult    
+- `address`: La dirección postal  - `alternateName`: Un nombre alternativo para este artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description`: Una descripción de este artículo  - `hasInputNetwork`: El ID de la red utilizada en la simulación  - `id`: Identificador único de la entidad  - `location`:   - `name`: El nombre de este artículo.  - `outputParameters`: Descripción del conjunto de resultados de la simulación aplicada a la red.  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `refSimulationScenario`: El ID del escenario de simulación  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen, o la URL del objeto de origen.  - `type`: Tipo de entidad NGSI-LD. Tiene que ser SimulationResult    
 Propiedades requeridas  
 - `id`  - `refSimulationScenario`  - `type`  ## Descripción del modelo de datos de las propiedades  
 Ordenados alfabéticamente (haga clic para ver los detalles)  
@@ -40,7 +40,7 @@ SimulationResult:
           type: string    
       type: Property    
       x-ngsi:    
-        model: https://schema.org/adddress    
+        model: https://schema.org/address    
     alternateName:    
       description: 'An alternative name for this item'    
       type: Property    
@@ -316,8 +316,8 @@ SimulationResult:
 ```  
 </details>    
 ## Ejemplo de carga útil  
-#### SimulationResult NGSI V2 key-values Ejemplo  
-Aquí hay un ejemplo de un SimulationResult en formato JSON como valores-clave. Esto es compatible con NGSI V2 cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+#### SimulationResult NGSI-v2 key-values Ejemplo  
+Aquí hay un ejemplo de un SimulationResult en formato JSON-LD como valores-clave. Esto es compatible con NGSI-v2 cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
   "id": "urn:ngsi-ld:SimulationResult:01",  
@@ -339,8 +339,8 @@ SimulationResult:
   ]  
 }  
 ```  
-#### SimulationResult NGSI V2 normalizado Ejemplo  
-Este es un ejemplo de un SimulationResult en formato JSON normalizado. Esto es compatible con NGSI V2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+#### SimulationResult NGSI-v2 normalizado Ejemplo  
+Este es un ejemplo de un SimulationResult en formato JSON-LD normalizado. Esto es compatible con NGSI-v2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
   "id": "urn:ngsi-ld:SimulationResult:01",  
@@ -407,7 +407,7 @@ SimulationResult:
     }  
   ],  
   "@context": [  
-    "https://schema.lab.fiware.org/ld/context"  
+    "https://smartdatamodels.org/context.jsonld"  
   ]  
 }  
 ```  
@@ -415,50 +415,50 @@ SimulationResult:
 Este es un ejemplo de un SimulationResult en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
-    "id": "urn:ngsi-ld:SimulationResult:01",  
-    "type": "SimulationResult",  
-    "description": {  
+  "id": "urn:ngsi-ld:SimulationResult:01",  
+  "type": "SimulationResult",  
+  "description": {  
+    "type": "Property",  
+    "value": "Free Text"  
+  },  
+  "hasInputNetwork": {  
+    "type": "Relationship",  
+    "object": "urn:ngsi-ld:WaterNetwork:01"  
+  },  
+  "refSimulationScenario": {  
+    "type": "Relationship",  
+    "object": "urn:ngsi-ld:Simulation:01"  
+  },  
+  "outputParameters": [  
+    {  
+      "type": "Property",  
+      "value": "output parameter 1",  
+      "waterLevel": {  
         "type": "Property",  
-        "value": "Free Text"  
-    },  
-    "hasInputNetwork": {  
-        "type": "Relationship",  
-        "object": "urn:ngsi-ld:WaterNetwork:01"  
-    },  
-    "refSimulationScenario": {  
-        "type": "Relationship",  
-        "object": "urn:ngsi-ld:Simulation:01"  
-    },  
-    "outputParameters": [  
-        {  
-            "type": "Property",  
-            "value": "output parameter 1",  
-            "waterLevel": {  
-                "type": "Property",  
-                "value": 50,  
-                "targetURI": {  
-                    "type": "Property",  
-                    "value": "urn:ngsi-ld:Valve:V1"  
-                }  
-            },  
-            "datasetId": "urn:ngsi-ld:Dataset:ValveSetting"  
-        },  
-        {  
-            "type": "Property",  
-            "value": "output parameter 2",  
-            "initialQuality": {  
-                "type": "Property",  
-                "value": 2,  
-                "targetURI": {  
-                    "type": "Relationship",  
-                    "value": "urn:ngsi-ld:Tank:T1"  
-                }  
-            },  
-            "datasetId": "urn:ngsi-ld:Dataset:TankInitialQuality"  
+        "value": 50,  
+        "targetURI": {  
+          "type": "Property",  
+          "value": "urn:ngsi-ld:Valve:V1"  
         }  
-    ],  
-    "@context": [  
-        "https://schema.lab.fiware.org/ld/context"  
-    ]  
+      },  
+      "datasetId": "urn:ngsi-ld:Dataset:ValveSetting"  
+    },  
+    {  
+      "type": "Property",  
+      "value": "output parameter 2",  
+      "initialQuality": {  
+        "type": "Property",  
+        "value": 2,  
+        "targetURI": {  
+          "type": "Relationship",  
+          "value": "urn:ngsi-ld:Tank:T1"  
+        }  
+      },  
+      "datasetId": "urn:ngsi-ld:Dataset:TankInitialQuality"  
+    }  
+  ],  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld"  
+  ]  
 }  
 ```  
