@@ -39,18 +39,54 @@
           "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/sourceCategory"
         },
         "headPattern": {
-          "type": "string",
-          "format": "uri",
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256,
+              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+              "description": "Property. Identifier format of any NGSI entity"
+            },
+            {
+              "type": "string",
+              "format": "uri",
+              "description": "Property. Identifier format of any NGSI entity"
+            }
+          ],
           "description": "Relationship. The ID label of a time pattern used to model time variation in the reservoir's total head"
         },
         "hasInlet": {
-          "type": "string",
-          "format": "uri",
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256,
+              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+              "description": "Property. Identifier format of any NGSI entity"
+            },
+            {
+              "type": "string",
+              "format": "uri",
+              "description": "Property. Identifier format of any NGSI entity"
+            }
+          ],
           "description": "Relationship. A relationship indicating the water inlet points of the Reservoir"
         },
         "hasOutlet": {
-          "type": "string",
-          "format": "uri",
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256,
+              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+              "description": "Property. Identifier format of any NGSI entity"
+            },
+            {
+              "type": "string",
+              "format": "uri",
+              "description": "Property. Identifier format of any NGSI entity"
+            }
+          ],
           "description": "Relationship. A relationship indicating the water outlet points of the Reservoir"
         },
         "pressure": {

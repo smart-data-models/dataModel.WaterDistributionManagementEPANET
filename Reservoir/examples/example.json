@@ -1,23 +1,25 @@
 {
-    "id": "1863179e-3768-4480-9167-ff21f870dd19",
-    "type": "Reservoir",
-    "location": {
-        "type": "Point",
-        "coordinates": [
-            24.30623,
-            60.07966
-        ]
-    },
-    "reservoirHead": 59.00,
-    "headPattern": "fbcb5fc8-8ca3-4533",
-    "elevation": 105.8,
-    "description": "This entity contains a harmonised description of a Reservoir",
-    "initialQuality": 0.5,
-    "sourceCategory": {
-        "value": "CategroyX",
-        "sourceType": "MASS",
-        "sourceQuality": 1.2,
-        "sourcePattern": "fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
-    },
-    "tag": "DMA1"
+  "id": "1863179e-3768-4480-9167-ff21f870dd19",
+  "type": "Reservoir",
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      24.30623,
+      60.07966
+    ]
+  },
+  "reservoirHead": 59.00,
+  "headPattern": "fbcb5fc8-8ca3-4533",
+  "elevation": 105.8,
+  "description": "This entity contains a harmonised description of a Reservoir",
+  "initialQuality": {
+    "value": 0.5
+  },
+  "sourceCategory": {
+    "value": "CategroyX",
+    "sourceType": "MASS",
+    "sourceQuality": 1.2,
+    "sourcePattern": "fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
+  },
+  "tag": "DMA1"
 }

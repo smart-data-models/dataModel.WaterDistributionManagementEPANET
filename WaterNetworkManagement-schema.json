@@ -17,8 +17,20 @@
           "description": "Property. Model:'https://schema.org/Text. Baseline or average demand for the category. A sub-property of the Property 'demandCategory'."
         },
         "demandPattern": {
-          "type": "string",
-          "format": "uri",
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256,
+              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+              "description": "Property. Identifier format of any NGSI entity"
+            },
+            {
+              "type": "string",
+              "format": "uri",
+              "description": "Property. Identifier format of any NGSI entity"
+            }
+          ],
           "description": "Relationship. A relationship to the pattern of the 'demandCategory' property."
         }
       }
@@ -42,8 +54,20 @@
           "description": "Property. Model:'https://schema.org/Number'. Units: 'mg/L'. Baseline or average concentration (or mass flow rate) of source. A sub-property of the Property 'sourceCategory'. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code."
         },
         "sourcePattern": {
+          "anyOf": [
+        {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256,
+          "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+          "description": "Property. Identifier format of any NGSI entity"
+        },
+        {
           "type": "string",
           "format": "uri",
+          "description": "Property. Identifier format of any NGSI entity"
+        }
+      ],
           "description": "Relationship. A relationship to the pattern pf the sourceCategory property"
         }
       }
@@ -107,8 +131,20 @@
           "type": "number"
         },
         "observedBy": {
-          "type": "string",
-          "format": "uri"
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256,
+              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+              "description": "Property. Identifier format of any NGSI entity"
+            },
+            {
+              "type": "string",
+              "format": "uri",
+              "description": "Property. Identifier format of any NGSI entity"
+            }
+          ]
         }
       }
     },
