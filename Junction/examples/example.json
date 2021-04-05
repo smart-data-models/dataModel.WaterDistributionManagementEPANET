@@ -10,8 +10,8 @@
     },
     "elevation": 105.8,
     "demandCategory": {
-        "value": "agriculture demand",
-        "baseDemand": "1.763868462",
+        "value": 1.763868462,
+        "baseDemand": "agriculture demand",
         "demandPattern": "fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
     },
     "sourceCategory": {
