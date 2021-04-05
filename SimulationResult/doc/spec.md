@@ -1,6 +1,6 @@
 Entity: SimulationResult  
 ========================  
-[Open License](https://github.com/smart-data-models//dataModel.WaterNetworkManagement/blob/master/SimulationResult/LICENSE.md)  
+[Open License](https://github.com/smart-data-models//dataModel.WaterDistributionManagementEPANET/blob/master/SimulationResult/LICENSE.md)  
 Global description: **This entity contains a harmonised description of a generic simulation result made for the Water Network Management domain. This entity is primarily associated with the water network management vertical and related IoT applications.**  
 
 ## List of properties  
@@ -40,7 +40,7 @@ SimulationResult:
           type: string    
       type: Property    
       x-ngsi:    
-        model: https://schema.org/adddress    
+        model: https://schema.org/address    
     alternateName:    
       description: 'An alternative name for this item'    
       type: Property    
@@ -316,8 +316,8 @@ SimulationResult:
 ```  
 </details>    
 ## Example payloads    
-#### SimulationResult NGSI V2 key-values Example    
-Here is an example of a SimulationResult in JSON format as key-values. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
+#### SimulationResult NGSI-v2 key-values Example    
+Here is an example of a SimulationResult in JSON-LD format as key-values. This is compatible with NGSI-v2 when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {  
   "id": "urn:ngsi-ld:SimulationResult:01",  
@@ -339,8 +339,8 @@ SimulationResult:
   ]  
 }  
 ```  
-#### SimulationResult NGSI V2 normalized Example    
-Here is an example of a SimulationResult in JSON format as normalized. This is compatible with NGSI V2 when not using options and returns the context data of an individual entity.  
+#### SimulationResult NGSI-v2 normalized Example    
+Here is an example of a SimulationResult in JSON-LD format as normalized. This is compatible with NGSI-v2 when not using options and returns the context data of an individual entity.  
 ```json  
 {  
   "id": "urn:ngsi-ld:SimulationResult:01",  
@@ -407,7 +407,7 @@ SimulationResult:
     }  
   ],  
   "@context": [  
-    "https://schema.lab.fiware.org/ld/context"  
+    "https://smartdatamodels.org/context.jsonld"  
   ]  
 }  
 ```  
@@ -415,50 +415,50 @@ SimulationResult:
 Here is an example of a SimulationResult in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
 ```json  
 {  
-    "id": "urn:ngsi-ld:SimulationResult:01",  
-    "type": "SimulationResult",  
-    "description": {  
+  "id": "urn:ngsi-ld:SimulationResult:01",  
+  "type": "SimulationResult",  
+  "description": {  
+    "type": "Property",  
+    "value": "Free Text"  
+  },  
+  "hasInputNetwork": {  
+    "type": "Relationship",  
+    "object": "urn:ngsi-ld:WaterNetwork:01"  
+  },  
+  "refSimulationScenario": {  
+    "type": "Relationship",  
+    "object": "urn:ngsi-ld:Simulation:01"  
+  },  
+  "outputParameters": [  
+    {  
+      "type": "Property",  
+      "value": "output parameter 1",  
+      "waterLevel": {  
         "type": "Property",  
-        "value": "Free Text"  
-    },  
-    "hasInputNetwork": {  
-        "type": "Relationship",  
-        "object": "urn:ngsi-ld:WaterNetwork:01"  
-    },  
-    "refSimulationScenario": {  
-        "type": "Relationship",  
-        "object": "urn:ngsi-ld:Simulation:01"  
-    },  
-    "outputParameters": [  
-        {  
-            "type": "Property",  
-            "value": "output parameter 1",  
-            "waterLevel": {  
-                "type": "Property",  
-                "value": 50,  
-                "targetURI": {  
-                    "type": "Property",  
-                    "value": "urn:ngsi-ld:Valve:V1"  
-                }  
-            },  
-            "datasetId": "urn:ngsi-ld:Dataset:ValveSetting"  
-        },  
-        {  
-            "type": "Property",  
-            "value": "output parameter 2",  
-            "initialQuality": {  
-                "type": "Property",  
-                "value": 2,  
-                "targetURI": {  
-                    "type": "Relationship",  
-                    "value": "urn:ngsi-ld:Tank:T1"  
-                }  
-            },  
-            "datasetId": "urn:ngsi-ld:Dataset:TankInitialQuality"  
+        "value": 50,  
+        "targetURI": {  
+          "type": "Property",  
+          "value": "urn:ngsi-ld:Valve:V1"  
         }  
-    ],  
-    "@context": [  
-        "https://schema.lab.fiware.org/ld/context"  
-    ]  
+      },  
+      "datasetId": "urn:ngsi-ld:Dataset:ValveSetting"  
+    },  
+    {  
+      "type": "Property",  
+      "value": "output parameter 2",  
+      "initialQuality": {  
+        "type": "Property",  
+        "value": 2,  
+        "targetURI": {  
+          "type": "Relationship",  
+          "value": "urn:ngsi-ld:Tank:T1"  
+        }  
+      },  
+      "datasetId": "urn:ngsi-ld:Dataset:TankInitialQuality"  
+    }  
+  ],  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld"  
+  ]  
 }  
 ```  
