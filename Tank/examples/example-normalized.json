@@ -1,129 +1,117 @@
 {
-    "id": "1863179e-3968-4493-9167-ee21f880cc02",
-    "type": "Tank",
-    "location": {
-        "type": "geo:json",
-        "value": {
-            "type": "Point",
-            "coordinates": [
-                24.30623,
-                60.07966
-            ]
-        }
-    },
-    "elevation": {
-        "value": 112.9
-    },
-    "initLevel": {
-        "value": 3
-    },
-    "minLevel": {
-        "value": 0
-    },
-    "maxLevel": {
-        "value": 6.75
-    },
-    "minVolume": {
-        "value": 0
-    },
-    "nominalDiameter": {
-        "value": 13.73
-    },
-    "description": {
-        "value": "Free Text"
-    },
-    "initialQuality": {
-        "value": 0.5
-    },
-    "sourceCategory": {
-        "value": {
-            "value": "category1",
-            "sourceType": {
-                "value": "MASS"
-            },
-            "sourceQuality": {
-                "value": 1.2
-            },
-            "sourcePattern": {
-                "type": "Relationship",
-                "value": "fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
-            }
-        }
-    },
-    "mixingModel": {
-        "value": "MIXED"
-    },
-    "volumeCurve": {
-        "type": "Relationship",
-        "value": "fAM-8ca3-4533-a2eb-12015"
-    },
-    "mixingFraction": {
-        "value": 0.7
-    },
-    "bulkReactionCoefficient": {
-        "value": 0.7
-    },
-    "tag": {
-        "value": "DMA1"
-    },
-    "level": {
-        "value": {
-            "value": 20,
-            "unitCode": "MTR",
-            "observedBy": {
-                "type": "Relationship",
-                "value": "device-9845A"
-            }
-        }
-    },
-    "pressure": {
-        "value": {
-            "value": 20,
-            "unitCode": "MTR",
-            "observedBy": {
-                "type": "Relationship",
-                "value": "device-9845A"
-            }
-        }
-    },
-    "supply": {
-        "value": {
-            "value": 150,
-            "unitCode": "LTR",
-            "observedBy": {
-                "type": "Relationship",
-                "value": "device-9845A"
-            }
-        }
-    },
-    "head": {
-        "value": {
-            "value": 20,
-            "unitCode": "MTR",
-            "observedBy": {
-                "type": "Relationship",
-                "value": "device-9845A"
-            }
-        }
-    },
-    "quality": {
-        "value": {
-            "value": 0.5,
-            "unitCode": "M1",
-            "observedBy": {
-                "type": "Relationship",
-                "value": "device-9845A"
-            }
-        }
-    },
-    "sourceMassInflow": {
-        "value": {
-            "value": 100,
-            "unitCode": "F27",
-            "observedBy": {
-                "type": "Relationship",
-                "value": "device-9845A"
-            }
-        }
+  "id": "1863179e-3968-4493-9167-ee21f880cc02",
+  "type": "Tank",
+  "location": {
+    "type": "geo:json",
+    "value": {
+      "type": "Point",
+      "coordinates": [
+        24.30623,
+        60.07966
+      ]
     }
+  },
+  "elevation": {
+    "type": "Number",
+    "value": 112.9
+  },
+  "initLevel": {
+    "type": "Number",
+    "value": 3
+  },
+  "minLevel": {
+    "type": "Number",
+    "value": 0
+  },
+  "maxLevel": {
+    "type": "Number",
+    "value": 6.75
+  },
+  "minVolume": {
+    "type": "Number",
+    "value": 0
+  },
+  "nominalDiameter": {
+    "type": "Number",
+    "value": 13.73
+  },
+  "description": {
+    "type": "Text",
+    "value": "Free Text"
+  },
+  "initialQuality": {
+    "type": "Number",
+    "value": 0.5
+  },
+  "sourceCategory": {
+    "type": "object",
+    "value": {
+      "value": "category1",
+      "sourceType": "MASS",
+      "sourceQuality": 1.2,
+      "sourcePattern": "fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
+    }
+  },
+  "mixingModel": {
+    "type": "Text",
+    "value": "MIXED"
+  },
+  "volumeCurve": {
+    "type": "Relationship",
+    "value": "fAM-8ca3-4533-a2eb-12015"
+  },
+  "mixingFraction": {
+    "type": "Number",
+    "value": 0.7
+  },
+  "bulkReactionCoefficient": {
+    "type": "Number",
+    "value": 0.7
+  },
+  "tag": {
+    "type": "Text",
+    "value": "DMA1"
+  },
+  "level": {
+    "type": "object",
+    "value": {
+      "value": 20,
+      "observedBy": "device-9845A"
+    }
+  },
+  "pressure": {
+    "type": "object",
+    "value": {
+      "value": 20,
+      "observedBy": "device-9845A"
+    }
+  },
+  "supply": {
+    "type": "object",
+    "value": {
+      "value": 150,
+      "observedBy": "device-9845A"
+    }
+  },
+  "head": {
+    "type": "object",
+    "value": {
+      "value": 20,
+      "observedBy": "device-9845A"
+    }
+  },
+  "quality": {
+    "type": "object",
+    "value": {
+      "value": 0.5,
+      "observedBy": "device-9845A"
+    }
+  },
+  "sourceMassInflow": {
+    "type": "object",
+    "value": {
+      "value": 100,
+      "observedBy": "device-9845A"
+    }
+  }
 }
