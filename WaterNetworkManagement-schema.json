@@ -138,6 +138,19 @@
         }
       }
     },
+    "initialQuality": {
+      "type": "object",
+      "description": "Property. Initial quality in the network component",
+      "properties": {
+        "value": {
+          "type": "number"
+        },
+        "observedBy": {
+          "type": "string",
+          "format": "uri"
+        }
+      }
+    },
     "energyUse": {
       "type": "object",
       "description": "Property. Observed energy use by the element of the network",
