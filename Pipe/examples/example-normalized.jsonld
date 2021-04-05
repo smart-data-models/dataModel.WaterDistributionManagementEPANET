@@ -16,7 +16,7 @@
   },
   "diameter": {
     "type": "Property",
-    "value": 203.00,
+    "value": 203.0,
     "unitCode": "MMT"
   },
   "roughness": {

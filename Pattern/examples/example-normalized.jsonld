@@ -1,31 +1,38 @@
 {
-    "id": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533-a2eb-34bc89262190",
-    "type": "Pattern",
-    "createdAt": "2020-02-20T17:43:00Z",
-    "modifiedAt": "2020-02-20T17:43:00Z",
-    "multipliers": {
-        "type": "Property",
-        "value": [0.5692, 0.4647, 0.4385, 0.3604, 0.3098, 0.3345],
-        "unitCode":"C62"
-    },
-    "timeStep": {
-        "type": "Property",
-        "value": 3600,
-        "unitCode": "SEC"
-    },
-    "description": {
-        "type": "Property",
-        "value": "Open Text"
-    },
-    "startTime": {
-        "type": "Property",
-        "value": "00:00"
-    },
-    "tag": {
-        "type": "Property",
-        "value": "DMA1"
-    },
-    "@context": [
-        "https://schema.lab.fiware.org/ld/context"
-    ]
+  "id": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533-a2eb-34bc89262190",
+  "type": "Pattern",
+  "createdAt": "2020-02-20T17:43:00Z",
+  "modifiedAt": "2020-02-20T17:43:00Z",
+  "multipliers": {
+    "type": "Property",
+    "value": [
+      0.5692,
+      0.4647,
+      0.4385,
+      0.3604,
+      0.3098,
+      0.3345
+    ],
+    "unitCode": "C62"
+  },
+  "timeStep": {
+    "type": "Property",
+    "value": 3600,
+    "unitCode": "SEC"
+  },
+  "description": {
+    "type": "Property",
+    "value": "Open Text"
+  },
+  "startTime": {
+    "type": "Property",
+    "value": "00:00"
+  },
+  "tag": {
+    "type": "Property",
+    "value": "DMA1"
+  },
+  "@context": [
+    "https://smartdatamodels.org/context.jsonld"
+  ]
 }

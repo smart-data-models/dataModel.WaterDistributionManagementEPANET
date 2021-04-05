@@ -1,13 +1,23 @@
-{"@context": ["https://schema.lab.fiware.org/ld/context"],
- "createdAt": "2020-02-20T15:42:00Z",
- "demandCategory": "agriculture demand",
- "description": "This entity contains a harmonised description of a Junction",
- "elevation": 105.8,
- "emitterCoefficient": 0.526,
- "id": "urn:ngsi-ld:Junction:63fe7d79-0d4c-4da9-b7d0-3340efa0656a",
- "initialQuality": 0.5,
- "location": {"coordinates": [24.30623, 60.07966], "type": "Point"},
- "modifiedAt": "2020-02-20T15:45:00Z",
- "sourceCategory": "CategoryX",
- "tag": "DMA1",
- "type": "Junction"}
+{
+  "@context": [
+    "https://smartdatamodels.org/context.jsonld"
+  ],
+  "createdAt": "2020-02-20T15:42:00Z",
+  "demandCategory": "agriculture demand",
+  "description": "This entity contains a harmonised description of a Junction",
+  "elevation": 105.8,
+  "emitterCoefficient": 0.526,
+  "id": "urn:ngsi-ld:Junction:63fe7d79-0d4c-4da9-b7d0-3340efa0656a",
+  "initialQuality": 0.5,
+  "location": {
+    "coordinates": [
+      24.30623,
+      60.07966
+    ],
+    "type": "Point"
+  },
+  "modifiedAt": "2020-02-20T15:45:00Z",
+  "sourceCategory": "CategoryX",
+  "tag": "DMA1",
+  "type": "Junction"
+}

@@ -1,17 +1,21 @@
-{"@context": ["https://schema.lab.fiware.org/ld/context"],
- "bulkCoeff": 72.4549,
- "createdAt": "2020-02-20T15:42:00Z",
- "description": "Free Text",
- "diameter": 203.0,
- "endsAt": "urn:ngsi-ld:Reservoir:1863179e-3768-4480-9167-ff21f870dd19",
- "id": "urn:ngsi-ld:Pipe:74azsty-70d4l-4da9-b7d0-3340ef655nnb",
- "initialStatus": "OPEN",
- "length": 52.9,
- "minorLoss": 72.4549,
- "modifiedAt": "2020-02-20T15:45:00Z",
- "roughness": 72.4549,
- "startsAt": "urn:ngsi-ld:Junction:63fe7d79-0d4c-4da9-b7d0-3340efa0656a",
- "status": "OPEN",
- "tag": "DMA1",
- "type": "Pipe",
- "wallCoeff": 72.4549}
+{
+  "@context": [
+    "https://smartdatamodels.org/context.jsonld"
+  ],
+  "bulkCoeff": 72.4549,
+  "createdAt": "2020-02-20T15:42:00Z",
+  "description": "Free Text",
+  "diameter": 203.0,
+  "endsAt": "urn:ngsi-ld:Reservoir:1863179e-3768-4480-9167-ff21f870dd19",
+  "id": "urn:ngsi-ld:Pipe:74azsty-70d4l-4da9-b7d0-3340ef655nnb",
+  "initialStatus": "OPEN",
+  "length": 52.9,
+  "minorLoss": 72.4549,
+  "modifiedAt": "2020-02-20T15:45:00Z",
+  "roughness": 72.4549,
+  "startsAt": "urn:ngsi-ld:Junction:63fe7d79-0d4c-4da9-b7d0-3340efa0656a",
+  "status": "OPEN",
+  "tag": "DMA1",
+  "type": "Pipe",
+  "wallCoeff": 72.4549
+}

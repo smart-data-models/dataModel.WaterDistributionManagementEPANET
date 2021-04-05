@@ -5,45 +5,49 @@
   "title": "WaterNetwork - Curve",
   "description": "This entity contains a harmonised description of a generic curve made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.",
   "type": "object",
-  "properties": {
-    "type": {
-      "type": "string",
-      "description": "Property. NGSI-LD Entity Type. It must be equal to Curve.",
-      "enum": [
-        "Curve"
-      ]
+  "allOf": [
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
     },
-    "tag": {
-      "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/tag"
-    },
-    "description": {
-      "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/description"
-    },
-    "curveType": {
-      "type": "string",
-      "enum": [
-        "FLOW-HEAD",
-        "FLOW-EFFICIENCY",
-        "FLOW-HEADLOSS",
-        "LEVEL-VOLUME"
-      ],
-      "description": "Property. Entity's curve type."
-    },
-    "xData": {
-      "type": "array",
-      "description": "Property. X data points for the curve",
-      "items": {
-        "type": "number"
-      }
-    },
-    "yData": {
-      "type": "array",
-      "description": "Property. Y data points for the curve",
-      "items": {
-        "type": "number"
+    {
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "Property. NGSI-LD Entity Type. It must be equal to Curve.",
+          "enum": [
+            "Curve"
+          ]
+        },
+        "tag": {
+          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/tag"
+        },
+        "curveType": {
+          "type": "string",
+          "enum": [
+            "FLOW-HEAD",
+            "FLOW-EFFICIENCY",
+            "FLOW-HEADLOSS",
+            "LEVEL-VOLUME"
+          ],
+          "description": "Property. Entity's curve type. Enum:'FLOW-HEAD, FLOW-EFFICIENCY, FLOW-HEADLOSS, LEVEL-VOLUME'"
+        },
+        "xData": {
+          "type": "array",
+          "description": "Property. X data points for the curve",
+          "items": {
+            "type": "number"
+          }
+        },
+        "yData": {
+          "type": "array",
+          "description": "Property. Y data points for the curve",
+          "items": {
+            "type": "number"
+          }
+        }
       }
     }
-  },
+  ],
   "required": [
     "id",
     "type",

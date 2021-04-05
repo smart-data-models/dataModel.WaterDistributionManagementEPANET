@@ -1,2 +1,2 @@
-"id_", "type_", "multipliers__0_", "multipliers__1_", "multipliers__2_", "multipliers__3_", "multipliers__4_", "multipliers__5_", "timeStep_", "description_", "tag_"
-"fbcb5fc8-8ca3-4533-a2eb-34bc89262190", "Pattern", "0.5692", "0.4647", "0.4385", "0.3604", "0.3098", "0.3345", "3600", "Open Text", "DMA1"
+"id_", "type_", "multipliers__0_", "multipliers__1_", "multipliers__2_", "multipliers__3_", "multipliers__4_", "multipliers__5_", "timeStep_", "description_", "tag_", "startTime_"
+"fbcb5fc8-8ca3-4533-a2eb-34bc89262190", "Pattern", "0.5692", "0.4647", "0.4385", "0.3604", "0.3098", "0.3345", "3600", "Open Text", "DMA1", "2020-02-20T17:43:00Z"

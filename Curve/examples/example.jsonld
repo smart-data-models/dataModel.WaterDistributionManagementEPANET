@@ -1,6 +1,6 @@
 {
   "@context": [
-    "https://schema.lab.fiware.org/ld/context"
+    "https://smartdatamodels.org/context.jsonld"
   ],
   "id": "fAM-8ca3-4533-a2eb-12015",
   "type": "Curve",
@@ -16,4 +16,3 @@
   "description": "Free Text",
   "tag": "DMA1"
 }
-

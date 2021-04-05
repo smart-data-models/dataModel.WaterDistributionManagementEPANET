@@ -1,43 +1,43 @@
----
-# Copyright (c) 2020 Contributors to Smart-Data-Models
-# see https://github.com/smart-data-models/dataModel.WaterNetworkManagement
-
 Curve:
+  description: 'This entity contains a harmonised description of a generic curve made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.'
+  properties:
+    curveType:
+      description: 'Entity''s curve type.'
+      enum:
+        - FLOW-HEAD
+        - FLOW-EFFICIENCY
+        - FLOW-HEADLOSS
+        - LEVEL-VOLUME
+      type: Property
+    description:
+      description: 'An optional text that describes other significant information about the junction'
+      type: Property
+      x-ngsi:
+        model: https://schema.org/Text
+    tag:
+      description: 'An optional text string used to assign the pipe to a category, perhaps one based on age or material'
+      type: Property
+      x-ngsi:
+        model: https://schema.org/Text
+    type:
+      description: 'NGSI-LD Entity Type. It must be equal to Curve.'
+      enum:
+        - Curve
+      type: Property
+    xData:
+      description: 'X data points for the curve'
+      items:
+        type: number
+      type: Property
+    yData:
+      description: 'Y data points for the curve'
+      items:
+        type: number
+      type: Property
   required:
     - id
     - type
     - curveType
     - xData
     - yData
-  allOf:
-    - $ref: >-
-        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/Common
   type: object
-  description: |
-    This entity contains a harmonised description of a generic curve made for
-    the Water Network Management domain. This entity is primarily associated
-    with the water management vertical and related IoT applications.
-  properties:
-    curveType:
-      x-ngsi:
-        type: Property
-      type: object
-      description: ''
-    description:
-      $ref: >-
-        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/description
-    tag:
-      x-ngsi:
-        type: Property
-      type: object
-      description: ''
-    xData:
-      x-ngsi:
-        type: Property
-      type: object
-      description: ''
-    yData:
-      x-ngsi:
-        type: Property
-      type: object
-      description: ''

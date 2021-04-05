@@ -1,0 +1,2 @@
+"id_", "type_", "description_", "isComposedOf__0_", "isComposedOf__1_", "isComposedOf__2_", "hasSubNetwork__0_", "hasSubNetwork__1_"
+"urn:ngsi-ld:WaterNetwork:01", "WaterNetwork", "Free Text", "urn:ngsi-ld:Tank:T1", "urn:ngsi-ld:Pipe:P1", "urn:ngsi-ld:Junction:J1", "urn:ngsi-ld:Network:12-70d4l-4da9", "urn:ngsi-ld:Network:A14-14d4B-4vvc"

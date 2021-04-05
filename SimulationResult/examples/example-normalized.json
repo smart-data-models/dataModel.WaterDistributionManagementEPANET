@@ -1,0 +1,42 @@
+{
+  "id": "urn:ngsi-ld:SimulationResult:01",
+  "type": "SimulationResult",
+  "description": {
+    "type": "Property",
+    "value": "Free Text"
+  },
+  "hasInputNetwork": {
+    "type": "Relationship",
+    "object": "urn:ngsi-ld:WaterNetwork:01"
+  },
+  "refSimulationScenario": {
+    "type": "Relationship",
+    "object": "urn:ngsi-ld:Simulation:01"
+  },
+  "outputParameters": [
+    {
+      "type": "Property",
+      "value": "output parameter 1",
+      "waterLevel": {
+        "type": "Property",
+        "value": 50,
+        "targetURI": {
+          "type": "Property",
+          "value": "urn:ngsi-ld:Valve:V1"
+        }
+      }
+    },
+    {
+      "type": "Property",
+      "value": "output parameter 2",
+      "initialQuality": {
+        "type": "Property",
+        "value": 2,
+        "targetURI": {
+          "type": "Relationship",
+          "value": "urn:ngsi-ld:Tank:T1"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+"@context__0_", "createdAt_", "description_", "id_", "modifiedAt_", "multipliers__0_", "multipliers__1_", "multipliers__2_", "multipliers__3_", "multipliers__4_", "multipliers__5_", "tag_", "timeStep_", "startTime_", "type_"
+"https://smartdatamodels.org/context.jsonld", "2020-02-20T17:43:00Z", "Open Text", "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533-a2eb-34bc89262190", "2020-02-20T17:43:00Z", "0.5692", "0.4647", "0.4385", "0.3604", "0.3098", "0.3345", "DMA1", "3600", "2020-02-20T17:43:00Z", "Pattern"

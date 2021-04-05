@@ -1,0 +1,293 @@
+{
+  "id": "urn:ngsi-ld:SimulationScenario:01",
+  "type": "SimulationScenario",
+  "description": {
+    "type": "Property",
+    "value": "Free Text"
+  },
+  "createdBy": {
+    "type": "Relationship",
+    "value": "urn:ngsi-ld:User:u1"
+  },
+  "hasInputNetwork": {
+    "type": "Relationship",
+    "value": "urn:ngsi-ld:WaterNetwork:01"
+  },
+  "hasSimulationResult": {
+    "type": "Relationship",
+    "value": "urn:ngsi-ld:SimulationResult:01"
+  },
+  "duration": {
+    "type": "Property",
+    "value": 86400
+  },
+  "hydraulicTimeStep": {
+    "type": "Property",
+    "value": 3600
+  },
+  "flowUnits": {
+    "type": "Property",
+    "value": "LPS"
+  },
+  "headlossFormula": {
+    "type": "Property",
+    "value": "H-W"
+  },
+  "startClockTime": {
+    "type": "Property",
+    "value": 0
+  },
+  "reportStep": {
+    "type": "Property",
+    "value": 3600
+  },
+  "reportStart": {
+    "type": "Property",
+    "value": 0
+  },
+  "ruleTimeStep": {
+    "type": "Property",
+    "value": 900
+  },
+  "statistic": {
+    "type": "Property",
+    "value": "NONE"
+  },
+  "trials": {
+    "type": "Property",
+    "value": 40
+  },
+  "accuracy": {
+    "type": "Property",
+    "value": 0.001
+  },
+  "tolerance": {
+    "type": "Property",
+    "value": 0.01
+  },
+  "emitterExponent": {
+    "type": "Property",
+    "value": 0.5
+  },
+  "headError": {
+    "type": "Property",
+    "value": 0
+  },
+  "flowChange": {
+    "type": "Property",
+    "value": 0.01
+  },
+  "demandCharge": {
+    "type": "Property",
+    "value": 2
+  },
+  "demandModel": {
+    "type": "Property",
+    "value": "PDA"
+  },
+  "minimumPressure": {
+    "type": "Property",
+    "value": 0
+  },
+  "requiredPressure": {
+    "type": "Property",
+    "value": 20
+  },
+  "pressureExponent": {
+    "type": "Property",
+    "value": 0.5
+  },
+  "viscosity": {
+    "type": "Property",
+    "value": 1
+  },
+  "unbalanced": {
+    "type": "Property",
+    "value": "continue_N"
+  },
+  "unbalancedN": {
+    "type": "Property",
+    "value": 20
+  },
+  "checkFrequency": {
+    "type": "Property",
+    "value": 2
+  },
+  "maxCheck": {
+    "type": "Property",
+    "value": 10,
+    "unitCode": "C62"
+  },
+  "dampLimit": {
+    "type": "Property",
+    "value": 0
+  },
+  "diffusivity": {
+    "type": "Property",
+    "value": 1
+  },
+  "bulkOrder": {
+    "type": "Property",
+    "value": 1
+  },
+  "wallOrder": {
+    "type": "Property",
+    "value": 1
+  },
+  "tankOrder": {
+    "type": "Property",
+    "value": 1
+  },
+  "concentrationLimit": {
+    "type": "Property",
+    "value": 0
+  },
+  "qualityType": {
+    "type": "Property",
+    "value": "chem"
+  },
+  "chemicalName": {
+    "type": "Property",
+    "value": "Chlorine"
+  },
+  "chemicalUnits": {
+    "type": "Property",
+    "value": "mg/l"
+  },
+  "specificGravity": {
+    "type": "Property",
+    "value": 1
+  },
+  "qualityTimeStep": {
+    "type": "Property",
+    "value": 60
+  },
+  "operationalControl": [
+    {
+      "type": "Property",
+      "value": "Operational Control 1",
+      "setting": {
+        "type": "Property",
+        "value": 0
+      },
+      "triggerLevel": {
+        "type": "Property",
+        "value": 30
+      },
+      "controlType": {
+        "type": "Property",
+        "value": "HILEVEL"
+      },
+      "controlledLink": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Tank:T1"
+      },
+      "monitoredNode": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Pump:P1"
+      }
+    },
+    {
+      "type": "Property",
+      "value": "Operational Control 2",
+      "triggerLevel": {
+        "type": "Property",
+        "value": 10
+      },
+      "setting": {
+        "type": "Property",
+        "value": 1
+      },
+      "controlType": {
+        "type": "Property",
+        "value": "LOWLEVEL"
+      },
+      "monitoredNode": {
+        "type": "Relationship",
+        "value": "urn:ngsi-ld:Tank:T1"
+      },
+      "controlledLink": {
+        "type": "Relationship",
+        "value": "urn:ngsi-ld:Pump:P1"
+      }
+    }
+  ],
+  "inputParameters": [
+    {
+      "type": "Property",
+      "value": "Property 1",
+      "setting": {
+        "type": "Property",
+        "value": 50,
+        "targetURI": {
+          "type": "Property",
+          "value": "urn:ngsi-ld:Valve:V1"
+        }
+      }
+    },
+    {
+      "type": "Property",
+      "value": "Property 2",
+      "initialQuality": {
+        "type": "Property",
+        "value": 2,
+        "targetURI": {
+          "type": "Relationship",
+          "value": "urn:ngsi-ld:Tank:T1"
+        }
+      }
+    },
+    {
+      "type": "Property",
+      "value": "Property 1",
+      "efficCurve": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Curve:C1",
+        "targetURI": {
+          "type": "Relationship",
+          "value": "urn:ngsi-ld:Pump:P1"
+        }
+      }
+    },
+    {
+      "type": "Property",
+      "value": "demand Category 1",
+      "demandCategory": {
+        "type": "Property",
+        "value": "agriculture demand",
+        "baseDemand": {
+          "type": "Property",
+          "value": 1.1
+        },
+        "demandPattern": {
+          "type": "Relationship",
+          "value": "urn:ngsi-ld:Pattern:Agriculture"
+        },
+        "targetURI": {
+          "type": "Relationship",
+          "object": "urn:ngsi-ld:Junction:J1"
+        }
+      }
+    },
+    {
+      "type": "Property",
+      "value": "demand Category 2",
+      "demandCategory": {
+        "type": "Property",
+        "value": "residential demand",
+        "baseDemand": {
+          "type": "Property",
+          "value": 1.7
+        },
+        "demandPattern": {
+          "type": "Relationship",
+          "value": "urn:ngsi-ld:Pattern:Residential"
+        },
+        "targetURI": {
+          "type": "Relationship",
+          "value": "urn:ngsi-ld:Junction:J1"
+        }
+      }
+    }
+  ]
+}

@@ -1,22 +1,19 @@
 ---
-# Copyright (c) 2020 Contributors to Smart-Data-Models
-# see https://github.com/smart-data-models/dataModel.WaterNetworkManagement
+# Copyleft (c) 2021 Contributors to Smart Data Models initiative
+# 
 
 
-components: 
+components:
   schemas: 
     Curve: 
-      $ref: "https://smart-data-models.github.io/dataModel.WaterNetworkManagement/Curve/model.yaml#/Curve"
-info: 
-  description: |
-    This entity contains an harmonised description of a generic curve made for the Water Network 
-    Management domain. This entity is primarily associated with the water management vertical 
-    and related IoT applications.
+      $ref: "https://smart-data-models.github.io/dataModel.WaterDistributionManagementEPANET/Curve/model.yaml#/Curve"
+info:
+  description:  |
+    This entity contains a harmonised description of a generic curve made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.
   title: Curve
   version: "1.0.0"
 openapi: "3.0.0"
 
-# These paths are merely representative.
 paths: 
   /ngsi-ld/v1/entities: 
     get: 
@@ -36,11 +33,16 @@ paths:
           content: 
             application/ld+json: 
               examples: 
+                keyvalues: 
+                  summary: "Key-Values Pairs"
+                  value: 
+                    - 
+                      $ref: "https://smart-data-models.github.io/dataModel.WaterDistributionManagementEPANET/Curve/examples/example.json"
                 normalized: 
                   summary: "Normalized NGSI-LD"
                   value: 
                     - 
-                      $ref: "https://smart-data-models.github.io/dataModel.WaterNetworkManagement/Curve/examples/example-normalized.jsonld"
+                      $ref: "https://smart-data-models.github.io/dataModel.WaterDistributionManagementEPANET/Curve/examples/example-normalized.jsonld"
           description: OK
       tags: 
         - ngsi-ld

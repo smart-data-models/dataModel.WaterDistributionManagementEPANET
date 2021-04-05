@@ -1,13 +1,23 @@
-{"@context": ["https://schema.lab.fiware.org/ld/context"],
- "createdAt": "2020-03-02T15:42:00Z",
- "description": "This entity contains a harmonised description of a Reservoir",
- "elevation": 105.8,
- "headPattern": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533",
- "id": "urn:ngsi-ld:Reservoir:1863179e-3768-4480-9167-ff21f870dd19",
- "initialQuality": 0.5,
- "location": {"coordinates": [24.30623, 60.07966], "type": "Point"},
- "modifiedAt": "2020-03-02T15:45:00Z",
- "reservoirHead": 59.0,
- "sourceCategory": "CategroyX",
- "tag": "DMA1",
- "type": "Reservoir"}
+{
+  "@context": [
+    "https://smartdatamodels.org/context.jsonld"
+  ],
+  "createdAt": "2020-03-02T15:42:00Z",
+  "description": "This entity contains a harmonised description of a Reservoir",
+  "elevation": 105.8,
+  "headPattern": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533",
+  "id": "urn:ngsi-ld:Reservoir:1863179e-3768-4480-9167-ff21f870dd19",
+  "initialQuality": 0.5,
+  "location": {
+    "coordinates": [
+      24.30623,
+      60.07966
+    ],
+    "type": "Point"
+  },
+  "modifiedAt": "2020-03-02T15:45:00Z",
+  "reservoirHead": 59.0,
+  "sourceCategory": "CategroyX",
+  "tag": "DMA1",
+  "type": "Reservoir"
+}

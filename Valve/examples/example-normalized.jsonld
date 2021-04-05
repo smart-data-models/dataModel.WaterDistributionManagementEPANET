@@ -1,58 +1,64 @@
 {
-    "id": "urn:ngsi-ld:Valve:87fe7d79-0d4c-4da9-b7d0-3340efa0656awytsd",
-    "type": "Valve",
-    "createdAt": "2020-03-02T15:42:00Z",
-    "modifiedAt": "2020-03-02T15:45:00Z",
-    "initiaStatus": {
-        "type": "Property",
-        "value": "OPEN"
-    },
-    "status": {
-        "type": "Property",
-        "value": "OPEN"
-    },
-    "diameter": {
-        "type": "Property",
-        "value": 203.20,
-        "unitCode": "MMT"
-    },
-    "valveType": {
-        "type": "Property",
-        "value": "PRV"
-    },
-    "setting": {
-        "type": "Property",
-        "value": 40.00,
-        "unitCode": "C62"
-    },
-    "minorLoss": {
-        "type": "Property",
-        "value": 0.00,
-        "unitCode": "C62"
-    },
-    "tag": {
-        "type": "Property",
-        "value": "DMA1"
-    },
-    "startsAt": {
-        "type": "Relationship",
-        "object": "urn:ngsi-ld:Junction:63fe7d79-0d4c-4da9-b7d0-3340efa0656a"
-    },
-    "endsAt": {
-        "type": "Relationship",
-        "object": "urn:ngsi-ld:Reservoir:1863179e-3768-4480-9167-ff21f870dd19"
-    },
-    "vertices": {
-        "type": "GeoProperty",
-        "value": {
-            "type": "MultiPoint",
-            "coordinates": [
-                [24.40623, 60.17966],
-                [24.50623, 60.27966]
-            ]
-        }
-    },
-    "@context": [
-        "https://schema.lab.fiware.org/ld/context"
-    ]
+  "id": "urn:ngsi-ld:Valve:87fe7d79-0d4c-4da9-b7d0-3340efa0656awytsd",
+  "type": "Valve",
+  "createdAt": "2020-03-02T15:42:00Z",
+  "modifiedAt": "2020-03-02T15:45:00Z",
+  "initiaStatus": {
+    "type": "Property",
+    "value": "OPEN"
+  },
+  "status": {
+    "type": "Property",
+    "value": "OPEN"
+  },
+  "diameter": {
+    "type": "Property",
+    "value": 203.2,
+    "unitCode": "MMT"
+  },
+  "valveType": {
+    "type": "Property",
+    "value": "PRV"
+  },
+  "setting": {
+    "type": "Property",
+    "value": 40.0,
+    "unitCode": "C62"
+  },
+  "minorLoss": {
+    "type": "Property",
+    "value": 0.0,
+    "unitCode": "C62"
+  },
+  "tag": {
+    "type": "Property",
+    "value": "DMA1"
+  },
+  "startsAt": {
+    "type": "Relationship",
+    "object": "urn:ngsi-ld:Junction:63fe7d79-0d4c-4da9-b7d0-3340efa0656a"
+  },
+  "endsAt": {
+    "type": "Relationship",
+    "object": "urn:ngsi-ld:Reservoir:1863179e-3768-4480-9167-ff21f870dd19"
+  },
+  "vertices": {
+    "type": "GeoProperty",
+    "value": {
+      "type": "MultiPoint",
+      "coordinates": [
+        [
+          24.40623,
+          60.17966
+        ],
+        [
+          24.50623,
+          60.27966
+        ]
+      ]
+    }
+  },
+  "@context": [
+    "https://smartdatamodels.org/context.jsonld"
+  ]
 }

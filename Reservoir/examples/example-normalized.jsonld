@@ -13,7 +13,7 @@
   },
   "reservoirHead": {
     "type": "Property",
-    "value": 59.00,
+    "value": 59.0,
     "unitCode": "MTR"
   },
   "headPattern": {

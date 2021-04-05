@@ -1,31 +1,37 @@
 {
-    "id": "urn:ngsi-ld:Curve:fAM-8ca3-4533-a2eb-12015",
-    "type": "Curve",
-    "createdAt": "2020-02-16T17:43:00Z",
-    "modifiedAt": "2020-02-16T17:43:00Z",
-    "curveType":{
-        "type": "Property",
-        "value": "FLOW-HEAD"
-    },
-    "xData": {
-        "type": "Property",
-        "value": [0.5692, 0.4647],
-        "unitCode":"C62"
-    },
-    "yData": {
-        "type": "Property",
-        "value": [0.5692, 0.4647],
-        "unitCode":"C62"
-    },
-    "description": {
-        "type": "Property",
-        "value": "Free Text"
-    },
-    "tag": {
-        "type": "Property",
-        "value": "DMA1"
-    },
-    "@context": [
-        "https://schema.lab.fiware.org/ld/context"
-    ]
+  "id": "urn:ngsi-ld:Curve:fAM-8ca3-4533-a2eb-12015",
+  "type": "Curve",
+  "createdAt": "2020-02-16T17:43:00Z",
+  "modifiedAt": "2020-02-16T17:43:00Z",
+  "curveType": {
+    "type": "Property",
+    "value": "FLOW-HEAD"
+  },
+  "xData": {
+    "type": "Property",
+    "value": [
+      0.5692,
+      0.4647
+    ],
+    "unitCode": "C62"
+  },
+  "yData": {
+    "type": "Property",
+    "value": [
+      0.5692,
+      0.4647
+    ],
+    "unitCode": "C62"
+  },
+  "description": {
+    "type": "Property",
+    "value": "Free Text"
+  },
+  "tag": {
+    "type": "Property",
+    "value": "DMA1"
+  },
+  "@context": [
+    "https://smartdatamodels.org/context.jsonld"
+  ]
 }

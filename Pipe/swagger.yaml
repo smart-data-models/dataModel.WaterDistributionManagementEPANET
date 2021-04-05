@@ -1,26 +1,23 @@
 ---
-# Copyright (c) 2020 Contributors to Smart-Data-Models
-# see https://github.com/smart-data-models/dataModel.WaterNetworkManagement
+# Copyleft (c) 2021 Contributors to Smart Data Models initiative
+# 
 
 
-components: 
+components:
   schemas: 
     Pipe: 
-      $ref: "https://smart-data-models.github.io/dataModel.WaterNetworkManagement/Pipe/model.yaml#/Pipe"
-info: 
-  description: ""
+      $ref: "https://smart-data-models.github.io/dataModel.WaterDistributionManagementEPANET/Pipe/model.yaml#/Pipe"
+info:
+  description:  |
+    This entity contains a harmonised description of a generic pipe made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.
   title: Pipe
   version: "1.0.0"
 openapi: "3.0.0"
 
-# These paths are merely representative.
 paths: 
   /ngsi-ld/v1/entities: 
     get: 
-      description: |
-         An entity of type ServiceRequest is an acceptable Open 311 service request.
-         Such entity encompasses all the properties defined by Open 311 at POST
-         Service Request and GET Service Request.
+      description: "Retrieve a set of entities which matches a specific query from an NGSI-LD system"
       parameters: 
         - 
           in: query
@@ -35,12 +32,17 @@ paths:
         : 
           content: 
             application/ld+json: 
-              examples:
+              examples: 
+                keyvalues: 
+                  summary: "Key-Values Pairs"
+                  value: 
+                    - 
+                      $ref: "https://smart-data-models.github.io/dataModel.WaterDistributionManagementEPANET/Pipe/examples/example.json"
                 normalized: 
                   summary: "Normalized NGSI-LD"
                   value: 
                     - 
-                      $ref: "https://smart-data-models.github.io/dataModel.WaterNetworkManagement/Pipe/examples/example-normalized.jsonld"
+                      $ref: "https://smart-data-models.github.io/dataModel.WaterDistributionManagementEPANET/Pipe/examples/example-normalized.jsonld"
           description: OK
       tags: 
         - ngsi-ld

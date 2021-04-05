@@ -1,6 +1,6 @@
 {
   "@context": [
-    "https://schema.lab.fiware.org/ld/context"
+    "https://smartdatamodels.org/context.jsonld"
   ],
   "createdAt": "2020-02-20T17:43:00Z",
   "description": "Open Text",

@@ -1,14 +1,17 @@
-{"@context": ["https://schema.lab.fiware.org/ld/context"],
-    "id": "87fe7d79-0d4c-4da9-b7d0-3340efa0656awytsd",
-    "type": "Valve",
-    "initiaStatus": "OPEN",
-    "status": "OPEN",
-    "diameter": 203.20,
-    "valveType": "PRV",
-    "setting": 40.00,
-    "minorLoss": 0.00,
-    "tag": "DMA1",
-    "startsAt": "uri:63fe7d79.0d4c-4da9-b7d0-3340efa0656a",
-    "endsAt": "uri:1863179e-3768-4480-9167-ff21f870dd19",
-    "initialStatus":"OPEN"
+{
+  "@context": [
+    "https://smartdatamodels.org/context.jsonld"
+  ],
+  "id": "87fe7d79-0d4c-4da9-b7d0-3340efa0656awytsd",
+  "type": "Valve",
+  "initiaStatus": "OPEN",
+  "status": "OPEN",
+  "diameter": 203.2,
+  "valveType": "PRV",
+  "setting": 40.0,
+  "minorLoss": 0.0,
+  "tag": "DMA1",
+  "startsAt": "uri:63fe7d79.0d4c-4da9-b7d0-3340efa0656a",
+  "endsAt": "uri:1863179e-3768-4480-9167-ff21f870dd19",
+  "initialStatus": "OPEN"
 }
