@@ -1,100 +1,113 @@
 {
-    "id": "urn:ngsi-ld:Pipe:74azsty-70d4l-4da9-b7d0-3340ef655nnb",
-    "type": "Pipe",
-    "createdAt": "2020-02-20T15:42:00Z",
-    "modifiedAt": "2020-02-20T15:45:00Z",
-    "initialStatus": {
-        "type": "Property",
-        "value": "OPEN"
+  "id": "urn:ngsi-ld:Pipe:74azsty-70d4l-4da9-b7d0-3340ef655nnb",
+  "type": "Pipe",
+  "initialStatus": {
+    "type": "Property",
+    "value": "OPEN"
+  },
+  "status": {
+    "type": "Property",
+    "value": "OPEN"
+  },
+  "length": {
+    "type": "Property",
+    "value": 52.90,
+    "unitCode": "MTR"
+  },
+  "diameter": {
+    "type": "Property",
+    "value": 203.00,
+    "unitCode": "MMT"
+  },
+  "roughness": {
+    "type": "Property",
+    "value": 72.4549,
+    "unitCode": "C62"
+  },
+  "minorLoss": {
+    "type": "Property",
+    "value": 72.4549,
+    "unitCode": "C62"
+  },
+  "tag": {
+    "type": "Property",
+    "value": "DMA1"
+  },
+  "description": {
+    "type": "Property",
+    "value": "Free Text"
+  },
+  "startsAt": {
+    "type": "Relationship",
+    "object": "urn:ngsi-ld:Junction:63fe7d79-0d4c-4da9-b7d0-3340efa0656a"
+  },
+  "endsAt": {
+    "type": "Relationship",
+    "object": "urn:ngsi-ld:Reservoir:1863179e-3768-4480-9167-ff21f870dd19"
+  },
+  "vertices": {
+    "type": "GeoProperty",
+    "value": {
+      "type": "MultiPoint",
+      "coordinates": [
+        [
+          24.40623,
+          60.17966
+        ],
+        [
+          24.50623,
+          60.27966
+        ]
+      ]
+    }
+  },
+  "bulkCoeff": {
+    "type": "Property",
+    "value": 72.4549,
+    "unitCode": "E91"
+  },
+  "wallCoeff": {
+    "type": "Property",
+    "value": 72.4549,
+    "unitCode": "RRC"
+  },
+  "flow": {
+    "type": "Property",
+    "value": {
+      "type": "Property",
+      "value": 20,
+      "unitCode": "G51"
     },
-    "status": {
-        "type": "Property",
-        "value": "OPEN"
+    "observedBy": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Device:device-9845A"
+    }
+  },
+  "velocity": {
+    "type": "Property",
+    "value": {
+      "type": "Property",
+      "value": 2,
+      "unitCode": "MTS"
     },
-    "length": {
-        "type": "Property",
-        "value": 52.90,
-        "unitCode": "MTR"
+    "observedBy": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Device:device-9845A"
+    }
+  },
+  "quality": {
+    "type": "Property",
+    "value": {
+      "type": "Property",
+      "value": 0.5,
+      "unitCode": "F27"
     },
-    "diameter": {
-        "type": "Property",
-        "value": 203.00,
-        "unitCode": "MMT"
-    },
-    "roughness": {
-        "type": "Property",
-        "value": 72.4549,
-        "unitCode": "C62"
-    },
-    "minorLoss": {
-        "type": "Property",
-        "value": 72.4549,
-        "unitCode": "C62"
-    },
-    "tag": {
-        "type": "Property",
-        "value": "DMA1"
-    },
-     "description": {
-        "type": "Property",
-        "value": "Free Text"
-    },
-    "startsAt": {
-        "type": "Relationship",
-        "object": "urn:ngsi-ld:Junction:63fe7d79-0d4c-4da9-b7d0-3340efa0656a"
-    },
-    "endsAt": {
-        "type": "Relationship",
-        "object": "urn:ngsi-ld:Reservoir:1863179e-3768-4480-9167-ff21f870dd19"
-    },
-    "vertices": {
-        "type": "GeoProperty",
-        "value": {
-            "type": "MultiPoint",
-            "coordinates": [
-                [24.40623, 60.17966],
-                [24.50623, 60.27966]
-            ]
-        }
-    },
-    "bulkCoeff":{
-        "type": "Property",
-        "value": 72.4549,
-        "unitCode": "E91"
-    },
-    "wallCoeff":{
-        "type": "Property",
-        "value": 72.4549,
-        "unitCode": "RRC"
-    },
-    "flow": {
-        "type": "Property",
-        "value": 20,
-        "unitCode": "G51",
-        "observedBy": {
-            "type": "Relationship",
-            "object": "urn:ngsi-ld:Device:device-9845A"
-        }
-    },
-    "velocity": {
-        "type": "Property",
-        "value": 2,
-        "unitCode": "MTS",
-        "observedBy": {
-            "type": "Relationship",
-            "object": "urn:ngsi-ld:Device:device-9845A"
-        }
-    },
-    "quality": {
-        "type": "Property",
-        "value": 0.5,
-        "unitCode": "F27",
-        "observedBy": {
-            "type": "Relationship",
-            "object": "urn:ngsi-ld:Device:device-9845A"
-        }
-    },
-    "@context": [
-        "https://schema.lab.fiware.org/ld/context"
-    ]
+    "observedBy": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Device:device-9845A"
+    }
+  },
+  "@context": [
+    "https://smartdatamodels.org/context.jsonld"
+  ]
 }
