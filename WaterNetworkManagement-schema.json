@@ -9,6 +9,9 @@
       "type": "object",
       "description": "Property. Model:'https://schema.org/Text'. Allows base demands and time patterns to be assigned to other categories of users.",
       "properties": {
+        "value": {
+          "type": "number"
+        },
         "baseDemand": {
           "type": "string",
           "description": "Property. Model:'https://schema.org/Text. Baseline or average demand for the category. A sub-property of the Property 'demandCategory'."
