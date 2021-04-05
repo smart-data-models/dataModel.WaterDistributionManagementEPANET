@@ -1,14 +1,14 @@
-Entité : Réseau  
-===============  
-[Licence ouverte](https://github.com/smart-data-models//dataModel.WaterNetworkManagement/blob/master/Network/LICENSE.md)  
-Description globale : **Cette entité contient une description harmonisée d'un réseau générique faite pour le domaine de la gestion des réseaux d'eau. Cette entité est principalement associée à la gestion verticale des réseaux d'eau et aux applications IdO connexes.**  
+Entité : Network  
+================  
+[Licence ouverte] (https://github.com/smart-data-models//dataModel.WaterDistributionManagementEPANET/blob/master/Network/LICENSE.md)  
+Description globale : **Cette entité contient une description harmonisée d'un réseau générique réalisé pour le domaine de la gestion des réseaux d'eau. Cette entité est principalement associée à la gestion verticale des réseaux d'eau et aux applications IoT connexes**.  
 
-## Liste des biens  
+## Liste des propriétés  
 
-- `address`: L'adresse postale  - `alternateName`: Un autre nom pour cet article  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `description`: Une description de cet article  - `hasSubNetwork`: Référence à une entité de type "réseau  - `id`: Identifiant unique de l'entité  - `isComposedOf`: Référence aux entités composantes de l'eau du réseau, de type "nœud (réservoir, jonction, cuve)" ou "lien (tuyau, vanne, pompe)".  - `location`:   - `name`: Le nom de cet article.  - `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur le sujet  - `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  - `type`: Type d'entité NGSI-LD. Il doit s'agir de WaterNetwork    
+- `address`: L'adresse postale  - `alternateName`: Un nom alternatif pour cet élément  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `description`: Une description de cet article  - `hasSubNetwork`: Référence à une entité de type `Réseau`.  - `id`: Identifiant unique de l'entité  - `isComposedOf`: Référence aux entités de la composante eau du réseau, de type `Nœud (Réservoir, Jonction, Cuve)` ou `Lien (Tuyau, Vanne, Pompe)`.  - `location`:   - `name`: Le nom de cet élément.  - `owner`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'élément  - `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `type`: Type d'entité NGSI-LD. Il doit être WaterNetwork    
 Propriétés requises  
-- `hasSubNetwork`  - `id`  - `type`  ## Modèle de données description des biens  
-Classement par ordre alphabétique (cliquez pour plus de détails)  
+- `id`  - `type`  ## Description des propriétés du modèle de données  
+Classés par ordre alphabétique (cliquez pour plus de détails)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 Network:    
@@ -40,7 +40,7 @@ Network:
           type: string    
       type: Property    
       x-ngsi:    
-        model: https://schema.org/adddress    
+        model: https://schema.org/address    
     alternateName:    
       description: 'An alternative name for this item'    
       type: Property    
@@ -277,13 +277,12 @@ Network:
   required:    
     - id    
     - type    
-    - hasSubNetwork    
   type: object    
 ```  
 </details>    
 ## Exemples de charges utiles  
-#### Réseau NGSI V2 valeurs clés Exemple  
-Voici un exemple de réseau en format JSON comme valeurs clés. Il est compatible avec NGSI V2 lorsqu'il utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
+#### Network NGSI-v2 key-values Exemple  
+Voici un exemple de réseau au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-v2 en utilisant `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
   "id": "urn:ngsi-ld:WaterNetwork:01",  
@@ -300,8 +299,8 @@ Network:
   ]  
 }  
 ```  
-#### Réseau NGSI V2 normalisé Exemple  
-Voici un exemple de réseau en format JSON tel que normalisé. Ce format est compatible avec la version 2 du NGSI lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
+#### Réseau NGSI-v2 normalisé Exemple  
+Voici un exemple de réseau au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-v2 lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
   "id": "urn:ngsi-ld:WaterNetwork:01",  
@@ -336,8 +335,8 @@ Network:
   ]  
 }  
 ```  
-#### Réseau NGSI-LD valeurs clés Exemple  
-Voici un exemple de réseau en format JSON-LD comme valeurs clés. Il est compatible avec le format NGSI-LD lorsqu'il utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
+#### Réseau NGSI-LD valeurs-clés Exemple  
+Voici un exemple de réseau au format JSON-LD sous forme de valeurs-clés. Ceci est compatible avec NGSI-LD en utilisant `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
   "id": "urn:ngsi-ld:WaterNetwork:01",  
@@ -358,46 +357,46 @@ Network:
 }  
 ```  
 #### Réseau NGSI-LD normalisé Exemple  
-Voici un exemple de réseau en format JSON-LD tel que normalisé. Il est compatible avec le format JSON-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
+Voici un exemple de réseau au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
-    "id": "urn:ngsi-ld:WaterNetwork:01",  
-    "type": "WaterNetwork",  
-    "description": {  
-        "type": "Property",  
-        "value": "Free Text"  
+  "id": "urn:ngsi-ld:WaterNetwork:01",  
+  "type": "WaterNetwork",  
+  "description": {  
+    "type": "Property",  
+    "value": "Free Text"  
+  },  
+  "isComposedOf": [  
+    {  
+      "type": "Relationship",  
+      "object": "urn:ngsi-ld:Tank:T1",  
+      "datasetId": "urn:ngsi-ld:Dataset:TankT1"  
     },  
-    "isComposedOf": [  
-        {  
-            "type": "Relationship",  
-            "object": "urn:ngsi-ld:Tank:T1",  
-            "datasetId": "urn:ngsi-ld:Dataset:TankT1"  
-        },  
-        {  
-            "type": "Relationship",  
-            "object": "urn:ngsi-ld:Pipe:P1",  
-            "datasetId": "urn:ngsi-ld:Dataset:PipeP1"  
-        },  
-        {  
-            "type": "Relationship",  
-            "object": "urn:ngsi-ld:Junction:J1",  
-            "datasetId": "urn:ngsi-ld:Dataset:JunctionJ1"  
-        }  
-    ],  
-    "hasSubNetwork": [  
-        {  
-            "type": "Relationship",  
-            "object": "urn:ngsi-ld:Network:12-70d4l-4da9",  
-            "datasetId": "urn:ngsi-ld:Dataset:NetworkN1"  
-        },  
-        {  
-            "type": "Relationship",  
-            "object": "urn:ngsi-ld:Network:A14-14d4B-4vvc",  
-            "datasetId": "urn:ngsi-ld:Dataset:NetworkN2"  
-        }  
-    ],  
-    "@context": [  
-        "https://schema.lab.fiware.org/ld/context"  
-    ]  
+    {  
+      "type": "Relationship",  
+      "object": "urn:ngsi-ld:Pipe:P1",  
+      "datasetId": "urn:ngsi-ld:Dataset:PipeP1"  
+    },  
+    {  
+      "type": "Relationship",  
+      "object": "urn:ngsi-ld:Junction:J1",  
+      "datasetId": "urn:ngsi-ld:Dataset:JunctionJ1"  
+    }  
+  ],  
+  "hasSubNetwork": [  
+    {  
+      "type": "Relationship",  
+      "object": "urn:ngsi-ld:Network:12-70d4l-4da9",  
+      "datasetId": "urn:ngsi-ld:Dataset:NetworkN1"  
+    },  
+    {  
+      "type": "Relationship",  
+      "object": "urn:ngsi-ld:Network:A14-14d4B-4vvc",  
+      "datasetId": "urn:ngsi-ld:Dataset:NetworkN2"  
+    }  
+  ],  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld"  
+  ]  
 }  
 ```  
