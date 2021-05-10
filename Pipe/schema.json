@@ -1,94 +1,94 @@
 {
-  "$schema": "http://json-schema.org/schema#",
-  "schemaVersion": "0.0",
-  "$id": "https://smart-data-models.github.io/dataModel.WaterDistributionManagementEPANET/Pipe/schema.json",
-  "title": "Smart Data Models. WaterNetworkManagementEPANET - Pipe",
-  "description": "This entity contains a harmonised description of a generic pipe made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.",
-  "type": "object",
-  "allOf": [
-    {
-      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
-    },
-    {
-      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
-    },
-    {
-      "properties": {
-        "type": {
-          "type": "string",
-          "enum": [
-            "Pipe"
-          ],
-          "description": "Property. NGSI-LD Entity Type. It has to be Pipe"
+    "$schema": "http://json-schema.org/schema#",
+    "$id": "https://smart-data-models.github.io/dataModel.WaterDistributionManagementEPANET/Pipe/schema.json",
+    "title": "Smart Data Models. WaterNetworkManagementEPANET - Pipe",
+    "description": "This entity contains a harmonised description of a generic pipe made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
         },
-        "tag": {
-          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/tag"
+        {
+            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
         },
-        "initialStatus": {
-          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/initialStatus"
-        },
-        "length": {
-          "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Units:'Metre'. The actual length of the pipe. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code."
-        },
-        "diameter": {
-          "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Units:'Millimetre'. The pipe diameter"
-        },
-        "roughness": {
-          "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Units:'No unit'. The roughness coefficient of the Pipe."
-        },
-        "minorLoss": {
-          "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Units:'No unit'. Unitless minor loss coefficient associated with bends, fittings, etc"
-        },
-        "status": {
-          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/status"
-        },
-        "startsAt": {
-          "type": "string",
-          "format": "uri",
-          "description": "Relationship. The ID of the node where the pipe begins"
-        },
-        "endsAt": {
-          "type": "string",
-          "format": "uri",
-          "description": "Relationship. The ID of the node where the pipe ends"
-        },
-        "wallCoeff": {
-          "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Units:'mg/m²/day'. The wall reaction coefficient for the pipe. Use a positive value for growth and a negative value for decay. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code."
-        },
-        "bulkCoeff": {
-          "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Units:'reciprocal day' The bulk reaction coefficient for the pipe. Use a positive value for growth and a negative value for decay. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code."
-        },
-        "vertices": {
-          "oneOf": [
-            {
-              "$ref": "https://geojson.org/schema/MultiPoint.json"
-            },
-            {
-              "$ref": "https://geojson.org/schema/Point.json"
+        {
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "Pipe"
+                    ],
+                    "description": "Property. NGSI-LD Entity Type. It has to be Pipe"
+                },
+                "tag": {
+                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/tag"
+                },
+                "initialStatus": {
+                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/initialStatus"
+                },
+                "length": {
+                    "type": "number",
+                    "description": "Property. Model:'https://schema.org/Number'. Units:'Metre'. The actual length of the pipe. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code."
+                },
+                "diameter": {
+                    "type": "number",
+                    "description": "Property. Model:'https://schema.org/Number'. Units:'Millimetre'. The pipe diameter"
+                },
+                "roughness": {
+                    "type": "number",
+                    "description": "Property. Model:'https://schema.org/Number'. Units:'No unit'. The roughness coefficient of the Pipe."
+                },
+                "minorLoss": {
+                    "type": "number",
+                    "description": "Property. Model:'https://schema.org/Number'. Units:'No unit'. Unitless minor loss coefficient associated with bends, fittings, etc"
+                },
+                "status": {
+                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/status"
+                },
+                "startsAt": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "Relationship. The ID of the node where the pipe begins"
+                },
+                "endsAt": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "Relationship. The ID of the node where the pipe ends"
+                },
+                "wallCoeff": {
+                    "type": "number",
+                    "description": "Property. Model:'https://schema.org/Number'. Units:'mg/m\u00b2/day'. The wall reaction coefficient for the pipe. Use a positive value for growth and a negative value for decay. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code."
+                },
+                "bulkCoeff": {
+                    "type": "number",
+                    "description": "Property. Model:'https://schema.org/Number'. Units:'reciprocal day' The bulk reaction coefficient for the pipe. Use a positive value for growth and a negative value for decay. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code."
+                },
+                "vertices": {
+                    "oneOf": [
+                        {
+                            "$ref": "https://geojson.org/schema/MultiPoint.json"
+                        },
+                        {
+                            "$ref": "https://geojson.org/schema/Point.json"
+                        }
+                    ],
+                    "description": "Geoproperty. Coordinates of all vertices in the pipe, ordered from the startsAt node to the endsAt node and encoded as a GeoJSON "
+                },
+                "flow": {
+                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/flow"
+                },
+                "velocity": {
+                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/velocity"
+                },
+                "quality": {
+                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/quality"
+                }
             }
-          ],
-          "description": "Geoproperty. Coordinates of all vertices in the pipe, ordered from the startsAt node to the endsAt node and encoded as a GeoJSON "
-        },
-        "flow": {
-          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/flow"
-        },
-        "velocity": {
-          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/velocity"
-        },
-        "quality": {
-          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/quality"
         }
-      }
-    }
-  ],
-  "required": [
-    "id",
-    "type"
-  ]
+    ],
+    "required": [
+        "id",
+        "type"
+    ],
+    "$schemaVersion": "0.0.1"
 }
