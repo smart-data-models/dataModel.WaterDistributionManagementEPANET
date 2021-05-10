@@ -1,61 +1,61 @@
 {
-  "$schema": "http://json-schema.org/schema#",
-  "schemaVersion": "0.0",
-  "$id": "https://smart-data-models.github.io/dataModel.WaterDistributionManagementEPANET/Curve/schema.json",
-  "title": "WaterNetwork - Curve",
-  "description": "This entity contains a harmonised description of a generic curve made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.",
-  "type": "object",
-  "allOf": [
-    {
-      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
-    },
-    {
-      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
-    },
-    {
-      "properties": {
-        "type": {
-          "type": "string",
-          "description": "Property. NGSI-LD Entity Type. It must be equal to Curve.",
-          "enum": [
-            "Curve"
-          ]
+    "$schema": "http://json-schema.org/schema#",
+    "$id": "https://smart-data-models.github.io/dataModel.WaterDistributionManagementEPANET/Curve/schema.json",
+    "title": "WaterNetwork - Curve",
+    "description": "This entity contains a harmonised description of a generic curve made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
         },
-        "tag": {
-          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/tag"
+        {
+            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
         },
-        "curveType": {
-          "type": "string",
-          "enum": [
-            "FLOW-HEAD",
-            "FLOW-EFFICIENCY",
-            "FLOW-HEADLOSS",
-            "LEVEL-VOLUME"
-          ],
-          "description": "Property. Entity's curve type. Enum:'FLOW-HEAD, FLOW-EFFICIENCY, FLOW-HEADLOSS, LEVEL-VOLUME'"
-        },
-        "xData": {
-          "type": "array",
-          "description": "Property. X data points for the curve",
-          "items": {
-            "type": "number"
-          }
-        },
-        "yData": {
-          "type": "array",
-          "description": "Property. Y data points for the curve",
-          "items": {
-            "type": "number"
-          }
+        {
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "description": "Property. NGSI-LD Entity Type. It must be equal to Curve.",
+                    "enum": [
+                        "Curve"
+                    ]
+                },
+                "tag": {
+                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/tag"
+                },
+                "curveType": {
+                    "type": "string",
+                    "enum": [
+                        "FLOW-HEAD",
+                        "FLOW-EFFICIENCY",
+                        "FLOW-HEADLOSS",
+                        "LEVEL-VOLUME"
+                    ],
+                    "description": "Property. Entity's curve type. Enum:'FLOW-HEAD, FLOW-EFFICIENCY, FLOW-HEADLOSS, LEVEL-VOLUME'"
+                },
+                "xData": {
+                    "type": "array",
+                    "description": "Property. X data points for the curve",
+                    "items": {
+                        "type": "number"
+                    }
+                },
+                "yData": {
+                    "type": "array",
+                    "description": "Property. Y data points for the curve",
+                    "items": {
+                        "type": "number"
+                    }
+                }
+            }
         }
-      }
-    }
-  ],
-  "required": [
-    "id",
-    "type",
-    "curveType",
-    "xData",
-    "yData"
-  ]
+    ],
+    "required": [
+        "id",
+        "type",
+        "curveType",
+        "xData",
+        "yData"
+    ],
+    "$schemaVersion": "0.0.1"
 }
