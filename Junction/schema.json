@@ -1,65 +1,66 @@
 {
-  "$schema": "http://json-schema.org/schema#",
-  "$id": "https://smart-data-models.github.io/dataModel.WaterDistributionManagementEPANET/Junction/schema.json",
-  "title": "Smart Data Models WaterNetworkManagementEPANET - Junction",
-  "description": "This entity contains a harmonised description of a generic junction made for the Water Network Management domain. This entity is primarily associated with the water network management vertical and related IoT applications.",
-  "type": "object",
-  "allOf": [
-    {
-      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
-    },
-    {
-      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
-    },
-    {
-      "properties": {
-        "type": {
-          "type": "string",
-          "enum": [
-            "Junction"
-          ],
-          "description": "Property. NGSI-LD Entity Type. It has to be Junction"
+    "$schema": "http://json-schema.org/schema#",
+    "$id": "https://smart-data-models.github.io/dataModel.WaterDistributionManagementEPANET/Junction/schema.json",
+    "title": "Smart Data Models WaterNetworkManagementEPANET - Junction",
+    "description": "This entity contains a harmonised description of a generic junction made for the Water Network Management domain. This entity is primarily associated with the water network management vertical and related IoT applications.",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
         },
-        "tag": {
-          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/tag"
+        {
+            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
         },
-        "elevation": {
-          "type": "number",
-          "description": "Property. Model:'http://schema.org/Number'. Units:'Metre'. The elevation above some common reference of the junction. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code"
-        },
-        "demandCategory": {
-          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/demandCategory"
-        },
-        "initialQuality": {
-          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/initialQuality"
-        },
-        "emitterCoefficient": {
-          "type": "number",
-          "description": "Property. Model:'http://schema.org/Number'. Units:'square metre per second'. Discharge coefficient for emitter (sprinkler or nozzle) placed at junction. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code"
-        },
-        "sourceCategory": {
-          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/sourceCategory"
-        },
-        "pressure": {
-          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/pressure"
-        },
-        "supply": {
-          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/supply"
-        },
-        "head": {
-          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/head"
-        },
-        "quality": {
-          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/quality"
-        },
-        "sourceMassInflow": {
-          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/sourceMassInflow"
+        {
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "Junction"
+                    ],
+                    "description": "Property. NGSI-LD Entity Type. It has to be Junction"
+                },
+                "tag": {
+                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/tag"
+                },
+                "elevation": {
+                    "type": "number",
+                    "description": "Property. Model:'http://schema.org/Number'. Units:'Metre'. The elevation above some common reference of the junction. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code"
+                },
+                "demandCategory": {
+                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/demandCategory"
+                },
+                "initialQuality": {
+                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/initialQuality"
+                },
+                "emitterCoefficient": {
+                    "type": "number",
+                    "description": "Property. Model:'http://schema.org/Number'. Units:'square metre per second'. Discharge coefficient for emitter (sprinkler or nozzle) placed at junction. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code"
+                },
+                "sourceCategory": {
+                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/sourceCategory"
+                },
+                "pressure": {
+                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/pressure"
+                },
+                "supply": {
+                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/supply"
+                },
+                "head": {
+                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/head"
+                },
+                "quality": {
+                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/quality"
+                },
+                "sourceMassInflow": {
+                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/sourceMassInflow"
+                }
+            }
         }
-      }
-    }
-  ],
-  "required": [
-    "id",
-    "type"
-  ]
+    ],
+    "required": [
+        "id",
+        "type"
+    ],
+    "$schemaVersion": "0.0.1"
 }
