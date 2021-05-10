@@ -1,66 +1,67 @@
 {
-  "$schema": "http://json-schema.org/schema#",
-  "$id": "https://smart-data-models.github.io/dataModel.WaterDistributionManagementEPANET/Network/schema.json",
-  "title": "WaterNetwork - Network",
-  "description": "This entity contains a harmonised description of a generic network made for the Water Network Management domain. This entity is primarily associated with the water network management vertical and related IoT applications.",
-  "type": "object",
-  "allOf": [
-    {
-      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
-    },
-    {
-      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
-    },
-    {
-      "properties": {
-        "type": {
-          "type": "string",
-          "enum": [
-            "WaterNetwork"
-          ],
-          "description": "Property. NGSI-LD Entity Type. It has to be WaterNetwork"
+    "$schema": "http://json-schema.org/schema#",
+    "$id": "https://smart-data-models.github.io/dataModel.WaterDistributionManagementEPANET/Network/schema.json",
+    "title": "WaterNetwork - Network",
+    "description": "This entity contains a harmonised description of a generic network made for the Water Network Management domain. This entity is primarily associated with the water network management vertical and related IoT applications.",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
         },
-        "isComposedOf": {
-          "type": "array",
-          "description": "Relationship. Reference to the water component entities of the network, of type `Node (Reservoir, Junction, Tank)` or `Link (Pipe, Valve, Pump)`",
-          "items": {
-            "anyOf": [
-              {
-                "type": "string",
-                "minLength": 1,
-                "maxLength": 256,
-                "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$"
-              },
-              {
-                "type": "string",
-                "format": "uri"
-              }
-            ]
-          }
+        {
+            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
         },
-        "hasSubNetwork": {
-          "type": "array",
-          "description": "Relationship. Reference to an entity of type `Network`. Model:'https://schema.org/Text'",
-          "items": {
-            "anyOf": [
-              {
-                "type": "string",
-                "minLength": 1,
-                "maxLength": 256,
-                "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$"
-              },
-              {
-                "type": "string",
-                "format": "uri"
-              }
-            ]
-          }
+        {
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "WaterNetwork"
+                    ],
+                    "description": "Property. NGSI-LD Entity Type. It has to be WaterNetwork"
+                },
+                "isComposedOf": {
+                    "type": "array",
+                    "description": "Relationship. Reference to the water component entities of the network, of type `Node (Reservoir, Junction, Tank)` or `Link (Pipe, Valve, Pump)`",
+                    "items": {
+                        "anyOf": [
+                            {
+                                "type": "string",
+                                "minLength": 1,
+                                "maxLength": 256,
+                                "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$"
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        ]
+                    }
+                },
+                "hasSubNetwork": {
+                    "type": "array",
+                    "description": "Relationship. Reference to an entity of type `Network`. Model:'https://schema.org/Text'",
+                    "items": {
+                        "anyOf": [
+                            {
+                                "type": "string",
+                                "minLength": 1,
+                                "maxLength": 256,
+                                "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$"
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        ]
+                    }
+                }
+            }
         }
-      }
-    }
-  ],
-  "required": [
-    "id",
-    "type"
-  ]
+    ],
+    "required": [
+        "id",
+        "type"
+    ],
+    "$schemaVersion": "0.0.1"
 }
