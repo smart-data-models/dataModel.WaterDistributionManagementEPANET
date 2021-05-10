@@ -1,50 +1,50 @@
 {
-  "$schema": "http://json-schema.org/schema#",
-  "schemaVersion": "0.0",
-  "$id": "https://smart-data-models.github.io/dataModel.WaterDistributionManagementEPANET/Pattern/schema.json",
-  "title": "WaterNetwork - Pattern",
-  "description": "This entity contains a harmonised description of a generic pattern made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.",
-  "type": "object",
-  "allOf": [
-    {
-      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
-    },
-    {
-      "properties": {
-        "type": {
-          "type": "string",
-          "enum": [
-            "Pattern"
-          ],
-          "description": "Property. NGSI-LD Entity Type. It has to be Pattern"
+    "$schema": "http://json-schema.org/schema#",
+    "$id": "https://smart-data-models.github.io/dataModel.WaterDistributionManagementEPANET/Pattern/schema.json",
+    "title": "WaterNetwork - Pattern",
+    "description": "This entity contains a harmonised description of a generic pattern made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
         },
-        "tag": {
-          "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/tag"
-        },
-        "multipliers": {
-          "type": "array",
-          "description": "Property. Multipliers define how some base quantity (e.g., demand) is adjusted for each time period",
-          "items": {
-            "type": "number"
-          }
-        },
-        "timeStep": {
-          "type": "number",
-          "description": "Property. The time step used for the multipliers. Units:'Second'. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code."
-        },
-        "startTime": {
-          "type": "string",
-          "format": "date-time",
-          "description": "Property. Model:'https://schema.org/Time'. The time at which the pattern starts"
+        {
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "Pattern"
+                    ],
+                    "description": "Property. NGSI-LD Entity Type. It has to be Pattern"
+                },
+                "tag": {
+                    "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/tag"
+                },
+                "multipliers": {
+                    "type": "array",
+                    "description": "Property. Multipliers define how some base quantity (e.g., demand) is adjusted for each time period",
+                    "items": {
+                        "type": "number"
+                    }
+                },
+                "timeStep": {
+                    "type": "number",
+                    "description": "Property. The time step used for the multipliers. Units:'Second'. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code."
+                },
+                "startTime": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": "Property. Model:'https://schema.org/Time'. The time at which the pattern starts"
+                }
+            }
         }
-      }
-    }
-  ],
-  "required": [
-    "id",
-    "type",
-    "multipliers",
-    "timeStep",
-    "startTime"
-  ]
+    ],
+    "required": [
+        "id",
+        "type",
+        "multipliers",
+        "timeStep",
+        "startTime"
+    ],
+    "$schemaVersion": "0.0.1"
 }
