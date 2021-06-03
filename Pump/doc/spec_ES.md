@@ -1,11 +1,12 @@
 Entidad: Bomba  
 ==============  
 [Licencia abierta](https://github.com/smart-data-models//dataModel.WaterDistributionManagementEPANET/blob/master/Pump/LICENSE.md)  
+[documento generado automáticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Descripción global: **Esta entidad contiene una descripción armonizada de una bomba genérica realizada para el dominio de la gestión de redes de agua. Esta entidad se asocia principalmente con el vertical de gestión del agua y las aplicaciones de IoT relacionadas.**.  
 
 ## Lista de propiedades  
 
-- `address`: La dirección postal  - `alternateName`: Un nombre alternativo para este artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description`: Una descripción de este artículo  - `efficCurve`: La etiqueta de identificación de la curva que representa el rendimiento de la bomba en función del caudal.  - `endsAt`: El ID del nodo en el lado de descarga de la bomba  - `energyPattern`: La etiqueta de identificación del patrón temporal utilizado para describir la variación del precio de la energía a lo largo del día.  - `energyPrice`: El precio medio o nominal de la energía en unidades monetarias. Todas las unidades se aceptan en código [CEFACT](https://www.unece.org/cefact.html).  - `energyUse`: Uso de energía observado por el elemento de la red  - `flow`: Velocidad del flujo desde el nodo "startAt" hasta el nodo "endAt", medida por un dispositivo en el enlace (tubería, válvula o bomba)  - `headCurve`: Etiqueta de identificación de la curva de la bomba que se utiliza para describir la relación entre la altura entregada por la bomba y el caudal que pasa por ella.  - `id`: Identificador único de la entidad  - `initialStatus`: El estado del enlace al inicio de la simulación. Enum:'OPEN, CLOSED, CV'  - `location`:   - `name`: El nombre de este artículo.  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `power`: La potencia suministrada por la bomba. Todas las unidades se aceptan en código [CEFACT](https://www.unece.org/cefact.html).  - `pumpPattern`: La etiqueta de identificación de un patrón de tiempo utilizado para controlar el funcionamiento de la bomba. Los multiplicadores del patrón equivalen a los ajustes de velocidad. Un multiplicador de cero implica que la bomba se apagará durante el periodo de tiempo correspondiente  - `quality`: Calidad observada en el componente de red  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `speed`: El ajuste de la velocidad relativa de la bomba. Todas las unidades se aceptan en código [CEFACT](https://www.unece.org/cefact.html).  - `startsAt`: El ID del nodo en el lado de succión de la bomba  - `status`: El estado dinámico del nodo. Enum:'OPEN, CLOSED, CV'  - `tag`: Una cadena de texto opcional utilizada para asignar la tubería a una categoría, quizás una basada en la edad o el material  - `type`: Tipo de entidad NGSI-LD. Debe ser igual a Bomba.  - `velocity`: Velocidad observada en el enlace (tubería, válvula o bomba)  - `vertices`: Coordenadas de todos los vértices de la bomba, ordenadas desde el nodo startsAt hasta el nodo endsAt y codificadas como GeoJSON    
+- `address`: La dirección postal  - `alternateName`: Un nombre alternativo para este artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description`: Una descripción de este artículo  - `efficCurve`: La etiqueta de identificación de la curva que representa el rendimiento de la bomba en función del caudal.  - `endsAt`: El ID del nodo en el lado de descarga de la bomba  - `energyPattern`: La etiqueta de identificación del patrón temporal utilizado para describir la variación del precio de la energía a lo largo del día.  - `energyPrice`: El precio medio o nominal de la energía en unidades monetarias. Todas las unidades se aceptan en código [CEFACT](https://www.unece.org/cefact.html).  - `energyUse`: Uso de energía observado por el elemento de la red  - `flow`: Velocidad del flujo desde el nodo "startAt" hasta el nodo "endAt", medida por un dispositivo en el enlace (tubería, válvula o bomba)  - `headCurve`: Etiqueta de identificación de la curva de la bomba que se utiliza para describir la relación entre la altura entregada por la bomba y el caudal que pasa por ella.  - `id`: Identificador único de la entidad  - `initialStatus`: El estado del enlace al inicio de la simulación. Enum:'OPEN, CLOSED, CV'  - `location`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `name`: El nombre de este artículo.  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `power`: La potencia suministrada por la bomba. Todas las unidades se aceptan en código [CEFACT](https://www.unece.org/cefact.html).  - `pumpPattern`: La etiqueta de identificación de un patrón de tiempo utilizado para controlar el funcionamiento de la bomba. Los multiplicadores del patrón equivalen a los ajustes de velocidad. Un multiplicador de cero implica que la bomba se apagará durante el periodo de tiempo correspondiente  - `quality`: Calidad observada en el componente de red  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen, o la URL del objeto de origen.  - `speed`: El ajuste de la velocidad relativa de la bomba. Todas las unidades se aceptan en código [CEFACT](https://www.unece.org/cefact.html).  - `startsAt`: El ID del nodo en el lado de succión de la bomba  - `status`: El estado dinámico del nodo. Enum:'OPEN, CLOSED, CV'  - `tag`: Una cadena de texto opcional utilizada para asignar la tubería a una categoría, quizás una basada en la edad o el material  - `type`: Tipo de entidad NGSI-LD. Debe ser igual a Bomba.  - `velocity`: Velocidad observada en el enlace (tubería, válvula o bomba)  - `vertices`: Coordenadas de todos los vértices de la bomba, ordenadas desde el nodo startsAt hasta el nodo endsAt y codificadas como GeoJSON    
 Propiedades requeridas  
 - `endsAt`  - `id`  - `initialStatus`  - `startsAt`  - `type`  ## Descripción del modelo de datos de las propiedades  
 Ordenados alfabéticamente (haga clic para ver los detalles)  
@@ -26,14 +27,11 @@ Pump:
         addressRegion:    
           description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
           type: string    
-        areaServed:    
-          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/areaServed'''    
-          type: string    
         postOfficeBoxNumber:    
-          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/postOfficeBoxNumber'''    
+          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
           type: string    
         postalCode:    
-          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/https://schema.org/postalCode'''    
+          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
           type: string    
         streetAddress:    
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
@@ -162,10 +160,10 @@ Pump:
       x-ngsi:    
         model: https://schema.org/Text    
     location:    
-      $id: https://geojson.org/schema/Geometry.json    
-      $schema: "http://json-schema.org/draft-07/schema#"    
+      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Point'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -185,7 +183,8 @@ Pump:
             - coordinates    
           title: 'GeoJSON Point'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. LineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -208,7 +207,8 @@ Pump:
             - coordinates    
           title: 'GeoJSON LineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Polygon'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -233,7 +233,8 @@ Pump:
             - coordinates    
           title: 'GeoJSON Polygon'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiPoint'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -255,7 +256,8 @@ Pump:
             - coordinates    
           title: 'GeoJSON MultiPoint'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -280,7 +282,8 @@ Pump:
             - coordinates    
           title: 'GeoJSON MultiLineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -307,7 +310,7 @@ Pump:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      title: 'GeoJSON Geometry'    
+      type: Geoproperty    
     name:    
       description: 'The name of this item.'    
       type: Property    
@@ -355,8 +358,8 @@ Pump:
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
-            - format: uri    
-              type: string    
+            format: uri    
+            type: string    
           minItems: 1    
           type: array    
         - format: uri    
