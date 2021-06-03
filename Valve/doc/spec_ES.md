@@ -1,11 +1,12 @@
 Entidad: Válvula  
 ================  
 [Licencia abierta](https://github.com/smart-data-models//dataModel.WaterDistributionManagementEPANET/blob/master/Valve/LICENSE.md)  
+[documento generado automáticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Descripción global: **Esta entidad contiene una descripción armonizada de una Válvula genérica realizada para el dominio de la Gestión de Redes de Agua. Esta entidad se asocia principalmente con el vertical de gestión del agua y las aplicaciones IoT relacionadas.**.  
 
 ## Lista de propiedades  
 
-- `address`: La dirección postal  - `alternateName`: Un nombre alternativo para este artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description`: Una descripción de este artículo  - `diameter`: El diámetro de la válvula. Todas las unidades se aceptan en código [CEFACT](https://www.unece.org/cefact.html).  - `endsAt`: El ID del nodo en el lado nominal de bajada o descarga de la válvula  - `flow`: Velocidad del flujo desde el nodo "startAt" hasta el nodo "endAt", medida por un dispositivo en el enlace (tubería, válvula o bomba)  - `id`: Identificador único de la entidad  - `initialStatus`: El estado del enlace al inicio de la simulación. Enum:'OPEN, CLOSED, CV'  - `location`:   - `minorLoss`: Coeficiente de pérdidas menores sin unidades que se aplica cuando la válvula está completamente abierta. Todas las unidades se aceptan en código [CEFACT](https://www.unece.org/cefact.html).  - `name`: El nombre de este artículo.  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `quality`: Calidad observada en el componente de red  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `setting`: Parámetro que describe el ajuste operativo de la válvula. Todas las unidades se aceptan en código [CEFACT](https://www.unece.org/cefact.html).  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `startsAt`: El ID del nodo en el lado nominal aguas arriba o de entrada de la válvula  - `status`: El estado dinámico del nodo. Enum:'OPEN, CLOSED, CV'  - `tag`: Una cadena de texto opcional utilizada para asignar la tubería a una categoría, quizás una basada en la edad o el material  - `type`: Tipo de entidad NGSI-LD. Debe ser igual a Válvula.  - `valveCurve`: Una relación con la curva de la propiedad de ajuste. Sólo se requiere cuando valveType es GPV  - `valveType`: Tipo de válvula del elemento. enum:'FCV, GPV, PBV, PRV, PSV, TCV'  - `velocity`: Velocidad observada en el enlace (tubería, válvula o bomba)  - `vertices`: Coordenadas de todos los vértices de la válvula, ordenadas desde el nodo startsAt hasta el nodo endsAt y codificadas como GeoJSON    
+- `address`: La dirección postal  - `alternateName`: Un nombre alternativo para este artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description`: Una descripción de este artículo  - `diameter`: El diámetro de la válvula. Todas las unidades se aceptan en código [CEFACT](https://www.unece.org/cefact.html).  - `endsAt`: El ID del nodo en el lado nominal de bajada o descarga de la válvula  - `flow`: Velocidad del flujo desde el nodo "startAt" hasta el nodo "endAt", medida por un dispositivo en el enlace (tubería, válvula o bomba)  - `id`: Identificador único de la entidad  - `initialStatus`: El estado del enlace al inicio de la simulación. Enum:'OPEN, CLOSED, CV'  - `location`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `minorLoss`: Coeficiente de pérdidas menores sin unidades que se aplica cuando la válvula está completamente abierta. Todas las unidades se aceptan en código [CEFACT](https://www.unece.org/cefact.html).  - `name`: El nombre de este artículo.  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `quality`: Calidad observada en el componente de red  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `setting`: Parámetro que describe el ajuste operativo de la válvula. Todas las unidades se aceptan en código [CEFACT](https://www.unece.org/cefact.html).  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen, o la URL del objeto de origen.  - `startsAt`: El ID del nodo en el lado nominal aguas arriba o de entrada de la válvula  - `status`: El estado dinámico del nodo. Enum:'OPEN, CLOSED, CV'  - `tag`: Una cadena de texto opcional utilizada para asignar la tubería a una categoría, quizás una basada en la edad o el material  - `type`: Tipo de entidad NGSI-LD. Debe ser igual a Válvula.  - `valveCurve`: Una relación con la curva de la propiedad de ajuste. Sólo se requiere cuando valveType es GPV  - `valveType`: Tipo de válvula del elemento. enum:'FCV, GPV, PBV, PRV, PSV, TCV'  - `velocity`: Velocidad observada en el enlace (tubería, válvula o bomba)  - `vertices`: Coordenadas de todos los vértices de la válvula, ordenadas desde el nodo startsAt hasta el nodo endsAt y codificadas como GeoJSON    
 Propiedades requeridas  
 - `endsAt`  - `id`  - `startsAt`  - `type`  ## Descripción del modelo de datos de las propiedades  
 Ordenados alfabéticamente (haga clic para ver los detalles)  
@@ -26,14 +27,11 @@ Valve:
         addressRegion:    
           description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
           type: string    
-        areaServed:    
-          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/areaServed'''    
-          type: string    
         postOfficeBoxNumber:    
-          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/postOfficeBoxNumber'''    
+          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
           type: string    
         postalCode:    
-          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/https://schema.org/postalCode'''    
+          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
           type: string    
         streetAddress:    
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
@@ -111,10 +109,10 @@ Valve:
       x-ngsi:    
         model: https://schema.org/Text    
     location:    
-      $id: https://geojson.org/schema/Geometry.json    
-      $schema: "http://json-schema.org/draft-07/schema#"    
+      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Point'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -134,7 +132,8 @@ Valve:
             - coordinates    
           title: 'GeoJSON Point'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. LineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -157,7 +156,8 @@ Valve:
             - coordinates    
           title: 'GeoJSON LineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Polygon'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -182,7 +182,8 @@ Valve:
             - coordinates    
           title: 'GeoJSON Polygon'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiPoint'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -204,7 +205,8 @@ Valve:
             - coordinates    
           title: 'GeoJSON MultiPoint'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -229,7 +231,8 @@ Valve:
             - coordinates    
           title: 'GeoJSON MultiLineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -256,7 +259,7 @@ Valve:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      title: 'GeoJSON Geometry'    
+      type: Geoproperty    
     minorLoss:    
       description: 'Unitless minor loss coefficient that applies when the valve is completely opened. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'    
       type: Property    
@@ -292,8 +295,8 @@ Valve:
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
-            - format: uri    
-              type: string    
+            format: uri    
+            type: string    
           minItems: 1    
           type: array    
         - format: uri    
