@@ -1,11 +1,12 @@
 Entität: Tank  
 =============  
 [Offene Lizenz](https://github.com/smart-data-models//dataModel.WaterDistributionManagementEPANET/blob/master/Tank/LICENSE.md)  
+[Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Globale Beschreibung: **Diese Entität enthält eine harmonisierte Beschreibung eines generischen Tanks, der für die Domäne Wassernetzmanagement hergestellt wurde. Diese Entität ist in erster Linie mit der vertikalen Wasserwirtschaft und damit verbundenen IoT-Anwendungen verbunden.**  
 
 ## Liste der Eigenschaften  
 
-- `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `bulkReactionCoefficient`: Der Massenreaktionskoeffizient, der für die Modellierung von Reaktionen im Tank verwendet wird. Alle Einheiten werden im [CEFACT](https://www.unece.org/cefact.html)-Code akzeptiert.  - `dataProvider`: Eine Folge von Zeichen, die den Anbieter der harmonisierten Dateneinheit identifiziert.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `elevation`: Die Höhe über einer gemeinsamen Referenz des Tanks. Alle Einheiten werden im Code [CEFACT](https://www.unece.org/cefact.html) akzeptiert.  - `hasInlet`: Eine Beziehung, die die Wassereinlasspunkte des Reservoirs anzeigt  - `hasOutlet`: Eine Beziehung, die die Wasserauslasspunkte des Reservoirs anzeigt  - `head`: Beobachtete Förderhöhe am Knotenpunkt (Abzweigung, Tank oder Reservoir)  - `id`: Eindeutiger Bezeichner der Entität  - `initLevel`: Die Höhe der Wasseroberfläche über der Bodenhöhe des Tanks zu Beginn der Simulation. Alle Einheiten werden im Code [CEFACT](https://www.unece.org/cefact.html) akzeptiert.  - `initialQuality`: Wasserqualitätsniveau im Tank zu Beginn der Simulation. Alle Einheiten werden im Code [CEFACT](https://www.unece.org/cefact.html) akzeptiert.  - `level`: Beobachteter Pegel im Element des Netzwerks  - `location`:   - `maxLevel`: Die Höhe der Wasseroberfläche über der Bodenhöhe des Tanks zu Beginn der Simulation. Alle Einheiten werden im Code [CEFACT](https://www.unece.org/cefact.html) akzeptiert.  - `minLevel`: Der Mindestpegel, auf den das Wasser im Tank sinken kann. Alle Einheiten werden im Code [CEFACT](https://www.unece.org/cefact.html) akzeptiert.  - `minVolume`: Das Wasservolumen im Tank, wenn dieser seinen minimalen Füllstand erreicht hat. Alle Einheiten werden im Code [CEFACT](https://www.unece.org/cefact.html) akzeptiert.  - `mixingFraction`: Der Anteil des Gesamtvolumens des Tanks, der das Einlass-Auslass-Kompartiment des Zwei-Kompartiment-Mischmodells (2COMP) umfasst. Alle Einheiten werden im [CEFACT](https://www.unece.org/cefact.html)-Code akzeptiert.  - `mixingModel`: Eine Untereigenschaft der Eigenschaft sourceCategory. Enum:'2COMP, FIFO, LIFO, MIXED'  - `name`: Der Name dieses Elements.  - `nominalDiameter`: Der Durchmesser des Tanks. Alle Einheiten werden im Code [CEFACT](https://www.unece.org/cefact.html) akzeptiert.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Ids der Eigentümer verweist  - `pressure`: Beobachteter Druck am Knotenpunkt (Verbindungsstelle, Tank oder Reservoir)  - `quality`: Beobachtete Qualität in der Netzwerkkomponente  - `seeAlso`: Liste von uri, die auf zusätzliche Ressourcen über das Element verweist  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL zum Quellobjekt.  - `sourceCategory`: Beschreibung der Qualität des Quellstroms, der an einem bestimmten Knoten in das Netzwerk eintritt.  - `sourceMassInflow`: Eigenschaft. Beobachteter Quell-Massenzufluss am Knoten (Knotenpunkt, Tank oder Reservoir)  - `supply`: Beobachtete Versorgung am Knoten (Abzweig, Tank oder Reservoir)  - `tag`: Eine optionale Textzeichenkette, die dazu dient, das Rohr einer Kategorie zuzuordnen, z. B. basierend auf Alter oder Material  - `type`: NGSI-LD-Entitätstyp. Es muss Tank sein  - `volumeCurve`: Die ID-Kennzeichnung einer Kurve, die zur Beschreibung der Beziehung zwischen Tankvolumen und Wasserstand verwendet wird    
+- `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `bulkReactionCoefficient`: Der Massenreaktionskoeffizient, der für die Modellierung von Reaktionen im Tank verwendet wird. Alle Einheiten werden im [CEFACT](https://www.unece.org/cefact.html)-Code akzeptiert.  - `dataProvider`: Eine Folge von Zeichen, die den Anbieter der harmonisierten Dateneinheit identifiziert.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `elevation`: Die Höhe über einer gemeinsamen Referenz des Tanks. Alle Einheiten werden im Code [CEFACT](https://www.unece.org/cefact.html) akzeptiert.  - `hasInlet`: Eine Beziehung, die die Wassereinlasspunkte des Reservoirs anzeigt  - `hasOutlet`: Eine Beziehung, die die Wasserauslasspunkte des Reservoirs anzeigt  - `head`: Beobachtete Förderhöhe am Knotenpunkt (Abzweigung, Tank oder Reservoir)  - `id`: Eindeutiger Bezeichner der Entität  - `initLevel`: Die Höhe der Wasseroberfläche über der Bodenhöhe des Tanks zu Beginn der Simulation. Alle Einheiten werden im Code [CEFACT](https://www.unece.org/cefact.html) akzeptiert.  - `initialQuality`: Wasserqualitätsniveau im Tank zu Beginn der Simulation. Alle Einheiten werden im Code [CEFACT](https://www.unece.org/cefact.html) akzeptiert.  - `level`: Beobachteter Pegel im Element des Netzwerks  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `maxLevel`: Die Höhe der Wasseroberfläche über der Bodenhöhe des Tanks zu Beginn der Simulation. Alle Einheiten werden im Code [CEFACT](https://www.unece.org/cefact.html) akzeptiert.  - `minLevel`: Der Mindestpegel, auf den das Wasser im Tank sinken kann. Alle Einheiten werden im Code [CEFACT](https://www.unece.org/cefact.html) akzeptiert.  - `minVolume`: Das Wasservolumen im Tank, wenn dieser seinen minimalen Füllstand erreicht hat. Alle Einheiten werden im Code [CEFACT](https://www.unece.org/cefact.html) akzeptiert.  - `mixingFraction`: Der Anteil des Gesamtvolumens des Tanks, der das Einlass-Auslass-Kompartiment des Zwei-Kompartiment-Mischmodells (2COMP) umfasst. Alle Einheiten werden im [CEFACT](https://www.unece.org/cefact.html)-Code akzeptiert.  - `mixingModel`: Eine Untereigenschaft der Eigenschaft sourceCategory. Enum:'2COMP, FIFO, LIFO, MIXED'  - `name`: Der Name dieses Elements.  - `nominalDiameter`: Der Durchmesser des Tanks. Alle Einheiten werden im Code [CEFACT](https://www.unece.org/cefact.html) akzeptiert.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Ids der Eigentümer verweist  - `pressure`: Beobachteter Druck am Knotenpunkt (Verbindungsstelle, Tank oder Reservoir)  - `quality`: Beobachtete Qualität in der Netzwerkkomponente  - `seeAlso`: Liste von uri, die auf zusätzliche Ressourcen über das Element verweist  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL zum Quellobjekt.  - `sourceCategory`: Beschreibung der Qualität des Quellflusses, der an einem bestimmten Knoten in das Netzwerk eintritt.  - `sourceMassInflow`: Eigenschaft. Beobachteter Quell-Massenzufluss am Knoten (Knotenpunkt, Tank oder Reservoir)  - `supply`: Beobachtete Versorgung am Knoten (Abzweig, Tank oder Reservoir)  - `tag`: Eine optionale Textzeichenkette, die dazu dient, das Rohr einer Kategorie zuzuordnen, z. B. basierend auf Alter oder Material  - `type`: NGSI-LD-Entitätstyp. Es muss Tank sein  - `volumeCurve`: Die ID-Kennzeichnung einer Kurve, die zur Beschreibung der Beziehung zwischen Tankvolumen und Wasserstand verwendet wird    
 Erforderliche Eigenschaften  
 - `id`  - `location`  - `type`  ## Datenmodell Beschreibung der Eigenschaften  
 Alphabetisch sortiert (für Details anklicken)  
@@ -26,14 +27,11 @@ Tank:
         addressRegion:    
           description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
           type: string    
-        areaServed:    
-          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/areaServed'''    
-          type: string    
         postOfficeBoxNumber:    
-          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/postOfficeBoxNumber'''    
+          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
           type: string    
         postalCode:    
-          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/https://schema.org/postalCode'''    
+          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
           type: string    
         streetAddress:    
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
@@ -140,10 +138,10 @@ Tank:
           type: number    
       type: Property    
     location:    
-      $id: https://geojson.org/schema/Geometry.json    
-      $schema: "http://json-schema.org/draft-07/schema#"    
+      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Point'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -163,7 +161,8 @@ Tank:
             - coordinates    
           title: 'GeoJSON Point'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. LineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -186,7 +185,8 @@ Tank:
             - coordinates    
           title: 'GeoJSON LineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Polygon'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -211,7 +211,8 @@ Tank:
             - coordinates    
           title: 'GeoJSON Polygon'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiPoint'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -233,7 +234,8 @@ Tank:
             - coordinates    
           title: 'GeoJSON MultiPoint'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -258,7 +260,8 @@ Tank:
             - coordinates    
           title: 'GeoJSON MultiLineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -285,7 +288,7 @@ Tank:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      title: 'GeoJSON Geometry'    
+      type: Geoproperty    
     maxLevel:    
       description: 'The height of the water surface above the bottom elevation of the tank at the start of the simulation. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'    
       type: Property    
@@ -371,8 +374,8 @@ Tank:
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
-            - format: uri    
-              type: string    
+            format: uri    
+            type: string    
           minItems: 1    
           type: array    
         - format: uri    
