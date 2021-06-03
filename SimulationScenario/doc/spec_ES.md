@@ -1,11 +1,12 @@
 Entidad: SimulationScenario  
 ===========================  
 [Licencia abierta](https://github.com/smart-data-models//dataModel.WaterDistributionManagementEPANET/blob/master/SimulationScenario/LICENSE.md)  
+[documento generado automáticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Descripción global: **Esta entidad contiene una descripción armonizada de un escenario de simulación genérico realizado para el dominio de la gestión de redes de agua. Esta entidad está asociada principalmente a la vertical de gestión de redes de agua y a las aplicaciones IoT relacionadas.**.  
 
 ## Lista de propiedades  
 
-- `accuracy`: Criterio de convergencia del cambio de flujo total normalizado para determinar cuándo se ha alcanzado una solución hidráulica.  - `address`: La dirección postal  - `alternateName`: Un nombre alternativo para este artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `bulkOrder`: Orden de reacción del agua a granel para las tuberías  - `checkFrequency`: Frecuencia de los controles del estado hidráulico  - `chemicalName`: Nombre de la sustancia química modelada. Sólo se utiliza si 'qualityType' es CHEM  - `chemicalUnits`: Unidades de la sustancia química modelada. Sólo se utiliza si 'qualityType' es CHEM  - `concentrationLimit`: Concentración límite para las reacciones de crecimiento  - `createdBy`: El ID de quien creó/desencadenó la simulación. Referencia a una entidad de tipo "Usuario".  - `dampLimit`: Valor de precisión a partir del cual se inicia la amortiguación de la solución y la comprobación del estado de las PRV y PSV.  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `demandCharge`: Tarifa de energía por uso máximo de kW.  - `demandModel`: Especifica si el análisis es por presión (PDA) o por demanda (DDA). Enum:'DDA, PDA'  - `description`: Una descripción de este artículo  - `diffusivity`: Difusividad molecular de la sustancia química analizada en un análisis de calidad, en relación con la difusividad del cloro en el agua.  - `duration`: Duración de la simulación, indicada en segundos  - `emitterExponent`: Potencia a la que se eleva la presión en una unión cuando se computa desde un emisor.  - `flowChange`: Criterio de convergencia de cambio de flujo máximo para determinar cuándo se ha alcanzado una solución hidráulica.  - `flowUnits`: Unidades en las que se expresan los caudales en la simulación. Las opciones permitidas son CFS (pies cúbicos por segundo), GPM (galones por minuto), MGD (millones de galones por día), IMGD (MGD imperial), AFD (acres-pies por día), LPS (litros por segundo), LPM (litros por minuto), MLD (millones de litros por día), CMH (metros cúbicos por hora) y CMD (metros cúbicos por día). Enum:'AFD, CFS, CMD, CMH, GPM, IMGD, LPS, LPM, MLD, MGD'  - `hasInputNetwork`: El ID de la red utilizada en la simulación  - `hasSimulationResult`: El ID del resultado de la simulación relacionado. Referencia a una entidad de tipo "SimulationResult".  - `headError`: Criterio de convergencia de la pérdida de carga máxima para determinar cuándo se ha alcanzado una solución hidráulica.  - `headlossFormula`: Fórmula utilizada para calcular la pérdida de carga para el flujo a través de una tubería. Las opciones son las fórmulas Hazen-Williams (H-W), Darcy-Weisbach (D-W) o Chezy-Manning (C-M). Las opciones permitidas son 'H-W', 'D-W', 'C-M'. Enum:'C-M, D-W, H-W'  - `hydraulicTimeStep`: Determina la frecuencia con la que se calcula el estado hidráulico de la red. Se indica en segundos  - `id`: Identificador único de la entidad  - `inputParameter`: Descripción del conjunto de modificaciones que se aplicarán a la red para la simulación  - `location`:   - `maxCheck`: Número de pruebas tras las cuales se interrumpen las comprobaciones de estado  - `minimumPressure`: Presión por debajo de la cual no se puede suministrar ninguna demanda bajo un análisis de presión dirven. Sólo se utiliza si demandModel es 'PDA'  - `name`: El nombre de este artículo.  - `operationalControl`: El control operativo de de item  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `patternStart`: Hora de inicio de la simulación.  - `patternStep`: Paso del patrón de la simulación.  - `pressureExponent`: Potencia a la que se eleva la presión cuando se calcula la demanda entregada en un análisis basado en la presión. Sólo se utiliza si demandModel es 'PDA'.  - `qualityTimeStep`: El paso de tiempo utilizado para seguir los cambios en la calidad del agua en la red. Se indica en segundos  - `qualityType`: Tipo de análisis de la calidad del agua. Enum:'chem, age, trace, none'  - `reportStart`: Tiempo de simulación en el que se empiezan a reportar los resultados. Indicado en segundos desde el inicio de la simulación  - `reportStep`: Intervalo en el que se informan los resultados de la salida. dado en segundos  - `requiredPressure`: Presión requerida para suministrar toda la demanda de un nodo bajo un análisis basado en la presión. Sólo se utiliza si demandModel es 'PDA'  - `ruleTimeStep`: Paso de tiempo utilizado para comprobar los cambios en el estado del sistema debido a los controles basados en reglas. Indicado en segundos  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `specificGravity`: La relación entre la densidad del fluido que se modela y la del agua a 4 deg. C  - `startClockTime`: Hora del día en que comienza la simulación. Se indica en segundos desde el inicio del día  - `statistic`: El tipo de post-procesamiento estadístico que se realiza sobre la serie temporal de resultados de simulación generados. Las opciones son AVERAGED (informar de los resultados promediados en el tiempo), MINIMUM (informar sólo de los valores mínimos), MAXIMUM (informar sólo de los valores máximos), RANGE (informar de la diferencia entre los valores mínimos y máximos) y NONE (informar de la serie temporal completa). Enum:'promedio, mínimo, máximo, rango, ninguno'  - `tankOrder`: Orden de reacción de agua a granel para tanques  - `tolerance`: Tolerancia a la calidad del agua  - `traceNodeID`: URI del nodo que se está rastreando en el análisis de calidad. Obligatorio si 'qualityType' es TRACE, en caso contrario no es necesario.  - `trials`: El número máximo de ensayos utilizados para resolver la hidráulica de la red en cada paso de tiempo hidráulico de una simulación  - `type`: Tipo de entidad NGSI-LD. Tiene que ser SimulationScenario  - `unbalanced`: Determina lo que ocurre si no se puede alcanzar una solución hidráulica dentro del número de ensayos permitido. Las opciones permitidas son STOP (detener el análisis), CONTINUE (continuar el análisis pero con un mensaje de advertencia) y CONTINUE_N (continuar durante otros N ensayos, donde el valor de N viene dado por 'unbalancedN'). Enum:'stop, continue, continue_N'  - `unbalancedN`: Número de pruebas adicionales permitidas si "desequilibrado" se establece como continue_N. Obligatorio si "desequilibrado" se establece como continue_N, de lo contrario no es necesario.  - `viscosity`: La viscosidad cinemática del fluido que se modela en relación con la del agua a 20 grados. C  - `wallOrder`: Orden de reacción de la pared para los tubos    
+- `accuracy`: Criterio de convergencia del cambio de flujo total normalizado para determinar cuándo se ha alcanzado una solución hidráulica.  - `address`: La dirección postal  - `alternateName`: Un nombre alternativo para este artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `bulkOrder`: Orden de reacción del agua a granel para las tuberías  - `checkFrequency`: Frecuencia de los controles del estado hidráulico  - `chemicalName`: Nombre de la sustancia química modelada. Sólo se utiliza si 'qualityType' es CHEM  - `chemicalUnits`: Unidades de la sustancia química modelada. Sólo se utiliza si 'qualityType' es CHEM  - `concentrationLimit`: Concentración límite para las reacciones de crecimiento  - `createdBy`: El ID de quien creó/desencadenó la simulación. Referencia a una entidad de tipo "Usuario".  - `dampLimit`: Valor de precisión a partir del cual se inicia la amortiguación de la solución y la comprobación del estado de las PRV y PSV.  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `demandCharge`: Tarifa de energía por uso máximo de kW.  - `demandModel`: Especifica si el análisis es por presión (PDA) o por demanda (DDA). Enum:'DDA, PDA'  - `description`: Una descripción de este artículo  - `diffusivity`: Difusividad molecular de la sustancia química analizada en un análisis de calidad, en relación con la difusividad del cloro en el agua.  - `duration`: Duración de la simulación, indicada en segundos  - `emitterExponent`: Potencia a la que se eleva la presión en una unión cuando se computa desde un emisor.  - `flowChange`: Criterio de convergencia de cambio de flujo máximo para determinar cuándo se ha alcanzado una solución hidráulica.  - `flowUnits`: Unidades en las que se expresan los caudales en la simulación. Las opciones permitidas son CFS (pies cúbicos por segundo), GPM (galones por minuto), MGD (millones de galones por día), IMGD (MGD imperial), AFD (acres-pies por día), LPS (litros por segundo), LPM (litros por minuto), MLD (millones de litros por día), CMH (metros cúbicos por hora) y CMD (metros cúbicos por día). Enum:'AFD, CFS, CMD, CMH, GPM, IMGD, LPS, LPM, MLD, MGD'  - `hasInputNetwork`: El ID de la red utilizada en la simulación  - `hasSimulationResult`: El ID del resultado de la simulación relacionado. Referencia a una entidad de tipo "SimulationResult".  - `headError`: Criterio de convergencia de la pérdida de carga máxima para determinar cuándo se ha alcanzado una solución hidráulica.  - `headlossFormula`: Fórmula utilizada para calcular la pérdida de carga para el flujo a través de una tubería. Las opciones son las fórmulas Hazen-Williams (H-W), Darcy-Weisbach (D-W) o Chezy-Manning (C-M). Las opciones permitidas son 'H-W', 'D-W', 'C-M'. Enum:'C-M, D-W, H-W'  - `hydraulicTimeStep`: Determina la frecuencia con la que se calcula el estado hidráulico de la red. Se indica en segundos  - `id`: Identificador único de la entidad  - `inputParameter`: Descripción del conjunto de modificaciones que se aplicarán a la red para la simulación  - `location`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `maxCheck`: Número de pruebas tras las cuales se interrumpen las comprobaciones de estado  - `minimumPressure`: Presión por debajo de la cual no se puede suministrar ninguna demanda bajo un análisis de presión dirven. Sólo se utiliza si demandModel es 'PDA'  - `name`: El nombre de este artículo.  - `operationalControl`: El control operativo de de item  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `patternStart`: Hora de inicio de la simulación.  - `patternStep`: Paso del patrón de la simulación.  - `pressureExponent`: Potencia a la que se eleva la presión cuando se calcula la demanda entregada en un análisis basado en la presión. Sólo se utiliza si demandModel es 'PDA'.  - `qualityTimeStep`: El paso de tiempo utilizado para seguir los cambios en la calidad del agua en la red. Se indica en segundos  - `qualityType`: Tipo de análisis de la calidad del agua. Enum:'chem, age, trace, none'  - `reportStart`: Tiempo de simulación en el que se empiezan a reportar los resultados. Indicado en segundos desde el inicio de la simulación  - `reportStep`: Intervalo en el que se informan los resultados de la salida. dado en segundos  - `requiredPressure`: Presión requerida para suministrar toda la demanda de un nodo bajo un análisis basado en la presión. Sólo se utiliza si demandModel es 'PDA'  - `ruleTimeStep`: Paso de tiempo utilizado para comprobar los cambios en el estado del sistema debido a los controles basados en reglas. Indicado en segundos  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen, o la URL del objeto de origen.  - `specificGravity`: La relación entre la densidad del fluido que se modela y la del agua a 4 deg. C  - `startClockTime`: Hora del día en que comienza la simulación. Se indica en segundos desde el inicio del día  - `statistic`: El tipo de post-procesamiento estadístico que se realiza sobre la serie temporal de resultados de simulación generados. Las opciones son AVERAGED (informar de los resultados promediados en el tiempo), MINIMUM (informar sólo de los valores mínimos), MAXIMUM (informar sólo de los valores máximos), RANGE (informar de la diferencia entre los valores mínimos y máximos) y NONE (informar de la serie temporal completa). Enum:'promedio, mínimo, máximo, rango, ninguno'  - `tankOrder`: Orden de reacción de agua a granel para tanques  - `tolerance`: Tolerancia a la calidad del agua  - `traceNodeID`: URI del nodo que se está rastreando en el análisis de calidad. Obligatorio si 'qualityType' es TRACE, en caso contrario no es necesario.  - `trials`: El número máximo de ensayos utilizados para resolver la hidráulica de la red en cada paso de tiempo hidráulico de una simulación  - `type`: Tipo de entidad NGSI-LD. Tiene que ser SimulationScenario  - `unbalanced`: Determina lo que ocurre si no se puede alcanzar una solución hidráulica dentro del número de ensayos permitido. Las opciones permitidas son STOP (detener el análisis), CONTINUE (continuar el análisis pero con un mensaje de advertencia) y CONTINUE_N (continuar durante otros N ensayos, donde el valor de N viene dado por 'unbalancedN'). Enum:'stop, continue, continue_N'  - `unbalancedN`: Número de pruebas adicionales permitidas si "desequilibrado" se establece como continue_N. Obligatorio si "desequilibrado" se establece como continue_N, de lo contrario no es necesario.  - `viscosity`: La viscosidad cinemática del fluido que se modela en relación con la del agua a 20 grados. C  - `wallOrder`: Orden de reacción de la pared para los tubos    
 Propiedades requeridas  
 - `hasInputNetwork`  - `id`  - `type`  ## Descripción del modelo de datos de las propiedades  
 Ordenados alfabéticamente (haga clic para ver los detalles)  
@@ -31,14 +32,11 @@ SimulationScenario:
         addressRegion:    
           description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
           type: string    
-        areaServed:    
-          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/areaServed'''    
-          type: string    
         postOfficeBoxNumber:    
-          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/postOfficeBoxNumber'''    
+          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
           type: string    
         postalCode:    
-          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/https://schema.org/postalCode'''    
+          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
           type: string    
         streetAddress:    
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
@@ -241,10 +239,10 @@ SimulationScenario:
       x-ngsi:    
         model: https://Text    
     location:    
-      $id: https://geojson.org/schema/Geometry.json    
-      $schema: "http://json-schema.org/draft-07/schema#"    
+      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Point'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -264,7 +262,8 @@ SimulationScenario:
             - coordinates    
           title: 'GeoJSON Point'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. LineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -287,7 +286,8 @@ SimulationScenario:
             - coordinates    
           title: 'GeoJSON LineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Polygon'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -312,7 +312,8 @@ SimulationScenario:
             - coordinates    
           title: 'GeoJSON Polygon'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiPoint'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -334,7 +335,8 @@ SimulationScenario:
             - coordinates    
           title: 'GeoJSON MultiPoint'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -359,7 +361,8 @@ SimulationScenario:
             - coordinates    
           title: 'GeoJSON MultiLineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -386,7 +389,7 @@ SimulationScenario:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      title: 'GeoJSON Geometry'    
+      type: Geoproperty    
     maxCheck:    
       description: 'Number of trials after which status checks are discontinued'    
       type: Property    
@@ -506,8 +509,8 @@ SimulationScenario:
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
-            - format: uri    
-              type: string    
+            format: uri    
+            type: string    
           minItems: 1    
           type: array    
         - format: uri    
