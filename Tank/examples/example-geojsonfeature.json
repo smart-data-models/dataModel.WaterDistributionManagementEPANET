@@ -1,0 +1,40 @@
+{
+  "id": "urn:ngsi-ld:Tank:1863179e-3968-4493-9167-ee21f880cc02",
+  "type": "Feature",
+  "geometry": {
+    "coordinates": [
+      24.30623,
+      60.07966
+    ],
+    "type": "Point"
+  },
+  "properties": {
+    "@context": [
+      "https://smartdatamodels.org/context.jsonld"
+    ],
+    "bulkReactionCoefficient": 0.7,
+    "createdAt": "2020-03-13T15:42:00Z",
+    "description": "Free Text",
+    "elevation": 112.9,
+    "initLevel": 3,
+    "initialQuality": 0.5,
+    "location": {
+      "coordinates": [
+        24.30623,
+        60.07966
+      ],
+      "type": "Point"
+    },
+    "maxLevel": 6.75,
+    "minLevel": 0,
+    "minVolume": 0,
+    "mixingFraction": 0.7,
+    "mixingModel": "MIXED",
+    "modifiedAt": "2020-03-13T15:45:00Z",
+    "nominalDiameter": 13.73,
+    "sourceCategory": "category1",
+    "tag": "DMA1",
+    "type": "Tank",
+    "volumeCurve": "urn:ngsi-ld:Curve:fAM-8ca3-4533-a2eb-12015"
+  }
+}
