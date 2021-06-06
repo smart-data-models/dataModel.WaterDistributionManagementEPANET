@@ -3,9 +3,10 @@ SimulationScenario:
   properties:
     accuracy:
       description: 'Total normalized flow change convergence criterion for determining when a hydraulic solution has been reached.'
-      type: Property
+      type: number
       x-ngsi:
         model: https://schema.org/Number
+        type: Property
     address:
       description: 'The mailing address'
       properties:
@@ -27,42 +28,51 @@ SimulationScenario:
         streetAddress:
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''
           type: string
-      type: Property
+      type: object
       x-ngsi:
         model: https://schema.org/address
+        type: Property
     alternateName:
       description: 'An alternative name for this item'
-      type: Property
+      type: string
+      x-ngsi:
+        type: Property
     areaServed:
       description: 'The geographic area where a service or offered item is provided'
-      type: Property
+      type: string
       x-ngsi:
         model: https://schema.org/Text
+        type: Property
     bulkOrder:
       description: 'Bulk water reaction order for pipes'
-      type: Property
+      type: number
       x-ngsi:
         model: https://schema.org/Number
+        type: Property
     checkFrequency:
       description: 'Frequency of hydraulic status checks'
-      type: Property
+      type: number
       x-ngsi:
         model: https://schema.org/Number
+        type: Property
     chemicalName:
       description: 'Name of the chemical modelled. Only used if ''qualityType'' is CHEM'
-      type: Property
+      type: string
       x-ngsi:
         model: https://schema.org/Text
+        type: Property
     chemicalUnits:
       description: 'Units of the chemical modelled. Only used if ''qualityType'' is CHEM'
-      type: Property
+      type: string
       x-ngsi:
         model: https://schema.org/Text
+        type: Property
     concentrationLimit:
       description: 'Limiting concentration for growth reactions'
-      type: Property
+      type: number
       x-ngsi:
         model: https://schema.org/Number
+        type: Property
     createdBy:
       anyOf:
         - maxLength: 256
@@ -72,62 +82,77 @@ SimulationScenario:
         - format: uri
           type: string
       description: 'The ID of who created/triggered the simulation. Reference to an entity of type ''User'''
-      type: Relationship
       x-ngsi:
         model: https://schema.org/URL
+        type: Relationship
     dampLimit:
       description: 'Accuracy value at which solution damping and status checks begin for PRVs and PSVs.'
-      type: Property
+      type: number
       x-ngsi:
         model: https://schema.org/Number
+        type: Property
     dataProvider:
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'
-      type: Property
+      type: string
+      x-ngsi:
+        type: Property
     dateCreated:
       description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'
       format: date-time
-      type: Property
+      type: string
+      x-ngsi:
+        type: Property
     dateModified:
       description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'
       format: date-time
-      type: Property
+      type: string
+      x-ngsi:
+        type: Property
     demandCharge:
       description: 'Energy charge per maximum kW usage.'
-      type: Property
+      type: number
       x-ngsi:
         model: https://schema.org/Number
+        type: Property
     demandModel:
       description: 'Specifies whether the analysis is pressure driven (PDA) or demand driven (DDA). Enum:''DDA, PDA'''
       enum:
         - DDA
         - PDA
-      type: Property
+      type: string
       x-ngsi:
         model: https://schema.org/Text
+        type: Property
     description:
       description: 'A description of this item'
-      type: Property
+      type: string
+      x-ngsi:
+        type: Property
     diffusivity:
       description: 'Molecular diffusivity of the chemical analysed in a quality analysis, relative to diffusivity of chlorine in water.'
-      type: Property
+      type: number
       x-ngsi:
         model: https://schema.org/Number
+        type: Property
     duration:
       description: 'Duration of the simulation, given in seconds'
-      type: Property
+      type: number
       x-ngsi:
         model: https://schema.org/Number
+        type: Property
         units: seconds
     emitterExponent:
       description: 'Power to which pressure at a junction is raised when computing from an emitter.'
-      type: Property
+      type: number
       x-ngsi:
         model: https://schema.org/Number
+        type: Property
     flowChange:
       description: 'Maximum flow change convergence criterion for determining when a hydraulic solution has been reached.'
-      type: Property
+      type: number
       x-ngsi:
         model: https://schema.org/Number
+        type: Property
     flowUnits:
       description: 'Units in which flow rates are expressed in the simulation. Allowable options are CFS (cubic feet per second), GPM (gallons per minute), MGD (million gallons per day), IMGD (imperial MGD), AFD (acre-feet per day), LPS (litres pre second), LPM (litres per minute), MLD (million litres per day), CMH (cubic metres per hour) and CMD (cubic metres per day). Enum:''AFD, CFS, CMD, CMH, GPM, IMGD, LPS, LPM, MLD, MGD'''
       enum:
@@ -141,9 +166,10 @@ SimulationScenario:
         - LPM
         - MLD
         - MGD
-      type: Property
+      type: string
       x-ngsi:
         model: https://schema.org/Text
+        type: Property
     hasInputNetwork:
       anyOf:
         - maxLength: 256
@@ -153,9 +179,9 @@ SimulationScenario:
         - format: uri
           type: string
       description: 'The ID of the network used in the simulation'
-      type: Relationship
       x-ngsi:
         model: https://schema.org/URL
+        type: Relationship
     hasSimulationResult:
       anyOf:
         - maxLength: 256
@@ -165,28 +191,31 @@ SimulationScenario:
         - format: uri
           type: string
       description: 'The ID of the related simulation result. Reference to an entity of type ''SimulationResult'''
-      type: Relationship
       x-ngsi:
         model: https://schema.org/URL
+        type: Relationship
     headError:
       description: 'Maximum headloss convergence criterion for determining when a hydraulic solution has been reached.'
-      type: Property
+      type: number
       x-ngsi:
         model: https://schema.org/Number
+        type: Property
     headlossFormula:
       description: 'Formula used for computing head loss for flow through a pipe. The choices are the Hazen-Williams (H-W), Darcy-Weisbach (D-W) or Chezy-Manning (C-M) formulas. Allowable options are ''H-W'', ''D-W'', ''C-M''. Enum:''C-M, D-W, H-W'''
       enum:
         - H-W
         - D-W
         - C-M
-      type: Property
+      type: string
       x-ngsi:
         model: https://schema.org/Text
+        type: Property
     hydraulicTimeStep:
       description: 'Determines how often the hydraulic state of the network is calculated. Given in seconds'
-      type: Property
+      type: number
       x-ngsi:
         model: https://schema.org/Number
+        type: Property
         units: seconds
     id:
       anyOf: &simulationscenario_-_properties_-_owner_-_items_-_anyof
@@ -199,7 +228,8 @@ SimulationScenario:
           format: uri
           type: string
       description: 'Unique identifier of the entity'
-      type: Property
+      x-ngsi:
+        type: Property
     inputParameter:
       description: 'Description of the set of modifications to be applied to the network for the simulation'
       items:
@@ -221,9 +251,10 @@ SimulationScenario:
               - type: number
               - type: boolean
         type: object
-      type: Property
+      type: array
       x-ngsi:
         model: https://Text
+        type: Property
     location:
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
       oneOf:
@@ -375,20 +406,25 @@ SimulationScenario:
             - coordinates
           title: 'GeoJSON MultiPolygon'
           type: object
-      type: Geoproperty
+      x-ngsi:
+        type: Geoproperty
     maxCheck:
       description: 'Number of trials after which status checks are discontinued'
-      type: Property
+      type: number
       x-ngsi:
         model: https://schema.org/Number
+        type: Property
     minimumPressure:
       description: 'Pressure below which no demand can be delivered under a pressure dirven analysis. Only used if demandModel is ''PDA'''
-      type: Property
+      type: number
       x-ngsi:
         model: https://schema.org/Number
+        type: Property
     name:
       description: 'The name of this item.'
-      type: Property
+      type: string
+      x-ngsi:
+        type: Property
     operationalControl:
       description: 'The operational control of de item'
       items:
@@ -429,34 +465,42 @@ SimulationScenario:
             description: 'Property. Model:''https://schema.org/Text''. Description of a control applied to the network for the simulation. Enum:''controlledLink, controlType, monitoredNode, setting, triggerLevel'''
             type: string
         type: object
-      type: Property
+      type: array
+      x-ngsi:
+        type: Property
     owner:
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'
       items:
         anyOf: *simulationscenario_-_properties_-_owner_-_items_-_anyof
         description: 'Property. Unique identifier of the entity'
-      type: Property
+      type: array
+      x-ngsi:
+        type: Property
     patternStart:
       description: 'Start time of the  the simulation.'
       format: date-time
-      type: Property
+      type: string
       x-ngsi:
         model: https://schema.org/DateTime
+        type: Property
     patternStep:
       description: 'Pattern step of the simulation.'
-      type: Property
+      type: number
       x-ngsi:
         model: https://schema.org/Number
+        type: Property
     pressureExponent:
       description: 'Power to which pressure is raised when calculating the demand delivered under a pressure driven analysis. Only used if demandModel is ''PDA'''
-      type: Property
+      type: number
       x-ngsi:
         model: https://schema.org/Number
+        type: Property
     qualityTimeStep:
       description: 'The timestep used to track changes in water quality in the network. Given in seconds'
-      type: Property
+      type: number
       x-ngsi:
         model: https://schema.org/Number
+        type: Property
         units: seconds
     qualityType:
       description: 'Type of water quality analysis. Enum:''chem, age, trace, none'''
@@ -465,31 +509,36 @@ SimulationScenario:
         - chem
         - none
         - trace
-      type: Property
+      type: string
       x-ngsi:
         model: https://schema.org/Text
+        type: Property
     reportStart:
       description: 'Simulation time at which results start to be reported. Given in seconds from start of simulation'
-      type: Property
+      type: number
       x-ngsi:
         model: https://schema.org/Number
+        type: Property
         units: seconds
     reportStep:
       description: 'Interval at which output results are reported. given in seconds'
-      type: Property
+      type: number
       x-ngsi:
         model: https://schema.org/Number
+        type: Property
         units: seconds
     requiredPressure:
       description: 'Pressure required to supply a node''s full demand under a pressure driven analysis. Only used if demandModel is ''PDA'''
-      type: Property
+      type: number
       x-ngsi:
         model: https://schema.org/Number
+        type: Property
     ruleTimeStep:
       description: 'Time step used to check for changes in system status due to rule-based controls. Given in seconds'
-      type: Property
+      type: number
       x-ngsi:
         model: https://schema.org/Number
+        type: Property
         units: seconds
     seeAlso:
       description: 'list of uri pointing to additional resources about the item'
@@ -501,20 +550,25 @@ SimulationScenario:
           type: array
         - format: uri
           type: string
-      type: Property
+      x-ngsi:
+        type: Property
     source:
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'
-      type: Property
+      type: string
+      x-ngsi:
+        type: Property
     specificGravity:
       description: 'The ratio of the density of the fluid being modeled to that of water at 4 deg. C'
-      type: Property
+      type: number
       x-ngsi:
         model: https://schema.org/Number
+        type: Property
     startClockTime:
       description: 'Time of day at which the simulation begins. Given as seconds from start of day'
-      type: Property
+      type: number
       x-ngsi:
         model: https://schema.org/Number
+        type: Property
         units: seconds
     statistic:
       description: 'The type of statistical post-processing that is done on the time series of simulation results generated. Options are AVERAGED (report time-averaged results), MINIMUM (report only minimum values), MAXIMUM (report only maximum values), RANGE (report difference between minimum and maximum values) and NONE (report full time series). Enum:''averaged, minimum, maximum, range, none'''
@@ -524,19 +578,22 @@ SimulationScenario:
         - minimum
         - none
         - range
-      type: Property
+      type: string
       x-ngsi:
         model: https://schema.org/string
+        type: Property
     tankOrder:
       description: 'Bulk water reaction order for tanks'
-      type: Property
+      type: number
       x-ngsi:
         model: https://schema.org/Number
+        type: Property
     tolerance:
       description: 'Water quality tolerance'
-      type: Property
+      type: number
       x-ngsi:
         model: https://schema.org/Number
+        type: Property
     traceNodeID:
       anyOf:
         - maxLength: 256
@@ -546,43 +603,50 @@ SimulationScenario:
         - format: uri
           type: string
       description: 'URI of node being traced in the quality analysis. Mandatory if ''qualityType'' is TRACE, otherwise not required'
-      type: Relationship
       x-ngsi:
         model: https://schema.org/URL
+        type: Relationship
     trials:
       description: 'The maximum number of trials used to solve network hydraulics at each hydraulic time step of a simulation'
-      type: Property
+      type: number
       x-ngsi:
         model: https://schema.org/Number
+        type: Property
     type:
       description: 'NGSI-LD Entity Type. It has to be SimulationScenario'
       enum:
         - SimulationScenario
-      type: Property
+      type: string
+      x-ngsi:
+        type: Property
     unbalanced:
       description: 'Determines what happens if a hydraulic solution cannot be reached within the allowed number of trials. Allowable options are STOP (halt analysis), CONTINUE (continue analysis but with a warning message) and CONTINUE_N (continue for another N trials, where the value of N is given by ''unbalancedN''). Enum:''stop, continue, continue_N'''
       enum:
         - stop
         - continue
         - continue_N
-      type: Property
+      type: string
       x-ngsi:
         model: https://schema.org/Text
+        type: Property
     unbalancedN:
       description: 'Number of additional trials allowed if ''unbalanced'' is set to continue_N. Mandatory if ''unbalanced'' is set to continue_N, else not required.'
-      type: Property
+      type: number
       x-ngsi:
         model: https://schema.org/Number
+        type: Property
     viscosity:
       description: 'The kinematic viscosity of the fluid being modeled relative to that of water at 20 deg. C'
-      type: Property
+      type: number
       x-ngsi:
         model: https://schema.org/Number
+        type: Property
     wallOrder:
       description: 'Wall reaction order for pipes'
-      type: Property
+      type: number
       x-ngsi:
         model: https://schema.org/Number
+        type: Property
   required:
     - id
     - type
