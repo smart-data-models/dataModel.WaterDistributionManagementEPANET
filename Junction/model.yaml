@@ -22,28 +22,38 @@ Junction:
         streetAddress:
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''
           type: string
-      type: Property
+      type: object
       x-ngsi:
         model: https://schema.org/address
+        type: Property
     alternateName:
       description: 'An alternative name for this item'
-      type: Property
+      type: string
+      x-ngsi:
+        type: Property
     areaServed:
       description: 'The geographic area where a service or offered item is provided'
-      type: Property
+      type: string
       x-ngsi:
         model: https://schema.org/Text
+        type: Property
     dataProvider:
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'
-      type: Property
+      type: string
+      x-ngsi:
+        type: Property
     dateCreated:
       description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'
       format: date-time
-      type: Property
+      type: string
+      x-ngsi:
+        type: Property
     dateModified:
       description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'
       format: date-time
-      type: Property
+      type: string
+      x-ngsi:
+        type: Property
     demandCategory:
       description: 'Allows base demands and time patterns to be assigned to other categories of users.'
       properties:
@@ -63,23 +73,28 @@ Junction:
           description: 'Relationship. A relationship to the pattern of the ''demandCategory'' property.'
         value:
           type: number
-      type: Property
+      type: object
       x-ngsi:
         model: https://schema.org/Text
+        type: Property
     description:
       description: 'A description of this item'
-      type: Property
+      type: string
+      x-ngsi:
+        type: Property
     elevation:
       description: 'The elevation above some common reference of the junction. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code'
-      type: Property
+      type: number
       x-ngsi:
         model: http://schema.org/Number
+        type: Property
         units: Metre
     emitterCoefficient:
       description: 'Discharge coefficient for emitter (sprinkler or nozzle) placed at junction. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code'
-      type: Property
+      type: number
       x-ngsi:
         model: http://schema.org/Number
+        type: Property
         units: 'square metre per second'
     head:
       description: 'Observed head at the node (junction, tank or reservoir)'
@@ -96,7 +111,9 @@ Junction:
               type: string
         value:
           type: number
-      type: Property
+      type: object
+      x-ngsi:
+        type: Property
     id:
       anyOf: &junction_-_properties_-_owner_-_items_-_anyof
         - description: 'Property. Identifier format of any NGSI entity'
@@ -108,7 +125,8 @@ Junction:
           format: uri
           type: string
       description: 'Unique identifier of the entity'
-      type: Property
+      x-ngsi:
+        type: Property
     initialQuality:
       description: 'Initial quality in the network component'
       properties:
@@ -124,7 +142,9 @@ Junction:
               type: string
         value:
           type: number
-      type: Property
+      type: object
+      x-ngsi:
+        type: Property
     location:
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
       oneOf:
@@ -276,16 +296,21 @@ Junction:
             - coordinates
           title: 'GeoJSON MultiPolygon'
           type: object
-      type: Geoproperty
+      x-ngsi:
+        type: Geoproperty
     name:
       description: 'The name of this item.'
-      type: Property
+      type: string
+      x-ngsi:
+        type: Property
     owner:
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'
       items:
         anyOf: *junction_-_properties_-_owner_-_items_-_anyof
         description: 'Property. Unique identifier of the entity'
-      type: Property
+      type: array
+      x-ngsi:
+        type: Property
     pressure:
       description: 'Observed pressure at the node (junction, tank or reservoir)'
       properties:
@@ -301,7 +326,9 @@ Junction:
               type: string
         value:
           type: number
-      type: Property
+      type: object
+      x-ngsi:
+        type: Property
     quality:
       description: 'Observed quality in the network component'
       properties:
@@ -317,7 +344,9 @@ Junction:
               type: string
         value:
           type: number
-      type: Property
+      type: object
+      x-ngsi:
+        type: Property
     seeAlso:
       description: 'list of uri pointing to additional resources about the item'
       oneOf:
@@ -328,10 +357,13 @@ Junction:
           type: array
         - format: uri
           type: string
-      type: Property
+      x-ngsi:
+        type: Property
     source:
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'
-      type: Property
+      type: string
+      x-ngsi:
+        type: Property
     sourceCategory:
       description: 'Description of the quality of source flow entering the network at a specific node.'
       properties:
@@ -357,9 +389,10 @@ Junction:
             - FLOWPACED
             - SETPOINT
           type: string
-      type: Property
+      type: object
       x-ngsi:
         model: https://schema.org/Text
+        type: Property
     sourceMassInflow:
       description: 'Property.. Observed source mass inflow at the node (junction, tank or reservoir)'
       properties:
@@ -391,17 +424,22 @@ Junction:
               type: string
         value:
           type: number
-      type: Property
+      type: object
+      x-ngsi:
+        type: Property
     tag:
       description: 'An optional text string used to assign the pipe to a category, perhaps one based on age or material'
-      type: Property
+      type: string
       x-ngsi:
         model: https://schema.org/Text
+        type: Property
     type:
       description: 'NGSI-LD Entity Type. It has to be Junction'
       enum:
         - Junction
-      type: Property
+      type: string
+      x-ngsi:
+        type: Property
   required:
     - id
     - type
