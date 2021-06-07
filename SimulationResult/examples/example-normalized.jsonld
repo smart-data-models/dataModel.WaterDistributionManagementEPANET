@@ -13,32 +13,10 @@
     "type": "Relationship",
     "object": "urn:ngsi-ld:Simulation:01"
   },
-  "outputParameters": [
+  "outputFile": [
     {
-      "type": "Property",
-      "value": "output parameter 1",
-      "waterLevel": {
-        "type": "Property",
-        "value": 50,
-        "targetURI": {
-          "type": "Property",
-          "value": "urn:ngsi-ld:Valve:V1"
-        }
-      },
-      "datasetId": "urn:ngsi-ld:Dataset:ValveSetting"
-    },
-    {
-      "type": "Property",
-      "value": "output parameter 2",
-      "initialQuality": {
-        "type": "Property",
-        "value": 2,
-        "targetURI": {
-          "type": "Relationship",
-          "value": "urn:ngsi-ld:Tank:T1"
-        }
-      },
-      "datasetId": "urn:ngsi-ld:Dataset:TankInitialQuality"
+      "type": "Relationship",
+      "object": "c://epanetsimulations/simulationResult.bin"
     }
   ],
   "@context": [
