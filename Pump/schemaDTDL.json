@@ -1,0 +1,339 @@
+{
+    "@id": "dtmi:com:ngsi-ld:Pump;0",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;2",
+    "comment": "Smart Data Models. WaterNetworkManagementEPANET - Pump adapted to DTDL from smartdatamodels.org. Source: https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/Pump/schema.json",
+    "description": "This entity contains a harmonised description of a generic pump made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.",
+    "displayName": "Pump",
+    "contents": [
+        {
+            "name": "alternateName",
+            "writable": true,
+            "displayName": "alternateName",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "An alternative name for this item"
+        },
+        {
+            "name": "areaServed",
+            "writable": true,
+            "displayName": "areaServed",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "The geographic area where a service or offered item is provided"
+        },
+        {
+            "name": "dataProvider",
+            "writable": true,
+            "displayName": "dataProvider",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A sequence of characters identifying the provider of the harmonised data entity."
+        },
+        {
+            "name": "dateCreated",
+            "writable": true,
+            "displayName": "dateCreated",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Entity creation timestamp. This will usually be allocated by the storage platform."
+        },
+        {
+            "name": "dateModified",
+            "writable": true,
+            "displayName": "dateModified",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Timestamp of the last modification of the entity. This will usually be allocated by the storage platform."
+        },
+        {
+            "name": "description",
+            "writable": true,
+            "displayName": "description",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A description of this item"
+        },
+        {
+            "name": "efficCurve",
+            "writable": true,
+            "displayName": "efficCurve"
+        },
+        {
+            "name": "endsAt",
+            "writable": true,
+            "displayName": "endsAt"
+        },
+        {
+            "name": "energyPattern",
+            "writable": true,
+            "displayName": "energyPattern"
+        },
+        {
+            "name": "energyPrice",
+            "writable": true,
+            "displayName": "energyPrice",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "The average or nominal price of energy in monetary units. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code."
+        },
+        {
+            "name": "headCurve",
+            "writable": true,
+            "displayName": "headCurve",
+            "@type": "Relationship",
+            "comment": "The ID label of the pump curve used to describe the relationship between the head delivered by the pump and the flow through the Pump."
+        },
+        {
+            "name": "name",
+            "writable": true,
+            "displayName": "name",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "The name of this item."
+        },
+        {
+            "name": "power",
+            "writable": true,
+            "displayName": "power",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "The power supplied by the pump. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code."
+        },
+        {
+            "name": "pumpPattern",
+            "writable": true,
+            "displayName": "pumpPattern"
+        },
+        {
+            "name": "seeAlso",
+            "writable": true,
+            "displayName": "seeAlso"
+        },
+        {
+            "name": "source",
+            "writable": true,
+            "displayName": "source",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object."
+        },
+        {
+            "name": "speed",
+            "writable": true,
+            "displayName": "speed",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "The relative speed setting of the Pump. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code."
+        },
+        {
+            "name": "startsAt",
+            "writable": true,
+            "displayName": "startsAt"
+        },
+        {
+            "name": "tag",
+            "writable": true,
+            "displayName": "tag",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "An optional text string used to assign the pipe to a category, perhaps one based on age or material"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_Point",
+            "schema": "point"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_LineString",
+            "schema": "lineString"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_Polygon",
+            "schema": "polygon"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_MultiPoint",
+            "schema": "multiPoint"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_MultiLineString",
+            "schema": "multiLineString"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_MultiPolygon",
+            "schema": "multiPolygon"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "vertices_MultiPoint",
+            "schema": "multiPoint"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "vertices_Point",
+            "schema": "point"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "owner",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)",
+            "displayName": "owner"
+        },
+        {
+            "@type": "object",
+            "name": "address",
+            "comment": "The mailing address",
+            "displayName": "address",
+            "fields": [
+                {
+                    "name": "addressCountry",
+                    "schema": "string"
+                },
+                {
+                    "name": "addressLocality",
+                    "schema": "string"
+                },
+                {
+                    "name": "addressRegion",
+                    "schema": "string"
+                },
+                {
+                    "name": "postOfficeBoxNumber",
+                    "schema": "string"
+                },
+                {
+                    "name": "postalCode",
+                    "schema": "string"
+                },
+                {
+                    "name": "streetAddress",
+                    "schema": "string"
+                }
+            ]
+        },
+        {
+            "@type": "object",
+            "name": "energyUse",
+            "comment": "Observed energy use by the element of the network",
+            "displayName": "energyUse",
+            "fields": [
+                {
+                    "name": "observedBy",
+                    "schema": "string"
+                },
+                {
+                    "name": "value",
+                    "schema": "long"
+                }
+            ]
+        },
+        {
+            "@type": "object",
+            "name": "flow",
+            "comment": "Rate of flow from `startsAt` node to `endsAt` node, measured by a device at the link (pipe, valve or pump)",
+            "displayName": "flow",
+            "fields": [
+                {
+                    "name": "observedBy",
+                    "schema": "string"
+                },
+                {
+                    "name": "value",
+                    "schema": "long"
+                }
+            ]
+        },
+        {
+            "@type": "object",
+            "name": "quality",
+            "comment": "Observed quality in the network component",
+            "displayName": "quality",
+            "fields": [
+                {
+                    "name": "observedBy",
+                    "schema": "string"
+                },
+                {
+                    "name": "value",
+                    "schema": "long"
+                }
+            ]
+        },
+        {
+            "@type": "object",
+            "name": "velocity",
+            "comment": "Observed velocity in the link (pipe, valve or pump)",
+            "displayName": "velocity",
+            "fields": [
+                {
+                    "name": "observedBy",
+                    "schema": "string"
+                },
+                {
+                    "name": "value",
+                    "schema": "long"
+                }
+            ]
+        },
+        {
+            "@type": "Telemetry",
+            "name": "initialStatus",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": "OPEN",
+                        "displayName": "OPEN",
+                        "enumValue": 1
+                    },
+                    {
+                        "name": "CLOSED",
+                        "displayName": "CLOSED",
+                        "enumValue": 2
+                    },
+                    {
+                        "name": "CV",
+                        "displayName": "CV",
+                        "enumValue": 3
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "Telemetry",
+            "name": "status",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": "OPEN",
+                        "displayName": "OPEN",
+                        "enumValue": 1
+                    },
+                    {
+                        "name": "CLOSED",
+                        "displayName": "CLOSED",
+                        "enumValue": 2
+                    },
+                    {
+                        "name": "CV",
+                        "displayName": "CV",
+                        "enumValue": 3
+                    }
+                ]
+            }
+        }
+    ]
+}
