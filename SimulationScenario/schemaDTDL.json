@@ -1,0 +1,642 @@
+{
+    "@id": "dtmi:com:ngsi-ld:SimulationScenario;0",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;2",
+    "comment": "WaterNetwork - SimulationScenario adapted to DTDL from smartdatamodels.org. Source: https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/SimulationScenario/schema.json",
+    "description": "This entity contains a harmonised description of a generic simulation scenario made for the Water Network Management domain. This entity is primarily associated with the water network management vertical and related IoT applications.",
+    "displayName": "SimulationScenario",
+    "contents": [
+        {
+            "name": "accuracy",
+            "writable": true,
+            "displayName": "accuracy",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Total normalized flow change convergence criterion for determining when a hydraulic solution has been reached."
+        },
+        {
+            "name": "alternateName",
+            "writable": true,
+            "displayName": "alternateName",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "An alternative name for this item"
+        },
+        {
+            "name": "areaServed",
+            "writable": true,
+            "displayName": "areaServed",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "The geographic area where a service or offered item is provided"
+        },
+        {
+            "name": "bulkOrder",
+            "writable": true,
+            "displayName": "bulkOrder",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Bulk water reaction order for pipes"
+        },
+        {
+            "name": "checkFrequency",
+            "writable": true,
+            "displayName": "checkFrequency",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Frequency of hydraulic status checks"
+        },
+        {
+            "name": "chemicalName",
+            "writable": true,
+            "displayName": "chemicalName",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Name of the chemical modelled. Only used if 'qualityType' is CHEM"
+        },
+        {
+            "name": "chemicalUnits",
+            "writable": true,
+            "displayName": "chemicalUnits",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Units of the chemical modelled. Only used if 'qualityType' is CHEM"
+        },
+        {
+            "name": "concentrationLimit",
+            "writable": true,
+            "displayName": "concentrationLimit",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Limiting concentration for growth reactions"
+        },
+        {
+            "name": "createdBy",
+            "writable": true,
+            "displayName": "createdBy"
+        },
+        {
+            "name": "dampLimit",
+            "writable": true,
+            "displayName": "dampLimit",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Accuracy value at which solution damping and status checks begin for PRVs and PSVs."
+        },
+        {
+            "name": "dataProvider",
+            "writable": true,
+            "displayName": "dataProvider",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A sequence of characters identifying the provider of the harmonised data entity."
+        },
+        {
+            "name": "dateCreated",
+            "writable": true,
+            "displayName": "dateCreated",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Entity creation timestamp. This will usually be allocated by the storage platform."
+        },
+        {
+            "name": "dateModified",
+            "writable": true,
+            "displayName": "dateModified",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Timestamp of the last modification of the entity. This will usually be allocated by the storage platform."
+        },
+        {
+            "name": "demandCharge",
+            "writable": true,
+            "displayName": "demandCharge",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Energy charge per maximum kW usage."
+        },
+        {
+            "name": "description",
+            "writable": true,
+            "displayName": "description",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A description of this item"
+        },
+        {
+            "name": "diffusivity",
+            "writable": true,
+            "displayName": "diffusivity",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Molecular diffusivity of the chemical analysed in a quality analysis, relative to diffusivity of chlorine in water."
+        },
+        {
+            "name": "duration",
+            "writable": true,
+            "displayName": "duration",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Duration of the simulation, given in seconds"
+        },
+        {
+            "name": "emitterExponent",
+            "writable": true,
+            "displayName": "emitterExponent",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Power to which pressure at a junction is raised when computing from an emitter."
+        },
+        {
+            "name": "flowChange",
+            "writable": true,
+            "displayName": "flowChange",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Maximum flow change convergence criterion for determining when a hydraulic solution has been reached."
+        },
+        {
+            "name": "hasInputNetwork",
+            "writable": true,
+            "displayName": "hasInputNetwork"
+        },
+        {
+            "name": "hasSimulationResult",
+            "writable": true,
+            "displayName": "hasSimulationResult"
+        },
+        {
+            "name": "headError",
+            "writable": true,
+            "displayName": "headError",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Maximum headloss convergence criterion for determining when a hydraulic solution has been reached."
+        },
+        {
+            "name": "hydraulicTimeStep",
+            "writable": true,
+            "displayName": "hydraulicTimeStep",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Determines how often the hydraulic state of the network is calculated. Given in seconds"
+        },
+        {
+            "name": "maxCheck",
+            "writable": true,
+            "displayName": "maxCheck",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Number of trials after which status checks are discontinued"
+        },
+        {
+            "name": "minimumPressure",
+            "writable": true,
+            "displayName": "minimumPressure",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Pressure below which no demand can be delivered under a pressure dirven analysis. Only used if demandModel is 'PDA'"
+        },
+        {
+            "name": "name",
+            "writable": true,
+            "displayName": "name",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "The name of this item."
+        },
+        {
+            "name": "patternStart",
+            "writable": true,
+            "displayName": "patternStart",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Start time of the  the simulation."
+        },
+        {
+            "name": "patternStep",
+            "writable": true,
+            "displayName": "patternStep",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Pattern step of the simulation."
+        },
+        {
+            "name": "pressureExponent",
+            "writable": true,
+            "displayName": "pressureExponent",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Power to which pressure is raised when calculating the demand delivered under a pressure driven analysis. Only used if demandModel is 'PDA'"
+        },
+        {
+            "name": "qualityTimeStep",
+            "writable": true,
+            "displayName": "qualityTimeStep",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "The timestep used to track changes in water quality in the network. Given in seconds"
+        },
+        {
+            "name": "reportStart",
+            "writable": true,
+            "displayName": "reportStart",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Simulation time at which results start to be reported. Given in seconds from start of simulation"
+        },
+        {
+            "name": "reportStep",
+            "writable": true,
+            "displayName": "reportStep",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Interval at which output results are reported. given in seconds"
+        },
+        {
+            "name": "requiredPressure",
+            "writable": true,
+            "displayName": "requiredPressure",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Pressure required to supply a node's full demand under a pressure driven analysis. Only used if demandModel is 'PDA'"
+        },
+        {
+            "name": "ruleTimeStep",
+            "writable": true,
+            "displayName": "ruleTimeStep",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Time step used to check for changes in system status due to rule-based controls. Given in seconds"
+        },
+        {
+            "name": "seeAlso",
+            "writable": true,
+            "displayName": "seeAlso"
+        },
+        {
+            "name": "source",
+            "writable": true,
+            "displayName": "source",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object."
+        },
+        {
+            "name": "specificGravity",
+            "writable": true,
+            "displayName": "specificGravity",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "The ratio of the density of the fluid being modeled to that of water at 4 deg. C"
+        },
+        {
+            "name": "startClockTime",
+            "writable": true,
+            "displayName": "startClockTime",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Time of day at which the simulation begins. Given as seconds from start of day"
+        },
+        {
+            "name": "tankOrder",
+            "writable": true,
+            "displayName": "tankOrder",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Bulk water reaction order for tanks"
+        },
+        {
+            "name": "tolerance",
+            "writable": true,
+            "displayName": "tolerance",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Water quality tolerance"
+        },
+        {
+            "name": "traceNodeID",
+            "writable": true,
+            "displayName": "traceNodeID"
+        },
+        {
+            "name": "trials",
+            "writable": true,
+            "displayName": "trials",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "The maximum number of trials used to solve network hydraulics at each hydraulic time step of a simulation"
+        },
+        {
+            "name": "unbalancedN",
+            "writable": true,
+            "displayName": "unbalancedN",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Number of additional trials allowed if 'unbalanced' is set to continue_N. Mandatory if 'unbalanced' is set to continue_N, else not required."
+        },
+        {
+            "name": "viscosity",
+            "writable": true,
+            "displayName": "viscosity",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "The kinematic viscosity of the fluid being modeled relative to that of water at 20 deg. C"
+        },
+        {
+            "name": "wallOrder",
+            "writable": true,
+            "displayName": "wallOrder",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Wall reaction order for pipes"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_Point",
+            "schema": "point"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_LineString",
+            "schema": "lineString"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_Polygon",
+            "schema": "polygon"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_MultiPoint",
+            "schema": "multiPoint"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_MultiLineString",
+            "schema": "multiLineString"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_MultiPolygon",
+            "schema": "multiPolygon"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "inputParameter",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "object"
+            },
+            "comment": "Description of the set of modifications to be applied to the network for the simulation",
+            "displayName": "inputParameter"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "operationalControl",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "object"
+            },
+            "comment": "The operational control of de item",
+            "displayName": "operationalControl"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "owner",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)",
+            "displayName": "owner"
+        },
+        {
+            "@type": "object",
+            "name": "address",
+            "comment": "The mailing address",
+            "displayName": "address",
+            "fields": [
+                {
+                    "name": "addressCountry",
+                    "schema": "string"
+                },
+                {
+                    "name": "addressLocality",
+                    "schema": "string"
+                },
+                {
+                    "name": "addressRegion",
+                    "schema": "string"
+                },
+                {
+                    "name": "postOfficeBoxNumber",
+                    "schema": "string"
+                },
+                {
+                    "name": "postalCode",
+                    "schema": "string"
+                },
+                {
+                    "name": "streetAddress",
+                    "schema": "string"
+                }
+            ]
+        },
+        {
+            "@type": "Telemetry",
+            "name": "demandModel",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": "DDA",
+                        "displayName": "DDA",
+                        "enumValue": 1
+                    },
+                    {
+                        "name": "PDA",
+                        "displayName": "PDA",
+                        "enumValue": 2
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "Telemetry",
+            "name": "flowUnits",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": "AFD",
+                        "displayName": "AFD",
+                        "enumValue": 1
+                    },
+                    {
+                        "name": "CFS",
+                        "displayName": "CFS",
+                        "enumValue": 2
+                    },
+                    {
+                        "name": "CMD",
+                        "displayName": "CMD",
+                        "enumValue": 3
+                    },
+                    {
+                        "name": "CMH",
+                        "displayName": "CMH",
+                        "enumValue": 4
+                    },
+                    {
+                        "name": "GPM",
+                        "displayName": "GPM",
+                        "enumValue": 5
+                    },
+                    {
+                        "name": "IMGD",
+                        "displayName": "IMGD",
+                        "enumValue": 6
+                    },
+                    {
+                        "name": "LPS",
+                        "displayName": "LPS",
+                        "enumValue": 7
+                    },
+                    {
+                        "name": "LPM",
+                        "displayName": "LPM",
+                        "enumValue": 8
+                    },
+                    {
+                        "name": "MLD",
+                        "displayName": "MLD",
+                        "enumValue": 9
+                    },
+                    {
+                        "name": "MGD",
+                        "displayName": "MGD",
+                        "enumValue": 10
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "Telemetry",
+            "name": "headlossFormula",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": "H-W",
+                        "displayName": "H-W",
+                        "enumValue": 1
+                    },
+                    {
+                        "name": "D-W",
+                        "displayName": "D-W",
+                        "enumValue": 2
+                    },
+                    {
+                        "name": "C-M",
+                        "displayName": "C-M",
+                        "enumValue": 3
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "Telemetry",
+            "name": "qualityType",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": "age",
+                        "displayName": "age",
+                        "enumValue": 1
+                    },
+                    {
+                        "name": "chem",
+                        "displayName": "chem",
+                        "enumValue": 2
+                    },
+                    {
+                        "name": "none",
+                        "displayName": "none",
+                        "enumValue": 3
+                    },
+                    {
+                        "name": "trace",
+                        "displayName": "trace",
+                        "enumValue": 4
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "Telemetry",
+            "name": "statistic",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": "averaged",
+                        "displayName": "averaged",
+                        "enumValue": 1
+                    },
+                    {
+                        "name": "maximum",
+                        "displayName": "maximum",
+                        "enumValue": 2
+                    },
+                    {
+                        "name": "minimum",
+                        "displayName": "minimum",
+                        "enumValue": 3
+                    },
+                    {
+                        "name": "none",
+                        "displayName": "none",
+                        "enumValue": 4
+                    },
+                    {
+                        "name": "range",
+                        "displayName": "range",
+                        "enumValue": 5
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "Telemetry",
+            "name": "unbalanced",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": "stop",
+                        "displayName": "stop",
+                        "enumValue": 1
+                    },
+                    {
+                        "name": "continue",
+                        "displayName": "continue",
+                        "enumValue": 2
+                    },
+                    {
+                        "name": "continue_N",
+                        "displayName": "continue_N",
+                        "enumValue": 3
+                    }
+                ]
+            }
+        }
+    ]
+}
