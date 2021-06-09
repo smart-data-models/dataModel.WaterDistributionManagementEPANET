@@ -1,123 +1,123 @@
 {
-    "$schema": "http://json-schema.org/schema#",
-    "$id": "https://smart-data-models.github.io/dataModel.WaterDistributionManagementEPANET/Result/schema.json",
-    "title": "WaterNetwork - SimulationResult",
-    "description": "This entity contains a harmonised description of a generic simulation result made for the Water Network Management domain. This entity is primarily associated with the water network management vertical and related IoT applications.",
-    "type": "object",
-    "allOf": [
-        {
-            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+  "$schema": "http://json-schema.org/schema#",
+  "$id": "https://smart-data-models.github.io/dataModel.WaterDistributionManagementEPANET/Result/schema.json",
+  "$schemaVersion": "0.0.2",
+  "title": "WaterNetwork - SimulationResult",
+  "description": "This entity contains a harmonised description of a generic simulation result made for the Water Network Management domain. This entity is primarily associated with the water network management vertical and related IoT applications.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+    },
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+    },
+    {
+      "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/WaterNetworkManagement-schema.json"
+    },
+    {
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "SimulationResult"
+          ],
+          "description": "Property. NGSI-LD Entity Type. It has to be SimulationResult"
         },
-        {
-            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
-        },
-        {
-            "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/WaterNetworkManagement-schema.json"
-        },
-        {
-            "properties": {
-                "type": {
-                    "type": "string",
-                    "enum": [
-                        "SimulationResult"
-                    ],
-                    "description": "Property. NGSI-LD Entity Type. It has to be SimulationResult"
-                },
-                "hasInputNetwork": {
-                    "anyOf": [
-                        {
-                            "type": "string",
-                            "minLength": 1,
-                            "maxLength": 256,
-                            "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$"
-                        },
-                        {
-                            "type": "string",
-                            "format": "uri"
-                        }
-                    ],
-                    "description": "Relationship. Model:'https://schema.org/URL'. The ID of the network used in the simulation"
-                },
-                "refSimulationScenario": {
-                    "anyOf": [
-                        {
-                            "type": "string",
-                            "minLength": 1,
-                            "maxLength": 256,
-                            "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$"
-                        },
-                        {
-                            "type": "string",
-                            "format": "uri"
-                        }
-                    ],
-                    "description": "Relationship. Model:'https://schema.org/URL'. The ID of the simulation scenario"
-                },
-                "outputParameters": {
-                    "type": "array",
-                    "description": "Property. Description of the set of results of applied simulation to the network.",
-                    "items": {
-                        "type": "object",
-                        "properties": {
-                            "parameter": {
-                                "type": "string",
-                                "enum": [
-                                    "demand",
-                                    "energyUse",
-                                    "flow",
-                                    "head",
-                                    "initialQuality",
-                                    "level",
-                                    "pressure",
-                                    "quality",
-                                    "sourceMassInflow",
-                                    "supply",
-                                    "velocity",
-                                    "waterLevel"
-                                ]
-                            },
-                            "value": {
-                                "anyOf": [
-                                    {
-                                        "type": "string"
-                                    },
-                                    {
-                                        "type": "number"
-                                    },
-                                    {
-                                        "type": "boolean"
-                                    }
-                                ]
-                            },
-                            "targetURI": {
-                                "anyOf": [
-                                    {
-                                        "type": "string",
-                                        "minLength": 1,
-                                        "maxLength": 256,
-                                        "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$"
-                                    },
-                                    {
-                                        "type": "string",
-                                        "format": "uri"
-                                    }
-                                ]
-                            }
-                        }
-                    }
-                }
-                "outputFile": {
-                    "type": "string",
-                    "format" : "uri",
-                    "description": "Property. Link to binary file containing results of applied simulation to the network.",
-                }
+        "hasInputNetwork": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256,
+              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$"
+            },
+            {
+              "type": "string",
+              "format": "uri"
             }
+          ],
+          "description": "Relationship. Model:'https://schema.org/URL'. The ID of the network used in the simulation"
+        },
+        "refSimulationScenario": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256,
+              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$"
+            },
+            {
+              "type": "string",
+              "format": "uri"
+            }
+          ],
+          "description": "Relationship. Model:'https://schema.org/URL'. The ID of the simulation scenario"
+        },
+        "outputParameters": {
+          "type": "array",
+          "description": "Property. Description of the set of results of applied simulation to the network.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "parameter": {
+                "type": "string",
+                "enum": [
+                  "demand",
+                  "energyUse",
+                  "flow",
+                  "head",
+                  "initialQuality",
+                  "level",
+                  "pressure",
+                  "quality",
+                  "sourceMassInflow",
+                  "supply",
+                  "velocity",
+                  "waterLevel"
+                ]
+              },
+              "value": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "type": "boolean"
+                  }
+                ]
+              },
+              "targetURI": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 256,
+                    "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$"
+                  },
+                  {
+                    "type": "string",
+                    "format": "uri"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "outputFile": {
+          "type": "string",
+          "format": "uri",
+          "description": "Property. Link to binary file containing results of applied simulation to the network."
         }
-    ],
-    "required": [
-        "id",
-        "type",
-        "refSimulationScenario"
-    ],
-    "$schemaVersion": "0.0.1"
+      }
+    }
+  ],
+  "required": [
+    "id",
+    "type",
+    "refSimulationScenario"
+  ]
 }
