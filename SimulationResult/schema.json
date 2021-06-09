@@ -53,7 +53,60 @@
                     ],
                     "description": "Relationship. Model:'https://schema.org/URL'. The ID of the simulation scenario"
                 },
-                "outputfile": {
+                "outputParameters": {
+                    "type": "array",
+                    "description": "Property. Description of the set of results of applied simulation to the network.",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "parameter": {
+                                "type": "string",
+                                "enum": [
+                                    "demand",
+                                    "energyUse",
+                                    "flow",
+                                    "head",
+                                    "initialQuality",
+                                    "level",
+                                    "pressure",
+                                    "quality",
+                                    "sourceMassInflow",
+                                    "supply",
+                                    "velocity",
+                                    "waterLevel"
+                                ]
+                            },
+                            "value": {
+                                "anyOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "number"
+                                    },
+                                    {
+                                        "type": "boolean"
+                                    }
+                                ]
+                            },
+                            "targetURI": {
+                                "anyOf": [
+                                    {
+                                        "type": "string",
+                                        "minLength": 1,
+                                        "maxLength": 256,
+                                        "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$"
+                                    },
+                                    {
+                                        "type": "string",
+                                        "format": "uri"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                }
+                "outputFile": {
                     "type": "string",
                     "format" : "uri",
                     "description": "Property. Link to binary file containing results of applied simulation to the network.",
