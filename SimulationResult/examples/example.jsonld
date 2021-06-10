@@ -16,6 +16,9 @@
       "targetURI": "urn:ngsi-ld:Tank:T1"
     }
   ],
+  "outputFile" : [
+    "c://epanetsimulations/simulationResult.bin"
+    ],
   "@context": [
     "https://smartdatamodels.org/context.jsonld"
   ]
