@@ -29,6 +29,10 @@
                 "initialStatus": {
                     "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/initialStatus"
                 },
+                "openStatus": {
+                    "type": "number",
+                    "description": "Property. Model: 'https://schema.org/Number'. Units: '%'. Status of a valve as a numeric percentage value representing how open or close the valve is. 0% - completely closed, 100% - fully open."
+                },
                 "diameter": {
                     "type": "number",
                     "description": "Property.  Model:'https://schema.org/Number'. Units:'millimetre'. The valve diameter. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code."
