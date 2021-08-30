@@ -3,6 +3,7 @@
     "$id": "https://smart-data-models.github.io/dataModels/WaterNetworkManagementEPANET/Valve/schema.json",
     "title": "Smart Data Models WaterNetworkManagementEPANET - Valve",
     "description": "This entity contains a harmonised description of a generic Valve made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.",
+    "$schemaVersion": "0.1.0",
     "type": "object",
     "allOf": [
         {
@@ -32,7 +33,7 @@
                 "openStatus": {
                     "type": "number",
                     "minimum": 0,
-                    "maximum": 1
+                    "maximum": 1,
                     "description": "Property. Model: 'https://schema.org/Number'. Units: '%'. Status of a valve as a numeric percentage value representing how open or close the valve is. 0% - completely closed, 100% - fully open."
                 },
                 "diameter": {
@@ -102,6 +103,5 @@
         "type",
         "startsAt",
         "endsAt"
-    ],
-    "$schemaVersion": "0.0.1"
+    ]
 }
