@@ -31,6 +31,8 @@
                 },
                 "openStatus": {
                     "type": "number",
+                    "minimum": 0,
+                    "maximum": 1
                     "description": "Property. Model: 'https://schema.org/Number'. Units: '%'. Status of a valve as a numeric percentage value representing how open or close the valve is. 0% - completely closed, 100% - fully open."
                 },
                 "diameter": {

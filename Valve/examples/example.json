@@ -1,7 +1,8 @@
 {
     "id": "87fe7d79-0d4c-4da9-b7d0-3340efa0656awytsd",
     "type": "Valve",
-    "initiaStatus": "OPEN",
+    "initialStatus": "OPEN",
+    "openStatus": 0.3,
     "status": "OPEN",
     "diameter": 203.20,
     "valveType": "PRV",

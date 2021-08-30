@@ -9,6 +9,10 @@
         "type": "Text",
         "value": "OPEN"
     },
+    "openStatus": {
+        "type": "Number",
+        "value": 0.3
+    },
     "diameter": {
         "type": "Number",
         "value": 203.20

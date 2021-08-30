@@ -11,6 +11,10 @@
     "type": "Property",
     "value": "OPEN"
   },
+  "openStatus": {
+    "type": "Property",
+    "value": 0.3
+  },
   "diameter": {
     "type": "Property",
     "value": 203.2,
