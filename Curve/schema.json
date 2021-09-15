@@ -50,5 +50,12 @@
                 }
             }
         }
+    ],
+    "required": [
+        "id",
+        "type",
+        "curveType",
+        "xData",
+        "yData"
     ]
 }
