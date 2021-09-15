@@ -384,5 +384,6 @@
         "id",
         "type",
         "hasInputNetwork"
-    ]
+    ],
+    "$schemaVersion": "0.0.1"
 }
