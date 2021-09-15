@@ -379,5 +379,10 @@
                 }
             }
         }
+    ],
+    "required": [
+        "id",
+        "type",
+        "hasInputNetwork"
     ]
 }
