@@ -2,5 +2,6 @@
     "$schema": "http://json-schema.org/schema#",
     "modelTags": "",
     "$id": "https://smart-data-models.github.io/dataModel.WaterDistributionManagementEPANET/Junction/schema.json",
-    "title": "Smart Data Models WaterNetworkManagementEPANET - Junction"
+    "title": "Smart Data Models WaterNetworkManagementEPANET - Junction",
+    "description": "This entity contains a harmonised description of a generic junction made for the Water Network Management domain. This entity is primarily associated with the water network management vertical and related IoT applications."
 }
