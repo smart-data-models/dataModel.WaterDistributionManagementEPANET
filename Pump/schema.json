@@ -164,5 +164,6 @@
         "initialStatus",
         "startsAt",
         "endsAt"
-    ]
+    ],
+    "$schemaVersion": "0.0.1"
 }
