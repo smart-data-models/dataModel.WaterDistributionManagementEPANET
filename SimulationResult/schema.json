@@ -115,5 +115,10 @@
                 }
             }
         }
+    ],
+    "required": [
+        "id",
+        "type",
+        "refSimulationScenario"
     ]
 }
