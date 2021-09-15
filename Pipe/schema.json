@@ -90,5 +90,6 @@
     "required": [
         "id",
         "type"
-    ]
+    ],
+    "$schemaVersion": "0.0.1"
 }
