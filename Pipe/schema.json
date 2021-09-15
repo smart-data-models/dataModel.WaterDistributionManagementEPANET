@@ -1,5 +1,6 @@
 {
     "$schema": "http://json-schema.org/schema#",
     "modelTags": "",
-    "$id": "https://smart-data-models.github.io/dataModel.WaterDistributionManagementEPANET/Pipe/schema.json"
+    "$id": "https://smart-data-models.github.io/dataModel.WaterDistributionManagementEPANET/Pipe/schema.json",
+    "title": "Smart Data Models. WaterNetworkManagementEPANET - Pipe"
 }
