@@ -112,5 +112,6 @@
         "type",
         "location",
         "reservoirHead"
-    ]
+    ],
+    "$schemaVersion": "0.0.1"
 }
