@@ -2,5 +2,6 @@
     "$schema": "http://json-schema.org/schema#",
     "modelTags": "",
     "$id": "https://smart-data-models.github.io/dataModel.WaterDistributionManagementEPANET/Reservoir/schema.json",
-    "title": "Smart Data Models WaterNetworkManagementEPANET - reservoir"
+    "title": "Smart Data Models WaterNetworkManagementEPANET - reservoir",
+    "description": "This entity contains a harmonised description of a generic Reservoir made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications."
 }
