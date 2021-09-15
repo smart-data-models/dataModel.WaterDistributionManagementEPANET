@@ -98,5 +98,11 @@
                 }
             }
         }
+    ],
+    "required": [
+        "id",
+        "type",
+        "startsAt",
+        "endsAt"
     ]
 }
