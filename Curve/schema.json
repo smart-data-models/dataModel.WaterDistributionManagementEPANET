@@ -2,5 +2,6 @@
     "$schema": "http://json-schema.org/schema#",
     "modelTags": "",
     "$id": "https://smart-data-models.github.io/dataModel.WaterDistributionManagementEPANET/Curve/schema.json",
-    "title": "WaterNetwork - Curve"
+    "title": "WaterNetwork - Curve",
+    "description": "This entity contains a harmonised description of a generic curve made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications."
 }
