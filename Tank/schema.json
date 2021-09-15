@@ -125,5 +125,6 @@
         "id",
         "type",
         "location"
-    ]
+    ],
+    "$schemaVersion": "0.0.1"
 }
