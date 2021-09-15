@@ -2,5 +2,6 @@
     "$schema": "http://json-schema.org/schema#",
     "modelTags": "",
     "$id": "https://smart-data-models.github.io/data-model.WaterNetworkManagementEPANET/Simulation/schema.json",
-    "title": "WaterNetwork - SimulationScenario"
+    "title": "WaterNetwork - SimulationScenario",
+    "description": "This entity contains a harmonised description of a generic simulation scenario made for the Water Network Management domain. This entity is primarily associated with the water network management vertical and related IoT applications."
 }
