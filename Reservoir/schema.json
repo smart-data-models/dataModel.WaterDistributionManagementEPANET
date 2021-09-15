@@ -106,5 +106,11 @@
                 }
             }
         }
+    ],
+    "required": [
+        "id",
+        "type",
+        "location",
+        "reservoirHead"
     ]
 }
