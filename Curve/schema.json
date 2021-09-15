@@ -57,5 +57,6 @@
         "curveType",
         "xData",
         "yData"
-    ]
+    ],
+    "$schemaVersion": "0.0.1"
 }
