@@ -36,41 +36,56 @@ Valve:
         streetAddress:    
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
           type: string    
-      type: Property    
+      type: object    
       x-ngsi:    
         model: https://schema.org/address    
+        type: Property    
     alternateName:    
       description: 'An alternative name for this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     areaServed:    
       description: 'The geographic area where a service or offered item is provided'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateCreated:    
       description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateModified:    
       description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     description:    
       description: 'A description of this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     diameter:    
       description: 'The valve diameter. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'    
-      type: Property    
+      type: number    
       x-ngsi:    
         model: ' https://schema.org/Number'    
+        type: Property    
         units: millimetre    
     endsAt:    
       description: 'The ID of the node on the nominal downstream or discharge side of the valve'    
       format: uri    
-      type: Relationship    
+      type: string    
+      x-ngsi:    
+        type: Relationship    
     flow:    
       description: 'Rate of flow from `startsAt` node to `endsAt` node, measured by a device at the link (pipe, valve or pump)'    
       properties:    
@@ -86,7 +101,9 @@ Valve:
               type: string    
         value:    
           type: number    
-      type: Property    
+      type: object    
+      x-ngsi:    
+        type: Property    
     id:    
       anyOf: &valve_-_properties_-_owner_-_items_-_anyof    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -98,16 +115,18 @@ Valve:
           format: uri    
           type: string    
       description: 'Unique identifier of the entity'    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     initialStatus:    
       description: 'The link status at the start of the simulation. Enum:''OPEN, CLOSED, CV'''    
       enum:    
         - OPEN    
         - CLOSED    
         - CV    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
@@ -259,22 +278,28 @@ Valve:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      type: Geoproperty    
+      x-ngsi:    
+        type: Geoproperty    
     minorLoss:    
       description: 'Unitless minor loss coefficient that applies when the valve is completely opened. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'    
-      type: Property    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Number    
+        type: Property    
         units: 'No unit'    
     name:    
       description: 'The name of this item.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
         anyOf: *valve_-_properties_-_owner_-_items_-_anyof    
         description: 'Property. Unique identifier of the entity'    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     quality:    
       description: 'Observed quality in the network component'    
       properties:    
@@ -290,7 +315,9 @@ Valve:
               type: string    
         value:    
           type: number    
-      type: Property    
+      type: object    
+      x-ngsi:    
+        type: Property    
     seeAlso:    
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
@@ -301,43 +328,55 @@ Valve:
           type: array    
         - format: uri    
           type: string    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     setting:    
       description: 'A parameter that describes the valve''s operational setting. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'    
-      type: Property    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Number    
+        type: Property    
         units: 'No unit'    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     startsAt:    
       description: 'The ID of the node on the nominal upstream or inflow side of the valve'    
       format: uri    
-      type: Relationship    
+      type: string    
+      x-ngsi:    
+        type: Relationship    
     status:    
       description: 'The dynamic state of the node. Enum:''OPEN, CLOSED, CV'''    
       enum:    
         - OPEN    
         - CLOSED    
         - CV    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     tag:    
       description: 'An optional text string used to assign the pipe to a category, perhaps one based on age or material'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     type:    
       description: 'NGSI-LD Entity Type. It must be equal to Valve.'    
       enum:    
         - Valve    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     valveCurve:    
       description: 'A relationship to the curve of the setting property. Only required when valveType is GPV'    
       format: uri    
-      type: Relationship    
+      type: string    
+      x-ngsi:    
+        type: Relationship    
     valveType:    
       description: 'The valve type of the element. enum:''FCV, GPV, PBV, PRV, PSV, TCV'''    
       enum:    
@@ -347,9 +386,10 @@ Valve:
         - PRV    
         - PSV    
         - TCV    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     velocity:    
       description: 'Observed velocity in the link (pipe, valve or pump)'    
       properties:    
@@ -358,7 +398,9 @@ Valve:
           type: string    
         value:    
           type: number    
-      type: Property    
+      type: object    
+      x-ngsi:    
+        type: Property    
     vertices:    
       description: 'Coordinates of all vertices in the valve, ordered from the startsAt node to the endsAt node and encoded as a GeoJSON '    
       oneOf:    
@@ -408,7 +450,8 @@ Valve:
             - coordinates    
           title: 'GeoJSON Point'    
           type: object    
-      type: Geoproperty    
+      x-ngsi:    
+        type: Geoproperty    
   required:    
     - id    
     - type    
@@ -424,7 +467,8 @@ Valve:
 {  
     "id": "87fe7d79-0d4c-4da9-b7d0-3340efa0656awytsd",  
     "type": "Valve",  
-    "initiaStatus": "OPEN",  
+    "initialStatus": "OPEN",  
+    "openStatus": 0.3,  
     "status": "OPEN",  
     "diameter": 203.20,  
     "valveType": "PRV",  
@@ -449,6 +493,10 @@ Valve:
     "status": {  
         "type": "Text",  
         "value": "OPEN"  
+    },  
+    "openStatus": {  
+        "type": "Number",  
+        "value": 0.3  
     },  
     "diameter": {  
         "type": "Number",  
@@ -510,8 +558,9 @@ Valve:
   ],  
   "id": "87fe7d79-0d4c-4da9-b7d0-3340efa0656awytsd",  
   "type": "Valve",  
-  "initiaStatus": "OPEN",  
+  "initialStatus": "OPEN",  
   "status": "OPEN",  
+  "openStatus": 0.3,  
   "diameter": 203.2,  
   "valveType": "PRV",  
   "setting": 40.0,  
@@ -537,6 +586,10 @@ Valve:
   "status": {  
     "type": "Property",  
     "value": "OPEN"  
+  },  
+  "openStatus": {  
+    "type": "Property",  
+    "value": 0.3  
   },  
   "diameter": {  
     "type": "Property",  
