@@ -652,3 +652,9 @@ SimulationScenario:
     - type
     - hasInputNetwork
   type: object
+  x-derived-from: ""
+  x-disclaimer: 'copyleft (c) 2021 Contributors to Smart Data Models Program'
+  x-license-url: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/blob/master/SimulationScenario/LICENSE.md
+  x-model-schema: https://smart-data-models.github.io/data-model.WaterNetworkManagementEPANET/Simulation/schema.json
+  x-model-tags: ""
+  x-version: 0.0.1
