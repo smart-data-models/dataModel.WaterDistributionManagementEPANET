@@ -242,6 +242,12 @@ SimulationResult:
       type: string
       x-ngsi:
         type: Property
+    outputFile:
+      description: 'Link to binary file containing results of applied simulation to the network.'
+      format: uri
+      type: string
+      x-ngsi:
+        type: Property
     outputParameters:
       description: 'Description of the set of results of applied simulation to the network.'
       items:
@@ -327,3 +333,9 @@ SimulationResult:
     - type
     - refSimulationScenario
   type: object
+  x-derived-from: ""
+  x-disclaimer: 'copyleft (c) 2021 Contributors to Smart Data Models Program'
+  x-license-url: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/blob/master/SimulationResult/LICENSE.md
+  x-model-schema: https://smart-data-models.github.io/dataModel.WaterDistributionManagementEPANET/Result/schema.json
+  x-model-tags: ""
+  x-version: 0.0.2
