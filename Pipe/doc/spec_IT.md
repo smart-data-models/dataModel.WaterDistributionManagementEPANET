@@ -1,0 +1,708 @@
+Entità: Pipe  
+============  
+[Licenza aperta](https://github.com/smart-data-models//dataModel.WaterDistributionManagementEPANET/blob/master/Pipe/LICENSE.md)  
+[documento generato automaticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+Descrizione globale: **Questa entità contiene una descrizione armonizzata di un tubo generico realizzato per il dominio Water Network Management. Questa entità è principalmente associata alla gestione verticale dell'acqua e alle relative applicazioni IoT.**  
+
+## Elenco delle proprietà  
+
+- `address`: L'indirizzo postale  - `alternateName`: Un nome alternativo per questa voce  - `areaServed`: L'area geografica in cui viene fornito un servizio o un articolo offerto  - `bulkCoeff`: Utilizzare un valore positivo per la crescita e un valore negativo per il decadimento. Tutte le unità sono accettate in codice [CEFACT](https://www.unece.org/cefact.html).  - `dataProvider`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  - `dateCreated`: Timestamp di creazione dell'entità. Questo sarà di solito assegnato dalla piattaforma di archiviazione.  - `dateModified`: Timestamp dell'ultima modifica dell'entità. Questo sarà di solito assegnato dalla piattaforma di archiviazione.  - `description`: Una descrizione di questo articolo  - `diameter`: Il diametro del tubo  - `endsAt`: L'ID del nodo dove finisce il tubo  - `flow`: Velocità di flusso dal nodo `startsAt` al nodo `endsAt`, misurata da un dispositivo sul collegamento (tubo, valvola o pompa)  - `id`: Identificatore unico dell'entità  - `initialStatus`: Lo stato del collegamento all'inizio della simulazione. Enum:'OPEN, CLOSED, CV'  - `length`: La lunghezza effettiva del tubo. Tutte le unità sono accettate in codice [CEFACT](https://www.unece.org/cefact.html).  - `location`: Riferimento Geojson all'elemento. Può essere Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `minorLoss`: Coefficiente di perdita minore senza unità associato a curve, raccordi, ecc.  - `name`: Il nome di questo articolo.  - `owner`: Una lista contenente una sequenza di caratteri codificata in JSON che si riferisce agli ID unici dei proprietari  - `quality`: Qualità osservata nella componente di rete  - `roughness`: Il coefficiente di rugosità del tubo.  - `seeAlso`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `source`: Una sequenza di caratteri che dà la fonte originale dei dati dell'entità come URL. Si raccomanda di essere il nome di dominio completamente qualificato del fornitore di origine, o l'URL dell'oggetto di origine.  - `startsAt`: L'ID del nodo in cui inizia il tubo  - `status`: Lo stato dinamico del nodo. Enum:'APERTO, CHIUSO, CV'.  - `tag`: Una stringa di testo opzionale usata per assegnare il tubo a una categoria, forse una basata sull'età o sul materiale  - `type`: Tipo di entità NGSI-LD. Deve essere Pipe  - `velocity`: Velocità osservata nel collegamento (tubo, valvola o pompa)  - `vertices`: Coordinate di tutti i vertici del tubo, ordinate dal nodo startsAt al nodo endsAt e codificate come GeoJSON  - `wallCoeff`: Il coefficiente di reazione della parete per il tubo. Usare un valore positivo per la crescita e un valore negativo per il decadimento. Tutte le unità sono accettate in codice [CEFACT](https://www.unece.org/cefact.html).    
+Proprietà richieste  
+- `id`  - `type`  ## Descrizione del modello di dati delle proprietà  
+Ordinati in ordine alfabetico (clicca per i dettagli)  
+<details><summary><strong>full yaml details</strong></summary>    
+```yaml  
+Pipe:    
+  description: 'This entity contains a harmonised description of a generic pipe made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.'    
+  properties:    
+    address:    
+      description: 'The mailing address'    
+      properties:    
+        addressCountry:    
+          description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''    
+          type: string    
+        addressLocality:    
+          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/addressLocality'''    
+          type: string    
+        addressRegion:    
+          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
+          type: string    
+        postOfficeBoxNumber:    
+          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
+          type: string    
+        postalCode:    
+          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
+          type: string    
+        streetAddress:    
+          description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
+          type: string    
+      type: object    
+      x-ngsi:    
+        model: https://schema.org/address    
+        type: Property    
+    alternateName:    
+      description: 'An alternative name for this item'    
+      type: string    
+      x-ngsi:    
+        type: Property    
+    areaServed:    
+      description: 'The geographic area where a service or offered item is provided'    
+      type: string    
+      x-ngsi:    
+        model: https://schema.org/Text    
+        type: Property    
+    bulkCoeff:    
+      description: 'Use a positive value for growth and a negative value for decay. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'    
+      type: number    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        type: Property    
+        units: 'reciprocal day The bulk reaction coefficient for the pipe'    
+    dataProvider:    
+      description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
+      type: string    
+      x-ngsi:    
+        type: Property    
+    dateCreated:    
+      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
+      format: date-time    
+      type: string    
+      x-ngsi:    
+        type: Property    
+    dateModified:    
+      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
+      format: date-time    
+      type: string    
+      x-ngsi:    
+        type: Property    
+    description:    
+      description: 'A description of this item'    
+      type: string    
+      x-ngsi:    
+        type: Property    
+    diameter:    
+      description: 'The pipe diameter'    
+      type: number    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        type: Property    
+        units: Millimetre    
+    endsAt:    
+      description: 'The ID of the node where the pipe ends'    
+      format: uri    
+      type: string    
+      x-ngsi:    
+        type: Relationship    
+    flow:    
+      description: 'Rate of flow from `startsAt` node to `endsAt` node, measured by a device at the link (pipe, valve or pump)'    
+      properties:    
+        observedBy:    
+          anyOf:    
+            - description: 'Property. Identifier format of any NGSI entity'    
+              maxLength: 256    
+              minLength: 1    
+              pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+              type: string    
+            - description: 'Property. Identifier format of any NGSI entity'    
+              format: uri    
+              type: string    
+        value:    
+          type: number    
+      type: object    
+      x-ngsi:    
+        type: Property    
+    id:    
+      anyOf: &pipe_-_properties_-_owner_-_items_-_anyof    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          maxLength: 256    
+          minLength: 1    
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+          type: string    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          format: uri    
+          type: string    
+      description: 'Unique identifier of the entity'    
+      x-ngsi:    
+        type: Property    
+    initialStatus:    
+      description: 'The link status at the start of the simulation. Enum:''OPEN, CLOSED, CV'''    
+      enum:    
+        - OPEN    
+        - CLOSED    
+        - CV    
+      type: string    
+      x-ngsi:    
+        model: https://schema.org/Text    
+        type: Property    
+    length:    
+      description: 'The actual length of the pipe. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'    
+      type: number    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        type: Property    
+        units: Metre    
+    location:    
+      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
+      oneOf:    
+        - description: 'Geoproperty. Geojson reference to the item. Point'    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                type: number    
+              minItems: 2    
+              type: array    
+            type:    
+              enum:    
+                - Point    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON Point'    
+          type: object    
+        - description: 'Geoproperty. Geojson reference to the item. LineString'    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  type: number    
+                minItems: 2    
+                type: array    
+              minItems: 2    
+              type: array    
+            type:    
+              enum:    
+                - LineString    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON LineString'    
+          type: object    
+        - description: 'Geoproperty. Geojson reference to the item. Polygon'    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  items:    
+                    type: number    
+                  minItems: 2    
+                  type: array    
+                minItems: 4    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - Polygon    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON Polygon'    
+          type: object    
+        - description: 'Geoproperty. Geojson reference to the item. MultiPoint'    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  type: number    
+                minItems: 2    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - MultiPoint    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON MultiPoint'    
+          type: object    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  items:    
+                    type: number    
+                  minItems: 2    
+                  type: array    
+                minItems: 2    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - MultiLineString    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON MultiLineString'    
+          type: object    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  items:    
+                    items:    
+                      type: number    
+                    minItems: 2    
+                    type: array    
+                  minItems: 4    
+                  type: array    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - MultiPolygon    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON MultiPolygon'    
+          type: object    
+      x-ngsi:    
+        type: Geoproperty    
+    minorLoss:    
+      description: 'Unitless minor loss coefficient associated with bends, fittings, etc'    
+      type: number    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        type: Property    
+        units: 'No unit'    
+    name:    
+      description: 'The name of this item.'    
+      type: string    
+      x-ngsi:    
+        type: Property    
+    owner:    
+      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
+      items:    
+        anyOf: *pipe_-_properties_-_owner_-_items_-_anyof    
+        description: 'Property. Unique identifier of the entity'    
+      type: array    
+      x-ngsi:    
+        type: Property    
+    quality:    
+      description: 'Observed quality in the network component'    
+      properties:    
+        observedBy:    
+          anyOf:    
+            - description: 'Property. Identifier format of any NGSI entity'    
+              maxLength: 256    
+              minLength: 1    
+              pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+              type: string    
+            - description: 'Property. Identifier format of any NGSI entity'    
+              format: uri    
+              type: string    
+        value:    
+          type: number    
+      type: object    
+      x-ngsi:    
+        type: Property    
+    roughness:    
+      description: 'The roughness coefficient of the Pipe.'    
+      type: number    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        type: Property    
+        units: 'No unit'    
+    seeAlso:    
+      description: 'list of uri pointing to additional resources about the item'    
+      oneOf:    
+        - items:    
+            format: uri    
+            type: string    
+          minItems: 1    
+          type: array    
+        - format: uri    
+          type: string    
+      x-ngsi:    
+        type: Property    
+    source:    
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
+      type: string    
+      x-ngsi:    
+        type: Property    
+    startsAt:    
+      description: 'The ID of the node where the pipe begins'    
+      format: uri    
+      type: string    
+      x-ngsi:    
+        type: Relationship    
+    status:    
+      description: 'The dynamic state of the node. Enum:''OPEN, CLOSED, CV'''    
+      enum:    
+        - OPEN    
+        - CLOSED    
+        - CV    
+      type: string    
+      x-ngsi:    
+        model: https://schema.org/Text    
+        type: Property    
+    tag:    
+      description: 'An optional text string used to assign the pipe to a category, perhaps one based on age or material'    
+      type: string    
+      x-ngsi:    
+        model: https://schema.org/Text    
+        type: Property    
+    type:    
+      description: 'NGSI-LD Entity Type. It has to be Pipe'    
+      enum:    
+        - Pipe    
+      type: string    
+      x-ngsi:    
+        type: Property    
+    velocity:    
+      description: 'Observed velocity in the link (pipe, valve or pump)'    
+      properties:    
+        observedBy:    
+          format: uri    
+          type: string    
+        value:    
+          type: number    
+      type: object    
+      x-ngsi:    
+        type: Property    
+    vertices:    
+      description: 'Coordinates of all vertices in the pipe, ordered from the startsAt node to the endsAt node and encoded as a GeoJSON '    
+      oneOf:    
+        - $id: https://geojson.org/schema/MultiPoint.json    
+          $schema: "http://json-schema.org/draft-07/schema#"    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  type: number    
+                minItems: 2    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - MultiPoint    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON MultiPoint'    
+          type: object    
+        - $id: https://geojson.org/schema/Point.json    
+          $schema: "http://json-schema.org/draft-07/schema#"    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                type: number    
+              minItems: 2    
+              type: array    
+            type:    
+              enum:    
+                - Point    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON Point'    
+          type: object    
+      x-ngsi:    
+        type: Geoproperty    
+    wallCoeff:    
+      description: 'The wall reaction coefficient for the pipe. Use a positive value for growth and a negative value for decay. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'    
+      type: number    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        type: Property    
+        units: mg/m²/day    
+  required:    
+    - id    
+    - type    
+  type: object    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/blob/master/Pipe/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/dataModel.WaterDistributionManagementEPANET/Pipe/schema.json    
+  x-model-tags: ""    
+  x-version: 0.0.1    
+```  
+</details>    
+## Esempio di payloads  
+#### Tubo NGSI-v2 valori-chiave Esempio  
+Ecco un esempio di un tubo in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-v2 quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+```json  
+{  
+    "id": "74azsty-70d4l-4da9-b7d0-3340ef655nnb",  
+    "type": "Pipe",  
+    "initialStatus": "OPEN",  
+    "status": "OPEN",  
+    "length": 52.90,  
+    "diameter": 203.00,  
+    "roughness": 72.4549,  
+    "minorLoss": 72.4549,  
+    "tag": "DMA1",  
+    "description": "Free Text",  
+    "startsAt": "ngsi:63fe7d79-0d4c-4da9-b7d0-3340efa0656a",  
+    "endsAt": "ngsi:1863179e-3768-4480-9167-ff21f870dd19",  
+    "bulkCoeff": 72.4549,  
+    "wallCoeff": 72.4549  
+}  
+```  
+#### Tubo NGSI-v2 normalizzato Esempio  
+Ecco un esempio di un tubo in formato JSON-LD normalizzato. Questo è compatibile con NGSI-v2 quando non usa opzioni e restituisce i dati di contesto di una singola entità.  
+```json  
+{  
+  "id": "74azsty-70d4l-4da9-b7d0-3340ef655nnb",  
+  "type": "Pipe",  
+  "initialStatus": {  
+    "type": "text",  
+    "value": "OPEN"  
+  },  
+  "status": {  
+    "type": "text",  
+    "value": "OPEN"  
+  },  
+  "length": {  
+    "type": "number",  
+    "value": 52.90  
+  },  
+  "diameter": {  
+    "type": "number",  
+    "value": 203.00  
+  },  
+  "roughness": {  
+    "type": "number",  
+    "value": 72.4549  
+  },  
+  "minorLoss": {  
+    "type": "number",  
+    "value": 72.4549  
+  },  
+  "tag": {  
+    "type": "text",  
+    "value": "DMA1"  
+  },  
+  "description": {  
+    "type": "text",  
+    "value": "Free Text"  
+  },  
+  "startsAt": {  
+    "type": "object",  
+    "value": "63fe7d79-0d4c-4da9-b7d0-3340efa0656a"  
+  },  
+  "endsAt": {  
+    "type": "object",  
+    "value": "1863179e-3768-4480-9167-ff21f870dd19"  
+  },  
+  "bulkCoeff": {  
+    "type": "number",  
+    "value": 72.4549  
+  },  
+  "wallCoeff": {  
+    "type": "number",  
+    "value": 72.4549  
+  },  
+  "flow": {  
+    "type": "structuredValue",  
+    "value": {  
+      "value": 20,  
+      "observedBy": "device-9845A"  
+    }  
+  },  
+  "velocity": {  
+    "type": "structuredValue",  
+    "value": {  
+      "value": 2,  
+      "observedBy": "device-9845A"  
+    }  
+  },  
+  "quality": {  
+    "type": "structuredValue",  
+    "value": {  
+      "value": 0.5,  
+      "observedBy": "device-9845A"  
+    }  
+  }  
+}  
+```  
+#### Tubo NGSI-LD valori-chiave Esempio  
+Ecco un esempio di un tubo in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-LD quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+```json  
+{  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld"  
+  ],  
+  "bulkCoeff": 72.4549,  
+  "createdAt": "2020-02-20T15:42:00Z",  
+  "description": "Free Text",  
+  "diameter": 203.0,  
+  "endsAt": "urn:ngsi-ld:Reservoir:1863179e-3768-4480-9167-ff21f870dd19",  
+  "id": "urn:ngsi-ld:Pipe:74azsty-70d4l-4da9-b7d0-3340ef655nnb",  
+  "initialStatus": "OPEN",  
+  "length": 52.9,  
+  "minorLoss": 72.4549,  
+  "modifiedAt": "2020-02-20T15:45:00Z",  
+  "roughness": 72.4549,  
+  "startsAt": "urn:ngsi-ld:Junction:63fe7d79-0d4c-4da9-b7d0-3340efa0656a",  
+  "status": "OPEN",  
+  "tag": "DMA1",  
+  "type": "Pipe",  
+  "wallCoeff": 72.4549  
+}  
+```  
+#### Tubo NGSI-LD normalizzato Esempio  
+Ecco un esempio di un tubo in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non usa opzioni e restituisce i dati di contesto di una singola entità.  
+```json  
+{  
+  "id": "urn:ngsi-ld:Pipe:74azsty-70d4l-4da9-b7d0-3340ef655nnb",  
+  "type": "Pipe",  
+  "initialStatus": {  
+    "type": "Property",  
+    "value": "OPEN"  
+  },  
+  "status": {  
+    "type": "Property",  
+    "value": "OPEN"  
+  },  
+  "length": {  
+    "type": "Property",  
+    "value": 52.90,  
+    "unitCode": "MTR"  
+  },  
+  "diameter": {  
+    "type": "Property",  
+    "value": 203.0,  
+    "unitCode": "MMT"  
+  },  
+  "roughness": {  
+    "type": "Property",  
+    "value": 72.4549,  
+    "unitCode": "C62"  
+  },  
+  "minorLoss": {  
+    "type": "Property",  
+    "value": 72.4549,  
+    "unitCode": "C62"  
+  },  
+  "tag": {  
+    "type": "Property",  
+    "value": "DMA1"  
+  },  
+  "description": {  
+    "type": "Property",  
+    "value": "Free Text"  
+  },  
+  "startsAt": {  
+    "type": "Relationship",  
+    "object": "urn:ngsi-ld:Junction:63fe7d79-0d4c-4da9-b7d0-3340efa0656a"  
+  },  
+  "endsAt": {  
+    "type": "Relationship",  
+    "object": "urn:ngsi-ld:Reservoir:1863179e-3768-4480-9167-ff21f870dd19"  
+  },  
+  "vertices": {  
+    "type": "GeoProperty",  
+    "value": {  
+      "type": "MultiPoint",  
+      "coordinates": [  
+        [  
+          24.40623,  
+          60.17966  
+        ],  
+        [  
+          24.50623,  
+          60.27966  
+        ]  
+      ]  
+    }  
+  },  
+  "bulkCoeff": {  
+    "type": "Property",  
+    "value": 72.4549,  
+    "unitCode": "E91"  
+  },  
+  "wallCoeff": {  
+    "type": "Property",  
+    "value": 72.4549,  
+    "unitCode": "RRC"  
+  },  
+  "flow": {  
+    "type": "Property",  
+    "value": {  
+      "type": "Property",  
+      "value": 20,  
+      "unitCode": "G51"  
+    },  
+    "observedBy": {  
+      "type": "Relationship",  
+      "object": "urn:ngsi-ld:Device:device-9845A"  
+    }  
+  },  
+  "velocity": {  
+    "type": "Property",  
+    "value": {  
+      "type": "Property",  
+      "value": 2,  
+      "unitCode": "MTS"  
+    },  
+    "observedBy": {  
+      "type": "Relationship",  
+      "object": "urn:ngsi-ld:Device:device-9845A"  
+    }  
+  },  
+  "quality": {  
+    "type": "Property",  
+    "value": {  
+      "type": "Property",  
+      "value": 0.5,  
+      "unitCode": "F27"  
+    },  
+    "observedBy": {  
+      "type": "Relationship",  
+      "object": "urn:ngsi-ld:Device:device-9845A"  
+    }  
+  },  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld"  
+  ]  
+}  
+```  
