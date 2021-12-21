@@ -1,17 +1,18 @@
 {
-  "id": "urn:ngsi-ld:WaterNetwork:01",
-  "type": "WaterNetwork",
-  "description": "Free Text",
-  "isComposedOf": [
-    "urn:ngsi-ld:Tank:T1",
-    "urn:ngsi-ld:Pipe:P1",
-    "urn:ngsi-ld:Junction:J1"
-  ],
-  "hasSubNetwork": [
-    "urn:ngsi-ld:Network:12-70d4l-4da9",
-    "urn:ngsi-ld:Network:A14-14d4B-4vvc"
-  ],
-  "@context": [
-    "https://smart-data-models.github.io//data-models/context.jsonld"
-  ]
+    "id": "urn:ngsi-ld:WaterNetwork:01",
+    "type": "WaterNetwork",
+    "description": "Free Text",
+    "hasSubNetwork": [
+        "urn:ngsi-ld:Network:12-70d4l-4da9",
+        "urn:ngsi-ld:Network:A14-14d4B-4vvc"
+    ],
+    "isComposedOf": [
+        "urn:ngsi-ld:Tank:T1",
+        "urn:ngsi-ld:Pipe:P1",
+        "urn:ngsi-ld:Junction:J1"
+    ],
+    "@context": [
+        "https://smart-data-models.github.io//data-models/context.jsonld",
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/context.jsonld"
+    ]
 }
