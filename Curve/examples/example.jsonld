@@ -1,18 +1,18 @@
 {
-  "@context": [
-    "https://smartdatamodels.org/context.jsonld"
-  ],
-  "id": "fAM-8ca3-4533-a2eb-12015",
-  "type": "Curve",
-  "curveType": "FLOW-HEAD",
-  "xData": [
-    0.5692,
-    0.4647
-  ],
-  "yData": [
-    0.5692,
-    0.4647
-  ],
-  "description": "Free Text",
-  "tag": "DMA1"
+    "id": "fAM-8ca3-4533-a2eb-12015",
+    "type": "Curve",
+    "curveType": "FLOW-HEAD",
+    "description": "Free Text",
+    "tag": "DMA1",
+    "xData": [
+        0.5692,
+        0.4647
+    ],
+    "yData": [
+        0.5692,
+        0.4647
+    ],
+    "@context": [
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/context.jsonld"
+    ]
 }
