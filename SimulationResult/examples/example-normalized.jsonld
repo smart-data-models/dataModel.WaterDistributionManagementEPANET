@@ -1,25 +1,23 @@
 {
-  "id": "urn:ngsi-ld:SimulationResult:01",
-  "type": "SimulationResult",
-  "description": {
-    "type": "Property",
-    "value": "Free Text"
-  },
-  "hasInputNetwork": {
-    "type": "Relationship",
-    "object": "urn:ngsi-ld:WaterNetwork:01"
-  },
-  "refSimulationScenario": {
-    "type": "Relationship",
-    "object": "urn:ngsi-ld:Simulation:01"
-  },
-  "outputFile": [
-    {
-      "type": "Relationship",
-      "object": "c://epanetsimulations/simulationResult.bin"
-    }
-  ],
-  "@context": [
-    "https://smartdatamodels.org/context.jsonld"
-  ]
+    "id": "urn:ngsi-ld:SimulationResult:01",
+    "type": "SimulationResult",
+    "description": {
+        "type": "Property",
+        "value": "Free Text"
+    },
+    "hasInputNetwork": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:WaterNetwork:01"
+    },
+    "outputFile": [
+        {
+            "type": "Relationship",
+            "object": "c://epanetsimulations/simulationResult.bin"
+        }
+    ],
+    "refSimulationScenario": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Simulation:01"
+    },
+    "@context": []
 }
