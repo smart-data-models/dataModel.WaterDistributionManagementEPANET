@@ -1,134 +1,132 @@
 {
-  "id": "urn:ngsi-ld:Junction:63fe7d79-0d4c-4da9-b7d0-3340efa0656a",
-  "type": "Junction",
-  "location": {
-    "type": "GeoProperty",
-    "value": {
-      "type": "Point",
-      "coordinates": [
-        24.30623,
-        60.07966
-      ]
-    }
-  },
-  "elevation": {
-    "type": "Property",
-    "value": 105.8,
-    "unitCode": "MTR"
-  },
-  "demandCategory": {
-    "type": "Property",
-    "value": {
-      "type": "Property",
-      "value": "agriculture demand"
+    "id": "urn:ngsi-ld:Junction:63fe7d79-0d4c-4da9-b7d0-3340efa0656a",
+    "type": "Junction",
+    "demandCategory": {
+        "type": "Property",
+        "value": {
+            "type": "Property",
+            "value": "agriculture demand"
+        },
+        "baseDemand": {
+            "type": "Property",
+            "value": "1.763868462",
+            "unitCode": "MQS"
+        },
+        "demandPattern": {
+            "type": "Relationship",
+            "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533"
+        }
     },
-    "baseDemand": {
-      "type": "Property",
-      "value": "1.763868462",
-      "unitCode": "MQS"
+    "description": {
+        "type": "Property",
+        "value": "This entity contains a harmonised description of a Junction"
     },
-    "demandPattern": {
-      "type": "Relationship",
-      "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533"
-    }
-  },
-  "sourceCategory": {
-    "type": "Property",
-    "value": {
-      "type": "Property",
-      "value": "CategoryX"
+    "elevation": {
+        "type": "Property",
+        "value": 105.8,
+        "unitCode": "MTR"
     },
-    "sourceType": {
-      "type": "Property",
-      "value": "MASS"
+    "emitterCoefficient": {
+        "type": "Property",
+        "value": 0.526,
+        "unitCode": "S4"
     },
-    "sourceQuality": {
-      "type": "Property",
-      "value": 1.2,
-      "unitCode": "M1"
+    "head": {
+        "type": "Property",
+        "value": {
+            "type": "Property",
+            "value": 20,
+            "unitCode": "MTR"
+        },
+        "observedBy": {
+            "type": "Relationship",
+            "object": "urn:ngsi-ld:Device:device-9845A"
+        }
     },
-    "sourcePattern": {
-      "type": "Relationship",
-      "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
-    }
-  },
-  "tag": {
-    "type": "Property",
-    "value": "DMA1"
-  },
-  "description": {
-    "type": "Property",
-    "value": "This entity contains a harmonised description of a Junction"
-  },
-  "initialQuality": {
-    "type": "Property",
-    "value": 0.5,
-    "unitCode": "M1"
-  },
-  "emitterCoefficient": {
-    "type": "Property",
-    "value": 0.526,
-    "unitCode": "S4"
-  },
-  "pressure": {
-    "type": "Property",
-    "value": {
-      "type": "Property",
-      "value": 20,
-      "unitCode": "MTR"
+    "initialQuality": {
+        "type": "Property",
+        "value": 0.5,
+        "unitCode": "M1"
     },
-    "observedBy": {
-      "type": "Relationship",
-      "object": "urn:ngsi-ld:Device:device-9845A"
-    }
-  },
-  "supply": {
-    "type": "Property",
-    "value": {
-      "type": "Property",
-      "value": 150,
-      "unitCode": "LTR"
+    "location": {
+        "type": "GeoProperty",
+        "value": {
+            "type": "Point",
+            "coordinates": [
+                24.30623,
+                60.07966
+            ]
+        }
     },
-    "observedBy": {
-      "type": "Relationship",
-      "object": "urn:ngsi-ld:Device:device-9845A"
-    }
-  },
-  "head": {
-    "type": "Property",
-    "value": {
-      "type": "Property",
-      "value": 20,
-      "unitCode": "MTR"
+    "pressure": {
+        "type": "Property",
+        "value": {
+            "type": "Property",
+            "value": 20,
+            "unitCode": "MTR"
+        },
+        "observedBy": {
+            "type": "Relationship",
+            "object": "urn:ngsi-ld:Device:device-9845A"
+        }
     },
-    "observedBy": {
-      "type": "Relationship",
-      "object": "urn:ngsi-ld:Device:device-9845A"
-    }
-  },
-  "quality": {
-    "type": "Property",
-    "value": {
-      "value": 0.5,
-      "unitCode": "M1"
+    "quality": {
+        "type": "Property",
+        "value": {
+            "value": 0.5,
+            "unitCode": "M1"
+        },
+        "observedBy": {
+            "type": "Relationship",
+            "object": "urn:ngsi-ld:Device:device-9845A"
+        }
     },
-    "observedBy": {
-      "type": "Relationship",
-      "object": "urn:ngsi-ld:Device:device-9845A"
-    }
-  },
-  "sourceMassInflow": {
-    "type": "Property",
-    "value": {
-      "value": 100,
-      "unitCode": "F27"
+    "sourceCategory": {
+        "type": "Property",
+        "value": {
+            "type": "Property",
+            "value": "CategoryX"
+        },
+        "sourceType": {
+            "type": "Property",
+            "value": "MASS"
+        },
+        "sourceQuality": {
+            "type": "Property",
+            "value": 1.2,
+            "unitCode": "M1"
+        },
+        "sourcePattern": {
+            "type": "Relationship",
+            "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
+        }
     },
-    "observedBy": {
-      "type": "Relationship",
-      "object": "urn:ngsi-ld:Device:device-9845A"
-    }
-  },
-  "@context": [
-    "https://smartdatamodels.org/context.jsonld"
-  ]
+    "sourceMassInflow": {
+        "type": "Property",
+        "value": {
+            "value": 100,
+            "unitCode": "F27"
+        },
+        "observedBy": {
+            "type": "Relationship",
+            "object": "urn:ngsi-ld:Device:device-9845A"
+        }
+    },
+    "supply": {
+        "type": "Property",
+        "value": {
+            "type": "Property",
+            "value": 150,
+            "unitCode": "LTR"
+        },
+        "observedBy": {
+            "type": "Relationship",
+            "object": "urn:ngsi-ld:Device:device-9845A"
+        }
+    },
+    "tag": {
+        "type": "Property",
+        "value": "DMA1"
+    },
+    "@context": []
 }
