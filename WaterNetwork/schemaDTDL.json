@@ -2,7 +2,7 @@
     "@id": "dtmi:com:ngsi-ld:WaterNetwork;0",
     "@type": "Interface",
     "@context": "dtmi:dtdl:context;2",
-    "comment": "WaterNetwork - Network adapted to DTDL from smartdatamodels.org. Source: https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/Network/schema.json",
+    "comment": "WaterNetwork - Network adapted to DTDL from smartdatamodels.org. Source: https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/WaterNetwork/schema.json",
     "description": "This entity contains a harmonised description of a generic network made for the Water Network Management domain. This entity is primarily associated with the water network management vertical and related IoT applications.",
     "displayName": "WaterNetwork",
     "contents": [
@@ -77,36 +77,6 @@
         },
         {
             "@type": "Telemetry",
-            "name": "location_Point",
-            "schema": "point"
-        },
-        {
-            "@type": "Telemetry",
-            "name": "location_LineString",
-            "schema": "lineString"
-        },
-        {
-            "@type": "Telemetry",
-            "name": "location_Polygon",
-            "schema": "polygon"
-        },
-        {
-            "@type": "Telemetry",
-            "name": "location_MultiPoint",
-            "schema": "multiPoint"
-        },
-        {
-            "@type": "Telemetry",
-            "name": "location_MultiLineString",
-            "schema": "multiLineString"
-        },
-        {
-            "@type": "Telemetry",
-            "name": "location_MultiPolygon",
-            "schema": "multiPolygon"
-        },
-        {
-            "@type": "Telemetry",
             "name": "hasSubNetwork",
             "schema": {
                 "@type": "Array",
@@ -166,6 +136,36 @@
                     "schema": "string"
                 }
             ]
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_Point",
+            "schema": "point"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_LineString",
+            "schema": "lineString"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_Polygon",
+            "schema": "polygon"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_MultiPoint",
+            "schema": "multiPoint"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_MultiLineString",
+            "schema": "multiLineString"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_MultiPolygon",
+            "schema": "multiPolygon"
         }
     ]
 }
