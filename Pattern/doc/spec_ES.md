@@ -217,3 +217,5 @@ Pattern:
   ]  
 }  
 ```  
+
+Consulte [FAQ 10](https://smartdatamodels.org/index.php/faqs/) para obtener una respuesta sobre cómo tratar las unidades de magnitud

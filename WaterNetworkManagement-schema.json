@@ -313,7 +313,7 @@
     },
     "sourceMassInflow": {
       "type": "object",
-      "description": "Property.. Observed source mass inflow at the node (junction, tank or reservoir)",
+      "description": "Property. Observed source mass inflow at the node (junction, tank or reservoir)",
       "properties": {
         "value": {
           "type": "number"

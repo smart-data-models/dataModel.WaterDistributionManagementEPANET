@@ -443,7 +443,7 @@ Tank:
         model: https://schema.org/Text
         type: Property
     sourceMassInflow:
-      description: 'Property.. Observed source mass inflow at the node (junction, tank or reservoir)'
+      description: 'Observed source mass inflow at the node (junction, tank or reservoir)'
       properties:
         observedBy:
           anyOf:
@@ -458,6 +458,8 @@ Tank:
         value:
           type: number
       type: object
+      x-ngsi:
+        type: Property
     supply:
       description: 'Observed supply at the node (junction, tank or reservoir)'
       properties:
