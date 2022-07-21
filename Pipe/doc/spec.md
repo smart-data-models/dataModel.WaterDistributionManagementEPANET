@@ -1,8 +1,10 @@
-Entity: Pipe  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entity: Pipe  
 ============  
 [Open License](https://github.com/smart-data-models//dataModel.WaterDistributionManagementEPANET/blob/master/Pipe/LICENSE.md)  
 [document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Global description: **This entity contains a harmonised description of a generic pipe made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.**  
+version: 0.0.1  
 
 ## List of properties  
 
@@ -458,6 +460,12 @@ Pipe:
     - id    
     - type    
   type: object    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/blob/master/Pipe/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/dataModel.WaterDistributionManagementEPANET/Pipe/schema.json    
+  x-model-tags: FIWARE4WATER    
+  x-version: 0.0.1    
 ```  
 </details>    
 ## Example payloads    
@@ -562,143 +570,140 @@ Pipe:
 Here is an example of a Pipe in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld"  
-  ],  
-  "bulkCoeff": 72.4549,  
-  "createdAt": "2020-02-20T15:42:00Z",  
-  "description": "Free Text",  
-  "diameter": 203.0,  
-  "endsAt": "urn:ngsi-ld:Reservoir:1863179e-3768-4480-9167-ff21f870dd19",  
-  "id": "urn:ngsi-ld:Pipe:74azsty-70d4l-4da9-b7d0-3340ef655nnb",  
-  "initialStatus": "OPEN",  
-  "length": 52.9,  
-  "minorLoss": 72.4549,  
-  "modifiedAt": "2020-02-20T15:45:00Z",  
-  "roughness": 72.4549,  
-  "startsAt": "urn:ngsi-ld:Junction:63fe7d79-0d4c-4da9-b7d0-3340efa0656a",  
-  "status": "OPEN",  
-  "tag": "DMA1",  
-  "type": "Pipe",  
-  "wallCoeff": 72.4549  
+    "id": "urn:ngsi-ld:Pipe:74azsty-70d4l-4da9-b7d0-3340ef655nnb",  
+    "type": "Pipe",  
+    "bulkCoeff": 72.4549,  
+    "createdAt": "2020-02-20T15:42:00Z",  
+    "description": "Free Text",  
+    "diameter": 203.0,  
+    "endsAt": "urn:ngsi-ld:Reservoir:1863179e-3768-4480-9167-ff21f870dd19",  
+    "initialStatus": "OPEN",  
+    "length": 52.9,  
+    "minorLoss": 72.4549,  
+    "modifiedAt": "2020-02-20T15:45:00Z",  
+    "roughness": 72.4549,  
+    "startsAt": "urn:ngsi-ld:Junction:63fe7d79-0d4c-4da9-b7d0-3340efa0656a",  
+    "status": "OPEN",  
+    "tag": "DMA1",  
+    "wallCoeff": 72.4549,  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/context.jsonld"  
+    ]  
 }  
 ```  
 #### Pipe NGSI-LD normalized Example    
 Here is an example of a Pipe in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
 ```json  
 {  
-  "id": "urn:ngsi-ld:Pipe:74azsty-70d4l-4da9-b7d0-3340ef655nnb",  
-  "type": "Pipe",  
-  "initialStatus": {  
-    "type": "Property",  
-    "value": "OPEN"  
-  },  
-  "status": {  
-    "type": "Property",  
-    "value": "OPEN"  
-  },  
-  "length": {  
-    "type": "Property",  
-    "value": 52.90,  
-    "unitCode": "MTR"  
-  },  
-  "diameter": {  
-    "type": "Property",  
-    "value": 203.0,  
-    "unitCode": "MMT"  
-  },  
-  "roughness": {  
-    "type": "Property",  
-    "value": 72.4549,  
-    "unitCode": "C62"  
-  },  
-  "minorLoss": {  
-    "type": "Property",  
-    "value": 72.4549,  
-    "unitCode": "C62"  
-  },  
-  "tag": {  
-    "type": "Property",  
-    "value": "DMA1"  
-  },  
-  "description": {  
-    "type": "Property",  
-    "value": "Free Text"  
-  },  
-  "startsAt": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:Junction:63fe7d79-0d4c-4da9-b7d0-3340efa0656a"  
-  },  
-  "endsAt": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:Reservoir:1863179e-3768-4480-9167-ff21f870dd19"  
-  },  
-  "vertices": {  
-    "type": "GeoProperty",  
-    "value": {  
-      "type": "MultiPoint",  
-      "coordinates": [  
-        [  
-          24.40623,  
-          60.17966  
-        ],  
-        [  
-          24.50623,  
-          60.27966  
-        ]  
-      ]  
-    }  
-  },  
-  "bulkCoeff": {  
-    "type": "Property",  
-    "value": 72.4549,  
-    "unitCode": "E91"  
-  },  
-  "wallCoeff": {  
-    "type": "Property",  
-    "value": 72.4549,  
-    "unitCode": "RRC"  
-  },  
-  "flow": {  
-    "type": "Property",  
-    "value": {  
-      "type": "Property",  
-      "value": 20,  
-      "unitCode": "G51"  
+    "id": "urn:ngsi-ld:Pipe:74azsty-70d4l-4da9-b7d0-3340ef655nnb",  
+    "type": "Pipe",  
+    "bulkCoeff": {  
+        "type": "Property",  
+        "value": 72.4549,  
+        "unitCode": "E91"  
     },  
-    "observedBy": {  
-      "type": "Relationship",  
-      "object": "urn:ngsi-ld:Device:device-9845A"  
-    }  
-  },  
-  "velocity": {  
-    "type": "Property",  
-    "value": {  
-      "type": "Property",  
-      "value": 2,  
-      "unitCode": "MTS"  
+    "description": {  
+        "type": "Property",  
+        "value": "Free Text"  
     },  
-    "observedBy": {  
-      "type": "Relationship",  
-      "object": "urn:ngsi-ld:Device:device-9845A"  
-    }  
-  },  
-  "quality": {  
-    "type": "Property",  
-    "value": {  
-      "type": "Property",  
-      "value": 0.5,  
-      "unitCode": "F27"  
+    "diameter": {  
+        "type": "Property",  
+        "value": 203.0,  
+        "unitCode": "MMT"  
     },  
-    "observedBy": {  
-      "type": "Relationship",  
-      "object": "urn:ngsi-ld:Device:device-9845A"  
-    }  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld"  
-  ]  
+    "endsAt": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:Reservoir:1863179e-3768-4480-9167-ff21f870dd19"  
+    },  
+    "flow": {  
+        "type": "Property",  
+        "value": {  
+            "type": "Property",  
+            "value": 20,  
+            "unitCode": "G51"  
+        },  
+        "observedBy": {  
+            "type": "Relationship",  
+            "object": "urn:ngsi-ld:Device:device-9845A"  
+        }  
+    },  
+    "initialStatus": {  
+        "type": "Property",  
+        "value": "OPEN"  
+    },  
+    "length": {  
+        "type": "Property",  
+        "value": 52.9,  
+        "unitCode": "MTR"  
+    },  
+    "minorLoss": {  
+        "type": "Property",  
+        "value": 72.4549,  
+        "unitCode": "C62"  
+    },  
+    "quality": {  
+        "type": "Property",  
+        "value": {  
+            "type": "Property",  
+            "value": 0.5,  
+            "unitCode": "F27"  
+        },  
+        "observedBy": {  
+            "type": "Relationship",  
+            "object": "urn:ngsi-ld:Device:device-9845A"  
+        }  
+    },  
+    "roughness": {  
+        "type": "Property",  
+        "value": 72.4549,  
+        "unitCode": "C62"  
+    },  
+    "startsAt": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:Junction:63fe7d79-0d4c-4da9-b7d0-3340efa0656a"  
+    },  
+    "status": {  
+        "type": "Property",  
+        "value": "OPEN"  
+    },  
+    "tag": {  
+        "type": "Property",  
+        "value": "DMA1"  
+    },  
+    "velocity": {  
+        "type": "Property",  
+        "value": {  
+            "type": "Property",  
+            "value": 2,  
+            "unitCode": "MTS"  
+        },  
+        "observedBy": {  
+            "type": "Relationship",  
+            "object": "urn:ngsi-ld:Device:device-9845A"  
+        }  
+    },  
+    "vertices": {  
+        "type": "GeoProperty",  
+        "value": {  
+            "type": "MultiPoint",  
+            "coordinates": [  
+                [  
+                    24.40623,  
+                    60.17966  
+                ],  
+                [  
+                    24.50623,  
+                    60.27966  
+                ]  
+            ]  
+        }  
+    },  
+    "wallCoeff": {  
+        "type": "Property",  
+        "value": 72.4549,  
+        "unitCode": "RRC"  
+    },  
+    "@context": []  
 }  
 ```  
-
-See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units
+See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units  
