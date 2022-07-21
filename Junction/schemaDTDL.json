@@ -1,0 +1,311 @@
+{
+    "@id": "dtmi:com:ngsi-ld:Junction;0",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;2",
+    "comment": "Smart Data Models WaterNetworkManagementEPANET - Junction adapted to DTDL from smartdatamodels.org. Source: https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/Junction/schema.json",
+    "description": "This entity contains a harmonised description of a generic junction made for the Water Network Management domain. This entity is primarily associated with the water network management vertical and related IoT applications.",
+    "displayName": "Junction",
+    "contents": [
+        {
+            "name": "alternateName",
+            "writable": true,
+            "displayName": "alternateName",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "An alternative name for this item"
+        },
+        {
+            "name": "areaServed",
+            "writable": true,
+            "displayName": "areaServed",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "The geographic area where a service or offered item is provided"
+        },
+        {
+            "name": "dataProvider",
+            "writable": true,
+            "displayName": "dataProvider",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A sequence of characters identifying the provider of the harmonised data entity."
+        },
+        {
+            "name": "dateCreated",
+            "writable": true,
+            "displayName": "dateCreated",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Entity creation timestamp. This will usually be allocated by the storage platform."
+        },
+        {
+            "name": "dateModified",
+            "writable": true,
+            "displayName": "dateModified",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Timestamp of the last modification of the entity. This will usually be allocated by the storage platform."
+        },
+        {
+            "name": "description",
+            "writable": true,
+            "displayName": "description",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A description of this item"
+        },
+        {
+            "name": "elevation",
+            "writable": true,
+            "displayName": "elevation",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "The elevation above some common reference of the junction. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code"
+        },
+        {
+            "name": "emitterCoefficient",
+            "writable": true,
+            "displayName": "emitterCoefficient",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Discharge coefficient for emitter (sprinkler or nozzle) placed at junction. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code"
+        },
+        {
+            "name": "name",
+            "writable": true,
+            "displayName": "name",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "The name of this item."
+        },
+        {
+            "name": "seeAlso",
+            "writable": true,
+            "displayName": "seeAlso"
+        },
+        {
+            "name": "source",
+            "writable": true,
+            "displayName": "source",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object."
+        },
+        {
+            "name": "tag",
+            "writable": true,
+            "displayName": "tag",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "An optional text string used to assign the pipe to a category, perhaps one based on age or material"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "owner",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)",
+            "displayName": "owner"
+        },
+        {
+            "@type": "object",
+            "name": "address",
+            "comment": "The mailing address",
+            "displayName": "address",
+            "fields": [
+                {
+                    "name": "addressCountry",
+                    "schema": "string"
+                },
+                {
+                    "name": "addressLocality",
+                    "schema": "string"
+                },
+                {
+                    "name": "addressRegion",
+                    "schema": "string"
+                },
+                {
+                    "name": "postOfficeBoxNumber",
+                    "schema": "string"
+                },
+                {
+                    "name": "postalCode",
+                    "schema": "string"
+                },
+                {
+                    "name": "streetAddress",
+                    "schema": "string"
+                }
+            ]
+        },
+        {
+            "@type": "object",
+            "name": "demandCategory",
+            "comment": "Allows base demands and time patterns to be assigned to other categories of users.",
+            "displayName": "demandCategory",
+            "fields": [
+                {
+                    "name": "baseDemand",
+                    "schema": "string"
+                },
+                {
+                    "name": "demandPattern",
+                    "schema": "string"
+                },
+                {
+                    "name": "value",
+                    "schema": "long"
+                }
+            ]
+        },
+        {
+            "@type": "object",
+            "name": "head",
+            "comment": "Observed head at the node (junction, tank or reservoir)",
+            "displayName": "head",
+            "fields": [
+                {
+                    "name": "observedBy",
+                    "schema": "string"
+                },
+                {
+                    "name": "value",
+                    "schema": "long"
+                }
+            ]
+        },
+        {
+            "@type": "object",
+            "name": "initialQuality",
+            "comment": "Initial quality in the network component",
+            "displayName": "initialQuality",
+            "fields": [
+                {
+                    "name": "observedBy",
+                    "schema": "string"
+                },
+                {
+                    "name": "value",
+                    "schema": "long"
+                }
+            ]
+        },
+        {
+            "@type": "object",
+            "name": "pressure",
+            "comment": "Observed pressure at the node (junction, tank or reservoir)",
+            "displayName": "pressure",
+            "fields": [
+                {
+                    "name": "observedBy",
+                    "schema": "string"
+                },
+                {
+                    "name": "value",
+                    "schema": "long"
+                }
+            ]
+        },
+        {
+            "@type": "object",
+            "name": "quality",
+            "comment": "Observed quality in the network component",
+            "displayName": "quality",
+            "fields": [
+                {
+                    "name": "observedBy",
+                    "schema": "string"
+                },
+                {
+                    "name": "value",
+                    "schema": "long"
+                }
+            ]
+        },
+        {
+            "@type": "object",
+            "name": "sourceCategory",
+            "comment": "Description of the quality of source flow entering the network at a specific node.",
+            "displayName": "sourceCategory",
+            "fields": [
+                {
+                    "name": "sourcePattern",
+                    "schema": "string"
+                },
+                {
+                    "name": "sourceQuality",
+                    "schema": "long"
+                },
+                {
+                    "name": "sourceType",
+                    "schema": "enum"
+                }
+            ]
+        },
+        {
+            "@type": "object",
+            "name": "sourceMassInflow",
+            "comment": "Observed source mass inflow at the node (junction, tank or reservoir)",
+            "displayName": "sourceMassInflow",
+            "fields": [
+                {
+                    "name": "observedBy",
+                    "schema": "string"
+                },
+                {
+                    "name": "value",
+                    "schema": "long"
+                }
+            ]
+        },
+        {
+            "@type": "object",
+            "name": "supply",
+            "comment": "Observed supply at the node (junction, tank or reservoir)",
+            "displayName": "supply",
+            "fields": [
+                {
+                    "name": "observedBy",
+                    "schema": "string"
+                },
+                {
+                    "name": "value",
+                    "schema": "long"
+                }
+            ]
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_Point",
+            "schema": "point"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_LineString",
+            "schema": "lineString"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_Polygon",
+            "schema": "polygon"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_MultiPoint",
+            "schema": "multiPoint"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_MultiLineString",
+            "schema": "multiLineString"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_MultiPolygon",
+            "schema": "multiPolygon"
+        }
+    ]
+}
