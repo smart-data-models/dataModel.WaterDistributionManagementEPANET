@@ -1,15 +1,17 @@
-エンティティポンプ  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+エンティティポンプ  
 =========  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.WaterDistributionManagementEPANET/blob/master/Pump/LICENSE.md)  
-[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-グローバルな記述。**このエンティティは、Water Network Managementドメインのために作られた汎用ポンプの調和された記述を含む。このエンティティは、主に水管理の垂直方向と関連するIoTアプリケーションに関連付けられています。  
+[ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+グローバルな記述。**このエンティティは、水ネットワーク管理領域のために作られた汎用ポンプの調和された記述を含む。このエンティティは、主に水管理の垂直方向と関連する IoT アプリケーションに関連するものである**。  
+バージョン: 0.0.1  
 
-## プロパティのリスト  
+## プロパティ一覧  
 
-- `address`: 郵送先住所  - `alternateName`: このアイテムの別称  - `areaServed`: サービスや提供されるアイテムが提供される地理的なエリア  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `description`: このアイテムの説明  - `efficCurve`: ポンプの電線対水効率を流量の関数として表した曲線のIDラベル。  - `endsAt`: ポンプの吐出側のノードのID  - `energyPattern`: 一日のエネルギー価格の変動を表すタイムパターンのIDラベルです。  - `energyPrice`: エネルギーの平均価格または名目価格を貨幣単位で表したもの。すべての単位は[CEFACT](https://www.unece.org/cefact.html)コードで受け付けています。  - `energyUse`: ネットワークの要素によるエネルギー使用量の観測結果  - `flow`: リンク先のデバイス（パイプ、バルブ、ポンプ）によって測定された、`startsAt`ノードから`endsAt`ノードへの流れの速度  - `headCurve`: ポンプが送出する揚程とポンプを通過する流量の関係を表すために使用されるポンプ曲線のIDラベルです。  - `id`: エンティティのユニークな識別子  - `initialStatus`: シミュレーション開始時のリンクの状態。Enum:'OPEN, CLOSED, CV'  - `location`: アイテムへのGeojson参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygonのいずれかです。  - `name`: このアイテムの名前です。  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `power`: ポンプから供給される電力のことです。すべてのユニットは[CEFACT](https://www.unece.org/cefact.html)コードで受け付けています。  - `pumpPattern`: ポンプの動作を制御するためのタイムパターンのIDラベル。パターンの倍率は、速度設定に相当する。倍率がゼロの場合は、対応する時間帯にポンプが停止することを意味する。  - `quality`: ネットワークコンポーネントの品質を確認  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `speed`: ポンプの相対速度設定です。単位はすべて[CEFACT](https://www.unece.org/cefact.html)コードで受け付けます。  - `startsAt`: ポンプの吸引側のノードのID  - `status`: ノードの動的な状態。列挙:'OPEN, CLOSED, CV'  - `tag`: パイプをカテゴリー別に分類するための任意のテキスト文字列です。  - `type`: NGSI-LD エンティティタイプ。Pumpと同じでなければなりません。  - `velocity`: リンク（パイプ、バルブ、ポンプ）で観測された速度  - `vertices`: ポンプ内のすべての頂点の座標を、startsAtノードからendsAtノードまで順番に並べ、GeoJSONとしてエンコードしたもの。    
-必須項目  
-- `endsAt`  - `id`  - `initialStatus`  - `startsAt`  - `type`  ## データモデルによるプロパティの記述  
-アルファベット順（クリックすると詳細が表示されます）  
+- `address`: 郵送先住所  - `alternateName`: この項目の別称  - `areaServed`: サービスまたは提供品が提供される地理的な地域  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description`: このアイテムの説明  - `efficCurve`: ポンプの電線対水効率を流量の関数として表した曲線のIDラベルです。  - `endsAt`: ポンプ吐出側のノードのID  - `energyPattern`: 一日のエネルギー価格の変動を表現するために使用されるタイムパターンのIDラベル。  - `energyPrice`: エネルギーの平均価格または名目価格を貨幣単位で表したもの。すべての単位は[CEFACT](https://www.unece.org/cefact.html)コードで受け付けています。  - `energyUse`: ネットワークの要素によるエネルギー使用量の観測値  - `flow`: リンク先の装置（パイプ、バルブ、ポンプ）で測定された、`startAt`ノードから`endsAt`ノードへの流速  - `headCurve`: ポンプが送り出す揚程とポンプを通過する流量の関係を説明するために使用されるポンプ曲線のIDラベルです。  - `id`: エンティティの一意な識別子  - `initialStatus`: シミュレーション開始時のリンク状態。Enum:'OPEN, CLOSED, CV' です。  - `location`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `name`: このアイテムの名称です。  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `power`: ポンプから供給される電力。単位はすべて[CEFACT](https://www.unece.org/cefact.html)コードで受け付けます。  - `pumpPattern`: ポンプの運転制御に使用するタイムパターンのIDラベルです。パターンの倍率は、速度設定に相当する。倍率が0の場合、該当する時間帯はポンプが停止することを意味する。  - `quality`: ネットワークコンポーネントで観測された品質  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `source`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `speed`: ポンプの相対速度設定。単位はすべて[CEFACT](https://www.unece.org/cefact.html)コードで受け付けます。  - `startsAt`: ポンプ吸込側のノードのID  - `status`: ノードの動的状態。Enum:'OPEN, CLOSED, CV'.  - `tag`: パイプをカテゴリに割り当てるためのオプションのテキスト文字列、おそらく年齢や素材に基づいたもの  - `type`: NGSI-LD Entity Type。Pump と等しくなければならない。  - `velocity`: リンク（パイプ、バルブ、ポンプ）内の観測された流速  - `vertices`: ポンプ内のすべての頂点の座標を、startsAtノードからendsAtノードに並べて、GeoJSONとしてエンコードしたもの。    
+必要なプロパティ  
+- `endsAt`  - `id`  - `initialStatus`  - `startsAt`  - `type`  ## プロパティのデータモデル記述  
+アルファベット順に並びます（クリックで詳細へ）  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 Pump:    
@@ -520,13 +522,13 @@ Pump:
   x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/blob/master/Pump/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.WaterDistributionManagementEPANET/Pump/schema.json    
-  x-model-tags: ""    
+  x-model-tags: FIWARE4WATER    
   x-version: 0.0.1    
 ```  
 </details>    
 ## ペイロードの例  
-#### ポンプ NGSI-v2 のキーバリューの例  
-ここでは、Pumpをkey-valuesとしてJSON-LD形式にした例を紹介します。これは`options=keyValues`を使用した場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### ポンプNGSI-v2鍵盤の例  
+ここでは、PumpをJSON-LD形式でkey-valuesとした場合の例を示す。これは `options=keyValues` を使用した場合に NGSI-v2 と互換性があり、個々のエンティティのコンテキストデータが返される。  
 ```json  
 {  
     "id": "85zhnf58-0d4c-h4g854g-b7d0-3310klm",  
@@ -545,7 +547,7 @@ Pump:
 }  
 ```  
 #### ポンプ NGSI-v2 正規化例  
-正規化されたJSON-LD形式のPumpの例を示します。これは、オプションを使用しない場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+以下は、PumpをJSON-LD形式で正規化した例である。これはオプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
   "id": "85zhnf58-0d4c-h4g854g-b7d0-3310klm",  
@@ -624,150 +626,148 @@ Pump:
   }  
 }  
 ```  
-#### ポンプ NGSI-LD のキーバリューの例  
-ここでは、Pumpをkey-valuesとしてJSON-LD形式にした例を紹介します。これは`options=keyValues`を使うとNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### ポンプ NGSI-LD キー値例  
+ここでは、PumpをJSON-LD形式でkey-valuesにした例を示します。これは `options=keyValues` を使用した場合に NGSI-LD と互換性があり、個々のエンティティのコンテキストデータが返される。  
 ```json  
 {  
-  "id": "urn:ngsi-ld:Pump:85zhnf58-0d4c-h4g854g-b7d0-3310klm",  
-  "type": "Pump",  
-  "createdAt": "2020-03-02T15:42:00Z",  
-  "modifiedAt": "2020-03-02T15:45:00Z",  
-  "initialStatus": "OPEN",  
-  "status": "OPEN",  
-  "power": 100,  
-  "speed": 1.2,  
-  "startsAt": "urn:ngsi-ld:Junction:63fe7d79-0d4c-4da9-b7d0-3340efa0656a",  
-  "endsAt": "urn:ngsi-ld:Reservoir:1863179e-3768-4480-9167-ff21f870dd19",  
-  "tag": "DMA1",  
-  "pumpPattern": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533-a2eb-34bc89262190",  
-  "efficCurve": "urn:ngsi-ld:Curve:fbcb5fc8-8ca3-4533-a2eb-34bc89262190",  
-  "energyPrice": 0.8,  
-  "energyPattern": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533-a2eb-34bc89262190",  
-  "@context": [  
-    "https://raw.githubusercontent.com/smart-data-models/data-models/master/context.jsonld"  
-  ]  
+    "id": "urn:ngsi-ld:Pump:85zhnf58-0d4c-h4g854g-b7d0-3310klm",  
+    "type": "Pump",  
+    "createdAt": "2020-03-02T15:42:00Z",  
+    "efficCurve": "urn:ngsi-ld:Curve:fbcb5fc8-8ca3-4533-a2eb-34bc89262190",  
+    "endsAt": "urn:ngsi-ld:Reservoir:1863179e-3768-4480-9167-ff21f870dd19",  
+    "energyPattern": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533-a2eb-34bc89262190",  
+    "energyPrice": 0.8,  
+    "initialStatus": "OPEN",  
+    "modifiedAt": "2020-03-02T15:45:00Z",  
+    "power": 100,  
+    "pumpPattern": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533-a2eb-34bc89262190",  
+    "speed": 1.2,  
+    "startsAt": "urn:ngsi-ld:Junction:63fe7d79-0d4c-4da9-b7d0-3340efa0656a",  
+    "status": "OPEN",  
+    "tag": "DMA1",  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/data-models/master/context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/context.jsonld"  
+    ]  
 }  
 ```  
-#### ポンプ NGSI-LDの正規化例  
-正規化されたJSON-LD形式のPumpの例を示します。これはオプションを使用しない場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### ポンプ NGSI-LD 正規化例  
+以下は、PumpをJSON-LD形式で正規化した例である。これはオプションを使用しない場合のNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
-  "id": "urn:ngsi-ld:Pump:85zhnf58-0d4c-h4g854g-b7d0-3310klm",  
-  "type": "Pump",  
-  "initialStatus": {  
-    "type": "Property",  
-    "value": "OPEN"  
-  },  
-  "status": {  
-    "type": "Property",  
-    "value": "OPEN"  
-  },  
-  "power": {  
-    "type": "Property",  
-    "value": 100,  
-    "unitCode": "KWT"  
-  },  
-  "speed": {  
-    "type": "Property",  
-    "value": 1.2,  
-    "unitCode": "MTS"  
-  },  
-  "startsAt": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:Junction:63fe7d79-0d4c-4da9-b7d0-3340efa0656a"  
-  },  
-  "endsAt": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:Reservoir:1863179e-3768-4480-9167-ff21f870dd19"  
-  },  
-  "vertices": {  
-    "type": "GeoProperty",  
-    "value": {  
-      "type": "MultiPoint",  
-      "coordinates": [  
-        [  
-          24.40623,  
-          60.17966  
-        ],  
-        [  
-          24.50623,  
-          60.27966  
-        ]  
-      ]  
-    }  
-  },  
-  "tag": {  
-    "type": "Property",  
-    "value": "DMA1"  
-  },  
-  "pumpPattern": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533-a2eb-34bc89262190"  
-  },  
-  "efficCurve": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:Curve:fbcb5fc8-8ca3-4533-a2eb-34bc89262190"  
-  },  
-  "energyPrice": {  
-    "type": "Property",  
-    "value": 0.8,  
-    "unitCode": "C62"  
-  },  
-  "energyPattern": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533-a2eb-34bc89262190"  
-  },  
-  "flow": {  
-    "type": "Property",  
-    "value": {  
-      "value": 20,  
-      "unitCode": "G51"  
+    "id": "urn:ngsi-ld:Pump:85zhnf58-0d4c-h4g854g-b7d0-3310klm",  
+    "type": "Pump",  
+    "efficCurve": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:Curve:fbcb5fc8-8ca3-4533-a2eb-34bc89262190"  
     },  
-    "observedBy": {  
-      "value": "urn:ngsi-ld:Device:device-9845A",  
-      "type": "Relationship"  
-    }  
-  },  
-  "velocity": {  
-    "type": "Property",  
-    "value": {  
-      "type": "Property",  
-      "value": 2,  
-      "unitCode": "MTS"  
+    "endsAt": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:Reservoir:1863179e-3768-4480-9167-ff21f870dd19"  
     },  
-    "observedBy": {  
-      "type": "Relationship",  
-      "value": "urn:ngsi-ld:Device:device-9845A"  
-    }  
-  },  
-  "quality": {  
-    "type": "Property",  
-    "value": {  
-      "type": "Property",  
-      "value": 0.5,  
-      "unitCode": "F27"  
+    "energyPattern": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533-a2eb-34bc89262190"  
     },  
-    "observedBy": {  
-      "type": "Relationship",  
-      "object": "urn:ngsi-ld:Device:device-9845A"  
-    }  
-  },  
-  "energyUse": {  
-    "type": "Property",  
-    "value": {  
-      "type": "Property",  
-      "value": 50,  
-      "unitCode": "KWT"  
+    "energyPrice": {  
+        "type": "Property",  
+        "value": 0.8,  
+        "unitCode": "C62"  
     },  
-    "observedBy": {  
-      "type": "Relationship",  
-      "object": "urn:ngsi-ld:Device:device-9845A"  
-    }  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld"  
-  ]  
+    "energyUse": {  
+        "type": "Property",  
+        "value": {  
+            "type": "Property",  
+            "value": 50,  
+            "unitCode": "KWT"  
+        },  
+        "observedBy": {  
+            "type": "Relationship",  
+            "object": "urn:ngsi-ld:Device:device-9845A"  
+        }  
+    },  
+    "flow": {  
+        "type": "Property",  
+        "value": {  
+            "value": 20,  
+            "unitCode": "G51"  
+        },  
+        "observedBy": {  
+            "value": "urn:ngsi-ld:Device:device-9845A",  
+            "type": "Relationship"  
+        }  
+    },  
+    "initialStatus": {  
+        "type": "Property",  
+        "value": "OPEN"  
+    },  
+    "power": {  
+        "type": "Property",  
+        "value": 100,  
+        "unitCode": "KWT"  
+    },  
+    "pumpPattern": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533-a2eb-34bc89262190"  
+    },  
+    "quality": {  
+        "type": "Property",  
+        "value": {  
+            "type": "Property",  
+            "value": 0.5,  
+            "unitCode": "F27"  
+        },  
+        "observedBy": {  
+            "type": "Relationship",  
+            "object": "urn:ngsi-ld:Device:device-9845A"  
+        }  
+    },  
+    "speed": {  
+        "type": "Property",  
+        "value": 1.2,  
+        "unitCode": "MTS"  
+    },  
+    "startsAt": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:Junction:63fe7d79-0d4c-4da9-b7d0-3340efa0656a"  
+    },  
+    "status": {  
+        "type": "Property",  
+        "value": "OPEN"  
+    },  
+    "tag": {  
+        "type": "Property",  
+        "value": "DMA1"  
+    },  
+    "velocity": {  
+        "type": "Property",  
+        "value": {  
+            "type": "Property",  
+            "value": 2,  
+            "unitCode": "MTS"  
+        },  
+        "observedBy": {  
+            "type": "Relationship",  
+            "value": "urn:ngsi-ld:Device:device-9845A"  
+        }  
+    },  
+    "vertices": {  
+        "type": "GeoProperty",  
+        "value": {  
+            "type": "MultiPoint",  
+            "coordinates": [  
+                [  
+                    24.40623,  
+                    60.17966  
+                ],  
+                [  
+                    24.50623,  
+                    60.27966  
+                ]  
+            ]  
+        }  
+    },  
+    "@context": []  
 }  
 ```  
-
-マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。
+マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
