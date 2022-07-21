@@ -1,15 +1,17 @@
-エンティティSimulationResult  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+エンティティSimulationResult  
 ======================  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.WaterDistributionManagementEPANET/blob/master/SimulationResult/LICENSE.md)  
-[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-グローバルな記述。**このエンティティは、Water Network Managementドメインのために作られた一般的なシミュレーション結果の調和のとれた記述を含んでいます。このエンティティは、主にウォーターネットワークマネジメントの垂直方向と関連するIoTアプリケーションに関連しています。  
+[ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+グローバルな記述。**このエンティティは、水ネットワーク管理領域用に作成された汎用シミュレーション結果の調和された記述を含んでいます。このエンティティは、主に水ネットワーク管理の垂直方向と関連する IoT アプリケーションに関連するものである。  
+バージョン: 0.0.2  
 
-## プロパティのリスト  
+## プロパティ一覧  
 
-- `address`: 郵送先住所  - `alternateName`: このアイテムの別称  - `areaServed`: サービスや提供されるアイテムが提供される地理的なエリア  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `description`: このアイテムの説明  - `hasInputNetwork`: シミュレーションで使用するネットワークのID  - `id`: エンティティのユニークな識別子  - `location`: アイテムへのGeojson参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygonのいずれかです。  - `name`: このアイテムの名前です。  - `outputFile`: ネットワークにシミュレーションを適用した結果のバイナリファイルへのリンク。  - `outputParameters`: ネットワークにシミュレーションを適用した結果のセットの説明。  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `refSimulationScenario`: シミュレーションシナリオのID  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type`: NGSI-LD エンティティタイプ。SimulationResultである必要があります。    
-必須項目  
-- `id`  - `refSimulationScenario`  - `type`  ## データモデルによるプロパティの記述  
-アルファベット順（クリックすると詳細が表示されます）  
+- `address`: 郵送先住所  - `alternateName`: この項目の別称  - `areaServed`: サービスまたは提供品が提供される地理的な地域  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description`: このアイテムの説明  - `hasInputNetwork`: シミュレーションに使用したネットワークのID  - `id`: エンティティの一意な識別子  - `location`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `name`: このアイテムの名称です。  - `outputFile`: ネットワークに適用したシミュレーションの結果を含むバイナリファイルへのリンクです。  - `outputParameters`: ネットワークにシミュレーションを適用した結果一式を記述する。  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `refSimulationScenario`: シミュレーション・シナリオのID  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `source`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type`: NGSI-LDのEntity Type。SimulationResultでなければならない。    
+必要なプロパティ  
+- `id`  - `refSimulationScenario`  - `type`  ## プロパティのデータモデル記述  
+アルファベット順に並びます（クリックで詳細へ）  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 SimulationResult:    
@@ -351,13 +353,13 @@ SimulationResult:
   x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/blob/master/SimulationResult/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.WaterDistributionManagementEPANET/Result/schema.json    
-  x-model-tags: ""    
+  x-model-tags: FIWARE4WATER    
   x-version: 0.0.2    
 ```  
 </details>    
 ## ペイロードの例  
-#### SimulationResult NGSI-v2 key-values Example  
-SimulationResultをkey-valuesとしてJSON-LD形式で出力した例です。これは`options=keyValues`を使用した場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### SimulationResult NGSI-v2 key-value 例．  
+SimulationResultをJSON-LD形式でkey-valuesとした例です。これは、`options=keyValues`を使用した場合にNGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
   "id": "urn:ngsi-ld:SimulationResult:01",  
@@ -379,8 +381,8 @@ SimulationResult:
   ]  
 }  
 ```  
-#### シミュレーション結果 NGSI-v2 正規化例  
-ここでは、正規化されたJSON-LD形式のSimulationResultの例を示します。これは、オプションを使用しない場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### SimulationResult NGSI-v2 正規化例  
+SimulationResultをJSON-LD形式で正規化した例です。これはオプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
   "id": "urn:ngsi-ld:SimulationResult:01",  
@@ -425,63 +427,60 @@ SimulationResult:
   ]  
 }  
 ```  
-#### SimulationResult NGSI-LD key-values 例  
-SimulationResultをkey-valuesとしてJSON-LD形式で出力した例です。これは`options=keyValues`を使用した場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### SimulationResult NGSI-LD key-value Example  
+SimulationResultをJSON-LD形式でkey-valuesにした例です。これは、`options=keyValues`を使用した場合にNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
-  "id": "urn:ngsi-ld:SimulationResult:01",  
-  "type": "SimulationResult",  
-  "description": "Free Text",  
-  "hasInputNetwork": "urn:ngsi-ld:WaterNetwork:01",  
-  "refSimulationScenario": "urn:ngsi-ld:Simulation:01",  
-  "outputParameters": [  
-    {  
-      "parameter": "waterLevel",  
-      "value": 50,  
-      "targetURI": "urn:ngsi-ld:Valve:V1"  
-    },  
-    {  
-      "parameter": "initialQuality",  
-      "value": 2,  
-      "targetURI": "urn:ngsi-ld:Tank:T1"  
-    }  
-  ],  
-  "outputFile" : [  
-    "c://epanetsimulations/simulationResult.bin"  
+    "id": "urn:ngsi-ld:SimulationResult:01",  
+    "type": "SimulationResult",  
+    "description": "Free Text",  
+    "hasInputNetwork": "urn:ngsi-ld:WaterNetwork:01",  
+    "outputFile": [  
+        "c://epanetsimulations/simulationResult.bin"  
     ],  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld"  
-  ]  
+    "outputParameters": [  
+        {  
+            "parameter": "waterLevel",  
+            "value": 50,  
+            "targetURI": "urn:ngsi-ld:Valve:V1"  
+        },  
+        {  
+            "parameter": "initialQuality",  
+            "value": 2,  
+            "targetURI": "urn:ngsi-ld:Tank:T1"  
+        }  
+    ],  
+    "refSimulationScenario": "urn:ngsi-ld:Simulation:01",  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/context.jsonld"  
+    ]  
 }  
 ```  
-#### シミュレーション結果 NGSI-LD 正規化例  
-正規化されたJSON-LD形式のSimulationResultの例を示します。これは、オプションを使用しない場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### SimulationResult NGSI-LD 正規化例  
+SimulationResultをJSON-LD形式で正規化した例です。これは、オプションを使用しない場合のNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
-  "id": "urn:ngsi-ld:SimulationResult:01",  
-  "type": "SimulationResult",  
-  "description": {  
-    "type": "Property",  
-    "value": "Free Text"  
-  },  
-  "hasInputNetwork": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:WaterNetwork:01"  
-  },  
-  "refSimulationScenario": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:Simulation:01"  
-  },  
-  "outputFile": [  
-    {  
-      "type": "Relationship",  
-      "object": "c://epanetsimulations/simulationResult.bin"  
-    }  
-  ],  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld"  
-  ]  
+    "id": "urn:ngsi-ld:SimulationResult:01",  
+    "type": "SimulationResult",  
+    "description": {  
+        "type": "Property",  
+        "value": "Free Text"  
+    },  
+    "hasInputNetwork": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:WaterNetwork:01"  
+    },  
+    "outputFile": [  
+        {  
+            "type": "Relationship",  
+            "object": "c://epanetsimulations/simulationResult.bin"  
+        }  
+    ],  
+    "refSimulationScenario": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:Simulation:01"  
+    },  
+    "@context": []  
 }  
 ```  
-
-マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。
+マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
