@@ -1,14 +1,16 @@
-Entità: Reservoir  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entità: Serbatoio  
 =================  
 [Licenza aperta](https://github.com/smart-data-models//dataModel.WaterDistributionManagementEPANET/blob/master/Reservoir/LICENSE.md)  
 [documento generato automaticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-Descrizione globale: **Questa entità contiene una descrizione armonizzata di un serbatoio generico realizzato per il dominio di gestione della rete idrica. Questa entità è principalmente associata alla gestione verticale dell'acqua e alle relative applicazioni IoT.**  
+Descrizione globale: **Questa entità contiene una descrizione armonizzata di un generico serbatoio realizzato per il dominio della gestione delle reti idriche. Questa entità è principalmente associata al verticale della gestione dell'acqua e alle relative applicazioni IoT.**  
+versione: 0.0.1  
 
 ## Elenco delle proprietà  
 
-- `address`: L'indirizzo postale  - `alternateName`: Un nome alternativo per questa voce  - `areaServed`: L'area geografica in cui viene fornito un servizio o un articolo offerto  - `dataProvider`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  - `dateCreated`: Timestamp di creazione dell'entità. Questo sarà di solito assegnato dalla piattaforma di archiviazione.  - `dateModified`: Timestamp dell'ultima modifica dell'entità. Questo sarà di solito assegnato dalla piattaforma di archiviazione.  - `description`: Una descrizione di questo articolo  - `elevation`: L'elevazione sopra qualche riferimento comune del serbatoio. Tutte le unità sono accettate in codice [CEFACT](https://www.unece.org/cefact.html).  - `hasInlet`: Una relazione che indica i punti di ingresso dell'acqua del serbatoio  - `hasOutlet`: Una relazione che indica i punti di uscita dell'acqua del serbatoio  - `head`: Prevalenza osservata al nodo (giunzione, serbatoio o cisterna)  - `headPattern`: L'etichetta ID di un modello temporale usato per modellare la variazione temporale nella testa totale del serbatoio  - `id`: Identificatore unico dell'entità  - `initialQuality`: Qualità iniziale nella componente di rete  - `location`: Riferimento Geojson all'elemento. Può essere Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `name`: Il nome di questo articolo.  - `owner`: Una lista contenente una sequenza di caratteri codificata in JSON che si riferisce agli ID unici dei proprietari  - `pressure`: Pressione osservata al nodo (giunzione, serbatoio o serbatoio)  - `quality`: Qualità osservata nella componente di rete  - `reservoirHead`: La testa idraulica (elevazione + testa di pressione) dell'acqua nel serbatoio. Tutte le unità sono accettate in codice [CEFACT](https://www.unece.org/cefact.html).  - `seeAlso`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `source`: Una sequenza di caratteri che dà la fonte originale dei dati dell'entità come URL. Si raccomanda di essere il nome di dominio completamente qualificato del fornitore di origine, o l'URL dell'oggetto di origine.  - `sourceCategory`: Descrizione della qualità del flusso sorgente che entra nella rete in un nodo specifico.  - `sourceMassInflow`: Proprietà... Afflusso di massa osservato al nodo (giunzione, serbatoio o bacino)  - `supply`: Alimentazione osservata al nodo (giunzione, serbatoio o cisterna)  - `tag`: Una stringa di testo opzionale usata per assegnare il tubo a una categoria, forse una basata sull'età o sul materiale  - `type`: Tipo di entità NGSI-LD. Deve essere uguale a Reservoir.    
+- `address`: L'indirizzo postale  - `alternateName`: Un nome alternativo per questa voce  - `areaServed`: L'area geografica in cui viene fornito il servizio o l'articolo offerto.  - `dataProvider`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  - `dateCreated`: Timestamp di creazione dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `dateModified`: Timestamp dell'ultima modifica dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `description`: Descrizione dell'articolo  - `elevation`: L'elevazione sopra un riferimento comune del bacino idrico. Tutte le unità sono accettate in codice [CEFACT](https://www.unece.org/cefact.html).  - `hasInlet`: Una relazione che indica i punti di ingresso dell'acqua nel serbatoio.  - `hasOutlet`: Una relazione che indica i punti di uscita dell'acqua dal serbatoio.  - `head`: Prevalenza osservata al nodo (giunzione, serbatoio o bacino)  - `headPattern`: L'etichetta ID di un modello temporale utilizzato per modellare la variazione temporale della prevalenza totale del serbatoio.  - `id`: Identificatore univoco dell'entità  - `initialQuality`: Qualità iniziale del componente di rete  - `location`: Riferimento Geojson all'elemento. Può essere un punto, una stringa di linea, un poligono, un multi-punto, una stringa di linea o un poligono multiplo.  - `name`: Il nome di questo elemento.  - `owner`: Un elenco contenente una sequenza di caratteri codificata JSON che fa riferimento agli ID univoci dei proprietari.  - `pressure`: Pressione osservata al nodo (giunzione, serbatoio o cisterna)  - `quality`: Qualità osservata nel componente di rete  - `reservoirHead`: La prevalenza idraulica (elevazione + prevalenza di pressione) dell'acqua nel serbatoio. Tutte le unità sono accettate in codice [CEFACT](https://www.unece.org/cefact.html).  - `seeAlso`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `source`: Una sequenza di caratteri che indica la fonte originale dei dati dell'entità come URL. Si consiglia di utilizzare il nome di dominio completamente qualificato del provider di origine o l'URL dell'oggetto di origine.  - `sourceCategory`: Descrizione della qualità del flusso di origine che entra nella rete in un nodo specifico.  - `sourceMassInflow`: Afflusso di massa della sorgente osservato nel nodo (giunzione, serbatoio o bacino)  - `supply`: Fornitura osservata al nodo (giunzione, serbatoio o cisterna)  - `tag`: Una stringa di testo opzionale utilizzata per assegnare il tubo a una categoria, magari basata sull'età o sul materiale.  - `type`: Tipo di entità NGSI-LD. Deve essere uguale a Serbatoio.    
 Proprietà richieste  
-- `id`  - `location`  - `reservoirHead`  - `type`  ## Descrizione del modello di dati delle proprietà  
+- `id`  - `location`  - `reservoirHead`  - `type`  ## Modello di dati descrizione delle proprietà  
 Ordinati in ordine alfabetico (clicca per i dettagli)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
@@ -424,7 +426,7 @@ Reservoir:
         model: https://schema.org/Text    
         type: Property    
     sourceMassInflow:    
-      description: 'Property.. Observed source mass inflow at the node (junction, tank or reservoir)'    
+      description: 'Observed source mass inflow at the node (junction, tank or reservoir)'    
       properties:    
         observedBy:    
           anyOf:    
@@ -439,6 +441,8 @@ Reservoir:
         value:    
           type: number    
       type: object    
+      x-ngsi:    
+        type: Property    
     supply:    
       description: 'Observed supply at the node (junction, tank or reservoir)'    
       properties:    
@@ -480,13 +484,13 @@ Reservoir:
   x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/blob/master/Reservoir/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.WaterDistributionManagementEPANET/Reservoir/schema.json    
-  x-model-tags: ""    
+  x-model-tags: FIWARE4WATER    
   x-version: 0.0.1    
 ```  
 </details>    
-## Esempio di payloads  
-#### Serbatoio NGSI-v2 valori chiave Esempio  
-Ecco un esempio di un serbatoio in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-v2 quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+## Esempi di payload  
+#### Valori-chiave del serbatoio NGSI-v2 Esempio  
+Ecco un esempio di serbatoio in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-v2 quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
 ```json  
 {  
   "id": "1863179e-3768-4480-9167-ff21f870dd19",  
@@ -514,8 +518,8 @@ Reservoir:
   "tag": "DMA1"  
 }  
 ```  
-#### Serbatoio NGSI-v2 normalizzato Esempio  
-Ecco un esempio di un serbatoio in formato JSON-LD normalizzato. Questo è compatibile con NGSI-v2 quando non usa opzioni e restituisce i dati di contesto di una singola entità.  
+#### Giacimento NGSI-v2 normalizzato Esempio  
+Ecco un esempio di serbatoio in formato JSON-LD normalizzato. Questo è compatibile con NGSI-v2 quando non si utilizzano le opzioni e restituisce i dati di contesto di una singola entità.  
 ```json  
 {  
   "id": "1863179e-3768-4480-9167-ff21f870dd19",  
@@ -600,160 +604,157 @@ Reservoir:
   }  
 }  
 ```  
-#### Serbatoio NGSI-LD valori chiave Esempio  
-Ecco un esempio di un serbatoio in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-LD quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+#### Valori chiave NGSI-LD del serbatoio Esempio  
+Ecco un esempio di serbatoio in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-LD quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
 ```json  
 {  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld"  
-  ],  
-  "createdAt": "2020-03-02T15:42:00Z",  
-  "description": "This entity contains a harmonised description of a Reservoir",  
-  "elevation": 105.8,  
-  "headPattern": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533",  
-  "id": "urn:ngsi-ld:Reservoir:1863179e-3768-4480-9167-ff21f870dd19",  
-  "initialQuality": 0.5,  
-  "location": {  
-    "coordinates": [  
-      24.30623,  
-      60.07966  
-    ],  
-    "type": "Point"  
-  },  
-  "modifiedAt": "2020-03-02T15:45:00Z",  
-  "reservoirHead": 59.0,  
-  "sourceCategory": "CategroyX",  
-  "tag": "DMA1",  
-  "type": "Reservoir"  
+    "id": "urn:ngsi-ld:Reservoir:1863179e-3768-4480-9167-ff21f870dd19",  
+    "type": "Reservoir",  
+    "createdAt": "2020-03-02T15:42:00Z",  
+    "description": "This entity contains a harmonised description of a Reservoir",  
+    "elevation": 105.8,  
+    "headPattern": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533",  
+    "initialQuality": 0.5,  
+    "location": {  
+        "coordinates": [  
+            24.30623,  
+            60.07966  
+        ],  
+        "type": "Point"  
+    },  
+    "modifiedAt": "2020-03-02T15:45:00Z",  
+    "reservoirHead": 59.0,  
+    "sourceCategory": "CategroyX",  
+    "tag": "DMA1",  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/context.jsonld"  
+    ]  
 }  
 ```  
 #### Serbatoio NGSI-LD normalizzato Esempio  
-Ecco un esempio di un serbatoio in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non usa opzioni e restituisce i dati di contesto di una singola entità.  
+Ecco un esempio di serbatoio in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non si utilizzano le opzioni e restituisce i dati di contesto di una singola entità.  
 ```json  
 {  
-  "id": "urn:ngsi-ld:Reservoir:1863179e-3768-4480-9167-ff21f870dd19",  
-  "type": "Reservoir",  
-  "location": {  
-    "type": "GeoProperty",  
-    "value": {  
-      "type": "Point",  
-      "coordinates": [  
-        24.30623,  
-        60.07966  
-      ]  
-    }  
-  },  
-  "reservoirHead": {  
-    "type": "Property",  
-    "value": 59.0,  
-    "unitCode": "MTR"  
-  },  
-  "headPattern": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533"  
-  },  
-  "elevation": {  
-    "type": "Property",  
-    "value": 105.8,  
-    "unitCode": "MTR"  
-  },  
-  "description": {  
-    "type": "Property",  
-    "value": "This entity contains a harmonised description of a Reservoir"  
-  },  
-  "initialQuality": {  
-    "type": "Property",  
-    "value": 0.5,  
-    "unitCode": "M1"  
-  },  
-  "sourceCategory": {  
-    "type": "Property",  
-    "value": {  
-      "type": "Property",  
-      "value": "CategoryX"  
+    "id": "urn:ngsi-ld:Reservoir:1863179e-3768-4480-9167-ff21f870dd19",  
+    "type": "Reservoir",  
+    "description": {  
+        "type": "Property",  
+        "value": "This entity contains a harmonised description of a Reservoir"  
     },  
-    "sourceType": {  
-      "type": "Property",  
-      "value": "MASS"  
+    "elevation": {  
+        "type": "Property",  
+        "value": 105.8,  
+        "unitCode": "MTR"  
     },  
-    "sourceQuality": {  
-      "type": "Property",  
-      "value": 1.2,  
-      "unitCode": "M1"  
+    "head": {  
+        "type": "Property",  
+        "value": {  
+            "type": "Property",  
+            "value": 20,  
+            "unitCode": "MTR"  
+        },  
+        "observedBy": {  
+            "type": "Relationship",  
+            "object": "urn:ngsi-ld:Device:device-9845A"  
+        }  
     },  
-    "sourcePattern": {  
-      "type": "Relationship",  
-      "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533-a2eb-34bc89262190"  
-    }  
-  },  
-  "tag": {  
-    "type": "Property",  
-    "value": "DMA1"  
-  },  
-  "pressure": {  
-    "type": "Property",  
-    "value": {  
-      "type": "Property",  
-      "value": 20,  
-      "unitCode": "MTR"  
+    "headPattern": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533"  
     },  
-    "observedBy": {  
-      "type": "Relationship",  
-      "object": "urn:ngsi-ld:Device:device-9845A"  
-    }  
-  },  
-  "supply": {  
-    "type": "Property",  
-    "value": {  
-      "type": "Property",  
-      "value": 150,  
-      "unitCode": "LTR"  
+    "initialQuality": {  
+        "type": "Property",  
+        "value": 0.5,  
+        "unitCode": "M1"  
     },  
-    "observedBy": {  
-      "type": "Relationship",  
-      "object": "urn:ngsi-ld:Device:device-9845A"  
-    }  
-  },  
-  "head": {  
-    "type": "Property",  
-    "value": {  
-      "type": "Property",  
-      "value": 20,  
-      "unitCode": "MTR"  
+    "location": {  
+        "type": "GeoProperty",  
+        "value": {  
+            "type": "Point",  
+            "coordinates": [  
+                24.30623,  
+                60.07966  
+            ]  
+        }  
     },  
-    "observedBy": {  
-      "type": "Relationship",  
-      "object": "urn:ngsi-ld:Device:device-9845A"  
-    }  
-  },  
-  "quality": {  
-    "type": "Property",  
-    "value": {  
-      "type": "Property",  
-      "value": 0.5,  
-      "unitCode": "M1"  
+    "pressure": {  
+        "type": "Property",  
+        "value": {  
+            "type": "Property",  
+            "value": 20,  
+            "unitCode": "MTR"  
+        },  
+        "observedBy": {  
+            "type": "Relationship",  
+            "object": "urn:ngsi-ld:Device:device-9845A"  
+        }  
     },  
-    "observedBy": {  
-      "type": "Relationship",  
-      "object": "urn:ngsi-ld:Device:device-9845A"  
-    }  
-  },  
-  "sourceMassInflow": {  
-    "type": "Property",  
-    "value": {  
-      "type": "Property",  
-      "value": 100,  
-      "unitCode": "F27"  
+    "quality": {  
+        "type": "Property",  
+        "value": {  
+            "type": "Property",  
+            "value": 0.5,  
+            "unitCode": "M1"  
+        },  
+        "observedBy": {  
+            "type": "Relationship",  
+            "object": "urn:ngsi-ld:Device:device-9845A"  
+        }  
     },  
-    "observedBy": {  
-      "type": "Relationship",  
-      "object": "urn:ngsi-ld:Device:device-9845A"  
-    }  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld"  
-  ]  
+    "reservoirHead": {  
+        "type": "Property",  
+        "value": 59.0,  
+        "unitCode": "MTR"  
+    },  
+    "sourceCategory": {  
+        "type": "Property",  
+        "value": {  
+            "type": "Property",  
+            "value": "CategoryX"  
+        },  
+        "sourceType": {  
+            "type": "Property",  
+            "value": "MASS"  
+        },  
+        "sourceQuality": {  
+            "type": "Property",  
+            "value": 1.2,  
+            "unitCode": "M1"  
+        },  
+        "sourcePattern": {  
+            "type": "Relationship",  
+            "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533-a2eb-34bc89262190"  
+        }  
+    },  
+    "sourceMassInflow": {  
+        "type": "Property",  
+        "value": {  
+            "type": "Property",  
+            "value": 100,  
+            "unitCode": "F27"  
+        },  
+        "observedBy": {  
+            "type": "Relationship",  
+            "object": "urn:ngsi-ld:Device:device-9845A"  
+        }  
+    },  
+    "supply": {  
+        "type": "Property",  
+        "value": {  
+            "type": "Property",  
+            "value": 150,  
+            "unitCode": "LTR"  
+        },  
+        "observedBy": {  
+            "type": "Relationship",  
+            "object": "urn:ngsi-ld:Device:device-9845A"  
+        }  
+    },  
+    "tag": {  
+        "type": "Property",  
+        "value": "DMA1"  
+    },  
+    "@context": []  
 }  
 ```  
-
-Vedere [FAQ 10](https://smartdatamodels.org/index.php/faqs/) per avere una risposta su come trattare le unità di grandezza
+Vedere [FAQ 10](https://smartdatamodels.org/index.php/faqs/) per ottenere una risposta su come gestire le unità di grandezza.  
