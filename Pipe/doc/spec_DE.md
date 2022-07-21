@@ -1,12 +1,14 @@
-Entität: Röhre  
-==============  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entität: Rohrleitung  
+====================  
 [Offene Lizenz](https://github.com/smart-data-models//dataModel.WaterDistributionManagementEPANET/blob/master/Pipe/LICENSE.md)  
 [Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-Globale Beschreibung: **Diese Entität enthält eine harmonisierte Beschreibung eines generischen Rohrs, das für die Domäne Wassernetzmanagement hergestellt wurde. Diese Entität ist in erster Linie mit der vertikalen Wasserwirtschaft und damit verbundenen IoT-Anwendungen verbunden.**  
+Globale Beschreibung: **Diese Entität enthält eine harmonisierte Beschreibung eines generischen Rohrs, das für den Bereich Wassernetzmanagement hergestellt wurde. Diese Entität ist in erster Linie mit der vertikalen Wasserwirtschaft und damit verbundenen IoT-Anwendungen verbunden.**  
+Version: 0.0.1  
 
 ## Liste der Eigenschaften  
 
-- `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `bulkCoeff`: Verwenden Sie einen positiven Wert für Wachstum und einen negativen Wert für Zerfall. Alle Einheiten werden im Code [CEFACT](https://www.unece.org/cefact.html) akzeptiert.  - `dataProvider`: Eine Folge von Zeichen, die den Anbieter der harmonisierten Dateneinheit identifiziert.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `diameter`: Der Rohrdurchmesser  - `endsAt`: Die ID des Knotens, an dem das Rohr endet  - `flow`: Durchflussrate vom `startsAt`-Knoten zum `endsAt`-Knoten, gemessen von einem Gerät an der Verbindung (Rohr, Ventil oder Pumpe)  - `id`: Eindeutiger Bezeichner der Entität  - `initialStatus`: Der Link-Status beim Start der Simulation. Enum:'OPEN, CLOSED, CV'  - `length`: Die tatsächliche Länge des Rohrs. Alle Einheiten werden im [CEFACT](https://www.unece.org/cefact.html) Code akzeptiert.  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `minorLoss`: Einheitsloser kleiner Verlustkoeffizient in Verbindung mit Biegungen, Fittings usw.  - `name`: Der Name dieses Elements.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Ids der Eigentümer verweist  - `quality`: Beobachtete Qualität in der Netzwerkkomponente  - `roughness`: Der Rauhigkeitskoeffizient des Rohrs.  - `seeAlso`: Liste von uri, die auf zusätzliche Ressourcen über das Element verweist  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL zum Quellobjekt.  - `startsAt`: Die ID des Knotens, an dem die Leitung beginnt  - `status`: Der dynamische Zustand des Knotens. Enum:'OPEN, CLOSED, CV'  - `tag`: Eine optionale Textzeichenkette, die dazu dient, das Rohr einer Kategorie zuzuordnen, z. B. basierend auf Alter oder Material  - `type`: NGSI-LD-Entitätstyp. Es muss Pipe sein  - `velocity`: Beobachtete Geschwindigkeit in der Verbindung (Rohr, Ventil oder Pumpe)  - `vertices`: Koordinaten aller Scheitelpunkte in der Pipe, geordnet vom startsAt-Knoten zum endsAt-Knoten und kodiert als GeoJSON  - `wallCoeff`: Der Wandreaktionskoeffizient für das Rohr. Verwenden Sie einen positiven Wert für Wachstum und einen negativen Wert für Zerfall. Alle Einheiten werden im Code [CEFACT](https://www.unece.org/cefact.html) akzeptiert.    
+- `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `bulkCoeff`: Verwenden Sie einen positiven Wert für Wachstum und einen negativen Wert für Verfall. Alle Einheiten werden im Code [CEFACT](https://www.unece.org/cefact.html) akzeptiert.  - `dataProvider`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `diameter`: Der Rohrdurchmesser  - `endsAt`: Die ID des Knotens, an dem die Leitung endet  - `flow`: Durchflussmenge vom Knoten `startsAt` zum Knoten `endsAt`, gemessen von einem Gerät an der Verbindung (Rohr, Ventil oder Pumpe)  - `id`: Eindeutiger Bezeichner der Entität  - `initialStatus`: Der Verbindungsstatus zu Beginn der Simulation. Enum:'OPEN, CLOSED, CV'  - `length`: Die tatsächliche Länge des Rohrs. Alle Einheiten werden im Code [CEFACT](https://www.unece.org/cefact.html) akzeptiert.  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `minorLoss`: Einheitsloser kleiner Verlustkoeffizient in Verbindung mit Biegungen, Armaturen usw.  - `name`: Der Name dieses Artikels.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `quality`: Beobachtete Qualität in der Netzkomponente  - `roughness`: Der Rauhigkeitskoeffizient des Rohrs.  - `seeAlso`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Es wird empfohlen, den voll qualifizierten Domänennamen des Quellanbieters oder die URL des Quellobjekts zu verwenden.  - `startsAt`: Die ID des Knotens, an dem die Leitung beginnt  - `status`: Der dynamische Zustand des Knotens. Enum:'OPEN, CLOSED, CV'  - `tag`: Eine optionale Textzeichenfolge, die dazu dient, das Rohr einer Kategorie zuzuordnen, z. B. einer Kategorie, die auf Alter oder Material basiert  - `type`: NGSI-LD-Entitätstyp. Es muss Pipe sein  - `velocity`: Beobachtete Geschwindigkeit in der Verbindung (Rohr, Ventil oder Pumpe)  - `vertices`: Koordinaten aller Scheitelpunkte im Rohr, geordnet vom startsAt-Knoten zum endsAt-Knoten und kodiert als GeoJSON  - `wallCoeff`: Der Wandreaktionskoeffizient für das Rohr. Verwenden Sie einen positiven Wert für Wachstum und einen negativen Wert für Zerfall. Alle Einheiten werden im Code [CEFACT](https://www.unece.org/cefact.html) akzeptiert.    
 Erforderliche Eigenschaften  
 - `id`  - `type`  ## Datenmodell Beschreibung der Eigenschaften  
 Alphabetisch sortiert (für Details anklicken)  
@@ -36,47 +38,63 @@ Pipe:
         streetAddress:    
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
           type: string    
-      type: Property    
+      type: object    
       x-ngsi:    
         model: https://schema.org/address    
+        type: Property    
     alternateName:    
       description: 'An alternative name for this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     areaServed:    
       description: 'The geographic area where a service or offered item is provided'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     bulkCoeff:    
       description: 'Use a positive value for growth and a negative value for decay. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'    
-      type: Property    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Number    
+        type: Property    
         units: 'reciprocal day The bulk reaction coefficient for the pipe'    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateCreated:    
       description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateModified:    
       description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     description:    
       description: 'A description of this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     diameter:    
       description: 'The pipe diameter'    
-      type: Property    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Number    
+        type: Property    
         units: Millimetre    
     endsAt:    
       description: 'The ID of the node where the pipe ends'    
       format: uri    
-      type: Relationship    
+      type: string    
+      x-ngsi:    
+        type: Relationship    
     flow:    
       description: 'Rate of flow from `startsAt` node to `endsAt` node, measured by a device at the link (pipe, valve or pump)'    
       properties:    
@@ -92,7 +110,9 @@ Pipe:
               type: string    
         value:    
           type: number    
-      type: Property    
+      type: object    
+      x-ngsi:    
+        type: Property    
     id:    
       anyOf: &pipe_-_properties_-_owner_-_items_-_anyof    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -104,21 +124,24 @@ Pipe:
           format: uri    
           type: string    
       description: 'Unique identifier of the entity'    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     initialStatus:    
       description: 'The link status at the start of the simulation. Enum:''OPEN, CLOSED, CV'''    
       enum:    
         - OPEN    
         - CLOSED    
         - CV    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     length:    
       description: 'The actual length of the pipe. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'    
-      type: Property    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Number    
+        type: Property    
         units: Metre    
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
@@ -271,22 +294,28 @@ Pipe:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      type: Geoproperty    
+      x-ngsi:    
+        type: Geoproperty    
     minorLoss:    
       description: 'Unitless minor loss coefficient associated with bends, fittings, etc'    
-      type: Property    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Number    
+        type: Property    
         units: 'No unit'    
     name:    
       description: 'The name of this item.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
         anyOf: *pipe_-_properties_-_owner_-_items_-_anyof    
         description: 'Property. Unique identifier of the entity'    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     quality:    
       description: 'Observed quality in the network component'    
       properties:    
@@ -302,12 +331,15 @@ Pipe:
               type: string    
         value:    
           type: number    
-      type: Property    
+      type: object    
+      x-ngsi:    
+        type: Property    
     roughness:    
       description: 'The roughness coefficient of the Pipe.'    
-      type: Property    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Number    
+        type: Property    
         units: 'No unit'    
     seeAlso:    
       description: 'list of uri pointing to additional resources about the item'    
@@ -319,33 +351,42 @@ Pipe:
           type: array    
         - format: uri    
           type: string    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     startsAt:    
       description: 'The ID of the node where the pipe begins'    
       format: uri    
-      type: Relationship    
+      type: string    
+      x-ngsi:    
+        type: Relationship    
     status:    
       description: 'The dynamic state of the node. Enum:''OPEN, CLOSED, CV'''    
       enum:    
         - OPEN    
         - CLOSED    
         - CV    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     tag:    
       description: 'An optional text string used to assign the pipe to a category, perhaps one based on age or material'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     type:    
       description: 'NGSI-LD Entity Type. It has to be Pipe'    
       enum:    
         - Pipe    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     velocity:    
       description: 'Observed velocity in the link (pipe, valve or pump)'    
       properties:    
@@ -354,7 +395,9 @@ Pipe:
           type: string    
         value:    
           type: number    
-      type: Property    
+      type: object    
+      x-ngsi:    
+        type: Property    
     vertices:    
       description: 'Coordinates of all vertices in the pipe, ordered from the startsAt node to the endsAt node and encoded as a GeoJSON '    
       oneOf:    
@@ -404,22 +447,30 @@ Pipe:
             - coordinates    
           title: 'GeoJSON Point'    
           type: object    
-      type: Geoproperty    
+      x-ngsi:    
+        type: Geoproperty    
     wallCoeff:    
       description: 'The wall reaction coefficient for the pipe. Use a positive value for growth and a negative value for decay. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'    
-      type: Property    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Number    
+        type: Property    
         units: mg/m²/day    
   required:    
     - id    
     - type    
   type: object    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/blob/master/Pipe/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/dataModel.WaterDistributionManagementEPANET/Pipe/schema.json    
+  x-model-tags: FIWARE4WATER    
+  x-version: 0.0.1    
 ```  
 </details>    
 ## Beispiel-Nutzlasten  
-#### Pipe NGSI-v2 Schlüsselwerte Beispiel  
-Hier ist ein Beispiel für eine Pipe im JSON-LD-Format als Key-Values. Dies ist kompatibel mit NGSI-v2 bei Verwendung von `options=keyValues` und liefert die Kontextdaten einer einzelnen Entität.  
+#### Pipe NGSI-v2 key-values Beispiel  
+Hier ist ein Beispiel für eine Pipe im JSON-LD-Format als Key-Values. Dies ist mit NGSI-v2 kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
     "id": "74azsty-70d4l-4da9-b7d0-3340ef655nnb",  
@@ -439,7 +490,7 @@ Pipe:
 }  
 ```  
 #### Rohr NGSI-v2 normalisiert Beispiel  
-Hier ist ein Beispiel für eine Pipe im JSON-LD-Format wie normalisiert. Dies ist kompatibel mit NGSI-v2, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+Hier ist ein Beispiel für eine Pipe im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-v2, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
   "id": "74azsty-70d4l-4da9-b7d0-3340ef655nnb",  
@@ -515,147 +566,144 @@ Pipe:
   }  
 }  
 ```  
-#### Rohr NGSI-LD Schlüsselwerte Beispiel  
-Hier ist ein Beispiel für eine Pipe im JSON-LD-Format als Key-Values. Dies ist kompatibel mit NGSI-LD bei Verwendung von `options=keyValues` und liefert die Kontextdaten einer einzelnen Entität.  
+#### Pipe NGSI-LD Schlüsselwerte Beispiel  
+Hier ist ein Beispiel für eine Pipe im JSON-LD-Format als Key-Values. Dies ist mit NGSI-LD kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld"  
-  ],  
-  "bulkCoeff": 72.4549,  
-  "createdAt": "2020-02-20T15:42:00Z",  
-  "description": "Free Text",  
-  "diameter": 203.0,  
-  "endsAt": "urn:ngsi-ld:Reservoir:1863179e-3768-4480-9167-ff21f870dd19",  
-  "id": "urn:ngsi-ld:Pipe:74azsty-70d4l-4da9-b7d0-3340ef655nnb",  
-  "initialStatus": "OPEN",  
-  "length": 52.9,  
-  "minorLoss": 72.4549,  
-  "modifiedAt": "2020-02-20T15:45:00Z",  
-  "roughness": 72.4549,  
-  "startsAt": "urn:ngsi-ld:Junction:63fe7d79-0d4c-4da9-b7d0-3340efa0656a",  
-  "status": "OPEN",  
-  "tag": "DMA1",  
-  "type": "Pipe",  
-  "wallCoeff": 72.4549  
+    "id": "urn:ngsi-ld:Pipe:74azsty-70d4l-4da9-b7d0-3340ef655nnb",  
+    "type": "Pipe",  
+    "bulkCoeff": 72.4549,  
+    "createdAt": "2020-02-20T15:42:00Z",  
+    "description": "Free Text",  
+    "diameter": 203.0,  
+    "endsAt": "urn:ngsi-ld:Reservoir:1863179e-3768-4480-9167-ff21f870dd19",  
+    "initialStatus": "OPEN",  
+    "length": 52.9,  
+    "minorLoss": 72.4549,  
+    "modifiedAt": "2020-02-20T15:45:00Z",  
+    "roughness": 72.4549,  
+    "startsAt": "urn:ngsi-ld:Junction:63fe7d79-0d4c-4da9-b7d0-3340efa0656a",  
+    "status": "OPEN",  
+    "tag": "DMA1",  
+    "wallCoeff": 72.4549,  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/context.jsonld"  
+    ]  
 }  
 ```  
-#### Rohr NGSI-LD normalisiert Beispiel  
-Hier ist ein Beispiel für eine Pipe im JSON-LD-Format wie normalisiert. Dies ist kompatibel mit NGSI-LD, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+#### Rohrleitung NGSI-LD normalisiert Beispiel  
+Hier ist ein Beispiel für eine Pipe im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-LD, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
-  "id": "urn:ngsi-ld:Pipe:74azsty-70d4l-4da9-b7d0-3340ef655nnb",  
-  "type": "Pipe",  
-  "initialStatus": {  
-    "type": "Property",  
-    "value": "OPEN"  
-  },  
-  "status": {  
-    "type": "Property",  
-    "value": "OPEN"  
-  },  
-  "length": {  
-    "type": "Property",  
-    "value": 52.90,  
-    "unitCode": "MTR"  
-  },  
-  "diameter": {  
-    "type": "Property",  
-    "value": 203.0,  
-    "unitCode": "MMT"  
-  },  
-  "roughness": {  
-    "type": "Property",  
-    "value": 72.4549,  
-    "unitCode": "C62"  
-  },  
-  "minorLoss": {  
-    "type": "Property",  
-    "value": 72.4549,  
-    "unitCode": "C62"  
-  },  
-  "tag": {  
-    "type": "Property",  
-    "value": "DMA1"  
-  },  
-  "description": {  
-    "type": "Property",  
-    "value": "Free Text"  
-  },  
-  "startsAt": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:Junction:63fe7d79-0d4c-4da9-b7d0-3340efa0656a"  
-  },  
-  "endsAt": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:Reservoir:1863179e-3768-4480-9167-ff21f870dd19"  
-  },  
-  "vertices": {  
-    "type": "GeoProperty",  
-    "value": {  
-      "type": "MultiPoint",  
-      "coordinates": [  
-        [  
-          24.40623,  
-          60.17966  
-        ],  
-        [  
-          24.50623,  
-          60.27966  
-        ]  
-      ]  
-    }  
-  },  
-  "bulkCoeff": {  
-    "type": "Property",  
-    "value": 72.4549,  
-    "unitCode": "E91"  
-  },  
-  "wallCoeff": {  
-    "type": "Property",  
-    "value": 72.4549,  
-    "unitCode": "RRC"  
-  },  
-  "flow": {  
-    "type": "Property",  
-    "value": {  
-      "type": "Property",  
-      "value": 20,  
-      "unitCode": "G51"  
+    "id": "urn:ngsi-ld:Pipe:74azsty-70d4l-4da9-b7d0-3340ef655nnb",  
+    "type": "Pipe",  
+    "bulkCoeff": {  
+        "type": "Property",  
+        "value": 72.4549,  
+        "unitCode": "E91"  
     },  
-    "observedBy": {  
-      "type": "Relationship",  
-      "object": "urn:ngsi-ld:Device:device-9845A"  
-    }  
-  },  
-  "velocity": {  
-    "type": "Property",  
-    "value": {  
-      "type": "Property",  
-      "value": 2,  
-      "unitCode": "MTS"  
+    "description": {  
+        "type": "Property",  
+        "value": "Free Text"  
     },  
-    "observedBy": {  
-      "type": "Relationship",  
-      "object": "urn:ngsi-ld:Device:device-9845A"  
-    }  
-  },  
-  "quality": {  
-    "type": "Property",  
-    "value": {  
-      "type": "Property",  
-      "value": 0.5,  
-      "unitCode": "F27"  
+    "diameter": {  
+        "type": "Property",  
+        "value": 203.0,  
+        "unitCode": "MMT"  
     },  
-    "observedBy": {  
-      "type": "Relationship",  
-      "object": "urn:ngsi-ld:Device:device-9845A"  
-    }  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld"  
-  ]  
+    "endsAt": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:Reservoir:1863179e-3768-4480-9167-ff21f870dd19"  
+    },  
+    "flow": {  
+        "type": "Property",  
+        "value": {  
+            "type": "Property",  
+            "value": 20,  
+            "unitCode": "G51"  
+        },  
+        "observedBy": {  
+            "type": "Relationship",  
+            "object": "urn:ngsi-ld:Device:device-9845A"  
+        }  
+    },  
+    "initialStatus": {  
+        "type": "Property",  
+        "value": "OPEN"  
+    },  
+    "length": {  
+        "type": "Property",  
+        "value": 52.9,  
+        "unitCode": "MTR"  
+    },  
+    "minorLoss": {  
+        "type": "Property",  
+        "value": 72.4549,  
+        "unitCode": "C62"  
+    },  
+    "quality": {  
+        "type": "Property",  
+        "value": {  
+            "type": "Property",  
+            "value": 0.5,  
+            "unitCode": "F27"  
+        },  
+        "observedBy": {  
+            "type": "Relationship",  
+            "object": "urn:ngsi-ld:Device:device-9845A"  
+        }  
+    },  
+    "roughness": {  
+        "type": "Property",  
+        "value": 72.4549,  
+        "unitCode": "C62"  
+    },  
+    "startsAt": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:Junction:63fe7d79-0d4c-4da9-b7d0-3340efa0656a"  
+    },  
+    "status": {  
+        "type": "Property",  
+        "value": "OPEN"  
+    },  
+    "tag": {  
+        "type": "Property",  
+        "value": "DMA1"  
+    },  
+    "velocity": {  
+        "type": "Property",  
+        "value": {  
+            "type": "Property",  
+            "value": 2,  
+            "unitCode": "MTS"  
+        },  
+        "observedBy": {  
+            "type": "Relationship",  
+            "object": "urn:ngsi-ld:Device:device-9845A"  
+        }  
+    },  
+    "vertices": {  
+        "type": "GeoProperty",  
+        "value": {  
+            "type": "MultiPoint",  
+            "coordinates": [  
+                [  
+                    24.40623,  
+                    60.17966  
+                ],  
+                [  
+                    24.50623,  
+                    60.27966  
+                ]  
+            ]  
+        }  
+    },  
+    "wallCoeff": {  
+        "type": "Property",  
+        "value": 72.4549,  
+        "unitCode": "RRC"  
+    },  
+    "@context": []  
 }  
 ```  
-
-Siehe [FAQ 10](https://smartdatamodels.org/index.php/faqs/), um eine Antwort auf die Frage zu erhalten, wie man mit Größeneinheiten umgeht
+Siehe [FAQ 10] (https://smartdatamodels.org/index.php/faqs/), um eine Antwort auf die Frage zu erhalten, wie man mit Größeneinheiten umgeht  
