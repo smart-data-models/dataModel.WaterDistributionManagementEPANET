@@ -1,12 +1,14 @@
-Entity: Valve  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entity: Valve  
 =============  
 [Open License](https://github.com/smart-data-models//dataModel.WaterDistributionManagementEPANET/blob/master/Valve/LICENSE.md)  
 [document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Global description: **This entity contains a harmonised description of a generic Valve made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.**  
+version: 0.1.0  
 
 ## List of properties  
 
-- `address`: The mailing address  - `alternateName`: An alternative name for this item  - `areaServed`: The geographic area where a service or offered item is provided  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `diameter`: The valve diameter. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.  - `endsAt`: The ID of the node on the nominal downstream or discharge side of the valve  - `flow`: Rate of flow from `startsAt` node to `endsAt` node, measured by a device at the link (pipe, valve or pump)  - `id`: Unique identifier of the entity  - `initialStatus`: The link status at the start of the simulation. Enum:'OPEN, CLOSED, CV'  - `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `minorLoss`: Unitless minor loss coefficient that applies when the valve is completely opened. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.  - `name`: The name of this item.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `quality`: Observed quality in the network component  - `seeAlso`: list of uri pointing to additional resources about the item  - `setting`: A parameter that describes the valve's operational setting. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `startsAt`: The ID of the node on the nominal upstream or inflow side of the valve  - `status`: The dynamic state of the node. Enum:'OPEN, CLOSED, CV'  - `tag`: An optional text string used to assign the pipe to a category, perhaps one based on age or material  - `type`: NGSI-LD Entity Type. It must be equal to Valve.  - `valveCurve`: A relationship to the curve of the setting property. Only required when valveType is GPV  - `valveType`: The valve type of the element. enum:'FCV, GPV, PBV, PRV, PSV, TCV'  - `velocity`: Observed velocity in the link (pipe, valve or pump)  - `vertices`: Coordinates of all vertices in the valve, ordered from the startsAt node to the endsAt node and encoded as a GeoJSON     
+- `address`: The mailing address  - `alternateName`: An alternative name for this item  - `areaServed`: The geographic area where a service or offered item is provided  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `diameter`: The valve diameter. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.  - `endsAt`: The ID of the node on the nominal downstream or discharge side of the valve  - `flow`: Rate of flow from `startsAt` node to `endsAt` node, measured by a device at the link (pipe, valve or pump)  - `id`: Unique identifier of the entity  - `initialStatus`: The link status at the start of the simulation. Enum:'OPEN, CLOSED, CV'  - `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `minorLoss`: Unitless minor loss coefficient that applies when the valve is completely opened. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.  - `name`: The name of this item.  - `openStatus`: Status of a valve as a numeric percentage value representing how open or close the valve is. 0% - completely closed, 100% - fully open.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `quality`: Observed quality in the network component  - `seeAlso`: list of uri pointing to additional resources about the item  - `setting`: A parameter that describes the valve's operational setting. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `startsAt`: The ID of the node on the nominal upstream or inflow side of the valve  - `status`: The dynamic state of the node. Enum:'OPEN, CLOSED, CV'  - `tag`: An optional text string used to assign the pipe to a category, perhaps one based on age or material  - `type`: NGSI-LD Entity Type. It must be equal to Valve.  - `valveCurve`: A relationship to the curve of the setting property. Only required when valveType is GPV  - `valveType`: The valve type of the element. enum:'FCV, GPV, PBV, PRV, PSV, TCV'  - `velocity`: Observed velocity in the link (pipe, valve or pump)  - `vertices`: Coordinates of all vertices in the valve, ordered from the startsAt node to the endsAt node and encoded as a GeoJSON     
 Required properties  
 - `endsAt`  - `id`  - `startsAt`  - `type`  ## Data Model description of properties  
 Sorted alphabetically (click for details)  
@@ -292,6 +294,15 @@ Valve:
       type: string    
       x-ngsi:    
         type: Property    
+    openStatus:    
+      description: 'Status of a valve as a numeric percentage value representing how open or close the valve is. 0% - completely closed, 100% - fully open.'    
+      maximum: 1    
+      minimum: 0    
+      type: number    
+      x-ngsi:    
+        model: ' https://schema.org/Number'    
+        type: Property    
+        units: ' %'    
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
@@ -458,6 +469,12 @@ Valve:
     - startsAt    
     - endsAt    
   type: object    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/blob/master/Valve/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/dataModels/WaterNetworkManagementEPANET/Valve/schema.json    
+  x-model-tags: FIWARE4WATER    
+  x-version: 0.1.0    
 ```  
 </details>    
 ## Example payloads    
@@ -553,95 +570,91 @@ Valve:
 Here is an example of a Valve in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld"  
-  ],  
-  "id": "87fe7d79-0d4c-4da9-b7d0-3340efa0656awytsd",  
-  "type": "Valve",  
-  "initialStatus": "OPEN",  
-  "status": "OPEN",  
-  "openStatus": 0.3,  
-  "diameter": 203.2,  
-  "valveType": "PRV",  
-  "setting": 40.0,  
-  "minorLoss": 0.0,  
-  "tag": "DMA1",  
-  "startsAt": "uri:63fe7d79.0d4c-4da9-b7d0-3340efa0656a",  
-  "endsAt": "uri:1863179e-3768-4480-9167-ff21f870dd19",  
-  "initialStatus": "OPEN"  
+    "id": "87fe7d79-0d4c-4da9-b7d0-3340efa0656awytsd",  
+    "type": "Valve",  
+    "diameter": 203.2,  
+    "endsAt": "uri:1863179e-3768-4480-9167-ff21f870dd19",  
+    "initialStatus": "OPEN",  
+    "minorLoss": 0.0,  
+    "openStatus": 0.3,  
+    "setting": 40.0,  
+    "startsAt": "uri:63fe7d79.0d4c-4da9-b7d0-3340efa0656a",  
+    "status": "OPEN",  
+    "tag": "DMA1",  
+    "valveType": "PRV",  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/context.jsonld"  
+    ]  
 }  
 ```  
 #### Valve NGSI-LD normalized Example    
 Here is an example of a Valve in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
 ```json  
 {  
-  "id": "urn:ngsi-ld:Valve:87fe7d79-0d4c-4da9-b7d0-3340efa0656awytsd",  
-  "type": "Valve",  
-  "createdAt": "2020-03-02T15:42:00Z",  
-  "modifiedAt": "2020-03-02T15:45:00Z",  
-  "initiaStatus": {  
-    "type": "Property",  
-    "value": "OPEN"  
-  },  
-  "status": {  
-    "type": "Property",  
-    "value": "OPEN"  
-  },  
-  "openStatus": {  
-    "type": "Property",  
-    "value": 0.3  
-  },  
-  "diameter": {  
-    "type": "Property",  
-    "value": 203.2,  
-    "unitCode": "MMT"  
-  },  
-  "valveType": {  
-    "type": "Property",  
-    "value": "PRV"  
-  },  
-  "setting": {  
-    "type": "Property",  
-    "value": 40.0,  
-    "unitCode": "C62"  
-  },  
-  "minorLoss": {  
-    "type": "Property",  
-    "value": 0.0,  
-    "unitCode": "C62"  
-  },  
-  "tag": {  
-    "type": "Property",  
-    "value": "DMA1"  
-  },  
-  "startsAt": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:Junction:63fe7d79-0d4c-4da9-b7d0-3340efa0656a"  
-  },  
-  "endsAt": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:Reservoir:1863179e-3768-4480-9167-ff21f870dd19"  
-  },  
-  "vertices": {  
-    "type": "GeoProperty",  
-    "value": {  
-      "type": "MultiPoint",  
-      "coordinates": [  
-        [  
-          24.40623,  
-          60.17966  
-        ],  
-        [  
-          24.50623,  
-          60.27966  
-        ]  
-      ]  
-    }  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld"  
-  ]  
+    "id": "urn:ngsi-ld:Valve:87fe7d79-0d4c-4da9-b7d0-3340efa0656awytsd",  
+    "type": "Valve",  
+    "createdAt": "2020-03-02T15:42:00Z",  
+    "diameter": {  
+        "type": "Property",  
+        "value": 203.2,  
+        "unitCode": "MMT"  
+    },  
+    "endsAt": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:Reservoir:1863179e-3768-4480-9167-ff21f870dd19"  
+    },  
+    "initiaStatus": {  
+        "type": "Property",  
+        "value": "OPEN"  
+    },  
+    "minorLoss": {  
+        "type": "Property",  
+        "value": 0.0,  
+        "unitCode": "C62"  
+    },  
+    "modifiedAt": "2020-03-02T15:45:00Z",  
+    "openStatus": {  
+        "type": "Property",  
+        "value": 0.3  
+    },  
+    "setting": {  
+        "type": "Property",  
+        "value": 40.0,  
+        "unitCode": "C62"  
+    },  
+    "startsAt": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:Junction:63fe7d79-0d4c-4da9-b7d0-3340efa0656a"  
+    },  
+    "status": {  
+        "type": "Property",  
+        "value": "OPEN"  
+    },  
+    "tag": {  
+        "type": "Property",  
+        "value": "DMA1"  
+    },  
+    "valveType": {  
+        "type": "Property",  
+        "value": "PRV"  
+    },  
+    "vertices": {  
+        "type": "GeoProperty",  
+        "value": {  
+            "type": "MultiPoint",  
+            "coordinates": [  
+                [  
+                    24.40623,  
+                    60.17966  
+                ],  
+                [  
+                    24.50623,  
+                    60.27966  
+                ]  
+            ]  
+        }  
+    },  
+    "@context": []  
 }  
 ```  
-
-See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units
+See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units  
