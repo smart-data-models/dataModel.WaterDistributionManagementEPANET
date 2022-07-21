@@ -1,5 +1,5 @@
-Network:
-  description: 'This entity contains a harmonised description of a generic network made for the Water WaterNetwork Management domain. This entity is primarily associated with the water network management vertical and related IoT applications.'
+WaterNetwork:
+  description: 'This entity contains a harmonised description of a generic network made for the Water Network Management domain. This entity is primarily associated with the water network management vertical and related IoT applications.'
   properties:
     address:
       description: 'The mailing address'
@@ -60,7 +60,7 @@ Network:
       x-ngsi:
         type: Property
     hasSubNetwork:
-      description: 'Reference to an entity of type `WaterNetwork`'
+      description: 'Reference to an entity of type `Network`'
       items:
         anyOf:
           - maxLength: 256
@@ -74,7 +74,7 @@ Network:
         model: https://schema.org/Text
         type: Relationship
     id:
-      anyOf: &network_-_properties_-_owner_-_items_-_anyof
+      anyOf: &waternetwork_-_properties_-_owner_-_items_-_anyof
         - description: 'Property. Identifier format of any NGSI entity'
           maxLength: 256
           minLength: 1
@@ -260,7 +260,7 @@ Network:
     owner:
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'
       items:
-        anyOf: *network_-_properties_-_owner_-_items_-_anyof
+        anyOf: *waternetwork_-_properties_-_owner_-_items_-_anyof
         description: 'Property. Unique identifier of the entity'
       type: array
       x-ngsi:
@@ -283,7 +283,7 @@ Network:
       x-ngsi:
         type: Property
     type:
-      description: 'NGSI-LD Entity Type. It has to be WaterNetwork'
+      description: 'NGSI-LD Entity Type. It has to be WaterNetwork. Enum:''WaterNetwork'''
       enum:
         - WaterNetwork
       type: string
@@ -296,6 +296,6 @@ Network:
   x-derived-from: ""
   x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'
   x-license-url: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/blob/master/WaterNetwork/LICENSE.md
-  x-model-schema: https://smart-data-models.github.io/dataModel.WaterDistributionManagementEPANET/WaterNetwork/schema.json
-  x-model-tags: ""
+  x-model-schema: https://smart-data-models.github.io/dataModel.WaterDistributionManagementEPANET/Network/schema.json
+  x-model-tags: FIWARE4WATER
   x-version: 0.0.1
