@@ -1,15 +1,17 @@
-エンティティバルブ  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+エンティティバルブ  
 =========  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.WaterDistributionManagementEPANET/blob/master/Valve/LICENSE.md)  
-[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-グローバルな記述。**このエンティティには、Water Network Managementドメインのために作られた汎用バルブの調和された記述が含まれています。このエンティティは、主に水管理の垂直方向と関連するIoTアプリケーションに関連付けられています。  
+[ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+グローバルな記述。**このエンティティは、水ネットワーク管理領域用に作られた汎用バルブの調和された記述を含んでいる。このエンティティは、主に水管理の垂直方向と関連する IoT アプリケーションに関連している。  
+バージョン: 0.1.0  
 
-## プロパティのリスト  
+## プロパティ一覧  
 
-- `address`: 郵送先住所  - `alternateName`: このアイテムの別称  - `areaServed`: サービスや提供されるアイテムが提供される地理的なエリア  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `description`: このアイテムの説明  - `diameter`: バルブの直径です。単位はすべて[CEFACT](https://www.unece.org/cefact.html)コードで受け付けます。  - `endsAt`: バルブの公称下流側または吐出側のノードのID  - `flow`: リンク先のデバイス（パイプ、バルブ、ポンプ）によって測定された、`startsAt`ノードから`endsAt`ノードへの流れの速度  - `id`: エンティティのユニークな識別子  - `initialStatus`: シミュレーション開始時のリンクの状態。Enum:'OPEN, CLOSED, CV'  - `location`: アイテムへのGeojson参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygonのいずれかです。  - `minorLoss`: バルブが完全に開いたときに適用される単位のないマイナーロス係数。すべての単位は[CEFACT](https://www.unece.org/cefact.html)コードで受け付ける。  - `name`: このアイテムの名前です。  - `openStatus`: バルブの状態を、バルブの開閉状態を表す数値（％）で表したもの。0% - 完全に閉じた状態、100% - 完全に開いた状態。  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `quality`: ネットワークコンポーネントの品質を確認  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `setting`: バルブの動作設定を表すパラメータです。単位はすべて[CEFACT](https://www.unece.org/cefact.html)のコードで受け付けます。  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `startsAt`: バルブの公称上流側または流入側のノードのID  - `status`: ノードの動的な状態。列挙:'OPEN, CLOSED, CV'  - `tag`: パイプをカテゴリー別に分類するための任意のテキスト文字列です。  - `type`: NGSI-LD エンティティタイプ。Valve」と同じでなければなりません。  - `valveCurve`: 設定プロパティのカーブとの関係。valveTypeがGPVの場合のみ必要  - `valveType`: 要素のバルブタイプ enum:'FCV, GPV, PBV, PRV, PSV, TCV'  - `velocity`: リンク（パイプ、バルブ、ポンプ）で観測された速度  - `vertices`: バルブ内のすべての頂点の座標を、startsAtノードからendsAtノードまで順番に並べ、GeoJSONとしてエンコードしたもの。    
-必須項目  
-- `endsAt`  - `id`  - `startsAt`  - `type`  ## データモデルによるプロパティの記述  
-アルファベット順（クリックすると詳細が表示されます）  
+- `address`: 郵送先住所  - `alternateName`: この項目の別称  - `areaServed`: サービスまたは提供品が提供される地理的な地域  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description`: このアイテムの説明  - `diameter`: バルブの直径。単位はすべて[CEFACT](https://www.unece.org/cefact.html)コードで受け付けます。  - `endsAt`: バルブの公称下流側または吐出側のノードのID  - `flow`: リンク先の装置（パイプ、バルブ、ポンプ）で測定された、`startAt`ノードから`endsAt`ノードへの流速  - `id`: エンティティの一意な識別子  - `initialStatus`: シミュレーション開始時のリンク状態。Enum:'OPEN, CLOSED, CV' です。  - `location`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `minorLoss`: バルブが完全に開いているときに適用される単位なしの微少損失係数。単位はすべて[CEFACT](https://www.unece.org/cefact.html)コードで受け付けます。  - `name`: このアイテムの名称です。  - `openStatus`: バルブの状態を、バルブの開閉状態を表す数値のパーセンテージで表示します。0%：完全に閉じた状態、100%：完全に開いた状態。  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `quality`: ネットワークコンポーネントで観測された品質  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `setting`: バルブの動作設定を記述するパラメータ。単位はすべて[CEFACT](https://www.unece.org/cefact.html)コードで受け付けます。  - `source`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `startsAt`: バルブの名目上流側または流入側のノードのID  - `status`: ノードの動的状態。Enum:'OPEN, CLOSED, CV'.  - `tag`: パイプをカテゴリに割り当てるためのオプションのテキスト文字列、おそらく年齢や素材に基づいたもの  - `type`: NGSI-LD エンティティタイプ。Valve と等しくなければならない。  - `valveCurve`: 設定プロパティのカーブとの関係。valveTypeがGPVのときのみ必要  - `valveType`: 要素のバルブタイプ enum:'FCV, GPV, PBV, PRV, PSV, TCV'  - `velocity`: リンク（パイプ、バルブ、ポンプ）内の観測された流速  - `vertices`: バルブのすべての頂点の座標。startsAtノードからendsAtノードまで順番に並び、GeoJSONとしてエンコードされる    
+必要なプロパティ  
+- `endsAt`  - `id`  - `startsAt`  - `type`  ## プロパティのデータモデル記述  
+アルファベット順に並びます（クリックで詳細へ）  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 Valve:    
@@ -471,13 +473,13 @@ Valve:
   x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/blob/master/Valve/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModels/WaterNetworkManagementEPANET/Valve/schema.json    
-  x-model-tags: ""    
+  x-model-tags: FIWARE4WATER    
   x-version: 0.1.0    
 ```  
 </details>    
 ## ペイロードの例  
-#### バルブ NGSI-v2 のキーバリューの例  
-ここでは、JSON-LD形式のValveをkey-valuesにした例を紹介します。これは、`options=keyValues`を使用した場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### Valve NGSI-v2キーバリューの例  
+以下は、ValveをJSON-LD形式でkey-valuesにした例である。これは `options=keyValues` を使用した場合に NGSI-v2 と互換性があり、個々のエンティティのコンテキストデータが返される。  
 ```json  
 {  
     "id": "87fe7d79-0d4c-4da9-b7d0-3340efa0656awytsd",  
@@ -496,7 +498,7 @@ Valve:
 }  
 ```  
 #### バルブ NGSI-v2 正規化例  
-ここでは、正規化されたJSON-LD形式のValveの例を示します。これは、オプションを使用しない場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+以下は、Valve を JSON-LD 形式で正規化した例である。これは、オプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
     "id": "87fe7d79-0d4c-4da9-b7d0-3340efa0656awytsd",  
@@ -564,99 +566,95 @@ Valve:
     }  
 }  
 ```  
-#### バルブ NGSI-LD のキーバリューの例  
-ここでは、JSON-LD形式でkey-valuesとしてValveを作成した例を紹介します。これは、`options=keyValues`を使用した場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### バルブ NGSI-LD キー値例  
+以下は、ValveをJSON-LD形式でkey-valuesとした例である。これは `options=keyValues` を使用した場合に NGSI-LD と互換性があり、個々のエンティティのコンテキストデータが返される。  
 ```json  
 {  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld"  
-  ],  
-  "id": "87fe7d79-0d4c-4da9-b7d0-3340efa0656awytsd",  
-  "type": "Valve",  
-  "initialStatus": "OPEN",  
-  "status": "OPEN",  
-  "openStatus": 0.3,  
-  "diameter": 203.2,  
-  "valveType": "PRV",  
-  "setting": 40.0,  
-  "minorLoss": 0.0,  
-  "tag": "DMA1",  
-  "startsAt": "uri:63fe7d79.0d4c-4da9-b7d0-3340efa0656a",  
-  "endsAt": "uri:1863179e-3768-4480-9167-ff21f870dd19",  
-  "initialStatus": "OPEN"  
+    "id": "87fe7d79-0d4c-4da9-b7d0-3340efa0656awytsd",  
+    "type": "Valve",  
+    "diameter": 203.2,  
+    "endsAt": "uri:1863179e-3768-4480-9167-ff21f870dd19",  
+    "initialStatus": "OPEN",  
+    "minorLoss": 0.0,  
+    "openStatus": 0.3,  
+    "setting": 40.0,  
+    "startsAt": "uri:63fe7d79.0d4c-4da9-b7d0-3340efa0656a",  
+    "status": "OPEN",  
+    "tag": "DMA1",  
+    "valveType": "PRV",  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/context.jsonld"  
+    ]  
 }  
 ```  
 #### バルブ NGSI-LD 正規化例  
-ここでは、正規化されたJSON-LD形式のValveの例を示します。これは、オプションを使用しない場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+以下は、Valve を JSON-LD 形式で正規化した例である。これはオプションを使用しない場合のNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
-  "id": "urn:ngsi-ld:Valve:87fe7d79-0d4c-4da9-b7d0-3340efa0656awytsd",  
-  "type": "Valve",  
-  "createdAt": "2020-03-02T15:42:00Z",  
-  "modifiedAt": "2020-03-02T15:45:00Z",  
-  "initiaStatus": {  
-    "type": "Property",  
-    "value": "OPEN"  
-  },  
-  "status": {  
-    "type": "Property",  
-    "value": "OPEN"  
-  },  
-  "openStatus": {  
-    "type": "Property",  
-    "value": 0.3  
-  },  
-  "diameter": {  
-    "type": "Property",  
-    "value": 203.2,  
-    "unitCode": "MMT"  
-  },  
-  "valveType": {  
-    "type": "Property",  
-    "value": "PRV"  
-  },  
-  "setting": {  
-    "type": "Property",  
-    "value": 40.0,  
-    "unitCode": "C62"  
-  },  
-  "minorLoss": {  
-    "type": "Property",  
-    "value": 0.0,  
-    "unitCode": "C62"  
-  },  
-  "tag": {  
-    "type": "Property",  
-    "value": "DMA1"  
-  },  
-  "startsAt": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:Junction:63fe7d79-0d4c-4da9-b7d0-3340efa0656a"  
-  },  
-  "endsAt": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:Reservoir:1863179e-3768-4480-9167-ff21f870dd19"  
-  },  
-  "vertices": {  
-    "type": "GeoProperty",  
-    "value": {  
-      "type": "MultiPoint",  
-      "coordinates": [  
-        [  
-          24.40623,  
-          60.17966  
-        ],  
-        [  
-          24.50623,  
-          60.27966  
-        ]  
-      ]  
-    }  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld"  
-  ]  
+    "id": "urn:ngsi-ld:Valve:87fe7d79-0d4c-4da9-b7d0-3340efa0656awytsd",  
+    "type": "Valve",  
+    "createdAt": "2020-03-02T15:42:00Z",  
+    "diameter": {  
+        "type": "Property",  
+        "value": 203.2,  
+        "unitCode": "MMT"  
+    },  
+    "endsAt": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:Reservoir:1863179e-3768-4480-9167-ff21f870dd19"  
+    },  
+    "initiaStatus": {  
+        "type": "Property",  
+        "value": "OPEN"  
+    },  
+    "minorLoss": {  
+        "type": "Property",  
+        "value": 0.0,  
+        "unitCode": "C62"  
+    },  
+    "modifiedAt": "2020-03-02T15:45:00Z",  
+    "openStatus": {  
+        "type": "Property",  
+        "value": 0.3  
+    },  
+    "setting": {  
+        "type": "Property",  
+        "value": 40.0,  
+        "unitCode": "C62"  
+    },  
+    "startsAt": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:Junction:63fe7d79-0d4c-4da9-b7d0-3340efa0656a"  
+    },  
+    "status": {  
+        "type": "Property",  
+        "value": "OPEN"  
+    },  
+    "tag": {  
+        "type": "Property",  
+        "value": "DMA1"  
+    },  
+    "valveType": {  
+        "type": "Property",  
+        "value": "PRV"  
+    },  
+    "vertices": {  
+        "type": "GeoProperty",  
+        "value": {  
+            "type": "MultiPoint",  
+            "coordinates": [  
+                [  
+                    24.40623,  
+                    60.17966  
+                ],  
+                [  
+                    24.50623,  
+                    60.27966  
+                ]  
+            ]  
+        }  
+    },  
+    "@context": []  
 }  
 ```  
-
-マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。
+マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
