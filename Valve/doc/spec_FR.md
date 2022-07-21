@@ -1,12 +1,14 @@
-Entité : Valve  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entité : Valve  
 ==============  
 [Licence ouverte] (https://github.com/smart-data-models//dataModel.WaterDistributionManagementEPANET/blob/master/Valve/LICENSE.md)  
 [document généré automatiquement] (https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Description globale : **Cette entité contient une description harmonisée d'une vanne générique réalisée pour le domaine de la gestion des réseaux d'eau. Cette entité est principalement associée à la gestion verticale de l'eau et aux applications IoT connexes**.  
+version : 0.1.0  
 
 ## Liste des propriétés  
 
-- `address`: L'adresse postale  - `alternateName`: Un nom alternatif pour cet élément  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `description`: Une description de cet article  - `diameter`: Le diamètre de la valve. Toutes les unités sont acceptées en code [CEFACT](https://www.unece.org/cefact.html).  - `endsAt`: L'ID du nœud sur le côté nominal aval ou de décharge de la vanne.  - `flow`: Taux d'écoulement du nœud `startsAt` au nœud `endsAt`, mesuré par un dispositif au niveau du lien (tuyau, vanne ou pompe).  - `id`: Identifiant unique de l'entité  - `initialStatus`: L'état de la liaison au début de la simulation. Enum : 'OUVERT, FERMÉ, CV'.  - `location`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une ligne, d'un polygone, d'un point multiple, d'une ligne multiple ou d'un polygone multiple.  - `minorLoss`: Coefficient de perte mineure sans unité qui s'applique lorsque la vanne est complètement ouverte. Toutes les unités sont acceptées en code [CEFACT](https://www.unece.org/cefact.html).  - `name`: Le nom de cet élément.  - `owner`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `quality`: Qualité observée dans la composante réseau  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'élément  - `setting`: Un paramètre qui décrit le réglage opérationnel de la vanne. Toutes les unités sont acceptées en code [CEFACT](https://www.unece.org/cefact.html).  - `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `startsAt`: L'ID du nœud sur le côté amont ou amont nominal de la vanne.  - `status`: L'état dynamique du noeud. Enum : 'OUVERT, FERME, CV  - `tag`: Une chaîne de texte facultative utilisée pour affecter le tuyau à une catégorie, peut-être basée sur l'âge ou le matériau.  - `type`: Type d'entité NGSI-LD. Il doit être égal à Valve.  - `valveCurve`: Une relation avec la courbe de la propriété de réglage. Uniquement requis lorsque ValveType est GPV  - `valveType`: Le type de vanne de l'élément. enum : "FCV, GPV, PBV, PRV, PSV, TCV".  - `velocity`: Vitesse observée dans la liaison (tuyau, vanne ou pompe)  - `vertices`: Coordonnées de tous les sommets de la valve, ordonnées du nœud startsAt au nœud endsAt et encodées sous forme de GeoJSON.    
+- `address`: L'adresse postale  - `alternateName`: Un nom alternatif pour cet élément  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `description`: Une description de cet article  - `diameter`: Le diamètre de la valve. Toutes les unités sont acceptées en code [CEFACT](https://www.unece.org/cefact.html).  - `endsAt`: L'ID du nœud sur le côté nominal aval ou de décharge de la vanne.  - `flow`: Taux d'écoulement du nœud `startsAt` au nœud `endsAt`, mesuré par un dispositif au niveau du lien (tuyau, vanne ou pompe).  - `id`: Identifiant unique de l'entité  - `initialStatus`: L'état de la liaison au début de la simulation. Enum : 'OUVERT, FERMÉ, CV'.  - `location`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une ligne, d'un polygone, d'un point multiple, d'une ligne multiple ou d'un polygone multiple.  - `minorLoss`: Coefficient de perte mineure sans unité qui s'applique lorsque la vanne est complètement ouverte. Toutes les unités sont acceptées en code [CEFACT](https://www.unece.org/cefact.html).  - `name`: Le nom de cet élément.  - `openStatus`: État d'une vanne sous la forme d'une valeur numérique en pourcentage représentant le degré d'ouverture ou de fermeture de la vanne. 0% - complètement fermé, 100% - complètement ouvert.  - `owner`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `quality`: Qualité observée dans la composante réseau  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'article  - `setting`: Un paramètre qui décrit le réglage opérationnel de la vanne. Toutes les unités sont acceptées en code [CEFACT](https://www.unece.org/cefact.html).  - `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `startsAt`: L'ID du nœud sur le côté amont ou amont nominal de la vanne.  - `status`: L'état dynamique du noeud. Enum : 'OUVERT, FERME, CV  - `tag`: Une chaîne de texte facultative utilisée pour affecter le tuyau à une catégorie, peut-être basée sur l'âge ou le matériau.  - `type`: Type d'entité NGSI-LD. Il doit être égal à Valve.  - `valveCurve`: Une relation avec la courbe de la propriété de réglage. Uniquement requis lorsque ValveType est GPV  - `valveType`: Le type de vanne de l'élément. enum : "FCV, GPV, PBV, PRV, PSV, TCV".  - `velocity`: Vitesse observée dans la liaison (tuyau, vanne ou pompe)  - `vertices`: Coordonnées de tous les sommets de la valve, ordonnées du nœud startsAt au nœud endsAt et encodées sous forme de GeoJSON.    
 Propriétés requises  
 - `endsAt`  - `id`  - `startsAt`  - `type`  ## Description des propriétés du modèle de données  
 Classés par ordre alphabétique (cliquez pour plus de détails)  
@@ -36,41 +38,56 @@ Valve:
         streetAddress:    
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
           type: string    
-      type: Property    
+      type: object    
       x-ngsi:    
         model: https://schema.org/address    
+        type: Property    
     alternateName:    
       description: 'An alternative name for this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     areaServed:    
       description: 'The geographic area where a service or offered item is provided'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateCreated:    
       description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateModified:    
       description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     description:    
       description: 'A description of this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     diameter:    
       description: 'The valve diameter. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'    
-      type: Property    
+      type: number    
       x-ngsi:    
         model: ' https://schema.org/Number'    
+        type: Property    
         units: millimetre    
     endsAt:    
       description: 'The ID of the node on the nominal downstream or discharge side of the valve'    
       format: uri    
-      type: Relationship    
+      type: string    
+      x-ngsi:    
+        type: Relationship    
     flow:    
       description: 'Rate of flow from `startsAt` node to `endsAt` node, measured by a device at the link (pipe, valve or pump)'    
       properties:    
@@ -86,7 +103,9 @@ Valve:
               type: string    
         value:    
           type: number    
-      type: Property    
+      type: object    
+      x-ngsi:    
+        type: Property    
     id:    
       anyOf: &valve_-_properties_-_owner_-_items_-_anyof    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -98,16 +117,18 @@ Valve:
           format: uri    
           type: string    
       description: 'Unique identifier of the entity'    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     initialStatus:    
       description: 'The link status at the start of the simulation. Enum:''OPEN, CLOSED, CV'''    
       enum:    
         - OPEN    
         - CLOSED    
         - CV    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
@@ -259,22 +280,37 @@ Valve:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      type: Geoproperty    
+      x-ngsi:    
+        type: Geoproperty    
     minorLoss:    
       description: 'Unitless minor loss coefficient that applies when the valve is completely opened. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'    
-      type: Property    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Number    
+        type: Property    
         units: 'No unit'    
     name:    
       description: 'The name of this item.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
+    openStatus:    
+      description: 'Status of a valve as a numeric percentage value representing how open or close the valve is. 0% - completely closed, 100% - fully open.'    
+      maximum: 1    
+      minimum: 0    
+      type: number    
+      x-ngsi:    
+        model: ' https://schema.org/Number'    
+        type: Property    
+        units: ' %'    
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
         anyOf: *valve_-_properties_-_owner_-_items_-_anyof    
         description: 'Property. Unique identifier of the entity'    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     quality:    
       description: 'Observed quality in the network component'    
       properties:    
@@ -290,7 +326,9 @@ Valve:
               type: string    
         value:    
           type: number    
-      type: Property    
+      type: object    
+      x-ngsi:    
+        type: Property    
     seeAlso:    
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
@@ -301,43 +339,55 @@ Valve:
           type: array    
         - format: uri    
           type: string    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     setting:    
       description: 'A parameter that describes the valve''s operational setting. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'    
-      type: Property    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Number    
+        type: Property    
         units: 'No unit'    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     startsAt:    
       description: 'The ID of the node on the nominal upstream or inflow side of the valve'    
       format: uri    
-      type: Relationship    
+      type: string    
+      x-ngsi:    
+        type: Relationship    
     status:    
       description: 'The dynamic state of the node. Enum:''OPEN, CLOSED, CV'''    
       enum:    
         - OPEN    
         - CLOSED    
         - CV    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     tag:    
       description: 'An optional text string used to assign the pipe to a category, perhaps one based on age or material'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     type:    
       description: 'NGSI-LD Entity Type. It must be equal to Valve.'    
       enum:    
         - Valve    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     valveCurve:    
       description: 'A relationship to the curve of the setting property. Only required when valveType is GPV'    
       format: uri    
-      type: Relationship    
+      type: string    
+      x-ngsi:    
+        type: Relationship    
     valveType:    
       description: 'The valve type of the element. enum:''FCV, GPV, PBV, PRV, PSV, TCV'''    
       enum:    
@@ -347,9 +397,10 @@ Valve:
         - PRV    
         - PSV    
         - TCV    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     velocity:    
       description: 'Observed velocity in the link (pipe, valve or pump)'    
       properties:    
@@ -358,7 +409,9 @@ Valve:
           type: string    
         value:    
           type: number    
-      type: Property    
+      type: object    
+      x-ngsi:    
+        type: Property    
     vertices:    
       description: 'Coordinates of all vertices in the valve, ordered from the startsAt node to the endsAt node and encoded as a GeoJSON '    
       oneOf:    
@@ -408,13 +461,20 @@ Valve:
             - coordinates    
           title: 'GeoJSON Point'    
           type: object    
-      type: Geoproperty    
+      x-ngsi:    
+        type: Geoproperty    
   required:    
     - id    
     - type    
     - startsAt    
     - endsAt    
   type: object    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/blob/master/Valve/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/dataModels/WaterNetworkManagementEPANET/Valve/schema.json    
+  x-model-tags: FIWARE4WATER    
+  x-version: 0.1.0    
 ```  
 </details>    
 ## Exemples de charges utiles  
@@ -424,7 +484,8 @@ Valve:
 {  
     "id": "87fe7d79-0d4c-4da9-b7d0-3340efa0656awytsd",  
     "type": "Valve",  
-    "initiaStatus": "OPEN",  
+    "initialStatus": "OPEN",  
+    "openStatus": 0.3,  
     "status": "OPEN",  
     "diameter": 203.20,  
     "valveType": "PRV",  
@@ -449,6 +510,10 @@ Valve:
     "status": {  
         "type": "Text",  
         "value": "OPEN"  
+    },  
+    "openStatus": {  
+        "type": "Number",  
+        "value": 0.3  
     },  
     "diameter": {  
         "type": "Number",  
@@ -505,90 +570,91 @@ Valve:
 Voici un exemple d'une vanne au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-LD quand on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld"  
-  ],  
-  "id": "87fe7d79-0d4c-4da9-b7d0-3340efa0656awytsd",  
-  "type": "Valve",  
-  "initiaStatus": "OPEN",  
-  "status": "OPEN",  
-  "diameter": 203.2,  
-  "valveType": "PRV",  
-  "setting": 40.0,  
-  "minorLoss": 0.0,  
-  "tag": "DMA1",  
-  "startsAt": "uri:63fe7d79.0d4c-4da9-b7d0-3340efa0656a",  
-  "endsAt": "uri:1863179e-3768-4480-9167-ff21f870dd19",  
-  "initialStatus": "OPEN"  
+    "id": "87fe7d79-0d4c-4da9-b7d0-3340efa0656awytsd",  
+    "type": "Valve",  
+    "diameter": 203.2,  
+    "endsAt": "uri:1863179e-3768-4480-9167-ff21f870dd19",  
+    "initialStatus": "OPEN",  
+    "minorLoss": 0.0,  
+    "openStatus": 0.3,  
+    "setting": 40.0,  
+    "startsAt": "uri:63fe7d79.0d4c-4da9-b7d0-3340efa0656a",  
+    "status": "OPEN",  
+    "tag": "DMA1",  
+    "valveType": "PRV",  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/context.jsonld"  
+    ]  
 }  
 ```  
 #### Valve NGSI-LD normalisée Exemple  
 Voici un exemple de vanne au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
-  "id": "urn:ngsi-ld:Valve:87fe7d79-0d4c-4da9-b7d0-3340efa0656awytsd",  
-  "type": "Valve",  
-  "createdAt": "2020-03-02T15:42:00Z",  
-  "modifiedAt": "2020-03-02T15:45:00Z",  
-  "initiaStatus": {  
-    "type": "Property",  
-    "value": "OPEN"  
-  },  
-  "status": {  
-    "type": "Property",  
-    "value": "OPEN"  
-  },  
-  "diameter": {  
-    "type": "Property",  
-    "value": 203.2,  
-    "unitCode": "MMT"  
-  },  
-  "valveType": {  
-    "type": "Property",  
-    "value": "PRV"  
-  },  
-  "setting": {  
-    "type": "Property",  
-    "value": 40.0,  
-    "unitCode": "C62"  
-  },  
-  "minorLoss": {  
-    "type": "Property",  
-    "value": 0.0,  
-    "unitCode": "C62"  
-  },  
-  "tag": {  
-    "type": "Property",  
-    "value": "DMA1"  
-  },  
-  "startsAt": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:Junction:63fe7d79-0d4c-4da9-b7d0-3340efa0656a"  
-  },  
-  "endsAt": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:Reservoir:1863179e-3768-4480-9167-ff21f870dd19"  
-  },  
-  "vertices": {  
-    "type": "GeoProperty",  
-    "value": {  
-      "type": "MultiPoint",  
-      "coordinates": [  
-        [  
-          24.40623,  
-          60.17966  
-        ],  
-        [  
-          24.50623,  
-          60.27966  
-        ]  
-      ]  
-    }  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld"  
-  ]  
+    "id": "urn:ngsi-ld:Valve:87fe7d79-0d4c-4da9-b7d0-3340efa0656awytsd",  
+    "type": "Valve",  
+    "createdAt": "2020-03-02T15:42:00Z",  
+    "diameter": {  
+        "type": "Property",  
+        "value": 203.2,  
+        "unitCode": "MMT"  
+    },  
+    "endsAt": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:Reservoir:1863179e-3768-4480-9167-ff21f870dd19"  
+    },  
+    "initiaStatus": {  
+        "type": "Property",  
+        "value": "OPEN"  
+    },  
+    "minorLoss": {  
+        "type": "Property",  
+        "value": 0.0,  
+        "unitCode": "C62"  
+    },  
+    "modifiedAt": "2020-03-02T15:45:00Z",  
+    "openStatus": {  
+        "type": "Property",  
+        "value": 0.3  
+    },  
+    "setting": {  
+        "type": "Property",  
+        "value": 40.0,  
+        "unitCode": "C62"  
+    },  
+    "startsAt": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:Junction:63fe7d79-0d4c-4da9-b7d0-3340efa0656a"  
+    },  
+    "status": {  
+        "type": "Property",  
+        "value": "OPEN"  
+    },  
+    "tag": {  
+        "type": "Property",  
+        "value": "DMA1"  
+    },  
+    "valveType": {  
+        "type": "Property",  
+        "value": "PRV"  
+    },  
+    "vertices": {  
+        "type": "GeoProperty",  
+        "value": {  
+            "type": "MultiPoint",  
+            "coordinates": [  
+                [  
+                    24.40623,  
+                    60.17966  
+                ],  
+                [  
+                    24.50623,  
+                    60.27966  
+                ]  
+            ]  
+        }  
+    },  
+    "@context": []  
 }  
 ```  
-
-Voir [FAQ 10](https://smartdatamodels.org/index.php/faqs/) pour obtenir une réponse sur la façon de traiter les unités de magnitude.
+Voir [FAQ 10](https://smartdatamodels.org/index.php/faqs/) pour obtenir une réponse sur la façon de traiter les unités de magnitude.  
