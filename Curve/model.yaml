@@ -1,5 +1,5 @@
 Curve:
-  description: 'This entity contains a harmonised description of a generic curve made for the Water WaterNetwork Management domain. This entity is primarily associated with the water management vertical and related IoT applications.'
+  description: 'This entity contains a harmonised description of a generic curve made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.'
   properties:
     address:
       description: 'The mailing address'
@@ -303,5 +303,5 @@ Curve:
   x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'
   x-license-url: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/blob/master/Curve/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/dataModel.WaterDistributionManagementEPANET/Curve/schema.json
-  x-model-tags: ""
+  x-model-tags: FIWARE4WATER
   x-version: 0.0.1
