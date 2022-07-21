@@ -1,8 +1,10 @@
-Entity: SimulationScenario  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entity: SimulationScenario  
 ==========================  
 [Open License](https://github.com/smart-data-models//dataModel.WaterDistributionManagementEPANET/blob/master/SimulationScenario/LICENSE.md)  
 [document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Global description: **This entity contains a harmonised description of a generic simulation scenario made for the Water Network Management domain. This entity is primarily associated with the water network management vertical and related IoT applications.**  
+version: 0.0.1  
 
 ## List of properties  
 
@@ -666,6 +668,12 @@ SimulationScenario:
     - type    
     - hasInputNetwork    
   type: object    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/blob/master/SimulationScenario/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/data-model.WaterNetworkManagementEPANET/Simulation/schema.json    
+  x-model-tags: FIWARE4WATER    
+  x-version: 0.0.1    
 ```  
 </details>    
 ## Example payloads    
@@ -1067,436 +1075,433 @@ SimulationScenario:
 Here is an example of a SimulationScenario in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {  
-  "id": "urn:ngsi-ld:SimulationScenario:01",  
-  "type": "SimulationScenario",  
-  "description": "Free Text",  
-  "createdBy": "urn:ngsi-ld:User:u1",  
-  "hasInputNetwork": "urn:ngsi-ld:WaterNetwork:01",  
-  "hasSimulationResult": "urn:ngsi-ld:SimulationResult:01",  
-  "duration": 86400,  
-  "hydraulicTimeStep": 3600,  
-  "flowUnits": "LPS",  
-  "headlossFormula": "H-W",  
-  "startClockTime": 0,  
-  "reportStep": 3600,  
-  "reportStart": 0,  
-  "ruleTimeStep": 900,  
-  "statistic": "none",  
-  "trials": 40,  
-  "accuracy": 0.001,  
-  "tolerance": 0.01,  
-  "emitterExponent": 0.5,  
-  "headError": 0,  
-  "flowChange": 0.01,  
-  "demandCharge": 2,  
-  "demandModel": "PDA",  
-  "minimumPressure": 0,  
-  "requiredPressure": 20,  
-  "pressureExponent": 0.5,  
-  "viscosity": 1,  
-  "unbalanced": "continue_N",  
-  "unbalancedN": 20,  
-  "checkFrequency": 2,  
-  "maxCheck": 10,  
-  "dampLimit": 0,  
-  "diffusivity": 1,  
-  "bulkOrder": 1,  
-  "wallOrder": 1,  
-  "tankOrder": 1,  
-  "concentrationLimit": 0,  
-  "qualityType": "chem",  
-  "chemicalName": "Chlorine",  
-  "chemicalUnits": "mg/l",  
-  "specificGravity": 1,  
-  "qualityTimeStep": 60,  
-  "operationalControl": [  
-    {  
-      "type": "Operational Control 1",  
-      "setting": 0,  
-      "triggerLevel": 30,  
-      "controlType": "HILEVEL",  
-      "controlledLink": "urn:ngsi-ld:Tank:T1",  
-      "monitoredNode": "urn:ngsi-ld:Pump:P1"  
-    },  
-    {  
-      "type": "Operational Control 2",  
-      "triggerLevel": 10,  
-      "setting": 1,  
-      "controlType": "LOWLEVEL",  
-      "monitoredNode": "urn:ngsi-ld:Tank:T1",  
-      "controlledLink": "urn:ngsi-ld:Pump:P1"  
-    }  
-  ],  
-  "inputParameters": [  
-    {  
-      "type": "Property 1",  
-      "setting": 50,  
-      "targetURI": "urn:ngsi-ld:Valve:V1"  
-    },  
-    {  
-      "type": "Property 2",  
-      "initialQuality": 2,  
-      "targetURI": "urn:ngsi-ld:Tank:T1"  
-    },  
-    {  
-      "type": "Property 1",  
-      "efficCurve": "urn:ngsi-ld:Curve:C1",  
-      "targetURI": "urn:ngsi-ld:Pump:P1"  
-    },  
-    {  
-      "type": "demand Category 1",  
-      "demandCategory": "agriculture demand",  
-      "baseDemand": 1.1,  
-      "demandPattern": "urn:ngsi-ld:Pattern:Agriculture",  
-      "targetURI": "urn:ngsi-ld:Junction:J1"  
-    },  
-    {  
-      "type": "demand Category 2",  
-      "demandCategory": "residential demand",  
-      "baseDemand": 1.7,  
-      "demandPattern": "urn:ngsi-ld:Pattern:Residential",  
-      "targetURI": "urn:ngsi-ld:Junction:J1"  
-    }  
-  ],  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld"  
-  ]  
+    "id": "urn:ngsi-ld:SimulationScenario:01",  
+    "type": "SimulationScenario",  
+    "accuracy": 0.001,  
+    "bulkOrder": 1,  
+    "checkFrequency": 2,  
+    "chemicalName": "Chlorine",  
+    "chemicalUnits": "mg/l",  
+    "concentrationLimit": 0,  
+    "createdBy": "urn:ngsi-ld:User:u1",  
+    "dampLimit": 0,  
+    "demandCharge": 2,  
+    "demandModel": "PDA",  
+    "description": "Free Text",  
+    "diffusivity": 1,  
+    "duration": 86400,  
+    "emitterExponent": 0.5,  
+    "flowChange": 0.01,  
+    "flowUnits": "LPS",  
+    "hasInputNetwork": "urn:ngsi-ld:WaterNetwork:01",  
+    "hasSimulationResult": "urn:ngsi-ld:SimulationResult:01",  
+    "headError": 0,  
+    "headlossFormula": "H-W",  
+    "hydraulicTimeStep": 3600,  
+    "inputParameters": [  
+        {  
+            "type": "Property 1",  
+            "setting": 50,  
+            "targetURI": "urn:ngsi-ld:Valve:V1"  
+        },  
+        {  
+            "type": "Property 2",  
+            "initialQuality": 2,  
+            "targetURI": "urn:ngsi-ld:Tank:T1"  
+        },  
+        {  
+            "type": "Property 1",  
+            "efficCurve": "urn:ngsi-ld:Curve:C1",  
+            "targetURI": "urn:ngsi-ld:Pump:P1"  
+        },  
+        {  
+            "type": "demand Category 1",  
+            "demandCategory": "agriculture demand",  
+            "baseDemand": 1.1,  
+            "demandPattern": "urn:ngsi-ld:Pattern:Agriculture",  
+            "targetURI": "urn:ngsi-ld:Junction:J1"  
+        },  
+        {  
+            "type": "demand Category 2",  
+            "demandCategory": "residential demand",  
+            "baseDemand": 1.7,  
+            "demandPattern": "urn:ngsi-ld:Pattern:Residential",  
+            "targetURI": "urn:ngsi-ld:Junction:J1"  
+        }  
+    ],  
+    "maxCheck": 10,  
+    "minimumPressure": 0,  
+    "operationalControl": [  
+        {  
+            "type": "Operational Control 1",  
+            "setting": 0,  
+            "triggerLevel": 30,  
+            "controlType": "HILEVEL",  
+            "controlledLink": "urn:ngsi-ld:Tank:T1",  
+            "monitoredNode": "urn:ngsi-ld:Pump:P1"  
+        },  
+        {  
+            "type": "Operational Control 2",  
+            "triggerLevel": 10,  
+            "setting": 1,  
+            "controlType": "LOWLEVEL",  
+            "monitoredNode": "urn:ngsi-ld:Tank:T1",  
+            "controlledLink": "urn:ngsi-ld:Pump:P1"  
+        }  
+    ],  
+    "pressureExponent": 0.5,  
+    "qualityTimeStep": 60,  
+    "qualityType": "chem",  
+    "reportStart": 0,  
+    "reportStep": 3600,  
+    "requiredPressure": 20,  
+    "ruleTimeStep": 900,  
+    "specificGravity": 1,  
+    "startClockTime": 0,  
+    "statistic": "none",  
+    "tankOrder": 1,  
+    "tolerance": 0.01,  
+    "trials": 40,  
+    "unbalanced": "continue_N",  
+    "unbalancedN": 20,  
+    "viscosity": 1,  
+    "wallOrder": 1,  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/context.jsonld"  
+    ]  
 }  
 ```  
 #### SimulationScenario NGSI-LD normalized Example    
 Here is an example of a SimulationScenario in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
 ```json  
 {  
-  "id": "urn:ngsi-ld:SimulationScenario:01",  
-  "type": "SimulationScenario",  
-  "description": {  
-    "type": "Property",  
-    "value": "Free Text"  
-  },  
-  "createdBy": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:User:u1"  
-  },  
-  "hasInputNetwork": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:WaterNetwork:01"  
-  },  
-  "hasSimulationResult": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:SimulationResult:01"  
-  },  
-  "duration": {  
-    "type": "Property",  
-    "value": 86400,  
-    "unitCode": "SEC"  
-  },  
-  "hydraulicTimeStep": {  
-    "type": "Property",  
-    "value": 3600,  
-    "unitCode": "SEC"  
-  },  
-  "flowUnits": {  
-    "type": "Property",  
-    "value": "LPS"  
-  },  
-  "headlossFormula": {  
-    "type": "Property",  
-    "value": "H-W"  
-  },  
-  "startClockTime": {  
-    "type": "Property",  
-    "value": 0,  
-    "unitCode": "SEC"  
-  },  
-  "reportStep": {  
-    "type": "Property",  
-    "value": 3600,  
-    "unitCode": "SEC"  
-  },  
-  "reportStart": {  
-    "type": "Property",  
-    "value": 0,  
-    "unitCode": "SEC"  
-  },  
-  "ruleTimeStep": {  
-    "type": "Property",  
-    "value": 900,  
-    "unitCode": "SEC"  
-  },  
-  "statistic": {  
-    "type": "Property",  
-    "value": "NONE"  
-  },  
-  "trials": {  
-    "type": "Property",  
-    "value": 40,  
-    "unitCode": "C62"  
-  },  
-  "accuracy": {  
-    "type": "Property",  
-    "value": 0.001,  
-    "unitCode": "C62"  
-  },  
-  "tolerance": {  
-    "type": "Property",  
-    "value": 0.01,  
-    "unitCode": "C62"  
-  },  
-  "emitterExponent": {  
-    "type": "Property",  
-    "value": 0.5,  
-    "unitCode": "C62"  
-  },  
-  "headError": {  
-    "type": "Property",  
-    "value": 0,  
-    "unitCode": "MTR"  
-  },  
-  "flowChange": {  
-    "type": "Property",  
-    "value": 0.01,  
-    "unitCode": "MQS"  
-  },  
-  "demandCharge": {  
-    "type": "Property",  
-    "value": 2  
-  },  
-  "demandModel": {  
-    "type": "Property",  
-    "value": "PDA"  
-  },  
-  "minimumPressure": {  
-    "type": "Property",  
-    "value": 0,  
-    "unitCode": "MTR"  
-  },  
-  "requiredPressure": {  
-    "type": "Property",  
-    "value": 20,  
-    "unitCode": "MTR"  
-  },  
-  "pressureExponent": {  
-    "type": "Property",  
-    "value": 0.5,  
-    "unitCode": "C62"  
-  },  
-  "viscosity": {  
-    "type": "Property",  
-    "value": 1,  
-    "unitCode": "C62"  
-  },  
-  "unbalanced": {  
-    "type": "Property",  
-    "value": "CONTINUE_N"  
-  },  
-  "unbalancedN": {  
-    "type": "Property",  
-    "value": 20,  
-    "unitCode": "C62"  
-  },  
-  "checkFrequency": {  
-    "type": "Property",  
-    "value": 2,  
-    "unitCode": "C62"  
-  },  
-  "maxCheck": {  
-    "type": "Property",  
-    "value": 10,  
-    "unitCode": "C62"  
-  },  
-  "dampLimit": {  
-    "type": "Property",  
-    "value": 0,  
-    "unitCode": "C62"  
-  },  
-  "diffusivity": {  
-    "type": "Property",  
-    "value": 1,  
-    "unitCode": "C62"  
-  },  
-  "bulkOrder": {  
-    "type": "Property",  
-    "value": 1,  
-    "unitCode": "C62"  
-  },  
-  "wallOrder": {  
-    "type": "Property",  
-    "value": 1,  
-    "unitCode": "C62"  
-  },  
-  "tankOrder": {  
-    "type": "Property",  
-    "value": 1,  
-    "unitCode": "C62"  
-  },  
-  "concentrationLimit": {  
-    "type": "Property",  
-    "value": 0,  
-    "unitCode": "C62"  
-  },  
-  "qualityType": {  
-    "type": "Property",  
-    "value": "CHEM"  
-  },  
-  "chemicalName": {  
-    "type": "Property",  
-    "value": "Chlorine"  
-  },  
-  "chemicalUnits": {  
-    "type": "Property",  
-    "value": "mg/l"  
-  },  
-  "specificGravity": {  
-    "type": "Property",  
-    "value": 1,  
-    "unitCode": "C62"  
-  },  
-  "qualityTimeStep": {  
-    "type": "Property",  
-    "value": 60,  
-    "unitCode": "SEC"  
-  },  
-  "operationalControl": [  
-    {  
-      "type": "Property",  
-      "value": "Operational Control 1",  
-      "setting": {  
+    "id": "urn:ngsi-ld:SimulationScenario:01",  
+    "type": "SimulationScenario",  
+    "accuracy": {  
         "type": "Property",  
-        "value": 0  
-      },  
-      "triggerLevel": {  
-        "type": "Property",  
-        "value": 30  
-      },  
-      "controlType": {  
-        "type": "Property",  
-        "value": "HILEVEL"  
-      },  
-      "controlledLink": {  
-        "type": "Relationship",  
-        "object": "urn:ngsi-ld:Tank:T1",  
-        "datasetId": "urn:ngsi-ld:Dataset:Control01:Node01"  
-      },  
-      "monitoredNode": {  
-        "type": "Relationship",  
-        "object": "urn:ngsi-ld:Pump:P1",  
-        "datasetId": "urn:ngsi-ld:Dataset:Control01:Link01"  
-      },  
-      "datasetId": "urn:ngsi-ld:Dataset:HiLevel"  
+        "value": 0.001,  
+        "unitCode": "C62"  
     },  
-    {  
-      "type": "Property",  
-      "value": "Operational Control 2",  
-      "triggerLevel": {  
+    "bulkOrder": {  
         "type": "Property",  
-        "value": 10  
-      },  
-      "setting": {  
-        "type": "Property",  
-        "value": 1  
-      },  
-      "controlType": {  
-        "type": "Property",  
-        "value": "LOWLEVEL"  
-      },  
-      "monitoredNode": {  
-        "type": "Relationship",  
-        "object": "urn:ngsi-ld:Tank:T1"  
-      },  
-      "controlledLink": {  
-        "type": "Relationship",  
-        "object": "urn:ngsi-ld:Pump:P1"  
-      },  
-      "datasetId": "urn:ngsi-ld:Dataset:LowLevel"  
-    }  
-  ],  
-  "inputParameters": [  
-    {  
-      "type": "Property",  
-      "value": "Property 1",  
-      "setting": {  
-        "type": "Property",  
-        "value": 50,  
-        "targetURI": {  
-          "type": "Property",  
-          "value": "urn:ngsi-ld:Valve:V1"  
-        }  
-      },  
-      "datasetId": "urn:ngsi-ld:Dataset:ValveSetting"  
+        "value": 1,  
+        "unitCode": "C62"  
     },  
-    {  
-      "type": "Property",  
-      "value": "Property 2",  
-      "initialQuality": {  
+    "checkFrequency": {  
         "type": "Property",  
         "value": 2,  
-        "targetURI": {  
-          "type": "Relationship",  
-          "value": "urn:ngsi-ld:Tank:T1"  
-        }  
-      },  
-      "datasetId": "urn:ngsi-ld:Dataset:TankInitialQuality"  
+        "unitCode": "C62"  
     },  
-    {  
-      "type": "Property",  
-      "value": "Property 1",  
-      "efficCurve": {  
+    "chemicalName": {  
+        "type": "Property",  
+        "value": "Chlorine"  
+    },  
+    "chemicalUnits": {  
+        "type": "Property",  
+        "value": "mg/l"  
+    },  
+    "concentrationLimit": {  
+        "type": "Property",  
+        "value": 0,  
+        "unitCode": "C62"  
+    },  
+    "createdBy": {  
         "type": "Relationship",  
-        "object": "urn:ngsi-ld:Curve:C1",  
-        "targetURI": {  
-          "type": "Relationship",  
-          "object": "urn:ngsi-ld:Pump:P1"  
-        }  
-      },  
-      "datasetId": "urn:ngsi-ld:Dataset:PumpCurve"  
+        "object": "urn:ngsi-ld:User:u1"  
     },  
-    {  
-      "type": "Property",  
-      "value": "demand Category 1",  
-      "demandCategory": {  
+    "dampLimit": {  
         "type": "Property",  
-        "value": "agriculture demand",  
-        "baseDemand": {  
-          "type": "Property",  
-          "value": 1.1  
-        },  
-        "demandPattern": {  
-          "type": "Relationship",  
-          "value": "urn:ngsi-ld:Pattern:Agriculture"  
-        },  
-        "targetURI": {  
-          "type": "Relationship",  
-          "object": "urn:ngsi-ld:Junction:J1"  
-        }  
-      },  
-      "datasetId": "urn:ngsi-ld:Dataset:Demand1"  
+        "value": 0,  
+        "unitCode": "C62"  
     },  
-    {  
-      "type": "Property",  
-      "value": "demand Category 2",  
-      "demandCategory": {  
+    "demandCharge": {  
         "type": "Property",  
-        "value": "residential demand",  
-        "baseDemand": {  
-          "type": "Property",  
-          "value": 1.7  
+        "value": 2  
+    },  
+    "demandModel": {  
+        "type": "Property",  
+        "value": "PDA"  
+    },  
+    "description": {  
+        "type": "Property",  
+        "value": "Free Text"  
+    },  
+    "diffusivity": {  
+        "type": "Property",  
+        "value": 1,  
+        "unitCode": "C62"  
+    },  
+    "duration": {  
+        "type": "Property",  
+        "value": 86400,  
+        "unitCode": "SEC"  
+    },  
+    "emitterExponent": {  
+        "type": "Property",  
+        "value": 0.5,  
+        "unitCode": "C62"  
+    },  
+    "flowChange": {  
+        "type": "Property",  
+        "value": 0.01,  
+        "unitCode": "MQS"  
+    },  
+    "flowUnits": {  
+        "type": "Property",  
+        "value": "LPS"  
+    },  
+    "hasInputNetwork": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:WaterNetwork:01"  
+    },  
+    "hasSimulationResult": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:SimulationResult:01"  
+    },  
+    "headError": {  
+        "type": "Property",  
+        "value": 0,  
+        "unitCode": "MTR"  
+    },  
+    "headlossFormula": {  
+        "type": "Property",  
+        "value": "H-W"  
+    },  
+    "hydraulicTimeStep": {  
+        "type": "Property",  
+        "value": 3600,  
+        "unitCode": "SEC"  
+    },  
+    "inputParameters": [  
+        {  
+            "type": "Property",  
+            "value": "Property 1",  
+            "setting": {  
+                "type": "Property",  
+                "value": 50,  
+                "targetURI": {  
+                    "type": "Property",  
+                    "value": "urn:ngsi-ld:Valve:V1"  
+                }  
+            },  
+            "datasetId": "urn:ngsi-ld:Dataset:ValveSetting"  
         },  
-        "demandPattern": {  
-          "type": "Relationship",  
-          "value": "urn:ngsi-ld:Pattern:Residential"  
+        {  
+            "type": "Property",  
+            "value": "Property 2",  
+            "initialQuality": {  
+                "type": "Property",  
+                "value": 2,  
+                "targetURI": {  
+                    "type": "Relationship",  
+                    "value": "urn:ngsi-ld:Tank:T1"  
+                }  
+            },  
+            "datasetId": "urn:ngsi-ld:Dataset:TankInitialQuality"  
         },  
-        "targetURI": {  
-          "type": "Relationship",  
-          "object": "urn:ngsi-ld:Junction:J1"  
+        {  
+            "type": "Property",  
+            "value": "Property 1",  
+            "efficCurve": {  
+                "type": "Relationship",  
+                "object": "urn:ngsi-ld:Curve:C1",  
+                "targetURI": {  
+                    "type": "Relationship",  
+                    "object": "urn:ngsi-ld:Pump:P1"  
+                }  
+            },  
+            "datasetId": "urn:ngsi-ld:Dataset:PumpCurve"  
+        },  
+        {  
+            "type": "Property",  
+            "value": "demand Category 1",  
+            "demandCategory": {  
+                "type": "Property",  
+                "value": "agriculture demand",  
+                "baseDemand": {  
+                    "type": "Property",  
+                    "value": 1.1  
+                },  
+                "demandPattern": {  
+                    "type": "Relationship",  
+                    "value": "urn:ngsi-ld:Pattern:Agriculture"  
+                },  
+                "targetURI": {  
+                    "type": "Relationship",  
+                    "object": "urn:ngsi-ld:Junction:J1"  
+                }  
+            },  
+            "datasetId": "urn:ngsi-ld:Dataset:Demand1"  
+        },  
+        {  
+            "type": "Property",  
+            "value": "demand Category 2",  
+            "demandCategory": {  
+                "type": "Property",  
+                "value": "residential demand",  
+                "baseDemand": {  
+                    "type": "Property",  
+                    "value": 1.7  
+                },  
+                "demandPattern": {  
+                    "type": "Relationship",  
+                    "value": "urn:ngsi-ld:Pattern:Residential"  
+                },  
+                "targetURI": {  
+                    "type": "Relationship",  
+                    "object": "urn:ngsi-ld:Junction:J1"  
+                }  
+            },  
+            "datasetId": "urn:ngsi-ld:Dataset:Demand2"  
         }  
-      },  
-      "datasetId": "urn:ngsi-ld:Dataset:Demand2"  
-    }  
-  ],  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld"  
-  ]  
+    ],  
+    "maxCheck": {  
+        "type": "Property",  
+        "value": 10,  
+        "unitCode": "C62"  
+    },  
+    "minimumPressure": {  
+        "type": "Property",  
+        "value": 0,  
+        "unitCode": "MTR"  
+    },  
+    "operationalControl": [  
+        {  
+            "type": "Property",  
+            "value": "Operational Control 1",  
+            "setting": {  
+                "type": "Property",  
+                "value": 0  
+            },  
+            "triggerLevel": {  
+                "type": "Property",  
+                "value": 30  
+            },  
+            "controlType": {  
+                "type": "Property",  
+                "value": "HILEVEL"  
+            },  
+            "controlledLink": {  
+                "type": "Relationship",  
+                "object": "urn:ngsi-ld:Tank:T1",  
+                "datasetId": "urn:ngsi-ld:Dataset:Control01:Node01"  
+            },  
+            "monitoredNode": {  
+                "type": "Relationship",  
+                "object": "urn:ngsi-ld:Pump:P1",  
+                "datasetId": "urn:ngsi-ld:Dataset:Control01:Link01"  
+            },  
+            "datasetId": "urn:ngsi-ld:Dataset:HiLevel"  
+        },  
+        {  
+            "type": "Property",  
+            "value": "Operational Control 2",  
+            "triggerLevel": {  
+                "type": "Property",  
+                "value": 10  
+            },  
+            "setting": {  
+                "type": "Property",  
+                "value": 1  
+            },  
+            "controlType": {  
+                "type": "Property",  
+                "value": "LOWLEVEL"  
+            },  
+            "monitoredNode": {  
+                "type": "Relationship",  
+                "object": "urn:ngsi-ld:Tank:T1"  
+            },  
+            "controlledLink": {  
+                "type": "Relationship",  
+                "object": "urn:ngsi-ld:Pump:P1"  
+            },  
+            "datasetId": "urn:ngsi-ld:Dataset:LowLevel"  
+        }  
+    ],  
+    "pressureExponent": {  
+        "type": "Property",  
+        "value": 0.5,  
+        "unitCode": "C62"  
+    },  
+    "qualityTimeStep": {  
+        "type": "Property",  
+        "value": 60,  
+        "unitCode": "SEC"  
+    },  
+    "qualityType": {  
+        "type": "Property",  
+        "value": "CHEM"  
+    },  
+    "reportStart": {  
+        "type": "Property",  
+        "value": 0,  
+        "unitCode": "SEC"  
+    },  
+    "reportStep": {  
+        "type": "Property",  
+        "value": 3600,  
+        "unitCode": "SEC"  
+    },  
+    "requiredPressure": {  
+        "type": "Property",  
+        "value": 20,  
+        "unitCode": "MTR"  
+    },  
+    "ruleTimeStep": {  
+        "type": "Property",  
+        "value": 900,  
+        "unitCode": "SEC"  
+    },  
+    "specificGravity": {  
+        "type": "Property",  
+        "value": 1,  
+        "unitCode": "C62"  
+    },  
+    "startClockTime": {  
+        "type": "Property",  
+        "value": 0,  
+        "unitCode": "SEC"  
+    },  
+    "statistic": {  
+        "type": "Property",  
+        "value": "NONE"  
+    },  
+    "tankOrder": {  
+        "type": "Property",  
+        "value": 1,  
+        "unitCode": "C62"  
+    },  
+    "tolerance": {  
+        "type": "Property",  
+        "value": 0.01,  
+        "unitCode": "C62"  
+    },  
+    "trials": {  
+        "type": "Property",  
+        "value": 40,  
+        "unitCode": "C62"  
+    },  
+    "unbalanced": {  
+        "type": "Property",  
+        "value": "CONTINUE_N"  
+    },  
+    "unbalancedN": {  
+        "type": "Property",  
+        "value": 20,  
+        "unitCode": "C62"  
+    },  
+    "viscosity": {  
+        "type": "Property",  
+        "value": 1,  
+        "unitCode": "C62"  
+    },  
+    "wallOrder": {  
+        "type": "Property",  
+        "value": 1,  
+        "unitCode": "C62"  
+    },  
+    "@context": []  
 }  
 ```  
-
-See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units
+See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units  
