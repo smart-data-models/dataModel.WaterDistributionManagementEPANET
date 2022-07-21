@@ -1,2 +1,2 @@
-"@context__0_", "id_", "type_", "curveType_", "xData__0_", "xData__1_", "yData__0_", "yData__1_", "description_", "tag_"
-"https://smartdatamodels.org/context.jsonld", "fAM-8ca3-4533-a2eb-12015", "Curve", "FLOW-HEAD", "0.5692", "0.4647", "0.5692", "0.4647", "Free Text", "DMA1"
+"id_", "type_", "curveType_", "description_", "tag_", "xData__0_", "xData__1_", "yData__0_", "yData__1_", "@context__0_"
+"fAM-8ca3-4533-a2eb-12015", "Curve", "FLOW-HEAD", "Free Text", "DMA1", "0.5692", "0.4647", "0.5692", "0.4647", "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/context.jsonld"
