@@ -1,8 +1,10 @@
-Entity: Pattern  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entity: Pattern  
 ===============  
 [Open License](https://github.com/smart-data-models//dataModel.WaterDistributionManagementEPANET/blob/master/Pattern/LICENSE.md)  
 [document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Global description: **This entity contains a harmonised description of a generic pattern made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.**  
+version: 0.0.1  
 
 ## List of properties  
 
@@ -125,6 +127,12 @@ Pattern:
     - timeStep    
     - startTime    
   type: object    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/blob/master/Pattern/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/dataModel.WaterDistributionManagementEPANET/Pattern/schema.json    
+  x-model-tags: FIWARE4WATER    
+  x-version: 0.0.1    
 ```  
 </details>    
 ## Example payloads    
@@ -179,68 +187,65 @@ Pattern:
 Here is an example of a Pattern in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld"  
-  ],  
-  "createdAt": "2020-02-20T17:43:00Z",  
-  "description": "Open Text",  
-  "id": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533-a2eb-34bc89262190",  
-  "modifiedAt": "2020-02-20T17:43:00Z",  
-  "multipliers": [  
-    0.5692,  
-    0.4647,  
-    0.4385,  
-    0.3604,  
-    0.3098,  
-    0.3345  
-  ],  
-  "tag": "DMA1",  
-  "timeStep": 3600,  
-  "startTime": "2020-02-20T17:43:00Z",  
-  "type": "Pattern"  
+    "id": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533-a2eb-34bc89262190",  
+    "type": "Pattern",  
+    "createdAt": "2020-02-20T17:43:00Z",  
+    "description": "Open Text",  
+    "modifiedAt": "2020-02-20T17:43:00Z",  
+    "multipliers": [  
+        0.5692,  
+        0.4647,  
+        0.4385,  
+        0.3604,  
+        0.3098,  
+        0.3345  
+    ],  
+    "startTime": "2020-02-20T17:43:00Z",  
+    "tag": "DMA1",  
+    "timeStep": 3600,  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/context.jsonld"  
+    ]  
 }  
 ```  
 #### Pattern NGSI-LD normalized Example    
 Here is an example of a Pattern in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
 ```json  
 {  
-  "id": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533-a2eb-34bc89262190",  
-  "type": "Pattern",  
-  "createdAt": "2020-02-20T17:43:00Z",  
-  "modifiedAt": "2020-02-20T17:43:00Z",  
-  "multipliers": {  
-    "type": "Property",  
-    "value": [  
-      0.5692,  
-      0.4647,  
-      0.4385,  
-      0.3604,  
-      0.3098,  
-      0.3345  
-    ],  
-    "unitCode": "C62"  
-  },  
-  "timeStep": {  
-    "type": "Property",  
-    "value": 3600,  
-    "unitCode": "SEC"  
-  },  
-  "description": {  
-    "type": "Property",  
-    "value": "Open Text"  
-  },  
-  "startTime": {  
-    "type": "Property",  
-    "value": "00:00"  
-  },  
-  "tag": {  
-    "type": "Property",  
-    "value": "DMA1"  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld"  
-  ]  
+    "id": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533-a2eb-34bc89262190",  
+    "type": "Pattern",  
+    "createdAt": "2020-02-20T17:43:00Z",  
+    "description": {  
+        "type": "Property",  
+        "value": "Open Text"  
+    },  
+    "modifiedAt": "2020-02-20T17:43:00Z",  
+    "multipliers": {  
+        "type": "Property",  
+        "value": [  
+            0.5692,  
+            0.4647,  
+            0.4385,  
+            0.3604,  
+            0.3098,  
+            0.3345  
+        ],  
+        "unitCode": "C62"  
+    },  
+    "startTime": {  
+        "type": "Property",  
+        "value": "00:00"  
+    },  
+    "tag": {  
+        "type": "Property",  
+        "value": "DMA1"  
+    },  
+    "timeStep": {  
+        "type": "Property",  
+        "value": 3600,  
+        "unitCode": "SEC"  
+    },  
+    "@context": []  
 }  
 ```  
-
-See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units
+See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units  
