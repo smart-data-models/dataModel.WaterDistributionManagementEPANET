@@ -1,15 +1,17 @@
-エンティティ貯水池  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+エンティティ貯水池  
 =========  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.WaterDistributionManagementEPANET/blob/master/Reservoir/LICENSE.md)  
-[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-グローバルな記述。**このエンティティは、Water Network Managementドメインのために作られた一般的なReservoirの調和された記述を含む。このエンティティは、主に水管理の垂直方向と関連するIoTアプリケーションに関連しています。  
+[ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+グローバルな記述。**このエンティティは、水ネットワーク管理領域のために作られた一般的な貯水池の調和された記述を含んでいます。このエンティティは、主に水管理の垂直方向と関連する IoT アプリケーションに関連するものである。  
+バージョン: 0.0.1  
 
-## プロパティのリスト  
+## プロパティ一覧  
 
-- `address`: 郵送先住所  - `alternateName`: このアイテムの別称  - `areaServed`: サービスや提供されるアイテムが提供される地理的なエリア  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `description`: このアイテムの説明  - `elevation`: 貯水池のある共通基準からの標高。すべての単位は[CEFACT](https://www.unece.org/cefact.html)コードで受け付けています。  - `hasInlet`: 貯水池の水源地を示す関係図  - `hasOutlet`: 貯水池の水出しポイントを示す関係図  - `head`: ノード（ジャンクション、タンク、リザーバー）で観測されたヘッド  - `headPattern`: 貯水池の総揚程の時間変化をモデル化するためのタイムパターンのIDラベル  - `id`: エンティティのユニークな識別子  - `initialQuality`: ネットワークコンポーネントの初期品質  - `location`: アイテムへのGeojson参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygonのいずれかです。  - `name`: このアイテムの名前です。  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `pressure`: ノード（ジャンクション、タンク、リザーバー）で観測された圧力  - `quality`: ネットワークコンポーネントの品質を確認  - `reservoirHead`: 貯水池内の水の水頭（標高＋圧力頭）。単位はすべて[CEFACT](https://www.unece.org/cefact.html)のコードで受け付けます。  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `sourceCategory`: 特定のノードでネットワークに流入するソースフローの品質を説明するもの。  - `sourceMassInflow`: プロパティ...ノード（ジャンクション、タンク、リザーバー）で観測されたソースマスの流入量  - `supply`: ノード（ジャンクション、タンク、リザーバー）における供給量の観測値  - `tag`: パイプをカテゴリー別に分類するための任意のテキスト文字列です。  - `type`: NGSI-LD エンティティタイプ。Reservoirと同じでなければなりません。    
-必須項目  
-- `id`  - `location`  - `reservoirHead`  - `type`  ## データモデルによるプロパティの記述  
-アルファベット順（クリックすると詳細が表示されます）  
+- `address`: 郵送先住所  - `alternateName`: この項目の別称  - `areaServed`: サービスまたは提供品が提供される地理的な地域  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description`: このアイテムの説明  - `elevation`: 貯水池のある共通基準より高い標高。単位はすべて[CEFACT](https://www.unece.org/cefact.html)コードで受け入れられます。  - `hasInlet`: 貯水池の水の入口位置を示す関係図  - `hasOutlet`: 貯水池の水の出口を示す関係図  - `head`: ノード（ジャンクション、タンク、リザーバー）で観測されたヘッド。  - `headPattern`: 貯水池の全水頭の時間変化をモデル化するために使用される時間パターンのIDラベル  - `id`: エンティティの一意な識別子  - `initialQuality`: ネットワークコンポーネントにおける初期品質  - `location`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `name`: このアイテムの名称です。  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `pressure`: ノード（ジャンクション、タンク、リザーバー）での観測圧力  - `quality`: ネットワークコンポーネントで観測された品質  - `reservoirHead`: 貯水池内の水の水頭（標高＋圧力頭）。単位はすべて[CEFACT](https://www.unece.org/cefact.html)コードで受け付けます。  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `source`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `sourceCategory`: 特定のノードでネットワークに流入するソースフローの品質に関する記述。  - `sourceMassInflow`: ノード（ジャンクション、タンク、リザーバー）において観測されたソースマス流入量  - `supply`: ノード（ジャンクション、タンク、リザーバー）で供給が確認されたもの  - `tag`: パイプをカテゴリに割り当てるためのオプションのテキスト文字列、おそらく年齢や素材に基づいたもの  - `type`: NGSI-LD Entity Type。Reservoirと同じでなければならない。    
+必要なプロパティ  
+- `id`  - `location`  - `reservoirHead`  - `type`  ## プロパティのデータモデル記述  
+アルファベット順に並びます（クリックで詳細へ）  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 Reservoir:    
@@ -424,7 +426,7 @@ Reservoir:
         model: https://schema.org/Text    
         type: Property    
     sourceMassInflow:    
-      description: 'Property.. Observed source mass inflow at the node (junction, tank or reservoir)'    
+      description: 'Observed source mass inflow at the node (junction, tank or reservoir)'    
       properties:    
         observedBy:    
           anyOf:    
@@ -439,6 +441,8 @@ Reservoir:
         value:    
           type: number    
       type: object    
+      x-ngsi:    
+        type: Property    
     supply:    
       description: 'Observed supply at the node (junction, tank or reservoir)'    
       properties:    
@@ -480,13 +484,13 @@ Reservoir:
   x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/blob/master/Reservoir/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.WaterDistributionManagementEPANET/Reservoir/schema.json    
-  x-model-tags: ""    
+  x-model-tags: FIWARE4WATER    
   x-version: 0.0.1    
 ```  
 </details>    
 ## ペイロードの例  
-#### Reservoir NGSI-v2 key-valuesの例。  
-Reservoirをkey-valuesとしてJSON-LD形式で表現した例です。これは`options=keyValues`を使用した場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### リザーバーNGSI-v2キー値の例  
+以下は、ReservoirをJSON-LD形式でkey-valuesとして表した例である。これは `options=keyValues` を使用した場合に NGSI-v2 と互換性があり、個々のエンティティのコンテキストデータが返される。  
 ```json  
 {  
   "id": "1863179e-3768-4480-9167-ff21f870dd19",  
@@ -514,8 +518,8 @@ Reservoir:
   "tag": "DMA1"  
 }  
 ```  
-#### レザボア NGSI-v2 正規化例  
-ここでは、正規化されたJSON-LD形式のReservoirの例を示します。これは、オプションを使用しない場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### NGSI-v2 正規化例  
+以下は、Reservoirを正規化したJSON-LD形式の例である。これはオプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
   "id": "1863179e-3768-4480-9167-ff21f870dd19",  
@@ -600,160 +604,157 @@ Reservoir:
   }  
 }  
 ```  
-#### リザーバー NGSI-LDのキーバリューの例  
-Reservoirをkey-valuesとしてJSON-LD形式で表現した例を示します。これは`options=keyValues`を使った場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### リザーバーNGSI-LDのキー値例  
+ここでは、ReservoirをJSON-LD形式でkey-valuesとして表現した例を示す。これは `options=keyValues` を使用した場合に NGSI-LD と互換性があり、個々のエンティティのコンテキストデータを返す。  
 ```json  
 {  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld"  
-  ],  
-  "createdAt": "2020-03-02T15:42:00Z",  
-  "description": "This entity contains a harmonised description of a Reservoir",  
-  "elevation": 105.8,  
-  "headPattern": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533",  
-  "id": "urn:ngsi-ld:Reservoir:1863179e-3768-4480-9167-ff21f870dd19",  
-  "initialQuality": 0.5,  
-  "location": {  
-    "coordinates": [  
-      24.30623,  
-      60.07966  
-    ],  
-    "type": "Point"  
-  },  
-  "modifiedAt": "2020-03-02T15:45:00Z",  
-  "reservoirHead": 59.0,  
-  "sourceCategory": "CategroyX",  
-  "tag": "DMA1",  
-  "type": "Reservoir"  
+    "id": "urn:ngsi-ld:Reservoir:1863179e-3768-4480-9167-ff21f870dd19",  
+    "type": "Reservoir",  
+    "createdAt": "2020-03-02T15:42:00Z",  
+    "description": "This entity contains a harmonised description of a Reservoir",  
+    "elevation": 105.8,  
+    "headPattern": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533",  
+    "initialQuality": 0.5,  
+    "location": {  
+        "coordinates": [  
+            24.30623,  
+            60.07966  
+        ],  
+        "type": "Point"  
+    },  
+    "modifiedAt": "2020-03-02T15:45:00Z",  
+    "reservoirHead": 59.0,  
+    "sourceCategory": "CategroyX",  
+    "tag": "DMA1",  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/context.jsonld"  
+    ]  
 }  
 ```  
-#### レザボア NGSI-LDの正規化例  
-ここでは、JSON-LD形式で正規化されたReservoirの例を示します。これはオプションを使用しない場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### 貯水池 NGSI-LD 正規化例  
+以下は、Reservoirを正規化したJSON-LD形式の例である。これはオプションを使用しない場合のNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
-  "id": "urn:ngsi-ld:Reservoir:1863179e-3768-4480-9167-ff21f870dd19",  
-  "type": "Reservoir",  
-  "location": {  
-    "type": "GeoProperty",  
-    "value": {  
-      "type": "Point",  
-      "coordinates": [  
-        24.30623,  
-        60.07966  
-      ]  
-    }  
-  },  
-  "reservoirHead": {  
-    "type": "Property",  
-    "value": 59.0,  
-    "unitCode": "MTR"  
-  },  
-  "headPattern": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533"  
-  },  
-  "elevation": {  
-    "type": "Property",  
-    "value": 105.8,  
-    "unitCode": "MTR"  
-  },  
-  "description": {  
-    "type": "Property",  
-    "value": "This entity contains a harmonised description of a Reservoir"  
-  },  
-  "initialQuality": {  
-    "type": "Property",  
-    "value": 0.5,  
-    "unitCode": "M1"  
-  },  
-  "sourceCategory": {  
-    "type": "Property",  
-    "value": {  
-      "type": "Property",  
-      "value": "CategoryX"  
+    "id": "urn:ngsi-ld:Reservoir:1863179e-3768-4480-9167-ff21f870dd19",  
+    "type": "Reservoir",  
+    "description": {  
+        "type": "Property",  
+        "value": "This entity contains a harmonised description of a Reservoir"  
     },  
-    "sourceType": {  
-      "type": "Property",  
-      "value": "MASS"  
+    "elevation": {  
+        "type": "Property",  
+        "value": 105.8,  
+        "unitCode": "MTR"  
     },  
-    "sourceQuality": {  
-      "type": "Property",  
-      "value": 1.2,  
-      "unitCode": "M1"  
+    "head": {  
+        "type": "Property",  
+        "value": {  
+            "type": "Property",  
+            "value": 20,  
+            "unitCode": "MTR"  
+        },  
+        "observedBy": {  
+            "type": "Relationship",  
+            "object": "urn:ngsi-ld:Device:device-9845A"  
+        }  
     },  
-    "sourcePattern": {  
-      "type": "Relationship",  
-      "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533-a2eb-34bc89262190"  
-    }  
-  },  
-  "tag": {  
-    "type": "Property",  
-    "value": "DMA1"  
-  },  
-  "pressure": {  
-    "type": "Property",  
-    "value": {  
-      "type": "Property",  
-      "value": 20,  
-      "unitCode": "MTR"  
+    "headPattern": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533"  
     },  
-    "observedBy": {  
-      "type": "Relationship",  
-      "object": "urn:ngsi-ld:Device:device-9845A"  
-    }  
-  },  
-  "supply": {  
-    "type": "Property",  
-    "value": {  
-      "type": "Property",  
-      "value": 150,  
-      "unitCode": "LTR"  
+    "initialQuality": {  
+        "type": "Property",  
+        "value": 0.5,  
+        "unitCode": "M1"  
     },  
-    "observedBy": {  
-      "type": "Relationship",  
-      "object": "urn:ngsi-ld:Device:device-9845A"  
-    }  
-  },  
-  "head": {  
-    "type": "Property",  
-    "value": {  
-      "type": "Property",  
-      "value": 20,  
-      "unitCode": "MTR"  
+    "location": {  
+        "type": "GeoProperty",  
+        "value": {  
+            "type": "Point",  
+            "coordinates": [  
+                24.30623,  
+                60.07966  
+            ]  
+        }  
     },  
-    "observedBy": {  
-      "type": "Relationship",  
-      "object": "urn:ngsi-ld:Device:device-9845A"  
-    }  
-  },  
-  "quality": {  
-    "type": "Property",  
-    "value": {  
-      "type": "Property",  
-      "value": 0.5,  
-      "unitCode": "M1"  
+    "pressure": {  
+        "type": "Property",  
+        "value": {  
+            "type": "Property",  
+            "value": 20,  
+            "unitCode": "MTR"  
+        },  
+        "observedBy": {  
+            "type": "Relationship",  
+            "object": "urn:ngsi-ld:Device:device-9845A"  
+        }  
     },  
-    "observedBy": {  
-      "type": "Relationship",  
-      "object": "urn:ngsi-ld:Device:device-9845A"  
-    }  
-  },  
-  "sourceMassInflow": {  
-    "type": "Property",  
-    "value": {  
-      "type": "Property",  
-      "value": 100,  
-      "unitCode": "F27"  
+    "quality": {  
+        "type": "Property",  
+        "value": {  
+            "type": "Property",  
+            "value": 0.5,  
+            "unitCode": "M1"  
+        },  
+        "observedBy": {  
+            "type": "Relationship",  
+            "object": "urn:ngsi-ld:Device:device-9845A"  
+        }  
     },  
-    "observedBy": {  
-      "type": "Relationship",  
-      "object": "urn:ngsi-ld:Device:device-9845A"  
-    }  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld"  
-  ]  
+    "reservoirHead": {  
+        "type": "Property",  
+        "value": 59.0,  
+        "unitCode": "MTR"  
+    },  
+    "sourceCategory": {  
+        "type": "Property",  
+        "value": {  
+            "type": "Property",  
+            "value": "CategoryX"  
+        },  
+        "sourceType": {  
+            "type": "Property",  
+            "value": "MASS"  
+        },  
+        "sourceQuality": {  
+            "type": "Property",  
+            "value": 1.2,  
+            "unitCode": "M1"  
+        },  
+        "sourcePattern": {  
+            "type": "Relationship",  
+            "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533-a2eb-34bc89262190"  
+        }  
+    },  
+    "sourceMassInflow": {  
+        "type": "Property",  
+        "value": {  
+            "type": "Property",  
+            "value": 100,  
+            "unitCode": "F27"  
+        },  
+        "observedBy": {  
+            "type": "Relationship",  
+            "object": "urn:ngsi-ld:Device:device-9845A"  
+        }  
+    },  
+    "supply": {  
+        "type": "Property",  
+        "value": {  
+            "type": "Property",  
+            "value": 150,  
+            "unitCode": "LTR"  
+        },  
+        "observedBy": {  
+            "type": "Relationship",  
+            "object": "urn:ngsi-ld:Device:device-9845A"  
+        }  
+    },  
+    "tag": {  
+        "type": "Property",  
+        "value": "DMA1"  
+    },  
+    "@context": []  
 }  
 ```  
-
-マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。
+マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
