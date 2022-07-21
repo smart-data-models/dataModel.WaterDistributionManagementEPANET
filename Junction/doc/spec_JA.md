@@ -1,15 +1,17 @@
-エンティティジャンクション  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+エンティティジャンクション  
 =============  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.WaterDistributionManagementEPANET/blob/master/Junction/LICENSE.md)  
-[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-グローバルな記述。**このエンティティは、ウォーターネットワークマネジメントドメインのために作られたジェネリックジャンクションの調和された記述を含んでいます。このエンティティは、主に水のネットワーク管理の垂直方向と関連するIoTアプリケーションに関連している。  
+[ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+グローバルな記述。**このエンティティは、水ネットワーク管理ドメイン用に作られた汎用ジャンクションの調和された記述を含む。このエンティティは、主に水ネットワーク管理の垂直方向と関連する IoT アプリケーションに関連するものである。  
+バージョン: 0.0.1  
 
-## プロパティのリスト  
+## プロパティ一覧  
 
-- `address`: 郵送先住所  - `alternateName`: このアイテムの別称  - `areaServed`: サービスや提供されるアイテムが提供される地理的なエリア  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `demandCategory`: ベースとなる要求や時間パターンを他のカテゴリーのユーザーに割り当てることができます。  - `description`: このアイテムの説明  - `elevation`: ジャンクションのある共通基準からの標高。すべての単位は[CEFACT](https://www.unece.org/cefact.html)コードで受け付けています。  - `emitterCoefficient`: 接合部に配置されたエミッター（スプリンクラーまたはノズル）の放電係数。単位はすべて[CEFACT](https://www.unece.org/cefact.html)コードで受け付けます。  - `head`: ノード（ジャンクション、タンク、リザーバー）で観測されたヘッド  - `id`: エンティティのユニークな識別子  - `initialQuality`: ネットワークコンポーネントの初期品質  - `location`: アイテムへのGeojson参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygonのいずれかです。  - `name`: このアイテムの名前です。  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `pressure`: ノード（ジャンクション、タンク、リザーバー）で観測された圧力  - `quality`: ネットワークコンポーネントの品質を確認  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `sourceCategory`: 特定のノードでネットワークに流入するソースフローの品質を説明するもの。  - `sourceMassInflow`: プロパティ...ノード（ジャンクション、タンク、リザーバー）で観測されたソースマスの流入量  - `supply`: ノード（ジャンクション、タンク、リザーバー）における供給量の観測値  - `tag`: パイプをカテゴリー別に分類するための任意のテキスト文字列です。  - `type`: NGSI-LD エンティティタイプ。ジャンクションである必要があります。    
-必須項目  
-- `id`  - `type`  ## データモデルによるプロパティの記述  
-アルファベット順（クリックすると詳細が表示されます）  
+- `address`: 郵送先住所  - `alternateName`: この項目の別称  - `areaServed`: サービスまたは提供品が提供される地理的な地域  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `demandCategory`: ベースとなる需要や時間パターンを他のカテゴリーのユーザーに割り当てることを可能にする。  - `description`: このアイテムの説明  - `elevation`: 接合部の共通基準点からの高さ。単位はすべて[CEFACT](https://www.unece.org/cefact.html)コードで受け入れられます。  - `emitterCoefficient`: 接合部に配置されたエミッタ（スプリンクラーまたはノズル）の吐出係数。単位はすべて[CEFACT](https://www.unece.org/cefact.html)コードで受け付けます。  - `head`: ノード（ジャンクション、タンク、リザーバー）で観測されたヘッド。  - `id`: エンティティの一意な識別子  - `initialQuality`: ネットワークコンポーネントにおける初期品質  - `location`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `name`: このアイテムの名称です。  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `pressure`: ノード（ジャンクション、タンク、リザーバー）での観測圧力  - `quality`: ネットワークコンポーネントで観測された品質  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `source`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `sourceCategory`: 特定のノードでネットワークに流入するソースフローの品質に関する記述。  - `sourceMassInflow`: ノード（ジャンクション、タンク、リザーバー）において観測されたソースマス流入量  - `supply`: ノード（ジャンクション、タンク、リザーバー）で供給が確認されたもの  - `tag`: パイプをカテゴリに割り当てるためのオプションのテキスト文字列、おそらく年齢や素材に基づいたもの  - `type`: NGSI-LD Entity Type。ジャンクションでなければならない    
+必要なプロパティ  
+- `id`  - `type`  ## プロパティのデータモデル記述  
+アルファベット順に並びます（クリックで詳細へ）  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 Junction:    
@@ -408,7 +410,7 @@ Junction:
         model: https://schema.org/Text    
         type: Property    
     sourceMassInflow:    
-      description: 'Property.. Observed source mass inflow at the node (junction, tank or reservoir)'    
+      description: 'Observed source mass inflow at the node (junction, tank or reservoir)'    
       properties:    
         observedBy:    
           anyOf:    
@@ -423,6 +425,8 @@ Junction:
         value:    
           type: number    
       type: object    
+      x-ngsi:    
+        type: Property    
     supply:    
       description: 'Observed supply at the node (junction, tank or reservoir)'    
       properties:    
@@ -462,13 +466,13 @@ Junction:
   x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/blob/master/Junction/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.WaterDistributionManagementEPANET/Junction/schema.json    
-  x-model-tags: ""    
+  x-model-tags: FIWARE4WATER    
   x-version: 0.0.1    
 ```  
 </details>    
 ## ペイロードの例  
-#### ジャンクション NGSI-v2 キーバリューの例  
-ここでは、JSON-LD形式でkey-valuesとしてJunctionの例を紹介します。これは、`options=keyValues`を使用した場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### NGSI-v2キーバリアブルの例  
+ここでは、JSON-LD形式のJunctionをkey-valuesで表現した例を示します。これは、`options=keyValues`を使用したときにNGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
   "id": "63fe7d79-0d4c-4da9-b7d0-3340efa0656a",  
@@ -500,8 +504,8 @@ Junction:
   "emitterCoefficient": 0.526  
 }  
 ```  
-#### ジャンクション NGSI-v2 正規化例  
-ここでは、JSON-LD形式のJunctionを正規化した例を示します。これは、オプションを使用しない場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### Junction NGSI-v2 正規化例  
+JSON-LD形式のJunctionを正規化した例を示します。これはオプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
   "id": "63fe7d79-0d4c-4da9-b7d0-3340efa0656a",  
@@ -590,170 +594,167 @@ Junction:
   }  
 }  
 ```  
-#### ジャンクション NGSI-LD のキーバリューの例  
-ここでは、JSON-LD形式でkey-valuesとしてJunctionの例を示します。これは、`options=keyValues`を使用した場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### NGSI-LD キー値の例  
+ここでは、JSON-LD形式でkey-valuesとしてJunctionの例を示します。これは、`options=keyValues`を使用したときにNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld"  
-  ],  
-  "createdAt": "2020-02-20T15:42:00Z",  
-  "demandCategory": "agriculture demand",  
-  "description": "This entity contains a harmonised description of a Junction",  
-  "elevation": 105.8,  
-  "emitterCoefficient": 0.526,  
-  "id": "urn:ngsi-ld:Junction:63fe7d79-0d4c-4da9-b7d0-3340efa0656a",  
-  "initialQuality": 0.5,  
-  "location": {  
-    "coordinates": [  
-      24.30623,  
-      60.07966  
-    ],  
-    "type": "Point"  
-  },  
-  "modifiedAt": "2020-02-20T15:45:00Z",  
-  "sourceCategory": "CategoryX",  
-  "tag": "DMA1",  
-  "type": "Junction"  
+    "id": "urn:ngsi-ld:Junction:63fe7d79-0d4c-4da9-b7d0-3340efa0656a",  
+    "type": "Junction",  
+    "createdAt": "2020-02-20T15:42:00Z",  
+    "demandCategory": "agriculture demand",  
+    "description": "This entity contains a harmonised description of a Junction",  
+    "elevation": 105.8,  
+    "emitterCoefficient": 0.526,  
+    "initialQuality": 0.5,  
+    "location": {  
+        "coordinates": [  
+            24.30623,  
+            60.07966  
+        ],  
+        "type": "Point"  
+    },  
+    "modifiedAt": "2020-02-20T15:45:00Z",  
+    "sourceCategory": "CategoryX",  
+    "tag": "DMA1",  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/context.jsonld"  
+    ]  
 }  
 ```  
-#### ジャンクション NGSI-LDの正規化例  
-ここでは、JSON-LD形式のJunctionを正規化した例を示します。これは、オプションを使用しない場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### ジャンクション NGSI-LD 正規化例  
+JSON-LD形式のJunctionを正規化した例を示します。これはオプションを使用しない場合のNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
-  "id": "urn:ngsi-ld:Junction:63fe7d79-0d4c-4da9-b7d0-3340efa0656a",  
-  "type": "Junction",  
-  "location": {  
-    "type": "GeoProperty",  
-    "value": {  
-      "type": "Point",  
-      "coordinates": [  
-        24.30623,  
-        60.07966  
-      ]  
-    }  
-  },  
-  "elevation": {  
-    "type": "Property",  
-    "value": 105.8,  
-    "unitCode": "MTR"  
-  },  
-  "demandCategory": {  
-    "type": "Property",  
-    "value": {  
-      "type": "Property",  
-      "value": "agriculture demand"  
+    "id": "urn:ngsi-ld:Junction:63fe7d79-0d4c-4da9-b7d0-3340efa0656a",  
+    "type": "Junction",  
+    "demandCategory": {  
+        "type": "Property",  
+        "value": {  
+            "type": "Property",  
+            "value": "agriculture demand"  
+        },  
+        "baseDemand": {  
+            "type": "Property",  
+            "value": "1.763868462",  
+            "unitCode": "MQS"  
+        },  
+        "demandPattern": {  
+            "type": "Relationship",  
+            "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533"  
+        }  
     },  
-    "baseDemand": {  
-      "type": "Property",  
-      "value": "1.763868462",  
-      "unitCode": "MQS"  
+    "description": {  
+        "type": "Property",  
+        "value": "This entity contains a harmonised description of a Junction"  
     },  
-    "demandPattern": {  
-      "type": "Relationship",  
-      "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533"  
-    }  
-  },  
-  "sourceCategory": {  
-    "type": "Property",  
-    "value": {  
-      "type": "Property",  
-      "value": "CategoryX"  
+    "elevation": {  
+        "type": "Property",  
+        "value": 105.8,  
+        "unitCode": "MTR"  
     },  
-    "sourceType": {  
-      "type": "Property",  
-      "value": "MASS"  
+    "emitterCoefficient": {  
+        "type": "Property",  
+        "value": 0.526,  
+        "unitCode": "S4"  
     },  
-    "sourceQuality": {  
-      "type": "Property",  
-      "value": 1.2,  
-      "unitCode": "M1"  
+    "head": {  
+        "type": "Property",  
+        "value": {  
+            "type": "Property",  
+            "value": 20,  
+            "unitCode": "MTR"  
+        },  
+        "observedBy": {  
+            "type": "Relationship",  
+            "object": "urn:ngsi-ld:Device:device-9845A"  
+        }  
     },  
-    "sourcePattern": {  
-      "type": "Relationship",  
-      "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533-a2eb-34bc89262190"  
-    }  
-  },  
-  "tag": {  
-    "type": "Property",  
-    "value": "DMA1"  
-  },  
-  "description": {  
-    "type": "Property",  
-    "value": "This entity contains a harmonised description of a Junction"  
-  },  
-  "initialQuality": {  
-    "type": "Property",  
-    "value": 0.5,  
-    "unitCode": "M1"  
-  },  
-  "emitterCoefficient": {  
-    "type": "Property",  
-    "value": 0.526,  
-    "unitCode": "S4"  
-  },  
-  "pressure": {  
-    "type": "Property",  
-    "value": {  
-      "type": "Property",  
-      "value": 20,  
-      "unitCode": "MTR"  
+    "initialQuality": {  
+        "type": "Property",  
+        "value": 0.5,  
+        "unitCode": "M1"  
     },  
-    "observedBy": {  
-      "type": "Relationship",  
-      "object": "urn:ngsi-ld:Device:device-9845A"  
-    }  
-  },  
-  "supply": {  
-    "type": "Property",  
-    "value": {  
-      "type": "Property",  
-      "value": 150,  
-      "unitCode": "LTR"  
+    "location": {  
+        "type": "GeoProperty",  
+        "value": {  
+            "type": "Point",  
+            "coordinates": [  
+                24.30623,  
+                60.07966  
+            ]  
+        }  
     },  
-    "observedBy": {  
-      "type": "Relationship",  
-      "object": "urn:ngsi-ld:Device:device-9845A"  
-    }  
-  },  
-  "head": {  
-    "type": "Property",  
-    "value": {  
-      "type": "Property",  
-      "value": 20,  
-      "unitCode": "MTR"  
+    "pressure": {  
+        "type": "Property",  
+        "value": {  
+            "type": "Property",  
+            "value": 20,  
+            "unitCode": "MTR"  
+        },  
+        "observedBy": {  
+            "type": "Relationship",  
+            "object": "urn:ngsi-ld:Device:device-9845A"  
+        }  
     },  
-    "observedBy": {  
-      "type": "Relationship",  
-      "object": "urn:ngsi-ld:Device:device-9845A"  
-    }  
-  },  
-  "quality": {  
-    "type": "Property",  
-    "value": {  
-      "value": 0.5,  
-      "unitCode": "M1"  
+    "quality": {  
+        "type": "Property",  
+        "value": {  
+            "value": 0.5,  
+            "unitCode": "M1"  
+        },  
+        "observedBy": {  
+            "type": "Relationship",  
+            "object": "urn:ngsi-ld:Device:device-9845A"  
+        }  
     },  
-    "observedBy": {  
-      "type": "Relationship",  
-      "object": "urn:ngsi-ld:Device:device-9845A"  
-    }  
-  },  
-  "sourceMassInflow": {  
-    "type": "Property",  
-    "value": {  
-      "value": 100,  
-      "unitCode": "F27"  
+    "sourceCategory": {  
+        "type": "Property",  
+        "value": {  
+            "type": "Property",  
+            "value": "CategoryX"  
+        },  
+        "sourceType": {  
+            "type": "Property",  
+            "value": "MASS"  
+        },  
+        "sourceQuality": {  
+            "type": "Property",  
+            "value": 1.2,  
+            "unitCode": "M1"  
+        },  
+        "sourcePattern": {  
+            "type": "Relationship",  
+            "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533-a2eb-34bc89262190"  
+        }  
     },  
-    "observedBy": {  
-      "type": "Relationship",  
-      "object": "urn:ngsi-ld:Device:device-9845A"  
-    }  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld"  
-  ]  
+    "sourceMassInflow": {  
+        "type": "Property",  
+        "value": {  
+            "value": 100,  
+            "unitCode": "F27"  
+        },  
+        "observedBy": {  
+            "type": "Relationship",  
+            "object": "urn:ngsi-ld:Device:device-9845A"  
+        }  
+    },  
+    "supply": {  
+        "type": "Property",  
+        "value": {  
+            "type": "Property",  
+            "value": 150,  
+            "unitCode": "LTR"  
+        },  
+        "observedBy": {  
+            "type": "Relationship",  
+            "object": "urn:ngsi-ld:Device:device-9845A"  
+        }  
+    },  
+    "tag": {  
+        "type": "Property",  
+        "value": "DMA1"  
+    },  
+    "@context": []  
 }  
 ```  
-
-マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。
+マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
