@@ -1,6 +1,7 @@
 {
     "$schema": "http://json-schema.org/schema#",
-    "modelTags": "",
+    "modelTags": "FIWARE4WATER",
+    "$schemaVersion": "0.0.1",
     "$id": "https://smart-data-models.github.io/dataModel.WaterDistributionManagementEPANET/Tank/schema.json",
     "title": "Smart Data Models WaterNetworkManagementEPANET - Tank",
     "description": "This entity contains a harmonised description of a generic tank made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.",

@@ -1,5 +1,5 @@
 Network:
-  description: 'This entity contains a harmonised description of a generic network made for the Water Network Management domain. This entity is primarily associated with the water network management vertical and related IoT applications.'
+  description: 'This entity contains a harmonised description of a generic network made for the Water WaterNetwork Management domain. This entity is primarily associated with the water network management vertical and related IoT applications.'
   properties:
     address:
       description: 'The mailing address'
@@ -60,7 +60,7 @@ Network:
       x-ngsi:
         type: Property
     hasSubNetwork:
-      description: 'Reference to an entity of type `Network`'
+      description: 'Reference to an entity of type `WaterNetwork`'
       items:
         anyOf:
           - maxLength: 256
@@ -295,7 +295,7 @@ Network:
   type: object
   x-derived-from: ""
   x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'
-  x-license-url: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/blob/master/Network/LICENSE.md
-  x-model-schema: https://smart-data-models.github.io/dataModel.WaterDistributionManagementEPANET/Network/schema.json
+  x-license-url: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/blob/master/WaterNetwork/LICENSE.md
+  x-model-schema: https://smart-data-models.github.io/dataModel.WaterDistributionManagementEPANET/WaterNetwork/schema.json
   x-model-tags: ""
   x-version: 0.0.1

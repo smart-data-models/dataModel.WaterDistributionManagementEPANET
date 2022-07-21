@@ -1,6 +1,7 @@
 {
     "$schema": "http://json-schema.org/schema#",
-    "modelTags": "",
+    "modelTags": "FIWARE4WATER",
+    "$schemaVersion": "0.0.1",
     "$id": "https://smart-data-models.github.io/dataModel.WaterDistributionManagementEPANET/Pipe/schema.json",
     "title": "Smart Data Models. WaterNetworkManagementEPANET - Pipe",
     "description": "This entity contains a harmonised description of a generic pipe made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.",
@@ -90,6 +91,5 @@
     "required": [
         "id",
         "type"
-    ],
-    "$schemaVersion": "0.0.1"
+    ]
 }

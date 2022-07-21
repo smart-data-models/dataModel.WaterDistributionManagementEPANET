@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/schema#",
-    "modelTags": "",
+    "modelTags": "FIWARE4WATER",
     "$id": "https://smart-data-models.github.io/dataModel.WaterDistributionManagementEPANET/Result/schema.json",
     "$schemaVersion": "0.0.2",
     "title": "WaterNetwork - SimulationResult",

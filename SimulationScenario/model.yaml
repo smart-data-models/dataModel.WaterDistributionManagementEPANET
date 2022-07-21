@@ -1,5 +1,5 @@
 SimulationScenario:
-  description: 'This entity contains a harmonised description of a generic simulation scenario made for the Water Network Management domain. This entity is primarily associated with the water network management vertical and related IoT applications.'
+  description: 'This entity contains a harmonised description of a generic simulation scenario made for the Water WaterNetwork Management domain. This entity is primarily associated with the water network management vertical and related IoT applications.'
   properties:
     accuracy:
       description: 'Total normalized flow change convergence criterion for determining when a hydraulic solution has been reached.'
