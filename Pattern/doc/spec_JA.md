@@ -1,15 +1,17 @@
-エンティティパターン  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+エンティティパターン  
 ==========  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.WaterDistributionManagementEPANET/blob/master/Pattern/LICENSE.md)  
-[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-グローバルな記述。**このエンティティは、Water Network Managementドメインのために作られたジェネリックパターンの調和された記述を含む。このエンティティは、主に水管理の垂直方向と関連するIoTアプリケーションに関連しています。  
+[ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+グローバルな記述。**このエンティティは、Water Network Management ドメインのために作られた汎用パターンの調和された記述を含んでいる。このエンティティは、主に水管理の垂直方向と関連する IoT アプリケーションに関連するものである**。  
+バージョン: 0.0.1  
 
-## プロパティのリスト  
+## プロパティ一覧  
 
-- `alternateName`: このアイテムの別称  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `description`: このアイテムの説明  - `id`: エンティティのユニークな識別子  - `multipliers`: 乗数とは、ある基本量（需要など）を各期間でどのように調整するかを示すものです。  - `name`: このアイテムの名前です。  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `startTime`: パターンが開始される時間  - `tag`: パイプをカテゴリー別に分類するための任意のテキスト文字列です。  - `timeStep`: 乗算器に使用されるタイムステップです。単位はすべて[CEFACT](https://www.unece.org/cefact.html)のコードで受け付けます。  - `type`: NGSI-LD エンティティタイプ。パターンでなければならない。    
-必須項目  
-- `id`  - `multipliers`  - `startTime`  - `timeStep`  - `type`  ## データモデルによるプロパティの記述  
-アルファベット順（クリックすると詳細が表示されます）  
+- `alternateName`: この項目の別称  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description`: このアイテムの説明  - `id`: エンティティの一意な識別子  - `multipliers`: 乗数とは、ある基本量（例えば需要）を各期間ごとにどのように調整するかを定義するものである  - `name`: このアイテムの名称です。  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `source`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `startTime`: パターン開始時刻  - `tag`: パイプをカテゴリに割り当てるためのオプションのテキスト文字列、おそらく年齢や素材に基づいたもの  - `timeStep`: 乗算に使用される時間ステップ。単位はすべて[CEFACT](https://www.unece.org/cefact.html)コードで受け付けます。  - `type`: NGSI-LDエンティティタイプ。パターンである必要があります。    
+必要なプロパティ  
+- `id`  - `multipliers`  - `startTime`  - `timeStep`  - `type`  ## プロパティのデータモデル記述  
+アルファベット順に並びます（クリックで詳細へ）  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 Pattern:    
@@ -129,13 +131,13 @@ Pattern:
   x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/blob/master/Pattern/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.WaterDistributionManagementEPANET/Pattern/schema.json    
-  x-model-tags: ""    
+  x-model-tags: FIWARE4WATER    
   x-version: 0.0.1    
 ```  
 </details>    
 ## ペイロードの例  
-#### パターン NGSI-v2 のキーバリューの例  
-Key-ValuesとしてJSON-LD形式のPatternの例を示します。これは`options=keyValues`を使った場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### パターン NGSI-v2 キー値 例  
+ここでは、PatternをJSON-LD形式でkey-valuesとした例を示す。これは `options=keyValues` を使用した場合に NGSI-v2 と互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
   "id": "fbcb5fc8-8ca3-4533-a2eb-34bc89262190",  
@@ -154,8 +156,8 @@ Pattern:
   "startTime": "2020-02-20T17:43:00Z"  
 }  
 ```  
-#### パターン NGSI-v2 正規化された例  
-ここでは、正規化されたJSON-LD形式のPatternの例を示します。これは、オプションを使用しない場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### パターン NGSI-v2 正規化例  
+以下は、正規化されたJSON-LD形式のPatternの例である。これはオプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
     "id": "fbcb5fc8-8ca3-4533-a2eb-34bc89262190",  
@@ -181,72 +183,69 @@ Pattern:
     }  
 }  
 ```  
-#### パターン NGSI-LDのキーバリューの例  
-ここではPatternをkey-valuesとしてJSON-LD形式にした例を紹介します。これは、`options=keyValues`を使った場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### パターン NGSI-LD キー値の例  
+ここでは、PatternをJSON-LD形式でkey-valuesにした例を示します。これは `options=keyValues` を使用した場合に NGSI-LD と互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld"  
-  ],  
-  "createdAt": "2020-02-20T17:43:00Z",  
-  "description": "Open Text",  
-  "id": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533-a2eb-34bc89262190",  
-  "modifiedAt": "2020-02-20T17:43:00Z",  
-  "multipliers": [  
-    0.5692,  
-    0.4647,  
-    0.4385,  
-    0.3604,  
-    0.3098,  
-    0.3345  
-  ],  
-  "tag": "DMA1",  
-  "timeStep": 3600,  
-  "startTime": "2020-02-20T17:43:00Z",  
-  "type": "Pattern"  
-}  
-```  
-#### パターン NGSI-LDの正規化例  
-ここでは、正規化されたJSON-LD形式のPatternの例を示します。これはオプションを使用しない場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
-```json  
-{  
-  "id": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533-a2eb-34bc89262190",  
-  "type": "Pattern",  
-  "createdAt": "2020-02-20T17:43:00Z",  
-  "modifiedAt": "2020-02-20T17:43:00Z",  
-  "multipliers": {  
-    "type": "Property",  
-    "value": [  
-      0.5692,  
-      0.4647,  
-      0.4385,  
-      0.3604,  
-      0.3098,  
-      0.3345  
+    "id": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533-a2eb-34bc89262190",  
+    "type": "Pattern",  
+    "createdAt": "2020-02-20T17:43:00Z",  
+    "description": "Open Text",  
+    "modifiedAt": "2020-02-20T17:43:00Z",  
+    "multipliers": [  
+        0.5692,  
+        0.4647,  
+        0.4385,  
+        0.3604,  
+        0.3098,  
+        0.3345  
     ],  
-    "unitCode": "C62"  
-  },  
-  "timeStep": {  
-    "type": "Property",  
-    "value": 3600,  
-    "unitCode": "SEC"  
-  },  
-  "description": {  
-    "type": "Property",  
-    "value": "Open Text"  
-  },  
-  "startTime": {  
-    "type": "Property",  
-    "value": "00:00"  
-  },  
-  "tag": {  
-    "type": "Property",  
-    "value": "DMA1"  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld"  
-  ]  
+    "startTime": "2020-02-20T17:43:00Z",  
+    "tag": "DMA1",  
+    "timeStep": 3600,  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/context.jsonld"  
+    ]  
 }  
 ```  
-
-マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。
+#### パターン NGSI-LD 正規化例  
+以下は、正規化されたJSON-LD形式のPatternの例である。これはオプションを使用しない場合のNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+```json  
+{  
+    "id": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533-a2eb-34bc89262190",  
+    "type": "Pattern",  
+    "createdAt": "2020-02-20T17:43:00Z",  
+    "description": {  
+        "type": "Property",  
+        "value": "Open Text"  
+    },  
+    "modifiedAt": "2020-02-20T17:43:00Z",  
+    "multipliers": {  
+        "type": "Property",  
+        "value": [  
+            0.5692,  
+            0.4647,  
+            0.4385,  
+            0.3604,  
+            0.3098,  
+            0.3345  
+        ],  
+        "unitCode": "C62"  
+    },  
+    "startTime": {  
+        "type": "Property",  
+        "value": "00:00"  
+    },  
+    "tag": {  
+        "type": "Property",  
+        "value": "DMA1"  
+    },  
+    "timeStep": {  
+        "type": "Property",  
+        "value": 3600,  
+        "unitCode": "SEC"  
+    },  
+    "@context": []  
+}  
+```  
+マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
