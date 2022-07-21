@@ -1,12 +1,14 @@
-Entité : Courbe  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entité : Courbe  
 ===============  
 [Licence ouverte] (https://github.com/smart-data-models//dataModel.WaterDistributionManagementEPANET/blob/master/Curve/LICENSE.md)  
 [document généré automatiquement] (https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Description globale : **Cette entité contient une description harmonisée d'une courbe générique réalisée pour le domaine de la gestion des réseaux d'eau. Cette entité est principalement associée à la gestion verticale de l'eau et aux applications IoT connexes**.  
+version : 0.0.1  
 
 ## Liste des propriétés  
 
-- `address`: L'adresse postale  - `alternateName`: Un nom alternatif pour cet élément  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `curveType`: Type de courbe de l'entité. Enum : 'FLOW-HEAD, FLOW-EFFICIENCY, FLOW-HEADLOSS, LEVEL-VOLUME'.  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `description`: Une description de cet article  - `id`: Identifiant unique de l'entité  - `location`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une ligne, d'un polygone, d'un point multiple, d'une ligne multiple ou d'un polygone multiple.  - `name`: Le nom de cet élément.  - `owner`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'élément  - `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `tag`: Une chaîne de texte facultative utilisée pour affecter le tuyau à une catégorie, peut-être basée sur l'âge ou le matériau.  - `type`: Type d'entité NGSI-LD. Il doit être égal à Curve.  - `xData`: X points de données pour la courbe  - `yData`: Points de données Y pour la courbe    
+- `address`: L'adresse postale  - `alternateName`: Un nom alternatif pour cet élément  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `curveType`: Type de courbe de l'entité. Enum : 'FLOW-HEAD, FLOW-EFFICIENCY, FLOW-HEADLOSS, LEVEL-VOLUME'.  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `description`: Une description de cet article  - `id`: Identifiant unique de l'entité  - `location`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une ligne, d'un polygone, d'un point multiple, d'une ligne multiple ou d'un polygone multiple.  - `name`: Le nom de cet élément.  - `owner`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'article  - `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `tag`: Une chaîne de texte facultative utilisée pour affecter le tuyau à une catégorie, peut-être basée sur l'âge ou le matériau.  - `type`: Type d'entité NGSI-LD. Il doit être égal à Curve.  - `xData`: X points de données pour la courbe  - `yData`: Points de données Y pour la courbe    
 Propriétés requises  
 - `curveType`  - `id`  - `type`  - `xData`  - `yData`  ## Description des propriétés du modèle de données  
 Classés par ordre alphabétique (cliquez pour plus de détails)  
@@ -36,17 +38,21 @@ Curve:
         streetAddress:    
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
           type: string    
-      type: Property    
+      type: object    
       x-ngsi:    
         model: https://schema.org/address    
+        type: Property    
     alternateName:    
       description: 'An alternative name for this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     areaServed:    
       description: 'The geographic area where a service or offered item is provided'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     curveType:    
       description: 'Entity''s curve type. Enum:''FLOW-HEAD, FLOW-EFFICIENCY, FLOW-HEADLOSS, LEVEL-VOLUME'''    
       enum:    
@@ -54,21 +60,31 @@ Curve:
         - FLOW-EFFICIENCY    
         - FLOW-HEADLOSS    
         - LEVEL-VOLUME    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateCreated:    
       description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateModified:    
       description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     description:    
       description: 'A description of this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     id:    
       anyOf: &curve_-_properties_-_owner_-_items_-_anyof    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -80,7 +96,8 @@ Curve:
           format: uri    
           type: string    
       description: 'Unique identifier of the entity'    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
@@ -232,16 +249,21 @@ Curve:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      type: Geoproperty    
+      x-ngsi:    
+        type: Geoproperty    
     name:    
       description: 'The name of this item.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
         anyOf: *curve_-_properties_-_owner_-_items_-_anyof    
         description: 'Property. Unique identifier of the entity'    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     seeAlso:    
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
@@ -252,30 +274,40 @@ Curve:
           type: array    
         - format: uri    
           type: string    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     tag:    
       description: 'An optional text string used to assign the pipe to a category, perhaps one based on age or material'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     type:    
       description: 'NGSI-LD Entity Type. It must be equal to Curve.'    
       enum:    
         - Curve    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     xData:    
       description: 'X data points for the curve'    
       items:    
         type: number    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     yData:    
       description: 'Y data points for the curve'    
       items:    
         type: number    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
   required:    
     - id    
     - type    
@@ -283,6 +315,12 @@ Curve:
     - xData    
     - yData    
   type: object    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/blob/master/Curve/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/dataModel.WaterDistributionManagementEPANET/Curve/schema.json    
+  x-model-tags: FIWARE4WATER    
+  x-version: 0.0.1    
 ```  
 </details>    
 ## Exemples de charges utiles  
@@ -342,68 +380,65 @@ Curve:
     }  
 }  
 ```  
-#### Courbe des valeurs clés NGSI-LD Exemple  
+#### Courbe Valeurs clés NGSI-LD Exemple  
 Voici un exemple d'une courbe au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-LD en utilisant `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld"  
-  ],  
-  "id": "fAM-8ca3-4533-a2eb-12015",  
-  "type": "Curve",  
-  "curveType": "FLOW-HEAD",  
-  "xData": [  
-    0.5692,  
-    0.4647  
-  ],  
-  "yData": [  
-    0.5692,  
-    0.4647  
-  ],  
-  "description": "Free Text",  
-  "tag": "DMA1"  
+    "id": "fAM-8ca3-4533-a2eb-12015",  
+    "type": "Curve",  
+    "curveType": "FLOW-HEAD",  
+    "description": "Free Text",  
+    "tag": "DMA1",  
+    "xData": [  
+        0.5692,  
+        0.4647  
+    ],  
+    "yData": [  
+        0.5692,  
+        0.4647  
+    ],  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/context.jsonld"  
+    ]  
 }  
 ```  
 #### Courbe NGSI-LD normalisée Exemple  
 Voici un exemple de Courbe au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
-  "id": "urn:ngsi-ld:Curve:fAM-8ca3-4533-a2eb-12015",  
-  "type": "Curve",  
-  "createdAt": "2020-02-16T17:43:00Z",  
-  "modifiedAt": "2020-02-16T17:43:00Z",  
-  "curveType": {  
-    "type": "Property",  
-    "value": "FLOW-HEAD"  
-  },  
-  "xData": {  
-    "type": "Property",  
-    "value": [  
-      0.5692,  
-      0.4647  
-    ],  
-    "unitCode": "C62"  
-  },  
-  "yData": {  
-    "type": "Property",  
-    "value": [  
-      0.5692,  
-      0.4647  
-    ],  
-    "unitCode": "C62"  
-  },  
-  "description": {  
-    "type": "Property",  
-    "value": "Free Text"  
-  },  
-  "tag": {  
-    "type": "Property",  
-    "value": "DMA1"  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld"  
-  ]  
+    "id": "urn:ngsi-ld:Curve:fAM-8ca3-4533-a2eb-12015",  
+    "type": "Curve",  
+    "createdAt": "2020-02-16T17:43:00Z",  
+    "curveType": {  
+        "type": "Property",  
+        "value": "FLOW-HEAD"  
+    },  
+    "description": {  
+        "type": "Property",  
+        "value": "Free Text"  
+    },  
+    "modifiedAt": "2020-02-16T17:43:00Z",  
+    "tag": {  
+        "type": "Property",  
+        "value": "DMA1"  
+    },  
+    "xData": {  
+        "type": "Property",  
+        "value": [  
+            0.5692,  
+            0.4647  
+        ],  
+        "unitCode": "C62"  
+    },  
+    "yData": {  
+        "type": "Property",  
+        "value": [  
+            0.5692,  
+            0.4647  
+        ],  
+        "unitCode": "C62"  
+    },  
+    "@context": []  
 }  
 ```  
-
-Voir [FAQ 10](https://smartdatamodels.org/index.php/faqs/) pour obtenir une réponse sur la façon de traiter les unités de magnitude.
+Voir [FAQ 10](https://smartdatamodels.org/index.php/faqs/) pour obtenir une réponse sur la façon de traiter les unités de magnitude.  
