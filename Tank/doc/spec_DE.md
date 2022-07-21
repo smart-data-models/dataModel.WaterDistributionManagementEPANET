@@ -1,12 +1,14 @@
-Entität: Tank  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entität: Tank  
 =============  
 [Offene Lizenz](https://github.com/smart-data-models//dataModel.WaterDistributionManagementEPANET/blob/master/Tank/LICENSE.md)  
 [Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-Globale Beschreibung: **Diese Entität enthält eine harmonisierte Beschreibung eines generischen Tanks, der für die Domäne Wassernetzmanagement hergestellt wurde. Diese Entität ist in erster Linie mit der vertikalen Wasserwirtschaft und damit verbundenen IoT-Anwendungen verbunden.**  
+Globale Beschreibung: **Diese Einheit enthält eine harmonisierte Beschreibung eines generischen Tanks, der für den Bereich Wassernetzmanagement hergestellt wurde. Diese Entität ist in erster Linie mit der vertikalen Wasserwirtschaft und damit verbundenen IoT-Anwendungen verbunden.**  
+Version: 0.0.1  
 
 ## Liste der Eigenschaften  
 
-- `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `bulkReactionCoefficient`: Der Massenreaktionskoeffizient, der für die Modellierung von Reaktionen im Tank verwendet wird. Alle Einheiten werden im [CEFACT](https://www.unece.org/cefact.html)-Code akzeptiert.  - `dataProvider`: Eine Folge von Zeichen, die den Anbieter der harmonisierten Dateneinheit identifiziert.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `elevation`: Die Höhe über einer gemeinsamen Referenz des Tanks. Alle Einheiten werden im Code [CEFACT](https://www.unece.org/cefact.html) akzeptiert.  - `hasInlet`: Eine Beziehung, die die Wassereinlasspunkte des Reservoirs anzeigt  - `hasOutlet`: Eine Beziehung, die die Wasserauslasspunkte des Reservoirs anzeigt  - `head`: Beobachtete Förderhöhe am Knotenpunkt (Abzweigung, Tank oder Reservoir)  - `id`: Eindeutiger Bezeichner der Entität  - `initLevel`: Die Höhe der Wasseroberfläche über der Bodenhöhe des Tanks zu Beginn der Simulation. Alle Einheiten werden im Code [CEFACT](https://www.unece.org/cefact.html) akzeptiert.  - `initialQuality`: Wasserqualitätsniveau im Tank zu Beginn der Simulation. Alle Einheiten werden im Code [CEFACT](https://www.unece.org/cefact.html) akzeptiert.  - `level`: Beobachteter Pegel im Element des Netzwerks  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `maxLevel`: Die Höhe der Wasseroberfläche über der Bodenhöhe des Tanks zu Beginn der Simulation. Alle Einheiten werden im Code [CEFACT](https://www.unece.org/cefact.html) akzeptiert.  - `minLevel`: Der Mindestpegel, auf den das Wasser im Tank sinken kann. Alle Einheiten werden im Code [CEFACT](https://www.unece.org/cefact.html) akzeptiert.  - `minVolume`: Das Wasservolumen im Tank, wenn dieser seinen minimalen Füllstand erreicht hat. Alle Einheiten werden im Code [CEFACT](https://www.unece.org/cefact.html) akzeptiert.  - `mixingFraction`: Der Anteil des Gesamtvolumens des Tanks, der das Einlass-Auslass-Kompartiment des Zwei-Kompartiment-Mischmodells (2COMP) umfasst. Alle Einheiten werden im [CEFACT](https://www.unece.org/cefact.html)-Code akzeptiert.  - `mixingModel`: Eine Untereigenschaft der Eigenschaft sourceCategory. Enum:'2COMP, FIFO, LIFO, MIXED'  - `name`: Der Name dieses Elements.  - `nominalDiameter`: Der Durchmesser des Tanks. Alle Einheiten werden im Code [CEFACT](https://www.unece.org/cefact.html) akzeptiert.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Ids der Eigentümer verweist  - `pressure`: Beobachteter Druck am Knotenpunkt (Verbindungsstelle, Tank oder Reservoir)  - `quality`: Beobachtete Qualität in der Netzwerkkomponente  - `seeAlso`: Liste von uri, die auf zusätzliche Ressourcen über das Element verweist  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL zum Quellobjekt.  - `sourceCategory`: Beschreibung der Qualität des Quellflusses, der an einem bestimmten Knoten in das Netzwerk eintritt.  - `sourceMassInflow`: Eigenschaft. Beobachteter Quell-Massenzufluss am Knoten (Knotenpunkt, Tank oder Reservoir)  - `supply`: Beobachtete Versorgung am Knoten (Abzweig, Tank oder Reservoir)  - `tag`: Eine optionale Textzeichenkette, die dazu dient, das Rohr einer Kategorie zuzuordnen, z. B. basierend auf Alter oder Material  - `type`: NGSI-LD-Entitätstyp. Es muss Tank sein  - `volumeCurve`: Die ID-Kennzeichnung einer Kurve, die zur Beschreibung der Beziehung zwischen Tankvolumen und Wasserstand verwendet wird    
+- `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `bulkReactionCoefficient`: Der Massenreaktionskoeffizient, der für die Modellierung von Reaktionen im Tank verwendet wird. Alle Einheiten werden im Code [CEFACT](https://www.unece.org/cefact.html) akzeptiert.  - `dataProvider`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `elevation`: Die Höhe über einer gemeinsamen Referenz des Tanks. Alle Einheiten werden im Code [CEFACT](https://www.unece.org/cefact.html) akzeptiert.  - `hasInlet`: Eine Beziehung, die die Wassereinlasspunkte des Stausees angibt  - `hasOutlet`: Eine Beziehung, die die Wasseraustrittsstellen des Stausees angibt  - `head`: Beobachtete Förderhöhe am Knotenpunkt (Kreuzung, Tank oder Reservoir)  - `id`: Eindeutiger Bezeichner der Entität  - `initLevel`: Die Höhe der Wasseroberfläche über der Bodenhöhe des Tanks zu Beginn der Simulation. Alle Einheiten werden im Code [CEFACT](https://www.unece.org/cefact.html) akzeptiert.  - `initialQuality`: Niveau der Wasserqualität im Tank zu Beginn der Simulation. Alle Einheiten werden im Code [CEFACT](https://www.unece.org/cefact.html) akzeptiert.  - `level`: Beobachteter Pegel in dem Element des Netzes  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `maxLevel`: Die Höhe der Wasseroberfläche über der Bodenhöhe des Tanks zu Beginn der Simulation. Alle Einheiten werden im Code [CEFACT](https://www.unece.org/cefact.html) akzeptiert.  - `minLevel`: Der Mindestpegel, auf den das Wasser im Tank sinken kann. Alle Einheiten werden im Code [CEFACT](https://www.unece.org/cefact.html) akzeptiert.  - `minVolume`: Das Wasservolumen im Tank, wenn dieser seinen Mindeststand erreicht hat. Alle Einheiten werden im Code [CEFACT](https://www.unece.org/cefact.html) akzeptiert.  - `mixingFraction`: Der Anteil des Gesamtvolumens des Tanks, der das Einlass-Auslass-Kompartiment des Zwei-Kompartiment-Mischmodells (2COMP) umfasst. Alle Einheiten werden im Code [CEFACT](https://www.unece.org/cefact.html) akzeptiert.  - `mixingModel`: Eine Unterebeneigenschaft der Eigenschaft sourceCategory. Enum:'2COMP, FIFO, LIFO, MIXED'  - `name`: Der Name dieses Artikels.  - `nominalDiameter`: Der Durchmesser des Tanks. Alle Einheiten werden im Code [CEFACT](https://www.unece.org/cefact.html) akzeptiert.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `pressure`: Beobachteter Druck am Knotenpunkt (Verbindungsstelle, Tank oder Reservoir)  - `quality`: Beobachtete Qualität in der Netzkomponente  - `seeAlso`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Es wird empfohlen, den voll qualifizierten Domänennamen des Quellanbieters oder die URL des Quellobjekts zu verwenden.  - `sourceCategory`: Beschreibung der Qualität des Quellstroms, der an einem bestimmten Knoten in das Netz eintritt.  - `sourceMassInflow`: Beobachteter Massezufluss der Quelle am Knotenpunkt (Knotenpunkt, Tank oder Reservoir)  - `supply`: Beobachtete Versorgung am Knotenpunkt (Anschlussstelle, Tank oder Reservoir)  - `tag`: Eine optionale Textzeichenfolge, die dazu dient, das Rohr einer Kategorie zuzuordnen, z. B. einer Kategorie, die auf Alter oder Material basiert  - `type`: NGSI-LD Entitätstyp. Es muss Tank sein  - `volumeCurve`: Die Kennzeichnung einer Kurve, die zur Beschreibung des Verhältnisses zwischen Tankvolumen und Wasserstand verwendet wird    
 Erforderliche Eigenschaften  
 - `id`  - `location`  - `type`  ## Datenmodell Beschreibung der Eigenschaften  
 Alphabetisch sortiert (für Details anklicken)  
@@ -36,51 +38,69 @@ Tank:
         streetAddress:    
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
           type: string    
-      type: Property    
+      type: object    
       x-ngsi:    
         model: https://schema.org/address    
+        type: Property    
     alternateName:    
       description: 'An alternative name for this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     areaServed:    
       description: 'The geographic area where a service or offered item is provided'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     bulkReactionCoefficient:    
       description: 'The bulk reaction coefficient used for modelling reactions in the tank. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'    
-      type: Property    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Number    
+        type: Property    
         units: 1/day    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateCreated:    
       description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateModified:    
       description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     description:    
       description: 'A description of this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     elevation:    
       description: 'The elevation above some common reference of the Tank. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'    
-      type: Property    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Number    
+        type: Property    
         units: metre    
     hasInlet:    
       description: 'A relationship indicating the water inlet points of the Reservoir'    
       format: uri    
-      type: Relationship    
+      type: string    
+      x-ngsi:    
+        type: Relationship    
     hasOutlet:    
       description: 'A relationship indicating the water outlet points of the Reservoir'    
       format: uri    
-      type: Relationship    
+      type: string    
+      x-ngsi:    
+        type: Relationship    
     head:    
       description: 'Observed head at the node (junction, tank or reservoir)'    
       properties:    
@@ -96,7 +116,9 @@ Tank:
               type: string    
         value:    
           type: number    
-      type: Property    
+      type: object    
+      x-ngsi:    
+        type: Property    
     id:    
       anyOf: &tank_-_properties_-_owner_-_items_-_anyof    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -108,18 +130,21 @@ Tank:
           format: uri    
           type: string    
       description: 'Unique identifier of the entity'    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     initLevel:    
       description: 'The height of the water surface above the bottom elevation of the tank at the start of the simulation. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'    
-      type: Property    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Number    
+        type: Property    
         units: metre    
     initialQuality:    
       description: 'Water quality level in the tank at the start of the simulation. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'    
-      type: Property    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Number    
+        type: Property    
         units: mg/L    
     level:    
       description: 'Observed level in the element of the network'    
@@ -136,7 +161,9 @@ Tank:
               type: string    
         value:    
           type: number    
-      type: Property    
+      type: object    
+      x-ngsi:    
+        type: Property    
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
@@ -288,30 +315,35 @@ Tank:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      type: Geoproperty    
+      x-ngsi:    
+        type: Geoproperty    
     maxLevel:    
       description: 'The height of the water surface above the bottom elevation of the tank at the start of the simulation. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'    
-      type: Property    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Number    
+        type: Property    
         units: metre    
     minLevel:    
       description: 'The minimum level that water in the tank can drop to. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'    
-      type: Property    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Number    
+        type: Property    
         units: metre    
     minVolume:    
       description: 'The volume of water in the tank when it is at its minimum level. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'    
-      type: Property    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Number    
+        type: Property    
         units: 'cubic metre'    
     mixingFraction:    
       description: 'The fraction of the tank''s total volume that comprises the inlet-outlet compartment of the two-compartment (2COMP) mixing model. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'    
-      type: Property    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Number    
+        type: Property    
         units: 'No unit'    
     mixingModel:    
       description: 'A sub-property of the Property sourceCategory. Enum:''2COMP, FIFO, LIFO, MIXED'''    
@@ -320,24 +352,30 @@ Tank:
         - FIFO    
         - LIFO    
         - MIXED    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     name:    
       description: 'The name of this item.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     nominalDiameter:    
       description: 'The diameter of the tank. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'    
-      type: Property    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Number    
+        type: Property    
         units: Metre    
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
         anyOf: *tank_-_properties_-_owner_-_items_-_anyof    
         description: 'Property. Unique identifier of the entity'    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     pressure:    
       description: 'Observed pressure at the node (junction, tank or reservoir)'    
       properties:    
@@ -353,7 +391,9 @@ Tank:
               type: string    
         value:    
           type: number    
-      type: Property    
+      type: object    
+      x-ngsi:    
+        type: Property    
     quality:    
       description: 'Observed quality in the network component'    
       properties:    
@@ -369,7 +409,9 @@ Tank:
               type: string    
         value:    
           type: number    
-      type: Property    
+      type: object    
+      x-ngsi:    
+        type: Property    
     seeAlso:    
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
@@ -380,10 +422,13 @@ Tank:
           type: array    
         - format: uri    
           type: string    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     sourceCategory:    
       description: 'Description of the quality of source flow entering the network at a specific node.'    
       properties:    
@@ -409,11 +454,12 @@ Tank:
             - FLOWPACED    
             - SETPOINT    
           type: string    
-      type: Property    
+      type: object    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     sourceMassInflow:    
-      description: 'Property.. Observed source mass inflow at the node (junction, tank or reservoir)'    
+      description: 'Observed source mass inflow at the node (junction, tank or reservoir)'    
       properties:    
         observedBy:    
           anyOf:    
@@ -428,6 +474,8 @@ Tank:
         value:    
           type: number    
       type: object    
+      x-ngsi:    
+        type: Property    
     supply:    
       description: 'Observed supply at the node (junction, tank or reservoir)'    
       properties:    
@@ -443,17 +491,22 @@ Tank:
               type: string    
         value:    
           type: number    
-      type: Property    
+      type: object    
+      x-ngsi:    
+        type: Property    
     tag:    
       description: 'An optional text string used to assign the pipe to a category, perhaps one based on age or material'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     type:    
       description: 'NGSI-LD Entity Type. It has to be Tank'    
       enum:    
         - Tank    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     volumeCurve:    
       anyOf:    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -465,17 +518,24 @@ Tank:
           format: uri    
           type: string    
       description: 'The ID label of a curve used to describe the relation between tank volume and water level'    
-      type: Relationship    
+      x-ngsi:    
+        type: Relationship    
   required:    
     - id    
     - type    
     - location    
   type: object    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/blob/master/Tank/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/dataModel.WaterDistributionManagementEPANET/Tank/schema.json    
+  x-model-tags: FIWARE4WATER    
+  x-version: 0.0.1    
 ```  
 </details>    
 ## Beispiel-Nutzlasten  
-#### Tank NGSI-v2 key-values Beispiel  
-Hier ist ein Beispiel für einen Tank im JSON-LD-Format als Key-Values. Dies ist kompatibel mit NGSI-v2 bei Verwendung von `options=keyValues` und liefert die Kontextdaten einer einzelnen Entität.  
+#### Tank NGSI-v2 Schlüsselwerte Beispiel  
+Hier ist ein Beispiel für einen Tank im JSON-LD-Format als Schlüsselwerte. Dies ist mit NGSI-v2 kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
     "id": "1863179e-3968-4493-9167-ee21f880cc02",  
@@ -509,7 +569,7 @@ Tank:
 }  
 ```  
 #### Tank NGSI-v2 normalisiert Beispiel  
-Hier ist ein Beispiel für einen Tank im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-v2, wenn keine Optionen verwendet werden, und gibt die Kontextdaten einer einzelnen Entität zurück.  
+Hier ist ein Beispiel für einen Tank im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-v2, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
   "id": "1863179e-3968-4493-9167-ee21f880cc02",  
@@ -629,213 +689,210 @@ Tank:
   }  
 }  
 ```  
-#### Tank NGSI-LD-Schlüsselwerte Beispiel  
-Hier ist ein Beispiel für einen Tank im JSON-LD-Format als Key-Values. Dies ist kompatibel mit NGSI-LD bei Verwendung von `options=keyValues` und liefert die Kontextdaten einer einzelnen Entität.  
+#### Tank NGSI-LD Schlüsselwerte Beispiel  
+Hier ist ein Beispiel für einen Tank im JSON-LD-Format als Schlüsselwerte. Dies ist mit NGSI-LD kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld"  
-  ],  
-  "bulkReactionCoefficient": 0.7,  
-  "createdAt": "2020-03-13T15:42:00Z",  
-  "description": "Free Text",  
-  "elevation": 112.9,  
-  "id": "urn:ngsi-ld:Tank:1863179e-3968-4493-9167-ee21f880cc02",  
-  "initLevel": 3,  
-  "initialQuality": 0.5,  
-  "location": {  
-    "coordinates": [  
-      24.30623,  
-      60.07966  
-    ],  
-    "type": "Point"  
-  },  
-  "maxLevel": 6.75,  
-  "minLevel": 0,  
-  "minVolume": 0,  
-  "mixingFraction": 0.7,  
-  "mixingModel": "MIXED",  
-  "modifiedAt": "2020-03-13T15:45:00Z",  
-  "nominalDiameter": 13.73,  
-  "sourceCategory": "category1",  
-  "tag": "DMA1",  
-  "type": "Tank",  
-  "volumeCurve": "urn:ngsi-ld:Curve:fAM-8ca3-4533-a2eb-12015"  
+    "id": "urn:ngsi-ld:Tank:1863179e-3968-4493-9167-ee21f880cc02",  
+    "type": "Tank",  
+    "bulkReactionCoefficient": 0.7,  
+    "createdAt": "2020-03-13T15:42:00Z",  
+    "description": "Free Text",  
+    "elevation": 112.9,  
+    "initLevel": 3,  
+    "initialQuality": 0.5,  
+    "location": {  
+        "coordinates": [  
+            24.30623,  
+            60.07966  
+        ],  
+        "type": "Point"  
+    },  
+    "maxLevel": 6.75,  
+    "minLevel": 0,  
+    "minVolume": 0,  
+    "mixingFraction": 0.7,  
+    "mixingModel": "MIXED",  
+    "modifiedAt": "2020-03-13T15:45:00Z",  
+    "nominalDiameter": 13.73,  
+    "sourceCategory": "category1",  
+    "tag": "DMA1",  
+    "volumeCurve": "urn:ngsi-ld:Curve:fAM-8ca3-4533-a2eb-12015",  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/context.jsonld"  
+    ]  
 }  
 ```  
 #### Tank NGSI-LD normalisiert Beispiel  
-Hier ist ein Beispiel für einen Tank im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-LD, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+Hier ist ein Beispiel für einen Tank im JSON-LD-Format in normalisierter Form. Dies ist mit NGSI-LD kompatibel, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
-  "id": "urn:ngsi-ld:Tank:1863179e-3968-4493-9167-ee21f880cc02",  
-  "type": "Tank",  
-  "location": {  
-    "type": "GeoProperty",  
-    "value": {  
-      "type": "Point",  
-      "coordinates": [  
-        24.30623,  
-        60.07966  
-      ]  
-    }  
-  },  
-  "elevation": {  
-    "type": "Property",  
-    "value": 112.9,  
-    "unitCode": "MTR"  
-  },  
-  "initLevel": {  
-    "type": "Property",  
-    "value": 3,  
-    "unitCode": "MTR"  
-  },  
-  "minLevel": {  
-    "type": "Property",  
-    "value": 0,  
-    "unitCode": "MTR"  
-  },  
-  "maxLevel": {  
-    "type": "Property",  
-    "value": 6.75,  
-    "unitCode": "MTR"  
-  },  
-  "minVolume": {  
-    "type": "Property",  
-    "value": 0,  
-    "unitCode": "MTQ"  
-  },  
-  "nominalDiameter": {  
-    "type": "Property",  
-    "value": 13.73,  
-    "unitCode": "MTR"  
-  },  
-  "description": {  
-    "type": "Property",  
-    "value": "Free Text"  
-  },  
-  "initialQuality": {  
-    "type": "Property",  
-    "value": 0.5,  
-    "unitCode": "M1"  
-  },  
-  "sourceCategory": {  
-    "type": "Property",  
-    "value": {  
-      "type": "Property",  
-      "value": "category1"  
+    "id": "urn:ngsi-ld:Tank:1863179e-3968-4493-9167-ee21f880cc02",  
+    "type": "Tank",  
+    "bulkReactionCoefficient": {  
+        "type": "Property",  
+        "value": 0.7,  
+        "unitCode": "E91"  
     },  
-    "sourceType": {  
-      "type": "Property",  
-      "value": "MASS"  
+    "description": {  
+        "type": "Property",  
+        "value": "Free Text"  
     },  
-    "sourceQuality": {  
-      "type": "Property",  
-      "value": 1.2,  
-      "unitCode": "M1"  
+    "elevation": {  
+        "type": "Property",  
+        "value": 112.9,  
+        "unitCode": "MTR"  
     },  
-    "sourcePattern": {  
-      "type": "Relationship",  
-      "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533-a2eb-34bc89262190"  
-    }  
-  },  
-  "mixingModel": {  
-    "type": "Property",  
-    "value": "MIXED"  
-  },  
-  "volumeCurve": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:Curve:fAM-8ca3-4533-a2eb-12015"  
-  },  
-  "mixingFraction": {  
-    "type": "Property",  
-    "value": 0.7,  
-    "unitCode": "C62"  
-  },  
-  "bulkReactionCoefficient": {  
-    "type": "Property",  
-    "value": 0.7,  
-    "unitCode": "E91"  
-  },  
-  "tag": {  
-    "type": "Property",  
-    "value": "DMA1"  
-  },  
-  "level": {  
-    "type": "Property",  
-    "value": {  
-      "type": "Property",  
-      "value": 20,  
-      "unitCode": "MTR"  
+    "head": {  
+        "type": "Property",  
+        "value": {  
+            "type": "Property",  
+            "value": 20,  
+            "unitCode": "MTR"  
+        },  
+        "observedBy": {  
+            "type": "Relationship",  
+            "object": "urn:ngsi-ld:Device:device-9845A"  
+        }  
     },  
-    "observedBy": {  
-      "type": "Relationship",  
-      "object": "urn:ngsi-ld:Device:device-9845A"  
-    }  
-  },  
-  "pressure": {  
-    "type": "Property",  
-    "value": {  
-      "type": "Property",  
-      "value": 20,  
-      "unitCode": "MTR"  
+    "initLevel": {  
+        "type": "Property",  
+        "value": 3,  
+        "unitCode": "MTR"  
     },  
-    "observedBy": {  
-      "type": "Relationship",  
-      "object": "urn:ngsi-ld:Device:device-9845A"  
-    }  
-  },  
-  "supply": {  
-    "type": "Property",  
-    "value": {  
-      "type": "Property",  
-      "value": 150,  
-      "unitCode": "LTR"  
+    "initialQuality": {  
+        "type": "Property",  
+        "value": 0.5,  
+        "unitCode": "M1"  
     },  
-    "observedBy": {  
-      "type": "Relationship",  
-      "object": "urn:ngsi-ld:Device:device-9845A"  
-    }  
-  },  
-  "head": {  
-    "type": "Property",  
-    "value": {  
-      "type": "Property",  
-      "value": 20,  
-      "unitCode": "MTR"  
+    "level": {  
+        "type": "Property",  
+        "value": {  
+            "type": "Property",  
+            "value": 20,  
+            "unitCode": "MTR"  
+        },  
+        "observedBy": {  
+            "type": "Relationship",  
+            "object": "urn:ngsi-ld:Device:device-9845A"  
+        }  
     },  
-    "observedBy": {  
-      "type": "Relationship",  
-      "object": "urn:ngsi-ld:Device:device-9845A"  
-    }  
-  },  
-  "quality": {  
-    "type": "Property",  
-    "value": {  
-      "type": "Property",  
-      "value": 0.5,  
-      "unitCode": "M1"  
+    "location": {  
+        "type": "GeoProperty",  
+        "value": {  
+            "type": "Point",  
+            "coordinates": [  
+                24.30623,  
+                60.07966  
+            ]  
+        }  
     },  
-    "observedBy": {  
-      "type": "Relationship",  
-      "object": "urn:ngsi-ld:Device:device-9845A"  
-    }  
-  },  
-  "sourceMassInflow": {  
-    "type": "Property",  
-    "value": {  
-      "type": "Property",  
-      "value": 100,  
-      "unitCode": "F27"  
+    "maxLevel": {  
+        "type": "Property",  
+        "value": 6.75,  
+        "unitCode": "MTR"  
     },  
-    "observedBy": {  
-      "type": "Relationship",  
-      "object": "urn:ngsi-ld:Device:device-9845A"  
-    }  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld"  
-  ]  
+    "minLevel": {  
+        "type": "Property",  
+        "value": 0,  
+        "unitCode": "MTR"  
+    },  
+    "minVolume": {  
+        "type": "Property",  
+        "value": 0,  
+        "unitCode": "MTQ"  
+    },  
+    "mixingFraction": {  
+        "type": "Property",  
+        "value": 0.7,  
+        "unitCode": "C62"  
+    },  
+    "mixingModel": {  
+        "type": "Property",  
+        "value": "MIXED"  
+    },  
+    "nominalDiameter": {  
+        "type": "Property",  
+        "value": 13.73,  
+        "unitCode": "MTR"  
+    },  
+    "pressure": {  
+        "type": "Property",  
+        "value": {  
+            "type": "Property",  
+            "value": 20,  
+            "unitCode": "MTR"  
+        },  
+        "observedBy": {  
+            "type": "Relationship",  
+            "object": "urn:ngsi-ld:Device:device-9845A"  
+        }  
+    },  
+    "quality": {  
+        "type": "Property",  
+        "value": {  
+            "type": "Property",  
+            "value": 0.5,  
+            "unitCode": "M1"  
+        },  
+        "observedBy": {  
+            "type": "Relationship",  
+            "object": "urn:ngsi-ld:Device:device-9845A"  
+        }  
+    },  
+    "sourceCategory": {  
+        "type": "Property",  
+        "value": {  
+            "type": "Property",  
+            "value": "category1"  
+        },  
+        "sourceType": {  
+            "type": "Property",  
+            "value": "MASS"  
+        },  
+        "sourceQuality": {  
+            "type": "Property",  
+            "value": 1.2,  
+            "unitCode": "M1"  
+        },  
+        "sourcePattern": {  
+            "type": "Relationship",  
+            "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533-a2eb-34bc89262190"  
+        }  
+    },  
+    "sourceMassInflow": {  
+        "type": "Property",  
+        "value": {  
+            "type": "Property",  
+            "value": 100,  
+            "unitCode": "F27"  
+        },  
+        "observedBy": {  
+            "type": "Relationship",  
+            "object": "urn:ngsi-ld:Device:device-9845A"  
+        }  
+    },  
+    "supply": {  
+        "type": "Property",  
+        "value": {  
+            "type": "Property",  
+            "value": 150,  
+            "unitCode": "LTR"  
+        },  
+        "observedBy": {  
+            "type": "Relationship",  
+            "object": "urn:ngsi-ld:Device:device-9845A"  
+        }  
+    },  
+    "tag": {  
+        "type": "Property",  
+        "value": "DMA1"  
+    },  
+    "volumeCurve": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:Curve:fAM-8ca3-4533-a2eb-12015"  
+    },  
+    "@context": []  
 }  
 ```  
-
-Siehe [FAQ 10](https://smartdatamodels.org/index.php/faqs/), um eine Antwort auf die Frage zu erhalten, wie man mit Größeneinheiten umgeht
+Siehe [FAQ 10] (https://smartdatamodels.org/index.php/faqs/), um eine Antwort auf die Frage zu erhalten, wie man mit Größeneinheiten umgeht  
