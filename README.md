@@ -1,5 +1,5 @@
 # dataModel.WaterDistributionManagementEPANET
-These data models describe entities useful for dealing with Water Network Management data. These entities are primarily derived from the EPANET platform.
+These data models describe entities useful for dealing with Water WaterNetwork Management data. These entities are primarily derived from the EPANET platform.
 
 ### List of data models
 
@@ -7,8 +7,6 @@ The following entity types are available:
 - [Curve](https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/blob/master/Curve/README.md). This entity contains a harmonised description of a generic curve made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.
 
 - [Junction](https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/blob/master/Junction/README.md). This entity contains a harmonised description of a generic junction made for the Water Network Management domain. This entity is primarily associated with the water network management vertical and related IoT applications.
-
-- [Network](https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/blob/master/Network/README.md). This entity contains a harmonised description of a generic network made for the Water Network Management domain. This entity is primarily associated with the water network management vertical and related IoT applications.
 
 - [Pattern](https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/blob/master/Pattern/README.md). This entity contains a harmonised description of a generic pattern made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.
 
@@ -25,6 +23,8 @@ The following entity types are available:
 - [Tank](https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/blob/master/Tank/README.md). This entity contains a harmonised description of a generic tank made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.
 
 - [Valve](https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/blob/master/Valve/README.md). This entity contains a harmonised description of a generic Valve made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.
+
+- [WaterNetwork](https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/blob/master/WaterNetwork/README.md). This entity contains a harmonised description of a generic network made for the Water Network Management domain. This entity is primarily associated with the water network management vertical and related IoT applications.
 
 
 
