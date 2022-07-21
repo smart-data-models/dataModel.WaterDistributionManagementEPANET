@@ -1,12 +1,14 @@
-Entity: Junction  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entity: Junction  
 ================  
 [Open License](https://github.com/smart-data-models//dataModel.WaterDistributionManagementEPANET/blob/master/Junction/LICENSE.md)  
 [document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Global description: **This entity contains a harmonised description of a generic junction made for the Water Network Management domain. This entity is primarily associated with the water network management vertical and related IoT applications.**  
+version: 0.0.1  
 
 ## List of properties  
 
-- `address`: The mailing address  - `alternateName`: An alternative name for this item  - `areaServed`: The geographic area where a service or offered item is provided  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `demandCategory`: Allows base demands and time patterns to be assigned to other categories of users.  - `description`: A description of this item  - `elevation`: The elevation above some common reference of the junction. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code  - `emitterCoefficient`: Discharge coefficient for emitter (sprinkler or nozzle) placed at junction. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code  - `head`: Observed head at the node (junction, tank or reservoir)  - `id`: Unique identifier of the entity  - `initialQuality`: Initial quality in the network component  - `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `name`: The name of this item.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `pressure`: Observed pressure at the node (junction, tank or reservoir)  - `quality`: Observed quality in the network component  - `seeAlso`: list of uri pointing to additional resources about the item  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `sourceCategory`: Description of the quality of source flow entering the network at a specific node.  - `sourceMassInflow`: Property.. Observed source mass inflow at the node (junction, tank or reservoir)  - `supply`: Observed supply at the node (junction, tank or reservoir)  - `tag`: An optional text string used to assign the pipe to a category, perhaps one based on age or material  - `type`: NGSI-LD Entity Type. It has to be Junction    
+- `address`: The mailing address  - `alternateName`: An alternative name for this item  - `areaServed`: The geographic area where a service or offered item is provided  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `demandCategory`: Allows base demands and time patterns to be assigned to other categories of users.  - `description`: A description of this item  - `elevation`: The elevation above some common reference of the junction. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code  - `emitterCoefficient`: Discharge coefficient for emitter (sprinkler or nozzle) placed at junction. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code  - `head`: Observed head at the node (junction, tank or reservoir)  - `id`: Unique identifier of the entity  - `initialQuality`: Initial quality in the network component  - `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `name`: The name of this item.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `pressure`: Observed pressure at the node (junction, tank or reservoir)  - `quality`: Observed quality in the network component  - `seeAlso`: list of uri pointing to additional resources about the item  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `sourceCategory`: Description of the quality of source flow entering the network at a specific node.  - `sourceMassInflow`: Observed source mass inflow at the node (junction, tank or reservoir)  - `supply`: Observed supply at the node (junction, tank or reservoir)  - `tag`: An optional text string used to assign the pipe to a category, perhaps one based on age or material  - `type`: NGSI-LD Entity Type. It has to be Junction    
 Required properties  
 - `id`  - `type`  ## Data Model description of properties  
 Sorted alphabetically (click for details)  
@@ -408,7 +410,7 @@ Junction:
         model: https://schema.org/Text    
         type: Property    
     sourceMassInflow:    
-      description: 'Property.. Observed source mass inflow at the node (junction, tank or reservoir)'    
+      description: 'Observed source mass inflow at the node (junction, tank or reservoir)'    
       properties:    
         observedBy:    
           anyOf:    
@@ -423,6 +425,8 @@ Junction:
         value:    
           type: number    
       type: object    
+      x-ngsi:    
+        type: Property    
     supply:    
       description: 'Observed supply at the node (junction, tank or reservoir)'    
       properties:    
@@ -458,6 +462,12 @@ Junction:
     - id    
     - type    
   type: object    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/blob/master/Junction/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/dataModel.WaterDistributionManagementEPANET/Junction/schema.json    
+  x-model-tags: FIWARE4WATER    
+  x-version: 0.0.1    
 ```  
 </details>    
 ## Example payloads    
@@ -588,166 +598,163 @@ Junction:
 Here is an example of a Junction in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld"  
-  ],  
-  "createdAt": "2020-02-20T15:42:00Z",  
-  "demandCategory": "agriculture demand",  
-  "description": "This entity contains a harmonised description of a Junction",  
-  "elevation": 105.8,  
-  "emitterCoefficient": 0.526,  
-  "id": "urn:ngsi-ld:Junction:63fe7d79-0d4c-4da9-b7d0-3340efa0656a",  
-  "initialQuality": 0.5,  
-  "location": {  
-    "coordinates": [  
-      24.30623,  
-      60.07966  
-    ],  
-    "type": "Point"  
-  },  
-  "modifiedAt": "2020-02-20T15:45:00Z",  
-  "sourceCategory": "CategoryX",  
-  "tag": "DMA1",  
-  "type": "Junction"  
+    "id": "urn:ngsi-ld:Junction:63fe7d79-0d4c-4da9-b7d0-3340efa0656a",  
+    "type": "Junction",  
+    "createdAt": "2020-02-20T15:42:00Z",  
+    "demandCategory": "agriculture demand",  
+    "description": "This entity contains a harmonised description of a Junction",  
+    "elevation": 105.8,  
+    "emitterCoefficient": 0.526,  
+    "initialQuality": 0.5,  
+    "location": {  
+        "coordinates": [  
+            24.30623,  
+            60.07966  
+        ],  
+        "type": "Point"  
+    },  
+    "modifiedAt": "2020-02-20T15:45:00Z",  
+    "sourceCategory": "CategoryX",  
+    "tag": "DMA1",  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/context.jsonld"  
+    ]  
 }  
 ```  
 #### Junction NGSI-LD normalized Example    
 Here is an example of a Junction in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
 ```json  
 {  
-  "id": "urn:ngsi-ld:Junction:63fe7d79-0d4c-4da9-b7d0-3340efa0656a",  
-  "type": "Junction",  
-  "location": {  
-    "type": "GeoProperty",  
-    "value": {  
-      "type": "Point",  
-      "coordinates": [  
-        24.30623,  
-        60.07966  
-      ]  
-    }  
-  },  
-  "elevation": {  
-    "type": "Property",  
-    "value": 105.8,  
-    "unitCode": "MTR"  
-  },  
-  "demandCategory": {  
-    "type": "Property",  
-    "value": {  
-      "type": "Property",  
-      "value": "agriculture demand"  
+    "id": "urn:ngsi-ld:Junction:63fe7d79-0d4c-4da9-b7d0-3340efa0656a",  
+    "type": "Junction",  
+    "demandCategory": {  
+        "type": "Property",  
+        "value": {  
+            "type": "Property",  
+            "value": "agriculture demand"  
+        },  
+        "baseDemand": {  
+            "type": "Property",  
+            "value": "1.763868462",  
+            "unitCode": "MQS"  
+        },  
+        "demandPattern": {  
+            "type": "Relationship",  
+            "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533"  
+        }  
     },  
-    "baseDemand": {  
-      "type": "Property",  
-      "value": "1.763868462",  
-      "unitCode": "MQS"  
+    "description": {  
+        "type": "Property",  
+        "value": "This entity contains a harmonised description of a Junction"  
     },  
-    "demandPattern": {  
-      "type": "Relationship",  
-      "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533"  
-    }  
-  },  
-  "sourceCategory": {  
-    "type": "Property",  
-    "value": {  
-      "type": "Property",  
-      "value": "CategoryX"  
+    "elevation": {  
+        "type": "Property",  
+        "value": 105.8,  
+        "unitCode": "MTR"  
     },  
-    "sourceType": {  
-      "type": "Property",  
-      "value": "MASS"  
+    "emitterCoefficient": {  
+        "type": "Property",  
+        "value": 0.526,  
+        "unitCode": "S4"  
     },  
-    "sourceQuality": {  
-      "type": "Property",  
-      "value": 1.2,  
-      "unitCode": "M1"  
+    "head": {  
+        "type": "Property",  
+        "value": {  
+            "type": "Property",  
+            "value": 20,  
+            "unitCode": "MTR"  
+        },  
+        "observedBy": {  
+            "type": "Relationship",  
+            "object": "urn:ngsi-ld:Device:device-9845A"  
+        }  
     },  
-    "sourcePattern": {  
-      "type": "Relationship",  
-      "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533-a2eb-34bc89262190"  
-    }  
-  },  
-  "tag": {  
-    "type": "Property",  
-    "value": "DMA1"  
-  },  
-  "description": {  
-    "type": "Property",  
-    "value": "This entity contains a harmonised description of a Junction"  
-  },  
-  "initialQuality": {  
-    "type": "Property",  
-    "value": 0.5,  
-    "unitCode": "M1"  
-  },  
-  "emitterCoefficient": {  
-    "type": "Property",  
-    "value": 0.526,  
-    "unitCode": "S4"  
-  },  
-  "pressure": {  
-    "type": "Property",  
-    "value": {  
-      "type": "Property",  
-      "value": 20,  
-      "unitCode": "MTR"  
+    "initialQuality": {  
+        "type": "Property",  
+        "value": 0.5,  
+        "unitCode": "M1"  
     },  
-    "observedBy": {  
-      "type": "Relationship",  
-      "object": "urn:ngsi-ld:Device:device-9845A"  
-    }  
-  },  
-  "supply": {  
-    "type": "Property",  
-    "value": {  
-      "type": "Property",  
-      "value": 150,  
-      "unitCode": "LTR"  
+    "location": {  
+        "type": "GeoProperty",  
+        "value": {  
+            "type": "Point",  
+            "coordinates": [  
+                24.30623,  
+                60.07966  
+            ]  
+        }  
     },  
-    "observedBy": {  
-      "type": "Relationship",  
-      "object": "urn:ngsi-ld:Device:device-9845A"  
-    }  
-  },  
-  "head": {  
-    "type": "Property",  
-    "value": {  
-      "type": "Property",  
-      "value": 20,  
-      "unitCode": "MTR"  
+    "pressure": {  
+        "type": "Property",  
+        "value": {  
+            "type": "Property",  
+            "value": 20,  
+            "unitCode": "MTR"  
+        },  
+        "observedBy": {  
+            "type": "Relationship",  
+            "object": "urn:ngsi-ld:Device:device-9845A"  
+        }  
     },  
-    "observedBy": {  
-      "type": "Relationship",  
-      "object": "urn:ngsi-ld:Device:device-9845A"  
-    }  
-  },  
-  "quality": {  
-    "type": "Property",  
-    "value": {  
-      "value": 0.5,  
-      "unitCode": "M1"  
+    "quality": {  
+        "type": "Property",  
+        "value": {  
+            "value": 0.5,  
+            "unitCode": "M1"  
+        },  
+        "observedBy": {  
+            "type": "Relationship",  
+            "object": "urn:ngsi-ld:Device:device-9845A"  
+        }  
     },  
-    "observedBy": {  
-      "type": "Relationship",  
-      "object": "urn:ngsi-ld:Device:device-9845A"  
-    }  
-  },  
-  "sourceMassInflow": {  
-    "type": "Property",  
-    "value": {  
-      "value": 100,  
-      "unitCode": "F27"  
+    "sourceCategory": {  
+        "type": "Property",  
+        "value": {  
+            "type": "Property",  
+            "value": "CategoryX"  
+        },  
+        "sourceType": {  
+            "type": "Property",  
+            "value": "MASS"  
+        },  
+        "sourceQuality": {  
+            "type": "Property",  
+            "value": 1.2,  
+            "unitCode": "M1"  
+        },  
+        "sourcePattern": {  
+            "type": "Relationship",  
+            "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533-a2eb-34bc89262190"  
+        }  
     },  
-    "observedBy": {  
-      "type": "Relationship",  
-      "object": "urn:ngsi-ld:Device:device-9845A"  
-    }  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld"  
-  ]  
+    "sourceMassInflow": {  
+        "type": "Property",  
+        "value": {  
+            "value": 100,  
+            "unitCode": "F27"  
+        },  
+        "observedBy": {  
+            "type": "Relationship",  
+            "object": "urn:ngsi-ld:Device:device-9845A"  
+        }  
+    },  
+    "supply": {  
+        "type": "Property",  
+        "value": {  
+            "type": "Property",  
+            "value": 150,  
+            "unitCode": "LTR"  
+        },  
+        "observedBy": {  
+            "type": "Relationship",  
+            "object": "urn:ngsi-ld:Device:device-9845A"  
+        }  
+    },  
+    "tag": {  
+        "type": "Property",  
+        "value": "DMA1"  
+    },  
+    "@context": []  
 }  
 ```  
-
-See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units
+See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units  
