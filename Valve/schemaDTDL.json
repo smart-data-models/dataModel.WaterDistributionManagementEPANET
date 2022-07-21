@@ -86,6 +86,14 @@
             "comment": "The name of this item."
         },
         {
+            "name": "openStatus",
+            "writable": true,
+            "displayName": "openStatus",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Status of a valve as a numeric percentage value representing how open or close the valve is. 0% - completely closed, 100% - fully open."
+        },
+        {
             "name": "seeAlso",
             "writable": true,
             "displayName": "seeAlso"
@@ -127,46 +135,6 @@
             "displayName": "valveCurve",
             "@type": "Relationship",
             "comment": "A relationship to the curve of the setting property. Only required when valveType is GPV"
-        },
-        {
-            "@type": "Telemetry",
-            "name": "location_Point",
-            "schema": "point"
-        },
-        {
-            "@type": "Telemetry",
-            "name": "location_LineString",
-            "schema": "lineString"
-        },
-        {
-            "@type": "Telemetry",
-            "name": "location_Polygon",
-            "schema": "polygon"
-        },
-        {
-            "@type": "Telemetry",
-            "name": "location_MultiPoint",
-            "schema": "multiPoint"
-        },
-        {
-            "@type": "Telemetry",
-            "name": "location_MultiLineString",
-            "schema": "multiLineString"
-        },
-        {
-            "@type": "Telemetry",
-            "name": "location_MultiPolygon",
-            "schema": "multiPolygon"
-        },
-        {
-            "@type": "Telemetry",
-            "name": "vertices_MultiPoint",
-            "schema": "multiPoint"
-        },
-        {
-            "@type": "Telemetry",
-            "name": "vertices_Point",
-            "schema": "point"
         },
         {
             "@type": "Telemetry",
@@ -257,6 +225,46 @@
                     "schema": "long"
                 }
             ]
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_Point",
+            "schema": "point"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_LineString",
+            "schema": "lineString"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_Polygon",
+            "schema": "polygon"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_MultiPoint",
+            "schema": "multiPoint"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_MultiLineString",
+            "schema": "multiLineString"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_MultiPolygon",
+            "schema": "multiPolygon"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "vertices_MultiPoint",
+            "schema": "multiPoint"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "vertices_Point",
+            "schema": "point"
         },
         {
             "@type": "Telemetry",
