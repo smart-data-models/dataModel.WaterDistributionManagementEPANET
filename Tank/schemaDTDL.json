@@ -297,6 +297,10 @@
                 {
                     "name": "sourceType",
                     "schema": "enum"
+                },
+                {
+                    "name": "value",
+                    "schema": "string"
                 }
             ]
         },
