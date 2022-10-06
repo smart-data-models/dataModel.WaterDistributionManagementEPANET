@@ -454,6 +454,8 @@ Tank:
             - FLOWPACED    
             - SETPOINT    
           type: string    
+        value:    
+          type: string    
       type: object    
       x-ngsi:    
         model: https://schema.org/Text    
@@ -526,7 +528,7 @@ Tank:
     - location    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/blob/master/Tank/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.WaterDistributionManagementEPANET/Tank/schema.json    
   x-model-tags: FIWARE4WATER    
