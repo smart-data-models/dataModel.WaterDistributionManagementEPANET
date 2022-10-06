@@ -39,6 +39,9 @@
       "type": "object",
       "description": "Property. Model:'https://schema.org/Text'. Description of the quality of source flow entering the network at a specific node.",
       "properties": {
+          "value": {
+            "type": "string"
+          },
         "sourceType": {
           "type": "string",
           "description": "Property. Model:'https://schema.org/Text'. A sub-property of the Property 'sourceCategory'",
