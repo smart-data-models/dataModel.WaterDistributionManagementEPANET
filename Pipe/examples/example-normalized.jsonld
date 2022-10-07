@@ -107,5 +107,7 @@
         "value": 72.4549,
         "unitCode": "RRC"
     },
-    "@context": []
+    "@context": [
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/context.jsonld"
+    ]
 }
