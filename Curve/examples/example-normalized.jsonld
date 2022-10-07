@@ -31,5 +31,7 @@
         ],
         "unitCode": "C62"
     },
-    "@context": []
+    "@context": [
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/context.jsonld"
+    ]
 }
