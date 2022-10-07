@@ -164,5 +164,7 @@
         "type": "Relationship",
         "object": "urn:ngsi-ld:Curve:fAM-8ca3-4533-a2eb-12015"
     },
-    "@context": []
+    "@context": [
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/context.jsonld"
+    ]
 }
