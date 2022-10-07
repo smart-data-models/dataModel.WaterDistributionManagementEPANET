@@ -34,5 +34,7 @@
             "datasetId": "urn:ngsi-ld:Dataset:JunctionJ1"
         }
     ],
-    "@context": []
+    "@context": [
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/context.jsonld"
+    ]
 }
