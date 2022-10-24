@@ -1,17 +1,31 @@
+<!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
 Entität: Pumpe  
-==============  
+==============<!-- /10-Header -->  
+<!-- 15-License -->  
 [Offene Lizenz](https://github.com/smart-data-models//dataModel.WaterDistributionManagementEPANET/blob/master/Pump/LICENSE.md)  
 [Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 Globale Beschreibung: **Diese Einheit enthält eine harmonisierte Beschreibung einer generischen Pumpe für die Wassernetzverwaltung. Diese Entität ist in erster Linie mit der vertikalen Wasserwirtschaft und damit verbundenen IoT-Anwendungen verbunden.**  
 Version: 0.0.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## Liste der Eigenschaften  
 
-- `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `dataProvider`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `efficCurve`: Die ID-Kennzeichnung der Kurve, die den Wirkungsgrad der Pumpe in Abhängigkeit von der Durchflussmenge darstellt.  - `endsAt`: Die ID des Knotens auf der Druckseite der Pumpe  - `energyPattern`: Die Kennung des Zeitmusters, das zur Beschreibung der Schwankungen des Energiepreises im Tagesverlauf verwendet wird.  - `energyPrice`: Der durchschnittliche oder nominale Preis von Energie in Geldeinheiten. Alle Einheiten werden im Code [CEFACT](https://www.unece.org/cefact.html) akzeptiert.  - `energyUse`: Beobachteter Energieverbrauch durch das Element des Netzes  - `flow`: Durchflussmenge vom Knoten `startsAt` zum Knoten `endsAt`, gemessen von einem Gerät an der Verbindung (Rohr, Ventil oder Pumpe)  - `headCurve`: Die Kennzeichnung der Pumpenkurve, die zur Beschreibung des Verhältnisses zwischen der von der Pumpe gelieferten Förderhöhe und dem Durchfluss durch die Pumpe verwendet wird.  - `id`: Eindeutiger Bezeichner der Entität  - `initialStatus`: Der Verbindungsstatus zu Beginn der Simulation. Enum:'OPEN, CLOSED, CV'  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name`: Der Name dieses Artikels.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `power`: Die von der Pumpe gelieferte Leistung. Alle Einheiten werden im Code [CEFACT](https://www.unece.org/cefact.html) akzeptiert.  - `pumpPattern`: Die ID-Kennung eines Zeitmusters, das zur Steuerung des Pumpenbetriebs verwendet wird. Die Multiplikatoren des Musters entsprechen den Geschwindigkeitseinstellungen. Ein Multiplikator von Null bedeutet, dass die Pumpe während des entsprechenden Zeitraums abgeschaltet wird.  - `quality`: Beobachtete Qualität in der Netzkomponente  - `seeAlso`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Es wird empfohlen, den voll qualifizierten Domänennamen des Quellanbieters oder die URL des Quellobjekts zu verwenden.  - `speed`: Die relative Geschwindigkeitseinstellung der Pumpe. Alle Einheiten werden im Code [CEFACT](https://www.unece.org/cefact.html) akzeptiert.  - `startsAt`: Die ID des Knotens auf der Saugseite der Pumpe  - `status`: Der dynamische Zustand des Knotens. Enum:'OPEN, CLOSED, CV'  - `tag`: Eine optionale Textzeichenfolge, die dazu dient, das Rohr einer Kategorie zuzuordnen, z. B. einer Kategorie, die auf Alter oder Material basiert  - `type`: NGSI-LD Entitätstyp. Er muss gleich "Pumpe" sein.  - `velocity`: Beobachtete Geschwindigkeit in der Verbindung (Rohr, Ventil oder Pumpe)  - `vertices`: Koordinaten aller Scheitelpunkte in der Pumpe, geordnet von den startsAt-Knoten zu den endsAt-Knoten und kodiert als GeoJSON    
+<sup><sub>[*] Wenn es für ein Attribut keinen Typ gibt, liegt das daran, dass es mehrere Typen oder unterschiedliche Formate/Muster haben kann</sub></sup>.  
+- `address[object]`: Die Postanschrift  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Ein alternativer Name für diesen Artikel  - `areaServed[string]`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated[string]`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified[string]`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description[string]`: Eine Beschreibung dieses Artikels  - `efficCurve[*]`: Die ID-Kennzeichnung der Kurve, die den Wirkungsgrad der Pumpe in Abhängigkeit von der Durchflussmenge darstellt.  - `endsAt[*]`: Die ID des Knotens auf der Druckseite der Pumpe  - `energyPattern[*]`: Die Kennung des Zeitmusters, das zur Beschreibung der Schwankungen des Energiepreises im Tagesverlauf verwendet wird.  - `energyPrice[number]`: Der durchschnittliche oder nominale Preis von Energie in Geldeinheiten. Alle Einheiten werden im Code [CEFACT](https://www.unece.org/cefact.html) akzeptiert.  - `energyUse[object]`: Beobachteter Energieverbrauch durch das Element des Netzes  - `flow[object]`: Durchflussmenge vom Knoten `startsAt` zum Knoten `endsAt`, gemessen von einem Gerät an der Verbindung (Rohr, Ventil oder Pumpe)  - `headCurve[string]`: Die Kennzeichnung der Pumpenkurve, die zur Beschreibung des Verhältnisses zwischen der von der Pumpe gelieferten Förderhöhe und dem Durchfluss durch die Pumpe verwendet wird.  - `id[*]`: Eindeutiger Bezeichner der Entität  - `initialStatus[string]`: Der Verbindungsstatus zu Beginn der Simulation. Enum:'OPEN, CLOSED, CV'  . Model: [https://schema.org/Text](https://schema.org/Text)- `location[*]`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name[string]`: Der Name dieses Artikels.  - `owner[array]`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `power[number]`: Die von der Pumpe gelieferte Leistung. Alle Einheiten werden im Code [CEFACT](https://www.unece.org/cefact.html) akzeptiert.  . Model: [https://schema.org/Number](https://schema.org/Number)- `pumpPattern[*]`: Die ID-Kennung eines Zeitmusters, das zur Steuerung des Pumpenbetriebs verwendet wird. Die Multiplikatoren des Musters entsprechen den Geschwindigkeitseinstellungen. Ein Multiplikator von Null bedeutet, dass die Pumpe während des entsprechenden Zeitraums abgeschaltet wird.  - `quality[object]`: Beobachtete Qualität in der Netzkomponente  - `seeAlso[*]`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source[string]`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Es wird empfohlen, den voll qualifizierten Domänennamen des Quellanbieters oder die URL des Quellobjekts zu verwenden.  - `speed[number]`: Die relative Geschwindigkeitseinstellung der Pumpe. Alle Einheiten werden im Code [CEFACT](https://www.unece.org/cefact.html) akzeptiert.  . Model: [https://schema.org/Number](https://schema.org/Number)- `startsAt[*]`: Die ID des Knotens auf der Saugseite der Pumpe  - `status[string]`: Der dynamische Zustand des Knotens. Enum:'OPEN, CLOSED, CV'  . Model: [https://schema.org/Text](https://schema.org/Text)- `tag[string]`: Eine optionale Textzeichenfolge, die dazu dient, das Rohr einer Kategorie zuzuordnen, z. B. einer Kategorie, die auf Alter oder Material basiert  . Model: [https://schema.org/Text](https://schema.org/Text)- `type[string]`: NGSI-LD Entitätstyp. Er muss gleich "Pump" sein.  - `velocity[object]`: Beobachtete Geschwindigkeit in der Verbindung (Rohr, Ventil oder Pumpe)  - `vertices[*]`: Koordinaten aller Scheitelpunkte in der Pumpe, geordnet von den startsAt-Knoten zu den endsAt-Knoten und kodiert als GeoJSON  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Erforderliche Eigenschaften  
-- `endsAt`  - `id`  - `initialStatus`  - `startsAt`  - `type`  ## Datenmodell Beschreibung der Eigenschaften  
+- `endsAt`  - `id`  - `initialStatus`  - `startsAt`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## Datenmodell Beschreibung der Eigenschaften  
 Alphabetisch sortiert (für Details anklicken)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 Pump:    
@@ -526,9 +540,14 @@ Pump:
   x-version: 0.0.1    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## Beispiel-Nutzlasten  
 #### Pumpe NGSI-v2 Schlüsselwerte Beispiel  
 Hier ist ein Beispiel für eine Pumpe im JSON-LD-Format als Schlüsselwerte. Dies ist mit NGSI-v2 kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "85zhnf58-0d4c-h4g854g-b7d0-3310klm",  
@@ -546,8 +565,10 @@ Pump:
     "energyPattern": "fbcb5fc8-8ca3-4533-a2eb-34bc89262190"  
 }  
 ```  
+</details>  
 #### Pumpe NGSI-v2 normalisiert Beispiel  
 Hier ist ein Beispiel für eine Pumpe im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-v2, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "85zhnf58-0d4c-h4g854g-b7d0-3310klm",  
@@ -626,8 +647,10 @@ Pump:
   }  
 }  
 ```  
+</details>  
 #### Pumpe NGSI-LD Schlüsselwerte Beispiel  
 Hier ist ein Beispiel für eine Pumpe im JSON-LD-Format als Schlüsselwerte. Dies ist mit NGSI-LD kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:Pump:85zhnf58-0d4c-h4g854g-b7d0-3310klm",  
@@ -651,8 +674,10 @@ Pump:
     ]  
 }  
 ```  
+</details>  
 #### Pumpe NGSI-LD normalisiert Beispiel  
 Hier ist ein Beispiel für eine Pumpe im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-LD, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:Pump:85zhnf58-0d4c-h4g854g-b7d0-3310klm",  
@@ -767,7 +792,17 @@ Pump:
             ]  
         }  
     },  
-    "@context": []  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/context.jsonld"  
+    ]  
 }  
 ```  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
 Siehe [FAQ 10] (https://smartdatamodels.org/index.php/faqs/), um eine Antwort auf die Frage zu erhalten, wie man mit Größeneinheiten umgeht  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
