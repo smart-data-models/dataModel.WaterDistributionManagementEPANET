@@ -1,17 +1,31 @@
+<!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
 Entität: Rohrleitung  
-====================  
+====================<!-- /10-Header -->  
+<!-- 15-License -->  
 [Offene Lizenz](https://github.com/smart-data-models//dataModel.WaterDistributionManagementEPANET/blob/master/Pipe/LICENSE.md)  
 [Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 Globale Beschreibung: **Diese Entität enthält eine harmonisierte Beschreibung eines generischen Rohrs, das für den Bereich Wassernetzmanagement hergestellt wurde. Diese Entität ist in erster Linie mit der vertikalen Wasserwirtschaft und damit verbundenen IoT-Anwendungen verbunden.**  
 Version: 0.0.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## Liste der Eigenschaften  
 
-- `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `bulkCoeff`: Verwenden Sie einen positiven Wert für Wachstum und einen negativen Wert für Verfall. Alle Einheiten werden im Code [CEFACT](https://www.unece.org/cefact.html) akzeptiert.  - `dataProvider`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `diameter`: Der Rohrdurchmesser  - `endsAt`: Die ID des Knotens, an dem die Leitung endet  - `flow`: Durchflussmenge vom Knoten `startsAt` zum Knoten `endsAt`, gemessen von einem Gerät an der Verbindung (Rohr, Ventil oder Pumpe)  - `id`: Eindeutiger Bezeichner der Entität  - `initialStatus`: Der Verbindungsstatus zu Beginn der Simulation. Enum:'OPEN, CLOSED, CV'  - `length`: Die tatsächliche Länge des Rohrs. Alle Einheiten werden im Code [CEFACT](https://www.unece.org/cefact.html) akzeptiert.  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `minorLoss`: Einheitsloser kleiner Verlustkoeffizient in Verbindung mit Biegungen, Armaturen usw.  - `name`: Der Name dieses Artikels.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `quality`: Beobachtete Qualität in der Netzkomponente  - `roughness`: Der Rauhigkeitskoeffizient des Rohrs.  - `seeAlso`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Es wird empfohlen, den voll qualifizierten Domänennamen des Quellanbieters oder die URL des Quellobjekts zu verwenden.  - `startsAt`: Die ID des Knotens, an dem die Leitung beginnt  - `status`: Der dynamische Zustand des Knotens. Enum:'OPEN, CLOSED, CV'  - `tag`: Eine optionale Textzeichenfolge, die dazu dient, das Rohr einer Kategorie zuzuordnen, z. B. einer Kategorie, die auf Alter oder Material basiert  - `type`: NGSI-LD-Entitätstyp. Es muss Pipe sein  - `velocity`: Beobachtete Geschwindigkeit in der Verbindung (Rohr, Ventil oder Pumpe)  - `vertices`: Koordinaten aller Scheitelpunkte im Rohr, geordnet vom startsAt-Knoten zum endsAt-Knoten und kodiert als GeoJSON  - `wallCoeff`: Der Wandreaktionskoeffizient für das Rohr. Verwenden Sie einen positiven Wert für Wachstum und einen negativen Wert für Zerfall. Alle Einheiten werden im Code [CEFACT](https://www.unece.org/cefact.html) akzeptiert.    
+<sup><sub>[*] Wenn es für ein Attribut keinen Typ gibt, liegt das daran, dass es mehrere Typen oder unterschiedliche Formate/Muster haben kann</sub></sup>.  
+- `address[object]`: Die Postanschrift  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Ein alternativer Name für diesen Artikel  - `areaServed[string]`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  . Model: [https://schema.org/Text](https://schema.org/Text)- `bulkCoeff[number]`: Verwenden Sie einen positiven Wert für Wachstum und einen negativen Wert für Verfall. Alle Einheiten werden im Code [CEFACT](https://www.unece.org/cefact.html) akzeptiert.  . Model: [https://schema.org/Number](https://schema.org/Number)- `dataProvider[string]`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated[string]`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified[string]`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description[string]`: Eine Beschreibung dieses Artikels  - `diameter[number]`: Der Rohrdurchmesser  . Model: [https://schema.org/Number](https://schema.org/Number)- `endsAt[string]`: Die ID des Knotens, an dem die Leitung endet  - `flow[object]`: Durchflussmenge vom Knoten `startsAt` zum Knoten `endsAt`, gemessen von einem Gerät an der Verbindung (Rohr, Ventil oder Pumpe)  - `id[*]`: Eindeutiger Bezeichner der Entität  - `initialStatus[string]`: Der Verbindungsstatus zu Beginn der Simulation. Enum:'OPEN, CLOSED, CV'  . Model: [https://schema.org/Text](https://schema.org/Text)- `length[number]`: Die tatsächliche Länge des Rohrs. Alle Einheiten werden im Code [CEFACT](https://www.unece.org/cefact.html) akzeptiert.  . Model: [https://schema.org/Number](https://schema.org/Number)- `location[*]`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `minorLoss[number]`: Einheitsloser kleiner Verlustkoeffizient in Verbindung mit Biegungen, Armaturen usw.  . Model: [https://schema.org/Number](https://schema.org/Number)- `name[string]`: Der Name dieses Artikels.  - `owner[array]`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `quality[object]`: Beobachtete Qualität in der Netzkomponente  - `roughness[number]`: Der Rauhigkeitskoeffizient des Rohrs.  . Model: [https://schema.org/Number](https://schema.org/Number)- `seeAlso[*]`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source[string]`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Es wird empfohlen, den voll qualifizierten Domänennamen des Quellanbieters oder die URL des Quellobjekts zu verwenden.  - `startsAt[string]`: Die ID des Knotens, an dem die Leitung beginnt  - `status[string]`: Der dynamische Zustand des Knotens. Enum:'OPEN, CLOSED, CV'  . Model: [https://schema.org/Text](https://schema.org/Text)- `tag[string]`: Eine optionale Textzeichenfolge, die dazu dient, das Rohr einer Kategorie zuzuordnen, z. B. einer Kategorie, die auf Alter oder Material basiert  . Model: [https://schema.org/Text](https://schema.org/Text)- `type[string]`: NGSI-LD-Entitätstyp. Es muss Pipe sein  - `velocity[object]`: Beobachtete Geschwindigkeit in der Verbindung (Rohr, Ventil oder Pumpe)  - `vertices[*]`: Koordinaten aller Scheitelpunkte im Rohr, geordnet vom startsAt-Knoten zum endsAt-Knoten und kodiert als GeoJSON  - `wallCoeff[number]`: Der Wandreaktionskoeffizient für das Rohr. Verwenden Sie einen positiven Wert für Wachstum und einen negativen Wert für Zerfall. Alle Einheiten werden im Code [CEFACT](https://www.unece.org/cefact.html) akzeptiert.  . Model: [https://schema.org/Number](https://schema.org/Number)<!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Erforderliche Eigenschaften  
-- `id`  - `type`  ## Datenmodell Beschreibung der Eigenschaften  
+- `id`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## Datenmodell Beschreibung der Eigenschaften  
 Alphabetisch sortiert (für Details anklicken)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 Pipe:    
@@ -468,9 +482,14 @@ Pipe:
   x-version: 0.0.1    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## Beispiel-Nutzlasten  
 #### Pipe NGSI-v2 key-values Beispiel  
 Hier ist ein Beispiel für eine Pipe im JSON-LD-Format als Key-Values. Dies ist mit NGSI-v2 kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "74azsty-70d4l-4da9-b7d0-3340ef655nnb",  
@@ -489,8 +508,10 @@ Pipe:
     "wallCoeff": 72.4549  
 }  
 ```  
+</details>  
 #### Rohr NGSI-v2 normalisiert Beispiel  
 Hier ist ein Beispiel für eine Pipe im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-v2, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "74azsty-70d4l-4da9-b7d0-3340ef655nnb",  
@@ -566,8 +587,10 @@ Pipe:
   }  
 }  
 ```  
+</details>  
 #### Pipe NGSI-LD Schlüsselwerte Beispiel  
 Hier ist ein Beispiel für eine Pipe im JSON-LD-Format als Key-Values. Dies ist mit NGSI-LD kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:Pipe:74azsty-70d4l-4da9-b7d0-3340ef655nnb",  
@@ -591,8 +614,10 @@ Pipe:
     ]  
 }  
 ```  
+</details>  
 #### Rohrleitung NGSI-LD normalisiert Beispiel  
 Hier ist ein Beispiel für eine Pipe im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-LD, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:Pipe:74azsty-70d4l-4da9-b7d0-3340ef655nnb",  
@@ -703,7 +728,17 @@ Pipe:
         "value": 72.4549,  
         "unitCode": "RRC"  
     },  
-    "@context": []  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/context.jsonld"  
+    ]  
 }  
 ```  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
 Siehe [FAQ 10] (https://smartdatamodels.org/index.php/faqs/), um eine Antwort auf die Frage zu erhalten, wie man mit Größeneinheiten umgeht  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
