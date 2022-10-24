@@ -1,17 +1,31 @@
+<!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
 エンティティパイプ  
-=========  
+=========<!-- /10-Header -->  
+<!-- 15-License -->  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.WaterDistributionManagementEPANET/blob/master/Pipe/LICENSE.md)  
 [ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 グローバルな記述。**このエンティティは、水ネットワーク管理ドメイン用に作られた汎用パイプの調和された記述を含んでいる。このエンティティは、主に水管理の垂直方向と関連する IoT アプリケーションに関連するものである**。  
 バージョン: 0.0.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## プロパティ一覧  
 
-- `address`: 郵送先住所  - `alternateName`: この項目の別称  - `areaServed`: サービスまたは提供品が提供される地理的な地域  - `bulkCoeff`: 成長する場合は正の値を、減衰する場合は負の値を使用します。単位はすべて[CEFACT](https://www.unece.org/cefact.html)コードで受け付けます。  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description`: このアイテムの説明  - `diameter`: パイプ径  - `endsAt`: パイプの終点となるノードのID  - `flow`: リンク先の装置（パイプ、バルブ、ポンプ）で測定された、`startAt`ノードから`endsAt`ノードへの流速  - `id`: エンティティの一意な識別子  - `initialStatus`: シミュレーション開始時のリンク状態。Enum:'OPEN, CLOSED, CV' です。  - `length`: パイプの実際の長さ。単位はすべて[CEFACT](https://www.unece.org/cefact.html)コードで受け付けます。  - `location`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `minorLoss`: ベンド、フィッティングなどに伴う単位無しの微少損失係数  - `name`: このアイテムの名称です。  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `quality`: ネットワークコンポーネントで観測された品質  - `roughness`: Pipeの粗さ係数です。  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `source`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `startsAt`: パイプの始点となるノードのID  - `status`: ノードの動的状態。Enum:'OPEN, CLOSED, CV'.  - `tag`: パイプをカテゴリに割り当てるためのオプションのテキスト文字列、おそらく年齢や素材に基づいたもの  - `type`: NGSI-LDのエンティティタイプ。パイプでなければならない  - `velocity`: リンク（パイプ、バルブ、ポンプ）内の観測された流速  - `vertices`: パイプ内のすべての頂点の座標を、startsAtノードからendsAtノードに並べて、GeoJSONとしてエンコードしたもの  - `wallCoeff`: パイプの壁面反応係数。成長する場合は正の値を、減衰する場合は負の値を使用する。単位はすべて[CEFACT](https://www.unece.org/cefact.html)コードで受け入れられます。    
+<sup><sub>[*] 属性にタイプがない場合、複数のタイプまたは異なるフォーマット/パターンを持つ可能性があるためです</sub></sup>。  
+- `address[object]`: 郵送先住所  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: この項目の別称  - `areaServed[string]`: サービスまたは提供品が提供される地理的な地域  . Model: [https://schema.org/Text](https://schema.org/Text)- `bulkCoeff[number]`: 成長する場合は正の値を、減衰する場合は負の値を使用します。単位はすべて[CEFACT](https://www.unece.org/cefact.html)コードで受け付けます。  . Model: [https://schema.org/Number](https://schema.org/Number)- `dataProvider[string]`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated[string]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified[string]`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description[string]`: このアイテムの説明  - `diameter[number]`: パイプ径  . Model: [https://schema.org/Number](https://schema.org/Number)- `endsAt[string]`: パイプの終点となるノードのID  - `flow[object]`: リンク先の装置（パイプ、バルブ、ポンプ）で測定された、`startAt`ノードから`endsAt`ノードへの流速  - `id[*]`: エンティティの一意な識別子  - `initialStatus[string]`: シミュレーション開始時のリンク状態。Enum:'OPEN, CLOSED, CV' です。  . Model: [https://schema.org/Text](https://schema.org/Text)- `length[number]`: パイプの実際の長さ。単位はすべて[CEFACT](https://www.unece.org/cefact.html)コードで受け付けます。  . Model: [https://schema.org/Number](https://schema.org/Number)- `location[*]`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `minorLoss[number]`: ベンド、フィッティングなどに伴う単位無しの微少損失係数  . Model: [https://schema.org/Number](https://schema.org/Number)- `name[string]`: このアイテムの名称です。  - `owner[array]`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `quality[object]`: ネットワークコンポーネントで観測された品質  - `roughness[number]`: Pipeの粗さ係数です。  . Model: [https://schema.org/Number](https://schema.org/Number)- `seeAlso[*]`: 項目に関する追加リソースを指すURIのリスト。  - `source[string]`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `startsAt[string]`: パイプの始点となるノードのID  - `status[string]`: ノードの動的状態。Enum:'OPEN, CLOSED, CV'.  . Model: [https://schema.org/Text](https://schema.org/Text)- `tag[string]`: パイプをカテゴリに割り当てるためのオプションのテキスト文字列、おそらく年齢や素材に基づいたもの  . Model: [https://schema.org/Text](https://schema.org/Text)- `type[string]`: NGSI-LDのエンティティタイプ。パイプでなければならない  - `velocity[object]`: リンク（パイプ、バルブ、ポンプ）内の観測された流速  - `vertices[*]`: パイプ内のすべての頂点の座標を、startsAtノードからendsAtノードに並べて、GeoJSONとしてエンコードしたもの  - `wallCoeff[number]`: パイプの壁面反応係数。成長する場合は正の値を、減衰する場合は負の値を使用する。単位はすべて[CEFACT](https://www.unece.org/cefact.html)コードで受け入れられます。  . Model: [https://schema.org/Number](https://schema.org/Number)<!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 必要なプロパティ  
-- `id`  - `type`  ## プロパティのデータモデル記述  
+- `id`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## プロパティのデータモデル記述  
 アルファベット順に並びます（クリックで詳細へ）  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 Pipe:    
@@ -468,9 +482,14 @@ Pipe:
   x-version: 0.0.1    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## ペイロードの例  
 #### パイプNGSI-v2キーバリューの例  
 ここでは、PipeをJSON-LD形式でkey-valuesとした場合の例を示す。これは `options=keyValues` を使用した場合に NGSI-v2 と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "74azsty-70d4l-4da9-b7d0-3340ef655nnb",  
@@ -489,8 +508,10 @@ Pipe:
     "wallCoeff": 72.4549  
 }  
 ```  
+</details>  
 #### パイプ NGSI-v2 正規化例  
 以下は、JSON-LD形式のPipeを正規化した例である。これはオプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "74azsty-70d4l-4da9-b7d0-3340ef655nnb",  
@@ -566,8 +587,10 @@ Pipe:
   }  
 }  
 ```  
+</details>  
 #### NGSI-LDのキー値をパイプする 例  
 ここでは、PipeをJSON-LD形式でkey-valuesにした例を示します。これは `options=keyValues` を使用した場合に NGSI-LD と互換性があり、個々のエンティティのコンテキストデータが返される。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:Pipe:74azsty-70d4l-4da9-b7d0-3340ef655nnb",  
@@ -591,8 +614,10 @@ Pipe:
     ]  
 }  
 ```  
+</details>  
 #### パイプ NGSI-LD 正規化例  
 以下は、JSON-LD形式のPipeを正規化した例である。これはオプションを使用しない場合のNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:Pipe:74azsty-70d4l-4da9-b7d0-3340ef655nnb",  
@@ -703,7 +728,17 @@ Pipe:
         "value": 72.4549,  
         "unitCode": "RRC"  
     },  
-    "@context": []  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/context.jsonld"  
+    ]  
 }  
 ```  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
 マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
