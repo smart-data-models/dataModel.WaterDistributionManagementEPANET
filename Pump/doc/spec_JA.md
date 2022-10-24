@@ -1,17 +1,31 @@
+<!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
 エンティティポンプ  
-=========  
+=========<!-- /10-Header -->  
+<!-- 15-License -->  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.WaterDistributionManagementEPANET/blob/master/Pump/LICENSE.md)  
 [ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-グローバルな記述。**このエンティティは、水ネットワーク管理領域のために作られた汎用ポンプの調和された記述を含む。このエンティティは、主に水管理の垂直方向と関連する IoT アプリケーションに関連するものである**。  
+<!-- /15-License -->  
+<!-- 20-Description -->  
+グローバルな記述。**このエンティティは、水ネットワーク管理領域のために作られた汎用ポンプの調和された記述を含む。このエンティティは、主に水管理の垂直方向と関連する IoT アプリケーションに関連している。  
 バージョン: 0.0.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## プロパティ一覧  
 
-- `address`: 郵送先住所  - `alternateName`: この項目の別称  - `areaServed`: サービスまたは提供品が提供される地理的な地域  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description`: このアイテムの説明  - `efficCurve`: ポンプの電線対水効率を流量の関数として表した曲線のIDラベルです。  - `endsAt`: ポンプ吐出側のノードのID  - `energyPattern`: 一日のエネルギー価格の変動を表現するために使用されるタイムパターンのIDラベル。  - `energyPrice`: エネルギーの平均価格または名目価格を貨幣単位で表したもの。すべての単位は[CEFACT](https://www.unece.org/cefact.html)コードで受け付けています。  - `energyUse`: ネットワークの要素によるエネルギー使用量の観測値  - `flow`: リンク先の装置（パイプ、バルブ、ポンプ）で測定された、`startAt`ノードから`endsAt`ノードへの流速  - `headCurve`: ポンプが送り出す揚程とポンプを通過する流量の関係を説明するために使用されるポンプ曲線のIDラベルです。  - `id`: エンティティの一意な識別子  - `initialStatus`: シミュレーション開始時のリンク状態。Enum:'OPEN, CLOSED, CV' です。  - `location`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `name`: このアイテムの名称です。  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `power`: ポンプから供給される電力。単位はすべて[CEFACT](https://www.unece.org/cefact.html)コードで受け付けます。  - `pumpPattern`: ポンプの運転制御に使用するタイムパターンのIDラベルです。パターンの倍率は、速度設定に相当する。倍率が0の場合、該当する時間帯はポンプが停止することを意味する。  - `quality`: ネットワークコンポーネントで観測された品質  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `source`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `speed`: ポンプの相対速度設定。単位はすべて[CEFACT](https://www.unece.org/cefact.html)コードで受け付けます。  - `startsAt`: ポンプ吸込側のノードのID  - `status`: ノードの動的状態。Enum:'OPEN, CLOSED, CV'.  - `tag`: パイプをカテゴリに割り当てるためのオプションのテキスト文字列、おそらく年齢や素材に基づいたもの  - `type`: NGSI-LD Entity Type。Pump と等しくなければならない。  - `velocity`: リンク（パイプ、バルブ、ポンプ）内の観測された流速  - `vertices`: ポンプ内のすべての頂点の座標を、startsAtノードからendsAtノードに並べて、GeoJSONとしてエンコードしたもの。    
+<sup><sub>[*] 属性にタイプがない場合、複数のタイプまたは異なるフォーマット/パターンを持つ可能性があるためです</sub></sup>。  
+- `address[object]`: 郵送先住所  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: この項目の別称  - `areaServed[string]`: サービスまたは提供品が提供される地理的な地域  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated[string]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified[string]`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description[string]`: このアイテムの説明  - `efficCurve[*]`: ポンプの電線対水効率を流量の関数として表した曲線のIDラベルです。  - `endsAt[*]`: ポンプ吐出側のノードのID  - `energyPattern[*]`: 一日のエネルギー価格の変動を表現するために使用されるタイムパターンのIDラベル。  - `energyPrice[number]`: エネルギーの平均価格または名目価格を貨幣単位で表したもの。すべての単位は[CEFACT](https://www.unece.org/cefact.html)コードで受け付けています。  - `energyUse[object]`: ネットワークの要素によるエネルギー使用量の観測値  - `flow[object]`: リンク先の装置（パイプ、バルブ、ポンプ）で測定された、`startAt`ノードから`endsAt`ノードへの流速  - `headCurve[string]`: ポンプが送り出す揚程とポンプを通過する流量の関係を説明するために使用されるポンプ曲線のIDラベルです。  - `id[*]`: エンティティの一意な識別子  - `initialStatus[string]`: シミュレーション開始時のリンク状態。Enum:'OPEN, CLOSED, CV' です。  . Model: [https://schema.org/Text](https://schema.org/Text)- `location[*]`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `name[string]`: このアイテムの名称です。  - `owner[array]`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `power[number]`: ポンプから供給される電力。単位はすべて[CEFACT](https://www.unece.org/cefact.html)コードで受け付けます。  . Model: [https://schema.org/Number](https://schema.org/Number)- `pumpPattern[*]`: ポンプの運転制御に使用するタイムパターンのIDラベルです。パターンの倍率は、速度設定に相当する。倍率が0の場合、該当する時間帯にポンプが停止することを意味する。  - `quality[object]`: ネットワークコンポーネントで観測された品質  - `seeAlso[*]`: 項目に関する追加リソースを指すURIのリスト。  - `source[string]`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `speed[number]`: ポンプの相対速度設定。単位はすべて[CEFACT](https://www.unece.org/cefact.html)コードで受け付けます。  . Model: [https://schema.org/Number](https://schema.org/Number)- `startsAt[*]`: ポンプ吸込側のノードのID  - `status[string]`: ノードの動的状態。Enum:'OPEN, CLOSED, CV'.  . Model: [https://schema.org/Text](https://schema.org/Text)- `tag[string]`: パイプをカテゴリに割り当てるためのオプションのテキスト文字列、おそらく年齢や素材に基づいたもの  . Model: [https://schema.org/Text](https://schema.org/Text)- `type[string]`: NGSI-LD Entity Type。Pump と等しくなければならない。  - `velocity[object]`: リンク（パイプ、バルブ、ポンプ）内の観測された流速  - `vertices[*]`: ポンプ内のすべての頂点の座標を、startsAtノードからendsAtノードに並べて、GeoJSONとしてエンコードしたもの。  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 必要なプロパティ  
-- `endsAt`  - `id`  - `initialStatus`  - `startsAt`  - `type`  ## プロパティのデータモデル記述  
+- `endsAt`  - `id`  - `initialStatus`  - `startsAt`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## プロパティのデータモデル記述  
 アルファベット順に並びます（クリックで詳細へ）  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 Pump:    
@@ -526,9 +540,14 @@ Pump:
   x-version: 0.0.1    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## ペイロードの例  
 #### ポンプNGSI-v2鍵盤の例  
 ここでは、PumpをJSON-LD形式でkey-valuesとした場合の例を示す。これは `options=keyValues` を使用した場合に NGSI-v2 と互換性があり、個々のエンティティのコンテキストデータが返される。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "85zhnf58-0d4c-h4g854g-b7d0-3310klm",  
@@ -546,8 +565,10 @@ Pump:
     "energyPattern": "fbcb5fc8-8ca3-4533-a2eb-34bc89262190"  
 }  
 ```  
+</details>  
 #### ポンプ NGSI-v2 正規化例  
 以下は、PumpをJSON-LD形式で正規化した例である。これはオプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "85zhnf58-0d4c-h4g854g-b7d0-3310klm",  
@@ -626,8 +647,10 @@ Pump:
   }  
 }  
 ```  
+</details>  
 #### ポンプ NGSI-LD キー値例  
 ここでは、PumpをJSON-LD形式でkey-valuesにした例を示します。これは `options=keyValues` を使用した場合に NGSI-LD と互換性があり、個々のエンティティのコンテキストデータが返される。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:Pump:85zhnf58-0d4c-h4g854g-b7d0-3310klm",  
@@ -651,8 +674,10 @@ Pump:
     ]  
 }  
 ```  
+</details>  
 #### ポンプ NGSI-LD 正規化例  
 以下は、PumpをJSON-LD形式で正規化した例である。これはオプションを使用しない場合のNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:Pump:85zhnf58-0d4c-h4g854g-b7d0-3310klm",  
@@ -767,7 +792,17 @@ Pump:
             ]  
         }  
     },  
-    "@context": []  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/context.jsonld"  
+    ]  
 }  
 ```  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
 マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
