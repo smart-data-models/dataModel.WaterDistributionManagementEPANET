@@ -1,17 +1,31 @@
+<!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
 Entidad: Tank  
-=============  
+=============<!-- /10-Header -->  
+<!-- 15-License -->  
 [Licencia abierta](https://github.com/smart-data-models//dataModel.WaterDistributionManagementEPANET/blob/master/Tank/LICENSE.md)  
 [documento generado automáticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 Descripción global: **Esta entidad contiene una descripción armonizada de un depósito genérico realizado para el dominio de la gestión de redes de agua. Esta entidad se asocia principalmente con el vertical de gestión del agua y las aplicaciones de IoT relacionadas.**.  
 versión: 0.0.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## Lista de propiedades  
 
-- `address`: La dirección postal  - `alternateName`: Un nombre alternativo para este artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `bulkReactionCoefficient`: El coeficiente de reacción a granel utilizado para modelar las reacciones en el tanque. Todas las unidades se aceptan en código [CEFACT](https://www.unece.org/cefact.html).  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description`: Una descripción de este artículo  - `elevation`: La elevación por encima de alguna referencia común del Tanque. Todas las unidades se aceptan en código [CEFACT](https://www.unece.org/cefact.html).  - `hasInlet`: Una relación que indica los puntos de entrada de agua del embalse  - `hasOutlet`: Una relación que indica los puntos de salida de agua del embalse  - `head`: Cabezal observado en el nudo (empalme, tanque o depósito)  - `id`: Identificador único de la entidad  - `initLevel`: La altura de la superficie del agua por encima de la elevación del fondo del tanque al inicio de la simulación. Todas las unidades se aceptan en código [CEFACT](https://www.unece.org/cefact.html).  - `initialQuality`: Nivel de calidad del agua en el depósito al inicio de la simulación. Todas las unidades se aceptan en código [CEFACT](https://www.unece.org/cefact.html).  - `level`: Nivel observado en el elemento de la red  - `location`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `maxLevel`: La altura de la superficie del agua por encima de la elevación del fondo del tanque al inicio de la simulación. Todas las unidades se aceptan en código [CEFACT](https://www.unece.org/cefact.html).  - `minLevel`: El nivel mínimo al que puede descender el agua en el depósito. Todas las unidades se aceptan en código [CEFACT](https://www.unece.org/cefact.html).  - `minVolume`: El volumen de agua en el tanque cuando está en su nivel mínimo. Todas las unidades se aceptan en código [CEFACT](https://www.unece.org/cefact.html).  - `mixingFraction`: La fracción del volumen total del tanque que comprende el compartimento de entrada-salida del modelo de mezcla de dos compartimentos (2COMP). Todas las unidades se aceptan en código [CEFACT](https://www.unece.org/cefact.html).  - `mixingModel`: Una subpropiedad de la propiedad sourceCategory. Enum:'2COMP, FIFO, LIFO, MIXTO'  - `name`: El nombre de este artículo.  - `nominalDiameter`: El diámetro del tanque. Todas las unidades se aceptan en código [CEFACT](https://www.unece.org/cefact.html).  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `pressure`: Presión observada en el nodo (unión, tanque o depósito)  - `quality`: Calidad observada en el componente de red  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `sourceCategory`: Descripción de la calidad del flujo de origen que entra en la red en un nodo específico.  - `sourceMassInflow`: Entrada de masa de la fuente observada en el nodo (cruce, tanque o depósito)  - `supply`: Suministro observado en el nudo (empalme, tanque o depósito)  - `tag`: Una cadena de texto opcional utilizada para asignar la tubería a una categoría, quizás una basada en la edad o el material  - `type`: Tipo de entidad NGSI-LD. Tiene que ser Tank  - `volumeCurve`: La etiqueta de identificación de una curva utilizada para describir la relación entre el volumen del tanque y el nivel de agua    
+<sup><sub>[*] Si no hay un tipo en un atributo es porque puede tener varios tipos o diferentes formatos/patrones</sub></sup>  
+- `address[object]`: La dirección postal  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Un nombre alternativo para este artículo  - `areaServed[string]`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  . Model: [https://schema.org/Text](https://schema.org/Text)- `bulkReactionCoefficient[number]`: El coeficiente de reacción a granel utilizado para modelar las reacciones en el tanque. Todas las unidades se aceptan en código [CEFACT](https://www.unece.org/cefact.html).  . Model: [https://schema.org/Number](https://schema.org/Number)- `dataProvider[string]`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated[string]`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified[string]`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description[string]`: Una descripción de este artículo  - `elevation[number]`: La elevación por encima de alguna referencia común del Tanque. Todas las unidades se aceptan en código [CEFACT](https://www.unece.org/cefact.html).  . Model: [https://schema.org/Number](https://schema.org/Number)- `hasInlet[string]`: Una relación que indica los puntos de entrada de agua del embalse  - `hasOutlet[string]`: Una relación que indica los puntos de salida de agua del embalse  - `head[object]`: Cabezal observado en el nudo (empalme, tanque o depósito)  - `id[*]`: Identificador único de la entidad  - `initLevel[number]`: La altura de la superficie del agua por encima de la elevación del fondo del tanque al inicio de la simulación. Todas las unidades se aceptan en código [CEFACT](https://www.unece.org/cefact.html).  . Model: [https://schema.org/Number](https://schema.org/Number)- `initialQuality[number]`: Nivel de calidad del agua en el depósito al inicio de la simulación. Todas las unidades se aceptan en código [CEFACT](https://www.unece.org/cefact.html).  . Model: [https://schema.org/Number](https://schema.org/Number)- `level[object]`: Nivel observado en el elemento de la red  - `location[*]`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `maxLevel[number]`: La altura de la superficie del agua por encima de la elevación del fondo del tanque al inicio de la simulación. Todas las unidades se aceptan en código [CEFACT](https://www.unece.org/cefact.html).  . Model: [https://schema.org/Number](https://schema.org/Number)- `minLevel[number]`: El nivel mínimo al que puede descender el agua en el depósito. Todas las unidades se aceptan en código [CEFACT](https://www.unece.org/cefact.html).  . Model: [https://schema.org/Number](https://schema.org/Number)- `minVolume[number]`: El volumen de agua en el tanque cuando está en su nivel mínimo. Todas las unidades se aceptan en código [CEFACT](https://www.unece.org/cefact.html).  . Model: [https://schema.org/Number](https://schema.org/Number)- `mixingFraction[number]`: La fracción del volumen total del tanque que comprende el compartimento de entrada-salida del modelo de mezcla de dos compartimentos (2COMP). Todas las unidades se aceptan en código [CEFACT](https://www.unece.org/cefact.html).  . Model: [https://schema.org/Number](https://schema.org/Number)- `mixingModel[string]`: Subpropiedad de la propiedad sourceCategory. Enum:'2COMP, FIFO, LIFO, MIXTO'  . Model: [https://schema.org/Text](https://schema.org/Text)- `name[string]`: El nombre de este artículo.  - `nominalDiameter[number]`: El diámetro del tanque. Todas las unidades se aceptan en código [CEFACT](https://www.unece.org/cefact.html).  . Model: [https://schema.org/Number](https://schema.org/Number)- `owner[array]`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `pressure[object]`: Presión observada en el nodo (unión, tanque o depósito)  - `quality[object]`: Calidad observada en el componente de red  - `seeAlso[*]`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source[string]`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `sourceCategory[object]`: Descripción de la calidad del flujo de origen que entra en la red en un nodo específico.  . Model: [https://schema.org/Text](https://schema.org/Text)- `sourceMassInflow[object]`: Entrada de masa de la fuente observada en el nodo (cruce, tanque o depósito)  - `supply[object]`: Suministro observado en el nudo (empalme, tanque o depósito)  - `tag[string]`: Una cadena de texto opcional utilizada para asignar la tubería a una categoría, quizás una basada en la edad o el material  . Model: [https://schema.org/Text](https://schema.org/Text)- `type[string]`: Tipo de entidad NGSI-LD. Tiene que ser Tank  - `volumeCurve[*]`: La etiqueta de identificación de una curva utilizada para describir la relación entre el volumen del tanque y el nivel de agua  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Propiedades requeridas  
-- `id`  - `location`  - `type`  ## Descripción del modelo de datos de las propiedades  
+- `id`  - `location`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## Descripción del modelo de datos de las propiedades  
 Ordenados alfabéticamente (haga clic para ver los detalles)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 Tank:    
@@ -535,9 +549,14 @@ Tank:
   x-version: 0.0.1    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## Ejemplo de carga útil  
 #### Tanque NGSI-v2 key-values Ejemplo  
 Aquí hay un ejemplo de un Tanque en formato JSON-LD como valores-clave. Esto es compatible con NGSI-v2 cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "1863179e-3968-4493-9167-ee21f880cc02",  
@@ -570,8 +589,10 @@ Tank:
     "tag": "DMA1"  
 }  
 ```  
+</details>  
 #### Tanque NGSI-v2 normalizado Ejemplo  
 He aquí un ejemplo de un tanque en formato JSON-LD normalizado. Esto es compatible con NGSI-v2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "1863179e-3968-4493-9167-ee21f880cc02",  
@@ -691,8 +712,10 @@ Tank:
   }  
 }  
 ```  
+</details>  
 #### Tanque NGSI-LD key-values Ejemplo  
 Aquí hay un ejemplo de un Tanque en formato JSON-LD como valores-clave. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:Tank:1863179e-3968-4493-9167-ee21f880cc02",  
@@ -725,8 +748,10 @@ Tank:
     ]  
 }  
 ```  
+</details>  
 #### Tanque NGSI-LD normalizado Ejemplo  
-Aquí hay un ejemplo de un tanque en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+He aquí un ejemplo de un tanque en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:Tank:1863179e-3968-4493-9167-ee21f880cc02",  
@@ -894,7 +919,17 @@ Tank:
         "type": "Relationship",  
         "object": "urn:ngsi-ld:Curve:fAM-8ca3-4533-a2eb-12015"  
     },  
-    "@context": []  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/context.jsonld"  
+    ]  
 }  
 ```  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
 Consulte [FAQ 10](https://smartdatamodels.org/index.php/faqs/) para obtener una respuesta sobre cómo tratar las unidades de magnitud  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
