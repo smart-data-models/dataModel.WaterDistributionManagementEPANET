@@ -1,17 +1,31 @@
+<!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
 エンティティSimulationScenario  
-========================  
+========================<!-- /10-Header -->  
+<!-- 15-License -->  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.WaterDistributionManagementEPANET/blob/master/SimulationScenario/LICENSE.md)  
 [ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-グローバルな記述。**このエンティティは、水域ネットワーク管理領域のために作られた汎用シミュレーションシナリオの調和された記述を含んでいます。このエンティティは、主に水ネットワーク管理の垂直方向と関連するIoTアプリケーションに関連しています。  
+<!-- /15-License -->  
+<!-- 20-Description -->  
+グローバルな記述。**このエンティティは、水ネットワーク管理領域のために作られた一般的なシミュレーションシナリオの調和された記述を含んでいます。このエンティティは、主に水ネットワーク管理の垂直方向と関連するIoTアプリケーションに関連しています。  
 バージョン: 0.0.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## プロパティ一覧  
 
-- `accuracy`: 水力学的な解決に到達したことを判断するための、総正規化流量変化収束基準。  - `address`: 郵送先住所  - `alternateName`: この項目の別称  - `areaServed`: サービスまたは提供品が提供される地理的な地域  - `bulkOrder`: 配管のバルク水反応順序  - `checkFrequency`: 油圧の状態チェックの頻度  - `chemicalName`: モデル化された化学物質の名前。qualityType'がCHEMの場合のみ使用されます。  - `chemicalUnits`: モデル化された化学物質の単位。qualityType'がCHEMの場合のみ使用されます。  - `concentrationLimit`: 成長反応の限界濃度  - `createdBy`: シミュレーションを作成/起動した人のID。User' タイプのエンティティへの参照。  - `dampLimit`: PRVおよびPSVのソリューションダンピングとステータスチェックが開始される精度値。  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `demandCharge`: 最大使用電力量（kW）あたりのエネルギー料金。  - `demandModel`: 解析が圧力駆動（PDA）か需要駆動（DDA）かを指定する。Enum:'DDA, PDA'  - `description`: このアイテムの説明  - `diffusivity`: 品質分析で分析される化学物質の分子拡散率で、水中の塩素の拡散率に対する相対値。  - `duration`: シミュレーションの継続時間（単位：秒  - `emitterExponent`: エミッタから演算するときに、接合部の圧力が上昇する力。  - `flowChange`: 水力学的な解決に到達したことを判断するための最大流量変化収束基準。  - `flowUnits`: シミュレーションで流量を表現する単位。CFS（立方フィート/秒）、GPM（ガロン/分）、MGD（百万ガロン/日）、IMGD（インペリアルMGD）、AFD（エーカーフィート/日）、LPS（リットル/秒）、LPM（リットル/分）、MLD（百万リットル/日）、CMH（立法メートル/時）およびCMD（立法メートル/日）が利用可能なオプションとして使用できます。Enum:'AFD, CFS, CMD, CMH, GPM, IMGD, LPS, LPM, MLD, MGD'.  - `hasInputNetwork`: シミュレーションに使用したネットワークのID  - `hasSimulationResult`: 関連するシミュレーション結果のIDです。SimulationResult' タイプのエンティティへの参照。  - `headError`: 水力学的な解決に到達したことを判断するための最大ヘッドロス収束基準。  - `headlossFormula`: 配管を流れる流量のヘッドロスを計算するための式。Hazen-Williams (H-W), Darcy-Weisbach (D-W) または Chezy-Manning (C-M) 式から選択します。許容される選択肢は、'H-W'、'D-W'、'C-M'である。Enum:'C-M, D-W, H-W'.  - `hydraulicTimeStep`: ネットワークの水力状態が計算される頻度を決定する。秒単位で指定  - `id`: エンティティの一意な識別子  - `inputParameter`: シミュレーションのためにネットワークに適用される一連の修正内容の説明  - `location`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `maxCheck`: ステータスチェックが終了するまでの試行回数  - `minimumPressure`: 圧力ダーベン分析で、これより低い圧力では需要が供給されない圧力。demandModelが'PDA'の場合のみ使用される。  - `name`: このアイテムの名称です。  - `operationalControl`: デアイテムの運用管理  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `patternStart`: シミュレーションの開始時刻です。  - `patternStep`: シミュレーションのパターンステップ。  - `pressureExponent`: 圧力駆動解析のもとで配信される需要を計算する際に、圧力を上げる電力。demandModelが'PDA'の場合のみ使用される。  - `qualityTimeStep`: ネットワーク内の水質の変化を追跡するために使用されるタイムステップ。秒単位で指定  - `qualityType`: 水質分析の種類。Enum:'chem, age, trace, none'.  - `reportStart`: 結果を報告し始めるシミュレーション時間。シミュレーション開始からの秒数で指定  - `reportStep`: 出力結果を報告する間隔（秒）。  - `requiredPressure`: 圧力駆動解析でノードの全需要を供給するために必要な圧力。demandModelが'PDA'の場合のみ使用されます。  - `ruleTimeStep`: ルールベースの制御によるシステム状態の変化を確認するために使用される時間ステップ。秒単位で指定  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `source`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `specificGravity`: モデル化された流体の密度と4℃の水の密度との比。C  - `startClockTime`: シミュレーションを開始する時刻。開始時刻からの秒数で指定  - `statistic`: 生成されたシミュレーション結果の時系列に対して行われる統計的な後処理の種類。オプションは、AVERAGED（時間平均した結果を報告）、MINIMUM（最小値のみを報告）、MAXIMUM（最大値のみを報告）、RANGE（最小値と最大値の差を報告）、NONE（全時間系列を報告）です。Enum:'averaged, minimum, maximum, range, none' （平均値、最小値、最大値、範囲、なし  - `tankOrder`: タンク用バルク水の反応順序  - `tolerance`: 水質許容度  - `traceNodeID`: 品質解析でトレースされるノードのURI。qualityType' が TRACE の場合は必須、それ以外の場合は不要。  - `trials`: シミュレーションの各水力学的時間ステップでネットワーク水理学を解くために使用される最大試行回数  - `type`: NGSI-LD Entity Type。SimulationScenarioでなければならない。  - `unbalanced`: 許容された試行回数内に水力学的解決に到達できなかった場合にどうするかを決定する。可能なオプションは STOP (解析停止)、CONTINUE (解析継続、ただし警告メッセージあり)、CONTINUE_N (さらに N 試行、ここで N の値は 'unbalancedN' で与えられる) である。Enum:'stop, continue, continue_N'.  - `unbalancedN`: unbalanced' が continue_N に設定されている場合に許可される追加試行回数。unbalanced' が continue_N に設定されている場合は必須、そうでない場合は不要。  - `viscosity`: 20℃における水の動粘度に対するモデル流体の動粘度。C  - `wallOrder`: パイプの壁面反応順序    
+<sup><sub>[*] 属性にタイプがない場合、複数のタイプまたは異なるフォーマット/パターンを持つ可能性があるためです</sub></sup>。  
+- `accuracy[number]`: 水力学的な解決に到達したことを判断するための、総正規化流量変化収束基準。  . Model: [https://schema.org/Number](https://schema.org/Number)- `address[object]`: 郵送先住所  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: この項目の別称  - `areaServed[string]`: サービスまたは提供品が提供される地理的な地域  . Model: [https://schema.org/Text](https://schema.org/Text)- `bulkOrder[number]`: 配管のバルク水反応順序  . Model: [https://schema.org/Number](https://schema.org/Number)- `checkFrequency[number]`: 油圧の状態チェックの頻度  . Model: [https://schema.org/Number](https://schema.org/Number)- `chemicalName[string]`: モデル化された化学物質の名前。qualityType'がCHEMの場合のみ使用されます。  . Model: [https://schema.org/Text](https://schema.org/Text)- `chemicalUnits[string]`: モデル化された化学物質の単位。qualityType'がCHEMの場合のみ使用されます。  . Model: [https://schema.org/Text](https://schema.org/Text)- `concentrationLimit[number]`: 成長反応の限界濃度  . Model: [https://schema.org/Number](https://schema.org/Number)- `createdBy[*]`: シミュレーションを作成/起動した人のID。User' タイプのエンティティへの参照。  . Model: [https://schema.org/URL](https://schema.org/URL)- `dampLimit[number]`: PRVおよびPSVのソリューションダンピングとステータスチェックが開始される精度値。  . Model: [https://schema.org/Number](https://schema.org/Number)- `dataProvider[string]`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated[string]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified[string]`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `demandCharge[number]`: 最大使用電力量（kW）あたりのエネルギー料金。  . Model: [https://schema.org/Number](https://schema.org/Number)- `demandModel[string]`: 解析が圧力駆動（PDA）か需要駆動（DDA）かを指定する。Enum:'DDA, PDA'  . Model: [https://schema.org/Text](https://schema.org/Text)- `description[string]`: このアイテムの説明  - `diffusivity[number]`: 品質分析で分析される化学物質の分子拡散率で、水中の塩素の拡散率に対する相対値。  . Model: [https://schema.org/Number](https://schema.org/Number)- `duration[number]`: シミュレーションの継続時間（単位：秒  . Model: [https://schema.org/Number](https://schema.org/Number)- `emitterExponent[number]`: エミッタから演算するときに、接合部の圧力が上昇する力。  . Model: [https://schema.org/Number](https://schema.org/Number)- `flowChange[number]`: 水力学的な解決に到達したことを判断するための最大流量変化収束基準。  . Model: [https://schema.org/Number](https://schema.org/Number)- `flowUnits[string]`: シミュレーションで流量を表現する単位。CFS（立方フィート/秒）、GPM（ガロン/分）、MGD（百万ガロン/日）、IMGD（インペリアルMGD）、AFD（エーカーフィート/日）、LPS（リットル/秒）、LPM（リットル/分）、MLD（百万リットル/日）、CMH（立法メートル/時）およびCMD（立法メートル/日）が利用可能なオプションとして使用できます。Enum:'AFD, CFS, CMD, CMH, GPM, IMGD, LPS, LPM, MLD, MGD'.  . Model: [https://schema.org/Text](https://schema.org/Text)- `hasInputNetwork[*]`: シミュレーションに使用したネットワークのID  . Model: [https://schema.org/URL](https://schema.org/URL)- `hasSimulationResult[*]`: 関連するシミュレーション結果のIDです。SimulationResult' タイプのエンティティへの参照。  . Model: [https://schema.org/URL](https://schema.org/URL)- `headError[number]`: 水力学的な解決に到達したことを判断するための最大ヘッドロス収束基準。  . Model: [https://schema.org/Number](https://schema.org/Number)- `headlossFormula[string]`: 配管を流れる流量のヘッドロスを計算するための式。Hazen-Williams (H-W), Darcy-Weisbach (D-W) または Chezy-Manning (C-M) 式から選択します。許容される選択肢は、'H-W'、'D-W'、'C-M'である。Enum:'C-M, D-W, H-W'.  . Model: [https://schema.org/Text](https://schema.org/Text)- `hydraulicTimeStep[number]`: ネットワークの水力状態が計算される頻度を決定する。秒単位で指定  . Model: [https://schema.org/Number](https://schema.org/Number)- `id[*]`: エンティティの一意な識別子  - `inputParameter[array]`: シミュレーションのためにネットワークに適用される一連の修正内容の説明  . Model: [https://Text](https://Text)- `location[*]`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `maxCheck[number]`: ステータスチェックが終了するまでの試行回数  . Model: [https://schema.org/Number](https://schema.org/Number)- `minimumPressure[number]`: 圧力ダーベン分析で、これより低い圧力では需要が供給されない圧力。demandModelが'PDA'の場合のみ使用される。  . Model: [https://schema.org/Number](https://schema.org/Number)- `name[string]`: このアイテムの名称です。  - `operationalControl[array]`: デアイテムの運用管理  - `owner[array]`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `patternStart[string]`: シミュレーションの開始時刻です。  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `patternStep[number]`: シミュレーションのパターンステップ。  . Model: [https://schema.org/Number](https://schema.org/Number)- `pressureExponent[number]`: 圧力駆動解析のもとで配信される需要を計算する際に、圧力を上げる電力。demandModelが'PDA'の場合のみ使用される。  . Model: [https://schema.org/Number](https://schema.org/Number)- `qualityTimeStep[number]`: ネットワーク内の水質の変化を追跡するために使用されるタイムステップ。秒単位で指定  . Model: [https://schema.org/Number](https://schema.org/Number)- `qualityType[string]`: 水質分析の種類。Enum:'chem, age, trace, none'.  . Model: [https://schema.org/Text](https://schema.org/Text)- `reportStart[number]`: 結果を報告し始めるシミュレーション時間。シミュレーション開始からの秒数で指定  . Model: [https://schema.org/Number](https://schema.org/Number)- `reportStep[number]`: 出力結果を報告する間隔（秒）。  . Model: [https://schema.org/Number](https://schema.org/Number)- `requiredPressure[number]`: 圧力駆動解析でノードの全需要を供給するために必要な圧力。demandModelが'PDA'の場合のみ使用されます。  . Model: [https://schema.org/Number](https://schema.org/Number)- `ruleTimeStep[number]`: ルールベースの制御によるシステム状態の変化を確認するために使用される時間ステップ。秒単位で指定  . Model: [https://schema.org/Number](https://schema.org/Number)- `seeAlso[*]`: 項目に関する追加リソースを指すURIのリスト。  - `source[string]`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `specificGravity[number]`: モデル化された流体の密度と4℃の水の密度との比。C  . Model: [https://schema.org/Number](https://schema.org/Number)- `startClockTime[number]`: シミュレーションを開始する時刻。開始時刻からの秒数で指定  . Model: [https://schema.org/Number](https://schema.org/Number)- `statistic[string]`: 生成されたシミュレーション結果の時系列に対して行われる統計的な後処理の種類。オプションは、AVERAGED（時間平均した結果を報告）、MINIMUM（最小値のみを報告）、MAXIMUM（最大値のみを報告）、RANGE（最小値と最大値の差を報告）、NONE（全時間系列を報告）です。Enum:'averaged, minimum, maximum, range, none' （平均値、最小値、最大値、範囲、なし  . Model: [https://schema.org/string](https://schema.org/string)- `tankOrder[number]`: タンク用バルク水の反応順序  . Model: [https://schema.org/Number](https://schema.org/Number)- `tolerance[number]`: 水質許容度  . Model: [https://schema.org/Number](https://schema.org/Number)- `traceNodeID[*]`: 品質解析でトレースされるノードのURI。qualityType' が TRACE の場合は必須、それ以外の場合は不要。  . Model: [https://schema.org/URL](https://schema.org/URL)- `trials[number]`: シミュレーションの各水力学的時間ステップでネットワーク水理学を解くために使用される最大試行回数  . Model: [https://schema.org/Number](https://schema.org/Number)- `type[string]`: NGSI-LD Entity Type。SimulationScenarioでなければならない。  - `unbalanced[string]`: 許容された試行回数内に水力学的解決に到達できなかった場合にどうするかを決定する。可能なオプションは STOP (解析停止)、CONTINUE (解析継続、ただし警告メッセージあり)、CONTINUE_N (さらに N 試行、ここで N の値は 'unbalancedN' で与えられる) である。Enum:'stop, continue, continue_N'.  . Model: [https://schema.org/Text](https://schema.org/Text)- `unbalancedN[number]`: unbalanced' が continue_N に設定されている場合に許可される追加試行回数。unbalanced' が continue_N に設定されている場合は必須、そうでない場合は不要。  . Model: [https://schema.org/Number](https://schema.org/Number)- `viscosity[number]`: 20℃における水の動粘度に対するモデル流体の動粘度。C  . Model: [https://schema.org/Number](https://schema.org/Number)- `wallOrder[number]`: パイプの壁面反応順序  . Model: [https://schema.org/Number](https://schema.org/Number)<!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 必要なプロパティ  
-- `hasInputNetwork`  - `id`  - `type`  ## プロパティのデータモデル記述  
+- `hasInputNetwork`  - `id`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## プロパティのデータモデル記述  
 アルファベット順に並びます（クリックで詳細へ）  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 SimulationScenario:    
@@ -676,9 +690,14 @@ SimulationScenario:
   x-version: 0.0.1    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## ペイロードの例  
 #### SimulationScenario NGSI-v2 key-values の例。  
 SimulationScenarioをJSON-LD形式でkey-valuesにした例です。これは `options=keyValues` を使用した場合に NGSI-v2 と互換性があり、個々のエンティティのコンテキストデータが返されます。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:SimulationScenario:01",  
@@ -774,8 +793,10 @@ SimulationScenario:
   ]  
 }  
 ```  
+</details>  
 #### SimulationScenario NGSI-v2 正規化例  
 SimulationScenarioをJSON-LDフォーマットで正規化した例です。これは、オプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキスト・データを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:SimulationScenario:01",  
@@ -1071,8 +1092,10 @@ SimulationScenario:
   ]  
 }  
 ```  
+</details>  
 #### SimulationScenario NGSI-LD key-value Example  
 SimulationScenarioをJSON-LD形式でkey-valuesにした例です。これは `options=keyValues` を使用した場合に NGSI-LD と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:SimulationScenario:01",  
@@ -1171,8 +1194,10 @@ SimulationScenario:
     ]  
 }  
 ```  
+</details>  
 #### SimulationScenario NGSI-LD 正規化例  
 SimulationScenarioをJSON-LDフォーマットで正規化した例です。これは、オプションを使用しない場合のNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:SimulationScenario:01",  
@@ -1501,7 +1526,17 @@ SimulationScenario:
         "value": 1,  
         "unitCode": "C62"  
     },  
-    "@context": []  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/context.jsonld"  
+    ]  
 }  
 ```  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
 マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
