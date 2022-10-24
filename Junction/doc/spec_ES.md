@@ -1,17 +1,31 @@
+<!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
 Entidad: Junction  
-=================  
+=================<!-- /10-Header -->  
+<!-- 15-License -->  
 [Licencia abierta](https://github.com/smart-data-models//dataModel.WaterDistributionManagementEPANET/blob/master/Junction/LICENSE.md)  
 [documento generado automáticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 Descripción global: **Esta entidad contiene una descripción armonizada de una unión genérica realizada para el dominio de la gestión de redes de agua. Esta entidad está asociada principalmente a la vertical de gestión de redes de agua y a las aplicaciones IoT relacionadas.**.  
 versión: 0.0.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## Lista de propiedades  
 
-- `address`: La dirección postal  - `alternateName`: Un nombre alternativo para este artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `demandCategory`: Permite asignar demandas base y patrones de tiempo a otras categorías de usuarios.  - `description`: Una descripción de este artículo  - `elevation`: La elevación por encima de alguna referencia común del cruce. Todas las unidades se aceptan en código [CEFACT](https://www.unece.org/cefact.html)  - `emitterCoefficient`: Coeficiente de descarga para el emisor (aspersor o boquilla) colocado en la unión. Todas las unidades se aceptan en código [CEFACT](https://www.unece.org/cefact.html)  - `head`: Cabezal observado en el nudo (empalme, tanque o depósito)  - `id`: Identificador único de la entidad  - `initialQuality`: Calidad inicial en el componente de red  - `location`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `name`: El nombre de este artículo.  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `pressure`: Presión observada en el nodo (unión, tanque o depósito)  - `quality`: Calidad observada en el componente de red  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `sourceCategory`: Descripción de la calidad del flujo de origen que entra en la red en un nodo específico.  - `sourceMassInflow`: Entrada de masa de la fuente observada en el nodo (cruce, tanque o depósito)  - `supply`: Suministro observado en el nudo (empalme, tanque o depósito)  - `tag`: Una cadena de texto opcional utilizada para asignar la tubería a una categoría, quizás una basada en la edad o el material  - `type`: Tipo de entidad NGSI-LD. Tiene que ser Junction    
+<sup><sub>[*] Si no hay un tipo en un atributo es porque puede tener varios tipos o diferentes formatos/patrones</sub></sup>  
+- `address[object]`: La dirección postal  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Un nombre alternativo para este artículo  - `areaServed[string]`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated[string]`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified[string]`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `demandCategory[object]`: Permite asignar demandas base y patrones de tiempo a otras categorías de usuarios.  . Model: [https://schema.org/Text](https://schema.org/Text)- `description[string]`: Una descripción de este artículo  - `elevation[number]`: La elevación por encima de alguna referencia común del cruce. Todas las unidades se aceptan en código [CEFACT](https://www.unece.org/cefact.html)  . Model: [http://schema.org/Number](http://schema.org/Number)- `emitterCoefficient[number]`: Coeficiente de descarga para el emisor (aspersor o boquilla) colocado en la unión. Todas las unidades se aceptan en código [CEFACT](https://www.unece.org/cefact.html)  . Model: [http://schema.org/Number](http://schema.org/Number)- `head[object]`: Cabezal observado en el nudo (empalme, tanque o depósito)  - `id[*]`: Identificador único de la entidad  - `initialQuality[object]`: Calidad inicial en el componente de red  - `location[*]`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `name[string]`: El nombre de este artículo.  - `owner[array]`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `pressure[object]`: Presión observada en el nodo (unión, tanque o depósito)  - `quality[object]`: Calidad observada en el componente de red  - `seeAlso[*]`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source[string]`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `sourceCategory[object]`: Descripción de la calidad del flujo de origen que entra en la red en un nodo específico.  . Model: [https://schema.org/Text](https://schema.org/Text)- `sourceMassInflow[object]`: Entrada de masa de la fuente observada en el nodo (cruce, tanque o depósito)  - `supply[object]`: Suministro observado en el nudo (empalme, tanque o depósito)  - `tag[string]`: Una cadena de texto opcional utilizada para asignar la tubería a una categoría, quizás una basada en la edad o el material  . Model: [https://schema.org/Text](https://schema.org/Text)- `type[string]`: Tipo de entidad NGSI-LD. Tiene que ser Junction  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Propiedades requeridas  
-- `id`  - `type`  ## Descripción del modelo de datos de las propiedades  
+- `id`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## Descripción del modelo de datos de las propiedades  
 Ordenados alfabéticamente (haga clic para ver los detalles)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 Junction:    
@@ -470,9 +484,14 @@ Junction:
   x-version: 0.0.1    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## Ejemplo de carga útil  
 #### Junction NGSI-v2 key-values Ejemplo  
 Aquí hay un ejemplo de una unión en formato JSON-LD como valores-clave. Esto es compatible con NGSI-v2 cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "63fe7d79-0d4c-4da9-b7d0-3340efa0656a",  
@@ -504,8 +523,10 @@ Junction:
   "emitterCoefficient": 0.526  
 }  
 ```  
+</details>  
 #### Junction NGSI-v2 normalizado Ejemplo  
-Aquí hay un ejemplo de una unión en formato JSON-LD normalizado. Esto es compatible con NGSI-v2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+Aquí hay un ejemplo de un Empalme en formato JSON-LD normalizado. Esto es compatible con NGSI-v2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "63fe7d79-0d4c-4da9-b7d0-3340efa0656a",  
@@ -594,8 +615,10 @@ Junction:
   }  
 }  
 ```  
+</details>  
 #### Junction NGSI-LD key-values Ejemplo  
 Aquí hay un ejemplo de una unión en formato JSON-LD como valores-clave. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:Junction:63fe7d79-0d4c-4da9-b7d0-3340efa0656a",  
@@ -621,8 +644,10 @@ Junction:
     ]  
 }  
 ```  
+</details>  
 #### Empalme NGSI-LD normalizado Ejemplo  
 Aquí hay un ejemplo de un Empalme en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:Junction:63fe7d79-0d4c-4da9-b7d0-3340efa0656a",  
@@ -754,7 +779,17 @@ Junction:
         "type": "Property",  
         "value": "DMA1"  
     },  
-    "@context": []  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/context.jsonld"  
+    ]  
 }  
 ```  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
 Consulte [FAQ 10](https://smartdatamodels.org/index.php/faqs/) para obtener una respuesta sobre cómo tratar las unidades de magnitud  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
