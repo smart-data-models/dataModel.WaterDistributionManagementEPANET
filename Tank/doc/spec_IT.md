@@ -1,17 +1,31 @@
+<!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
 Entità: Serbatoio  
-=================  
+=================<!-- /10-Header -->  
+<!-- 15-License -->  
 [Licenza aperta](https://github.com/smart-data-models//dataModel.WaterDistributionManagementEPANET/blob/master/Tank/LICENSE.md)  
 [documento generato automaticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 Descrizione globale: **Questa entità contiene una descrizione armonizzata di un serbatoio generico realizzato per il dominio Water Network Management. Questa entità è principalmente associata al verticale della gestione dell'acqua e alle relative applicazioni IoT.**  
 versione: 0.0.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## Elenco delle proprietà  
 
-- `address`: L'indirizzo postale  - `alternateName`: Un nome alternativo per questa voce  - `areaServed`: L'area geografica in cui viene fornito il servizio o l'articolo offerto.  - `bulkReactionCoefficient`: Coefficiente di reazione di massa utilizzato per modellare le reazioni nel serbatoio. Tutte le unità sono accettate in codice [CEFACT](https://www.unece.org/cefact.html).  - `dataProvider`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  - `dateCreated`: Timestamp di creazione dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `dateModified`: Timestamp dell'ultima modifica dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `description`: Descrizione dell'articolo  - `elevation`: L'elevazione sopra un riferimento comune del serbatoio. Tutte le unità sono accettate in codice [CEFACT](https://www.unece.org/cefact.html).  - `hasInlet`: Una relazione che indica i punti di ingresso dell'acqua nel serbatoio.  - `hasOutlet`: Una relazione che indica i punti di uscita dell'acqua dal serbatoio.  - `head`: Prevalenza osservata al nodo (giunzione, serbatoio o bacino)  - `id`: Identificatore univoco dell'entità  - `initLevel`: L'altezza della superficie dell'acqua sopra la quota del fondo del serbatoio all'inizio della simulazione. Tutte le unità sono accettate in codice [CEFACT](https://www.unece.org/cefact.html).  - `initialQuality`: Livello di qualità dell'acqua nel serbatoio all'inizio della simulazione. Tutte le unità sono accettate in codice [CEFACT](https://www.unece.org/cefact.html).  - `level`: Livello osservato nell'elemento della rete  - `location`: Riferimento geojson all'elemento. Può essere un punto, una stringa di linea, un poligono, un multi-punto, una stringa di linea o un poligono multiplo.  - `maxLevel`: L'altezza della superficie dell'acqua sopra la quota del fondo del serbatoio all'inizio della simulazione. Tutte le unità sono accettate in codice [CEFACT](https://www.unece.org/cefact.html).  - `minLevel`: Il livello minimo a cui può scendere l'acqua nel serbatoio. Tutte le unità sono accettate in codice [CEFACT](https://www.unece.org/cefact.html).  - `minVolume`: Il volume dell'acqua nel serbatoio quando è al livello minimo. Tutte le unità sono accettate in codice [CEFACT](https://www.unece.org/cefact.html).  - `mixingFraction`: La frazione del volume totale del serbatoio che comprende il compartimento di ingresso-uscita del modello di miscelazione a due compartimenti (2COMP). Tutte le unità sono accettate in codice [CEFACT](https://www.unece.org/cefact.html).  - `mixingModel`: Una sotto-proprietà della proprietà sourceCategory. Enum:'2COMP, FIFO, LIFO, MIXED'  - `name`: Il nome di questo elemento.  - `nominalDiameter`: Il diametro del serbatoio. Tutte le unità sono accettate in codice [CEFACT](https://www.unece.org/cefact.html).  - `owner`: Un elenco contenente una sequenza di caratteri codificata JSON che fa riferimento agli ID univoci dei proprietari.  - `pressure`: Pressione osservata al nodo (giunzione, serbatoio o cisterna)  - `quality`: Qualità osservata nel componente di rete  - `seeAlso`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `source`: Una sequenza di caratteri che indica la fonte originale dei dati dell'entità come URL. Si consiglia di utilizzare il nome di dominio completamente qualificato del provider di origine o l'URL dell'oggetto di origine.  - `sourceCategory`: Descrizione della qualità del flusso di origine che entra nella rete in un nodo specifico.  - `sourceMassInflow`: Afflusso di massa della sorgente osservato nel nodo (giunzione, serbatoio o bacino)  - `supply`: Fornitura osservata al nodo (giunzione, serbatoio o cisterna)  - `tag`: Una stringa di testo opzionale utilizzata per assegnare il tubo a una categoria, magari basata sull'età o sul materiale.  - `type`: Tipo di entità NGSI-LD. Deve essere Tank  - `volumeCurve`: L'etichetta identificativa di una curva utilizzata per descrivere la relazione tra il volume del serbatoio e il livello dell'acqua.    
+<sup><sub>[*] Se non c'è un tipo in un attributo è perché potrebbe avere diversi tipi o diversi formati/modelli</sub></sup>.  
+- `address[object]`: L'indirizzo postale  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Un nome alternativo per questa voce  - `areaServed[string]`: L'area geografica in cui viene fornito il servizio o l'articolo offerto.  . Model: [https://schema.org/Text](https://schema.org/Text)- `bulkReactionCoefficient[number]`: Coefficiente di reazione di massa utilizzato per modellare le reazioni nel serbatoio. Tutte le unità sono accettate in codice [CEFACT](https://www.unece.org/cefact.html).  . Model: [https://schema.org/Number](https://schema.org/Number)- `dataProvider[string]`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  - `dateCreated[string]`: Timestamp di creazione dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `dateModified[string]`: Timestamp dell'ultima modifica dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `description[string]`: Descrizione dell'articolo  - `elevation[number]`: L'elevazione sopra un riferimento comune del serbatoio. Tutte le unità sono accettate in codice [CEFACT](https://www.unece.org/cefact.html).  . Model: [https://schema.org/Number](https://schema.org/Number)- `hasInlet[string]`: Una relazione che indica i punti di ingresso dell'acqua nel serbatoio.  - `hasOutlet[string]`: Una relazione che indica i punti di uscita dell'acqua dal serbatoio.  - `head[object]`: Prevalenza osservata al nodo (giunzione, serbatoio o bacino)  - `id[*]`: Identificatore univoco dell'entità  - `initLevel[number]`: L'altezza della superficie dell'acqua sopra la quota del fondo del serbatoio all'inizio della simulazione. Tutte le unità sono accettate in codice [CEFACT](https://www.unece.org/cefact.html).  . Model: [https://schema.org/Number](https://schema.org/Number)- `initialQuality[number]`: Livello di qualità dell'acqua nel serbatoio all'inizio della simulazione. Tutte le unità sono accettate in codice [CEFACT](https://www.unece.org/cefact.html).  . Model: [https://schema.org/Number](https://schema.org/Number)- `level[object]`: Livello osservato nell'elemento della rete  - `location[*]`: Riferimento Geojson all'elemento. Può essere un punto, una stringa di linea, un poligono, un multi-punto, una stringa di linea o un poligono multiplo.  - `maxLevel[number]`: L'altezza della superficie dell'acqua sopra la quota del fondo del serbatoio all'inizio della simulazione. Tutte le unità sono accettate in codice [CEFACT](https://www.unece.org/cefact.html).  . Model: [https://schema.org/Number](https://schema.org/Number)- `minLevel[number]`: Il livello minimo a cui può scendere l'acqua nel serbatoio. Tutte le unità sono accettate in codice [CEFACT](https://www.unece.org/cefact.html).  . Model: [https://schema.org/Number](https://schema.org/Number)- `minVolume[number]`: Il volume dell'acqua nel serbatoio quando è al livello minimo. Tutte le unità sono accettate in codice [CEFACT](https://www.unece.org/cefact.html).  . Model: [https://schema.org/Number](https://schema.org/Number)- `mixingFraction[number]`: La frazione del volume totale del serbatoio che comprende il compartimento di ingresso-uscita del modello di miscelazione a due compartimenti (2COMP). Tutte le unità sono accettate in codice [CEFACT](https://www.unece.org/cefact.html).  . Model: [https://schema.org/Number](https://schema.org/Number)- `mixingModel[string]`: Una sotto-proprietà della proprietà sourceCategory. Enum:'2COMP, FIFO, LIFO, MIXED'  . Model: [https://schema.org/Text](https://schema.org/Text)- `name[string]`: Il nome di questo elemento.  - `nominalDiameter[number]`: Il diametro del serbatoio. Tutte le unità sono accettate in codice [CEFACT](https://www.unece.org/cefact.html).  . Model: [https://schema.org/Number](https://schema.org/Number)- `owner[array]`: Un elenco contenente una sequenza di caratteri codificata JSON che fa riferimento agli ID univoci dei proprietari.  - `pressure[object]`: Pressione osservata al nodo (giunzione, serbatoio o cisterna)  - `quality[object]`: Qualità osservata nel componente di rete  - `seeAlso[*]`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `source[string]`: Una sequenza di caratteri che indica la fonte originale dei dati dell'entità come URL. Si consiglia di utilizzare il nome di dominio completamente qualificato del provider di origine o l'URL dell'oggetto di origine.  - `sourceCategory[object]`: Descrizione della qualità del flusso di origine che entra nella rete in un nodo specifico.  . Model: [https://schema.org/Text](https://schema.org/Text)- `sourceMassInflow[object]`: Afflusso di massa della sorgente osservato nel nodo (giunzione, serbatoio o bacino)  - `supply[object]`: Fornitura osservata al nodo (giunzione, serbatoio o cisterna)  - `tag[string]`: Una stringa di testo opzionale utilizzata per assegnare il tubo a una categoria, magari basata sull'età o sul materiale.  . Model: [https://schema.org/Text](https://schema.org/Text)- `type[string]`: Tipo di entità NGSI-LD. Deve essere Tank  - `volumeCurve[*]`: L'etichetta identificativa di una curva utilizzata per descrivere la relazione tra il volume del serbatoio e il livello dell'acqua.  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Proprietà richieste  
-- `id`  - `location`  - `type`  ## Modello di dati descrizione delle proprietà  
+- `id`  - `location`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## Modello di dati descrizione delle proprietà  
 Ordinati in ordine alfabetico (clicca per i dettagli)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 Tank:    
@@ -535,9 +549,14 @@ Tank:
   x-version: 0.0.1    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## Esempi di payload  
 #### Valori chiave del serbatoio NGSI-v2 Esempio  
 Ecco un esempio di un serbatoio in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-v2 quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "1863179e-3968-4493-9167-ee21f880cc02",  
@@ -570,8 +589,10 @@ Tank:
     "tag": "DMA1"  
 }  
 ```  
+</details>  
 #### Serbatoio NGSI-v2 normalizzato Esempio  
 Ecco un esempio di un serbatoio in formato JSON-LD normalizzato. Questo è compatibile con NGSI-v2 quando non si utilizzano le opzioni e restituisce i dati di contesto di una singola entità.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "1863179e-3968-4493-9167-ee21f880cc02",  
@@ -691,8 +712,10 @@ Tank:
   }  
 }  
 ```  
+</details>  
 #### Valori chiave del serbatoio NGSI-LD Esempio  
 Ecco un esempio di un serbatoio in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-LD quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:Tank:1863179e-3968-4493-9167-ee21f880cc02",  
@@ -725,8 +748,10 @@ Tank:
     ]  
 }  
 ```  
+</details>  
 #### Serbatoio NGSI-LD normalizzato Esempio  
 Ecco un esempio di un serbatoio in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non si utilizzano le opzioni e restituisce i dati di contesto di una singola entità.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:Tank:1863179e-3968-4493-9167-ee21f880cc02",  
@@ -894,7 +919,17 @@ Tank:
         "type": "Relationship",  
         "object": "urn:ngsi-ld:Curve:fAM-8ca3-4533-a2eb-12015"  
     },  
-    "@context": []  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/context.jsonld"  
+    ]  
 }  
 ```  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
 Vedere [FAQ 10](https://smartdatamodels.org/index.php/faqs/) per ottenere una risposta su come gestire le unità di grandezza.  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
