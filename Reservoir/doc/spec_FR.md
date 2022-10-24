@@ -1,17 +1,31 @@
+<!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
 Entité : Réservoir  
-==================  
+==================<!-- /10-Header -->  
+<!-- 15-License -->  
 [Licence ouverte] (https://github.com/smart-data-models//dataModel.WaterDistributionManagementEPANET/blob/master/Reservoir/LICENSE.md)  
 [document généré automatiquement] (https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 Description globale : **Cette entité contient une description harmonisée d'un réservoir générique réalisé pour le domaine de la gestion des réseaux d'eau. Cette entité est principalement associée à la gestion verticale de l'eau et aux applications IoT connexes**.  
 version : 0.0.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## Liste des propriétés  
 
-- `address`: L'adresse postale  - `alternateName`: Un nom alternatif pour cet élément  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `description`: Une description de cet article  - `elevation`: L'élévation au-dessus d'une référence commune du réservoir. Toutes les unités sont acceptées en code [CEFACT] (https://www.unece.org/cefact.html).  - `hasInlet`: Une relation indiquant les points d'entrée d'eau du Réservoir  - `hasOutlet`: Une relation indiquant les points de sortie d'eau du Réservoir  - `head`: Hauteur de chute observée au nœud (jonction, cuve ou réservoir)  - `headPattern`: L'étiquette d'identification d'un modèle temporel utilisé pour modéliser la variation temporelle de la hauteur de chute totale du réservoir.  - `id`: Identifiant unique de l'entité  - `initialQuality`: Qualité initiale de la composante réseau  - `location`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une ligne, d'un polygone, d'un point multiple, d'une ligne multiple ou d'un polygone multiple.  - `name`: Le nom de cet élément.  - `owner`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `pressure`: Pression observée au nœud (jonction, cuve ou réservoir)  - `quality`: Qualité observée dans la composante réseau  - `reservoirHead`: La hauteur hydraulique (élévation + hauteur de pression) de l'eau dans le réservoir. Toutes les unités sont acceptées en code [CEFACT](https://www.unece.org/cefact.html).  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'élément  - `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `sourceCategory`: Description de la qualité du flux source entrant dans le réseau à un nœud spécifique.  - `sourceMassInflow`: Débit massique source observé au nœud (jonction, cuve ou réservoir)  - `supply`: Alimentation observée au niveau du nœud (jonction, cuve ou réservoir)  - `tag`: Une chaîne de texte facultative utilisée pour affecter le tuyau à une catégorie, peut-être basée sur l'âge ou le matériau.  - `type`: Type d'entité NGSI-LD. Il doit être égal à Reservoir.    
+<sup><sub>[*] S'il n'y a pas de type dans un attribut, c'est parce qu'il pourrait avoir plusieurs types ou différents formats/modèles</sub></sup>.  
+- `address[object]`: L'adresse postale  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Un nom alternatif pour cet élément  - `areaServed[string]`: La zone géographique où un service ou un article offert est fourni  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated[string]`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified[string]`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `description[string]`: Une description de cet article  - `elevation[number]`: L'élévation au-dessus d'une référence commune du réservoir. Toutes les unités sont acceptées en code [CEFACT] (https://www.unece.org/cefact.html).  . Model: [https://schema.org/Number](https://schema.org/Number)- `hasInlet[*]`: Une relation indiquant les points d'entrée d'eau du Réservoir  - `hasOutlet[*]`: Une relation indiquant les points de sortie d'eau du Réservoir  - `head[object]`: Hauteur de chute observée au nœud (jonction, cuve ou réservoir)  - `headPattern[*]`: L'étiquette d'identification d'un modèle temporel utilisé pour modéliser la variation temporelle de la hauteur de chute totale du réservoir.  - `id[*]`: Identifiant unique de l'entité  - `initialQuality[object]`: Qualité initiale de la composante réseau  - `location[*]`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une ligne, d'un polygone, d'un point multiple, d'une ligne multiple ou d'un polygone multiple.  - `name[string]`: Le nom de cet élément.  - `owner[array]`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `pressure[object]`: Pression observée au nœud (jonction, cuve ou réservoir)  - `quality[object]`: Qualité observée dans la composante réseau  - `reservoirHead[number]`: La hauteur hydraulique (élévation + hauteur de pression) de l'eau dans le réservoir. Toutes les unités sont acceptées en code [CEFACT](https://www.unece.org/cefact.html).  . Model: [https://schema.org/Number](https://schema.org/Number)- `seeAlso[*]`: liste d'uri pointant vers des ressources supplémentaires sur l'article  - `source[string]`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `sourceCategory[object]`: Description de la qualité du flux source entrant dans le réseau à un nœud spécifique.  . Model: [https://schema.org/Text](https://schema.org/Text)- `sourceMassInflow[object]`: Débit massique source observé au nœud (jonction, cuve ou réservoir)  - `supply[object]`: Alimentation observée au niveau du nœud (jonction, cuve ou réservoir)  - `tag[string]`: Une chaîne de texte facultative utilisée pour affecter le tuyau à une catégorie, peut-être basée sur l'âge ou le matériau.  . Model: [https://schema.org/Text](https://schema.org/Text)- `type[string]`: Type d'entité NGSI-LD. Il doit être égal à Reservoir.  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Propriétés requises  
-- `id`  - `location`  - `reservoirHead`  - `type`  ## Description des propriétés du modèle de données  
+- `id`  - `location`  - `reservoirHead`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## Description des propriétés du modèle de données  
 Classés par ordre alphabétique (cliquez pour plus de détails)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 Reservoir:    
@@ -488,9 +502,14 @@ Reservoir:
   x-version: 0.0.1    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## Exemples de charges utiles  
 #### Réservoir NGSI-v2 valeurs-clés Exemple  
 Voici un exemple de Réservoir au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-v2 quand on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "1863179e-3768-4480-9167-ff21f870dd19",  
@@ -518,8 +537,10 @@ Reservoir:
   "tag": "DMA1"  
 }  
 ```  
+</details>  
 #### Réservoir NGSI-v2 normalisé Exemple  
 Voici un exemple de Réservoir au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-v2 lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "1863179e-3768-4480-9167-ff21f870dd19",  
@@ -604,8 +625,10 @@ Reservoir:
   }  
 }  
 ```  
+</details>  
 #### Réservoir Valeurs-clés NGSI-LD Exemple  
 Voici un exemple de Réservoir au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-LD en utilisant `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:Reservoir:1863179e-3768-4480-9167-ff21f870dd19",  
@@ -631,8 +654,10 @@ Reservoir:
     ]  
 }  
 ```  
+</details>  
 #### Réservoir NGSI-LD normalisé Exemple  
 Voici un exemple de Réservoir au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:Reservoir:1863179e-3768-4480-9167-ff21f870dd19",  
@@ -754,7 +779,17 @@ Reservoir:
         "type": "Property",  
         "value": "DMA1"  
     },  
-    "@context": []  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/context.jsonld"  
+    ]  
 }  
 ```  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
 Voir [FAQ 10](https://smartdatamodels.org/index.php/faqs/) pour obtenir une réponse sur la façon de traiter les unités de magnitude.  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
