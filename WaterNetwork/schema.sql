@@ -1,0 +1,3 @@
+/* (Beta) Export of data model WaterNetwork of the subject dataModel.WaterDistributionManagementEPANET for a postgreSQL database. Pending translation of enumerations and multityped attributes */
+CREATE TYPE WaterNetwork_type AS ENUM ('WaterNetwork');
+CREATE TABLE WaterNetwork (address json, alternateName text, areaServed text, dataProvider text, dateCreated timestamp, dateModified timestamp, description text, hasSubNetwork json, id text, isComposedOf json, location json, name text, owner json, seeAlso json, source text, type WaterNetwork_type);
