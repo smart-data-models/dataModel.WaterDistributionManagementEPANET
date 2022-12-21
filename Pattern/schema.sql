@@ -1,0 +1,3 @@
+/* (Beta) Export of data model Pattern of the subject dataModel.WaterDistributionManagementEPANET for a postgreSQL database. Pending translation of enumerations and multityped attributes */
+CREATE TYPE Pattern_type AS ENUM ('Pattern');
+CREATE TABLE Pattern (alternateName text, dataProvider text, dateCreated timestamp, dateModified timestamp, description text, id text, multipliers json, name text, owner json, seeAlso json, source text, startTime timestamp, tag text, timeStep text, type Pattern_type);
