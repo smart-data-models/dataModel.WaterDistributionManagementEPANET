@@ -79,6 +79,7 @@
     "pressure": "https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/pressure",
     "pressureExponent": "https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/pressureExponent",
     "pumpPattern": "https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/pumpPattern",
+    "pumpCapacity": "https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/pumpCapacity",
     "quality": "https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/quality",
     "qualityTimeStep": "https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/qualityTimeStep",
     "qualityType": "https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/qualityType",
