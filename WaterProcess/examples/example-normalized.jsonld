@@ -1,0 +1,38 @@
+{
+  "id": "urn:waterdna:haemil:WaterProcess_01",
+  "type": "WaterProcess",
+  "location": {
+    "type": "GeoProperty",
+    "value": {
+      "type": "Point",
+      "coordinates": [
+        127.266663,
+        36.524677
+      ]
+    }
+  },
+  "name": {
+    "type": "Property",
+    "value": "inflow process at water treatment plant 1"
+  },
+  "waterProcessType": {
+    "type": "Property",
+    "value": "inflow"
+  },
+  "tn": {
+    "type": "Property",
+    "value": 73.152
+  },
+  "tp": {
+    "type": "Property",
+    "value": 6.1
+  },
+  "tss": {
+    "type": "Property",
+    "value": 130.9
+  },
+  "@context": [
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+    "http://uri.citydatahub.kr/ngsi-ld/water.jsonld"
+  ]
+}

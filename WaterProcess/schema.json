@@ -1,0 +1,101 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "$schemaVersion": "0.0.1",
+  "modelTags": "",
+  "derivedFrom": "",
+  "license": "",
+  "$id": "https://smart-data-models.github.io/dataModel.WasteWater/schema.json",
+  "title": "Smart data models - water process schema",
+  "description": "The data model is intended to provide information about water process at water purification plant or water treatment plant",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+    },
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+    },
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Contact-Commons"
+    },
+    {
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "Property. NGSI Entity type. It has to be WaterProcess",
+          "enum": ["WaterProcess"]
+        },
+        "waterProcessType": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'. The type of water process at water purification plant or water treatment plant (aka. waste water treatment plant).",
+          "enum": [
+            "inflow",
+            "sedimentation",
+            "filtration",
+            "disinfection",
+            "waterTreatment",
+            "primarySedimentation",
+            "bioreactor",
+            "effluent"
+          ]
+        },
+        "operationStatus": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/Text'.ss The operation status of the water proce.",
+          "enum": ["normal", "watch", "warning"]
+        },
+        "temperature": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Units:'celsius'. The temperature of the processed water. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code."
+        },
+        "chromaticity": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Units:'none'. The chromaticity of the processed water. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code."
+        },
+        "pH": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 14,
+          "description": "Property. Acidity or basicity of an aqueous solution."
+        },
+        "alkalinity": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Units:'cubic metre per second'. The intake volume of the pump station. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code."
+        },
+        "residualChlorine": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Units:'cubic metre per second'. The intake volume of the pump station. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code."
+        },
+        "turbidity": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Property. Amount of light scattered by particles in the water column. Unit:'NTU"
+        },
+        "bod": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Property. Biochemical oxygen demand (BOD) is the amount of dissolved oxygen (DO) needed (i.e. demanded) by aerobic biological organisms to break down organic material present in a given water sample at certain temperature over a specific time period. Units:'mg/l'"
+        },
+        "cod": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Property. Chemical oxygen demand (COD) is an indicative measure of the amount of oxygen that can be consumed by reactions in a measured solution. Units:'mg/l'"
+        },
+        "tn": {
+          "type": "number",
+          "description": "Property. Total nitrogen. Model:'https://schema.org/Number'. Units:'mg/l'"
+        },
+        "tp": {
+          "type": "number",
+          "description": "Property. Total phosphorus. Model:'https://schema.org/Number'. Units:'mg/l'"
+        },
+        "tss": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Property. Total suspended solids. Model:'https://schema.org/Number'. Units:'mg/l'"
+        }
+      }
+    }
+  ],
+  "required": ["id", "type"]
+}

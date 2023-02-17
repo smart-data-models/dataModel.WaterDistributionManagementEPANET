@@ -1,0 +1,26 @@
+{
+  "id": "urn:waterdna:haemil:PumpStation_01",
+  "type": "PumpStation",
+  "location": {
+    "type": "GeoProperty",
+    "value": {
+      "type": "Point",
+      "coordinates": [
+        127.266663,
+        36.524677
+      ]
+    }
+  },
+  "name": {
+    "type": "Property",
+    "value": "PumpStation name"
+  },
+  "intakeVolume": {
+    "type": "Property",
+    "value": 3000.9
+  },
+  "@context": [
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+    "http://uri.citydatahub.kr/ngsi-ld/water.jsonld"
+  ]
+}

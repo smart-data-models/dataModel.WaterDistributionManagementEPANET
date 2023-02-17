@@ -1,0 +1,20 @@
+{
+  "id": "urn:waterdna:haemil:WaterProcess_01",
+  "type": "WaterProcess",
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      127.266663,
+      36.524677
+    ]
+  },
+  "name": "inflow process at water treatment plant 1",
+  "waterProcessType": "inflow",
+  "tn": 73.152,
+  "tp": 6.1,
+  "tss": 130.9,
+  "@context": [
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+    "http://uri.citydatahub.kr/ngsi-ld/water.jsonld"
+  ]
+}

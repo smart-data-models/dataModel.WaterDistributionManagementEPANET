@@ -1,170 +1,175 @@
 {
-    "id": "urn:ngsi-ld:Tank:1863179e-3968-4493-9167-ee21f880cc02",
-    "type": "Tank",
-    "bulkReactionCoefficient": {
-        "type": "Property",
-        "value": 0.7,
-        "unitCode": "E91"
+  "id": "urn:ngsi-ld:Tank:1863179e-3968-4493-9167-ee21f880cc02",
+  "type": "Tank",
+  "bulkReactionCoefficient": {
+    "type": "Property",
+    "value": 0.7,
+    "unitCode": "E91"
+  },
+  "description": {
+    "type": "Property",
+    "value": "Free Text"
+  },
+  "elevation": {
+    "type": "Property",
+    "value": 112.9,
+    "unitCode": "MTR"
+  },
+  "head": {
+    "type": "Property",
+    "value": {
+      "type": "Property",
+      "value": 20,
+      "unitCode": "MTR"
     },
-    "description": {
-        "type": "Property",
-        "value": "Free Text"
+    "observedBy": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Device:device-9845A"
+    }
+  },
+  "initLevel": {
+    "type": "Property",
+    "value": 3,
+    "unitCode": "MTR"
+  },
+  "initialQuality": {
+    "type": "Property",
+    "value": 0.5,
+    "unitCode": "M1"
+  },
+  "level": {
+    "type": "Property",
+    "value": {
+      "type": "Property",
+      "value": 20,
+      "unitCode": "MTR"
     },
-    "elevation": {
-        "type": "Property",
-        "value": 112.9,
-        "unitCode": "MTR"
+    "observedBy": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Device:device-9845A"
+    }
+  },
+  "location": {
+    "type": "GeoProperty",
+    "value": {
+      "type": "Point",
+      "coordinates": [
+        24.30623,
+        60.07966
+      ]
+    }
+  },
+  "maxLevel": {
+    "type": "Property",
+    "value": 6.75,
+    "unitCode": "MTR"
+  },
+  "minLevel": {
+    "type": "Property",
+    "value": 0,
+    "unitCode": "MTR"
+  },
+  "minVolume": {
+    "type": "Property",
+    "value": 0,
+    "unitCode": "MTQ"
+  },
+  "volume": {
+    "type": "Property",
+    "value": 3.3,
+    "unitCode": "MTQ"
+  },
+  "mixingFraction": {
+    "type": "Property",
+    "value": 0.7,
+    "unitCode": "C62"
+  },
+  "mixingModel": {
+    "type": "Property",
+    "value": "MIXED"
+  },
+  "nominalDiameter": {
+    "type": "Property",
+    "value": 13.73,
+    "unitCode": "MTR"
+  },
+  "pressure": {
+    "type": "Property",
+    "value": {
+      "type": "Property",
+      "value": 20,
+      "unitCode": "MTR"
     },
-    "head": {
-        "type": "Property",
-        "value": {
-            "type": "Property",
-            "value": 20,
-            "unitCode": "MTR"
-        },
-        "observedBy": {
-            "type": "Relationship",
-            "object": "urn:ngsi-ld:Device:device-9845A"
-        }
+    "observedBy": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Device:device-9845A"
+    }
+  },
+  "quality": {
+    "type": "Property",
+    "value": {
+      "type": "Property",
+      "value": 0.5,
+      "unitCode": "M1"
     },
-    "initLevel": {
-        "type": "Property",
-        "value": 3,
-        "unitCode": "MTR"
+    "observedBy": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Device:device-9845A"
+    }
+  },
+  "sourceCategory": {
+    "type": "Property",
+    "value": {
+      "type": "Property",
+      "value": "category1"
     },
-    "initialQuality": {
-        "type": "Property",
-        "value": 0.5,
-        "unitCode": "M1"
+    "sourceType": {
+      "type": "Property",
+      "value": "MASS"
     },
-    "level": {
-        "type": "Property",
-        "value": {
-            "type": "Property",
-            "value": 20,
-            "unitCode": "MTR"
-        },
-        "observedBy": {
-            "type": "Relationship",
-            "object": "urn:ngsi-ld:Device:device-9845A"
-        }
+    "sourceQuality": {
+      "type": "Property",
+      "value": 1.2,
+      "unitCode": "M1"
     },
-    "location": {
-        "type": "GeoProperty",
-        "value": {
-            "type": "Point",
-            "coordinates": [
-                24.30623,
-                60.07966
-            ]
-        }
+    "sourcePattern": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
+    }
+  },
+  "sourceMassInflow": {
+    "type": "Property",
+    "value": {
+      "type": "Property",
+      "value": 100,
+      "unitCode": "F27"
     },
-    "maxLevel": {
-        "type": "Property",
-        "value": 6.75,
-        "unitCode": "MTR"
+    "observedBy": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Device:device-9845A"
+    }
+  },
+  "supply": {
+    "type": "Property",
+    "value": {
+      "type": "Property",
+      "value": 150,
+      "unitCode": "LTR"
     },
-    "minLevel": {
-        "type": "Property",
-        "value": 0,
-        "unitCode": "MTR"
-    },
-    "minVolume": {
-        "type": "Property",
-        "value": 0,
-        "unitCode": "MTQ"
-    },
-    "mixingFraction": {
-        "type": "Property",
-        "value": 0.7,
-        "unitCode": "C62"
-    },
-    "mixingModel": {
-        "type": "Property",
-        "value": "MIXED"
-    },
-    "nominalDiameter": {
-        "type": "Property",
-        "value": 13.73,
-        "unitCode": "MTR"
-    },
-    "pressure": {
-        "type": "Property",
-        "value": {
-            "type": "Property",
-            "value": 20,
-            "unitCode": "MTR"
-        },
-        "observedBy": {
-            "type": "Relationship",
-            "object": "urn:ngsi-ld:Device:device-9845A"
-        }
-    },
-    "quality": {
-        "type": "Property",
-        "value": {
-            "type": "Property",
-            "value": 0.5,
-            "unitCode": "M1"
-        },
-        "observedBy": {
-            "type": "Relationship",
-            "object": "urn:ngsi-ld:Device:device-9845A"
-        }
-    },
-    "sourceCategory": {
-        "type": "Property",
-        "value": {
-            "type": "Property",
-            "value": "category1"
-        },
-        "sourceType": {
-            "type": "Property",
-            "value": "MASS"
-        },
-        "sourceQuality": {
-            "type": "Property",
-            "value": 1.2,
-            "unitCode": "M1"
-        },
-        "sourcePattern": {
-            "type": "Relationship",
-            "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
-        }
-    },
-    "sourceMassInflow": {
-        "type": "Property",
-        "value": {
-            "type": "Property",
-            "value": 100,
-            "unitCode": "F27"
-        },
-        "observedBy": {
-            "type": "Relationship",
-            "object": "urn:ngsi-ld:Device:device-9845A"
-        }
-    },
-    "supply": {
-        "type": "Property",
-        "value": {
-            "type": "Property",
-            "value": 150,
-            "unitCode": "LTR"
-        },
-        "observedBy": {
-            "type": "Relationship",
-            "object": "urn:ngsi-ld:Device:device-9845A"
-        }
-    },
-    "tag": {
-        "type": "Property",
-        "value": "DMA1"
-    },
-    "volumeCurve": {
-        "type": "Relationship",
-        "object": "urn:ngsi-ld:Curve:fAM-8ca3-4533-a2eb-12015"
-    },
-    "@context": [
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/context.jsonld"
-    ]
+    "observedBy": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Device:device-9845A"
+    }
+  },
+  "tag": {
+    "type": "Property",
+    "value": "DMA1"
+  },
+  "volumeCurve": {
+    "type": "Relationship",
+    "object": "urn:ngsi-ld:Curve:fAM-8ca3-4533-a2eb-12015"
+  },
+  "@context": [
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/context.jsonld"
+  ]
 }

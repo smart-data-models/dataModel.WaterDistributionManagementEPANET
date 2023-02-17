@@ -1,113 +1,121 @@
 {
-    "id": "urn:ngsi-ld:Pipe:74azsty-70d4l-4da9-b7d0-3340ef655nnb",
-    "type": "Pipe",
-    "bulkCoeff": {
-        "type": "Property",
-        "value": 72.4549,
-        "unitCode": "E91"
+  "id": "urn:ngsi-ld:Pipe:74azsty-70d4l-4da9-b7d0-3340ef655nnb",
+  "type": "Pipe",
+  "bulkCoeff": {
+    "type": "Property",
+    "value": 72.4549,
+    "unitCode": "E91"
+  },
+  "description": {
+    "type": "Property",
+    "value": "Free Text"
+  },
+  "diameter": {
+    "type": "Property",
+    "value": 203,
+    "unitCode": "MMT"
+  },
+  "endsAt": {
+    "type": "Relationship",
+    "object": "urn:ngsi-ld:Reservoir:1863179e-3768-4480-9167-ff21f870dd19"
+  },
+  "flow": {
+    "type": "Property",
+    "value": {
+      "type": "Property",
+      "value": 20,
+      "unitCode": "G51"
     },
-    "description": {
-        "type": "Property",
-        "value": "Free Text"
+    "observedBy": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Device:device-9845A"
+    }
+  },
+  "initialStatus": {
+    "type": "Property",
+    "value": "OPEN"
+  },
+  "length": {
+    "type": "Property",
+    "value": 52.9,
+    "unitCode": "MTR"
+  },
+  "minorLoss": {
+    "type": "Property",
+    "value": 72.4549,
+    "unitCode": "C62"
+  },
+  "quality": {
+    "type": "Property",
+    "value": {
+      "type": "Property",
+      "value": 0.5,
+      "unitCode": "F27"
     },
-    "diameter": {
-        "type": "Property",
-        "value": 203.0,
-        "unitCode": "MMT"
+    "observedBy": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Device:device-9845A"
+    }
+  },
+  "roughness": {
+    "type": "Property",
+    "value": 72.4549,
+    "unitCode": "C62"
+  },
+  "startsAt": {
+    "type": "Relationship",
+    "object": "urn:ngsi-ld:Junction:63fe7d79-0d4c-4da9-b7d0-3340efa0656a"
+  },
+  "status": {
+    "type": "Property",
+    "value": "OPEN"
+  },
+  "tag": {
+    "type": "Property",
+    "value": "DMA1"
+  },
+  "level": {
+    "type": "Property",
+    "value": 0.3
+  },
+  "pressure": {
+    "type": "Property",
+    "value": 10.1
+  },
+  "velocity": {
+    "type": "Property",
+    "value": {
+      "type": "Property",
+      "value": 2,
+      "unitCode": "MTS"
     },
-    "endsAt": {
-        "type": "Relationship",
-        "object": "urn:ngsi-ld:Reservoir:1863179e-3768-4480-9167-ff21f870dd19"
-    },
-    "flow": {
-        "type": "Property",
-        "value": {
-            "type": "Property",
-            "value": 20,
-            "unitCode": "G51"
-        },
-        "observedBy": {
-            "type": "Relationship",
-            "object": "urn:ngsi-ld:Device:device-9845A"
-        }
-    },
-    "initialStatus": {
-        "type": "Property",
-        "value": "OPEN"
-    },
-    "length": {
-        "type": "Property",
-        "value": 52.9,
-        "unitCode": "MTR"
-    },
-    "minorLoss": {
-        "type": "Property",
-        "value": 72.4549,
-        "unitCode": "C62"
-    },
-    "quality": {
-        "type": "Property",
-        "value": {
-            "type": "Property",
-            "value": 0.5,
-            "unitCode": "F27"
-        },
-        "observedBy": {
-            "type": "Relationship",
-            "object": "urn:ngsi-ld:Device:device-9845A"
-        }
-    },
-    "roughness": {
-        "type": "Property",
-        "value": 72.4549,
-        "unitCode": "C62"
-    },
-    "startsAt": {
-        "type": "Relationship",
-        "object": "urn:ngsi-ld:Junction:63fe7d79-0d4c-4da9-b7d0-3340efa0656a"
-    },
-    "status": {
-        "type": "Property",
-        "value": "OPEN"
-    },
-    "tag": {
-        "type": "Property",
-        "value": "DMA1"
-    },
-    "velocity": {
-        "type": "Property",
-        "value": {
-            "type": "Property",
-            "value": 2,
-            "unitCode": "MTS"
-        },
-        "observedBy": {
-            "type": "Relationship",
-            "object": "urn:ngsi-ld:Device:device-9845A"
-        }
-    },
-    "vertices": {
-        "type": "GeoProperty",
-        "value": {
-            "type": "MultiPoint",
-            "coordinates": [
-                [
-                    24.40623,
-                    60.17966
-                ],
-                [
-                    24.50623,
-                    60.27966
-                ]
-            ]
-        }
-    },
-    "wallCoeff": {
-        "type": "Property",
-        "value": 72.4549,
-        "unitCode": "RRC"
-    },
-    "@context": [
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/context.jsonld"
-    ]
+    "observedBy": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Device:device-9845A"
+    }
+  },
+  "vertices": {
+    "type": "GeoProperty",
+    "value": {
+      "type": "MultiPoint",
+      "coordinates": [
+        [
+          24.40623,
+          60.17966
+        ],
+        [
+          24.50623,
+          60.27966
+        ]
+      ]
+    }
+  },
+  "wallCoeff": {
+    "type": "Property",
+    "value": 72.4549,
+    "unitCode": "RRC"
+  },
+  "@context": [
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/context.jsonld"
+  ]
 }

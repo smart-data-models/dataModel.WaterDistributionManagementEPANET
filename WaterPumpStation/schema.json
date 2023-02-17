@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "$schemaVersion": "0.0.1",
+  "modelTags": "",
+  "derivedFrom": "",
+  "license": "",
+  "$id": "https://smart-data-models.github.io/dataModel.WaterDistributionManagementEPANET/PumpStation/schema.json",
+  "title": "Smart Data models Pump Station schema",
+  "description": "The data model is intended to provide information about pump station",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+    },
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+    },
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Contact-Commons"
+    },
+    {
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "Property. NGSI Entity type. It has to be PumpStation",
+          "enum": ["PumpStation"]
+        },
+        "intakeVolume": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Units:'cubic metre per second'. The intake volume of the pump station. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code."
+        }
+      }
+    }
+  ],
+  "required": ["id", "type"]
+}

@@ -1,0 +1,9 @@
+description: This is a compilation list of the current adopters of the data model Water Process of the Subject Water Management.  All fields are non mandatory.
+currentAdopters:
+  - adopter: SeungMyeong Jeong
+    description: This data model has been adopted to the Water DNA platform, which is the water domain data platform with NGSI-LD APIs
+    mail: sm.jeong@keti.re.kr
+    organization: Korea Electronics Technology Institute
+    project: Water DNA project in the Intelligent Management Program for Urban Water Resources Program funded by Korea Ministry of Environment
+    comments: Full name of the Water DNA project is "Technologies on hyper-connected SWG and LID data management platform and analytics" (RE201903069)
+    startDate: 10/06/2019
