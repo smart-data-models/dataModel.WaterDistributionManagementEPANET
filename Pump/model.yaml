@@ -1,8 +1,8 @@
 Pump:
-  description: 'This entity contains a harmonised description of a generic pump made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.'
+  description: This entity contains a harmonised description of a generic pump made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.
   properties:
     address:
-      description: 'The mailing address'
+      description: The mailing address
       properties:
         addressCountry:
           description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''
@@ -13,6 +13,9 @@ Pump:
         addressRegion:
           description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''
           type: string
+        district:
+          description: 'A district is a type of administrative division that, in some countries, is managed by the local government.'
+          type: string
         postOfficeBoxNumber:
           description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''
           type: string
@@ -22,80 +25,83 @@ Pump:
         streetAddress:
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''
           type: string
+        streetNr:
+          description: Number identifying a specific property on a public street.
+          type: string
       type: object
       x-ngsi:
         model: https://schema.org/address
         type: Property
     alternateName:
-      description: 'An alternative name for this item'
+      description: An alternative name for this item
       type: string
       x-ngsi:
         type: Property
     areaServed:
-      description: 'The geographic area where a service or offered item is provided'
+      description: The geographic area where a service or offered item is provided
       type: string
       x-ngsi:
         model: https://schema.org/Text
         type: Property
     dataProvider:
-      description: 'A sequence of characters identifying the provider of the harmonised data entity.'
+      description: A sequence of characters identifying the provider of the harmonised data entity.
       type: string
       x-ngsi:
         type: Property
     dateCreated:
-      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'
+      description: Entity creation timestamp. This will usually be allocated by the storage platform.
       format: date-time
       type: string
       x-ngsi:
         type: Property
     dateModified:
-      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.
       format: date-time
       type: string
       x-ngsi:
         type: Property
     description:
-      description: 'A description of this item'
+      description: A description of this item
       type: string
       x-ngsi:
         type: Property
     efficCurve:
       anyOf:
-        - description: 'Property. Identifier format of any NGSI entity'
+        - description: Property. Identifier format of any NGSI entity
           maxLength: 256
           minLength: 1
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
           type: string
-        - description: 'Property. Identifier format of any NGSI entity'
+        - description: Property. Identifier format of any NGSI entity
           format: uri
           type: string
-      description: 'The ID label of the curve that represents the pump''s wire-to-water efficiency as a function of flow rate.'
+      description: The ID label of the curve that represents the pump's wire-to-water efficiency as a function of flow rate.
       x-ngsi:
         type: Relationship
     endsAt:
       anyOf:
-        - description: 'Property. Identifier format of any NGSI entity'
+        - description: Property. Identifier format of any NGSI entity
           maxLength: 256
           minLength: 1
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
           type: string
-        - description: 'Property. Identifier format of any NGSI entity'
+        - description: Property. Identifier format of any NGSI entity
           format: uri
           type: string
-      description: 'The ID of the node on the discharge side of the pump'
+      description: The ID of the node on the discharge side of the pump
       x-ngsi:
         type: Relationship
     energyPattern:
       anyOf:
-        - description: 'Property. Identifier format of any NGSI entity'
+        - description: Property. Identifier format of any NGSI entity
           maxLength: 256
           minLength: 1
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
           type: string
-        - description: 'Property. Identifier format of any NGSI entity'
+        - description: Property. Identifier format of any NGSI entity
           format: uri
           type: string
-      description: 'The ID label of the time pattern used to describe the variation in energy price throughout the day.'
+      description: The ID label of the time pattern used to describe the variation in energy price throughout the day.
       x-ngsi:
         type: Relationship
     energyPrice:
@@ -103,18 +109,18 @@ Pump:
       type: number
       x-ngsi:
         type: Property
-        units: 'No unit'
+        units: No unit
     energyUse:
-      description: 'Observed energy use by the element of the network'
+      description: Observed energy use by the element of the network
       properties:
         observedBy:
           anyOf:
-            - description: 'Property. Identifier format of any NGSI entity'
+            - description: Property. Identifier format of any NGSI entity
               maxLength: 256
               minLength: 1
               pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
               type: string
-            - description: 'Property. Identifier format of any NGSI entity'
+            - description: Property. Identifier format of any NGSI entity
               format: uri
               type: string
         value:
@@ -127,12 +133,12 @@ Pump:
       properties:
         observedBy:
           anyOf:
-            - description: 'Property. Identifier format of any NGSI entity'
+            - description: Property. Identifier format of any NGSI entity
               maxLength: 256
               minLength: 1
               pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
               type: string
-            - description: 'Property. Identifier format of any NGSI entity'
+            - description: Property. Identifier format of any NGSI entity
               format: uri
               type: string
         value:
@@ -141,22 +147,22 @@ Pump:
       x-ngsi:
         type: Property
     headCurve:
-      description: 'The ID label of the pump curve used to describe the relationship between the head delivered by the pump and the flow through the Pump.'
+      description: The ID label of the pump curve used to describe the relationship between the head delivered by the pump and the flow through the Pump.
       format: uri
       type: string
       x-ngsi:
         type: Relationship
     id:
       anyOf: &pump_-_properties_-_owner_-_items_-_anyof
-        - description: 'Property. Identifier format of any NGSI entity'
+        - description: Property. Identifier format of any NGSI entity
           maxLength: 256
           minLength: 1
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
           type: string
-        - description: 'Property. Identifier format of any NGSI entity'
+        - description: Property. Identifier format of any NGSI entity
           format: uri
           type: string
-      description: 'Unique identifier of the entity'
+      description: Unique identifier of the entity
       x-ngsi:
         type: Property
     initialStatus:
@@ -172,7 +178,7 @@ Pump:
     location:
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
       oneOf:
-        - description: 'Geoproperty. Geojson reference to the item. Point'
+        - description: GeoProperty. Geojson reference to the item. Point
           properties:
             bbox:
               items:
@@ -191,9 +197,9 @@ Pump:
           required:
             - type
             - coordinates
-          title: 'GeoJSON Point'
+          title: GeoJSON Point
           type: object
-        - description: 'Geoproperty. Geojson reference to the item. LineString'
+        - description: GeoProperty. Geojson reference to the item. LineString
           properties:
             bbox:
               items:
@@ -215,9 +221,9 @@ Pump:
           required:
             - type
             - coordinates
-          title: 'GeoJSON LineString'
+          title: GeoJSON LineString
           type: object
-        - description: 'Geoproperty. Geojson reference to the item. Polygon'
+        - description: GeoProperty. Geojson reference to the item. Polygon
           properties:
             bbox:
               items:
@@ -241,9 +247,9 @@ Pump:
           required:
             - type
             - coordinates
-          title: 'GeoJSON Polygon'
+          title: GeoJSON Polygon
           type: object
-        - description: 'Geoproperty. Geojson reference to the item. MultiPoint'
+        - description: GeoProperty. Geojson reference to the item. MultiPoint
           properties:
             bbox:
               items:
@@ -264,9 +270,9 @@ Pump:
           required:
             - type
             - coordinates
-          title: 'GeoJSON MultiPoint'
+          title: GeoJSON MultiPoint
           type: object
-        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'
+        - description: GeoProperty. Geojson reference to the item. MultiLineString
           properties:
             bbox:
               items:
@@ -290,9 +296,9 @@ Pump:
           required:
             - type
             - coordinates
-          title: 'GeoJSON MultiLineString'
+          title: GeoJSON MultiLineString
           type: object
-        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'
+        - description: GeoProperty. Geojson reference to the item. MultiLineString
           properties:
             bbox:
               items:
@@ -318,20 +324,20 @@ Pump:
           required:
             - type
             - coordinates
-          title: 'GeoJSON MultiPolygon'
+          title: GeoJSON MultiPolygon
           type: object
       x-ngsi:
-        type: Geoproperty
+        type: GeoProperty
     name:
-      description: 'The name of this item.'
+      description: The name of this item.
       type: string
       x-ngsi:
         type: Property
     owner:
-      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'
+      description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)
       items:
         anyOf: *pump_-_properties_-_owner_-_items_-_anyof
-        description: 'Property. Unique identifier of the entity'
+        description: Property. Unique identifier of the entity
       type: array
       x-ngsi:
         type: Property
@@ -344,28 +350,28 @@ Pump:
         units: KiloWatt
     pumpPattern:
       anyOf:
-        - description: 'Property. Identifier format of any NGSI entity'
+        - description: Property. Identifier format of any NGSI entity
           maxLength: 256
           minLength: 1
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
           type: string
-        - description: 'Property. Identifier format of any NGSI entity'
+        - description: Property. Identifier format of any NGSI entity
           format: uri
           type: string
-      description: 'The ID label of a time pattern used to control the pump''s operation. The multipliers of the pattern are equivalent to speed settings. A multiplier of zero implies that the pump will be shut off during the corresponding time period'
+      description: The ID label of a time pattern used to control the pump's operation. The multipliers of the pattern are equivalent to speed settings. A multiplier of zero implies that the pump will be shut off during the corresponding time period
       x-ngsi:
         type: Relationship
     quality:
-      description: 'Observed quality in the network component'
+      description: Observed quality in the network component
       properties:
         observedBy:
           anyOf:
-            - description: 'Property. Identifier format of any NGSI entity'
+            - description: Property. Identifier format of any NGSI entity
               maxLength: 256
               minLength: 1
               pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
               type: string
-            - description: 'Property. Identifier format of any NGSI entity'
+            - description: Property. Identifier format of any NGSI entity
               format: uri
               type: string
         value:
@@ -374,7 +380,7 @@ Pump:
       x-ngsi:
         type: Property
     seeAlso:
-      description: 'list of uri pointing to additional resources about the item'
+      description: list of uri pointing to additional resources about the item
       oneOf:
         - items:
             format: uri
@@ -396,18 +402,18 @@ Pump:
       x-ngsi:
         model: https://schema.org/Number
         type: Property
-        units: 'Metre per Second'
+        units: Metre per Second
     startsAt:
       anyOf:
-        - description: 'Property. Identifier format of any NGSI entity'
+        - description: Property. Identifier format of any NGSI entity
           maxLength: 256
           minLength: 1
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
           type: string
-        - description: 'Property. Identifier format of any NGSI entity'
+        - description: Property. Identifier format of any NGSI entity
           format: uri
           type: string
-      description: 'The ID of the node on the suction side of the pump'
+      description: The ID of the node on the suction side of the pump
       x-ngsi:
         type: Relationship
     status:
@@ -427,7 +433,7 @@ Pump:
         model: https://schema.org/Text
         type: Property
     type:
-      description: 'NGSI-LD Entity Type. It must be equal to Pump.'
+      description: NGSI-LD Entity Type. It must be equal to Pump.
       enum:
         - Pump
       type: string
@@ -445,7 +451,7 @@ Pump:
       x-ngsi:
         type: Property
     vertices:
-      description: 'Coordinates of all vertices in the pump, ordered from the startsAt node to the endsAt node and encoded as a GeoJSON '
+      description: 'Geoproperty. Coordinates of all vertices in the pump, ordered from the startsAt node to the endsAt node and encoded as a GeoJSON '
       oneOf:
         - $id: https://geojson.org/schema/MultiPoint.json
           $schema: "http://json-schema.org/draft-07/schema#"
@@ -469,7 +475,7 @@ Pump:
           required:
             - type
             - coordinates
-          title: 'GeoJSON MultiPoint'
+          title: GeoJSON MultiPoint
           type: object
         - $id: https://geojson.org/schema/Point.json
           $schema: "http://json-schema.org/draft-07/schema#"
@@ -491,10 +497,8 @@ Pump:
           required:
             - type
             - coordinates
-          title: 'GeoJSON Point'
+          title: GeoJSON Point
           type: object
-      x-ngsi:
-        type: Geoproperty
   required:
     - id
     - type
@@ -503,7 +507,7 @@ Pump:
     - endsAt
   type: object
   x-derived-from: ""
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'
   x-license-url: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/blob/master/Pump/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/dataModel.WaterDistributionManagementEPANET/Pump/schema.json
   x-model-tags: FIWARE4WATER
