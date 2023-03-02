@@ -1,8 +1,8 @@
 Tank:
-  description: 'This entity contains a harmonised description of a generic tank made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.'
+  description: This entity contains a harmonised description of a generic tank made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.
   properties:
     address:
-      description: 'The mailing address'
+      description: The mailing address
       properties:
         addressCountry:
           description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''
@@ -13,6 +13,9 @@ Tank:
         addressRegion:
           description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''
           type: string
+        district:
+          description: 'A district is a type of administrative division that, in some countries, is managed by the local government.'
+          type: string
         postOfficeBoxNumber:
           description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''
           type: string
@@ -22,17 +25,20 @@ Tank:
         streetAddress:
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''
           type: string
+        streetNr:
+          description: Number identifying a specific property on a public street.
+          type: string
       type: object
       x-ngsi:
         model: https://schema.org/address
         type: Property
     alternateName:
-      description: 'An alternative name for this item'
+      description: An alternative name for this item
       type: string
       x-ngsi:
         type: Property
     areaServed:
-      description: 'The geographic area where a service or offered item is provided'
+      description: The geographic area where a service or offered item is provided
       type: string
       x-ngsi:
         model: https://schema.org/Text
@@ -45,24 +51,24 @@ Tank:
         type: Property
         units: 1/day
     dataProvider:
-      description: 'A sequence of characters identifying the provider of the harmonised data entity.'
+      description: A sequence of characters identifying the provider of the harmonised data entity.
       type: string
       x-ngsi:
         type: Property
     dateCreated:
-      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'
+      description: Entity creation timestamp. This will usually be allocated by the storage platform.
       format: date-time
       type: string
       x-ngsi:
         type: Property
     dateModified:
-      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.
       format: date-time
       type: string
       x-ngsi:
         type: Property
     description:
-      description: 'A description of this item'
+      description: A description of this item
       type: string
       x-ngsi:
         type: Property
@@ -74,13 +80,13 @@ Tank:
         type: Property
         units: metre
     hasInlet:
-      description: 'A relationship indicating the water inlet points of the Reservoir'
+      description: A relationship indicating the water inlet points of the Reservoir
       format: uri
       type: string
       x-ngsi:
         type: Relationship
     hasOutlet:
-      description: 'A relationship indicating the water outlet points of the Reservoir'
+      description: A relationship indicating the water outlet points of the Reservoir
       format: uri
       type: string
       x-ngsi:
@@ -90,12 +96,12 @@ Tank:
       properties:
         observedBy:
           anyOf:
-            - description: 'Property. Identifier format of any NGSI entity'
+            - description: Property. Identifier format of any NGSI entity
               maxLength: 256
               minLength: 1
               pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
               type: string
-            - description: 'Property. Identifier format of any NGSI entity'
+            - description: Property. Identifier format of any NGSI entity
               format: uri
               type: string
         value:
@@ -105,15 +111,15 @@ Tank:
         type: Property
     id:
       anyOf: &tank_-_properties_-_owner_-_items_-_anyof
-        - description: 'Property. Identifier format of any NGSI entity'
+        - description: Property. Identifier format of any NGSI entity
           maxLength: 256
           minLength: 1
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
           type: string
-        - description: 'Property. Identifier format of any NGSI entity'
+        - description: Property. Identifier format of any NGSI entity
           format: uri
           type: string
-      description: 'Unique identifier of the entity'
+      description: Unique identifier of the entity
       x-ngsi:
         type: Property
     initLevel:
@@ -131,16 +137,16 @@ Tank:
         type: Property
         units: mg/L
     level:
-      description: 'Observed level in the element of the network'
+      description: Observed level in the element of the network
       properties:
         observedBy:
           anyOf:
-            - description: 'Property. Identifier format of any NGSI entity'
+            - description: Property. Identifier format of any NGSI entity
               maxLength: 256
               minLength: 1
               pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
               type: string
-            - description: 'Property. Identifier format of any NGSI entity'
+            - description: Property. Identifier format of any NGSI entity
               format: uri
               type: string
         value:
@@ -151,7 +157,7 @@ Tank:
     location:
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
       oneOf:
-        - description: 'Geoproperty. Geojson reference to the item. Point'
+        - description: GeoProperty. Geojson reference to the item. Point
           properties:
             bbox:
               items:
@@ -170,9 +176,9 @@ Tank:
           required:
             - type
             - coordinates
-          title: 'GeoJSON Point'
+          title: GeoJSON Point
           type: object
-        - description: 'Geoproperty. Geojson reference to the item. LineString'
+        - description: GeoProperty. Geojson reference to the item. LineString
           properties:
             bbox:
               items:
@@ -194,9 +200,9 @@ Tank:
           required:
             - type
             - coordinates
-          title: 'GeoJSON LineString'
+          title: GeoJSON LineString
           type: object
-        - description: 'Geoproperty. Geojson reference to the item. Polygon'
+        - description: GeoProperty. Geojson reference to the item. Polygon
           properties:
             bbox:
               items:
@@ -220,9 +226,9 @@ Tank:
           required:
             - type
             - coordinates
-          title: 'GeoJSON Polygon'
+          title: GeoJSON Polygon
           type: object
-        - description: 'Geoproperty. Geojson reference to the item. MultiPoint'
+        - description: GeoProperty. Geojson reference to the item. MultiPoint
           properties:
             bbox:
               items:
@@ -243,9 +249,9 @@ Tank:
           required:
             - type
             - coordinates
-          title: 'GeoJSON MultiPoint'
+          title: GeoJSON MultiPoint
           type: object
-        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'
+        - description: GeoProperty. Geojson reference to the item. MultiLineString
           properties:
             bbox:
               items:
@@ -269,9 +275,9 @@ Tank:
           required:
             - type
             - coordinates
-          title: 'GeoJSON MultiLineString'
+          title: GeoJSON MultiLineString
           type: object
-        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'
+        - description: GeoProperty. Geojson reference to the item. MultiLineString
           properties:
             bbox:
               items:
@@ -297,10 +303,10 @@ Tank:
           required:
             - type
             - coordinates
-          title: 'GeoJSON MultiPolygon'
+          title: GeoJSON MultiPolygon
           type: object
       x-ngsi:
-        type: Geoproperty
+        type: GeoProperty
     maxLevel:
       description: 'The height of the water surface above the bottom elevation of the tank at the start of the simulation. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'
       type: number
@@ -321,14 +327,14 @@ Tank:
       x-ngsi:
         model: https://schema.org/Number
         type: Property
-        units: 'cubic metre'
+        units: cubic metre
     mixingFraction:
       description: 'The fraction of the tank''s total volume that comprises the inlet-outlet compartment of the two-compartment (2COMP) mixing model. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'
       type: number
       x-ngsi:
         model: https://schema.org/Number
         type: Property
-        units: 'No unit'
+        units: No unit
     mixingModel:
       description: 'A sub-property of the Property sourceCategory. Enum:''2COMP, FIFO, LIFO, MIXED'''
       enum:
@@ -341,7 +347,7 @@ Tank:
         model: https://schema.org/Text
         type: Property
     name:
-      description: 'The name of this item.'
+      description: The name of this item.
       type: string
       x-ngsi:
         type: Property
@@ -353,10 +359,10 @@ Tank:
         type: Property
         units: Metre
     owner:
-      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'
+      description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)
       items:
         anyOf: *tank_-_properties_-_owner_-_items_-_anyof
-        description: 'Property. Unique identifier of the entity'
+        description: Property. Unique identifier of the entity
       type: array
       x-ngsi:
         type: Property
@@ -365,12 +371,12 @@ Tank:
       properties:
         observedBy:
           anyOf:
-            - description: 'Property. Identifier format of any NGSI entity'
+            - description: Property. Identifier format of any NGSI entity
               maxLength: 256
               minLength: 1
               pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
               type: string
-            - description: 'Property. Identifier format of any NGSI entity'
+            - description: Property. Identifier format of any NGSI entity
               format: uri
               type: string
         value:
@@ -379,16 +385,16 @@ Tank:
       x-ngsi:
         type: Property
     quality:
-      description: 'Observed quality in the network component'
+      description: Observed quality in the network component
       properties:
         observedBy:
           anyOf:
-            - description: 'Property. Identifier format of any NGSI entity'
+            - description: Property. Identifier format of any NGSI entity
               maxLength: 256
               minLength: 1
               pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
               type: string
-            - description: 'Property. Identifier format of any NGSI entity'
+            - description: Property. Identifier format of any NGSI entity
               format: uri
               type: string
         value:
@@ -397,7 +403,7 @@ Tank:
       x-ngsi:
         type: Property
     seeAlso:
-      description: 'list of uri pointing to additional resources about the item'
+      description: list of uri pointing to additional resources about the item
       oneOf:
         - items:
             format: uri
@@ -414,19 +420,19 @@ Tank:
       x-ngsi:
         type: Property
     sourceCategory:
-      description: 'Description of the quality of source flow entering the network at a specific node.'
+      description: Description of the quality of source flow entering the network at a specific node.
       properties:
         sourcePattern:
           anyOf:
-            - description: 'Property. Identifier format of any NGSI entity'
+            - description: Property. Identifier format of any NGSI entity
               maxLength: 256
               minLength: 1
               pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
               type: string
-            - description: 'Property. Identifier format of any NGSI entity'
+            - description: Property. Identifier format of any NGSI entity
               format: uri
               type: string
-          description: 'Relationship. A relationship to the pattern pf the sourceCategory property'
+          description: Relationship. A relationship to the pattern pf the sourceCategory property
         sourceQuality:
           description: 'Property. Model:''https://schema.org/Number''. Units: ''mg/L''. Baseline or average concentration (or mass flow rate) of source. A sub-property of the Property ''sourceCategory''. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'
           type: number
@@ -449,12 +455,12 @@ Tank:
       properties:
         observedBy:
           anyOf:
-            - description: 'Property. Identifier format of any NGSI entity'
+            - description: Property. Identifier format of any NGSI entity
               maxLength: 256
               minLength: 1
               pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
               type: string
-            - description: 'Property. Identifier format of any NGSI entity'
+            - description: Property. Identifier format of any NGSI entity
               format: uri
               type: string
         value:
@@ -467,12 +473,12 @@ Tank:
       properties:
         observedBy:
           anyOf:
-            - description: 'Property. Identifier format of any NGSI entity'
+            - description: Property. Identifier format of any NGSI entity
               maxLength: 256
               minLength: 1
               pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
               type: string
-            - description: 'Property. Identifier format of any NGSI entity'
+            - description: Property. Identifier format of any NGSI entity
               format: uri
               type: string
         value:
@@ -487,7 +493,7 @@ Tank:
         model: https://schema.org/Text
         type: Property
     type:
-      description: 'NGSI-LD Entity Type. It has to be Tank'
+      description: NGSI-LD Entity Type. It has to be Tank
       enum:
         - Tank
       type: string
@@ -495,15 +501,15 @@ Tank:
         type: Property
     volumeCurve:
       anyOf:
-        - description: 'Property. Identifier format of any NGSI entity'
+        - description: Property. Identifier format of any NGSI entity
           maxLength: 256
           minLength: 1
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
           type: string
-        - description: 'Property. Identifier format of any NGSI entity'
+        - description: Property. Identifier format of any NGSI entity
           format: uri
           type: string
-      description: 'The ID label of a curve used to describe the relation between tank volume and water level'
+      description: The ID label of a curve used to describe the relation between tank volume and water level
       x-ngsi:
         type: Relationship
   required:
