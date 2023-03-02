@@ -1,14 +1,14 @@
 SimulationScenario:
-  description: 'This entity contains a harmonised description of a generic simulation scenario made for the Water Network Management domain. This entity is primarily associated with the water network management vertical and related IoT applications.'
+  description: This entity contains a harmonised description of a generic simulation scenario made for the Water Network Management domain. This entity is primarily associated with the water network management vertical and related IoT applications.
   properties:
     accuracy:
-      description: 'Total normalized flow change convergence criterion for determining when a hydraulic solution has been reached.'
+      description: Total normalized flow change convergence criterion for determining when a hydraulic solution has been reached.
       type: number
       x-ngsi:
         model: https://schema.org/Number
         type: Property
     address:
-      description: 'The mailing address'
+      description: The mailing address
       properties:
         addressCountry:
           description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''
@@ -19,6 +19,9 @@ SimulationScenario:
         addressRegion:
           description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''
           type: string
+        district:
+          description: 'A district is a type of administrative division that, in some countries, is managed by the local government.'
+          type: string
         postOfficeBoxNumber:
           description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''
           type: string
@@ -28,47 +31,50 @@ SimulationScenario:
         streetAddress:
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''
           type: string
+        streetNr:
+          description: Number identifying a specific property on a public street.
+          type: string
       type: object
       x-ngsi:
         model: https://schema.org/address
         type: Property
     alternateName:
-      description: 'An alternative name for this item'
+      description: An alternative name for this item
       type: string
       x-ngsi:
         type: Property
     areaServed:
-      description: 'The geographic area where a service or offered item is provided'
+      description: The geographic area where a service or offered item is provided
       type: string
       x-ngsi:
         model: https://schema.org/Text
         type: Property
     bulkOrder:
-      description: 'Bulk water reaction order for pipes'
+      description: Bulk water reaction order for pipes
       type: number
       x-ngsi:
         model: https://schema.org/Number
         type: Property
     checkFrequency:
-      description: 'Frequency of hydraulic status checks'
+      description: Frequency of hydraulic status checks
       type: number
       x-ngsi:
         model: https://schema.org/Number
         type: Property
     chemicalName:
-      description: 'Name of the chemical modelled. Only used if ''qualityType'' is CHEM'
+      description: Name of the chemical modelled. Only used if 'qualityType' is CHEM
       type: string
       x-ngsi:
         model: https://schema.org/Text
         type: Property
     chemicalUnits:
-      description: 'Units of the chemical modelled. Only used if ''qualityType'' is CHEM'
+      description: Units of the chemical modelled. Only used if 'qualityType' is CHEM
       type: string
       x-ngsi:
         model: https://schema.org/Text
         type: Property
     concentrationLimit:
-      description: 'Limiting concentration for growth reactions'
+      description: Limiting concentration for growth reactions
       type: number
       x-ngsi:
         model: https://schema.org/Number
@@ -81,35 +87,35 @@ SimulationScenario:
           type: string
         - format: uri
           type: string
-      description: 'The ID of who created/triggered the simulation. Reference to an entity of type ''User'''
+      description: The ID of who created/triggered the simulation. Reference to an entity of type 'User'
       x-ngsi:
         model: https://schema.org/URL
         type: Relationship
     dampLimit:
-      description: 'Accuracy value at which solution damping and status checks begin for PRVs and PSVs.'
+      description: Accuracy value at which solution damping and status checks begin for PRVs and PSVs.
       type: number
       x-ngsi:
         model: https://schema.org/Number
         type: Property
     dataProvider:
-      description: 'A sequence of characters identifying the provider of the harmonised data entity.'
+      description: A sequence of characters identifying the provider of the harmonised data entity.
       type: string
       x-ngsi:
         type: Property
     dateCreated:
-      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'
+      description: Entity creation timestamp. This will usually be allocated by the storage platform.
       format: date-time
       type: string
       x-ngsi:
         type: Property
     dateModified:
-      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.
       format: date-time
       type: string
       x-ngsi:
         type: Property
     demandCharge:
-      description: 'Energy charge per maximum kW usage.'
+      description: Energy charge per maximum kW usage.
       type: number
       x-ngsi:
         model: https://schema.org/Number
@@ -124,7 +130,7 @@ SimulationScenario:
         model: https://schema.org/Text
         type: Property
     description:
-      description: 'A description of this item'
+      description: A description of this item
       type: string
       x-ngsi:
         type: Property
@@ -142,13 +148,13 @@ SimulationScenario:
         type: Property
         units: seconds
     emitterExponent:
-      description: 'Power to which pressure at a junction is raised when computing from an emitter.'
+      description: Power to which pressure at a junction is raised when computing from an emitter.
       type: number
       x-ngsi:
         model: https://schema.org/Number
         type: Property
     flowChange:
-      description: 'Maximum flow change convergence criterion for determining when a hydraulic solution has been reached.'
+      description: Maximum flow change convergence criterion for determining when a hydraulic solution has been reached.
       type: number
       x-ngsi:
         model: https://schema.org/Number
@@ -178,7 +184,7 @@ SimulationScenario:
           type: string
         - format: uri
           type: string
-      description: 'The ID of the network used in the simulation'
+      description: The ID of the network used in the simulation
       x-ngsi:
         model: https://schema.org/URL
         type: Relationship
@@ -190,12 +196,12 @@ SimulationScenario:
           type: string
         - format: uri
           type: string
-      description: 'The ID of the related simulation result. Reference to an entity of type ''SimulationResult'''
+      description: The ID of the related simulation result. Reference to an entity of type 'SimulationResult'
       x-ngsi:
         model: https://schema.org/URL
         type: Relationship
     headError:
-      description: 'Maximum headloss convergence criterion for determining when a hydraulic solution has been reached.'
+      description: Maximum headloss convergence criterion for determining when a hydraulic solution has been reached.
       type: number
       x-ngsi:
         model: https://schema.org/Number
@@ -211,7 +217,7 @@ SimulationScenario:
         model: https://schema.org/Text
         type: Property
     hydraulicTimeStep:
-      description: 'Determines how often the hydraulic state of the network is calculated. Given in seconds'
+      description: Determines how often the hydraulic state of the network is calculated. Given in seconds
       type: number
       x-ngsi:
         model: https://schema.org/Number
@@ -219,19 +225,19 @@ SimulationScenario:
         units: seconds
     id:
       anyOf: &simulationscenario_-_properties_-_owner_-_items_-_anyof
-        - description: 'Property. Identifier format of any NGSI entity'
+        - description: Property. Identifier format of any NGSI entity
           maxLength: 256
           minLength: 1
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
           type: string
-        - description: 'Property. Identifier format of any NGSI entity'
+        - description: Property. Identifier format of any NGSI entity
           format: uri
           type: string
-      description: 'Unique identifier of the entity'
+      description: Unique identifier of the entity
       x-ngsi:
         type: Property
     inputParameter:
-      description: 'Description of the set of modifications to be applied to the network for the simulation'
+      description: Description of the set of modifications to be applied to the network for the simulation
       items:
         properties:
           parameterName:
@@ -258,7 +264,7 @@ SimulationScenario:
     location:
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
       oneOf:
-        - description: 'Geoproperty. Geojson reference to the item. Point'
+        - description: GeoProperty. Geojson reference to the item. Point
           properties:
             bbox:
               items:
@@ -277,9 +283,9 @@ SimulationScenario:
           required:
             - type
             - coordinates
-          title: 'GeoJSON Point'
+          title: GeoJSON Point
           type: object
-        - description: 'Geoproperty. Geojson reference to the item. LineString'
+        - description: GeoProperty. Geojson reference to the item. LineString
           properties:
             bbox:
               items:
@@ -301,9 +307,9 @@ SimulationScenario:
           required:
             - type
             - coordinates
-          title: 'GeoJSON LineString'
+          title: GeoJSON LineString
           type: object
-        - description: 'Geoproperty. Geojson reference to the item. Polygon'
+        - description: GeoProperty. Geojson reference to the item. Polygon
           properties:
             bbox:
               items:
@@ -327,9 +333,9 @@ SimulationScenario:
           required:
             - type
             - coordinates
-          title: 'GeoJSON Polygon'
+          title: GeoJSON Polygon
           type: object
-        - description: 'Geoproperty. Geojson reference to the item. MultiPoint'
+        - description: GeoProperty. Geojson reference to the item. MultiPoint
           properties:
             bbox:
               items:
@@ -350,9 +356,9 @@ SimulationScenario:
           required:
             - type
             - coordinates
-          title: 'GeoJSON MultiPoint'
+          title: GeoJSON MultiPoint
           type: object
-        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'
+        - description: GeoProperty. Geojson reference to the item. MultiLineString
           properties:
             bbox:
               items:
@@ -376,9 +382,9 @@ SimulationScenario:
           required:
             - type
             - coordinates
-          title: 'GeoJSON MultiLineString'
+          title: GeoJSON MultiLineString
           type: object
-        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'
+        - description: GeoProperty. Geojson reference to the item. MultiLineString
           properties:
             bbox:
               items:
@@ -404,29 +410,29 @@ SimulationScenario:
           required:
             - type
             - coordinates
-          title: 'GeoJSON MultiPolygon'
+          title: GeoJSON MultiPolygon
           type: object
       x-ngsi:
-        type: Geoproperty
+        type: GeoProperty
     maxCheck:
-      description: 'Number of trials after which status checks are discontinued'
+      description: Number of trials after which status checks are discontinued
       type: number
       x-ngsi:
         model: https://schema.org/Number
         type: Property
     minimumPressure:
-      description: 'Pressure below which no demand can be delivered under a pressure dirven analysis. Only used if demandModel is ''PDA'''
+      description: Pressure below which no demand can be delivered under a pressure dirven analysis. Only used if demandModel is 'PDA'
       type: number
       x-ngsi:
         model: https://schema.org/Number
         type: Property
     name:
-      description: 'The name of this item.'
+      description: The name of this item.
       type: string
       x-ngsi:
         type: Property
     operationalControl:
-      description: 'The operational control of de item'
+      description: The operational control of de item
       items:
         properties:
           controlType:
@@ -469,34 +475,34 @@ SimulationScenario:
       x-ngsi:
         type: Property
     owner:
-      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'
+      description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)
       items:
         anyOf: *simulationscenario_-_properties_-_owner_-_items_-_anyof
-        description: 'Property. Unique identifier of the entity'
+        description: Property. Unique identifier of the entity
       type: array
       x-ngsi:
         type: Property
     patternStart:
-      description: 'Start time of the  the simulation.'
+      description: Start time of the  the simulation.
       format: date-time
       type: string
       x-ngsi:
         model: https://schema.org/DateTime
         type: Property
     patternStep:
-      description: 'Pattern step of the simulation.'
+      description: Pattern step of the simulation.
       type: number
       x-ngsi:
         model: https://schema.org/Number
         type: Property
     pressureExponent:
-      description: 'Power to which pressure is raised when calculating the demand delivered under a pressure driven analysis. Only used if demandModel is ''PDA'''
+      description: Power to which pressure is raised when calculating the demand delivered under a pressure driven analysis. Only used if demandModel is 'PDA'
       type: number
       x-ngsi:
         model: https://schema.org/Number
         type: Property
     qualityTimeStep:
-      description: 'The timestep used to track changes in water quality in the network. Given in seconds'
+      description: The timestep used to track changes in water quality in the network. Given in seconds
       type: number
       x-ngsi:
         model: https://schema.org/Number
@@ -514,34 +520,34 @@ SimulationScenario:
         model: https://schema.org/Text
         type: Property
     reportStart:
-      description: 'Simulation time at which results start to be reported. Given in seconds from start of simulation'
+      description: Simulation time at which results start to be reported. Given in seconds from start of simulation
       type: number
       x-ngsi:
         model: https://schema.org/Number
         type: Property
         units: seconds
     reportStep:
-      description: 'Interval at which output results are reported. given in seconds'
+      description: Interval at which output results are reported. given in seconds
       type: number
       x-ngsi:
         model: https://schema.org/Number
         type: Property
         units: seconds
     requiredPressure:
-      description: 'Pressure required to supply a node''s full demand under a pressure driven analysis. Only used if demandModel is ''PDA'''
+      description: Pressure required to supply a node's full demand under a pressure driven analysis. Only used if demandModel is 'PDA'
       type: number
       x-ngsi:
         model: https://schema.org/Number
         type: Property
     ruleTimeStep:
-      description: 'Time step used to check for changes in system status due to rule-based controls. Given in seconds'
+      description: Time step used to check for changes in system status due to rule-based controls. Given in seconds
       type: number
       x-ngsi:
         model: https://schema.org/Number
         type: Property
         units: seconds
     seeAlso:
-      description: 'list of uri pointing to additional resources about the item'
+      description: list of uri pointing to additional resources about the item
       oneOf:
         - items:
             format: uri
@@ -558,13 +564,13 @@ SimulationScenario:
       x-ngsi:
         type: Property
     specificGravity:
-      description: 'The ratio of the density of the fluid being modeled to that of water at 4 deg. C'
+      description: The ratio of the density of the fluid being modeled to that of water at 4 deg. C
       type: number
       x-ngsi:
         model: https://schema.org/Number
         type: Property
     startClockTime:
-      description: 'Time of day at which the simulation begins. Given as seconds from start of day'
+      description: Time of day at which the simulation begins. Given as seconds from start of day
       type: number
       x-ngsi:
         model: https://schema.org/Number
@@ -583,13 +589,13 @@ SimulationScenario:
         model: https://schema.org/string
         type: Property
     tankOrder:
-      description: 'Bulk water reaction order for tanks'
+      description: Bulk water reaction order for tanks
       type: number
       x-ngsi:
         model: https://schema.org/Number
         type: Property
     tolerance:
-      description: 'Water quality tolerance'
+      description: Water quality tolerance
       type: number
       x-ngsi:
         model: https://schema.org/Number
@@ -607,13 +613,13 @@ SimulationScenario:
         model: https://schema.org/URL
         type: Relationship
     trials:
-      description: 'The maximum number of trials used to solve network hydraulics at each hydraulic time step of a simulation'
+      description: The maximum number of trials used to solve network hydraulics at each hydraulic time step of a simulation
       type: number
       x-ngsi:
         model: https://schema.org/Number
         type: Property
     type:
-      description: 'NGSI-LD Entity Type. It has to be SimulationScenario'
+      description: NGSI-LD Entity Type. It has to be SimulationScenario
       enum:
         - SimulationScenario
       type: string
@@ -636,13 +642,13 @@ SimulationScenario:
         model: https://schema.org/Number
         type: Property
     viscosity:
-      description: 'The kinematic viscosity of the fluid being modeled relative to that of water at 20 deg. C'
+      description: The kinematic viscosity of the fluid being modeled relative to that of water at 20 deg. C
       type: number
       x-ngsi:
         model: https://schema.org/Number
         type: Property
     wallOrder:
-      description: 'Wall reaction order for pipes'
+      description: Wall reaction order for pipes
       type: number
       x-ngsi:
         model: https://schema.org/Number
@@ -653,7 +659,7 @@ SimulationScenario:
     - hasInputNetwork
   type: object
   x-derived-from: ""
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'
   x-license-url: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/blob/master/SimulationScenario/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/data-model.WaterNetworkManagementEPANET/Simulation/schema.json
   x-model-tags: FIWARE4WATER
