@@ -1,8 +1,8 @@
 Pipe:
-  description: 'This entity contains a harmonised description of a generic pipe made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.'
+  description: This entity contains a harmonised description of a generic pipe made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.
   properties:
     address:
-      description: 'The mailing address'
+      description: The mailing address
       properties:
         addressCountry:
           description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''
@@ -13,6 +13,9 @@ Pipe:
         addressRegion:
           description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''
           type: string
+        district:
+          description: 'A district is a type of administrative division that, in some countries, is managed by the local government.'
+          type: string
         postOfficeBoxNumber:
           description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''
           type: string
@@ -22,17 +25,20 @@ Pipe:
         streetAddress:
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''
           type: string
+        streetNr:
+          description: Number identifying a specific property on a public street.
+          type: string
       type: object
       x-ngsi:
         model: https://schema.org/address
         type: Property
     alternateName:
-      description: 'An alternative name for this item'
+      description: An alternative name for this item
       type: string
       x-ngsi:
         type: Property
     areaServed:
-      description: 'The geographic area where a service or offered item is provided'
+      description: The geographic area where a service or offered item is provided
       type: string
       x-ngsi:
         model: https://schema.org/Text
@@ -43,38 +49,38 @@ Pipe:
       x-ngsi:
         model: https://schema.org/Number
         type: Property
-        units: 'reciprocal day The bulk reaction coefficient for the pipe'
+        units: reciprocal day The bulk reaction coefficient for the pipe
     dataProvider:
-      description: 'A sequence of characters identifying the provider of the harmonised data entity.'
+      description: A sequence of characters identifying the provider of the harmonised data entity.
       type: string
       x-ngsi:
         type: Property
     dateCreated:
-      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'
+      description: Entity creation timestamp. This will usually be allocated by the storage platform.
       format: date-time
       type: string
       x-ngsi:
         type: Property
     dateModified:
-      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.
       format: date-time
       type: string
       x-ngsi:
         type: Property
     description:
-      description: 'A description of this item'
+      description: A description of this item
       type: string
       x-ngsi:
         type: Property
     diameter:
-      description: 'The pipe diameter'
+      description: The pipe diameter
       type: number
       x-ngsi:
         model: https://schema.org/Number
         type: Property
         units: Millimetre
     endsAt:
-      description: 'The ID of the node where the pipe ends'
+      description: The ID of the node where the pipe ends
       format: uri
       type: string
       x-ngsi:
@@ -84,12 +90,12 @@ Pipe:
       properties:
         observedBy:
           anyOf:
-            - description: 'Property. Identifier format of any NGSI entity'
+            - description: Property. Identifier format of any NGSI entity
               maxLength: 256
               minLength: 1
               pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
               type: string
-            - description: 'Property. Identifier format of any NGSI entity'
+            - description: Property. Identifier format of any NGSI entity
               format: uri
               type: string
         value:
@@ -99,15 +105,15 @@ Pipe:
         type: Property
     id:
       anyOf: &pipe_-_properties_-_owner_-_items_-_anyof
-        - description: 'Property. Identifier format of any NGSI entity'
+        - description: Property. Identifier format of any NGSI entity
           maxLength: 256
           minLength: 1
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
           type: string
-        - description: 'Property. Identifier format of any NGSI entity'
+        - description: Property. Identifier format of any NGSI entity
           format: uri
           type: string
-      description: 'Unique identifier of the entity'
+      description: Unique identifier of the entity
       x-ngsi:
         type: Property
     initialStatus:
@@ -130,7 +136,7 @@ Pipe:
     location:
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
       oneOf:
-        - description: 'Geoproperty. Geojson reference to the item. Point'
+        - description: GeoProperty. Geojson reference to the item. Point
           properties:
             bbox:
               items:
@@ -149,9 +155,9 @@ Pipe:
           required:
             - type
             - coordinates
-          title: 'GeoJSON Point'
+          title: GeoJSON Point
           type: object
-        - description: 'Geoproperty. Geojson reference to the item. LineString'
+        - description: GeoProperty. Geojson reference to the item. LineString
           properties:
             bbox:
               items:
@@ -173,9 +179,9 @@ Pipe:
           required:
             - type
             - coordinates
-          title: 'GeoJSON LineString'
+          title: GeoJSON LineString
           type: object
-        - description: 'Geoproperty. Geojson reference to the item. Polygon'
+        - description: GeoProperty. Geojson reference to the item. Polygon
           properties:
             bbox:
               items:
@@ -199,9 +205,9 @@ Pipe:
           required:
             - type
             - coordinates
-          title: 'GeoJSON Polygon'
+          title: GeoJSON Polygon
           type: object
-        - description: 'Geoproperty. Geojson reference to the item. MultiPoint'
+        - description: GeoProperty. Geojson reference to the item. MultiPoint
           properties:
             bbox:
               items:
@@ -222,9 +228,9 @@ Pipe:
           required:
             - type
             - coordinates
-          title: 'GeoJSON MultiPoint'
+          title: GeoJSON MultiPoint
           type: object
-        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'
+        - description: GeoProperty. Geojson reference to the item. MultiLineString
           properties:
             bbox:
               items:
@@ -248,9 +254,9 @@ Pipe:
           required:
             - type
             - coordinates
-          title: 'GeoJSON MultiLineString'
+          title: GeoJSON MultiLineString
           type: object
-        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'
+        - description: GeoProperty. Geojson reference to the item. MultiLineString
           properties:
             bbox:
               items:
@@ -276,41 +282,41 @@ Pipe:
           required:
             - type
             - coordinates
-          title: 'GeoJSON MultiPolygon'
+          title: GeoJSON MultiPolygon
           type: object
       x-ngsi:
-        type: Geoproperty
+        type: GeoProperty
     minorLoss:
       description: 'Unitless minor loss coefficient associated with bends, fittings, etc'
       type: number
       x-ngsi:
         model: https://schema.org/Number
         type: Property
-        units: 'No unit'
+        units: No unit
     name:
-      description: 'The name of this item.'
+      description: The name of this item.
       type: string
       x-ngsi:
         type: Property
     owner:
-      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'
+      description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)
       items:
         anyOf: *pipe_-_properties_-_owner_-_items_-_anyof
-        description: 'Property. Unique identifier of the entity'
+        description: Property. Unique identifier of the entity
       type: array
       x-ngsi:
         type: Property
     quality:
-      description: 'Observed quality in the network component'
+      description: Observed quality in the network component
       properties:
         observedBy:
           anyOf:
-            - description: 'Property. Identifier format of any NGSI entity'
+            - description: Property. Identifier format of any NGSI entity
               maxLength: 256
               minLength: 1
               pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
               type: string
-            - description: 'Property. Identifier format of any NGSI entity'
+            - description: Property. Identifier format of any NGSI entity
               format: uri
               type: string
         value:
@@ -319,14 +325,14 @@ Pipe:
       x-ngsi:
         type: Property
     roughness:
-      description: 'The roughness coefficient of the Pipe.'
+      description: The roughness coefficient of the Pipe.
       type: number
       x-ngsi:
         model: https://schema.org/Number
         type: Property
-        units: 'No unit'
+        units: No unit
     seeAlso:
-      description: 'list of uri pointing to additional resources about the item'
+      description: list of uri pointing to additional resources about the item
       oneOf:
         - items:
             format: uri
@@ -343,7 +349,7 @@ Pipe:
       x-ngsi:
         type: Property
     startsAt:
-      description: 'The ID of the node where the pipe begins'
+      description: The ID of the node where the pipe begins
       format: uri
       type: string
       x-ngsi:
@@ -365,7 +371,7 @@ Pipe:
         model: https://schema.org/Text
         type: Property
     type:
-      description: 'NGSI-LD Entity Type. It has to be Pipe'
+      description: NGSI-LD Entity Type. It has to be Pipe
       enum:
         - Pipe
       type: string
@@ -383,7 +389,7 @@ Pipe:
       x-ngsi:
         type: Property
     vertices:
-      description: 'Coordinates of all vertices in the pipe, ordered from the startsAt node to the endsAt node and encoded as a GeoJSON '
+      description: 'Geoproperty. Coordinates of all vertices in the pipe, ordered from the startsAt node to the endsAt node and encoded as a GeoJSON '
       oneOf:
         - $id: https://geojson.org/schema/MultiPoint.json
           $schema: "http://json-schema.org/draft-07/schema#"
@@ -407,7 +413,7 @@ Pipe:
           required:
             - type
             - coordinates
-          title: 'GeoJSON MultiPoint'
+          title: GeoJSON MultiPoint
           type: object
         - $id: https://geojson.org/schema/Point.json
           $schema: "http://json-schema.org/draft-07/schema#"
@@ -429,10 +435,8 @@ Pipe:
           required:
             - type
             - coordinates
-          title: 'GeoJSON Point'
+          title: GeoJSON Point
           type: object
-      x-ngsi:
-        type: Geoproperty
     wallCoeff:
       description: 'The wall reaction coefficient for the pipe. Use a positive value for growth and a negative value for decay. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'
       type: number
@@ -445,7 +449,7 @@ Pipe:
     - type
   type: object
   x-derived-from: ""
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'
   x-license-url: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/blob/master/Pipe/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/dataModel.WaterDistributionManagementEPANET/Pipe/schema.json
   x-model-tags: FIWARE4WATER
