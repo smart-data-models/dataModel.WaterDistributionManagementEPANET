@@ -29,7 +29,10 @@
   },
   "initialQuality": {
     "type": "Number",
-    "value": 0.5
+    "value": {
+      "observedBy": "device-9845A",
+      "value": 0.5
+    }
   },
   "sourceCategory": {
     "type": "object",
