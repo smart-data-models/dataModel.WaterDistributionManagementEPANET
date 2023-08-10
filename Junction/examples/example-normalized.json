@@ -1,86 +1,61 @@
 {
-  "id": "63fe7d79-0d4c-4da9-b7d0-3340efa0656a",
-  "type": "Junction",
-  "location": {
-    "type": "geo:json",
-    "value": {
-      "type": "Point",
-      "coordinates": [
-        24.30623,
-        60.07966
-      ]
-    }
+  "id": "e24b1aa9-d9bf-4f50-8583-3d51ade41588",
+  "type": "Pen",
+  "additionalInfo": {
+    "type": "array",
+    "value": [
+      {
+        "name": "Farm1FeedTray",
+        "value": 1
+      },
+      {
+        "name": "Farm1DepartmentId",
+        "value": "43"
+      },
+      {
+        "name": "Farm1ValveId",
+        "value": "69"
+      },
+      {
+        "name": "Farm1PenId",
+        "value": "1"
+      },
+      {
+        "name": "Farm1BuildingId",
+        "value": "2"
+      }
+    ]
   },
-  "elevation": {
+  "buildingId": {
+    "type": "string",
+    "value": "5ee3dbc8-343b-40a7-ac04-dec67215ff98"
+  },
+  "companyId": {
+    "type": "string",
+    "value": "4579b77f-31c1-44ef-b200-9a2407cc82e9"
+  },
+  "compartmentId": {
+    "type": "string",
+    "value": "ab8680c6-3e82-40fb-8577-f6a0ab717586"
+  },
+  "empty": {
+    "type": "boolean",
+    "value": false
+  },
+  "farmId": {
+    "type": "string",
+    "value": "3b6473e3-fdc9-4646-b1cf-d41e3af58eff"
+  },
+  "lastUpdate": {
+    "type": "string",
+    "value": "2020-04-12T20:44:55"
+  },
+  "sex": {
+    "type": "string",
+    "value": ""
+  },
+  "temperature": {
     "type": "number",
-    "value": 105.8
-  },
-  "demandCategory": {
-    "type": "object",
-    "value": {
-      "baseDemand": "agriculture demand",
-      "value": "1.763868462",
-      "demandPattern": "fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
-    }
-  },
-  "sourceCategory": {
-    "type": "object",
-    "value": {
-      "value": "CategoryX",
-      "sourceType": "MASS",
-      "sourceQuality": 1.2,
-      "sourcePattern": "fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
-    }
-  },
-  "tag": {
-    "type": "text",
-    "value": "DMA1"
-  },
-  "description": {
-    "type": "text",
-    "value": "This entity contains a harmonised description of a Junction"
-  },
-  "initialQuality": {
-    "type": "number",
-    "value": 0.5
-  },
-  "emitterCoefficient": {
-    "type": "number",
-    "value": 0.526
-  },
-  "pressure": {
-    "type": "object",
-    "value": {
-      "value": 20,
-      "observedBy": "device-9845A"
-    }
-  },
-  "supply": {
-    "type": "object",
-    "value": {
-      "value": 150,
-      "observedBy": "device-9845A"
-    }
-  },
-  "head": {
-    "type": "object",
-    "value": {
-      "value": 20,
-      "observedBy": "device-9845A"
-    }
-  },
-  "quality": {
-    "type": "object",
-    "value": {
-      "value": 0.5,
-      "observedBy": "device-9845A"
-    }
-  },
-  "sourceMassInflow": {
-    "type": "object",
-    "value": {
-      "value": 100,
-      "observedBy": "device-9845A"
-    }
+    "value": 25
   }
 }
