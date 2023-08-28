@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$id": "https://smart-data-models.github.io/dataModel.WaterNetworkManagementEPANET/WaterNetworkManagement-schema.json",
+  "$id": "https://smart-data-models.github.io/dataModel.WaterDistributionManagementEPANET/WaterNetworkManagement-schema.json",
   "title": "Smart Data Models - Water Network Management base schema",
   "description": "Common NGSI-LD definitions for Water Network Management data models",
   "type": "object",
@@ -10,11 +10,12 @@
       "description": "Property. Model:'https://schema.org/Text'. Allows base demands and time patterns to be assigned to other categories of users",
       "properties": {
         "value": {
-          "type": "number"
+          "type": "number",
+          "description": "Property. Value of the demand category"
         },
         "baseDemand": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text. Baseline or average demand for the category. A sub-property of the Property 'demandCategory'"
+          "description": "Property. Model:'https://schema.org/Text. Baseline or average demand for the category. A sub-property of the Property demandCategory"
         },
         "demandPattern": {
           "anyOf": [
@@ -40,11 +41,12 @@
       "description": "Property. Model:'https://schema.org/Text'. Description of the quality of source flow entering the network at a specific node",
       "properties": {
           "value": {
-            "type": "string"
+            "type": "string",
+             "description": "Property. Value of the source category"
           },
         "sourceType": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. A sub-property of the Property 'sourceCategory'",
+          "description": "Property. Model:'https://schema.org/Text'. A sub-property of the Property sourceCategory",
           "enum": [
             "CONCEN",
             "MASS",
@@ -124,14 +126,15 @@
           "description": "Property. Identifier format of any NGSI entity"
         }
       ],
-      "description": "Relationship. Reference to the Curve where the valve is located"
+      "description": "Relationship. Reference to the Curve where the valve is located."
     },
     "flow": {
       "type": "object",
       "description": "Property. Rate of flow from `startsAt` node to `endsAt` node, measured by a device at the link (pipe, valve or pump)",
       "properties": {
         "value": {
-          "type": "number"
+          "type": "number",
+           "description": "Property. Value of the flow"
         },
         "observedBy": {
           "anyOf": [
@@ -156,11 +159,13 @@
       "description": "Property. Observed velocity in the link (pipe, valve or pump)",
       "properties": {
         "value": {
-          "type": "number"
+          "type": "number",
+           "description": "Property. Value of the velocity"
         },
         "observedBy": {
           "type": "string",
-          "format": "uri"
+          "format": "uri",
+           "description": "Property. Where the velocity has been observed"
         }
       }
     },
@@ -169,7 +174,8 @@
       "description": "Property. Observed quality in the network component",
       "properties": {
         "value": {
-          "type": "number"
+          "type": "number",
+           "description": "Property. Numerical value of the quality"
         },
         "observedBy": {
           "anyOf": [
@@ -194,7 +200,8 @@
       "description": "Property. Initial quality in the network component",
       "properties": {
         "value": {
-          "type": "number"
+          "type": "number",
+           "description": "Property. Numerical value of the initial quality"
         },
         "observedBy": {
           "anyOf": [
@@ -219,7 +226,8 @@
       "description": "Property. Observed energy use by the element of the network",
       "properties": {
         "value": {
-          "type": "number"
+          "type": "number",
+           "description": "Property. Numerical value of the use of Energy"
         },
         "observedBy": {
           "anyOf": [
@@ -244,7 +252,8 @@
       "description": "Property. Observed pressure at the node (junction, tank or reservoir)",
       "properties": {
         "value": {
-          "type": "number"
+          "type": "number",
+           "description": "Property. Numerical value of the pressure"
         },
         "observedBy": {
           "anyOf": [
@@ -269,7 +278,8 @@
       "description": "Property. Observed supply at the node (junction, tank or reservoir)",
       "properties": {
         "value": {
-          "type": "number"
+          "type": "number",
+           "description": "Property. Numerical value of the supply"
         },
         "observedBy": {
           "anyOf": [
@@ -294,7 +304,8 @@
       "description": "Property. Observed head at the node (junction, tank or reservoir)",
       "properties": {
         "value": {
-          "type": "number"
+          "type": "number",
+           "description": "Property. Value of the head"
         },
         "observedBy": {
           "anyOf": [
@@ -319,7 +330,8 @@
       "description": "Property. Observed source mass inflow at the node (junction, tank or reservoir)",
       "properties": {
         "value": {
-          "type": "number"
+          "type": "number",
+           "description": "Property. Numerical value of the source mass at the inflow"
         },
         "observedBy": {
           "anyOf": [
@@ -344,7 +356,8 @@
       "description": "Property. Observed level in the element of the network",
       "properties": {
         "value": {
-          "type": "number"
+          "type": "number",
+           "description": "Property. Numerical value of the level"
         },
         "observedBy": {
           "anyOf": [
