@@ -126,7 +126,7 @@
           "description": "Property. Identifier format of any NGSI entity"
         }
       ],
-      "description": "Relationship. Reference to the Curve where the valve is located."
+      "description": "Relationship. Reference to the Curve where the valve is located"
     },
     "flow": {
       "type": "object",
