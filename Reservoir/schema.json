@@ -20,21 +20,21 @@
                     "enum": [
                         "Reservoir"
                     ],
-                    "description": "Property. NGSI-LD Entity Type. It must be equal to Reservoir."
+                    "description": "Property. NGSI-LD Entity Type. It must be equal to Reservoir"
                 },
                 "tag": {
                     "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/tag"
                 },
                 "reservoirHead": {
                     "type": "number",
-                    "description": "Property. Model:'https://schema.org/Number'. Units:'Metre'. The hydraulic head (elevation + pressure head) of water in the Reservoir. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code."
+                    "description": "Property. Model:'https://schema.org/Number'. Units:'Metre'. The hydraulic head (elevation + pressure head) of water in the Reservoir. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code"
                 },
                 "initialQuality": {
                     "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/initialQuality"
                 },
                 "elevation": {
                     "type": "number",
-                    "description": "Property. Model:'https://schema.org/Number'. Units:'Metre'. The elevation above some common reference of the Reservoir. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code."
+                    "description": "Property. Model:'https://schema.org/Number'. Units:'Metre'. The elevation above some common reference of the Reservoir. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code"
                 },
                 "sourceCategory": {
                     "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/WaterNetworkManagement-schema.json#/definitions/sourceCategory"
