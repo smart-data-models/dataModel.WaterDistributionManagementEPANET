@@ -84,12 +84,12 @@
                 },
                 "patternStep": {
                     "type": "number",
-                    "description": "Property. Model:'https://schema.org/Number'. Pattern step of the simulation."
+                    "description": "Property. Model:'https://schema.org/Number'. Pattern step of the simulation"
                 },
                 "patternStart": {
                     "type": "string",
                     "format": "date-time",
-                    "description": "Property. Model:'https://schema.org/DateTime'. Start time of the  the simulation."
+                    "description": "Property. Model:'https://schema.org/DateTime'. Start time of the  the simulation"
                 },
                 "reportStep": {
                     "type": "number",
@@ -124,7 +124,7 @@
                 },
                 "accuracy": {
                     "type": "number",
-                    "description": "Property. Model:'https://schema.org/Number'. Total normalized flow change convergence criterion for determining when a hydraulic solution has been reached."
+                    "description": "Property. Model:'https://schema.org/Number'. Total normalized flow change convergence criterion for determining when a hydraulic solution has been reached"
                 },
                 "tolerance": {
                     "type": "number",
@@ -132,19 +132,19 @@
                 },
                 "emitterExponent": {
                     "type": "number",
-                    "description": "Property. Model:'https://schema.org/Number'. Power to which pressure at a junction is raised when computing from an emitter."
+                    "description": "Property. Model:'https://schema.org/Number'. Power to which pressure at a junction is raised when computing from an emitter"
                 },
                 "headError": {
                     "type": "number",
-                    "description": "Property. Model:'https://schema.org/Number'. Maximum headloss convergence criterion for determining when a hydraulic solution has been reached."
+                    "description": "Property. Model:'https://schema.org/Number'. Maximum headloss convergence criterion for determining when a hydraulic solution has been reached"
                 },
                 "flowChange": {
                     "type": "number",
-                    "description": "Property. Model:'https://schema.org/Number'. Maximum flow change convergence criterion for determining when a hydraulic solution has been reached."
+                    "description": "Property. Model:'https://schema.org/Number'. Maximum flow change convergence criterion for determining when a hydraulic solution has been reached"
                 },
                 "demandCharge": {
                     "type": "number",
-                    "description": "Property. Model:'https://schema.org/Number'. Energy charge per maximum kW usage."
+                    "description": "Property. Model:'https://schema.org/Number'. Energy charge per maximum kW usage"
                 },
                 "specificGravity": {
                     "type": "number",
@@ -173,7 +173,7 @@
                 },
                 "unbalancedN": {
                     "type": "number",
-                    "description": "Property. Model:'https://schema.org/Number'. Number of additional trials allowed if 'unbalanced' is set to continue_N. Mandatory if 'unbalanced' is set to continue_N, else not required."
+                    "description": "Property. Model:'https://schema.org/Number'. Number of additional trials allowed if 'unbalanced' is set to continue_N. Mandatory if 'unbalanced' is set to continue_N, else not required"
                 },
                 "checkFrequency": {
                     "type": "number",
@@ -185,11 +185,11 @@
                 },
                 "dampLimit": {
                     "type": "number",
-                    "description": "Property. Model:'https://schema.org/Number'. Accuracy value at which solution damping and status checks begin for PRVs and PSVs."
+                    "description": "Property. Model:'https://schema.org/Number'. Accuracy value at which solution damping and status checks begin for PRVs and PSVs"
                 },
                 "diffusivity": {
                     "type": "number",
-                    "description": "Property. Model:'https://schema.org/Number'. Molecular diffusivity of the chemical analysed in a quality analysis, relative to diffusivity of chlorine in water."
+                    "description": "Property. Model:'https://schema.org/Number'. Molecular diffusivity of the chemical analysed in a quality analysis, relative to diffusivity of chlorine in water"
                 },
                 "bulkOrder": {
                     "type": "number",
