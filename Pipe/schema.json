@@ -30,7 +30,7 @@
                 },
                 "length": {
                     "type": "number",
-                    "description": "Property. Model:'https://schema.org/Number'. Units:'Metre'. The actual length of the pipe. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code."
+                    "description": "Property. Model:'https://schema.org/Number'. Units:'Metre'. The actual length of the pipe. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code"
                 },
                 "diameter": {
                     "type": "number",
@@ -38,7 +38,7 @@
                 },
                 "roughness": {
                     "type": "number",
-                    "description": "Property. Model:'https://schema.org/Number'. Units:'No unit'. The roughness coefficient of the Pipe."
+                    "description": "Property. Model:'https://schema.org/Number'. Units:'No unit'. The roughness coefficient of the Pipe"
                 },
                 "minorLoss": {
                     "type": "number",
@@ -59,11 +59,11 @@
                 },
                 "wallCoeff": {
                     "type": "number",
-                    "description": "Property. Model:'https://schema.org/Number'. Units:'mg/m\u00b2/day'. The wall reaction coefficient for the pipe. Use a positive value for growth and a negative value for decay. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code."
+                    "description": "Property. Model:'https://schema.org/Number'. Units:'mg/m\u00b2/day'. The wall reaction coefficient for the pipe. Use a positive value for growth and a negative value for decay. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code"
                 },
                 "bulkCoeff": {
                     "type": "number",
-                    "description": "Property. Model:'https://schema.org/Number'. Units:'reciprocal day' The bulk reaction coefficient for the pipe. Use a positive value for growth and a negative value for decay. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code."
+                    "description": "Property. Model:'https://schema.org/Number'. Units:'reciprocal day' The bulk reaction coefficient for the pipe. Use a positive value for growth and a negative value for decay. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code"
                 },
                 "vertices": {
                     "oneOf": [
