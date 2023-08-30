@@ -17,7 +17,7 @@
             "properties": {
                 "type": {
                     "type": "string",
-                    "description": "Property. NGSI-LD Entity Type. It must be equal to Curve.",
+                    "description": "Property. NGSI-LD Entity Type. It must be equal to Curve",
                     "enum": [
                         "Curve"
                     ]
