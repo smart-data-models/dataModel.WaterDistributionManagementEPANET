@@ -373,7 +373,7 @@
                                         "format": "uri"
                                     }
                                 ],
-                                "description": "Relationship. Model:'https://schema.org/URL'. URI of network component with property modified in simulation. A sub-relationship of the Property water attribute."
+                                "description": "Relationship. Model:'https://schema.org/URL'. URI of network component with property modified in simulation. A sub-relationship of the Property water attribute"
                             }
                         }
                     }
