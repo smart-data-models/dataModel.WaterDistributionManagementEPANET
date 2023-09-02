@@ -1,108 +1,87 @@
 Junction:
-
   description: This entity contains a harmonised description of a generic junction made for the Water Network Management domain. This entity is primarily associated with the water network management vertical and related IoT applications.
-
   properties:
-
     address:
-
       description: The mailing address
-
       properties:
-
         addressCountry:
-          description: The country. For example, Spain
+          description: 'The country. For example, Spain'
           type: string
           x-ngsi:
             model: https://schema.org/addressCountry
             type: Property
-
         addressLocality:
-          description: The locality in which the street address is, and which is in the region
+          description: 'The locality in which the street address is, and which is in the region'
           type: string
           x-ngsi:
             model: https://schema.org/addressLocality
             type: Property
-
         addressRegion:
-          description: The region in which the locality is, and which is in the country
+          description: 'The region in which the locality is, and which is in the country'
           type: string
           x-ngsi:
             model: https://schema.org/addressRegion
             type: Property
-
         district:
-          description: A district is a type of administrative division that, in some countries, is managed by the local government
+          description: 'A district is a type of administrative division that, in some countries, is managed by the local government'
           type: string
           x-ngsi:
             type: Property
-
         postOfficeBoxNumber:
-          description: The post office box number for PO box addresses. For example, 03578
+          description: 'The post office box number for PO box addresses. For example, 03578'
           type: string
           x-ngsi:
             model: https://schema.org/postOfficeBoxNumber
             type: Property
-
         postalCode:
-          description: The postal code. For example, 24004
+          description: 'The postal code. For example, 24004'
           type: string
           x-ngsi:
             model: https://schema.org/https://schema.org/postalCode
             type: Property
-
         streetAddress:
           description: The street address
           type: string
           x-ngsi:
             model: https://schema.org/streetAddress
             type: Property
-
         streetNr:
           description: Number identifying a specific property on a public street
           type: string
           x-ngsi:
             type: Property
-
       type: object
-
       x-ngsi:
         model: https://schema.org/address
         type: Property
-
     alternateName:
       description: An alternative name for this item
       type: string
       x-ngsi:
         type: Property
-
     areaServed:
       description: The geographic area where a service or offered item is provided
       type: string
       x-ngsi:
         model: https://schema.org/Text
         type: Property
-
     dataProvider:
       description: A sequence of characters identifying the provider of the harmonised data entity
       type: string
       x-ngsi:
         type: Property
-
     dateCreated:
       description: Entity creation timestamp. This will usually be allocated by the storage platform
       format: date-time
       type: string
       x-ngsi:
         type: Property
-
     dateModified:
       description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform
       format: date-time
       type: string
       x-ngsi:
         type: Property
-
     demandCategory:
       description: Allows base demands and time patterns to be assigned to other categories of users
       properties:
@@ -138,31 +117,27 @@ Junction:
       x-ngsi:
         model: https://schema.org/Text
         type: Property
-
     description:
       description: A description of this item
       type: string
       x-ngsi:
         type: Property
-
     elevation:
-      description: The elevation above some common reference of the junction. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code
+      description: 'The elevation above some common reference of the junction. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code'
       type: number
       x-ngsi:
         model: http://schema.org/Number
         type: Property
         units: Metre
-
     emitterCoefficient:
-      description: Discharge coefficient for emitter (sprinkler or nozzle) placed at junction. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code
+      description: 'Discharge coefficient for emitter (sprinkler or nozzle) placed at junction. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code'
       type: number
       x-ngsi:
         model: http://schema.org/Number
         type: Property
         units: square metre per second
-
     head:
-      description: Observed head at the node (junction, tank or reservoir)
+      description: 'Observed head at the node (junction, tank or reservoir)'
       properties:
         observedBy:
           anyOf:
@@ -186,7 +161,6 @@ Junction:
       type: object
       x-ngsi:
         type: Property
-
     id:
       anyOf:
         - description: Identifier format of any NGSI entity
@@ -204,7 +178,6 @@ Junction:
       description: Unique identifier of the entity
       x-ngsi:
         type: Property
-
     initialQuality:
       description: Initial quality in the network component
       properties:
@@ -230,13 +203,9 @@ Junction:
       type: object
       x-ngsi:
         type: Property
-
     location:
-
-      description: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
-
+      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
       oneOf:
-
         - description: Geojson reference to the item. Point
           properties:
             bbox:
@@ -260,7 +229,6 @@ Junction:
           type: object
           x-ngsi:
             type: GeoProperty
-
         - description: Geojson reference to the item. LineString
           properties:
             bbox:
@@ -287,7 +255,6 @@ Junction:
           type: object
           x-ngsi:
             type: GeoProperty
-
         - description: Geojson reference to the item. Polygon
           properties:
             bbox:
@@ -316,7 +283,6 @@ Junction:
           type: object
           x-ngsi:
             type: GeoProperty
-
         - description: Geojson reference to the item. MultiPoint
           properties:
             bbox:
@@ -342,7 +308,6 @@ Junction:
           type: object
           x-ngsi:
             type: GeoProperty
-
         - description: Geojson reference to the item. MultiLineString
           properties:
             bbox:
@@ -371,7 +336,6 @@ Junction:
           type: object
           x-ngsi:
             type: GeoProperty
-
         - description: Geojson reference to the item. MultiLineString
           properties:
             bbox:
@@ -402,16 +366,13 @@ Junction:
           type: object
           x-ngsi:
             type: GeoProperty
-
       x-ngsi:
         type: GeoProperty
-
     name:
       description: The name of this item
       type: string
       x-ngsi:
         type: Property
-
     owner:
       description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)
       items:
@@ -434,9 +395,8 @@ Junction:
       type: array
       x-ngsi:
         type: Property
-
     pressure:
-      description: Observed pressure at the node (junction, tank or reservoir)
+      description: 'Observed pressure at the node (junction, tank or reservoir)'
       properties:
         observedBy:
           anyOf:
@@ -460,7 +420,6 @@ Junction:
       type: object
       x-ngsi:
         type: Property
-
     quality:
       description: Observed quality in the network component
       properties:
@@ -486,7 +445,6 @@ Junction:
       type: object
       x-ngsi:
         type: Property
-
     seeAlso:
       description: list of uri pointing to additional resources about the item
       oneOf:
@@ -499,17 +457,13 @@ Junction:
           type: string
       x-ngsi:
         type: Property
-
     source:
-      description: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'
       type: string
       x-ngsi:
         type: Property
-
     sourceCategory:
-
       description: Description of the quality of source flow entering the network at a specific node
-
       properties:
         sourcePattern:
           anyOf:
@@ -529,7 +483,7 @@ Junction:
           x-ngsi:
             type: Relationship
         sourceQuality:
-          description: Baseline or average concentration (or mass flow rate) of source. A sub-property of the Property 'sourceCategory'. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code
+          description: 'Baseline or average concentration (or mass flow rate) of source. A sub-property of the Property ''sourceCategory''. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code'
           type: number
           x-ngsi:
             model: https://schema.org/Number
@@ -551,15 +505,12 @@ Junction:
           type: string
           x-ngsi:
             type: Property
-
       type: object
-
       x-ngsi:
         model: https://schema.org/Text
         type: Property
-
     sourceMassInflow:
-      description: Observed source mass inflow at the node (junction, tank or reservoir)
+      description: 'Observed source mass inflow at the node (junction, tank or reservoir)'
       properties:
         observedBy:
           anyOf:
@@ -583,9 +534,8 @@ Junction:
       type: object
       x-ngsi:
         type: Property
-
     supply:
-      description: Observed supply at the node (junction, tank or reservoir)
+      description: 'Observed supply at the node (junction, tank or reservoir)'
       properties:
         observedBy:
           anyOf:
@@ -609,14 +559,12 @@ Junction:
       type: object
       x-ngsi:
         type: Property
-
     tag:
-      description: An optional text string used to assign the pipe to a category, perhaps one based on age or material
+      description: 'An optional text string used to assign the pipe to a category, perhaps one based on age or material'
       type: string
       x-ngsi:
         model: https://schema.org/Text
         type: Property
-
     type:
       description: NGSI-LD Entity Type. It has to be Junction
       enum:
@@ -624,21 +572,13 @@ Junction:
       type: string
       x-ngsi:
         type: Property
-
   required:
     - id
     - type
-
   type: object
-
-  x-derived-from: ''
-
-  x-disclaimer: Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program
-
+  x-derived-from: ""
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'
   x-license-url: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/blob/master/Junction/LICENSE.md
-
   x-model-schema: https://smart-data-models.github.io/dataModel.WaterDistributionManagementEPANET/Junction/schema.json
-
   x-model-tags: FIWARE4WATER
-
   x-version: 0.0.1
