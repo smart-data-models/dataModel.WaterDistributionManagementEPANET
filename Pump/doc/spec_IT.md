@@ -15,7 +15,18 @@
 ## Elenco delle proprietà  
 
 <sup><sub>[*] Se non c'è un tipo in un attributo è perché potrebbe avere diversi tipi o diversi formati/modelli</sub></sup>.  
-- `address[object]`: L'indirizzo postale  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Un nome alternativo per questa voce  - `areaServed[string]`: L'area geografica in cui viene fornito il servizio o l'articolo offerto.  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  - `dateCreated[string]`: Timestamp di creazione dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `dateModified[string]`: Timestamp dell'ultima modifica dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `description[string]`: Descrizione dell'articolo  - `efficCurve[*]`: L'etichetta ID della curva che rappresenta l'efficienza filo-acqua della pompa in funzione della portata.  - `endsAt[*]`: ID del nodo sul lato di mandata della pompa  - `energyPattern[*]`: L'etichetta ID del modello temporale utilizzato per descrivere la variazione del prezzo dell'energia nel corso della giornata.  - `energyPrice[number]`: Il prezzo medio o nominale dell'energia in unità monetarie. Tutte le unità sono accettate in codice [CEFACT](https://www.unece.org/cefact.html).  - `energyUse[object]`: Utilizzo di energia osservato dall'elemento della rete  - `flow[object]`: Velocità di flusso dal nodo `inizioAt` al nodo `termineAt`, misurata da un dispositivo sul collegamento (tubo, valvola o pompa)  - `headCurve[string]`: L'etichetta identificativa della curva della pompa utilizzata per descrivere la relazione tra la prevalenza erogata dalla pompa e la portata attraverso la pompa.  - `id[*]`: Identificatore univoco dell'entità  - `initialStatus[string]`: Stato del collegamento all'inizio della simulazione. Enum:'APERTO, CHIUSO, CV'  . Model: [https://schema.org/Text](https://schema.org/Text)- `location[*]`: Riferimento Geojson all'elemento. Può essere un punto, una stringa di linea, un poligono, un multi-punto, una stringa di linea o un poligono multiplo.  - `name[string]`: Il nome di questo elemento.  - `owner[array]`: Un elenco contenente una sequenza di caratteri codificata JSON che fa riferimento agli ID univoci dei proprietari.  - `power[number]`: La potenza fornita dalla pompa. Tutte le unità sono accettate in codice [CEFACT](https://www.unece.org/cefact.html).  . Model: [https://schema.org/Number](https://schema.org/Number)- `pumpPattern[*]`: L'etichetta ID di uno schema temporale utilizzato per controllare il funzionamento della pompa. I moltiplicatori del modello sono equivalenti alle impostazioni di velocità. Un moltiplicatore pari a zero implica lo spegnimento della pompa durante il periodo di tempo corrispondente.  - `quality[object]`: Qualità osservata nel componente di rete  - `seeAlso[*]`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `source[string]`: Una sequenza di caratteri che indica la fonte originale dei dati dell'entità come URL. Si consiglia di utilizzare il nome di dominio completamente qualificato del provider di origine o l'URL dell'oggetto di origine.  - `speed[number]`: L'impostazione della velocità relativa della pompa. Tutte le unità sono accettate in codice [CEFACT](https://www.unece.org/cefact.html).  . Model: [https://schema.org/Number](https://schema.org/Number)- `startsAt[*]`: ID del nodo sul lato di aspirazione della pompa  - `status[string]`: Stato dinamico del nodo. Enum:'APERTO, CHIUSO, CV'  . Model: [https://schema.org/Text](https://schema.org/Text)- `tag[string]`: Una stringa di testo opzionale utilizzata per assegnare il tubo a una categoria, magari basata sull'età o sul materiale.  . Model: [https://schema.org/Text](https://schema.org/Text)- `type[string]`: Tipo di entità NGSI-LD. Deve essere uguale a Pompa.  - `velocity[object]`: Velocità osservata nel collegamento (tubo, valvola o pompa)  - `vertices[*]`: Coordinate di tutti i vertici della pompa, ordinate dal nodo startsAt al nodo endsAt e codificate come GeoJSON  <!-- /30-PropertiesList -->  
+- `address[object]`: L'indirizzo postale  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: Il paese. Ad esempio, la Spagna  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
+	- `addressLocality[string]`: La località in cui si trova l'indirizzo civico e che si trova nella regione  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
+	- `addressRegion[string]`: La regione in cui si trova la località, e che si trova nel paese  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
+	- `district[string]`: Un distretto è un tipo di divisione amministrativa che, in alcuni paesi, è gestita dal governo locale.    
+	- `postOfficeBoxNumber[string]`: Il numero di casella postale per gli indirizzi di casella postale. Ad esempio, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
+	- `postalCode[string]`: Il codice postale. Ad esempio, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
+	- `streetAddress[string]`: L'indirizzo stradale  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+- `alternateName[string]`: Un nome alternativo per questa voce  - `areaServed[string]`: L'area geografica in cui viene fornito il servizio o l'articolo offerto.  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzati  - `dateCreated[date-time]`: Timestamp di creazione dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione  - `dateModified[date-time]`: Timestamp dell'ultima modifica dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione  - `description[string]`: Descrizione dell'articolo  - `efficCurve[*]`: L'etichetta ID della curva che rappresenta l'efficienza filo-acqua della pompa in funzione della portata.  - `endsAt[*]`: ID del nodo sul lato di mandata della pompa  - `energyPattern[*]`: L'etichetta ID del modello temporale utilizzato per descrivere la variazione del prezzo dell'energia nel corso della giornata.  - `energyPrice[number]`: Il prezzo medio o nominale dell'energia in unità monetarie. Tutte le unità sono accettate in codice [CEFACT](https://www.unece.org/cefact.html).  - `energyUse[object]`: Utilizzo di energia osservato dall'elemento della rete  	- `observedBy`:     
+- `flow[object]`: Velocità di flusso dal nodo `inizioAt` al nodo `termineAt`, misurata da un dispositivo sul collegamento (tubo, valvola o pompa)  	- `observedBy`:     
+- `headCurve[uri]`: L'etichetta identificativa della curva della pompa utilizzata per descrivere la relazione tra la prevalenza erogata dalla pompa e la portata attraverso la pompa.  - `id[*]`: Identificatore univoco dell'entità  - `initialStatus[string]`: Stato del collegamento all'inizio della simulazione. Enum:'APERTO, CHIUSO, CV'  . Model: [https://schema.org/Text](https://schema.org/Text)- `location[*]`: Riferimento Geojson all'elemento. Può essere un punto, una stringa di linea, un poligono, un multi-punto, una stringa di linea o un poligono multiplo.  - `name[string]`: Il nome di questo elemento  - `owner[array]`: Un elenco contenente una sequenza di caratteri codificata JSON che fa riferimento agli ID univoci dei proprietari.  - `power[number]`: La potenza fornita dalla pompa. Tutte le unità sono accettate in codice [CEFACT](https://www.unece.org/cefact.html).  . Model: [https://schema.org/Number](https://schema.org/Number)- `pumpPattern[*]`: L'etichetta ID di uno schema temporale utilizzato per controllare il funzionamento della pompa. I moltiplicatori del modello sono equivalenti alle impostazioni di velocità. Un moltiplicatore pari a zero implica lo spegnimento della pompa durante il periodo di tempo corrispondente.  - `quality[object]`: Qualità osservata nel componente di rete  	- `observedBy`:     
+- `seeAlso[*]`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `source[string]`: Una sequenza di caratteri che indica la fonte originale dei dati dell'entità come URL. Si consiglia di utilizzare il nome di dominio completamente qualificato del provider di origine o l'URL dell'oggetto di origine.  - `speed[number]`: L'impostazione della velocità relativa della pompa. Tutte le unità sono accettate nel codice [CEFACT](https://www.unece.org/cefact.html).  . Model: [https://schema.org/Number](https://schema.org/Number)- `startsAt[*]`: ID del nodo sul lato di aspirazione della pompa  - `status[string]`: Stato dinamico del nodo. Enum:'APERTO, CHIUSO, CV'  . Model: [https://schema.org/Text](https://schema.org/Text)- `tag[string]`: Una stringa di testo opzionale utilizzata per assegnare il tubo a una categoria, magari basata sull'età o sul materiale.  . Model: [https://schema.org/Text](https://schema.org/Text)- `type[string]`: Tipo di entità NGSI-LD. Deve essere uguale a Pompa  - `velocity[object]`: Velocità osservata nel collegamento (tubo, valvola o pompa)  	- `observedBy[uri]`: Dove è stata osservata la velocità    
+- `vertices[*]`: Geoproprietà. Coordinate di tutti i vertici della pompa, ordinate dal nodo startsAt al nodo endsAt e codificate come GeoJSON.  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Proprietà richieste  
 - `endsAt`  - `id`  - `initialStatus`  - `startsAt`  - `type`  <!-- /35-RequiredProperties -->  
@@ -29,126 +40,173 @@
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 Pump:    
-  description: 'This entity contains a harmonised description of a generic pump made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.'    
+  description: This entity contains a harmonised description of a generic pump made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.    
   properties:    
     address:    
-      description: 'The mailing address'    
+      description: The mailing address    
       properties:    
         addressCountry:    
-          description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''    
+          description: 'The country. For example, Spain'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressCountry    
+            type: Property    
         addressLocality:    
-          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/addressLocality'''    
+          description: 'The locality in which the street address is, and which is in the region'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressLocality    
+            type: Property    
         addressRegion:    
-          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
+          description: 'The region in which the locality is, and which is in the country'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressRegion    
+            type: Property    
+        district:    
+          description: 'A district is a type of administrative division that, in some countries, is managed by the local government'    
+          type: string    
+          x-ngsi:    
+            type: Property    
         postOfficeBoxNumber:    
-          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
+          description: 'The post office box number for PO box addresses. For example, 03578'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/postOfficeBoxNumber    
+            type: Property    
         postalCode:    
-          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
+          description: 'The postal code. For example, 24004'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/https://schema.org/postalCode    
+            type: Property    
         streetAddress:    
-          description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
+          description: The street address    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/streetAddress    
+            type: Property    
+        streetNr:    
+          description: Number identifying a specific property on a public street    
+          type: string    
+          x-ngsi:    
+            type: Property    
       type: object    
       x-ngsi:    
         model: https://schema.org/address    
         type: Property    
     alternateName:    
-      description: 'An alternative name for this item'    
+      description: An alternative name for this item    
       type: string    
       x-ngsi:    
         type: Property    
     areaServed:    
-      description: 'The geographic area where a service or offered item is provided'    
+      description: The geographic area where a service or offered item is provided    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     dataProvider:    
-      description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
+      description: A sequence of characters identifying the provider of the harmonised data entity    
       type: string    
       x-ngsi:    
         type: Property    
     dateCreated:    
-      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
+      description: Entity creation timestamp. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     dateModified:    
-      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     description:    
-      description: 'A description of this item'    
+      description: A description of this item    
       type: string    
       x-ngsi:    
         type: Property    
     efficCurve:    
       anyOf:    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'The ID label of the curve that represents the pump''s wire-to-water efficiency as a function of flow rate.'    
+          x-ngsi:    
+            type: Property    
+      description: The ID label of the curve that represents the pump's wire-to-water efficiency as a function of flow rate    
       x-ngsi:    
         type: Relationship    
     endsAt:    
       anyOf:    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'The ID of the node on the discharge side of the pump'    
+          x-ngsi:    
+            type: Property    
+      description: The ID of the node on the discharge side of the pump    
       x-ngsi:    
         type: Relationship    
     energyPattern:    
       anyOf:    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'The ID label of the time pattern used to describe the variation in energy price throughout the day.'    
+          x-ngsi:    
+            type: Property    
+      description: The ID label of the time pattern used to describe the variation in energy price throughout the day    
       x-ngsi:    
         type: Relationship    
     energyPrice:    
-      description: 'The average or nominal price of energy in monetary units. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'    
+      description: 'The average or nominal price of energy in monetary units. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code'    
       type: number    
       x-ngsi:    
         type: Property    
-        units: 'No unit'    
+        units: No unit    
     energyUse:    
-      description: 'Observed energy use by the element of the network'    
+      description: Observed energy use by the element of the network    
       properties:    
         observedBy:    
           anyOf:    
-            - description: 'Property. Identifier format of any NGSI entity'    
+            - description: Identifier format of any NGSI entity    
               maxLength: 256    
               minLength: 1    
               pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
               type: string    
-            - description: 'Property. Identifier format of any NGSI entity'    
+              x-ngsi:    
+                type: Property    
+            - description: Identifier format of any NGSI entity    
               format: uri    
               type: string    
+              x-ngsi:    
+                type: Property    
         value:    
+          description: Numerical value of the use of Energy    
           type: number    
+          x-ngsi:    
+            type: Property    
       type: object    
       x-ngsi:    
         type: Property    
@@ -157,36 +215,47 @@ Pump:
       properties:    
         observedBy:    
           anyOf:    
-            - description: 'Property. Identifier format of any NGSI entity'    
+            - description: Identifier format of any NGSI entity    
               maxLength: 256    
               minLength: 1    
               pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
               type: string    
-            - description: 'Property. Identifier format of any NGSI entity'    
+              x-ngsi:    
+                type: Property    
+            - description: Identifier format of any NGSI entity    
               format: uri    
               type: string    
+              x-ngsi:    
+                type: Property    
         value:    
+          description: Value of the flow    
           type: number    
+          x-ngsi:    
+            type: Property    
       type: object    
       x-ngsi:    
         type: Property    
     headCurve:    
-      description: 'The ID label of the pump curve used to describe the relationship between the head delivered by the pump and the flow through the Pump.'    
+      description: The ID label of the pump curve used to describe the relationship between the head delivered by the pump and the flow through the Pump    
       format: uri    
       type: string    
       x-ngsi:    
         type: Relationship    
     id:    
-      anyOf: &pump_-_properties_-_owner_-_items_-_anyof    
-        - description: 'Property. Identifier format of any NGSI entity'    
+      anyOf:    
+        - description: Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'Unique identifier of the entity'    
+          x-ngsi:    
+            type: Property    
+      description: Unique identifier of the entity    
       x-ngsi:    
         type: Property    
     initialStatus:    
@@ -202,7 +271,7 @@ Pump:
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - description: 'GeoProperty. Geojson reference to the item. Point'    
+        - description: Geojson reference to the item. Point    
           properties:    
             bbox:    
               items:    
@@ -221,9 +290,11 @@ Pump:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON Point'    
+          title: GeoJSON Point    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. LineString'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. LineString    
           properties:    
             bbox:    
               items:    
@@ -245,9 +316,11 @@ Pump:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON LineString'    
+          title: GeoJSON LineString    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. Polygon'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. Polygon    
           properties:    
             bbox:    
               items:    
@@ -271,9 +344,11 @@ Pump:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON Polygon'    
+          title: GeoJSON Polygon    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiPoint'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiPoint    
           properties:    
             bbox:    
               items:    
@@ -294,9 +369,11 @@ Pump:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiPoint'    
+          title: GeoJSON MultiPoint    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiLineString'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -320,9 +397,11 @@ Pump:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiLineString'    
+          title: GeoJSON MultiLineString    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiLineString'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -348,25 +427,41 @@ Pump:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiPolygon'    
+          title: GeoJSON MultiPolygon    
           type: object    
+          x-ngsi:    
+            type: GeoProperty    
       x-ngsi:    
         type: GeoProperty    
     name:    
-      description: 'The name of this item.'    
+      description: The name of this item    
       type: string    
       x-ngsi:    
         type: Property    
     owner:    
-      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
+      description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)    
       items:    
-        anyOf: *pump_-_properties_-_owner_-_items_-_anyof    
-        description: 'Property. Unique identifier of the entity'    
+        anyOf:    
+          - description: Identifier format of any NGSI entity    
+            maxLength: 256    
+            minLength: 1    
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+            type: string    
+            x-ngsi:    
+              type: Property    
+          - description: Identifier format of any NGSI entity    
+            format: uri    
+            type: string    
+            x-ngsi:    
+              type: Property    
+        description: Unique identifier of the entity    
+        x-ngsi:    
+          type: Property    
       type: array    
       x-ngsi:    
         type: Property    
     power:    
-      description: 'The power supplied by the pump. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'    
+      description: 'The power supplied by the pump. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code'    
       type: number    
       x-ngsi:    
         model: https://schema.org/Number    
@@ -374,37 +469,48 @@ Pump:
         units: KiloWatt    
     pumpPattern:    
       anyOf:    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'The ID label of a time pattern used to control the pump''s operation. The multipliers of the pattern are equivalent to speed settings. A multiplier of zero implies that the pump will be shut off during the corresponding time period'    
+          x-ngsi:    
+            type: Property    
+      description: The ID label of a time pattern used to control the pump's operation. The multipliers of the pattern are equivalent to speed settings. A multiplier of zero implies that the pump will be shut off during the corresponding time period    
       x-ngsi:    
         type: Relationship    
     quality:    
-      description: 'Observed quality in the network component'    
+      description: Observed quality in the network component    
       properties:    
         observedBy:    
           anyOf:    
-            - description: 'Property. Identifier format of any NGSI entity'    
+            - description: Identifier format of any NGSI entity    
               maxLength: 256    
               minLength: 1    
               pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
               type: string    
-            - description: 'Property. Identifier format of any NGSI entity'    
+              x-ngsi:    
+                type: Property    
+            - description: Identifier format of any NGSI entity    
               format: uri    
               type: string    
+              x-ngsi:    
+                type: Property    
         value:    
+          description: Numerical value of the quality    
           type: number    
+          x-ngsi:    
+            type: Property    
       type: object    
       x-ngsi:    
         type: Property    
     seeAlso:    
-      description: 'list of uri pointing to additional resources about the item'    
+      description: list of uri pointing to additional resources about the item    
       oneOf:    
         - items:    
             format: uri    
@@ -416,28 +522,32 @@ Pump:
       x-ngsi:    
         type: Property    
     source:    
-      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'    
       type: string    
       x-ngsi:    
         type: Property    
     speed:    
-      description: 'The relative speed setting of the Pump. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'    
+      description: 'The relative speed setting of the Pump. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code'    
       type: number    
       x-ngsi:    
         model: https://schema.org/Number    
         type: Property    
-        units: 'Metre per Second'    
+        units: Metre per Second    
     startsAt:    
       anyOf:    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'The ID of the node on the suction side of the pump'    
+          x-ngsi:    
+            type: Property    
+      description: The ID of the node on the suction side of the pump    
       x-ngsi:    
         type: Relationship    
     status:    
@@ -457,7 +567,7 @@ Pump:
         model: https://schema.org/Text    
         type: Property    
     type:    
-      description: 'NGSI-LD Entity Type. It must be equal to Pump.'    
+      description: NGSI-LD Entity Type. It must be equal to Pump    
       enum:    
         - Pump    
       type: string    
@@ -467,15 +577,21 @@ Pump:
       description: 'Observed velocity in the link (pipe, valve or pump)'    
       properties:    
         observedBy:    
+          description: Where the velocity has been observed    
           format: uri    
           type: string    
+          x-ngsi:    
+            type: Property    
         value:    
+          description: Value of the velocity    
           type: number    
+          x-ngsi:    
+            type: Property    
       type: object    
       x-ngsi:    
         type: Property    
     vertices:    
-      description: 'Coordinates of all vertices in the pump, ordered from the startsAt node to the endsAt node and encoded as a GeoJSON '    
+      description: 'Geoproperty. Coordinates of all vertices in the pump, ordered from the startsAt node to the endsAt node and encoded as a GeoJSON '    
       oneOf:    
         - $id: https://geojson.org/schema/MultiPoint.json    
           $schema: "http://json-schema.org/draft-07/schema#"    
@@ -499,7 +615,7 @@ Pump:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiPoint'    
+          title: GeoJSON MultiPoint    
           type: object    
         - $id: https://geojson.org/schema/Point.json    
           $schema: "http://json-schema.org/draft-07/schema#"    
@@ -521,10 +637,8 @@ Pump:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON Point'    
+          title: GeoJSON Point    
           type: object    
-      x-ngsi:    
-        type: GeoProperty    
   required:    
     - id    
     - type    
@@ -533,7 +647,7 @@ Pump:
     - endsAt    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/blob/master/Pump/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.WaterDistributionManagementEPANET/Pump/schema.json    
   x-model-tags: FIWARE4WATER    
@@ -680,121 +794,121 @@ Pump:
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-    "id": "urn:ngsi-ld:Pump:85zhnf58-0d4c-h4g854g-b7d0-3310klm",  
-    "type": "Pump",  
-    "efficCurve": {  
-        "type": "Relationship",  
-        "object": "urn:ngsi-ld:Curve:fbcb5fc8-8ca3-4533-a2eb-34bc89262190"  
+  "id": "urn:ngsi-ld:Pump:85zhnf58-0d4c-h4g854g-b7d0-3310klm",  
+  "type": "Pump",  
+  "efficCurve": {  
+    "type": "Relationship",  
+    "object": "urn:ngsi-ld:Curve:fbcb5fc8-8ca3-4533-a2eb-34bc89262190"  
+  },  
+  "endsAt": {  
+    "type": "Relationship",  
+    "object": "urn:ngsi-ld:Reservoir:1863179e-3768-4480-9167-ff21f870dd19"  
+  },  
+  "energyPattern": {  
+    "type": "Relationship",  
+    "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533-a2eb-34bc89262190"  
+  },  
+  "energyPrice": {  
+    "type": "Property",  
+    "value": 0.8,  
+    "unitCode": "C62"  
+  },  
+  "energyUse": {  
+    "type": "Property",  
+    "value": {  
+      "type": "Property",  
+      "value": 50,  
+      "unitCode": "KWT"  
     },  
-    "endsAt": {  
-        "type": "Relationship",  
-        "object": "urn:ngsi-ld:Reservoir:1863179e-3768-4480-9167-ff21f870dd19"  
+    "observedBy": {  
+      "type": "Relationship",  
+      "object": "urn:ngsi-ld:Device:device-9845A"  
+    }  
+  },  
+  "flow": {  
+    "type": "Property",  
+    "value": {  
+      "value": 20,  
+      "unitCode": "G51"  
     },  
-    "energyPattern": {  
-        "type": "Relationship",  
-        "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533-a2eb-34bc89262190"  
+    "observedBy": {  
+      "object": "urn:ngsi-ld:Device:device-9845A",  
+      "type": "Relationship"  
+    }  
+  },  
+  "initialStatus": {  
+    "type": "Property",  
+    "value": "OPEN"  
+  },  
+  "power": {  
+    "type": "Property",  
+    "value": 100,  
+    "unitCode": "KWT"  
+  },  
+  "pumpPattern": {  
+    "type": "Relationship",  
+    "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533-a2eb-34bc89262190"  
+  },  
+  "quality": {  
+    "type": "Property",  
+    "value": {  
+      "type": "Property",  
+      "value": 0.5,  
+      "unitCode": "F27"  
     },  
-    "energyPrice": {  
-        "type": "Property",  
-        "value": 0.8,  
-        "unitCode": "C62"  
+    "observedBy": {  
+      "type": "Relationship",  
+      "object": "urn:ngsi-ld:Device:device-9845A"  
+    }  
+  },  
+  "speed": {  
+    "type": "Property",  
+    "value": 1.2,  
+    "unitCode": "MTS"  
+  },  
+  "startsAt": {  
+    "type": "Relationship",  
+    "object": "urn:ngsi-ld:Junction:63fe7d79-0d4c-4da9-b7d0-3340efa0656a"  
+  },  
+  "status": {  
+    "type": "Property",  
+    "value": "OPEN"  
+  },  
+  "tag": {  
+    "type": "Property",  
+    "value": "DMA1"  
+  },  
+  "velocity": {  
+    "type": "Property",  
+    "value": {  
+      "type": "Property",  
+      "value": 2,  
+      "unitCode": "MTS"  
     },  
-    "energyUse": {  
-        "type": "Property",  
-        "value": {  
-            "type": "Property",  
-            "value": 50,  
-            "unitCode": "KWT"  
-        },  
-        "observedBy": {  
-            "type": "Relationship",  
-            "object": "urn:ngsi-ld:Device:device-9845A"  
-        }  
-    },  
-    "flow": {  
-        "type": "Property",  
-        "value": {  
-            "value": 20,  
-            "unitCode": "G51"  
-        },  
-        "observedBy": {  
-            "value": "urn:ngsi-ld:Device:device-9845A",  
-            "type": "Relationship"  
-        }  
-    },  
-    "initialStatus": {  
-        "type": "Property",  
-        "value": "OPEN"  
-    },  
-    "power": {  
-        "type": "Property",  
-        "value": 100,  
-        "unitCode": "KWT"  
-    },  
-    "pumpPattern": {  
-        "type": "Relationship",  
-        "object": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533-a2eb-34bc89262190"  
-    },  
-    "quality": {  
-        "type": "Property",  
-        "value": {  
-            "type": "Property",  
-            "value": 0.5,  
-            "unitCode": "F27"  
-        },  
-        "observedBy": {  
-            "type": "Relationship",  
-            "object": "urn:ngsi-ld:Device:device-9845A"  
-        }  
-    },  
-    "speed": {  
-        "type": "Property",  
-        "value": 1.2,  
-        "unitCode": "MTS"  
-    },  
-    "startsAt": {  
-        "type": "Relationship",  
-        "object": "urn:ngsi-ld:Junction:63fe7d79-0d4c-4da9-b7d0-3340efa0656a"  
-    },  
-    "status": {  
-        "type": "Property",  
-        "value": "OPEN"  
-    },  
-    "tag": {  
-        "type": "Property",  
-        "value": "DMA1"  
-    },  
-    "velocity": {  
-        "type": "Property",  
-        "value": {  
-            "type": "Property",  
-            "value": 2,  
-            "unitCode": "MTS"  
-        },  
-        "observedBy": {  
-            "type": "Relationship",  
-            "value": "urn:ngsi-ld:Device:device-9845A"  
-        }  
-    },  
-    "vertices": {  
-        "type": "GeoProperty",  
-        "value": {  
-            "type": "MultiPoint",  
-            "coordinates": [  
-                [  
-                    24.40623,  
-                    60.17966  
-                ],  
-                [  
-                    24.50623,  
-                    60.27966  
-                ]  
-            ]  
-        }  
-    },  
-    "@context": [  
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/context.jsonld"  
-    ]  
+    "observedBy": {  
+      "type": "Relationship",  
+      "object": "urn:ngsi-ld:Device:device-9845A"  
+    }  
+  },  
+  "vertices": {  
+    "type": "GeoProperty",  
+    "value": {  
+      "type": "MultiPoint",  
+      "coordinates": [  
+        [  
+          24.40623,  
+          60.17966  
+        ],  
+        [  
+          24.50623,  
+          60.27966  
+        ]  
+      ]  
+    }  
+  },  
+  "@context": [  
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/context.jsonld"  
+  ]  
 }  
 ```  
 </details><!-- /80-Examples -->  
