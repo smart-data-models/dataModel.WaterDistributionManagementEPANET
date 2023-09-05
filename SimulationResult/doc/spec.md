@@ -15,7 +15,29 @@
 ## List of properties  
 
 <sup><sub>[*] If there is not a type in an attribute is because it could have several types or different formats/patterns</sub></sup>  
-- `address[object]`: The mailing address  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: An alternative name for this item  - `areaServed[string]`: The geographic area where a service or offered item is provided  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated[string]`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified[string]`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description[string]`: A description of this item  - `hasInputNetwork[*]`: The ID of the network used in the simulation  . Model: [https://schema.org/URL](https://schema.org/URL)- `id[*]`: Unique identifier of the entity  - `location[*]`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `name[string]`: The name of this item.  - `outputFile[string]`: Link to binary file containing results of applied simulation to the network.  - `outputParameters[array]`: Description of the set of results of applied simulation to the network.  - `owner[array]`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `refSimulationScenario[*]`: The ID of the simulation scenario  . Model: [https://schema.org/URL](https://schema.org/URL)- `seeAlso[*]`: list of uri pointing to additional resources about the item  - `source[string]`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `type[string]`: NGSI-LD Entity Type. It has to be SimulationResult  <!-- /30-PropertiesList -->  
+- `address[object]`: The mailing address  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: The country. For example, Spain  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
+	- `addressLocality[string]`: The locality in which the street address is, and which is in the region  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
+	- `addressRegion[string]`: The region in which the locality is, and which is in the country  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
+	- `district[string]`: A district is a type of administrative division that, in some countries, is managed by the local government    
+	- `postOfficeBoxNumber[string]`: The post office box number for PO box addresses. For example, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
+	- `postalCode[string]`: The postal code. For example, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
+	- `streetAddress[string]`: The street address  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+- `alternateName[string]`: An alternative name for this item  - `areaServed[string]`: The geographic area where a service or offered item is provided  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: A sequence of characters identifying the provider of the harmonised data entity  - `dateCreated[date-time]`: Entity creation timestamp. This will usually be allocated by the storage platform  - `dateModified[date-time]`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform  - `demandCategory[object]`: Allows base demands and time patterns to be assigned to other categories of users  . Model: [https://schema.org/Text](https://schema.org/Text)	- `baseDemand[string]`: Baseline or average demand for the category. A sub-property of the Property demandCategory  . Model: [https://schema.org/Text](https://schema.org/Text)  
+	- `demandPattern[*]`: A relationship to the pattern of the 'demandCategory' property    
+- `description[string]`: A description of this item  - `energyUse[object]`: Observed energy use by the element of the network  	- `observedBy`:     
+- `flow[object]`: Rate of flow from `startsAt` node to `endsAt` node, measured by a device at the link (pipe, valve or pump)  	- `observedBy`:     
+- `hasInputNetwork[*]`: The ID of the network used in the simulation  . Model: [https://schema.org/URL](https://schema.org/URL)- `head[object]`: Observed head at the node (junction, tank or reservoir)  	- `observedBy`:     
+- `id[*]`: Unique identifier of the entity  - `initialQuality[object]`: Initial quality in the network component  	- `observedBy`:     
+- `initialStatus[string]`: The link status at the start of the simulation. Enum:'OPEN, CLOSED, CV'  . Model: [https://schema.org/Text](https://schema.org/Text)- `level[object]`: Observed level in the element of the network  	- `observedBy`:     
+- `location[*]`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `name[string]`: The name of this item  - `outputFile[uri]`: Link to binary file containing results of applied simulation to the network  - `outputParameters[array]`: Description of the set of results of applied simulation to the network  - `owner[array]`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `pressure[object]`: Observed pressure at the node (junction, tank or reservoir)  	- `observedBy`:     
+- `quality[object]`: Observed quality in the network component  	- `observedBy`:     
+- `refSimulationScenario[*]`: The ID of the simulation scenario  . Model: [https://schema.org/URL](https://schema.org/URL)- `seeAlso[*]`: list of uri pointing to additional resources about the item  - `source[string]`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object  - `sourceCategory[object]`: Description of the quality of source flow entering the network at a specific node  . Model: [https://schema.org/Text](https://schema.org/Text)	- `sourcePattern[*]`: A relationship to the pattern pf the sourceCategory property    
+	- `sourceQuality[number]`: Baseline or average concentration (or mass flow rate) of source. A sub-property of the Property 'sourceCategory'. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code  . Model: [https://schema.org/Number](https://schema.org/Number)  
+	- `sourceType[string]`: A sub-property of the Property sourceCategory  . Model: [https://schema.org/Text](https://schema.org/Text)  
+- `sourceMassInflow[object]`: Observed source mass inflow at the node (junction, tank or reservoir)  	- `observedBy`:     
+- `status[string]`: The dynamic state of the node. Enum:'OPEN, CLOSED, CV'  . Model: [https://schema.org/Text](https://schema.org/Text)- `supply[object]`: Observed supply at the node (junction, tank or reservoir)  	- `observedBy`:     
+- `tag[string]`: An optional text string used to assign the pipe to a category, perhaps one based on age or material  . Model: [https://schema.org/Text](https://schema.org/Text)- `type[string]`: NGSI-LD Entity Type. It has to be SimulationResult  - `valveCurve[*]`: Reference to the Curve where the valve is located  - `valveType[string]`: Type of valve according to valve categories. Enum:'FCV, GPV, PBV, PRV, PSV, TCV'  - `velocity[object]`: Observed velocity in the link (pipe, valve or pump)  	- `observedBy[uri]`: Where the velocity has been observed    
+<!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Required properties  
 - `id`  - `refSimulationScenario`  - `type`  <!-- /35-RequiredProperties -->  
@@ -29,64 +51,177 @@
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 SimulationResult:    
-  description: 'This entity contains a harmonised description of a generic simulation result made for the Water Network Management domain. This entity is primarily associated with the water network management vertical and related IoT applications.'    
+  description: This entity contains a harmonised description of a generic simulation result made for the Water Network Management domain. This entity is primarily associated with the water network management vertical and related IoT applications.    
   properties:    
     address:    
-      description: 'The mailing address'    
+      description: The mailing address    
       properties:    
         addressCountry:    
-          description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''    
+          description: 'The country. For example, Spain'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressCountry    
+            type: Property    
         addressLocality:    
-          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/addressLocality'''    
+          description: 'The locality in which the street address is, and which is in the region'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressLocality    
+            type: Property    
         addressRegion:    
-          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
+          description: 'The region in which the locality is, and which is in the country'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressRegion    
+            type: Property    
+        district:    
+          description: 'A district is a type of administrative division that, in some countries, is managed by the local government'    
+          type: string    
+          x-ngsi:    
+            type: Property    
         postOfficeBoxNumber:    
-          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
+          description: 'The post office box number for PO box addresses. For example, 03578'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/postOfficeBoxNumber    
+            type: Property    
         postalCode:    
-          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
+          description: 'The postal code. For example, 24004'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/https://schema.org/postalCode    
+            type: Property    
         streetAddress:    
-          description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
+          description: The street address    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/streetAddress    
+            type: Property    
+        streetNr:    
+          description: Number identifying a specific property on a public street    
+          type: string    
+          x-ngsi:    
+            type: Property    
       type: object    
       x-ngsi:    
         model: https://schema.org/address    
         type: Property    
     alternateName:    
-      description: 'An alternative name for this item'    
+      description: An alternative name for this item    
       type: string    
       x-ngsi:    
         type: Property    
     areaServed:    
-      description: 'The geographic area where a service or offered item is provided'    
+      description: The geographic area where a service or offered item is provided    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     dataProvider:    
-      description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
+      description: A sequence of characters identifying the provider of the harmonised data entity    
       type: string    
       x-ngsi:    
         type: Property    
     dateCreated:    
-      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
+      description: Entity creation timestamp. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     dateModified:    
-      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
+    demandCategory:    
+      description: Allows base demands and time patterns to be assigned to other categories of users    
+      properties:    
+        baseDemand:    
+          description: Baseline or average demand for the category. A sub-property of the Property demandCategory    
+          type: string    
+          x-ngsi:    
+            model: https://schema.org/Text    
+            type: Property    
+        demandPattern:    
+          anyOf:    
+            - description: Identifier format of any NGSI entity    
+              maxLength: 256    
+              minLength: 1    
+              pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+              type: string    
+              x-ngsi:    
+                type: Property    
+            - description: Identifier format of any NGSI entity    
+              format: uri    
+              type: string    
+              x-ngsi:    
+                type: Property    
+          description: A relationship to the pattern of the 'demandCategory' property    
+          x-ngsi:    
+            type: Relationship    
+        value:    
+          description: Value of the demand category    
+          type: number    
+          x-ngsi:    
+            type: Property    
+      type: object    
+      x-ngsi:    
+        model: https://schema.org/Text    
+        type: Property    
     description:    
-      description: 'A description of this item'    
+      description: A description of this item    
       type: string    
+      x-ngsi:    
+        type: Property    
+    energyUse:    
+      description: Observed energy use by the element of the network    
+      properties:    
+        observedBy:    
+          anyOf:    
+            - description: Identifier format of any NGSI entity    
+              maxLength: 256    
+              minLength: 1    
+              pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+              type: string    
+              x-ngsi:    
+                type: Property    
+            - description: Identifier format of any NGSI entity    
+              format: uri    
+              type: string    
+              x-ngsi:    
+                type: Property    
+        value:    
+          description: Numerical value of the use of Energy    
+          type: number    
+          x-ngsi:    
+            type: Property    
+      type: object    
+      x-ngsi:    
+        type: Property    
+    flow:    
+      description: 'Rate of flow from `startsAt` node to `endsAt` node, measured by a device at the link (pipe, valve or pump)'    
+      properties:    
+        observedBy:    
+          anyOf:    
+            - description: Identifier format of any NGSI entity    
+              maxLength: 256    
+              minLength: 1    
+              pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+              type: string    
+              x-ngsi:    
+                type: Property    
+            - description: Identifier format of any NGSI entity    
+              format: uri    
+              type: string    
+              x-ngsi:    
+                type: Property    
+        value:    
+          description: Value of the flow    
+          type: number    
+          x-ngsi:    
+            type: Property    
+      type: object    
       x-ngsi:    
         type: Property    
     hasInputNetwork:    
@@ -97,27 +232,116 @@ SimulationResult:
           type: string    
         - format: uri    
           type: string    
-      description: 'The ID of the network used in the simulation'    
+      description: The ID of the network used in the simulation    
       x-ngsi:    
         model: https://schema.org/URL    
         type: Relationship    
+    head:    
+      description: 'Observed head at the node (junction, tank or reservoir)'    
+      properties:    
+        observedBy:    
+          anyOf:    
+            - description: Identifier format of any NGSI entity    
+              maxLength: 256    
+              minLength: 1    
+              pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+              type: string    
+              x-ngsi:    
+                type: Property    
+            - description: Identifier format of any NGSI entity    
+              format: uri    
+              type: string    
+              x-ngsi:    
+                type: Property    
+        value:    
+          description: Value of the head    
+          type: number    
+          x-ngsi:    
+            type: Property    
+      type: object    
+      x-ngsi:    
+        type: Property    
     id:    
-      anyOf: &simulationresult_-_properties_-_owner_-_items_-_anyof    
-        - description: 'Property. Identifier format of any NGSI entity'    
+      anyOf:    
+        - description: Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'Unique identifier of the entity'    
+          x-ngsi:    
+            type: Property    
+      description: Unique identifier of the entity    
+      x-ngsi:    
+        type: Property    
+    initialQuality:    
+      description: Initial quality in the network component    
+      properties:    
+        observedBy:    
+          anyOf:    
+            - description: Identifier format of any NGSI entity    
+              maxLength: 256    
+              minLength: 1    
+              pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+              type: string    
+              x-ngsi:    
+                type: Property    
+            - description: Identifier format of any NGSI entity    
+              format: uri    
+              type: string    
+              x-ngsi:    
+                type: Property    
+        value:    
+          description: Numerical value of the initial quality    
+          type: number    
+          x-ngsi:    
+            type: Property    
+      type: object    
+      x-ngsi:    
+        type: Property    
+    initialStatus:    
+      description: 'The link status at the start of the simulation. Enum:''OPEN, CLOSED, CV'''    
+      enum:    
+        - OPEN    
+        - CLOSED    
+        - CV    
+      type: string    
+      x-ngsi:    
+        model: https://schema.org/Text    
+        type: Property    
+    level:    
+      description: Observed level in the element of the network    
+      properties:    
+        observedBy:    
+          anyOf:    
+            - description: Identifier format of any NGSI entity    
+              maxLength: 256    
+              minLength: 1    
+              pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+              type: string    
+              x-ngsi:    
+                type: Property    
+            - description: Identifier format of any NGSI entity    
+              format: uri    
+              type: string    
+              x-ngsi:    
+                type: Property    
+        value:    
+          description: Numerical value of the level    
+          type: number    
+          x-ngsi:    
+            type: Property    
+      type: object    
       x-ngsi:    
         type: Property    
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - description: 'GeoProperty. Geojson reference to the item. Point'    
+        - description: Geojson reference to the item. Point    
           properties:    
             bbox:    
               items:    
@@ -136,9 +360,11 @@ SimulationResult:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON Point'    
+          title: GeoJSON Point    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. LineString'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. LineString    
           properties:    
             bbox:    
               items:    
@@ -160,9 +386,11 @@ SimulationResult:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON LineString'    
+          title: GeoJSON LineString    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. Polygon'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. Polygon    
           properties:    
             bbox:    
               items:    
@@ -186,9 +414,11 @@ SimulationResult:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON Polygon'    
+          title: GeoJSON Polygon    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiPoint'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiPoint    
           properties:    
             bbox:    
               items:    
@@ -209,9 +439,11 @@ SimulationResult:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiPoint'    
+          title: GeoJSON MultiPoint    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiLineString'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -235,9 +467,11 @@ SimulationResult:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiLineString'    
+          title: GeoJSON MultiLineString    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiLineString'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -263,23 +497,25 @@ SimulationResult:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiPolygon'    
+          title: GeoJSON MultiPolygon    
           type: object    
+          x-ngsi:    
+            type: GeoProperty    
       x-ngsi:    
         type: GeoProperty    
     name:    
-      description: 'The name of this item.'    
+      description: The name of this item    
       type: string    
       x-ngsi:    
         type: Property    
     outputFile:    
-      description: 'Link to binary file containing results of applied simulation to the network.'    
+      description: Link to binary file containing results of applied simulation to the network    
       format: uri    
       type: string    
       x-ngsi:    
         type: Property    
     outputParameters:    
-      description: 'Description of the set of results of applied simulation to the network.'    
+      description: Description of the set of results of applied simulation to the network    
       items:    
         properties:    
           parameter:    
@@ -315,11 +551,75 @@ SimulationResult:
       x-ngsi:    
         type: Property    
     owner:    
-      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
+      description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)    
       items:    
-        anyOf: *simulationresult_-_properties_-_owner_-_items_-_anyof    
-        description: 'Property. Unique identifier of the entity'    
+        anyOf:    
+          - description: Identifier format of any NGSI entity    
+            maxLength: 256    
+            minLength: 1    
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+            type: string    
+            x-ngsi:    
+              type: Property    
+          - description: Identifier format of any NGSI entity    
+            format: uri    
+            type: string    
+            x-ngsi:    
+              type: Property    
+        description: Unique identifier of the entity    
+        x-ngsi:    
+          type: Property    
       type: array    
+      x-ngsi:    
+        type: Property    
+    pressure:    
+      description: 'Observed pressure at the node (junction, tank or reservoir)'    
+      properties:    
+        observedBy:    
+          anyOf:    
+            - description: Identifier format of any NGSI entity    
+              maxLength: 256    
+              minLength: 1    
+              pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+              type: string    
+              x-ngsi:    
+                type: Property    
+            - description: Identifier format of any NGSI entity    
+              format: uri    
+              type: string    
+              x-ngsi:    
+                type: Property    
+        value:    
+          description: Numerical value of the pressure    
+          type: number    
+          x-ngsi:    
+            type: Property    
+      type: object    
+      x-ngsi:    
+        type: Property    
+    quality:    
+      description: Observed quality in the network component    
+      properties:    
+        observedBy:    
+          anyOf:    
+            - description: Identifier format of any NGSI entity    
+              maxLength: 256    
+              minLength: 1    
+              pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+              type: string    
+              x-ngsi:    
+                type: Property    
+            - description: Identifier format of any NGSI entity    
+              format: uri    
+              type: string    
+              x-ngsi:    
+                type: Property    
+        value:    
+          description: Numerical value of the quality    
+          type: number    
+          x-ngsi:    
+            type: Property    
+      type: object    
       x-ngsi:    
         type: Property    
     refSimulationScenario:    
@@ -330,12 +630,12 @@ SimulationResult:
           type: string    
         - format: uri    
           type: string    
-      description: 'The ID of the simulation scenario'    
+      description: The ID of the simulation scenario    
       x-ngsi:    
         model: https://schema.org/URL    
         type: Relationship    
     seeAlso:    
-      description: 'list of uri pointing to additional resources about the item'    
+      description: list of uri pointing to additional resources about the item    
       oneOf:    
         - items:    
             format: uri    
@@ -347,15 +647,174 @@ SimulationResult:
       x-ngsi:    
         type: Property    
     source:    
-      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'    
       type: string    
       x-ngsi:    
         type: Property    
+    sourceCategory:    
+      description: Description of the quality of source flow entering the network at a specific node    
+      properties:    
+        sourcePattern:    
+          anyOf:    
+            - description: Identifier format of any NGSI entity    
+              maxLength: 256    
+              minLength: 1    
+              pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+              type: string    
+              x-ngsi:    
+                type: Property    
+            - description: Identifier format of any NGSI entity    
+              format: uri    
+              type: string    
+              x-ngsi:    
+                type: Property    
+          description: A relationship to the pattern pf the sourceCategory property    
+          x-ngsi:    
+            type: Relationship    
+        sourceQuality:    
+          description: 'Baseline or average concentration (or mass flow rate) of source. A sub-property of the Property ''sourceCategory''. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code'    
+          type: number    
+          x-ngsi:    
+            model: https://schema.org/Number    
+            type: Property    
+            units: ' mg/L'    
+        sourceType:    
+          description: A sub-property of the Property sourceCategory    
+          enum:    
+            - CONCEN    
+            - MASS    
+            - FLOWPACED    
+            - SETPOINT    
+          type: string    
+          x-ngsi:    
+            model: https://schema.org/Text    
+            type: Property    
+        value:    
+          description: Value of the source category    
+          type: string    
+          x-ngsi:    
+            type: Property    
+      type: object    
+      x-ngsi:    
+        model: https://schema.org/Text    
+        type: Property    
+    sourceMassInflow:    
+      description: 'Observed source mass inflow at the node (junction, tank or reservoir)'    
+      properties:    
+        observedBy:    
+          anyOf:    
+            - description: Identifier format of any NGSI entity    
+              maxLength: 256    
+              minLength: 1    
+              pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+              type: string    
+              x-ngsi:    
+                type: Property    
+            - description: Identifier format of any NGSI entity    
+              format: uri    
+              type: string    
+              x-ngsi:    
+                type: Property    
+        value:    
+          description: Numerical value of the source mass at the inflow    
+          type: number    
+          x-ngsi:    
+            type: Property    
+      type: object    
+      x-ngsi:    
+        type: Property    
+    status:    
+      description: 'The dynamic state of the node. Enum:''OPEN, CLOSED, CV'''    
+      enum:    
+        - OPEN    
+        - CLOSED    
+        - CV    
+      type: string    
+      x-ngsi:    
+        model: https://schema.org/Text    
+        type: Property    
+    supply:    
+      description: 'Observed supply at the node (junction, tank or reservoir)'    
+      properties:    
+        observedBy:    
+          anyOf:    
+            - description: Identifier format of any NGSI entity    
+              maxLength: 256    
+              minLength: 1    
+              pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+              type: string    
+              x-ngsi:    
+                type: Property    
+            - description: Identifier format of any NGSI entity    
+              format: uri    
+              type: string    
+              x-ngsi:    
+                type: Property    
+        value:    
+          description: Numerical value of the supply    
+          type: number    
+          x-ngsi:    
+            type: Property    
+      type: object    
+      x-ngsi:    
+        type: Property    
+    tag:    
+      description: 'An optional text string used to assign the pipe to a category, perhaps one based on age or material'    
+      type: string    
+      x-ngsi:    
+        model: https://schema.org/Text    
+        type: Property    
     type:    
-      description: 'NGSI-LD Entity Type. It has to be SimulationResult'    
+      description: NGSI-LD Entity Type. It has to be SimulationResult    
       enum:    
         - SimulationResult    
       type: string    
+      x-ngsi:    
+        type: Property    
+    valveCurve:    
+      anyOf:    
+        - description: Identifier format of any NGSI entity    
+          maxLength: 256    
+          minLength: 1    
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+          type: string    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
+          format: uri    
+          type: string    
+          x-ngsi:    
+            type: Property    
+      description: Reference to the Curve where the valve is located    
+      x-ngsi:    
+        type: Relationship    
+    valveType:    
+      description: 'Type of valve according to valve categories. Enum:''FCV, GPV, PBV, PRV, PSV, TCV'''    
+      enum:    
+        - FCV    
+        - GPV    
+        - PBV    
+        - PRV    
+        - PSV    
+        - TCV    
+      type: string    
+      x-ngsi:    
+        type: Property    
+    velocity:    
+      description: 'Observed velocity in the link (pipe, valve or pump)'    
+      properties:    
+        observedBy:    
+          description: Where the velocity has been observed    
+          format: uri    
+          type: string    
+          x-ngsi:    
+            type: Property    
+        value:    
+          description: Value of the velocity    
+          type: number    
+          x-ngsi:    
+            type: Property    
+      type: object    
       x-ngsi:    
         type: Property    
   required:    
@@ -364,7 +823,7 @@ SimulationResult:
     - refSimulationScenario    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/blob/master/SimulationResult/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.WaterDistributionManagementEPANET/Result/schema.json    
   x-model-tags: FIWARE4WATER    
