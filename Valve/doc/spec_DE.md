@@ -15,7 +15,17 @@
 ## Liste der Eigenschaften  
 
 <sup><sub>[*] Wenn es für ein Attribut keinen Typ gibt, kann es mehrere Typen oder verschiedene Formate/Muster haben</sub></sup>.  
-- `address[object]`: Die Postanschrift  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Ein alternativer Name für diesen Artikel  - `areaServed[string]`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated[string]`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified[string]`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description[string]`: Eine Beschreibung dieses Artikels  - `diameter[number]`: Der Ventildurchmesser. Alle Einheiten werden im Code [CEFACT](https://www.unece.org/cefact.html) akzeptiert.  . Model: [ https://schema.org/Number]( https://schema.org/Number)- `endsAt[string]`: Die ID des Knotens auf der nominalen stromabwärts gelegenen oder druckseitigen Seite des Ventils  - `flow[object]`: Durchflussmenge vom Knoten `startsAt` zum Knoten `endsAt`, gemessen von einem Gerät an der Verbindung (Rohr, Ventil oder Pumpe)  - `id[*]`: Eindeutiger Bezeichner der Entität  - `initialStatus[string]`: Der Verbindungsstatus zu Beginn der Simulation. Enum:'OPEN, CLOSED, CV'  . Model: [https://schema.org/Text](https://schema.org/Text)- `location[*]`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `minorLoss[number]`: Einheitsloser kleiner Verlustkoeffizient, der gilt, wenn das Ventil vollständig geöffnet ist. Alle Einheiten werden im Code [CEFACT](https://www.unece.org/cefact.html) akzeptiert.  . Model: [https://schema.org/Number](https://schema.org/Number)- `name[string]`: Der Name dieses Artikels.  - `openStatus[number]`: Status eines Ventils in Form eines numerischen Prozentwerts, der angibt, wie offen oder geschlossen das Ventil ist. 0% - vollständig geschlossen, 100% - vollständig geöffnet.  . Model: [ https://schema.org/Number]( https://schema.org/Number)- `owner[array]`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `quality[object]`: Beobachtete Qualität in der Netzkomponente  - `seeAlso[*]`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `setting[number]`: Ein Parameter, der die Betriebseinstellung des Ventils beschreibt. Alle Einheiten werden im Code [CEFACT](https://www.unece.org/cefact.html) akzeptiert.  . Model: [https://schema.org/Number](https://schema.org/Number)- `source[string]`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Es wird empfohlen, den voll qualifizierten Domänennamen des Quellanbieters oder die URL des Quellobjekts zu verwenden.  - `startsAt[string]`: Die ID des Knotens auf der nominalen Anströmseite des Ventils  - `status[string]`: Der dynamische Zustand des Knotens. Enum:'OPEN, CLOSED, CV'  . Model: [https://schema.org/Text](https://schema.org/Text)- `tag[string]`: Eine optionale Textzeichenfolge, die dazu dient, das Rohr einer Kategorie zuzuordnen, z. B. einer Kategorie, die auf Alter oder Material basiert  . Model: [https://schema.org/Text](https://schema.org/Text)- `type[string]`: NGSI-LD Entitätstyp. Er muss gleich "Ventil" sein.  - `valveCurve[string]`: Eine Beziehung zur Kurve der Einstellungseigenschaft. Nur erforderlich, wenn valveType GPV ist  - `valveType[string]`: Der Ventiltyp des Elements. enum:'FCV, GPV, PBV, PRV, PSV, TCV'  . Model: [https://schema.org/Text](https://schema.org/Text)- `velocity[object]`: Beobachtete Geschwindigkeit in der Verbindung (Rohr, Ventil oder Pumpe)  - `vertices[*]`: Koordinaten aller Scheitelpunkte im Ventil, geordnet vom startsAt-Knoten zum endsAt-Knoten und kodiert als GeoJSON  <!-- /30-PropertiesList -->  
+- `address[object]`: Die Postanschrift  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: Das Land. Zum Beispiel, Spanien  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
+	- `addressLocality[string]`: Die Ortschaft, in der sich die Adresse befindet, und die in der Region liegt  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
+	- `addressRegion[string]`: Die Region, in der sich der Ort befindet, und die auf dem Land liegt  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
+	- `district[string]`: Ein Bezirk ist eine Art von Verwaltungseinheit, die in einigen Ländern von der lokalen Regierung verwaltet wird.    
+	- `postOfficeBoxNumber[string]`: Die Postfachnummer für Postfachadressen. Zum Beispiel, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
+	- `postalCode[string]`: Die Postleitzahl. Zum Beispiel, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
+	- `streetAddress[string]`: Die Straßenanschrift  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+- `alternateName[string]`: Ein alternativer Name für diesen Artikel  - `areaServed[string]`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit  - `dateCreated[date-time]`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen  - `dateModified[date-time]`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben  - `description[string]`: Eine Beschreibung dieses Artikels  - `diameter[number]`: Der Ventildurchmesser. Alle Einheiten werden im Code [CEFACT](https://www.unece.org/cefact.html) akzeptiert.  . Model: [ https://schema.org/Number]( https://schema.org/Number)- `endsAt[uri]`: Die ID des Knotens auf der nominalen stromabwärts gelegenen oder druckseitigen Seite des Ventils  - `flow[object]`: Durchflussmenge vom Knoten `startsAt` zum Knoten `endsAt`, gemessen von einem Gerät an der Verbindung (Rohr, Ventil oder Pumpe)  	- `observedBy`:     
+- `id[*]`: Eindeutiger Bezeichner der Entität  - `initialStatus[string]`: Der Verbindungsstatus zu Beginn der Simulation. Enum:'OPEN, CLOSED, CV'  . Model: [https://schema.org/Text](https://schema.org/Text)- `location[*]`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `minorLoss[number]`: Einheitsloser kleiner Verlustkoeffizient, der gilt, wenn das Ventil vollständig geöffnet ist. Alle Einheiten werden im Code [CEFACT](https://www.unece.org/cefact.html) akzeptiert.  . Model: [https://schema.org/Number](https://schema.org/Number)- `name[string]`: Der Name dieses Artikels  - `openStatus[number]`: Status eines Ventils in Form eines numerischen Prozentwerts, der angibt, wie offen oder geschlossen das Ventil ist. 0% - vollständig geschlossen, 100% - vollständig geöffnet  . Model: [ https://schema.org/Number]( https://schema.org/Number)- `owner[array]`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `quality[object]`: Beobachtete Qualität in der Netzkomponente  	- `observedBy`:     
+- `seeAlso[*]`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `setting[number]`: Ein Parameter, der die Betriebseinstellung des Ventils beschreibt. Alle Einheiten werden im Code [CEFACT](https://www.unece.org/cefact.html) akzeptiert.  . Model: [https://schema.org/Number](https://schema.org/Number)- `source[string]`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL des Quellobjekts.  - `startsAt[uri]`: Die ID des Knotens auf der nominalen Anströmseite des Ventils  - `status[string]`: Der dynamische Zustand des Knotens. Enum:'OPEN, CLOSED, CV'  . Model: [https://schema.org/Text](https://schema.org/Text)- `tag[string]`: Eine optionale Textzeichenfolge, die verwendet wird, um das Rohr einer Kategorie zuzuordnen, z. B. auf der Grundlage von Alter oder Material  . Model: [https://schema.org/Text](https://schema.org/Text)- `type[string]`: NGSI-LD Entitätstyp. Er muss gleich Ventil sein  - `valveCurve[uri]`: Eine Beziehung zur Kurve der Einstellungseigenschaft. Nur erforderlich, wenn valveType GPV ist  - `valveType[string]`: Der Ventiltyp des Elements. enum:'FCV, GPV, PBV, PRV, PSV, TCV'  . Model: [https://schema.org/Text](https://schema.org/Text)- `velocity[object]`: Beobachtete Geschwindigkeit in der Verbindung (Rohr, Ventil oder Pumpe)  	- `observedBy[uri]`: Wenn die Geschwindigkeit beobachtet wurde    
+- `vertices[*]`: Geoproperty. Koordinaten aller Scheitelpunkte im Ventil, geordnet vom startsAt-Knoten zum endsAt-Knoten und kodiert als GeoJSON  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Erforderliche Eigenschaften  
 - `endsAt`  - `id`  - `startsAt`  - `type`  <!-- /35-RequiredProperties -->  
@@ -29,75 +39,103 @@
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 Valve:    
-  description: 'This entity contains a harmonised description of a generic Valve made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.'    
+  description: This entity contains a harmonised description of a generic Valve made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.    
   properties:    
     address:    
-      description: 'The mailing address'    
+      description: The mailing address    
       properties:    
         addressCountry:    
-          description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''    
+          description: 'The country. For example, Spain'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressCountry    
+            type: Property    
         addressLocality:    
-          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/addressLocality'''    
+          description: 'The locality in which the street address is, and which is in the region'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressLocality    
+            type: Property    
         addressRegion:    
-          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
+          description: 'The region in which the locality is, and which is in the country'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressRegion    
+            type: Property    
+        district:    
+          description: 'A district is a type of administrative division that, in some countries, is managed by the local government'    
+          type: string    
+          x-ngsi:    
+            type: Property    
         postOfficeBoxNumber:    
-          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
+          description: 'The post office box number for PO box addresses. For example, 03578'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/postOfficeBoxNumber    
+            type: Property    
         postalCode:    
-          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
+          description: 'The postal code. For example, 24004'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/https://schema.org/postalCode    
+            type: Property    
         streetAddress:    
-          description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
+          description: The street address    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/streetAddress    
+            type: Property    
+        streetNr:    
+          description: Number identifying a specific property on a public street    
+          type: string    
+          x-ngsi:    
+            type: Property    
       type: object    
       x-ngsi:    
         model: https://schema.org/address    
         type: Property    
     alternateName:    
-      description: 'An alternative name for this item'    
+      description: An alternative name for this item    
       type: string    
       x-ngsi:    
         type: Property    
     areaServed:    
-      description: 'The geographic area where a service or offered item is provided'    
+      description: The geographic area where a service or offered item is provided    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     dataProvider:    
-      description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
+      description: A sequence of characters identifying the provider of the harmonised data entity    
       type: string    
       x-ngsi:    
         type: Property    
     dateCreated:    
-      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
+      description: Entity creation timestamp. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     dateModified:    
-      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     description:    
-      description: 'A description of this item'    
+      description: A description of this item    
       type: string    
       x-ngsi:    
         type: Property    
     diameter:    
-      description: 'The valve diameter. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'    
+      description: 'The valve diameter. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code'    
       type: number    
       x-ngsi:    
         model: ' https://schema.org/Number'    
         type: Property    
         units: millimetre    
     endsAt:    
-      description: 'The ID of the node on the nominal downstream or discharge side of the valve'    
+      description: The ID of the node on the nominal downstream or discharge side of the valve    
       format: uri    
       type: string    
       x-ngsi:    
@@ -107,30 +145,41 @@ Valve:
       properties:    
         observedBy:    
           anyOf:    
-            - description: 'Property. Identifier format of any NGSI entity'    
+            - description: Identifier format of any NGSI entity    
               maxLength: 256    
               minLength: 1    
               pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
               type: string    
-            - description: 'Property. Identifier format of any NGSI entity'    
+              x-ngsi:    
+                type: Property    
+            - description: Identifier format of any NGSI entity    
               format: uri    
               type: string    
+              x-ngsi:    
+                type: Property    
         value:    
+          description: Value of the flow    
           type: number    
+          x-ngsi:    
+            type: Property    
       type: object    
       x-ngsi:    
         type: Property    
     id:    
-      anyOf: &valve_-_properties_-_owner_-_items_-_anyof    
-        - description: 'Property. Identifier format of any NGSI entity'    
+      anyOf:    
+        - description: Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'Unique identifier of the entity'    
+          x-ngsi:    
+            type: Property    
+      description: Unique identifier of the entity    
       x-ngsi:    
         type: Property    
     initialStatus:    
@@ -146,7 +195,7 @@ Valve:
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - description: 'GeoProperty. Geojson reference to the item. Point'    
+        - description: Geojson reference to the item. Point    
           properties:    
             bbox:    
               items:    
@@ -165,9 +214,11 @@ Valve:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON Point'    
+          title: GeoJSON Point    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. LineString'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. LineString    
           properties:    
             bbox:    
               items:    
@@ -189,9 +240,11 @@ Valve:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON LineString'    
+          title: GeoJSON LineString    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. Polygon'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. Polygon    
           properties:    
             bbox:    
               items:    
@@ -215,9 +268,11 @@ Valve:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON Polygon'    
+          title: GeoJSON Polygon    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiPoint'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiPoint    
           properties:    
             bbox:    
               items:    
@@ -238,9 +293,11 @@ Valve:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiPoint'    
+          title: GeoJSON MultiPoint    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiLineString'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -264,9 +321,11 @@ Valve:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiLineString'    
+          title: GeoJSON MultiLineString    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiLineString'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -292,24 +351,26 @@ Valve:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiPolygon'    
+          title: GeoJSON MultiPolygon    
           type: object    
+          x-ngsi:    
+            type: GeoProperty    
       x-ngsi:    
         type: GeoProperty    
     minorLoss:    
-      description: 'Unitless minor loss coefficient that applies when the valve is completely opened. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'    
+      description: 'Unitless minor loss coefficient that applies when the valve is completely opened. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code'    
       type: number    
       x-ngsi:    
         model: https://schema.org/Number    
         type: Property    
-        units: 'No unit'    
+        units: No unit    
     name:    
-      description: 'The name of this item.'    
+      description: The name of this item    
       type: string    
       x-ngsi:    
         type: Property    
     openStatus:    
-      description: 'Status of a valve as a numeric percentage value representing how open or close the valve is. 0% - completely closed, 100% - fully open.'    
+      description: 'Status of a valve as a numeric percentage value representing how open or close the valve is. 0% - completely closed, 100% - fully open'    
       maximum: 1    
       minimum: 0    
       type: number    
@@ -318,33 +379,54 @@ Valve:
         type: Property    
         units: ' %'    
     owner:    
-      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
+      description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)    
       items:    
-        anyOf: *valve_-_properties_-_owner_-_items_-_anyof    
-        description: 'Property. Unique identifier of the entity'    
+        anyOf:    
+          - description: Identifier format of any NGSI entity    
+            maxLength: 256    
+            minLength: 1    
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+            type: string    
+            x-ngsi:    
+              type: Property    
+          - description: Identifier format of any NGSI entity    
+            format: uri    
+            type: string    
+            x-ngsi:    
+              type: Property    
+        description: Unique identifier of the entity    
+        x-ngsi:    
+          type: Property    
       type: array    
       x-ngsi:    
         type: Property    
     quality:    
-      description: 'Observed quality in the network component'    
+      description: Observed quality in the network component    
       properties:    
         observedBy:    
           anyOf:    
-            - description: 'Property. Identifier format of any NGSI entity'    
+            - description: Identifier format of any NGSI entity    
               maxLength: 256    
               minLength: 1    
               pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
               type: string    
-            - description: 'Property. Identifier format of any NGSI entity'    
+              x-ngsi:    
+                type: Property    
+            - description: Identifier format of any NGSI entity    
               format: uri    
               type: string    
+              x-ngsi:    
+                type: Property    
         value:    
+          description: Numerical value of the quality    
           type: number    
+          x-ngsi:    
+            type: Property    
       type: object    
       x-ngsi:    
         type: Property    
     seeAlso:    
-      description: 'list of uri pointing to additional resources about the item'    
+      description: list of uri pointing to additional resources about the item    
       oneOf:    
         - items:    
             format: uri    
@@ -356,19 +438,19 @@ Valve:
       x-ngsi:    
         type: Property    
     setting:    
-      description: 'A parameter that describes the valve''s operational setting. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'    
+      description: 'A parameter that describes the valve''s operational setting. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code'    
       type: number    
       x-ngsi:    
         model: https://schema.org/Number    
         type: Property    
-        units: 'No unit'    
+        units: No unit    
     source:    
-      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'    
       type: string    
       x-ngsi:    
         type: Property    
     startsAt:    
-      description: 'The ID of the node on the nominal upstream or inflow side of the valve'    
+      description: The ID of the node on the nominal upstream or inflow side of the valve    
       format: uri    
       type: string    
       x-ngsi:    
@@ -390,14 +472,14 @@ Valve:
         model: https://schema.org/Text    
         type: Property    
     type:    
-      description: 'NGSI-LD Entity Type. It must be equal to Valve.'    
+      description: NGSI-LD Entity Type. It must be equal to Valve    
       enum:    
         - Valve    
       type: string    
       x-ngsi:    
         type: Property    
     valveCurve:    
-      description: 'A relationship to the curve of the setting property. Only required when valveType is GPV'    
+      description: A relationship to the curve of the setting property. Only required when valveType is GPV    
       format: uri    
       type: string    
       x-ngsi:    
@@ -419,15 +501,21 @@ Valve:
       description: 'Observed velocity in the link (pipe, valve or pump)'    
       properties:    
         observedBy:    
+          description: Where the velocity has been observed    
           format: uri    
           type: string    
+          x-ngsi:    
+            type: Property    
         value:    
+          description: Value of the velocity    
           type: number    
+          x-ngsi:    
+            type: Property    
       type: object    
       x-ngsi:    
         type: Property    
     vertices:    
-      description: 'Coordinates of all vertices in the valve, ordered from the startsAt node to the endsAt node and encoded as a GeoJSON '    
+      description: 'Geoproperty. Coordinates of all vertices in the valve, ordered from the startsAt node to the endsAt node and encoded as a GeoJSON '    
       oneOf:    
         - $id: https://geojson.org/schema/MultiPoint.json    
           $schema: "http://json-schema.org/draft-07/schema#"    
@@ -451,7 +539,7 @@ Valve:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiPoint'    
+          title: GeoJSON MultiPoint    
           type: object    
         - $id: https://geojson.org/schema/Point.json    
           $schema: "http://json-schema.org/draft-07/schema#"    
@@ -473,10 +561,8 @@ Valve:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON Point'    
+          title: GeoJSON Point    
           type: object    
-      x-ngsi:    
-        type: GeoProperty    
   required:    
     - id    
     - type    
@@ -484,7 +570,7 @@ Valve:
     - endsAt    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/blob/master/Valve/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModels/WaterNetworkManagementEPANET/Valve/schema.json    
   x-model-tags: FIWARE4WATER    
@@ -589,7 +675,7 @@ Valve:
 ```  
 </details>  
 #### Ventil NGSI-LD Schlüsselwerte Beispiel  
-Hier ist ein Beispiel für ein Ventil im JSON-LD-Format als Schlüsselwerte. Dies ist mit NGSI-LD kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
+Hier ist ein Beispiel für ein Ventil im JSON-LD-Format als Key-Values. Dies ist mit NGSI-LD kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
