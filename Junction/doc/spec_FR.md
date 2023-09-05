@@ -1,114 +1,172 @@
 <!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
-Entité : Junction  
+Entité : Jonction  
 =================<!-- /10-Header -->  
 <!-- 15-License -->  
 [Licence ouverte] (https://github.com/smart-data-models//dataModel.WaterDistributionManagementEPANET/blob/master/Junction/LICENSE.md)  
 [document généré automatiquement] (https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 <!-- /15-License -->  
 <!-- 20-Description -->  
-Description globale : **Cette entité contient une description harmonisée d'une jonction générique réalisée pour le domaine de la gestion des réseaux d'eau. Cette entité est principalement associée à la gestion verticale des réseaux d'eau et aux applications IoT connexes**.  
+Description globale : **Cette entité contient une description harmonisée d'une jonction générique réalisée pour le domaine de la gestion des réseaux d'eau. Cette entité est principalement associée à la verticale de la gestion des réseaux d'eau et aux applications IoT associées.**  
 version : 0.0.1  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
 ## Liste des propriétés  
 
-<sup><sub>[*] S'il n'y a pas de type dans un attribut, c'est parce qu'il pourrait avoir plusieurs types ou différents formats/modèles</sub></sup>.  
-- `address[object]`: L'adresse postale  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Un nom alternatif pour cet élément  - `areaServed[string]`: La zone géographique où un service ou un article offert est fourni  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated[string]`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified[string]`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `demandCategory[object]`: Permet d'attribuer des demandes de base et des modèles horaires à d'autres catégories d'utilisateurs.  . Model: [https://schema.org/Text](https://schema.org/Text)- `description[string]`: Une description de cet article  - `elevation[number]`: L'élévation au-dessus d'une référence commune de la jonction. Toutes les unités sont acceptées en code [CEFACT] (https://www.unece.org/cefact.html).  . Model: [http://schema.org/Number](http://schema.org/Number)- `emitterCoefficient[number]`: Coefficient de décharge pour l'émetteur (arroseur ou buse) placé à la jonction. Toutes les unités sont acceptées dans le code [CEFACT] (https://www.unece.org/cefact.html).  . Model: [http://schema.org/Number](http://schema.org/Number)- `head[object]`: Hauteur de chute observée au nœud (jonction, cuve ou réservoir)  - `id[*]`: Identifiant unique de l'entité  - `initialQuality[object]`: Qualité initiale de la composante réseau  - `location[*]`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une ligne, d'un polygone, d'un point multiple, d'une ligne multiple ou d'un polygone multiple.  - `name[string]`: Le nom de cet élément.  - `owner[array]`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `pressure[object]`: Pression observée au nœud (jonction, cuve ou réservoir)  - `quality[object]`: Qualité observée dans la composante réseau  - `seeAlso[*]`: liste d'uri pointant vers des ressources supplémentaires sur l'article  - `source[string]`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `sourceCategory[object]`: Description de la qualité du flux source entrant dans le réseau à un nœud spécifique.  . Model: [https://schema.org/Text](https://schema.org/Text)- `sourceMassInflow[object]`: Débit massique source observé au nœud (jonction, cuve ou réservoir)  - `supply[object]`: Alimentation observée au niveau du nœud (jonction, cuve ou réservoir)  - `tag[string]`: Une chaîne de texte facultative utilisée pour affecter le tuyau à une catégorie, peut-être basée sur l'âge ou le matériau.  . Model: [https://schema.org/Text](https://schema.org/Text)- `type[string]`: Type d'entité NGSI-LD. Il doit s'agir d'une jonction  <!-- /30-PropertiesList -->  
+<sup><sub>[*] S'il n'y a pas de type dans un attribut, c'est parce qu'il peut avoir plusieurs types ou différents formats/modèles</sub></sup>.  
+- `address[object]`: L'adresse postale  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: Le pays. Par exemple, l'Espagne  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
+	- `addressLocality[string]`: La localité dans laquelle se trouve l'adresse postale et qui se trouve dans la région  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
+	- `addressRegion[string]`: La région dans laquelle se trouve la localité et qui se trouve dans le pays  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
+	- `district[string]`: Un district est un type de division administrative qui, dans certains pays, est géré par le gouvernement local.    
+	- `postOfficeBoxNumber[string]`: Le numéro de la boîte postale pour les adresses de boîtes postales. Par exemple, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
+	- `postalCode[string]`: Le code postal. Par exemple, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
+	- `streetAddress[string]`: L'adresse de la rue  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+- `alternateName[string]`: Un nom alternatif pour ce poste  - `areaServed[string]`: La zone géographique où un service ou un article est offert  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées  - `dateCreated[date-time]`: Horodatage de la création de l'entité. Celle-ci est généralement attribuée par la plate-forme de stockage  - `dateModified[date-time]`: Date de la dernière modification de l'entité. Cette date est généralement attribuée par la plate-forme de stockage  - `demandCategory[object]`: Permet d'attribuer les demandes de base et les modèles horaires à d'autres catégories d'utilisateurs.  . Model: [https://schema.org/Text](https://schema.org/Text)	- `baseDemand[string]`: Demande de base ou moyenne pour la catégorie. Une sous-propriété de la propriété demandCategory  . Model: [https://schema.org/Text](https://schema.org/Text)  
+	- `demandPattern[*]`: Une relation avec le modèle de la propriété "demandCategory".    
+- `description[string]`: Une description de l'article  - `elevation[number]`: L'élévation au-dessus d'une référence commune de la jonction. Toutes les unités sont acceptées dans le code [CEFACT] (https://www.unece.org/cefact.html).  . Model: [http://schema.org/Number](http://schema.org/Number)- `emitterCoefficient[number]`: Coefficient de décharge pour l'émetteur (arroseur ou buse) placé à la jonction. Toutes les unités sont acceptées dans le code [CEFACT] (https://www.unece.org/cefact.html).  . Model: [http://schema.org/Number](http://schema.org/Number)- `head[object]`: Hauteur de chute observée au nœud (jonction, réservoir)  	- `observedBy`:     
+- `id[*]`: Identifiant unique de l'entité  - `initialQuality[object]`: Qualité initiale de la composante réseau  	- `observedBy`:     
+- `location[*]`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une chaîne de ligne, d'un polygone, d'un point multiple, d'une chaîne de ligne multiple ou d'un polygone multiple.  - `name[string]`: Le nom de cet élément  - `owner[array]`: Une liste contenant une séquence de caractères encodés JSON référençant les identifiants uniques du ou des propriétaires.  - `pressure[object]`: Pression observée au point nodal (jonction, cuve ou réservoir)  	- `observedBy`:     
+- `quality[object]`: Qualité observée dans la composante réseau  	- `observedBy`:     
+- `seeAlso[*]`: liste d'uri pointant vers des ressources supplémentaires concernant l'élément  - `source[string]`: Séquence de caractères indiquant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source ou l'URL de l'objet source.  - `sourceCategory[object]`: Description de la qualité du flux source entrant dans le réseau à un nœud spécifique  . Model: [https://schema.org/Text](https://schema.org/Text)	- `sourcePattern[*]`: Une relation avec le modèle de la propriété sourceCategory    
+	- `sourceQuality[number]`: Concentration de base ou moyenne (ou débit massique) de la source. Une sous-propriété de la propriété "sourceCategory". Toutes les unités sont acceptées dans le code [CEFACT] (https://www.unece.org/cefact.html).  . Model: [https://schema.org/Number](https://schema.org/Number)  
+	- `sourceType[string]`: Une sous-propriété de la propriété sourceCategory  . Model: [https://schema.org/Text](https://schema.org/Text)  
+- `sourceMassInflow[object]`: Débit massique de la source observée au nœud (jonction, cuve ou réservoir)  	- `observedBy`:     
+- `supply[object]`: Approvisionnement observé au nœud (jonction, réservoir ou citerne)  	- `observedBy`:     
+- `tag[string]`: Une chaîne de texte facultative utilisée pour classer le tuyau dans une catégorie, par exemple en fonction de l'âge ou du matériau.  . Model: [https://schema.org/Text](https://schema.org/Text)- `type[string]`: Type d'entité NGSI-LD. Il doit s'agir de la Jonction  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Propriétés requises  
 - `id`  - `type`  <!-- /35-RequiredProperties -->  
 <!-- 40-RequiredProperties -->  
 <!-- /40-RequiredProperties -->  
 <!-- 50-DataModelHeader -->  
-## Description des propriétés du modèle de données  
+## Modèle de données description des propriétés  
 Classés par ordre alphabétique (cliquez pour plus de détails)  
 <!-- /50-DataModelHeader -->  
 <!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 Junction:    
-  description: 'This entity contains a harmonised description of a generic junction made for the Water Network Management domain. This entity is primarily associated with the water network management vertical and related IoT applications.'    
+  description: This entity contains a harmonised description of a generic junction made for the Water Network Management domain. This entity is primarily associated with the water network management vertical and related IoT applications.    
   properties:    
     address:    
-      description: 'The mailing address'    
+      description: The mailing address    
       properties:    
         addressCountry:    
-          description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''    
+          description: 'The country. For example, Spain'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressCountry    
+            type: Property    
         addressLocality:    
-          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/addressLocality'''    
+          description: 'The locality in which the street address is, and which is in the region'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressLocality    
+            type: Property    
         addressRegion:    
-          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
+          description: 'The region in which the locality is, and which is in the country'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressRegion    
+            type: Property    
+        district:    
+          description: 'A district is a type of administrative division that, in some countries, is managed by the local government'    
+          type: string    
+          x-ngsi:    
+            type: Property    
         postOfficeBoxNumber:    
-          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
+          description: 'The post office box number for PO box addresses. For example, 03578'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/postOfficeBoxNumber    
+            type: Property    
         postalCode:    
-          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
+          description: 'The postal code. For example, 24004'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/https://schema.org/postalCode    
+            type: Property    
         streetAddress:    
-          description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
+          description: The street address    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/streetAddress    
+            type: Property    
+        streetNr:    
+          description: Number identifying a specific property on a public street    
+          type: string    
+          x-ngsi:    
+            type: Property    
       type: object    
       x-ngsi:    
         model: https://schema.org/address    
         type: Property    
     alternateName:    
-      description: 'An alternative name for this item'    
+      description: An alternative name for this item    
       type: string    
       x-ngsi:    
         type: Property    
     areaServed:    
-      description: 'The geographic area where a service or offered item is provided'    
+      description: The geographic area where a service or offered item is provided    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     dataProvider:    
-      description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
+      description: A sequence of characters identifying the provider of the harmonised data entity    
       type: string    
       x-ngsi:    
         type: Property    
     dateCreated:    
-      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
+      description: Entity creation timestamp. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     dateModified:    
-      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     demandCategory:    
-      description: 'Allows base demands and time patterns to be assigned to other categories of users.'    
+      description: Allows base demands and time patterns to be assigned to other categories of users    
       properties:    
         baseDemand:    
-          description: 'Property. Model:''https://schema.org/Text. Baseline or average demand for the category. A sub-property of the Property ''demandCategory''.'    
+          description: Baseline or average demand for the category. A sub-property of the Property demandCategory    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/Text    
+            type: Property    
         demandPattern:    
           anyOf:    
-            - description: 'Property. Identifier format of any NGSI entity'    
+            - description: Identifier format of any NGSI entity    
               maxLength: 256    
               minLength: 1    
               pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
               type: string    
-            - description: 'Property. Identifier format of any NGSI entity'    
+              x-ngsi:    
+                type: Property    
+            - description: Identifier format of any NGSI entity    
               format: uri    
               type: string    
-          description: 'Relationship. A relationship to the pattern of the ''demandCategory'' property.'    
+              x-ngsi:    
+                type: Property    
+          description: A relationship to the pattern of the 'demandCategory' property    
+          x-ngsi:    
+            type: Relationship    
         value:    
+          description: Value of the demand category    
           type: number    
+          x-ngsi:    
+            type: Property    
       type: object    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     description:    
-      description: 'A description of this item'    
+      description: A description of this item    
       type: string    
       x-ngsi:    
         type: Property    
@@ -125,60 +183,78 @@ Junction:
       x-ngsi:    
         model: http://schema.org/Number    
         type: Property    
-        units: 'square metre per second'    
+        units: square metre per second    
     head:    
       description: 'Observed head at the node (junction, tank or reservoir)'    
       properties:    
         observedBy:    
           anyOf:    
-            - description: 'Property. Identifier format of any NGSI entity'    
+            - description: Identifier format of any NGSI entity    
               maxLength: 256    
               minLength: 1    
               pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
               type: string    
-            - description: 'Property. Identifier format of any NGSI entity'    
+              x-ngsi:    
+                type: Property    
+            - description: Identifier format of any NGSI entity    
               format: uri    
               type: string    
+              x-ngsi:    
+                type: Property    
         value:    
+          description: Value of the head    
           type: number    
+          x-ngsi:    
+            type: Property    
       type: object    
       x-ngsi:    
         type: Property    
     id:    
-      anyOf: &junction_-_properties_-_owner_-_items_-_anyof    
-        - description: 'Property. Identifier format of any NGSI entity'    
+      anyOf:    
+        - description: Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'Unique identifier of the entity'    
+          x-ngsi:    
+            type: Property    
+      description: Unique identifier of the entity    
       x-ngsi:    
         type: Property    
     initialQuality:    
-      description: 'Initial quality in the network component'    
+      description: Initial quality in the network component    
       properties:    
         observedBy:    
           anyOf:    
-            - description: 'Property. Identifier format of any NGSI entity'    
+            - description: Identifier format of any NGSI entity    
               maxLength: 256    
               minLength: 1    
               pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
               type: string    
-            - description: 'Property. Identifier format of any NGSI entity'    
+              x-ngsi:    
+                type: Property    
+            - description: Identifier format of any NGSI entity    
               format: uri    
               type: string    
+              x-ngsi:    
+                type: Property    
         value:    
+          description: Numerical value of the initial quality    
           type: number    
+          x-ngsi:    
+            type: Property    
       type: object    
       x-ngsi:    
         type: Property    
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - description: 'GeoProperty. Geojson reference to the item. Point'    
+        - description: Geojson reference to the item. Point    
           properties:    
             bbox:    
               items:    
@@ -197,9 +273,11 @@ Junction:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON Point'    
+          title: GeoJSON Point    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. LineString'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. LineString    
           properties:    
             bbox:    
               items:    
@@ -221,9 +299,11 @@ Junction:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON LineString'    
+          title: GeoJSON LineString    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. Polygon'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. Polygon    
           properties:    
             bbox:    
               items:    
@@ -247,9 +327,11 @@ Junction:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON Polygon'    
+          title: GeoJSON Polygon    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiPoint'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiPoint    
           properties:    
             bbox:    
               items:    
@@ -270,9 +352,11 @@ Junction:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiPoint'    
+          title: GeoJSON MultiPoint    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiLineString'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -296,9 +380,11 @@ Junction:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiLineString'    
+          title: GeoJSON MultiLineString    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiLineString'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -324,20 +410,36 @@ Junction:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiPolygon'    
+          title: GeoJSON MultiPolygon    
           type: object    
+          x-ngsi:    
+            type: GeoProperty    
       x-ngsi:    
         type: GeoProperty    
     name:    
-      description: 'The name of this item.'    
+      description: The name of this item    
       type: string    
       x-ngsi:    
         type: Property    
     owner:    
-      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
+      description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)    
       items:    
-        anyOf: *junction_-_properties_-_owner_-_items_-_anyof    
-        description: 'Property. Unique identifier of the entity'    
+        anyOf:    
+          - description: Identifier format of any NGSI entity    
+            maxLength: 256    
+            minLength: 1    
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+            type: string    
+            x-ngsi:    
+              type: Property    
+          - description: Identifier format of any NGSI entity    
+            format: uri    
+            type: string    
+            x-ngsi:    
+              type: Property    
+        description: Unique identifier of the entity    
+        x-ngsi:    
+          type: Property    
       type: array    
       x-ngsi:    
         type: Property    
@@ -346,39 +448,53 @@ Junction:
       properties:    
         observedBy:    
           anyOf:    
-            - description: 'Property. Identifier format of any NGSI entity'    
+            - description: Identifier format of any NGSI entity    
               maxLength: 256    
               minLength: 1    
               pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
               type: string    
-            - description: 'Property. Identifier format of any NGSI entity'    
+              x-ngsi:    
+                type: Property    
+            - description: Identifier format of any NGSI entity    
               format: uri    
               type: string    
+              x-ngsi:    
+                type: Property    
         value:    
+          description: Numerical value of the pressure    
           type: number    
+          x-ngsi:    
+            type: Property    
       type: object    
       x-ngsi:    
         type: Property    
     quality:    
-      description: 'Observed quality in the network component'    
+      description: Observed quality in the network component    
       properties:    
         observedBy:    
           anyOf:    
-            - description: 'Property. Identifier format of any NGSI entity'    
+            - description: Identifier format of any NGSI entity    
               maxLength: 256    
               minLength: 1    
               pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
               type: string    
-            - description: 'Property. Identifier format of any NGSI entity'    
+              x-ngsi:    
+                type: Property    
+            - description: Identifier format of any NGSI entity    
               format: uri    
               type: string    
+              x-ngsi:    
+                type: Property    
         value:    
+          description: Numerical value of the quality    
           type: number    
+          x-ngsi:    
+            type: Property    
       type: object    
       x-ngsi:    
         type: Property    
     seeAlso:    
-      description: 'list of uri pointing to additional resources about the item'    
+      description: list of uri pointing to additional resources about the item    
       oneOf:    
         - items:    
             format: uri    
@@ -390,35 +506,53 @@ Junction:
       x-ngsi:    
         type: Property    
     source:    
-      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'    
       type: string    
       x-ngsi:    
         type: Property    
     sourceCategory:    
-      description: 'Description of the quality of source flow entering the network at a specific node.'    
+      description: Description of the quality of source flow entering the network at a specific node    
       properties:    
         sourcePattern:    
           anyOf:    
-            - description: 'Property. Identifier format of any NGSI entity'    
+            - description: Identifier format of any NGSI entity    
               maxLength: 256    
               minLength: 1    
               pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
               type: string    
-            - description: 'Property. Identifier format of any NGSI entity'    
+              x-ngsi:    
+                type: Property    
+            - description: Identifier format of any NGSI entity    
               format: uri    
               type: string    
-          description: 'Relationship. A relationship to the pattern pf the sourceCategory property'    
+              x-ngsi:    
+                type: Property    
+          description: A relationship to the pattern pf the sourceCategory property    
+          x-ngsi:    
+            type: Relationship    
         sourceQuality:    
-          description: 'Property. Model:''https://schema.org/Number''. Units: ''mg/L''. Baseline or average concentration (or mass flow rate) of source. A sub-property of the Property ''sourceCategory''. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'    
+          description: 'Baseline or average concentration (or mass flow rate) of source. A sub-property of the Property ''sourceCategory''. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code'    
           type: number    
+          x-ngsi:    
+            model: https://schema.org/Number    
+            type: Property    
+            units: ' mg/L'    
         sourceType:    
-          description: 'Property. Model:''https://schema.org/Text''. A sub-property of the Property ''sourceCategory'''    
+          description: A sub-property of the Property sourceCategory    
           enum:    
             - CONCEN    
             - MASS    
             - FLOWPACED    
             - SETPOINT    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/Text    
+            type: Property    
+        value:    
+          description: Value of the source category    
+          type: string    
+          x-ngsi:    
+            type: Property    
       type: object    
       x-ngsi:    
         model: https://schema.org/Text    
@@ -428,16 +562,23 @@ Junction:
       properties:    
         observedBy:    
           anyOf:    
-            - description: 'Property. Identifier format of any NGSI entity'    
+            - description: Identifier format of any NGSI entity    
               maxLength: 256    
               minLength: 1    
               pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
               type: string    
-            - description: 'Property. Identifier format of any NGSI entity'    
+              x-ngsi:    
+                type: Property    
+            - description: Identifier format of any NGSI entity    
               format: uri    
               type: string    
+              x-ngsi:    
+                type: Property    
         value:    
+          description: Numerical value of the source mass at the inflow    
           type: number    
+          x-ngsi:    
+            type: Property    
       type: object    
       x-ngsi:    
         type: Property    
@@ -446,16 +587,23 @@ Junction:
       properties:    
         observedBy:    
           anyOf:    
-            - description: 'Property. Identifier format of any NGSI entity'    
+            - description: Identifier format of any NGSI entity    
               maxLength: 256    
               minLength: 1    
               pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
               type: string    
-            - description: 'Property. Identifier format of any NGSI entity'    
+              x-ngsi:    
+                type: Property    
+            - description: Identifier format of any NGSI entity    
               format: uri    
               type: string    
+              x-ngsi:    
+                type: Property    
         value:    
+          description: Numerical value of the supply    
           type: number    
+          x-ngsi:    
+            type: Property    
       type: object    
       x-ngsi:    
         type: Property    
@@ -466,7 +614,7 @@ Junction:
         model: https://schema.org/Text    
         type: Property    
     type:    
-      description: 'NGSI-LD Entity Type. It has to be Junction'    
+      description: NGSI-LD Entity Type. It has to be Junction    
       enum:    
         - Junction    
       type: string    
@@ -477,7 +625,7 @@ Junction:
     - type    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/blob/master/Junction/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.WaterDistributionManagementEPANET/Junction/schema.json    
   x-model-tags: FIWARE4WATER    
@@ -489,8 +637,8 @@ Junction:
 <!-- /70-MiddleNotes -->  
 <!-- 80-Examples -->  
 ## Exemples de charges utiles  
-#### Jonction NGSI-v2 valeurs-clés Exemple  
-Voici un exemple de Jonction au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-v2 en utilisant `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+#### Junction NGSI-v2 key-values Exemple  
+Voici un exemple de jonction au format JSON-LD sous forme de valeurs-clés. Ceci est compatible avec NGSI-v2 lorsque l'on utilise `options=keyValues` et renvoie les données de contexte d'une entité individuelle.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -525,7 +673,7 @@ Junction:
 ```  
 </details>  
 #### Jonction NGSI-v2 normalisée Exemple  
-Voici un exemple de Jonction au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-v2 lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+Voici un exemple d'une jonction au format JSON-LD telle que normalisée. Ce format est compatible avec les NGSI-v2 lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -549,7 +697,7 @@ Junction:
     "type": "object",  
     "value": {  
       "baseDemand": "agriculture demand",  
-      "value": "1.763868462",  
+      "value": 1.763868462,  
       "demandPattern": "fbcb5fc8-8ca3-4533-a2eb-34bc89262190"  
     }  
   },  
@@ -571,8 +719,11 @@ Junction:
     "value": "This entity contains a harmonised description of a Junction"  
   },  
   "initialQuality": {  
-    "type": "number",  
-    "value": 0.5  
+    "type": "object",  
+    "value": {  
+      "observedBy": "device-9845A",  
+      "value": 0.5  
+    }  
   },  
   "emitterCoefficient": {  
     "type": "number",  
@@ -616,8 +767,8 @@ Junction:
 }  
 ```  
 </details>  
-#### Jonction NGSI-LD valeurs-clés Exemple  
-Voici un exemple de Jonction au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-LD en utilisant `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+#### Jonction NGSI-LD valeurs clés Exemple  
+Voici un exemple de jonction au format JSON-LD sous forme de valeurs-clés. Ceci est compatible avec NGSI-LD lorsque l'on utilise `options=keyValues` et renvoie les données de contexte d'une entité individuelle.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -646,7 +797,7 @@ Junction:
 ```  
 </details>  
 #### Jonction NGSI-LD normalisée Exemple  
-Voici un exemple de Jonction au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+Voici un exemple d'une jonction au format JSON-LD normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -788,7 +939,7 @@ Junction:
 <!-- 90-FooterNotes -->  
 <!-- /90-FooterNotes -->  
 <!-- 95-Units -->  
-Voir [FAQ 10](https://smartdatamodels.org/index.php/faqs/) pour obtenir une réponse sur la façon de traiter les unités de magnitude.  
+Voir [FAQ 10] (https://smartdatamodels.org/index.php/faqs/) pour obtenir une réponse à la question de savoir comment traiter les unités de magnitude.  
 <!-- /95-Units -->  
 <!-- 97-LastFooter -->  
 ---  
