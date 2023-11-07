@@ -31,11 +31,11 @@
   },
   "pumpPattern": {
     "type": "Relationship",
-    "object": "fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
+    "value": "fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
   },
   "efficCurve": {
     "type": "Relationship",
-    "object": "fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
+    "value": "fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
   },
   "energyPrice": {
     "type": "number",
@@ -43,7 +43,7 @@
   },
   "energyPattern": {
     "type": "Relationship",
-    "object": "fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
+    "value": "fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
   },
   "flow": {
     "type": "object",
