@@ -7,36 +7,25 @@
   },
   "hasInputNetwork": {
     "type": "Relationship",
-    "object": "urn:ngsi-ld:WaterNetwork:01"
+    "value": "urn:ngsi-ld:WaterNetwork:01"
   },
   "refSimulationScenario": {
     "type": "Relationship",
-    "object": "urn:ngsi-ld:Simulation:01"
+    "value": "urn:ngsi-ld:Simulation:01"
   },
-  "outputParameters": [
-    {
-      "type": "Property",
-      "value": "output parameter 1",
-      "waterLevel": {
-        "type": "Property",
+  "outputParameters": { 
+    "type": "StructuredValue",
+    "value": [
+      {
+        "parameter": "waterLevel",
         "value": 50,
-        "targetURI": {
-          "type": "Property",
-          "value": "urn:ngsi-ld:Valve:V1"
-        }
-      }
-    },
-    {
-      "type": "Property",
-      "value": "output parameter 2",
-      "initialQuality": {
-        "type": "Property",
+        "targetURI": "urn:ngsi-ld:Valve:V1"
+      },
+      {
+        "parameter": "initialQuality",
         "value": 2,
-        "targetURI": {
-          "type": "Relationship",
-          "value": "urn:ngsi-ld:Tank:T1"
-        }
+        "targetURI": "urn:ngsi-ld:Tank:T1"
       }
-    }
-  ]
+    ]
+  }
 }
