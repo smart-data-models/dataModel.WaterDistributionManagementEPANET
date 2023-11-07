@@ -17,7 +17,7 @@
   },
   "headPattern": {
     "type": "Relationship",
-    "object": "fbcb5fc8-8ca3-4533"
+    "value": "fbcb5fc8-8ca3-4533"
   },
   "elevation": {
     "type": "Number",
