@@ -2,6 +2,7 @@
     "id": "fbcb5fc8-8ca3-4533-a2eb-34bc89262190",
     "type": "Pattern",
     "multipliers": {
+        "type": "StructuredValue",
         "value": [
             0.5692,
             0.4647,
@@ -12,12 +13,15 @@
         ]
     },
     "timeStep": {
+        "type": "Number",
         "value": 3600
     },
     "description": {
+        "type": "Text",
         "value": "Open Text"
     },
     "tag": {
+        "type": "Text",
         "value": "DMA1"
     }
 }
