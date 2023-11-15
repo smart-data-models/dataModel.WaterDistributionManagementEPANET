@@ -2,18 +2,18 @@
   "id": "urn:ngsi-ld:SimulationResult:01",
   "type": "SimulationResult",
   "description": {
-    "type": "Property",
+    "type": "Text",
     "value": "Free Text"
   },
   "hasInputNetwork": {
-    "type": "Relationship",
+    "type": "Text",
     "value": "urn:ngsi-ld:WaterNetwork:01"
   },
   "refSimulationScenario": {
-    "type": "Relationship",
+    "type": "Text",
     "value": "urn:ngsi-ld:Simulation:01"
   },
-  "outputParameters": { 
+  "outputParameters": {
     "type": "StructuredValue",
     "value": [
       {
