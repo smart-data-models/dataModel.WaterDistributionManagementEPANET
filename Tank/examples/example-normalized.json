@@ -20,16 +20,16 @@
     "value": 3
   },
   "minLevel": {
-    "type": "Number",
-    "value": 0
+    "type": "Boolean",
+    "value": false
   },
   "maxLevel": {
     "type": "Number",
     "value": 6.75
   },
   "minVolume": {
-    "type": "Number",
-    "value": 0
+    "type": "Boolean",
+    "value": false
   },
   "nominalDiameter": {
     "type": "Number",
@@ -44,7 +44,7 @@
     "value": 0.5
   },
   "sourceCategory": {
-    "type": "object",
+    "type": "StructuredValue",
     "value": {
       "value": "category1",
       "sourceType": "MASS",
@@ -57,7 +57,7 @@
     "value": "MIXED"
   },
   "volumeCurve": {
-    "type": "Relationship",
+    "type": "Text",
     "value": "fAM-8ca3-4533-a2eb-12015"
   },
   "mixingFraction": {
@@ -73,42 +73,42 @@
     "value": "DMA1"
   },
   "level": {
-    "type": "object",
+    "type": "StructuredValue",
     "value": {
       "value": 20,
       "observedBy": "device-9845A"
     }
   },
   "pressure": {
-    "type": "object",
+    "type": "StructuredValue",
     "value": {
       "value": 20,
       "observedBy": "device-9845A"
     }
   },
   "supply": {
-    "type": "object",
+    "type": "StructuredValue",
     "value": {
       "value": 150,
       "observedBy": "device-9845A"
     }
   },
   "head": {
-    "type": "object",
+    "type": "StructuredValue",
     "value": {
       "value": 20,
       "observedBy": "device-9845A"
     }
   },
   "quality": {
-    "type": "object",
+    "type": "StructuredValue",
     "value": {
       "value": 0.5,
       "observedBy": "device-9845A"
     }
   },
   "sourceMassInflow": {
-    "type": "object",
+    "type": "StructuredValue",
     "value": {
       "value": 100,
       "observedBy": "device-9845A"
