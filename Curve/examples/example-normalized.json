@@ -1,38 +1,38 @@
 {
-    "id": "fAM-8ca3-4533-a2eb-12015",
-    "type": "Curve",
-    "dateCreated": {
-        "type": "DateTime",
-        "value": "2020-02-16T17:43:00Z"
-    },
-    "dateModified": {
-        "type": "DateTime",
-        "value": "2020-02-16T17:43:00Z"
-    },
-    "curveType": {
-        "type": "Text",
-        "value": "FLOW-HEAD"
-    },
-    "xData": {
-        "type": "StructuredValue",
-        "value": [
-            0.5692,
-            0.4647
-        ]
-    },
-    "yData": {
-        "type": "StructuredValue",
-        "value": [
-            0.5692,
-            0.4647
-        ]
-    },
-    "description": {
-        "type": "Text",
-        "value": "Free Text"
-    },
-    "tag": {
-        "type": "Text",
-        "value": "DMA1"
-    }
+  "id": "fAM-8ca3-4533-a2eb-12015",
+  "type": "Curve",
+  "dateCreated": {
+    "type": "DateTime",
+    "value": "2020-02-16T17:43:00Z"
+  },
+  "dateModified": {
+    "type": "DateTime",
+    "value": "2020-02-16T17:43:00Z"
+  },
+  "curveType": {
+    "type": "Text",
+    "value": "FLOW-HEAD"
+  },
+  "xData": {
+    "type": "StructuredValue",
+    "value": [
+      0.5692,
+      0.4647
+    ]
+  },
+  "yData": {
+    "type": "StructuredValue",
+    "value": [
+      0.5692,
+      0.4647
+    ]
+  },
+  "description": {
+    "type": "Text",
+    "value": "Free Text"
+  },
+  "tag": {
+    "type": "Text",
+    "value": "DMA1"
+  }
 }
