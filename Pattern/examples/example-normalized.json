@@ -1,27 +1,31 @@
 {
-    "id": "fbcb5fc8-8ca3-4533-a2eb-34bc89262190",
-    "type": "Pattern",
-    "multipliers": {
-        "type": "StructuredValue",
-        "value": [
-            0.5692,
-            0.4647,
-            0.4385,
-            0.3604,
-            0.3098,
-            0.3345
-        ]
-    },
-    "timeStep": {
-        "type": "Number",
-        "value": 3600
-    },
-    "description": {
-        "type": "Text",
-        "value": "Open Text"
-    },
-    "tag": {
-        "type": "Text",
-        "value": "DMA1"
-    }
+  "id": "fbcb5fc8-8ca3-4533-a2eb-34bc89262190",
+  "type": "Pattern",
+  "multipliers": {
+    "type": "StructuredValue",
+    "value": [
+      0.5692,
+      0.4647,
+      0.4385,
+      0.3604,
+      0.3098,
+      0.3345
+    ]
+  },
+  "timeStep": {
+    "type": "Number",
+    "value": 3600
+  },
+  "startTime": {
+    "type": "DateTime",
+    "value": "2020-02-20T17:43:00Z"
+  },
+  "description": {
+    "type": "Text",
+    "value": "Open Text"
+  },
+  "tag": {
+    "type": "Text",
+    "value": "DMA1"
+  }
 }
