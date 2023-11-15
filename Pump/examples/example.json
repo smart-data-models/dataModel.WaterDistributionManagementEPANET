@@ -1,15 +1,15 @@
 {
-    "id": "85zhnf58-0d4c-h4g854g-b7d0-3310klm",
-    "type": "Pump",
-    "initialStatus": "OPEN",
-    "status": "OPEN",
-    "power": 100,
-    "speed": 1.2,
-    "startsAt": "63fe7d79-0d4c-4da9-b7d0-3340efa0656a",
-    "endsAt": "1863179e-3768-4480-9167-ff21f870dd19",
-    "tag": "DMA1",
-    "pumpPattern": "fbcb5fc8-8ca3-4533-a2eb-34bc89262190",
-    "efficCurve": "fbcb5fc8-8ca3-4533-a2eb-34bc89262190",
-    "energyPrice": 0.8,
-    "energyPattern": "fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
+  "id": "85zhnf58-0d4c-h4g854g-b7d0-3310klm",
+  "type": "Pump",
+  "initialStatus": "OPEN",
+  "status": "OPEN",
+  "power": 100,
+  "speed": 1.2,
+  "startsAt": "63fe7d79-0d4c-4da9-b7d0-3340efa0656a",
+  "endsAt": "1863179e-3768-4480-9167-ff21f870dd19",
+  "tag": "DMA1",
+  "pumpPattern": "fbcb5fc8-8ca3-4533-a2eb-34bc89262190",
+  "efficCurve": "fbcb5fc8-8ca3-4533-a2eb-34bc89262190",
+  "energyPrice": 0.8,
+  "energyPattern": "fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
 }
