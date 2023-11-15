@@ -2,72 +2,72 @@
   "id": "85zhnf58-0d4c-h4g854g-b7d0-3310klm",
   "type": "Pump",
   "initialStatus": {
-    "type": "text",
+    "type": "Text",
     "value": "OPEN"
   },
   "status": {
-    "type": "text",
+    "type": "Text",
     "value": "OPEN"
   },
   "power": {
-    "type": "number",
+    "type": "Number",
     "value": 100
   },
   "speed": {
-    "type": "number",
+    "type": "Number",
     "value": 1.2
   },
   "startsAt": {
-    "type": "object",
+    "type": "Text",
     "value": "63fe7d79-0d4c-4da9-b7d0-3340efa0656a"
   },
   "endsAt": {
-    "type": "object",
+    "type": "Text",
     "value": "1863179e-3768-4480-9167-ff21f870dd19"
   },
   "tag": {
-    "type": "text",
+    "type": "Text",
     "value": "DMA1"
   },
   "pumpPattern": {
-    "type": "Relationship",
+    "type": "Text",
     "value": "fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
   },
   "efficCurve": {
-    "type": "Relationship",
+    "type": "Text",
     "value": "fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
   },
   "energyPrice": {
-    "type": "number",
+    "type": "Number",
     "value": 0.8
   },
   "energyPattern": {
-    "type": "Relationship",
+    "type": "Text",
     "value": "fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
   },
   "flow": {
-    "type": "object",
+    "type": "StructuredValue",
     "value": {
       "value": 20,
       "observedBy": "device-9845A"
     }
   },
   "velocity": {
-    "type": "object",
+    "type": "StructuredValue",
     "value": {
       "value": 2,
       "observedBy": "device-9845A"
     }
   },
   "quality": {
-    "type": "object",
+    "type": "StructuredValue",
     "value": {
       "value": 0.5,
       "observedBy": "device-9845A"
     }
   },
   "energyUse": {
-    "type": "object",
+    "type": "StructuredValue",
     "value": {
       "value": 50,
       "observedBy": "device-9845A"
