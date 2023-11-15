@@ -13,10 +13,10 @@
   },
   "reservoirHead": {
     "type": "Number",
-    "value": 59.00
+    "value": 59.0
   },
   "headPattern": {
-    "type": "Relationship",
+    "type": "Text",
     "value": "fbcb5fc8-8ca3-4533"
   },
   "elevation": {
@@ -28,14 +28,14 @@
     "value": "This entity contains a harmonised description of a Reservoir"
   },
   "initialQuality": {
-    "type": "Number",
+    "type": "StructuredValue",
     "value": {
       "observedBy": "device-9845A",
       "value": 0.5
     }
   },
   "sourceCategory": {
-    "type": "object",
+    "type": "StructuredValue",
     "value": {
       "value": "CategoryX",
       "sourceType": "MASS",
@@ -48,35 +48,35 @@
     "value": "DMA1"
   },
   "pressure": {
-    "type": "object",
+    "type": "StructuredValue",
     "value": {
       "value": 20,
       "observedBy": "device-9845A"
     }
   },
   "supply": {
-    "type": "object",
+    "type": "StructuredValue",
     "value": {
       "value": 150,
       "observedBy": "device-9845A"
     }
   },
   "head": {
-    "type": "object",
+    "type": "StructuredValue",
     "value": {
       "value": 20,
       "observedBy": "device-9845A"
     }
   },
   "quality": {
-    "type": "object",
+    "type": "StructuredValue",
     "value": {
       "value": 0.5,
       "observedBy": "device-9845A"
     }
   },
   "sourceMassInflow": {
-    "type": "object",
+    "type": "StructuredValue",
     "value": {
       "value": 100,
       "observedBy": "device-9845A"
