@@ -12,11 +12,11 @@
     }
   },
   "elevation": {
-    "type": "number",
+    "type": "Number",
     "value": 105.8
   },
   "demandCategory": {
-    "type": "object",
+    "type": "StructuredValue",
     "value": {
       "baseDemand": "agriculture demand",
       "value": 1.763868462,
@@ -24,7 +24,7 @@
     }
   },
   "sourceCategory": {
-    "type": "object",
+    "type": "StructuredValue",
     "value": {
       "value": "CategoryX",
       "sourceType": "MASS",
@@ -33,54 +33,54 @@
     }
   },
   "tag": {
-    "type": "text",
+    "type": "Text",
     "value": "DMA1"
   },
   "description": {
-    "type": "text",
+    "type": "Text",
     "value": "This entity contains a harmonised description of a Junction"
   },
   "initialQuality": {
-    "type": "object",
+    "type": "StructuredValue",
     "value": {
       "observedBy": "device-9845A",
       "value": 0.5
     }
   },
   "emitterCoefficient": {
-    "type": "number",
+    "type": "Number",
     "value": 0.526
   },
   "pressure": {
-    "type": "object",
+    "type": "StructuredValue",
     "value": {
       "value": 20,
       "observedBy": "device-9845A"
     }
   },
   "supply": {
-    "type": "object",
+    "type": "StructuredValue",
     "value": {
       "value": 150,
       "observedBy": "device-9845A"
     }
   },
   "head": {
-    "type": "object",
+    "type": "StructuredValue",
     "value": {
       "value": 20,
       "observedBy": "device-9845A"
     }
   },
   "quality": {
-    "type": "object",
+    "type": "StructuredValue",
     "value": {
       "value": 0.5,
       "observedBy": "device-9845A"
     }
   },
   "sourceMassInflow": {
-    "type": "object",
+    "type": "StructuredValue",
     "value": {
       "value": 100,
       "observedBy": "device-9845A"
