@@ -2,69 +2,69 @@
   "id": "74azsty-70d4l-4da9-b7d0-3340ef655nnb",
   "type": "Pipe",
   "initialStatus": {
-    "type": "text",
+    "type": "Text",
     "value": "OPEN"
   },
   "status": {
-    "type": "text",
+    "type": "Text",
     "value": "OPEN"
   },
   "length": {
-    "type": "number",
-    "value": 52.90
+    "type": "Number",
+    "value": 52.9
   },
   "diameter": {
-    "type": "number",
-    "value": 203.00
+    "type": "Number",
+    "value": 203.0
   },
   "roughness": {
-    "type": "number",
+    "type": "Number",
     "value": 72.4549
   },
   "minorLoss": {
-    "type": "number",
+    "type": "Number",
     "value": 72.4549
   },
   "tag": {
-    "type": "text",
+    "type": "Text",
     "value": "DMA1"
   },
   "description": {
-    "type": "text",
+    "type": "Text",
     "value": "Free Text"
   },
   "startsAt": {
-    "type": "object",
+    "type": "Text",
     "value": "63fe7d79-0d4c-4da9-b7d0-3340efa0656a"
   },
   "endsAt": {
-    "type": "object",
+    "type": "Text",
     "value": "1863179e-3768-4480-9167-ff21f870dd19"
   },
   "bulkCoeff": {
-    "type": "number",
+    "type": "Number",
     "value": 72.4549
   },
   "wallCoeff": {
-    "type": "number",
+    "type": "Number",
     "value": 72.4549
   },
   "flow": {
-    "type": "structuredValue",
+    "type": "StructuredValue",
     "value": {
       "value": 20,
       "observedBy": "device-9845A"
     }
   },
   "velocity": {
-    "type": "structuredValue",
+    "type": "StructuredValue",
     "value": {
       "value": 2,
       "observedBy": "device-9845A"
     }
   },
   "quality": {
-    "type": "structuredValue",
+    "type": "StructuredValue",
     "value": {
       "value": 0.5,
       "observedBy": "device-9845A"
