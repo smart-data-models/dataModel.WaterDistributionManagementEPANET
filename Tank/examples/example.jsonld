@@ -1,30 +1,35 @@
 {
-    "id": "urn:ngsi-ld:Tank:1863179e-3968-4493-9167-ee21f880cc02",
-    "type": "Tank",
-    "bulkReactionCoefficient": 0.7,
-    "createdAt": "2020-03-13T15:42:00Z",
-    "description": "Free Text",
-    "elevation": 112.9,
-    "initLevel": 3,
-    "initialQuality": 0.5,
-    "location": {
-        "coordinates": [
-            24.30623,
-            60.07966
-        ],
-        "type": "Point"
-    },
-    "maxLevel": 6.75,
-    "minLevel": 0,
-    "minVolume": 0,
-    "mixingFraction": 0.7,
-    "mixingModel": "MIXED",
-    "modifiedAt": "2020-03-13T15:45:00Z",
-    "nominalDiameter": 13.73,
-    "sourceCategory": "category1",
-    "tag": "DMA1",
-    "volumeCurve": "urn:ngsi-ld:Curve:fAM-8ca3-4533-a2eb-12015",
-    "@context": [
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/context.jsonld"
-    ]
+  "id": "urn:ngsi-ld:Tank:1863179e-3968-4493-9167-ee21f880cc02",
+  "type": "Tank",
+  "bulkReactionCoefficient": 0.7,
+  "createdAt": "2020-03-13T15:42:00Z",
+  "description": "Free Text",
+  "elevation": 112.9,
+  "initLevel": 3,
+  "initialQuality": 0.5,
+  "location": {
+    "coordinates": [
+      24.30623,
+      60.07966
+    ],
+    "type": "Point"
+  },
+  "maxLevel": 6.75,
+  "minLevel": 0,
+  "minVolume": 0,
+  "mixingFraction": 0.7,
+  "mixingModel": "MIXED",
+  "modifiedAt": "2020-03-13T15:45:00Z",
+  "nominalDiameter": 13.73,
+  "sourceCategory": {
+    "value": "category1",
+    "sourceType": "MASS",
+    "sourceQuality": 1.2,
+    "sourcePattern": "fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
+  },
+  "tag": "DMA1",
+  "volumeCurve": "urn:ngsi-ld:Curve:fAM-8ca3-4533-a2eb-12015",
+  "@context": [
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/context.jsonld"
+  ]
 }
