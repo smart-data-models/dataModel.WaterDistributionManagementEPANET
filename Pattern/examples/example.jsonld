@@ -1,21 +1,21 @@
 {
-    "id": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533-a2eb-34bc89262190",
-    "type": "Pattern",
-    "createdAt": "2020-02-20T17:43:00Z",
-    "description": "Open Text",
-    "modifiedAt": "2020-02-20T17:43:00Z",
-    "multipliers": [
-        0.5692,
-        0.4647,
-        0.4385,
-        0.3604,
-        0.3098,
-        0.3345
-    ],
-    "startTime": "2020-02-20T17:43:00Z",
-    "tag": "DMA1",
-    "timeStep": 3600,
-    "@context": [
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/context.jsonld"
-    ]
+  "id": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533-a2eb-34bc89262190",
+  "type": "Pattern",
+  "createdAt": "2020-02-20T17:43:00Z",
+  "description": "Open Text",
+  "modifiedAt": "2020-02-20T17:43:00Z",
+  "multipliers": [
+    0.5692,
+    0.4647,
+    0.4385,
+    0.3604,
+    0.3098,
+    0.3345
+  ],
+  "startTime": "2020-02-20T17:43:00Z",
+  "tag": "DMA1",
+  "timeStep": 3600,
+  "@context": [
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/context.jsonld"
+  ]
 }
