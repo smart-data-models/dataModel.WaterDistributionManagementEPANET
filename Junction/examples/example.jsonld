@@ -1,23 +1,34 @@
 {
-    "id": "urn:ngsi-ld:Junction:63fe7d79-0d4c-4da9-b7d0-3340efa0656a",
-    "type": "Junction",
-    "createdAt": "2020-02-20T15:42:00Z",
-    "demandCategory": "agriculture demand",
-    "description": "This entity contains a harmonised description of a Junction",
-    "elevation": 105.8,
-    "emitterCoefficient": 0.526,
-    "initialQuality": 0.5,
-    "location": {
-        "coordinates": [
-            24.30623,
-            60.07966
-        ],
-        "type": "Point"
-    },
-    "modifiedAt": "2020-02-20T15:45:00Z",
-    "sourceCategory": "CategoryX",
-    "tag": "DMA1",
-    "@context": [
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/context.jsonld"
-    ]
+  "id": "urn:ngsi-ld:Junction:63fe7d79-0d4c-4da9-b7d0-3340efa0656a",
+  "type": "Junction",
+  "createdAt": "2020-02-20T15:42:00Z",
+  "demandCategory": {
+    "value": 1.763868462,
+    "baseDemand": "agriculture demand",
+    "demandPattern": "fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
+  },
+  "description": "This entity contains a harmonised description of a Junction",
+  "elevation": 105.8,
+  "emitterCoefficient": 0.526,
+  "initialQuality": {
+    "value": 0.5
+  },
+  "location": {
+    "coordinates": [
+      24.30623,
+      60.07966
+    ],
+    "type": "Point"
+  },
+  "modifiedAt": "2020-02-20T15:45:00Z",
+  "sourceCategory": {
+    "value": "CategoryX",
+    "sourceType": "MASS",
+    "sourceQuality": 1.2,
+    "sourcePattern": "fbcb5fc8-8ca3-4533-a2eb-34bc89262190"
+  },
+  "tag": "DMA1",
+  "@context": [
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/context.jsonld"
+  ]
 }
