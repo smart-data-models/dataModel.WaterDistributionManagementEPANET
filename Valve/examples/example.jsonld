@@ -1,17 +1,17 @@
 {
-    "id": "87fe7d79-0d4c-4da9-b7d0-3340efa0656awytsd",
-    "type": "Valve",
-    "diameter": 203.2,
-    "endsAt": "uri:1863179e-3768-4480-9167-ff21f870dd19",
-    "initialStatus": "OPEN",
-    "minorLoss": 0.0,
-    "openStatus": 0.3,
-    "setting": 40.0,
-    "startsAt": "uri:63fe7d79.0d4c-4da9-b7d0-3340efa0656a",
-    "status": "OPEN",
-    "tag": "DMA1",
-    "valveType": "PRV",
-    "@context": [
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/context.jsonld"
-    ]
+  "id": "87fe7d79-0d4c-4da9-b7d0-3340efa0656awytsd",
+  "type": "Valve",
+  "diameter": 203.2,
+  "endsAt": "uri:1863179e-3768-4480-9167-ff21f870dd19",
+  "initialStatus": "OPEN",
+  "minorLoss": 0.0,
+  "openStatus": 0.3,
+  "setting": 40.0,
+  "startsAt": "uri:63fe7d79.0d4c-4da9-b7d0-3340efa0656a",
+  "status": "OPEN",
+  "tag": "DMA1",
+  "valveType": "PRV",
+  "@context": [
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/context.jsonld"
+  ]
 }
