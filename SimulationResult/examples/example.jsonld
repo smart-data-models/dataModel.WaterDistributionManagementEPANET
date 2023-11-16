@@ -1,25 +1,23 @@
 {
-    "id": "urn:ngsi-ld:SimulationResult:01",
-    "type": "SimulationResult",
-    "description": "Free Text",
-    "hasInputNetwork": "urn:ngsi-ld:WaterNetwork:01",
-    "outputFile": [
-        "c://epanetsimulations/simulationResult.bin"
-    ],
-    "outputParameters": [
-        {
-            "parameter": "waterLevel",
-            "value": 50,
-            "targetURI": "urn:ngsi-ld:Valve:V1"
-        },
-        {
-            "parameter": "initialQuality",
-            "value": 2,
-            "targetURI": "urn:ngsi-ld:Tank:T1"
-        }
-    ],
-    "refSimulationScenario": "urn:ngsi-ld:Simulation:01",
-    "@context": [
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/context.jsonld"
-    ]
+  "id": "urn:ngsi-ld:SimulationResult:01",
+  "type": "SimulationResult",
+  "description": "Free Text",
+  "hasInputNetwork": "urn:ngsi-ld:WaterNetwork:01",
+  "outputFile": "c://epanetsimulations/simulationResult.bin",
+  "outputParameters": [
+    {
+      "parameter": "waterLevel",
+      "value": 50,
+      "targetURI": "urn:ngsi-ld:Valve:V1"
+    },
+    {
+      "parameter": "initialQuality",
+      "value": 2,
+      "targetURI": "urn:ngsi-ld:Tank:T1"
+    }
+  ],
+  "refSimulationScenario": "urn:ngsi-ld:Simulation:01",
+  "@context": [
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/context.jsonld"
+  ]
 }
