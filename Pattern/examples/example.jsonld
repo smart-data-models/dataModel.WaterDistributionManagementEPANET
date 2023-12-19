@@ -1,9 +1,7 @@
 {
   "id": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533-a2eb-34bc89262190",
   "type": "Pattern",
-  "createdAt": "2020-02-20T17:43:00Z",
   "description": "Open Text",
-  "modifiedAt": "2020-02-20T17:43:00Z",
   "multipliers": [
     0.5692,
     0.4647,

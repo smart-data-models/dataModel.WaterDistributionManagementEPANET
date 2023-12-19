@@ -1,13 +1,11 @@
 {
   "id": "urn:ngsi-ld:Pump:85zhnf58-0d4c-h4g854g-b7d0-3310klm",
   "type": "Pump",
-  "createdAt": "2020-03-02T15:42:00Z",
   "efficCurve": "urn:ngsi-ld:Curve:fbcb5fc8-8ca3-4533-a2eb-34bc89262190",
   "endsAt": "urn:ngsi-ld:Reservoir:1863179e-3768-4480-9167-ff21f870dd19",
   "energyPattern": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533-a2eb-34bc89262190",
   "energyPrice": 0.8,
   "initialStatus": "OPEN",
-  "modifiedAt": "2020-03-02T15:45:00Z",
   "power": 100,
   "pumpPattern": "urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533-a2eb-34bc89262190",
   "speed": 1.2,

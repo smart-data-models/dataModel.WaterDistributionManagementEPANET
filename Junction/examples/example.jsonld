@@ -1,7 +1,6 @@
 {
   "id": "urn:ngsi-ld:Junction:63fe7d79-0d4c-4da9-b7d0-3340efa0656a",
   "type": "Junction",
-  "createdAt": "2020-02-20T15:42:00Z",
   "demandCategory": {
     "value": 1.763868462,
     "baseDemand": "agriculture demand",
@@ -20,7 +19,6 @@
     ],
     "type": "Point"
   },
-  "modifiedAt": "2020-02-20T15:45:00Z",
   "sourceCategory": {
     "value": "CategoryX",
     "sourceType": "MASS",

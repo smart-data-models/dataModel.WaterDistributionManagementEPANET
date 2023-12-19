@@ -12,7 +12,6 @@
     "urn:ngsi-ld:Junction:J1"
   ],
   "@context": [
-    "https://smart-data-models.github.io//data-models/context.jsonld",
     "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/context.jsonld"
   ]
 }
