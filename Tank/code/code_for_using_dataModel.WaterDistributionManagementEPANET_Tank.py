@@ -24,33 +24,38 @@
 #         curl -X GET http://localhost:1026/ngsi-ld/v1/entities?local=true&limit=1000
 #         
 #         # now the python code you can use to insert some value in the context broker according to the data model
+#         # Version Warning! 
+#         # This code is designed to work with the version 0.8 of pysmartdatamodels or later
+#         # to work with earlier version you need to replace the import instruction for
+#         # from pysmartdatamodels import pysmartdatamodels as sdm
 #         
-from pysmartdatamodels import pysmartdatamodels as sdm
+#         
+import pysmartdatamodels as sdm
 import subprocess
 serverUrl = "http://localhost:1026" # supposed that your broker is installed in localhost. Edit to match your configuration
 dataModel = "Tank"
 subject = "dataModel.WaterDistributionManagementEPANET"
-bulkReactionCoefficient = {'type': 'Property', 'value': 0.7, 'unitCode': 'E91'}
+bulkReactionCoefficient = 0.7
 attribute = "bulkReactionCoefficient"
 value = bulkReactionCoefficient
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-elevation = {'type': 'Property', 'value': 112.9, 'unitCode': 'MTR'}
+elevation = 112.9
 attribute = "elevation"
 value = elevation
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-head = {'type': 'Property', 'value': {'type': 'Property', 'value': 20, 'unitCode': 'MTR'}, 'observedBy': {'type': 'Relationship', 'object': 'urn:ngsi-ld:Device:device-9845A'}}
-attribute = "head"
-value = head
+initLevel = 3
+attribute = "initLevel"
+value = initLevel
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-initLevel = {'type': 'Property', 'value': 3, 'unitCode': 'MTR'}
-attribute = "initLevel"
-value = initLevel
+initialQuality = 0.5
+attribute = "initialQuality"
+value = initialQuality
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
