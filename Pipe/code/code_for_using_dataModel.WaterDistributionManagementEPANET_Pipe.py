@@ -24,33 +24,38 @@
 #         curl -X GET http://localhost:1026/ngsi-ld/v1/entities?local=true&limit=1000
 #         
 #         # now the python code you can use to insert some value in the context broker according to the data model
+#         # Version Warning! 
+#         # This code is designed to work with the version 0.8 of pysmartdatamodels or later
+#         # to work with earlier version you need to replace the import instruction for
+#         # from pysmartdatamodels import pysmartdatamodels as sdm
 #         
-from pysmartdatamodels import pysmartdatamodels as sdm
+#         
+import pysmartdatamodels as sdm
 import subprocess
 serverUrl = "http://localhost:1026" # supposed that your broker is installed in localhost. Edit to match your configuration
 dataModel = "Pipe"
 subject = "dataModel.WaterDistributionManagementEPANET"
-bulkCoeff = {'type': 'Property', 'value': 72.4549, 'unitCode': 'E91'}
+bulkCoeff = 72.4549
 attribute = "bulkCoeff"
 value = bulkCoeff
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-diameter = {'type': 'Property', 'value': 203.0, 'unitCode': 'MMT'}
+diameter = 203.0
 attribute = "diameter"
 value = diameter
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-endsAt = "{'type': 'Relationship', 'object': 'urn:ngsi-ld:Reservoir:1863179e-3768-4480-9167-ff21f870dd19'}"
+endsAt = "urn:ngsi-ld:Reservoir:1863179e-3768-4480-9167-ff21f870dd19"
 attribute = "endsAt"
 value = endsAt
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-flow = {'type': 'Property', 'value': {'type': 'Property', 'value': 20, 'unitCode': 'G51'}, 'observedBy': {'type': 'Relationship', 'object': 'urn:ngsi-ld:Device:device-9845A'}}
-attribute = "flow"
-value = flow
+initialStatus = "OPEN"
+attribute = "initialStatus"
+value = initialStatus
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
