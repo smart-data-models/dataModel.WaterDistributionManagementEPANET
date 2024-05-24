@@ -24,33 +24,38 @@
 #         curl -X GET http://localhost:1026/ngsi-ld/v1/entities?local=true&limit=1000
 #         
 #         # now the python code you can use to insert some value in the context broker according to the data model
+#         # Version Warning! 
+#         # This code is designed to work with the version 0.8 of pysmartdatamodels or later
+#         # to work with earlier version you need to replace the import instruction for
+#         # from pysmartdatamodels import pysmartdatamodels as sdm
 #         
-from pysmartdatamodels import pysmartdatamodels as sdm
+#         
+import pysmartdatamodels as sdm
 import subprocess
 serverUrl = "http://localhost:1026" # supposed that your broker is installed in localhost. Edit to match your configuration
 dataModel = "Junction"
 subject = "dataModel.WaterDistributionManagementEPANET"
-demandCategory = {'type': 'Property', 'value': {'type': 'Property', 'value': 'agriculture demand'}, 'baseDemand': {'type': 'Property', 'value': '1.763868462', 'unitCode': 'MQS'}, 'demandPattern': {'type': 'Relationship', 'object': 'urn:ngsi-ld:Pattern:fbcb5fc8-8ca3-4533'}}
+demandCategory = {'value': 1.763868462, 'baseDemand': 'agriculture demand', 'demandPattern': 'fbcb5fc8-8ca3-4533-a2eb-34bc89262190'}
 attribute = "demandCategory"
 value = demandCategory
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-elevation = {'type': 'Property', 'value': 105.8, 'unitCode': 'MTR'}
+elevation = 105.8
 attribute = "elevation"
 value = elevation
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-emitterCoefficient = {'type': 'Property', 'value': 0.526, 'unitCode': 'S4'}
+emitterCoefficient = 0.526
 attribute = "emitterCoefficient"
 value = emitterCoefficient
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-head = {'type': 'Property', 'value': {'type': 'Property', 'value': 20, 'unitCode': 'MTR'}, 'observedBy': {'type': 'Relationship', 'object': 'urn:ngsi-ld:Device:device-9845A'}}
-attribute = "head"
-value = head
+initialQuality = {'value': 0.5}
+attribute = "initialQuality"
+value = initialQuality
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
