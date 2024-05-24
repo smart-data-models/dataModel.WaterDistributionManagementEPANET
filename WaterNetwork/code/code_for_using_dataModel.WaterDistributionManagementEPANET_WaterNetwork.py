@@ -24,19 +24,24 @@
 #         curl -X GET http://localhost:1026/ngsi-ld/v1/entities?local=true&limit=1000
 #         
 #         # now the python code you can use to insert some value in the context broker according to the data model
+#         # Version Warning! 
+#         # This code is designed to work with the version 0.8 of pysmartdatamodels or later
+#         # to work with earlier version you need to replace the import instruction for
+#         # from pysmartdatamodels import pysmartdatamodels as sdm
 #         
-from pysmartdatamodels import pysmartdatamodels as sdm
+#         
+import pysmartdatamodels as sdm
 import subprocess
 serverUrl = "http://localhost:1026" # supposed that your broker is installed in localhost. Edit to match your configuration
 dataModel = "WaterNetwork"
 subject = "dataModel.WaterDistributionManagementEPANET"
-hasSubNetwork = [{'type': 'Relationship', 'object': 'urn:ngsi-ld:Network:12-70d4l-4da9', 'datasetId': 'urn:ngsi-ld:Dataset:NetworkN1'}, {'type': 'Relationship', 'object': 'urn:ngsi-ld:Network:A14-14d4B-4vvc', 'datasetId': 'urn:ngsi-ld:Dataset:NetworkN2'}]
+hasSubNetwork = ['urn:ngsi-ld:Network:12-70d4l-4da9', 'urn:ngsi-ld:Network:A14-14d4B-4vvc']
 attribute = "hasSubNetwork"
 value = hasSubNetwork
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-isComposedOf = [{'type': 'Relationship', 'object': 'urn:ngsi-ld:Tank:T1', 'datasetId': 'urn:ngsi-ld:Dataset:TankT1'}, {'type': 'Relationship', 'object': 'urn:ngsi-ld:Pipe:P1', 'datasetId': 'urn:ngsi-ld:Dataset:PipeP1'}, {'type': 'Relationship', 'object': 'urn:ngsi-ld:Junction:J1', 'datasetId': 'urn:ngsi-ld:Dataset:JunctionJ1'}]
+isComposedOf = ['urn:ngsi-ld:Tank:T1', 'urn:ngsi-ld:Pipe:P1', 'urn:ngsi-ld:Junction:J1']
 attribute = "isComposedOf"
 value = isComposedOf
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
