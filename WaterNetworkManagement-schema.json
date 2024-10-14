@@ -1,5 +1,5 @@
 {
-  "$schema": "http://json-schema.org/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://smart-data-models.github.io/dataModel.WaterDistributionManagementEPANET/WaterNetworkManagement-schema.json",
   "title": "Smart Data Models - Water Network Management base schema",
   "description": "Common NGSI-LD definitions for Water Network Management data models",
