@@ -21,7 +21,7 @@
         "baseDemand": "https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/baseDemand",
         "bbox": {
             "@container": "@list",
-            "@id": "geojson:bbox"
+            "@id": "https://purl.org/geojson/vocab#bbox"
         },
         "bulkCoeff": "https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/bulkCoeff",
         "bulkOrder": "https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/bulkOrder",
@@ -34,7 +34,7 @@
         "controlledLink": "https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/controlledLink",
         "coordinates": {
             "@container": "@list",
-            "@id": "geojson:coordinates"
+            "@id": "https://purl.org/geojson/vocab#coordinates"
         },
         "createdBy": "https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/createdBy",
         "curveType": "https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/curveType",
@@ -81,7 +81,7 @@
         "isComposedOf": "https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/isComposedOf",
         "length": "https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/length",
         "level": "https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/level",
-        "location": "ngsi-ld:location",
+        "location": "https://uri.etsi.org/ngsi-ld/location",
         "maxCheck": "https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/maxCheck",
         "maxLevel": "https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/maxLevel",
         "minLevel": "https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/minLevel",
@@ -135,7 +135,7 @@
         "startTime": "https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/startTime",
         "startsAt": "https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/startsAt",
         "statistic": "https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/statistic",
-        "status": "ngsi-ld:status",
+        "status": "https://uri.etsi.org/ngsi-ld/status",
         "streetAddress": "https://smartdatamodels.org/streetAddress",
         "streetNr": "https://smartdatamodels.org/streetNr",
         "supply": "https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/supply",
@@ -150,7 +150,7 @@
         "type": "@type",
         "unbalanced": "https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/unbalanced",
         "unbalancedN": "https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/unbalancedN",
-        "value": "ngsi-ld:hasValue",
+        "value": "https://uri.etsi.org/ngsi-ld/hasValue",
         "valveCurve": "https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/valveCurve",
         "valveType": "https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/valveType",
         "velocity": "https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/velocity",
