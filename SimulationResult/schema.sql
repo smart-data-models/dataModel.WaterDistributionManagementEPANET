@@ -1,8 +1,8 @@
 /* (Beta) Export of data model SimulationResult of the subject dataModel.WaterDistributionManagementEPANET for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
-CREATE TYPE initialStatus_type AS ENUM ('OPEN', 'CLOSED', 'CV');
-CREATE TYPE status_type AS ENUM ('OPEN', 'CLOSED', 'CV');
+CREATE TYPE SimulationResult_initialStatus_type AS ENUM ('OPEN', 'CLOSED', 'CV');
+CREATE TYPE SimulationResult_status_type AS ENUM ('OPEN', 'CLOSED', 'CV');
 CREATE TYPE SimulationResult_type AS ENUM ('SimulationResult');
-CREATE TYPE valveType_type AS ENUM ('FCV', 'GPV', 'PBV', 'PRV', 'PSV', 'TCV');
+CREATE TYPE SimulationResult_valveType_type AS ENUM ('FCV', 'GPV', 'PBV', 'PRV', 'PSV', 'TCV');
 CREATE TABLE SimulationResult (
   "address" JSON,
   "alternateName" TEXT,
@@ -18,7 +18,7 @@ CREATE TABLE SimulationResult (
   "head" JSON,
   "id" TEXT PRIMARY KEY,
   "initialQuality" JSON,
-  "initialStatus" initialStatus_type,
+  "initialStatus" SimulationResult_initialStatus_type,
   "level" JSON,
   "location" JSON,
   "name" TEXT,
@@ -32,11 +32,11 @@ CREATE TABLE SimulationResult (
   "source" TEXT,
   "sourceCategory" JSON,
   "sourceMassInflow" JSON,
-  "status" status_type,
+  "status" SimulationResult_status_type,
   "supply" JSON,
   "tag" TEXT,
   "type" SimulationResult_type,
   "valveCurve" JSON,
-  "valveType" valveType_type,
+  "valveType" SimulationResult_valveType_type,
   "velocity" JSON
 );
