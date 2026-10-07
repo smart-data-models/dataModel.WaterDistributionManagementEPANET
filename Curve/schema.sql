@@ -1,11 +1,11 @@
 /* (Beta) Export of data model Curve of the subject dataModel.WaterDistributionManagementEPANET for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
-CREATE TYPE curveType_type AS ENUM ('FLOW-HEAD', 'FLOW-EFFICIENCY', 'FLOW-HEADLOSS', 'LEVEL-VOLUME');
+CREATE TYPE Curve_curveType_type AS ENUM ('FLOW-HEAD', 'FLOW-EFFICIENCY', 'FLOW-HEADLOSS', 'LEVEL-VOLUME');
 CREATE TYPE Curve_type AS ENUM ('Curve');
 CREATE TABLE Curve (
   "address" JSON,
   "alternateName" TEXT,
   "areaServed" TEXT,
-  "curveType" curveType_type,
+  "curveType" Curve_curveType_type,
   "dataProvider" TEXT,
   "dateCreated" TIMESTAMP,
   "dateModified" TIMESTAMP,
