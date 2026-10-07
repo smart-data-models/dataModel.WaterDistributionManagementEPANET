@@ -1,5 +1,5 @@
 /* (Beta) Export of data model Tank of the subject dataModel.WaterDistributionManagementEPANET for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
-CREATE TYPE mixingModel_type AS ENUM ('2COMP', 'FIFO', 'LIFO', 'MIXED');
+CREATE TYPE Tank_mixingModel_type AS ENUM ('2COMP', 'FIFO', 'LIFO', 'MIXED');
 CREATE TYPE Tank_type AS ENUM ('Tank');
 CREATE TABLE Tank (
   "address" JSON,
@@ -23,7 +23,7 @@ CREATE TABLE Tank (
   "minLevel" NUMERIC,
   "minVolume" NUMERIC,
   "mixingFraction" NUMERIC,
-  "mixingModel" mixingModel_type,
+  "mixingModel" Tank_mixingModel_type,
   "name" TEXT,
   "nominalDiameter" NUMERIC,
   "owner" JSON,
