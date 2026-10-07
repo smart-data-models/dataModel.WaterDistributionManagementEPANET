@@ -1,6 +1,6 @@
 /* (Beta) Export of data model Pipe of the subject dataModel.WaterDistributionManagementEPANET for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
-CREATE TYPE initialStatus_type AS ENUM ('OPEN', 'CLOSED', 'CV');
-CREATE TYPE status_type AS ENUM ('OPEN', 'CLOSED', 'CV');
+CREATE TYPE Pipe_initialStatus_type AS ENUM ('OPEN', 'CLOSED', 'CV');
+CREATE TYPE Pipe_status_type AS ENUM ('OPEN', 'CLOSED', 'CV');
 CREATE TYPE Pipe_type AS ENUM ('Pipe');
 CREATE TABLE Pipe (
   "address" JSON,
@@ -15,7 +15,7 @@ CREATE TABLE Pipe (
   "endsAt" TEXT,
   "flow" JSON,
   "id" TEXT PRIMARY KEY,
-  "initialStatus" initialStatus_type,
+  "initialStatus" Pipe_initialStatus_type,
   "length" NUMERIC,
   "location" JSON,
   "minorLoss" NUMERIC,
@@ -26,7 +26,7 @@ CREATE TABLE Pipe (
   "seeAlso" JSON,
   "source" TEXT,
   "startsAt" TEXT,
-  "status" status_type,
+  "status" Pipe_status_type,
   "tag" TEXT,
   "type" Pipe_type,
   "velocity" JSON,
