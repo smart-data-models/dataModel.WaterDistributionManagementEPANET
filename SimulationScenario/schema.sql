@@ -1,14 +1,14 @@
 /* (Beta) Export of data model SimulationScenario of the subject dataModel.WaterDistributionManagementEPANET for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
-CREATE TYPE demandModel_type AS ENUM ('DDA', 'PDA');
-CREATE TYPE flowUnits_type AS ENUM ('AFD', 'CFS', 'CMD', 'CMH', 'GPM', 'IMGD', 'LPS', 'LPM', 'MLD', 'MGD');
-CREATE TYPE headlossFormula_type AS ENUM ('H-W', 'D-W', 'C-M');
-CREATE TYPE initialStatus_type AS ENUM ('OPEN', 'CLOSED', 'CV');
-CREATE TYPE qualityType_type AS ENUM ('age', 'chem', 'none', 'trace');
-CREATE TYPE statistic_type AS ENUM ('averaged', 'maximum', 'minimum', 'none', 'range');
-CREATE TYPE status_type AS ENUM ('OPEN', 'CLOSED', 'CV');
+CREATE TYPE SimulationScenario_demandModel_type AS ENUM ('DDA', 'PDA');
+CREATE TYPE SimulationScenario_flowUnits_type AS ENUM ('AFD', 'CFS', 'CMD', 'CMH', 'GPM', 'IMGD', 'LPS', 'LPM', 'MLD', 'MGD');
+CREATE TYPE SimulationScenario_headlossFormula_type AS ENUM ('H-W', 'D-W', 'C-M');
+CREATE TYPE SimulationScenario_initialStatus_type AS ENUM ('OPEN', 'CLOSED', 'CV');
+CREATE TYPE SimulationScenario_qualityType_type AS ENUM ('age', 'chem', 'none', 'trace');
+CREATE TYPE SimulationScenario_statistic_type AS ENUM ('averaged', 'maximum', 'minimum', 'none', 'range');
+CREATE TYPE SimulationScenario_status_type AS ENUM ('OPEN', 'CLOSED', 'CV');
 CREATE TYPE SimulationScenario_type AS ENUM ('SimulationScenario');
-CREATE TYPE unbalanced_type AS ENUM ('stop', 'continue', 'continue_N');
-CREATE TYPE valveType_type AS ENUM ('FCV', 'GPV', 'PBV', 'PRV', 'PSV', 'TCV');
+CREATE TYPE SimulationScenario_unbalanced_type AS ENUM ('stop', 'continue', 'continue_N');
+CREATE TYPE SimulationScenario_valveType_type AS ENUM ('FCV', 'GPV', 'PBV', 'PRV', 'PSV', 'TCV');
 CREATE TABLE SimulationScenario (
   "accuracy" NUMERIC,
   "address" JSON,
@@ -26,7 +26,7 @@ CREATE TABLE SimulationScenario (
   "dateModified" TIMESTAMP,
   "demandCategory" JSON,
   "demandCharge" NUMERIC,
-  "demandModel" demandModel_type,
+  "demandModel" SimulationScenario_demandModel_type,
   "description" TEXT,
   "diffusivity" NUMERIC,
   "duration" NUMERIC,
@@ -34,16 +34,16 @@ CREATE TABLE SimulationScenario (
   "energyUse" JSON,
   "flow" JSON,
   "flowChange" NUMERIC,
-  "flowUnits" flowUnits_type,
+  "flowUnits" SimulationScenario_flowUnits_type,
   "hasInputNetwork" JSON,
   "hasSimulationResult" JSON,
   "head" JSON,
   "headError" NUMERIC,
-  "headlossFormula" headlossFormula_type,
+  "headlossFormula" SimulationScenario_headlossFormula_type,
   "hydraulicTimeStep" NUMERIC,
   "id" TEXT PRIMARY KEY,
   "initialQuality" JSON,
-  "initialStatus" initialStatus_type,
+  "initialStatus" SimulationScenario_initialStatus_type,
   "inputParameter" JSON,
   "level" JSON,
   "location" JSON,
@@ -58,7 +58,7 @@ CREATE TABLE SimulationScenario (
   "pressureExponent" NUMERIC,
   "quality" JSON,
   "qualityTimeStep" NUMERIC,
-  "qualityType" qualityType_type,
+  "qualityType" SimulationScenario_qualityType_type,
   "reportStart" NUMERIC,
   "reportStep" NUMERIC,
   "requiredPressure" NUMERIC,
@@ -69,8 +69,8 @@ CREATE TABLE SimulationScenario (
   "sourceMassInflow" JSON,
   "specificGravity" NUMERIC,
   "startClockTime" NUMERIC,
-  "statistic" statistic_type,
-  "status" status_type,
+  "statistic" SimulationScenario_statistic_type,
+  "status" SimulationScenario_status_type,
   "supply" JSON,
   "tag" TEXT,
   "tankOrder" NUMERIC,
@@ -78,10 +78,10 @@ CREATE TABLE SimulationScenario (
   "traceNodeID" JSON,
   "trials" NUMERIC,
   "type" SimulationScenario_type,
-  "unbalanced" unbalanced_type,
+  "unbalanced" SimulationScenario_unbalanced_type,
   "unbalancedN" NUMERIC,
   "valveCurve" JSON,
-  "valveType" valveType_type,
+  "valveType" SimulationScenario_valveType_type,
   "velocity" JSON,
   "viscosity" NUMERIC,
   "wallOrder" NUMERIC
