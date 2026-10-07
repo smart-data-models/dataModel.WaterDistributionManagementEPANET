@@ -1,8 +1,8 @@
 /* (Beta) Export of data model Valve of the subject dataModel.WaterDistributionManagementEPANET for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
-CREATE TYPE initialStatus_type AS ENUM ('OPEN', 'CLOSED', 'CV');
-CREATE TYPE status_type AS ENUM ('OPEN', 'CLOSED', 'CV');
+CREATE TYPE Valve_initialStatus_type AS ENUM ('OPEN', 'CLOSED', 'CV');
+CREATE TYPE Valve_status_type AS ENUM ('OPEN', 'CLOSED', 'CV');
 CREATE TYPE Valve_type AS ENUM ('Valve');
-CREATE TYPE valveType_type AS ENUM ('FCV', 'GPV', 'PBV', 'PRV', 'PSV', 'TCV');
+CREATE TYPE Valve_valveType_type AS ENUM ('FCV', 'GPV', 'PBV', 'PRV', 'PSV', 'TCV');
 CREATE TABLE Valve (
   "address" JSON,
   "alternateName" TEXT,
@@ -15,7 +15,7 @@ CREATE TABLE Valve (
   "endsAt" TEXT,
   "flow" JSON,
   "id" TEXT PRIMARY KEY,
-  "initialStatus" initialStatus_type,
+  "initialStatus" Valve_initialStatus_type,
   "location" JSON,
   "minorLoss" NUMERIC,
   "name" TEXT,
@@ -26,11 +26,11 @@ CREATE TABLE Valve (
   "setting" NUMERIC,
   "source" TEXT,
   "startsAt" TEXT,
-  "status" status_type,
+  "status" Valve_status_type,
   "tag" TEXT,
   "type" Valve_type,
   "valveCurve" TEXT,
-  "valveType" valveType_type,
+  "valveType" Valve_valveType_type,
   "velocity" JSON,
   "vertices" JSON
 );
